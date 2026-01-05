@@ -10,6 +10,123 @@
     <main class="page">
         <h1>Products — Tents</h1>
 
+        <!-- Feature area: three tent types with details -->
+        <section class="tents-feature">
+            <div class="tents-feature-grid">
+                <article class="tent-feature-card" data-type="30">
+                    <img src="images/products/tents/30square-tube-frame-iron.png" alt="30 Square Tube Iron Frame Tent">
+                    <h3>30 — Iron Frame</h3>
+                    <p class="short">Durable 30 square tube iron frame tent — economical option for rental and short events.</p>
+                    <div class="tent-options">
+                        <label>Fabric:
+                            <select class="fabric-select" data-type="30">
+                                <option value="300D">300D</option>
+                                <option value="600D">600D</option>
+                            </select>
+                        </label>
+                        <label>Accessories:
+                            <select class="accessory-select" data-type="30">
+                                <option value="">None</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div style="margin-top:10px; display:flex; gap:8px;">
+                        <button class="btn view-specs" data-target="spec-30">View details</button>
+                        <button class="btn btn-primary quick-quote" data-type="30">Get Quote</button>
+                    </div>
+                    <div class="tent-spec" id="spec-30">
+                        <img src="images/products/tents/30square-tube-frame-iron-authenticaccessories.png" alt="30 accessories" class="spec-img">
+                        <div class="spec-text">
+                            <strong>Sizes & weights</strong>
+                            <ul>
+                                <li>1.5×1.5M — 13KG</li>
+                                <li>2×2M — 15KG</li>
+                                <li>2×3M — 19KG</li>
+                                <li>3×3M — 21KG</li>
+                                <li>3×4.5M — 27KG</li>
+                                <li>3×6M — 36KG</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tent-feature-card" data-type="40">
+                    <img src="images/products/tents/40square-tube-frame-aluminum.png" alt="40 Hexagon Aluminum Frame Tent">
+                    <h3>40 — Hexagon Aluminum</h3>
+                    <p class="short">40 hexagon aluminum frame tent — lightweight, corrosion resistant.</p>
+                    <div class="tent-options">
+                        <label>Fabric:
+                            <select class="fabric-select" data-type="40">
+                                <option value="300D">300D</option>
+                                <option value="600D">600D</option>
+                            </select>
+                        </label>
+                        <label>Accessories:
+                            <select class="accessory-select" data-type="40">
+                                <option value="">None</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div style="margin-top:10px; display:flex; gap:8px;">
+                        <button class="btn view-specs" data-target="spec-40">View details</button>
+                        <button class="btn btn-primary quick-quote" data-type="40">Get Quote</button>
+                    </div>
+                    <div class="tent-spec" id="spec-40">
+                        <img src="images/products/tents/40square-tube-frame-aluminum-authenticaccessories.png" alt="40 accessories" class="spec-img">
+                        <div class="spec-text">
+                            <strong>Sizes & weights</strong>
+                            <ul>
+                                <li>1.5×1.5M — 12.5KG</li>
+                                <li>2×2M — 13KG</li>
+                                <li>2.5×2.5M — 16KG</li>
+                                <li>3×3M — 17KG</li>
+                                <li>3×4.5M — 20KG</li>
+                                <li>3×6M — 28KG</li>
+                                <li>4×8M — 33KG</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="tent-feature-card" data-type="50">
+                    <img src="images/products/tents/50square-tube-frame-aluminum.png" alt="50 Hexagon Aluminum Frame Tent">
+                    <h3>50 — Heavy-duty Aluminum</h3>
+                    <p class="short">50 hexagon aluminum frame tent — maximum strength for larger spans and events.</p>
+                    <div class="tent-options">
+                        <label>Fabric:
+                            <select class="fabric-select" data-type="50">
+                                <option value="300D">300D</option>
+                                <option value="600D">600D</option>
+                            </select>
+                        </label>
+                        <label>Accessories:
+                            <select class="accessory-select" data-type="50">
+                                <option value="">None</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div style="margin-top:10px; display:flex; gap:8px;">
+                        <button class="btn view-specs" data-target="spec-50">View details</button>
+                        <button class="btn btn-primary quick-quote" data-type="50">Get Quote</button>
+                    </div>
+                    <div class="tent-spec" id="spec-50">
+                        <img src="images/products/tents/50square-tube-frame-aluminum-authenticaccessories.png" alt="50 accessories" class="spec-img">
+                        <div class="spec-text">
+                            <strong>Sizes & weights</strong>
+                            <ul>
+                                <li>2×2M — 20KG</li>
+                                <li>2.5×2.5M — 22KG</li>
+                                <li>3×3M — 29KG</li>
+                                <li>3×4.5M — 40KG</li>
+                                <li>3×6M — 55KG</li>
+                                <li>4×8M — 67KG</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <div id="tentsContainer" class="tents-root"></div>
 
         <div class="back-actions">
@@ -19,5 +136,101 @@
 
     <script src="scripts/products.js"></script>
     <script src="scripts/products-tents.js"></script>
+    <script>
+        // Small behavior: toggle spec panels for tent feature cards + accessory population + CTA
+        (function(){
+            function waitForPM(cb){
+                if (window.productManager && window.productManager.products) return cb(window.productManager);
+                setTimeout(()=>waitForPM(cb),100);
+            }
+
+            function populateAccessories(pm){
+                const accessories = pm.products.filter(p=>p.category==='accessories');
+                const selects = document.querySelectorAll('.accessory-select');
+                selects.forEach(sel=>{
+                    // clear except first None option
+                    const type = sel.getAttribute('data-type');
+                    sel.innerHTML = '<option value="">None</option>';
+                    accessories.slice(0,12).forEach(a=>{
+                        const opt = document.createElement('option');
+                        opt.value = a.nameEn || a.name;
+                        opt.textContent = (a.nameEn || a.name);
+                        sel.appendChild(opt);
+                    });
+                });
+            }
+
+            function updateCTASummary(type){
+                // build summary from selected options of the given type
+                const fabric = document.querySelector('.fabric-select[data-type="'+type+'"]')?.value || '';
+                const accessory = document.querySelector('.accessory-select[data-type="'+type+'"]')?.value || '';
+                const nameMap = { '30': '30 Square Tube Iron Frame Tent', '40': '40 Hexagon Aluminum Frame Tent', '50': '50 Hexagon Aluminum Frame Tent' };
+                const productLabel = nameMap[type] || ('Tent ' + type);
+                const summary = productLabel + (fabric ? (' • ' + fabric) : '') + (accessory ? (' • ' + accessory) : '');
+                const bar = document.getElementById('tents-cta-bar');
+                if (bar) {
+                    bar.querySelector('.cta-summary').textContent = summary;
+                    const link = bar.querySelector('.cta-link');
+                    const url = 'index.html?product=' + encodeURIComponent(productLabel + (accessory ? (' - ' + accessory) : '')) + '#contact';
+                    link.setAttribute('href', url);
+                }
+            }
+
+            function bindUI(){
+                document.querySelectorAll('.view-specs').forEach(btn=>{
+                    btn.addEventListener('click', function(){
+                        const id = this.getAttribute('data-target');
+                        const panel = document.getElementById(id);
+                        if (!panel) return;
+                        const shown = panel.style.display === 'block';
+                        document.querySelectorAll('.tent-spec').forEach(p=>p.style.display='none');
+                        if (!shown) panel.style.display = 'block';
+                        else panel.style.display = 'none';
+                        if (!shown) panel.scrollIntoView({behavior:'smooth', block:'center'});
+                    });
+                });
+
+                // fabric/accessory change handlers
+                document.querySelectorAll('.fabric-select, .accessory-select').forEach(el=>{
+                    el.addEventListener('change', function(){
+                        const type = this.getAttribute('data-type');
+                        updateCTASummary(type);
+                    });
+                });
+
+                // quick-quote buttons update CTA and navigate
+                document.querySelectorAll('.quick-quote').forEach(btn=>{
+                    btn.addEventListener('click', function(){
+                        const type = this.getAttribute('data-type');
+                        updateCTASummary(type);
+                        const barLink = document.querySelector('#tents-cta-bar .cta-link');
+                        if (barLink) {
+                            // navigate to index contact with product param
+                            window.location.href = barLink.getAttribute('href');
+                        }
+                    });
+                });
+            }
+
+            // create CTA bar
+            function createCTABar(){
+                if (document.getElementById('tents-cta-bar')) return;
+                const bar = document.createElement('div');
+                bar.id = 'tents-cta-bar';
+                bar.innerHTML = '<div class="cta-inner"><div class="cta-summary">Select a tent</div><a class="cta-link btn btn-primary" href="index.html#contact">Get Quote</a></div>';
+                document.body.appendChild(bar);
+            }
+
+            document.addEventListener('DOMContentLoaded', function(){
+                createCTABar();
+                waitForPM(pm => {
+                    populateAccessories(pm);
+                    bindUI();
+                });
+                // if productManager not present, still bind basic UI
+                bindUI();
+            });
+        })();
+    </script>
 </body>
 </html>

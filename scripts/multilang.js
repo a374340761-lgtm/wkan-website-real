@@ -1315,10 +1315,10 @@ class MultiLanguageSystem {
         // 为表单添加语言特定的验证消息
         const form = document.querySelector('.contact-form form');
         if (form) {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                this.handleFormSubmit();
-            });
+            // Submit interception removed: allow existing contact.js submission logic
+            // to run (do not call e.preventDefault() here).
+            // Previously this blocked real form submission and the contact.js handler.
+            // If you need a language-specific submission UX, integrate with contact.js instead.
         }
     }
     

@@ -776,7 +776,61 @@
                         </div>
                     </div>
                 </aside>
-                                <!-- Right: contact form removed from homepage to avoid accidental overlay in hero. -->
+                                <!-- Right: contact form restored -->
+                                <div class="contact-card soft-panel contact-form inquiry-form">
+                                    <h3 data-translate="contact_form_title">Request a Quote</h3>
+
+                                    <div id="contactSuccess" style="display:none; padding:12px; background:#e6ffed; border-radius:6px; margin-bottom:12px;">
+                                        ✅ Sent successfully. We will reply within 24 hours.
+                                    </div>
+                                    <div id="formMessage" style="display:none; margin-bottom:12px;"></div>
+
+                                    <form id="getQuoteForm" class="quote-form" action="javascript:void(0);" novalidate>
+                                        <label>
+                                            <span data-translate="inquiry_form_name">Your Name *</span>
+                                            <input type="text" name="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
+                                        </label>
+
+                                        <label>
+                                            <span data-translate="inquiry_form_email">Your Email *</span>
+                                            <input type="email" name="email" required data-translate-placeholder="inquiry_form_email" />
+                                        </label>
+
+                                        <label>
+                                            <span data-translate="inquiry_form_company">Company Name</span>
+                                            <input type="text" name="company" data-translate-placeholder="inquiry_form_company" />
+                                        </label>
+
+                                        <label>
+                                            <span data-translate="inquiry_form_country">Country / Region *</span>
+                                            <input type="text" name="country" required data-translate-placeholder="inquiry_form_country" />
+                                        </label>
+
+                                        <label>
+                                            <span data-translate="inquiry_form_product_placeholder">Product Category *</span>
+                                            <select id="product" name="product">
+                                                <option value="" data-translate="inquiry_form_product_placeholder">Product Category *</option>
+                                                <option value="Canopy Tent" data-translate="inquiry_form_product_tent">Canopy Tent</option>
+                                                <option value="Beach Flag" data-translate="inquiry_form_product_flag">Beach Flag</option>
+                                                <option value="Pop-up Display" data-translate="inquiry_form_product_display">Pop-up Display</option>
+                                                <option value="Custom Display" data-translate="inquiry_form_product_custom">Custom Display Solution</option>
+                                            </select>
+                                        </label>
+
+                                        <label>
+                                            <span data-translate="inquiry_form_message">Please describe your requirements (size, usage, timeline, etc.) *</span>
+                                            <textarea name="message" rows="5" required minlength="10" data-translate-placeholder="inquiry_form_message"></textarea>
+                                        </label>
+
+                                        <!-- Honeypot 防垃圾 -->
+                                        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
+
+                                        <div style="display:flex; gap:8px; margin-top:10px;">
+                                            <button id="contactSubmitBtn" class="btn btn-primary" type="submit" data-translate="inquiry_form_submit">Submit Inquiry</button>
+                                            <button type="reset" class="btn btn-secondary">Reset</button>
+                                        </div>
+                                    </form>
+                                </div>
             </div>
             <!-- SEO + 转化文案 -->
             <div class="contact-seo-footer" style="text-align: center; margin-top: 48px; padding: 32px; background: #f8f9fa; border-radius: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">

@@ -268,31 +268,35 @@ function addPDFDownloadButtons() {
 
 // 表单验证
 function initFormValidation() {
-    const form = document.querySelector('.contact-form form');
-    
-    if (form) {
+    // Handle multiple contact-form instances but skip the primary getQuoteForm
+    const forms = document.querySelectorAll('.contact-form form');
+
+    forms.forEach(form => {
+        // Let `scripts/contact.js` handle the main quoting form
+        if (form.id === 'getQuoteForm') return;
+
         const inputs = form.querySelectorAll('input, textarea');
-        
+
         inputs.forEach(input => {
             input.addEventListener('blur', validateField);
             input.addEventListener('input', clearValidation);
         });
-        
+
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             let isValid = true;
             inputs.forEach(input => {
                 if (!validateField({ target: input })) {
                     isValid = false;
                 }
             });
-            
+
             if (isValid) {
                 submitForm(form);
             }
         });
-    }
+    });
 }
 
 // 验证单个字段

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories / 配件</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/multilang.css">
+</head>
+<body data-page-category="accessories">
+    <nav class="navbar"> <!-- minimal nav placeholder preserved by site header scripts -->
+    </nav>
+
+    <main style="padding-top:110px;">
+        <div class="container">
+            <section class="accessories-overview" style="text-align:center; margin-bottom:2rem;">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
+                    <nav aria-label="breadcrumb" style="flex:1; text-align:left;">
+                        <a href="index.html">Home</a>
+                         / 
+                        <a href="product-center.html">Products</a>
+                         / 
+                        <span>Accessories</span>
+                    </nav>
+                    <div style="flex:0 0 auto; text-align:right;">
+                        <button id="accessoriesBackBtn" style="padding:8px 12px; border-radius:6px; border:1px solid var(--border-color); background:#fff; cursor:pointer;">Back / 返回</button>
+                    </div>
+                </div>
+                <h1 style="font-size:2rem; margin-bottom:1rem;">Accessories <span class="zh">/ 配件</span></h1>
+                <div style="max-width:900px; margin:0 auto;">
+                    <img id="accessoriesOverviewImg" src="images/products/accessories/tent-accessories.png" alt="Tent Accessories Overview" loading="lazy" width="1100" height="620" style="aspect-ratio: 1100 / 620; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); display:block; margin:0 auto; height:auto;" onerror="this.src='images/placeholder.png'">
+                </div>
+                <p style="margin-top:0.75rem; color:var(--text-light);">Browse our accessories below and click any item to view specifications. <span class="zh">向下浏览配件并点击查看参数。</span></p>
+            </section>
+
+            <section class="accessories-list">
+                <div style="display:flex; justify-content:center; margin-bottom:1rem;">
+                    <input id="accessoriesSearch" type="search" placeholder="Search accessories / 搜索配件" style="max-width:720px; width:100%; padding:12px 16px; border:1px solid var(--border-color); border-radius:8px;">
+                </div>
+
+                <div id="accessoriesGrid" class="ap-grid" style="padding: 1rem 0;">
+                    <!-- accessory cards rendered here -->
+                </div>
+
+                <div id="accessoriesEmpty" class="ap-empty" style="display:none;">
+                    <p>Coming soon / 正在整理</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <style>
+        /* fixed-size overview to avoid layout thrashing */
+        #accessoriesOverviewImg { display:block; max-width:1100px; width:100%; height:auto; }
+    </style>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/multilang.js"></script>
+    <script src="scripts/products.js"></script>
+    <script defer src="scripts/accessories-page.js"></script>
+    <script>
+        (function(){
+            const btn = document.getElementById('accessoriesBackBtn');
+            if (!btn) return;
+            btn.addEventListener('click', function(){
+                try{
+                    if (history.length>1) history.back(); else location.href='product-center.html';
+                }catch(e){ location.href='product-center.html'; }
+            });
+        })();
+    </script>
+</body>
+</html>

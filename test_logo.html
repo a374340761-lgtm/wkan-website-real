@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Test - WaiKwan Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        .logo-test {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .logo-test img {
+            max-width: 100%;
+            height: auto;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1>WaiKwan Logo Test Page</h1>
+    
+    <h2>Testing Your WaiKwan Logo:</h2>
+    
+    <div class="logo-test">
+        <h3>Small Logo (60x48) - Navigation Bar</h3>
+        <img src="images/waikwan_logo_small.png" alt="Small Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="error" style="display:none;">❌ waikwan_logo_small.png 无法加载</div>
+        <div class="success">✅ waikwan_logo_small.png 加载成功</div>
+        <p>File: waikwan_logo_small.png</p>
+    </div>
+    
+    <div class="logo-test">
+        <h3>Medium Logo (200x160) - Hero Section</h3>
+        <img src="images/waikwan_logo_medium.png" alt="Medium Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="error" style="display:none;">❌ waikwan_logo_medium.png 无法加载</div>
+        <div class="success">✅ waikwan_logo_medium.png 加载成功</div>
+        <p>File: waikwan_logo_medium.png</p>
+    </div>
+    
+    <div class="logo-test">
+        <h3>Large Logo (300x240) - About Section</h3>
+        <img src="images/waikwan_logo_large.png" alt="Large Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="error" style="display:none;">❌ waikwan_logo_large.png 无法加载</div>
+        <div class="success">✅ waikwan_logo_large.png 加载成功</div>
+        <p>File: waikwan_logo_large.png</p>
+    </div>
+    
+    <h2>Original Logo File:</h2>
+    <div class="logo-test">
+        <h3>Original Logo (Your Provided File)</h3>
+        <img src="images/wai kwan company logo.png" alt="Original Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="error" style="display:none;">❌ wai kwan company logo.png 无法加载</div>
+        <div class="success">✅ wai kwan company logo.png 加载成功</div>
+        <p>File: wai kwan company logo.png (This is your original logo file)</p>
+    </div>
+    
+    <div class="logo-test">
+        <h3>Navigation Bar Preview</h3>
+        <div style="background: #2c3e50; padding: 15px; display: flex; align-items: center;">
+            <img src="images/waikwan_logo_small.png" alt="Nav Logo" style="margin-right: 15px;">
+            <div style="color: white;">
+                <h4 style="margin: 0; color: white;">广西伟群帐篷公司</h4>
+                <span style="font-size: 12px; color: #bdc3c7;">专业户外家具制造商</span>
+            </div>
+        </div>
+        <p>This shows how the logo will appear in the navigation bar</p>
+    </div>
+    
+    <div class="logo-test">
+        <h3>Hero Section Preview</h3>
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; text-align: center; color: white;">
+            <img src="images/waikwan_logo_medium.png" alt="Hero Logo" style="margin-bottom: 20px;">
+            <h2 style="color: white; margin: 0;">专业的户外家具制造解决方案</h2>
+            <p style="color: #ecf0f1;">Professional Outdoor Furniture Manufacturing Solutions</p>
+        </div>
+        <p>This shows how the logo will appear in the hero section</p>
+    </div>
+</body>
+</html>

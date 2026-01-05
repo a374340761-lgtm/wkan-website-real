@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计标签测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
+            color: white;
+            margin: 0;
+            padding: 50px;
+            min-height: 100vh;
+        }
+        
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px 20px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            min-width: 120px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #64b5f6;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .stat-label {
+            display: block !important;
+            font-size: 1rem;
+            opacity: 1 !important;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1e3c72 !important;
+            font-weight: 700;
+            text-shadow: none;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>统计标签测试页面</h1>
+    
+    <div class="hero-stats">
+        <div class="stat-item">
+            <span class="stat-number">25+</span>
+            <span class="stat-label">年经验</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">客户</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">100+</span>
+            <span class="stat-label">产品</span>
+        </div>
+    </div>
+    
+    <p style="text-align: center; font-size: 1.2rem; opacity: 0.8;">
+        如果您能看到上面的"年经验"、"客户"、"产品"标签，说明样式工作正常。
+    </p>
+</body>
+</html>

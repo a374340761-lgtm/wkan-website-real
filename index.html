@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Canopy Tent & Display System Manufacturer | Guangxi WaiKwan Tent Manufacturing Co., Ltd</title>
+    <meta name="description" content="Guangxi WaiKwan Tent Manufacturing Co., Ltd is a professional manufacturer of custom canopy tents, beach flags and pop-up display systems, providing OEM and customized solutions for global clients.">
+    <meta name="keywords" content="custom canopy tent manufacturer, tent and display system manufacturer, OEM tent supplier, custom printed tent, pop up tent manufacturer, event tent supplier">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/multilang.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="home">
+    <!-- Language Gate - 不再自动显示，用户通过右上角图标切换 -->
+    <div id="languageGate" class="language-gate" style="display: none;">
+        <div class="language-gate-box">
+            <h2>Welcome</h2>
+            <p>Please select your language</p>
+
+            <div class="language-options">
+                <button data-lang="en">English</button>
+                <button data-lang="zh">中文</button>
+                <button data-lang="ja">日本語</button>
+                <button data-lang="ko">한국어</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 语言切换器 -->
+    <!-- Old language switcher (hidden) -->
+    <div class="language-switcher old-lang-switcher" role="toolbar" aria-label="Language switcher" style="display: none;">
+        <button class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+    </div>
+
+    <!-- 顶部提示栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span data-translate="top_bar_text">服务企业超过15年！值得信赖的客户服务！</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="nav-brand">
+                    <img src="images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="nav-logo-img">
+                    <div class="nav-logo-text">
+                        <div class="brand-text">
+                            <div class="brand-name" data-company-cn></div>
+                            <div class="brand-name-en" data-company-en></div>
+                            <div class="brand-sub">Since 2010</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item-dropdown">
+                    <a href="products-tents.html" class="nav-link">
+                        <span class="zh">产品中心</span><span class="en">Products</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a href="products-tents.html">Tents</a>
+                      <a href="products-flags.html">Beach Flags &amp; Poles</a>
+                      <a href="products-displays.html">Pop-up Displays</a>
+                      <a href="products-accessories.html">Accessories</a>
+                      <a href="products-frames.html">Replacement Parts</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="all-products.html" class="nav-link">
+                        <span class="zh">全部产品</span><span class="en">Browse Products</span>
+                    </a>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="#about" data-translate="nav_info">信息 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#top3"><span class="zh">热销尺寸 Top3</span><span class="en">Top 3 Sizes</span></a></li>
+                        <li><a href="#about" data-translate="nav_about">关于我们</a></li>
+                        <li><a href="#services" data-translate="nav_services">服务范围</a></li>
+                        <li><a href="#contact" data-translate="nav_contact">联系我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="搜索">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-icon-btn" id="accountBtn" aria-label="账户">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="nav-icon-btn" id="cartBtn" aria-label="购物车">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <!-- Language icon dropdown (next to cart) -->
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="Language" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
+                        <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
+                        <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
+                        <button type="button" class="lang-item" data-lang="ja" data-lang-option="ja">日本語</button>
+                        <button type="button" class="lang-item" data-lang="ko" data-lang-option="ko">한국어</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容 -->
+    <main>
+        <!-- 首页横幅 - Signazon 风格轮播 -->
+        <section id="home" class="hero hero-sz">
+            <div class="hero-sz-shell">
+                <div class="hero-sz-track" id="heroSzTrack">
+                    <!-- Slide 1 -->
+                    <article class="hero-sz-slide is-active" data-slide="0">
+                        <div class="hero-sz-left">
+                            <div class="top-seller-badge"><span class="zh">Top Seller</span> · <span class="en">Display System</span></div>
+                            <h1 class="hero-sz-title">Pop-up Display Backdrop</h1>
+                            <p class="hero-sz-sub">Portable pop-up display systems for exhibitions and events. Fast setup, lightweight structure, replaceable graphics.</p>
+
+                            <div class="hero-specs">
+                                <div class="spec-row">
+                                    <div class="spec-label">SIZE</div>
+                                    <div class="spec-value">2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">MATERIAL</div>
+                                    <div class="spec-value">Aluminum frame + Fabric graphic</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">LEAD TIME</div>
+                                    <div class="spec-value">7–15 days (sample) · 15–25 days (bulk)</div>
+                                </div>
+                            </div>
+
+                            <div class="hero-buttons hero-sz-actions">
+                                <a href="products-lightbox.html" class="btn-view btn-primary">View Details</a>
+                            </div>
+                        </div>
+                        <div class="hero-sz-right">
+                            <div class="hero-sz-image-wrap">
+                                <img src="images/hero/伟群快幕秀照片.jpeg" alt="Pop-up Display System" loading="eager">
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Slide 2 -->
+                    <article class="hero-sz-slide" data-slide="1">
+                        <div class="hero-sz-left">
+                            <div class="hero-sz-kicker" data-translate="hero_kicker_2">BEST SELLER</div>
+                            <h1 class="hero-sz-title" data-translate="hero_title_2">Pop Up Event Tents</h1>
+                            <ul class="hero-sz-bullets">
+                                <li data-translate="hero_bullet_2_1">Aluminum or steel frame options</li>
+                                <li data-translate="hero_bullet_2_2">Full-color dye-sublimation printing</li>
+                                <li data-translate="hero_bullet_2_3">Standard sizes + custom, reliable lead time</li>
+                            </ul>
+                            <div class="hero-buttons hero-sz-actions">
+                                <a href="products-tents.html" class="btn btn-primary" data-translate="hero_cta_primary_2">
+                                    <span>Explore Tents</span><i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="index.html#contact" class="btn btn-secondary" data-translate="hero_cta_secondary_2">
+                                    <span>Request a Quote</span><i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            <div class="hero-usps">
+                                <div class="hero-usp">✓ Factory Direct Manufacturer</div>
+                                <div class="hero-usp">✓ OEM / Custom Branding Available</div>
+                                <div class="hero-usp">✓ Fast Production & Global Shipping</div>
+                            </div>
+                        </div>
+                        <div class="hero-sz-right">
+                            <div class="hero-sz-image-wrap">
+                                <img src="images/hero/快幕秀图片.jpg" alt="Pop Up Event Tent" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Slide 3 -->
+                    <article class="hero-sz-slide" data-slide="2">
+                        <div class="hero-sz-left">
+                            <div class="hero-sz-kicker" data-translate="hero_kicker_3">OUTDOOR PROMO</div>
+                            <h1 class="hero-sz-title" data-translate="hero_title_3">Feather & Teardrop Flags</h1>
+                            <ul class="hero-sz-bullets">
+                                <li data-translate="hero_bullet_3_1">Durable poles with strong wind resistance</li>
+                                <li data-translate="hero_bullet_3_2">Multiple bases for grass or concrete</li>
+                                <li data-translate="hero_bullet_3_3">Fast sampling for urgent events</li>
+                            </ul>
+                            <div class="hero-buttons hero-sz-actions">
+                                <a href="products-flags.html" class="btn btn-primary" data-translate="hero_cta_primary_3">
+                                    <span>Shop Flags</span><i class="fas fa-arrow-right"></i>
+                                </a>
+                                <a href="index.html#contact" class="btn btn-secondary" data-translate="hero_cta_secondary_3">
+                                    <span>Contact Sales</span><i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                            <div class="hero-usps">
+                                <div class="hero-usp">✓ Factory Direct Manufacturer</div>
+                                <div class="hero-usp">✓ OEM / Custom Branding Available</div>
+                                <div class="hero-usp">✓ Fast Production & Global Shipping</div>
+                            </div>
+                        </div>
+                        <div class="hero-sz-right">
+                            <div class="hero-sz-image-wrap">
+                                <img src="images/伟群产品展示大图.png" alt="Feather Flags" loading="lazy">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="hero-sz-controls" aria-label="Hero carousel controls">
+                    <button class="hero-sz-nav" id="heroSzPrev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+                    <div class="hero-sz-dots" id="heroSzDots" aria-label="Slide indicators"></div>
+                    <button class="hero-sz-nav" id="heroSzNext" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Top Seller (hero-linked featured card) ===== -->
+        <section class="top-seller" id="top-seller">
+            <div class="container">
+                <div class="top-seller-card">
+                    <div class="top-seller-body">
+                        <span class="top-seller-badge"><span class="zh">Top Seller</span> · <span class="en">Display System</span></span>
+                        <h2 class="top-seller-title">Pop-up Display Backdrop</h2>
+                        <p class="top-seller-lead">Portable pop-up display systems for exhibitions and events. Fast setup, lightweight structure, replaceable graphics.</p>
+
+                        <div class="top-seller-specs">
+                            <div class="spec-row">
+                                <div class="spec-label">SIZE</div>
+                                <div class="spec-value">2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">MATERIAL</div>
+                                <div class="spec-value">Aluminum frame + Fabric graphic</div>
+                            </div>
+                            <div class="spec-row">
+                                <div class="spec-label">LEAD TIME</div>
+                                <div class="spec-value">7–15 days (sample) · 15–25 days (bulk)</div>
+                            </div>
+                        </div>
+
+                        <div class="top-seller-cta">
+                            <a href="products-lightbox.html" class="btn-view">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="top-seller-media">
+                        <img src="images/hero/伟群快幕秀照片.jpeg" alt="Pop-up Display Backdrop">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== /Top Seller ===== -->
+
+        <!-- 公司介绍 -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="about_title">关于伟群</h2>
+                    <p data-translate="about_subtitle">帐篷、沙滩旗与展示系统的专业源头制造工厂</p>
+                </div>
+                <div class="about-content about-grid">
+                    <div class="about-text">
+                        <p class="about-intro">
+                            <strong>Guangxi WaiKwan Tent Manufacturing Co., Ltd</strong> is a professional manufacturer of tents, beach flags and pop-up display systems, established in 2010. 
+                            <span data-translate="about_intro_rest">公司深耕便携式户外展示行业<strong>25年以上</strong>，为全球客户提供稳定、高效、可定制的展示解决方案。</span>
+                        </p>
+                        
+                        <h3 data-translate="about_mission">我们的使命</h3>
+                        <p data-translate="about_mission_text">专注于帐篷、沙滩旗及便携式展示系统的研发与制造，为全球客户提供<strong>高品质、易安装、可定制</strong>的展示产品，帮助品牌在各类活动、展会与商业场景中实现更高效的曝光与传播。</p>
+                        
+                        <h3 data-translate="about_vision">我们的愿景</h3>
+                        <p data-translate="about_vision_text">成为帐篷与展示系统领域<strong>值得信赖的全球制造合作伙伴</strong>，持续提升制造工艺与产品品质，为客户创造长期、稳定、可持续的商业价值。</p>
+                        
+                        <div class="about-products">
+                            <h4 data-translate="about_products_title">产品与能力范围</h4>
+                            <div class="about-products-content">
+                                <div class="about-products-list">
+                                    <h5 data-translate="about_products_main">主要产品系列：</h5>
+                                    <ul>
+                                        <li data-translate="about_product_1">帐篷系列（Pop-up Tent / Marquee / Event Tent）</li>
+                                        <li data-translate="about_product_2">沙滩旗及旗杆系列（Feather Flag / Teardrop Flag）</li>
+                                        <li data-translate="about_product_3">快幕秀展示系统（Pop-up Display）</li>
+                                        <li data-translate="about_product_4">桌布、布艺展示及品牌配件</li>
+                                        <li data-translate="about_product_5">定制化品牌展示解决方案</li>
+                                    </ul>
+                                </div>
+                                <div class="about-printing-list">
+                                    <h5 data-translate="about_printing_title">印刷与工艺：</h5>
+                                    <ul>
+                                        <li data-translate="about_printing_1">数码印刷 / 丝网印刷 / 热转印</li>
+                                        <li data-translate="about_printing_2">多种布料与结构可选</li>
+                                        <li data-translate="about_printing_3">严格的品质检测与一致性控制</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="about-philosophy">
+                            <h4 data-translate="about_philosophy_title">我们的理念</h4>
+                            <ul class="philosophy-list">
+                                <li><strong data-translate="about_philosophy_mission_label">企业使命</strong>：<span data-translate="about_philosophy_mission">弘扬品牌展示文化，助力客户商业成功</span></li>
+                                <li><strong data-translate="about_philosophy_values_label">经营理念</strong>：<span data-translate="about_philosophy_values">诚信经营、持续创新、合作共赢</span></li>
+                                <li><strong data-translate="about_philosophy_quality_label">质量方针</strong>：<span data-translate="about_philosophy_quality">品质稳定、交付准时、服务可靠</span></li>
+                                <li><strong data-translate="about_philosophy_commitment_label">质量承诺</strong>：<span data-translate="about_philosophy_commitment">产品严格符合国际标准与客户要求，确保一致性与可靠性</span></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stats">
+                            <div class="stat-item">
+                                <h4>25+</h4>
+                                <p data-translate="stat_years">年制造经验</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>1000+</h4>
+                                <p data-translate="stat_clients">全球合作客户</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>50+</h4>
+                                <p data-translate="stat_products">产品型号与解决方案</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image about-logo">
+                        <div class="about-logo-container">
+                            <img src="images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="about-logo-img">
+                            <span class="logo-since" data-translate="logo_since">Since 2010</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品特色展示 -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 data-translate="feature_quality">最高品质</h3>
+                        <p data-translate="feature_quality_desc">使用优质材料，严格质量控制，确保产品耐用可靠</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 data-translate="feature_fast">快速交付</h3>
+                        <p data-translate="feature_fast_desc">高效生产流程，快速物流配送，确保及时送达</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 data-translate="feature_custom">定制服务</h3>
+                        <p data-translate="feature_custom_desc">专业设计团队，支持OEM/ODM，满足您的个性化需求</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 data-translate="feature_global">全球出口</h3>
+                        <p data-translate="feature_global_desc">产品出口至多个国家，丰富的国际市场经验</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Top 3 Most Popular Sizes ===== -->
+        <section class="top3-sizes" id="top3">
+            <div class="container">
+                <!-- 标题区 -->
+                <header class="top3-header">
+                    <h2 class="top3-title">
+                        <span class="zh">产品常规尺寸参考（Top 3）</span>
+                        <span class="en">Top 3 Most Popular Sizes</span>
+                    </h2>
+                    <p class="top3-subtitle">
+                        <span class="zh">以下为我司真实常用规格（来源于报价表），如需其他尺寸可定制。</span>
+                        <span class="en">These are our real best-selling sizes (from our price list). Custom sizes available on request.</span>
+                    </p>
+                </header>
+                <!-- 三卡片 -->
+                <div class="top3-grid">
+                    <!-- 1) 帐篷 -->
+                    <article class="top3-card">
+                        <div class="top3-card-head">
+                            <h3 class="top3-card-title">
+                                <span class="zh">快装帐篷</span>
+                                <span class="en">Pop-up Canopy Tent</span>
+                            </h3>
+                            <span class="badge">
+                                <span class="zh">Top 3</span>
+                                <span class="en">Top 3</span>
+                            </span>
+                        </div>
+                        <div class="top3-block">
+                            <div class="label">
+                                <span class="zh">常规尺寸</span>
+                                <span class="en">Standard Sizes</span>
+                            </div>
+                            <ul class="top3-list">
+                                <li>3 × 3 m</li>
+                                <li>3 × 4.5 m</li>
+                                <li>3 × 6 m</li>
+                            </ul>
+                        </div>
+                        <div class="top3-block">
+                            <div class="label">
+                                <span class="zh">适用场景</span>
+                                <span class="en">Applications</span>
+                            </div>
+                            <p class="top3-text">
+                                <span class="zh">展会活动 / 商业推广 / 户外促销</span>
+                                <span class="en">Trade shows / Brand promotion / Outdoor events</span>
+                            </p>
+                        </div>
+                        <div class="top3-actions">
+                            <a class="btn-primary" href="#contact">
+                                <span class="zh">获取报价</span>
+                                <span class="en">Get a Quote</span>
+                            </a>
+                            <a class="btn-secondary" href="product-center.html#tents">
+                                <span class="zh">查看产品</span>
+                                <span class="en">View Products</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 2) 沙滩旗 -->
+                    <article class="top3-card">
+                        <div class="top3-card-head">
+                            <h3 class="top3-card-title">
+                                <span class="zh">沙滩旗</span>
+                                <span class="en">Beach Flag</span>
+                            </h3>
+                            <span class="badge">
+                                <span class="zh">Top 3</span>
+                                <span class="en">Top 3</span>
+                            </span>
+                        </div>
+                        <div class="top3-block">
+                            <div class="label">
+                                <span class="zh">常规高度</span>
+                                <span class="en">Standard Heights</span>
+                            </div>
+                            <ul class="top3-list">
+                                <li>2.8 m</li>
+                                <li>3.4 m</li>
+                                <li>4.5 m</li>
+                            </ul>
+                        </div>
+                        <div class="top3-block">
+                            <div class="label">
+                                <span class="zh">旗面款式</span>
+                                <span class="en">Flag Shapes</span>
+                            </div>
+                            <p class="top3-text">
+                                <span class="zh">刀型 / 水滴（支持铝合金 & 碳纤维旗杆）</span>
+                                <span class="en">Blade / Teardrop (Aluminum & Carbon Fiber poles)</span>
+                            </p>
+                        </div>
+                        <div class="top3-actions">
+                            <a class="btn-primary" href="#contact">
+                                <span class="zh">获取报价</span>
+                                <span class="en">Get a Quote</span>
+                            </a>
+                            <a class="btn-secondary" href="product-center.html#flags">
+                                <span class="zh">查看产品</span>
+                                <span class="en">View Products</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 3) 快幕秀 -->
+                    <article class="top3-card">
+                        <div class="top3-card-head">
+                            <h3 class="top3-card-title">
+                                <span class="zh">快幕秀展示系统</span>
+                                <span class="en">Pop-up Display System</span>
+                            </h3>
+                            <span class="badge">
+                                <span class="zh">Top 3</span>
+                                <span class="en">Top 3</span>
+                            </span>
+                        </div>
+                        <div class="top3-block">
+                            <div class="label">
+                                <span class="zh">常规宽度</span>
+                                <span class="en">Standard Widths</span>
+                            </div>
+                            <ul class="top3-list">
+                                <li>3 m</li>
+                                <li>4 m</li>
+                                <li>5 m</li>
+                            </ul>
+                        </div>
+                        <div class="top3-block">
+                            <div class="label">
+                                <span class="zh">可选配置</span>
+                                <span class="en">Options</span>
+                            </div>
+                            <p class="top3-text">
+                                <span class="zh">单面 / 双面印刷可选</span>
+                                <span class="en">Single-sided / Double-sided printing available</span>
+                            </p>
+                        </div>
+                        <div class="top3-actions">
+                            <a class="btn-primary" href="#contact">
+                                <span class="zh">获取报价</span>
+                                <span class="en">Get a Quote</span>
+                            </a>
+                            <a class="btn-secondary" href="product-center.html#display">
+                                <span class="zh">查看产品</span>
+                                <span class="en">View Products</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <!-- 底部提示 -->
+                <div class="top3-note">
+                    <span class="zh">注：以上尺寸为常规热销规格，更多尺寸与结构可按需求定制。</span>
+                    <span class="en">Note: These are our best-selling standard sizes. More sizes and structures can be customized.</span>
+                </div>
+            </div>
+        </section>
+        <!-- ===== /Top 3 Most Popular Sizes ===== -->
+
+        <!-- 产品分类展示 -->
+        <section class="product-categories-showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="product_categories_title">产品分类</h2>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="tents">
+                        <div class="category-image">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 data-translate="products_category_tents_title">帐篷系列</h3>
+                        <p data-translate="products_category_tents_desc">提供多种规格与结构的帐篷产品，适用于促销活动、展会展示及大型户外活动，支持定制尺寸与品牌印刷。</p>
+                        <p class="category-desc-en" data-translate="products_category_tents_desc_en">A full range of tent solutions designed for promotions, exhibitions and outdoor events. Custom sizes and branding options available.</p>
+                    </div>
+                    <div class="category-card" data-category="flags">
+                        <div class="category-image">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <h3 data-translate="products_category_flags_title">沙滩旗及旗杆</h3>
+                        <p data-translate="products_category_flags_desc">多种造型与尺寸的沙滩旗及旗杆系统，适合户外宣传、赛事活动及商业展示，支持多种印刷工艺。</p>
+                        <p class="category-desc-en" data-translate="products_category_flags_desc_en">A variety of beach flag shapes and pole systems for outdoor promotion, events and branding, with multiple printing options.</p>
+                    </div>
+                    <div class="category-card" data-category="displays">
+                        <div class="category-image">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 data-translate="products_category_displays_title">快幕秀展示系统</h3>
+                        <p data-translate="products_category_displays_desc">便携式快装展示系统，适用于展会背景墙、品牌形象展示及室内外活动，结构轻便，画面可更换。</p>
+                        <p class="category-desc-en" data-translate="products_category_displays_desc_en">Portable pop-up display systems designed for exhibitions, backdrops and brand presentations. Lightweight structure with replaceable graphics.</p>
+                    </div>
+                    <div class="category-card" data-category="accessories">
+                        <div class="category-image">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3 data-translate="products_category_accessories_title">布艺展示及配件</h3>
+                        <p data-translate="products_category_accessories_desc">包括桌布、布艺横幅及展示配件，满足整体品牌展示系统的配套需求。</p>
+                        <p class="category-desc-en" data-translate="products_category_accessories_desc_en">Table covers, fabric banners and display accessories designed to complete outdoor branding systems.</p>
+                    </div>
+                    <div class="category-card" data-category="custom">
+                        <div class="category-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 data-translate="products_category_custom_title">定制展示解决方案</h3>
+                        <p data-translate="products_category_custom_desc">支持从结构、尺寸到画面印刷的全流程定制，满足不同市场与项目需求。</p>
+                        <p class="category-desc-en" data-translate="products_category_custom_desc_en">Full customization available from structure and size to graphic printing, tailored to different markets and project requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品中心 -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="products_title">产品中心</h2>
+                    <p data-translate="products_subtitle">多样化的户外家具和展示产品，满足您的各种需求</p>
+                </div>
+                
+                <div class="product-categories">
+                    <button class="category-btn active" data-category="all" data-translate="category_all">全部产品</button>
+                    <button class="category-btn" data-category="tents" data-translate="category_tents">帐篷展示</button>
+                    <button class="category-btn" data-category="flags" data-translate="category_flags">旗帜广告</button>
+                    <button class="category-btn" data-category="furniture" data-translate="category_furniture">户外家具</button>
+                    <button class="category-btn" data-category="custom" data-translate="category_custom">定制产品</button>
+                </div>
+
+                <div class="products-grid">
+                    <!-- 产品项目将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 客户评价 -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="testimonials_title">客户评价</h2>
+                    <p data-translate="testimonials_subtitle">来自全球客户的真实反馈</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="testimonial_1_text">"产品质量非常好，服务专业，交付及时。我们非常满意与伟群的合作。"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonial_1_name">David T.</strong>
+                            <span data-translate="testimonial_1_role">活动策划公司</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="testimonial_2_text">"定制服务非常专业，能够满足我们的特殊需求。产品质量超出预期。"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonial_2_name">Antonio C.</strong>
+                            <span data-translate="testimonial_2_role">餐厅老板</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="testimonial_3_text">"团队非常专业，响应迅速。产品设计精美，完全符合我们的品牌形象。"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonial_3_name">Owen B.</strong>
+                            <span data-translate="testimonial_3_role">娱乐行业</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 服务范围 -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="services_title">服务范围</h2>
+                    <p data-translate="services_subtitle">全方位的户外家具制造服务，从设计到成品</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 data-translate="service_design">设计服务</h3>
+                        <p data-translate="service_design_desc">专业的产品设计团队，为您打造独特的户外家具解决方案</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3 data-translate="service_manufacturing">制造服务</h3>
+                        <p data-translate="service_manufacturing_desc">先进的制造设备，确保每一个户外家具产品都完美呈现</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-cut"></i>
+                        </div>
+                        <h3 data-translate="service_customization">定制服务</h3>
+                        <p data-translate="service_customization_desc">专业的产品定制服务，满足您的特殊需求和品牌要求</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 data-translate="service_delivery">配送服务</h3>
+                        <p data-translate="service_delivery_desc">快速、安全的物流配送，确保户外家具产品及时送达</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section id="contact" class="contact contact-page">
+            <div class="contact-hero">
+                <h1 data-translate="contact_title">联系我们</h1>
+                <p data-translate="contact_subtitle">我们期待与您的合作</p>
+                <p class="contact-seo-text" style="margin-top: 16px; font-size: 1.1em; color: #555; max-width: 800px; margin-left: auto; margin-right: auto;" data-translate="contact_seo_text">Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.</p>
+            </div>
+            <div class="contact-grid">
+                <!-- Left: info -->
+                <aside class="contact-card soft-panel contact-info">
+                    <h3 data-translate="contact_info_title">联系方式</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <div class="contact-title" data-i18n="contact_address_title">Address</div>
+                            <div class="contact-value" data-i18n="contact_address_value">
+                                Daping Changtangao, Luyin Village, Gucheng Town, Luchuan County, Yulin City, China
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="contact-text">
+                            <div class="contact-title" data-i18n="contact_whatsapp_title">WhatsApp</div>
+                            <a
+                                href="https://wa.me/8613824540280"
+                                target="_blank"
+                                class="contact-link"
+                            >
+                                +86 138 2454 0280
+                            </a>
+                            <div class="qr-wrapper">
+                                <img
+                                    src="images/boss_whatsapp.jpg"
+                                    alt="WhatsApp QR Code"
+                                    class="qr-img"
+                                >
+                            </div>
+                            <div class="contact-note" data-i18n="contact_whatsapp_note">
+                                Scan to chat on WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="label" data-translate="contact_email_label">Email</div>
+                            <div class="value">
+                                <a href="mailto:a374340761@gmail.com">a374340761@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <div class="contact-text">
+                            <div class="contact-title" data-i18n="contact_wechat_title">WeChat</div>
+                            <div class="contact-value">massifmyth</div>
+                            <div class="qr-wrapper">
+                                <img src="images/boss_wechat.jpg" alt="WeChat QR Code" class="qr-img">
+                            </div>
+                            <div class="contact-note" data-i18n="contact_wechat_note">
+                                Scan to add on WeChat
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                                <!-- Right: contact form removed from homepage to avoid accidental overlay in hero. -->
+            </div>
+            <!-- SEO + 转化文案 -->
+            <div class="contact-seo-footer" style="text-align: center; margin-top: 48px; padding: 32px; background: #f8f9fa; border-radius: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.1em; color: #333; line-height: 1.6;" data-translate="contact_seo_footer">
+                    Looking for a reliable manufacturer of custom tents, flags or display systems? Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your project.
+                </p>
+            </div>
+        </section>
+
+        <!-- ===================== Contact Bottom (Signazon-style) ===================== -->
+        <section class="contact-bottom">
+            <div class="contact-bottom__bg"></div>
+            <div class="contact-bottom__inner">
+                <!-- 左：快速信息 -->
+                <div class="contact-bottom__grid">
+                    <div class="contact-bottom__brand">
+                        <div class="contact-bottom__brandTitle" data-i18n="footer_company_line_cn">
+                            广西伟群帐篷制造有限公司
+                        </div>
+                        <div class="contact-bottom__brandSub" data-i18n="footer_company_line_en">
+                            Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010
+                        </div>
+                    </div>
+                    <div class="contact-bottom__cols">
+                        <div class="contact-bottom__col">
+                            <div class="contact-bottom__h" data-i18n="footer_findus">Find Us</div>
+                            <div class="contact-bottom__p" data-i18n="footer_address">
+                                Daping Changtangao, Luyin Village,<br>
+                                Gucheng Town, Luchuan County,<br>
+                                Yulin City, China
+                            </div>
+                        </div>
+                        <div class="contact-bottom__col">
+                            <div class="contact-bottom__h" data-i18n="footer_contact">Contact</div>
+                            <a class="contact-bottom__link" href="mailto:a374340761@gmail.com">
+                                a374340761@gmail.com
+                            </a>
+                            <a class="contact-bottom__link" href="https://wa.me/8613824540280" target="_blank">
+                                WhatsApp: +86 138 2454 0280
+                            </a>
+                            <div class="contact-bottom__p">
+                                WeChat: massifmyth
+                            </div>
+                        </div>
+                        <div class="contact-bottom__col">
+                            <div class="contact-bottom__h" data-i18n="footer_companyinfo">Company Info</div>
+                            <a class="contact-bottom__link" href="#about" data-i18n="footer_about">About Us</a>
+                            <a class="contact-bottom__link" href="product-center.html" data-i18n="footer_products">Products</a>
+                            <a class="contact-bottom__link" href="#contact" data-i18n="footer_contactus">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右：询问/CTA 盒子 -->
+                <div class="contact-bottom__ask">
+                    <div class="contact-bottom__askTitle" data-i18n="footer_ask_title">
+                        Ask anything about products or designs…
+                    </div>
+                    <div class="contact-bottom__askBox">
+                        <div class="contact-bottom__askText" data-i18n="footer_ask_text">
+                            Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
+                        </div>
+                        <div class="contact-bottom__askActions">
+                            <a href="#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
+                                Get a Quote
+                            </a>
+                            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
+                                WhatsApp Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 最底行：版权 + links -->
+                <div class="contact-bottom__legal">
+                    <div class="contact-bottom__copy" data-i18n="footer_copyright">
+                        © 2025 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.
+                    </div>
+                    <div class="contact-bottom__links">
+                        <a href="#" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
+                        <a href="#" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
+                        <a href="#" class="contact-bottom__link2" data-i18n="footer_sitemap">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ===================== /Contact Bottom ===================== -->
+    </main>
+
+    <!-- 旧 footer 已删除：新的 contact-bottom section 已包含所有 footer 信息 -->
+
+    <!-- 返回顶部按钮 -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- PDF下载模态框 -->
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 data-translate="pdf_download_title">下载产品资料</h3>
+            <p data-translate="pdf_download_desc">点击下方按钮下载完整的产品目录和公司介绍。</p>
+            <a href="第3版 修改画册 --- 广西伟群.pdf" download class="btn btn-primary" data-translate="btn_download_pdf">下载PDF</a>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/multilang.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="scripts/contact.js"></script>
+    <script>
+        // 自动填充产品信息（从 URL 参数）
+        (function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productParam = urlParams.get('product');
+            if (productParam && document.getElementById('product')) {
+                const productSelect = document.getElementById('product');
+                const productValue = decodeURIComponent(productParam);
+                // 尝试匹配现有选项
+                const options = Array.from(productSelect.options);
+                const matchedOption = options.find(opt => 
+                    opt.value.toLowerCase().includes(productValue.toLowerCase()) ||
+                    opt.text.toLowerCase().includes(productValue.toLowerCase())
+                );
+                if (matchedOption) {
+                    productSelect.value = matchedOption.value;
+                } else {
+                    // 如果没有匹配，创建一个新选项
+                    const newOption = document.createElement('option');
+                    newOption.value = productValue;
+                    newOption.textContent = productValue;
+                    productSelect.appendChild(newOption);
+                    productSelect.value = productValue;
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

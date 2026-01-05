@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - 广西伟群帐篷制造有限公司</title>
+    <meta name="description" content="" />
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/multilang.css">
+    <link rel="stylesheet" href="styles/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- 语言切换器 -->
+    <div class="language-switcher" role="toolbar" aria-label="Language switcher">
+        <button class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
+        <button class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
+        <button class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
+    </div>
+
+    <!-- 顶部提示栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span data-translate="top_bar_text">服务企业超过15年！值得信赖的客户服务！</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                    <div class="nav-brand">
+                        <img src="images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="nav-logo-img">
+                        <div class="nav-logo-text">
+                            <div class="brand-text">
+                                <div class="brand-name" data-company-cn></div>
+                                <div class="brand-name-en" data-company-en></div>
+                                <div class="brand-sub">Since 2010</div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item-dropdown">
+                    <a href="products-tents.html" class="nav-link">
+                        <span class="zh">产品中心</span><span class="en">Products</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                      <a href="products-tents.html">Tents</a>
+                      <a href="products-flags.html">Beach Flags &amp; Poles</a>
+                      <a href="products-displays.html">Pop-up Displays</a>
+                      <a href="products-accessories.html">Accessories</a>
+                      <a href="products-frames.html">Replacement Parts</a>
+                    </div>
+                </li>
+                <li><a href="product-center.html" data-translate="nav_products_by_size">按尺寸</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="index.html#about" data-translate="nav_info">信息 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#about" data-translate="nav_about">关于我们</a></li>
+                        <li><a href="index.html#services" data-translate="nav_services">服务范围</a></li>
+                        <li><a href="index.html#contact" data-translate="nav_contact">联系我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="搜索"><i class="fas fa-search"></i></button>
+                <button class="nav-icon-btn" id="accountBtn" aria-label="账户"><i class="fas fa-user"></i></button>
+                <button class="nav-icon-btn" id="cartBtn" aria-label="购物车">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <main class="product-detail">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumbs" style="margin-top: 110px;">
+            <a href="index.html" data-translate="breadcrumb_home">首页</a>
+            <span class="sep">/</span>
+                    <a href="product-center.html" data-translate="breadcrumb_products">产品中心</a>
+            <span class="sep">/</span>
+            <span id="breadcrumbProduct"></span>
+        </nav>
+
+        <!-- Top Section -->
+        <section class="pdp-top">
+            <div class="pdp-image">
+                <img id="productImage" src="images/products/tents/aodong-tent.png" alt="Tent" loading="lazy" onerror="this.src='images/placeholder.png';">
+                <div class="image-carousel">
+                    <img src="images/products/tents/aodong-tent.png" alt="Tent">
+                    <img src="images/products/tents/aodong-tent-side.png" alt="Tent Side View">
+                </div>
+            </div>
+
+            <div class="pdp-info">
+                <h1 id="productName"></h1>
+                <p id="productDesc" class="pdp-desc"></p>
+
+                <ul id="productSpecs" class="pdp-specs"></ul>
+                <div id="productVariants" class="product-variants"></div>
+
+                <div class="pdp-actions">
+                    <button class="btn btn-primary" id="btnQuote" data-translate="btn_get_quote">Get Quote</button>
+                    <button class="btn btn-secondary" id="btnDownload" data-translate="btn_download">Download</button>
+                    <button class="btn btn-accent" id="btnCart" data-translate="btn_add_to_cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="pdp-tabs">
+            <div class="tabs-header">
+                <button class="tab active" data-tab="desc" data-translate="tab_desc">产品描述</button>
+                <button class="tab" data-tab="specs" data-translate="tab_specs">技术参数</button>
+                <button class="tab" data-tab="apps" data-translate="tab_apps">应用场景</button>
+                <button class="tab" data-tab="download" data-translate="tab_download">资料下载</button>
+            </div>
+
+            <div class="tabs-content">
+                <div class="tab-panel active" id="tab-desc"></div>
+                <div class="tab-panel" id="tab-specs"></div>
+                <div class="tab-panel" id="tab-apps"></div>
+                <div class="tab-panel" id="tab-download"></div>
+            </div>
+        </section>
+
+        <!-- Related -->
+        <section class="related-products">
+            <h2 data-translate="related_products">相关产品</h2>
+            <div class="products-grid" id="relatedGrid"></div>
+        </section>
+    </main>
+
+        <!-- Contact Bottom (copied from home page) -->
+        <section class="contact-bottom">
+            <div class="contact-bottom__bg"></div>
+            <div class="contact-bottom__inner">
+                <!-- 左：快速信息 -->
+                <div class="contact-bottom__grid">
+                    <div class="contact-bottom__brand">
+                        <div class="contact-bottom__brandTitle" data-i18n="footer_company_line_cn">
+                            广西伟群帐篷制造有限公司
+                        </div>
+                        <div class="contact-bottom__brandSub" data-i18n="footer_company_line_en">
+                            Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010
+                        </div>
+                    </div>
+                    <div class="contact-bottom__cols">
+                        <div class="contact-bottom__col">
+                            <div class="contact-bottom__h" data-i18n="footer_findus">Find Us</div>
+                            <div class="contact-bottom__p" data-i18n="footer_address">
+                                Daping Changtangao, Luyin Village,<br>
+                                Gucheng Town, Luchuan County,<br>
+                                Yulin City, China
+                            </div>
+                        </div>
+                        <div class="contact-bottom__col">
+                            <div class="contact-bottom__h" data-i18n="footer_contact">Contact</div>
+                            <a class="contact-bottom__link" href="mailto:a374340761@gmail.com">
+                                a374340761@gmail.com
+                            </a>
+                            <a class="contact-bottom__link" href="https://wa.me/8613824540280" target="_blank">
+                                WhatsApp: +86 138 2454 0280
+                            </a>
+                            <div class="contact-bottom__p">
+                                WeChat: massifmyth
+                            </div>
+                        </div>
+                        <div class="contact-bottom__col">
+                            <div class="contact-bottom__h" data-i18n="footer_companyinfo">Company Info</div>
+                            <a class="contact-bottom__link" href="#about" data-i18n="footer_about">About Us</a>
+                            <a class="contact-bottom__link" href="product-center.html" data-i18n="footer_products">Products</a>
+                            <a class="contact-bottom__link" href="#contact" data-i18n="footer_contactus">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右：询问/CTA 盒子 -->
+                <div class="contact-bottom__ask">
+                    <div class="contact-bottom__askTitle" data-i18n="footer_ask_title">
+                        Ask anything about products or designs…
+                    </div>
+                    <div class="contact-bottom__askBox">
+                        <div class="contact-bottom__askText" data-i18n="footer_ask_text">
+                            Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
+                        </div>
+                        <div class="contact-bottom__askActions">
+                            <a href="#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
+                                Get a Quote
+                            </a>
+                            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
+                                WhatsApp Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 最底行：版权 + links -->
+                <div class="contact-bottom__legal">
+                    <div class="contact-bottom__copy" data-i18n="footer_copyright">
+                        © 2026 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.
+                    </div>
+                    <div class="contact-bottom__links">
+                        <a href="#" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
+                        <a href="#" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
+                        <a href="#" class="contact-bottom__link2" data-i18n="footer_sitemap">Site Map</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <div id="pdfModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 data-translate="pdf_download_title">下载产品资料</h3>
+            <p data-translate="pdf_download_desc">点击下方按钮下载完整的产品目录和公司介绍。</p>
+            <a href="第3版 修改画册 --- 广西伟群.pdf" download class="btn btn-primary" data-translate="btn_download_pdf">下载PDF</a>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/multilang.js"></script>
+    <script src="scripts/products.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/product-detail.js"></script>
+</body>
+</html>
+

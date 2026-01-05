@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tent Details</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+
+<main id="detail"></main>
+
+<div class="back-actions">
+  <a href="products-tents.html" class="btn">← Back to Tents</a>
+  <a href="index.html" class="btn secondary">🏠 Home</a>
+</div>
+
+<script>
+const data = {
+  "tent-30-iron": {
+    title: "30 Square Tube Iron Frame Tent",
+    material: "Iron",
+    sizes: [
+      "1.5×1.5M – 13KG",
+      "2×2M – 15KG",
+      "3×3M – 21KG"
+    ]
+  },
+  "tent-40-aluminum": {
+    title: "40 Hexagon Aluminum Frame Tent",
+    material: "Aluminum",
+    sizes: [
+      "2×2M – 12.5KG",
+      "3×3M – 17KG",
+      "4×6M – 26KG"
+    ]
+  },
+  "tent-50-aluminum": {
+    title: "50 Hexagon Aluminum Frame Tent",
+    material: "Aluminum",
+    sizes: [
+      "2×2M – 20KG",
+      "3×3M – 29KG",
+      "4×8M – 67KG"
+    ]
+  }
+};
+
+const id = new URLSearchParams(location.search).get("id");
+const t = data[id];
+
+if (t) {
+  document.getElementById("detail").innerHTML = `
+    <h1>${t.title}</h1>
+    <p><strong>Material:</strong> ${t.material}</p>
+    <h3>Available Sizes</h3>
+    <ul>${t.sizes.map(s => `<li>${s}</li>`).join("")}</ul>
+  `;
+} else {
+  document.getElementById("detail").innerHTML = '<p>Product not found.</p>';
+}
+</script>
+
+</body>
+</html>

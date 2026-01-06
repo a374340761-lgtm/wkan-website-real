@@ -82,6 +82,10 @@
     const searchInput = document.getElementById('searchInput');
     const catSelect = document.getElementById('catSelect');
     const emptyState = document.getElementById('emptyState');
+    let invalidCatNoticeEl = null;
+    let tentTypeNoticeEl = null;
+    let tentsDetailsEl = null;
+    let tentSubcategoriesEl = null;
 
     if (!grid || !searchInput || !catSelect) {
         console.warn('All Products page elements not found');
@@ -94,10 +98,49 @@
         return url.searchParams.get('cat') || 'all';
     }
 
+    function ensureInvalidCatNotice() {
+        if (invalidCatNoticeEl) return invalidCatNoticeEl;
+        // Inline notice (shown only when URL cat is invalid)
+        invalidCatNoticeEl = document.createElement('div');
+        invalidCatNoticeEl.className = 'ap-empty';
+        invalidCatNoticeEl.style.display = 'none';
+        invalidCatNoticeEl.style.padding = '1rem 0 0';
+        invalidCatNoticeEl.innerHTML = '<p data-translate="category_not_available">Category not available yet. Showing all categories.</p>';
+
+        // Put it above the grid for visibility
+        const wrap = grid && grid.parentElement;
+        if (wrap) {
+            wrap.insertBefore(invalidCatNoticeEl, grid);
+        }
+        return invalidCatNoticeEl;
+    }
+
+    function ensureTentTypeNotice() {
+        if (tentTypeNoticeEl) return tentTypeNoticeEl;
+        tentTypeNoticeEl = document.createElement('div');
+        tentTypeNoticeEl.className = 'ap-empty';
+        tentTypeNoticeEl.style.display = 'none';
+        tentTypeNoticeEl.style.padding = '1rem 0 0';
+        tentTypeNoticeEl.innerHTML = '<p data-translate="tent_type_no_match">This tent type has no mapped products yet.</p>';
+
+        const wrap = grid && grid.parentElement;
+        if (wrap) {
+            // Place above the grid (below invalid cat notice if present)
+            wrap.insertBefore(tentTypeNoticeEl, grid);
+        }
+        return tentTypeNoticeEl;
+    }
+
     // 获取 URL 参数中的标签
     function getQueryTag() {
         const url = new URL(window.location.href);
         return url.searchParams.get('tag') || '';
+    }
+
+    // 获取 URL 参数中的帐篷子类型（仅用于 cat=tents）
+    function getQueryTentType() {
+        const url = new URL(window.location.href);
+        return url.searchParams.get('type') || '';
     }
 
     // 获取 URL 参数中的 q（搜索关键词）
@@ -299,16 +342,15 @@
     }
     // 渲染产品列表
     function render(list) {
-        if (!list || list.length === 0) {
-            grid.style.display = 'none';
-            emptyState.style.display = 'block';
-            return;
-        }
+        const hasItems = !!(list && list.length);
 
-        grid.style.display = 'grid';
-        emptyState.style.display = 'none';
+        grid.style.display = hasItems ? 'grid' : 'none';
+        emptyState.style.display = hasItems ? 'none' : 'block';
 
-        grid.innerHTML = list.map(p => {
+        if (!hasItems) {
+            grid.innerHTML = '';
+        } else {
+            grid.innerHTML = list.map(p => {
             const name = getProductName(p);
             let imgSrc = p.image || 'images/placeholder.jpg';
             if (imgSrc && !imgSrc.startsWith('images/') && !imgSrc.startsWith('/') && !imgSrc.startsWith('./')) imgSrc = 'images/' + imgSrc;
@@ -317,8 +359,8 @@
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
             const quoteUrl = `./index.html?product=${productParam}#contact`;
-            // 构建产品详情页链接（如果存在 product.html，否则用 all-products 页面）
-            const detailUrl = p.id ? `./product.html?id=${p.id}` : `./all-products.html?cat=${p.category}`;
+            // 构建产品详情页链接（product-detail.html）；无 id 时回退到分类页
+            const detailUrl = p.id ? `./product-detail.html?id=${encodeURIComponent(p.id)}` : `./all-products.html?cat=${p.category}`;
             
             // 提取规格信息（从 tags 或 category 推断）
             const specs = [];
@@ -327,8 +369,36 @@
                 specs.push('<span class="spec-tag">Print: Single / Double</span>');
                 specs.push('<span class="spec-tag">Base Options</span>');
             } else if (p.category === 'tents') {
-                specs.push('<span class="spec-tag">Sizes: 3×3m / 3×6m</span>');
-                specs.push('<span class="spec-tag">Frame: Aluminum / Steel</span>');
+                // Prefer exact size/weight info from dataset (30/40/50 stock tents)
+                const sizes = [];
+                const weights = [];
+                if (Array.isArray(p.variants) && p.variants.length) {
+                    p.variants.forEach(v => {
+                        if (v && v.size) sizes.push(v.size);
+                        if (v && v.weight) weights.push(v.weight);
+                    });
+                } else if (Array.isArray(p.sizeTable) && p.sizeTable.length) {
+                    p.sizeTable.forEach(v => {
+                        if (v && v.size) sizes.push(v.size);
+                        if (v && v.weight) weights.push(v.weight);
+                    });
+                }
+                const uniq = (arr) => Array.from(new Set(arr.filter(Boolean)));
+                const uniqSizes = uniq(sizes);
+                const uniqWeights = uniq(weights);
+
+                if (uniqSizes.length) {
+                    const shortSizes = uniqSizes.slice(0, 4).join(' / ') + (uniqSizes.length > 4 ? ' …' : '');
+                    specs.push(`<span class="spec-tag">Sizes: ${shortSizes}</span>`);
+                }
+                if (uniqWeights.length) {
+                    const shortWeights = uniqWeights.slice(0, 4).join(' / ') + (uniqWeights.length > 4 ? ' …' : '');
+                    specs.push(`<span class="spec-tag">Weight: ${shortWeights}</span>`);
+                }
+                if (!uniqSizes.length && !uniqWeights.length) {
+                    specs.push('<span class="spec-tag">Sizes: 3×3m / 3×6m</span>');
+                }
+                // Surface-level defaults for the rest
                 specs.push('<span class="spec-tag">Custom Print</span>');
             } else if (p.category === 'displays') {
                 specs.push('<span class="spec-tag">Width: 3m / 4m / 5m</span>');
@@ -364,15 +434,173 @@
                                 <span class="zh">获取报价</span>
                                 <span class="en">Get a Quote</span>
                             </a>
-                            <a class="btn btn-secondary product-btn" href="${detailUrl}" style="flex: 1; text-align: center;">
-                                <span class="zh">查看详情</span>
-                                <span class="en">View Details</span>
-                            </a>
+                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" style="flex: 1; text-align: center;" data-translate="view_details">View details</a>
                         </div>
                     </div>
                 </article>
             `;
+            }).join('');
+        }
+
+        // Tent Types section (tents category only)
+        updateTentSubcategoriesSection();
+
+        // Keep tents details section below the product grid (only for tents category)
+        updateTentsDetailsSection();
+
+        // Translate any newly injected nodes
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    }
+
+    function ensureTentsDetailsContainer() {
+        if (tentsDetailsEl) return tentsDetailsEl;
+        tentsDetailsEl = document.createElement('section');
+        tentsDetailsEl.id = 'tentsDetails';
+        tentsDetailsEl.className = 'tents-details';
+        tentsDetailsEl.style.display = 'none';
+        // Insert right after the grid so the main products remain first
+        if (grid && grid.parentElement) {
+            grid.parentElement.insertBefore(tentsDetailsEl, emptyState || null);
+        }
+        return tentsDetailsEl;
+    }
+
+    function updateTentsDetailsSection() {
+        const cat = (catSelect && catSelect.value) || 'all';
+        const container = ensureTentsDetailsContainer();
+
+        if (cat !== 'tents') {
+            container.style.display = 'none';
+            return;
+        }
+
+        const details = window.TENTS_DETAILS;
+        const images = details && Array.isArray(details.images) ? details.images : [];
+        if (!images.length) {
+            container.style.display = 'none';
+            return;
+        }
+
+        container.style.display = '';
+        container.innerHTML = `
+            <div class="tents-details__head">
+                <h2 data-translate="tents_details_title">Tents Details</h2>
+                <p data-translate="tents_details_subtitle">Fabric details and size references from the catalog.</p>
+            </div>
+            <div class="tents-details__grid">
+                ${images.map((img) => {
+                    const src = img.src;
+                    const key = img.captionKey;
+                    return `
+                        <figure class="tents-details__card">
+                            <img class="tents-details__img" src="${src}" alt="" loading="lazy" onerror="this.style.display='none'">
+                            <figcaption class="tents-details__cap" data-translate="${key}"></figcaption>
+                        </figure>
+                    `;
+                }).join('')}
+            </div>
+        `;
+    }
+
+    function ensureTentSubcategoriesContainer() {
+        if (tentSubcategoriesEl) return tentSubcategoriesEl;
+        tentSubcategoriesEl = document.createElement('section');
+        tentSubcategoriesEl.id = 'tentSubcategories';
+        tentSubcategoriesEl.className = 'tent-types';
+        tentSubcategoriesEl.style.display = 'none';
+
+        // Insert after the product grid so products remain first
+        if (grid && grid.parentElement) {
+            grid.parentElement.insertBefore(tentSubcategoriesEl, emptyState || null);
+        }
+        return tentSubcategoriesEl;
+    }
+
+    function inferTentType(product) {
+        // Stable ID mapping for folding tent series (no dataset mutation)
+        if (product && (product.id === 2001 || product.id === '2001')) return 'folding30';
+        if (product && (product.id === 2002 || product.id === '2002')) return 'folding40';
+        if (product && (product.id === 2003 || product.id === '2003')) return 'folding50';
+
+        const parts = [
+            product.name,
+            product.nameEn,
+            product.model,
+            product.image,
+            Array.isArray(product.gallery) ? product.gallery.join(' ') : '',
+            Array.isArray(product.tags) ? product.tags.join(' ') : product.tags,
+            Array.isArray(product.keywords) ? product.keywords.join(' ') : ''
+        ].filter(Boolean).join(' ').toLowerCase();
+
+        // Temporary mapping only (no dataset changes): infer by name/model/tags
+        if (parts.includes('wk-t30') || parts.includes('30方管') || parts.includes('30 square')) return 'folding30';
+        if (parts.includes('wk-t40') || parts.includes('40六角') || parts.includes('40 hex')) return 'folding40';
+        if (parts.includes('wk-t50') || parts.includes('50六角') || parts.includes('50 hex')) return 'folding50';
+        if (parts.includes('star tent') || parts.includes('星')) return 'star';
+        if (parts.includes('awning') || parts.includes('天幕')) return 'awning';
+        if (parts.includes('six-sided') || parts.includes('six sided') || parts.includes('six_sided') || parts.includes('六边')) return 'six_sided';
+        return '';
+    }
+
+    function updateTentSubcategoriesSection() {
+        const cat = (catSelect && catSelect.value) || 'all';
+        const container = ensureTentSubcategoriesContainer();
+
+        if (cat !== 'tents') {
+            container.style.display = 'none';
+            return;
+        }
+
+        const data = window.TENT_TYPES;
+        if (!data || typeof data !== 'object') {
+            container.style.display = 'none';
+            return;
+        }
+
+        const type = getQueryTentType();
+        const folding = Array.isArray(data.folding) ? data.folding : [];
+        const event = Array.isArray(data.event) ? data.event : [];
+
+        const lang = getCurrentLang();
+        const getTitle = (item) => (lang === 'zh' ? (item.nameZh || item.nameEn || '') : (item.nameEn || item.nameZh || ''));
+        const getDesc = (item) => (lang === 'zh' ? (item.descriptionZh || '') : (item.descriptionEn || ''));
+
+        const renderCards = (items) => (items || []).map((item) => {
+            const urlType = item.type;
+            const href = `all-products.html?cat=tents&type=${encodeURIComponent(urlType)}`;
+            const title = getTitle(item);
+            const desc = getDesc(item);
+            const active = type && type === urlType;
+
+            return `
+                <a class="tent-type-card${active ? ' is-active' : ''}" href="${href}">
+                    <div class="tent-type-card__imgWrap">
+                        <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                    </div>
+                    <div class="tent-type-card__body">
+                        <div class="tent-type-card__title">${title}</div>
+                        ${desc ? `<div class=\"tent-type-card__desc\">${String(desc).replace(/\n/g, '<br>')}</div>` : ''}
+                        <div class="tent-type-card__cta">
+                            <span class="btn btn-secondary" data-translate="view_type_button">View Type</span>
+                        </div>
+                    </div>
+                </a>
+            `;
         }).join('');
+
+        container.style.display = '';
+        container.innerHTML = `
+            <div class="tents-hub__section">
+                <h2 class="tents-hub__title" data-translate="tents_hub_folding_title">Folding Tents</h2>
+                <div class="tent-types__grid">${renderCards(folding)}</div>
+            </div>
+            <div class="tents-hub__section">
+                <h2 class="tents-hub__title" data-translate="tents_hub_event_title">Event Tents</h2>
+                <div class="tent-types__grid">${renderCards(event)}</div>
+            </div>
+        `;
     }
 
     // 筛选和渲染
@@ -380,10 +608,20 @@
         const q = (searchInput.value || '').trim();
         const cat = catSelect.value;
         const tag = getQueryTag(); // 获取 URL 中的 tag 参数
+        const tentType = getQueryTentType();
 
-        const filtered = products.filter(p => {
+        const typeNotice = ensureTentTypeNotice();
+        typeNotice.style.display = 'none';
+
+        const filteredWithType = products.filter(p => {
             // 分类筛选
             const hitCat = (cat === 'all') || (p.category === cat);
+
+            // tents 子类型筛选（仅当 cat=tents 且 URL 有 type）
+            let hitType = true;
+            if (cat === 'tents' && tentType) {
+                hitType = inferTentType(p) === tentType;
+            }
 
             // 标签筛选（用于 stock / replacement）
             let hitTag = true;
@@ -398,10 +636,15 @@
             // 搜索关键词筛选（支持中文→英文扩展）
             const hitQ = !q || productMatches(p, q);
 
-            return hitCat && hitTag && hitQ;
+            return hitCat && hitType && hitTag && hitQ;
         });
 
-        render(filtered);
+        // If type filter yields no results, show a friendly notice + empty state (not blank)
+        if (cat === 'tents' && tentType && filteredWithType.length === 0) {
+            typeNotice.style.display = 'block';
+        }
+
+        render(filteredWithType);
     }
 
     // 初始化
@@ -415,10 +658,25 @@
         }
         
         // 1) URL cat 预选
-        const cat = getQueryCat();
-        const validCats = ['tents', 'flags', 'displays', 'accessories', 'custom'];
-        if (validCats.includes(cat)) {
-            catSelect.value = cat;
+        const catFromUrl = getQueryCat();
+        const validCats = Array.from(new Set(products.map(p => p.category).filter(Boolean)));
+
+        // Show notice if URL cat is invalid, but still render products (all categories)
+        const notice = ensureInvalidCatNotice();
+        const urlCatIsValid = (catFromUrl === 'all') || validCats.includes(catFromUrl);
+        notice.style.display = (!urlCatIsValid && catFromUrl !== 'all') ? 'block' : 'none';
+
+        // If URL cat is valid, prefer filtering by it.
+        // If catSelect doesn't have that option, add it so filtering is deterministic.
+        if (urlCatIsValid && catFromUrl !== 'all') {
+            const hasOption = Array.from(catSelect.options).some(o => o.value === catFromUrl);
+            if (!hasOption) {
+                const opt = document.createElement('option');
+                opt.value = catFromUrl;
+                opt.textContent = catFromUrl;
+                catSelect.appendChild(opt);
+            }
+            catSelect.value = catFromUrl;
         } else {
             catSelect.value = 'all';
         }
@@ -443,7 +701,16 @@
         // 5) 监听语言切换事件（如果存在）
         document.addEventListener('languageChanged', () => {
             filterAndRender(); // 重新渲染以更新产品名称
+            // Also re-translate the notice if needed
+            if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                window.multiLang.translatePage();
+            }
         });
+
+        // Ensure notice gets translated on first load as well
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
     }
     
     // DOM 加载后初始化

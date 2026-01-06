@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Redirecting…</title>
   <meta http-equiv="refresh" content="0;url=product-center.html">
-  <script>location.replace('product-center.html');</script>
+  <script>location.replace('product-center.html' + location.search + location.hash);</script>
 </head>
 <body>
   <p>Redirecting to <a href="product-center.html">Product Center</a>…</p>

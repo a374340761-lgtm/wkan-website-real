@@ -757,8 +757,31 @@ class ProductManager {
             category: new Set(),
             specs: new Set()
         };
-        
+
+        // Ensure every product has a stable id for deep-linking.
+        this.ensureProductIds();
+
         this.init();
+    }
+
+    ensureProductIds() {
+        if (!Array.isArray(this.products)) return;
+        this.products.forEach((product) => {
+            if (!product || product.id !== undefined && product.id !== null) return;
+
+            const fromSku = product.sku || product.code;
+            if (fromSku) {
+                product.id = fromSku;
+                return;
+            }
+
+            const category = String(product.category || 'product');
+            const nameEn = String(product.nameEn || product.name || '').trim();
+            const slugBase = (category + '-' + nameEn)
+                .toLowerCase()
+                .replace(/\s+/g, '-');
+            product.id = slugBase;
+        });
     }
     
     init() {
@@ -1003,9 +1026,7 @@ class ProductManager {
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
-                    <button class="btn btn-primary product-btn" onclick="window.productManager.showProductModal(${product.id})">
-                        <i class="fas fa-info-circle"></i> 查看详情
-                    </button>
+                    <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(product.id)}" data-translate="view_details">View details</a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
                         <i class="fas fa-shopping-cart"></i> 加入购物车
                     </button>
@@ -1567,7 +1588,7 @@ getProductIcon(category) {
 
             <div class="product-row-info">
                 <h3>
-                    <a href="product.html?id=${product.id}" style="text-decoration:none;color:inherit;">
+                    <a href="product-detail.html?id=${encodeURIComponent(product.id)}" style="text-decoration:none;color:inherit;">
                         ${name}
                     </a>
                 </h3>

@@ -5731,3 +5731,108 @@ html[lang="en"] .hero-slide p {
     background-size:400% 600%;
     border-radius:12px;
 }
+
+/* =========================
+     Tent Types (Tents only)
+     ========================= */
+.tent-types{
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-sm) 0;
+}
+
+.tents-hub{
+    margin-top: var(--spacing-lg);
+}
+
+.tents-hub__section{
+    margin-top: var(--spacing-xl);
+}
+
+.tents-hub__section:first-child{
+    margin-top: 0;
+}
+
+.tents-hub__title{
+    font-size: var(--font-size-2xl);
+    line-height: 1.2;
+    color: var(--wk-black);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tent-types__head{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tent-types__head h2{
+    font-size: var(--font-size-2xl);
+    line-height: 1.2;
+    color: var(--wk-black);
+}
+
+.tent-types__grid{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--spacing-md);
+}
+
+@media (max-width: 900px){
+    .tent-types__grid{ grid-template-columns: 1fr; }
+}
+
+.tent-type-card{
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--wk-bg-card);
+    border: 1px solid var(--wk-border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.tent-type-card:hover{
+    box-shadow: var(--shadow-md);
+}
+
+.tent-type-card.is-active{
+    border-color: var(--wk-red-700);
+}
+
+.tent-type-card__imgWrap{
+    background: var(--wk-bg-soft);
+    aspect-ratio: 16 / 10;
+    width: 100%;
+}
+
+.tent-type-card__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.tent-type-card__body{
+    padding: var(--spacing-md);
+}
+
+.tent-type-card__title{
+    font-weight: 700;
+    color: var(--wk-black);
+    margin-bottom: var(--spacing-xs);
+}
+
+.tent-type-card__desc{
+    color: var(--wk-gray-700);
+    font-size: var(--font-size-sm);
+    line-height: 1.55;
+}
+
+.tent-type-card__cta{
+    margin-top: var(--spacing-sm);
+}

@@ -63,16 +63,16 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item-dropdown">
-                    <a href="products-tents.html" class="nav-link active" data-nav="product-center">
+                    <a href="product-center.html" class="nav-link active" data-nav="product-center">
                         <span class="zh">产品中心</span><span class="en">Products</span>
                         <i class="fas fa-chevron-down"></i>
                     </a>
                         <div class="dropdown-menu">
-                          <a href="products-tents.html">Tents</a>
-                          <a href="products-flags.html">Beach Flags &amp; Poles</a>
-                          <a href="products-displays.html">Pop-up Displays</a>
-                          <a href="products-accessories.html">Accessories</a>
-                          <a href="products-frames.html">Replacement Parts</a>
+                                                    <a href="product-center.html?cat=tents">Tents</a>
+                                                    <a href="product-center.html?cat=flags">Beach Flags &amp; Poles</a>
+                                                    <a href="product-center.html?cat=displays">Pop-up Displays</a>
+                                                    <a href="product-center.html?cat=accessories">Accessories</a>
+                                                    <a href="product-center.html?notice=category_unavailable">Replacement Parts</a>
                         </div>
                 </li>
                 <li class="nav-item">
@@ -124,18 +124,23 @@
                         <span class="zh">产品中心</span>
                         <span class="en">Product Center</span>
                     </span>
+                    <span id="productCenterBackWrap" style="display:none;">
+                        <span>/</span>
+                        <a id="productCenterBack" href="product-center.html" data-translate="back_to_product_center">Back to Product Center</a>
+                    </span>
                 </nav>
 
                 <div class="section-header">
                     <h1 data-translate="product_center_title">产品中心</h1>
                     <p data-translate="product_center_subtitle">选择分类进入，或去"全部产品"搜索。</p>
+                    <p id="productCenterNotice" style="display:none; margin-top: 0.5rem;" data-translate="category_not_available">该分类暂未开放，已为你显示全部分类。</p>
                 </div>
                 
                 <!-- 产品分类展示 -->
                 <div class="product-categories-showcase">
                     <div class="categories-grid">
                         <!-- 1. Custom Tents -->
-                        <div class="category-card" data-category="tents" onclick="location.href='products-tents.html'">
+                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?cat=tents'">
                             <div class="category-image">
                                 <i class="fa-solid fa-campground"></i>
                             </div>
@@ -154,7 +159,7 @@
                         </div>
 
                         <!-- 2. Stock Tents -->
-                        <div class="category-card" data-category="tents" onclick="location.href='all-products.html?cat=tents'">
+                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?cat=tents'">
                             <div class="category-image">
                                 <i class="fa-solid fa-warehouse"></i>
                             </div>
@@ -192,7 +197,7 @@
                         </div>
 
                         <!-- 4. Pop-up Displays -->
-                        <div class="category-card" data-category="displays" onclick="location.href='products-displays.html'">
+                        <div class="category-card" data-category="displays" onclick="location.href='product-center.html?cat=displays'">
                             <div class="category-image">
                                 <i class="fa-solid fa-cube"></i>
                             </div>
@@ -230,7 +235,7 @@
                         </div>
 
                         <!-- 6. Replacement Parts -->
-                        <div class="category-card" data-category="custom" onclick="location.href='all-products.html'">
+                        <div class="category-card" data-category="tents" onclick="location.href='all-products.html'">
                             <div class="category-image">
                                 <i class="fa-solid fa-gears"></i>
                             </div>
@@ -330,6 +335,8 @@
         </section>
 
     <script src="scripts/multilang.js"></script>
+    <script src="scripts/tent-types.js"></script>
+    <script src="scripts/product-center.js"></script>
     <script src="scripts/main.js"></script>
     <script>
         // 修复"页面不能下拉"的 bug：确保导航链接跳转时恢复滚动

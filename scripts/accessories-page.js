@@ -162,21 +162,20 @@
         const actions = document.createElement('div');
         actions.className = 'ap-actions';
 
-        const btn = document.createElement('button');
-        btn.className = 'ap-btn';
-        btn.textContent = lang.startsWith('zh') ? '查看详情' : 'View Details';
+        const detailsLink = document.createElement('a');
+        detailsLink.className = 'btn btn-secondary product-details-btn';
+        detailsLink.href = `product-detail.html?id=${encodeURIComponent(id)}`;
+        detailsLink.setAttribute('data-translate', 'view_details');
+        detailsLink.textContent = 'View details';
 
         const go = () => {
-            // only real items should navigate
-            if (String(id).startsWith('missing-')) return;
-            location.href = `product.html?id=${encodeURIComponent(id)}`;
+            location.href = `product-detail.html?id=${encodeURIComponent(id)}`;
         };
 
-        btn.addEventListener('click', (e) => { e.preventDefault(); go(); });
         thumb.addEventListener('click', go);
         title.addEventListener('click', go);
 
-        actions.appendChild(btn);
+        actions.appendChild(detailsLink);
         body.appendChild(title);
         body.appendChild(model);
         body.appendChild(actions);

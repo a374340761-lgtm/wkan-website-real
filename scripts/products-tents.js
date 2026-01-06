@@ -40,7 +40,7 @@
       const actions = document.createElement('div');
       actions.className = 'tent-actions';
       actions.innerHTML = `
-        <a class="btn" href="product.html?id=${p.id}">View Details</a>
+        <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(p.id)}" data-translate="view_details">View details</a>
         <button class="btn" data-quote="${p.id}">Get Quote</button>
         <button class="btn" data-addcart="${p.id}">Add to Cart</button>
       `;

@@ -237,6 +237,8 @@ class MultiLanguageSystem {
                 nav_all_products: '全部产品',
                 product_center_title: '产品中心',
                 product_center_subtitle: '选择分类进入，或去"全部产品"搜索。',
+                back_to_product_center: '返回产品中心',
+                category_not_available: '该分类暂未开放，已为你显示全部分类。',
                 // Products 下拉菜单
                 menu_custom_tents: '定制帐篷',
                 menu_stock_tents: '现货帐篷',
@@ -246,6 +248,13 @@ class MultiLanguageSystem {
                 menu_replacement_parts: '替换零件',
                 category_view_all: '查看该类全部',
                 category_search_products: '去搜索产品',
+                view_details: '查看详情',
+                tents_hub_folding_title: '折叠帐篷',
+                tents_hub_event_title: '活动帐篷',
+                view_type_button: '查看该类型',
+                tent_types_title: '帐篷类型',
+                view_tent_type: '查看该类型',
+                tent_type_no_match: '该类型暂未关联到具体产品。',
                 products_no_results: '未找到匹配的产品',
                 products_page_retired_title: '此页面已迁移',
                 products_page_retired_text: '请访问：',
@@ -394,7 +403,15 @@ class MultiLanguageSystem {
                 tab_specs: '技术参数',
                 tab_apps: '应用场景',
                 tab_download: '资料下载',
-                related_products: '相关产品'
+                related_products: '相关产品',
+                product_not_found_title: '未找到该产品',
+                product_not_found_desc: '该产品不存在或链接无效。',
+                back_to_products: '返回产品列表',
+                models_and_specs: '型号与参数',
+                no_specs: '暂无技术参数',
+                default_applications: '适用于各种户外活动和展览展示场景',
+                download_contact_us: '请联系我们获取详细产品资料',
+                no_related_products: '暂无相关产品'
             },
             en: {
                 // Navigation
@@ -597,6 +614,8 @@ class MultiLanguageSystem {
                 nav_all_products: 'Browse Products',
                 product_center_title: 'Product Center',
                 product_center_subtitle: 'Browse categories or search in "All Products".',
+                back_to_product_center: 'Back to Product Center',
+                category_not_available: 'Category not available yet. Showing all categories.',
                 // Products Dropdown Menu
                 menu_custom_tents: 'Custom Tents',
                 menu_stock_tents: 'Stock Tents',
@@ -606,6 +625,13 @@ class MultiLanguageSystem {
                 menu_replacement_parts: 'Replacement Parts',
                 category_view_all: 'View All',
                 category_search_products: 'Search Products',
+                view_details: 'View details',
+                tents_hub_folding_title: 'Folding Tents',
+                tents_hub_event_title: 'Event Tents',
+                view_type_button: 'View Type',
+                tent_types_title: 'Tent Types',
+                view_tent_type: 'View Type',
+                tent_type_no_match: 'This tent type has no mapped products yet.',
                 products_no_results: 'No products found',
                 products_page_retired_title: 'This page has been moved',
                 products_page_retired_text: 'Please visit:',
@@ -754,7 +780,15 @@ class MultiLanguageSystem {
                 tab_specs: 'Specifications',
                 tab_apps: 'Applications',
                 tab_download: 'Downloads',
-                related_products: 'Related Products'
+                related_products: 'Related Products',
+                product_not_found_title: 'Product not found',
+                product_not_found_desc: 'The product you’re looking for doesn’t exist or the link is invalid.',
+                back_to_products: 'Back to Products',
+                models_and_specs: 'Models & Specifications',
+                no_specs: 'No specifications available',
+                default_applications: 'Suitable for various outdoor events and exhibition display scenarios.',
+                download_contact_us: 'Please contact us for detailed product files.',
+                no_related_products: 'No related products'
             },
             ja: {
                 // トップバー

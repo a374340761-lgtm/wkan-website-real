@@ -1,150 +1,210 @@
-// 产品详情页逻辑
+// Universal product detail page controller (product-detail.html?id=...)
 document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(location.search);
-    const productId = params.get('id');
-    
-    if (!productId) {
-        // 如果没有产品ID，跳转到产品列表页
-        window.location.href = 'product-center.html';
-        return;
-    }
+    let attachedOnce = false;
 
-    // 等待 productManager 初始化
-    const initDetail = () => {
+    const getCurrentLang = () => {
+        try {
+            return window.multiLang ? window.multiLang.getCurrentLanguage() : 'en';
+        } catch (e) {
+            return 'en';
+        }
+    };
+
+    const getLocalized = (product, field) => {
+        const lang = getCurrentLang();
+        const suffixMap = {
+            zh: '',
+            en: 'En',
+            ja: 'Ja',
+            ko: 'Ko'
+        };
+
+        const suffix = suffixMap[lang] ?? '';
+        const baseKey = field;
+        const localizedKey = suffix ? `${baseKey}${suffix}` : baseKey;
+
+        return product[localizedKey] || product[baseKey] || '';
+    };
+
+    const getLocalizedSpecs = (product) => {
+        const lang = getCurrentLang();
+        if (lang === 'en') return product.specsEn || product.specs || [];
+        if (lang === 'ja') return product.specsJa || product.specs || [];
+        if (lang === 'ko') return product.specsKo || product.specs || [];
+        return product.specs || [];
+    };
+
+    const setVisible = (el, isVisible) => {
+        if (!el) return;
+        el.style.display = isVisible ? '' : 'none';
+    };
+
+    const waitForProductManager = (cb, tries = 0) => {
         const pm = window.productManager;
-        if (!pm || !pm.products) {
-            setTimeout(initDetail, 100);
+        if (pm && Array.isArray(pm.products)) {
+            cb(pm);
+            return;
+        }
+        if (tries > 200) {
+            cb(null);
+            return;
+        }
+        setTimeout(() => waitForProductManager(cb, tries + 1), 50);
+    };
+
+    const renderNotFound = () => {
+        const notFound = document.getElementById('productNotFound');
+        const body = document.getElementById('productDetailBody');
+        const tabs = document.getElementById('productTabs');
+        const related = document.getElementById('relatedSection');
+        setVisible(notFound, true);
+        setVisible(body, false);
+        setVisible(tabs, false);
+        setVisible(related, false);
+
+        const bc = document.getElementById('breadcrumbProduct');
+        if (bc) bc.textContent = '';
+
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    };
+
+    const renderDetail = (pm) => {
+        const params = new URLSearchParams(location.search);
+        const productId = params.get('id');
+        if (!pm || !productId) {
+            renderNotFound();
             return;
         }
 
-        const product = pm.products.find(p => p.id == productId);
+        const product = pm.products.find(p => String(p.id) === String(productId));
         if (!product) {
-            // 产品不存在，跳转到产品列表页
-            window.location.href = 'product-center.html';
+            renderNotFound();
             return;
         }
 
-        // 获取当前语言
-        const currentLang = window.multiLang ? window.multiLang.getCurrentLanguage() : 'en';
-        
-        // 获取本地化文本
-        const getName = (p) => {
-            const nameMap = {
-                zh: p.name,
-                en: p.nameEn || p.name,
-                ja: p.nameJa || p.name,
-                ko: p.nameKo || p.name
-            };
-            return nameMap[currentLang] || p.name;
-        };
+        const notFound = document.getElementById('productNotFound');
+        const body = document.getElementById('productDetailBody');
+        const tabs = document.getElementById('productTabs');
+        const relatedSection = document.getElementById('relatedSection');
+        setVisible(notFound, false);
+        setVisible(body, true);
+        setVisible(tabs, true);
+        setVisible(relatedSection, true);
 
-        const getDesc = (p) => {
-            const descMap = {
-                zh: p.description,
-                en: p.descriptionEn || p.description,
-                ja: p.descriptionJa || p.description,
-                ko: p.descriptionKo || p.description
-            };
-            return descMap[currentLang] || p.description;
-        };
+        const name = getLocalized(product, 'name');
+        const description = getLocalized(product, 'description');
+        const specs = getLocalizedSpecs(product);
 
-        const getSpecs = (p) => {
-            const specsMap = {
-                zh: p.specs,
-                en: p.specsEn || p.specs,
-                ja: p.specsJa || p.specs,
-                ko: p.specsKo || p.specs
-            };
-            return specsMap[currentLang] || p.specs || [];
-        };
-
-        const name = getName(product);
-        const description = getDesc(product);
-        const specs = getSpecs(product);
-
-        // 更新页面标题和SEO
+        // Page title and SEO
         document.title = `${name} - 广西伟群帐篷制造有限公司`;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.content = description || `${name} - 专业户外家具制造`;
+            metaDesc.content = description || `${name}`;
         }
 
-        // 更新面包屑（Home / Products / Accessories / <product>）并添加返回按钮
+        // Breadcrumb: Home / Products / (Category) / Product
         const bcNav = document.querySelector('.breadcrumbs');
         if (bcNav) {
             bcNav.innerHTML = '';
-            const aHome = document.createElement('a'); aHome.href = 'index.html'; aHome.textContent = (currentLang && currentLang.startsWith('zh')) ? '首页' : 'Home';
-            const aProd = document.createElement('a'); aProd.href = 'product-center.html'; aProd.textContent = (currentLang && currentLang.startsWith('zh')) ? '产品中心' : 'Products';
-            const aAcc = document.createElement('a'); aAcc.href = 'products-accessories.html'; aAcc.textContent = (currentLang && currentLang.startsWith('zh')) ? '配件' : 'Accessories';
-            const sep = (t) => { const s = document.createElement('span'); s.className = 'sep'; s.textContent = '/'; return s; };
-            bcNav.appendChild(aHome); bcNav.appendChild(sep()); bcNav.appendChild(aProd); bcNav.appendChild(sep()); bcNav.appendChild(aAcc); bcNav.appendChild(sep());
-            const spanCur = document.createElement('span'); spanCur.id = 'breadcrumbProduct'; spanCur.textContent = name; bcNav.appendChild(spanCur);
+            const makeSep = () => {
+                const s = document.createElement('span');
+                s.className = 'sep';
+                s.textContent = '/';
+                return s;
+            };
 
-            // add Back to Accessories button
-            if (!document.getElementById('backToAccessoriesBtn')) {
-                const backBtn = document.createElement('a');
-                backBtn.id = 'backToAccessoriesBtn';
-                backBtn.href = 'products-accessories.html';
-                backBtn.className = 'btn btn-secondary';
-                backBtn.style.marginLeft = '12px';
-                backBtn.textContent = (currentLang && currentLang.startsWith('zh')) ? '返回配件' : 'Back to Accessories';
-                bcNav.parentNode.insertBefore(backBtn, bcNav.nextSibling);
+            const aHome = document.createElement('a');
+            aHome.href = 'index.html';
+            aHome.setAttribute('data-translate', 'breadcrumb_home');
+            aHome.textContent = 'Home';
+
+            const aProducts = document.createElement('a');
+            aProducts.href = 'product-center.html';
+            aProducts.setAttribute('data-translate', 'breadcrumb_products');
+            aProducts.textContent = 'Products';
+
+            const aCat = document.createElement('a');
+            aCat.href = `all-products.html?cat=${encodeURIComponent(product.category || '')}`;
+            aCat.textContent = product.category || '';
+
+            const cur = document.createElement('span');
+            cur.id = 'breadcrumbProduct';
+            cur.textContent = name;
+
+            bcNav.appendChild(aHome);
+            bcNav.appendChild(makeSep());
+            bcNav.appendChild(aProducts);
+            if (product.category) {
+                bcNav.appendChild(makeSep());
+                bcNav.appendChild(aCat);
             }
+            bcNav.appendChild(makeSep());
+            bcNav.appendChild(cur);
         } else {
-            const el = document.getElementById('breadcrumbProduct'); if (el) el.textContent = name;
+            const bc = document.getElementById('breadcrumbProduct');
+            if (bc) bc.textContent = name;
         }
 
-        // 更新产品信息
-        document.getElementById('productName').textContent = name;
-        document.getElementById('productDesc').textContent = description || '';
+        // Back-to-products link (if present)
+        const backLink = document.querySelector('#productNotFound a[href^="all-products.html"]');
+        if (backLink) {
+            backLink.href = product.category
+                ? `all-products.html?cat=${encodeURIComponent(product.category)}`
+                : 'all-products.html';
+        }
 
-        // (legacy options UI removed)
+        // Main text
+        const nameEl = document.getElementById('productName');
+        if (nameEl) nameEl.textContent = name;
+        const descEl = document.getElementById('productDesc');
+        if (descEl) descEl.textContent = description || '';
 
-        // 产品图片
+        // Images
         const imageEl = document.getElementById('productImage');
         const carouselEl = document.querySelector('.image-carousel');
-        if (product.image) {
-            imageEl.src = product.image;
+        if (imageEl) {
+            const primaryImage = product.image || (product.images && product.images[0]) || 'images/placeholder.png';
+            imageEl.src = primaryImage;
             imageEl.alt = name;
             imageEl.onerror = function() {
-                const icon = pm.getProductIcon(product.category);
+                const icon = pm.getProductIcon ? pm.getProductIcon(product.category) : 'box';
                 this.style.display = 'none';
                 this.parentElement.innerHTML = `<i class="fas fa-${icon}" style="font-size:6rem;color:var(--primary-color);"></i>`;
             };
-
-            // 添加轮播图片
-            if (product.images && product.images.length > 1) {
-                carouselEl.innerHTML = '';
-                product.images.forEach(img => {
+        }
+        if (carouselEl) {
+            carouselEl.innerHTML = '';
+            const imgs = Array.isArray(product.images) ? product.images : [];
+            if (imgs.length > 1) {
+                imgs.forEach(img => {
                     const imgEl = document.createElement('img');
                     imgEl.src = img;
                     imgEl.alt = name;
                     imgEl.loading = 'lazy';
-                    imgEl.onerror = function() {
-                        this.style.display = 'none';
-                    };
+                    imgEl.onerror = function() { this.style.display = 'none'; };
                     carouselEl.appendChild(imgEl);
                 });
             }
-        } else {
-            const icon = pm.getProductIcon(product.category);
-            imageEl.style.display = 'none';
-            imageEl.parentElement.innerHTML = `<i class="fas fa-${icon}" style="font-size:6rem;color:var(--primary-color);"></i>`;
         }
 
-        // 规格列表 — 优先使用 specsZh/specsEn 对象渲染表格，否则回退到 specs 数组
+        // Specs + variants
         const specsEl = document.getElementById('productSpecs');
-        specsEl.innerHTML = '';
-        // Variants table (Models & Specifications)
+        if (specsEl) specsEl.innerHTML = '';
         const variantsEl = document.getElementById('productVariants');
         if (variantsEl) variantsEl.innerHTML = '';
-        if (product.variants && Array.isArray(product.variants) && product.variants.length > 0) {
+
+        if (variantsEl && product.variants && Array.isArray(product.variants) && product.variants.length > 0) {
             const tableTitle = document.createElement('h3');
-            tableTitle.textContent = (currentLang && currentLang.startsWith('zh')) ? '型号与参数' : 'Models & Specifications';
+            tableTitle.setAttribute('data-translate', 'models_and_specs');
+            tableTitle.textContent = 'Models & Specifications';
+
             const tbl = document.createElement('table');
             tbl.className = 'variants-table';
             tbl.style.width = '100%';
             tbl.style.borderCollapse = 'collapse';
+
             const thead = document.createElement('thead');
             const trh = document.createElement('tr');
             ['Model / 型号', 'Size / 尺寸', 'Weight / 重量'].forEach(h => {
@@ -157,160 +217,181 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             thead.appendChild(trh);
             tbl.appendChild(thead);
+
             const tbody = document.createElement('tbody');
             product.variants.forEach(v => {
                 const tr = document.createElement('tr');
-                const tdModel = document.createElement('td'); tdModel.style.padding = '8px'; tdModel.style.borderBottom = '1px solid #f3f3f3'; tdModel.textContent = v.model || '';
-                const tdSize = document.createElement('td'); tdSize.style.padding = '8px'; tdSize.style.borderBottom = '1px solid #f3f3f3'; tdSize.textContent = v.size || '';
-                const tdWeight = document.createElement('td'); tdWeight.style.padding = '8px'; tdWeight.style.borderBottom = '1px solid #f3f3f3'; tdWeight.textContent = v.weight || '';
-                tr.appendChild(tdModel); tr.appendChild(tdSize); tr.appendChild(tdWeight);
+                const tdModel = document.createElement('td');
+                tdModel.style.padding = '8px';
+                tdModel.style.borderBottom = '1px solid #f3f3f3';
+                tdModel.textContent = v.model || '';
+                const tdSize = document.createElement('td');
+                tdSize.style.padding = '8px';
+                tdSize.style.borderBottom = '1px solid #f3f3f3';
+                tdSize.textContent = v.size || '';
+                const tdWeight = document.createElement('td');
+                tdWeight.style.padding = '8px';
+                tdWeight.style.borderBottom = '1px solid #f3f3f3';
+                tdWeight.textContent = v.weight || '';
+                tr.appendChild(tdModel);
+                tr.appendChild(tdSize);
+                tr.appendChild(tdWeight);
                 tbody.appendChild(tr);
             });
             tbl.appendChild(tbody);
-            if (variantsEl) {
-                variantsEl.appendChild(tableTitle);
-                variantsEl.appendChild(tbl);
-            }
+            variantsEl.appendChild(tableTitle);
+            variantsEl.appendChild(tbl);
         }
+
         const hasSpecObjects = product.specsZh || product.specsEn;
-        if (hasSpecObjects) {
-            const specObj = (currentLang && currentLang.startsWith('zh')) ? (product.specsZh || {}) : (product.specsEn || {});
+        if (specsEl) {
+            if (hasSpecObjects) {
+                const lang = getCurrentLang();
+                const specObj = (lang === 'zh') ? (product.specsZh || {}) : (product.specsEn || product.specsZh || {});
+                const rows = [
+                    ['Model/型号', product.model || ''],
+                    ['Name/名称', name || ''],
+                    ['Color/颜色', specObj.Color || specObj.color || ''],
+                    ['Size/尺寸', specObj.Size || specObj.size || ''],
+                    ['Weight/重量', specObj.Weight || specObj.weight || ''],
+                    ['Carton/外箱', specObj.Carton || specObj.carton || ''],
+                    ['Quantity/数量', specObj.Quantity || specObj.quantity || '']
+                ];
 
-            const rows = [
-                ['Model/型号', product.model || ''],
-                ['Name/名称', name || ''],
-                ['Color/颜色', specObj.Color || specObj.color || ''],
-                ['Size/尺寸', specObj.Size || specObj.size || ''],
-                ['Weight/重量', specObj.Weight || specObj.weight || ''],
-                ['Carton/外箱', specObj.Carton || specObj.carton || ''],
-                ['Quantity/数量', specObj.Quantity || specObj.quantity || '']
-            ];
-
-            const table = document.createElement('table');
-            table.className = 'pdp-spec-table';
-            table.style.borderCollapse = 'collapse';
-            table.style.width = '100%';
-            rows.forEach(([label, val]) => {
-                const tr = document.createElement('tr');
-                const th = document.createElement('th');
-                th.style.textAlign = 'left';
-                th.style.padding = '6px 8px';
-                th.style.width = '36%';
-                th.style.borderBottom = '1px solid #eee';
-                th.textContent = label;
-                const td = document.createElement('td');
-                td.style.padding = '6px 8px';
-                td.style.borderBottom = '1px solid #eee';
-                td.textContent = val || ((currentLang && currentLang.startsWith('zh')) ? '待补充' : 'TBD');
-                tr.appendChild(th);
-                tr.appendChild(td);
-                table.appendChild(tr);
-            });
-
-            specsEl.appendChild(table);
-            document.getElementById('tab-desc').innerHTML = `<p>${description || ''}</p>`;
-            document.getElementById('tab-specs').innerHTML = table.outerHTML;
-        } else {
-            // fallback to old array rendering
-            (specs || []).forEach(s => {
-                const li = document.createElement('li');
-                li.textContent = `• ${s}`;
-                specsEl.appendChild(li);
-            });
-            document.getElementById('tab-desc').innerHTML = `<p>${description || ''}</p>`;
-            const specsHtml = specs && specs.length > 0
-                ? `<ul>${specs.map(s => `<li>${s}</li>`).join('')}</ul>`
-                : '<p>暂无技术参数</p>';
-            document.getElementById('tab-specs').innerHTML = specsHtml;
-        }
-
-        // 应用场景
-        const applications = pm.getApplicationScenarios(product.category);
-        const appsHtml = applications && applications.length > 0
-            ? `<ul>${applications.map(app => `<li>${app}</li>`).join('')}</ul>`
-            : '<p>适用于各种户外活动和展览展示场景</p>';
-        document.getElementById('tab-apps').innerHTML = appsHtml;
-
-        // 资料下载
-        const downloadHtml = product.pdf 
-            ? `<a href="${product.pdf}" target="_blank" class="btn btn-primary" data-translate="btn_download_pdf">下载PDF</a>`
-            : '<p>请联系我们获取详细产品资料</p>';
-        document.getElementById('tab-download').innerHTML = downloadHtml;
-
-        // 操作按钮
-        document.getElementById('btnQuote').onclick = () => {
-            try {
-                const urlModel = (new URLSearchParams(window.location.search)).get('model');
-                const selectedModel = urlModel || (product.variants && product.variants[0] && product.variants[0].model) || product.model || '';
-                const prefill = {
-                    id: product.id,
-                    model: selectedModel,
-                    name: name
-                };
-                localStorage.setItem('quote_prefill', JSON.stringify(prefill));
-            } catch (e) {
-                // ignore
-            }
-            pm.openInquiryModal(product);
-        };
-        
-        document.getElementById('btnDownload').onclick = () => {
-            pm.openPdfModal(product);
-        };
-        
-        document.getElementById('btnCart').onclick = () => {
-            pm.addToCart(product);
-        };
-
-        // 标签页切换
-        document.querySelectorAll('.tab').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelectorAll('.tab, .tab-panel').forEach(el => {
-                    el.classList.remove('active');
+                const table = document.createElement('table');
+                table.className = 'pdp-spec-table';
+                table.style.borderCollapse = 'collapse';
+                table.style.width = '100%';
+                rows.forEach(([label, val]) => {
+                    const tr = document.createElement('tr');
+                    const th = document.createElement('th');
+                    th.style.textAlign = 'left';
+                    th.style.padding = '6px 8px';
+                    th.style.width = '36%';
+                    th.style.borderBottom = '1px solid #eee';
+                    th.textContent = label;
+                    const td = document.createElement('td');
+                    td.style.padding = '6px 8px';
+                    td.style.borderBottom = '1px solid #eee';
+                    td.textContent = val || (getCurrentLang() === 'zh' ? '待补充' : 'TBD');
+                    tr.appendChild(th);
+                    tr.appendChild(td);
+                    table.appendChild(tr);
                 });
-                btn.classList.add('active');
-                const tabId = 'tab-' + btn.dataset.tab;
-                const panel = document.getElementById(tabId);
-                if (panel) {
-                    panel.classList.add('active');
+                specsEl.appendChild(table);
+                const tabDesc = document.getElementById('tab-desc');
+                if (tabDesc) tabDesc.innerHTML = `<p>${description || ''}</p>`;
+                const tabSpecs = document.getElementById('tab-specs');
+                if (tabSpecs) tabSpecs.innerHTML = table.outerHTML;
+            } else {
+                (specs || []).forEach(s => {
+                    const li = document.createElement('li');
+                    li.textContent = `• ${s}`;
+                    specsEl.appendChild(li);
+                });
+                const tabDesc = document.getElementById('tab-desc');
+                if (tabDesc) tabDesc.innerHTML = `<p>${description || ''}</p>`;
+                const tabSpecs = document.getElementById('tab-specs');
+                if (tabSpecs) {
+                    tabSpecs.innerHTML = (specs && specs.length > 0)
+                        ? `<ul>${specs.map(s => `<li>${s}</li>`).join('')}</ul>`
+                        : `<p data-translate="no_specs">暂无技术参数</p>`;
                 }
-            });
-        });
-
-        // 相关产品
-        const related = pm.products
-            .filter(p => p.category === product.category && p.id != product.id)
-            .slice(0, 4);
-
-        const grid = document.getElementById('relatedGrid');
-        grid.innerHTML = '';
-        
-        if (related.length > 0) {
-            related.forEach(p => {
-                const productElement = pm.createProductElement(p);
-                grid.appendChild(productElement);
-            });
-        } else {
-            grid.innerHTML = '<p>暂无相关产品</p>';
+            }
         }
 
-        // 应用多语言翻译
+        // Applications
+        const applications = pm.getApplicationScenarios ? pm.getApplicationScenarios(product.category) : [];
+        const tabApps = document.getElementById('tab-apps');
+        if (tabApps) {
+            tabApps.innerHTML = (applications && applications.length > 0)
+                ? `<ul>${applications.map(app => `<li>${app}</li>`).join('')}</ul>`
+                : `<p data-translate="default_applications">适用于各种户外活动和展览展示场景</p>`;
+        }
+
+        // Download
+        const tabDownload = document.getElementById('tab-download');
+        if (tabDownload) {
+            tabDownload.innerHTML = product.pdf
+                ? `<a href="${product.pdf}" target="_blank" class="btn btn-primary" data-translate="btn_download_pdf">下载PDF</a>`
+                : `<p data-translate="download_contact_us">请联系我们获取详细产品资料</p>`;
+        }
+
+        // Buttons
+        const btnQuote = document.getElementById('btnQuote');
+        const btnDownload = document.getElementById('btnDownload');
+        const btnCart = document.getElementById('btnCart');
+        if (btnQuote) {
+            btnQuote.onclick = () => {
+                try {
+                    const urlModel = (new URLSearchParams(window.location.search)).get('model');
+                    const selectedModel = urlModel || (product.variants && product.variants[0] && product.variants[0].model) || product.model || '';
+                    const prefill = { id: product.id, model: selectedModel, name };
+                    localStorage.setItem('quote_prefill', JSON.stringify(prefill));
+                } catch (e) {
+                    // ignore
+                }
+                if (pm.openInquiryModal) pm.openInquiryModal(product);
+            };
+        }
+        if (btnDownload) {
+            btnDownload.onclick = () => {
+                if (pm.openPdfModal) pm.openPdfModal(product);
+            };
+        }
+        if (btnCart) {
+            btnCart.onclick = () => {
+                if (pm.addToCart) pm.addToCart(product);
+            };
+        }
+
+        // Tabs: attach once
+        if (!attachedOnce) {
+            attachedOnce = true;
+            document.querySelectorAll('.tab').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.tab, .tab-panel').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    btn.classList.add('active');
+                    const tabId = 'tab-' + btn.dataset.tab;
+                    const panel = document.getElementById(tabId);
+                    if (panel) panel.classList.add('active');
+                });
+            });
+        }
+
+        // Related products
+        const related = pm.products
+            .filter(p => p.category === product.category && String(p.id) !== String(product.id))
+            .slice(0, 4);
+        const grid = document.getElementById('relatedGrid');
+        if (grid) {
+            grid.innerHTML = '';
+            if (related.length > 0) {
+                related.forEach(p => {
+                    const productElement = pm.createProductElement ? pm.createProductElement(p) : null;
+                    if (productElement) grid.appendChild(productElement);
+                });
+            } else {
+                grid.innerHTML = '<p data-translate="no_related_products">暂无相关产品</p>';
+            }
+        }
+
+        // Apply translations for any injected nodes
         if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
             window.multiLang.translatePage();
         }
     };
 
-    // 监听语言变化
+    const rerender = () => {
+        waitForProductManager((pm) => renderDetail(pm));
+    };
+
     document.addEventListener('languageChanged', () => {
-        // 重新初始化以更新语言
-        const params = new URLSearchParams(location.search);
-        const productId = params.get('id');
-        if (productId) {
-            setTimeout(initDetail, 100);
-        }
+        setTimeout(rerender, 50);
     });
 
-    // 开始初始化
-    initDetail();
+    rerender();
 });
 

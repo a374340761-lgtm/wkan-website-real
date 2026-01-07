@@ -564,8 +564,47 @@ function initSearch() {
         return location.pathname.endsWith('all-products.html');
     }
 
+    function normalizeKey(s) {
+        return (s || '')
+            .toString()
+            .toLowerCase()
+            .replace(/\s+/g, '')
+            .replace(/_/g, '-')
+            .replace(/[–—]/g, '-')
+            .trim();
+    }
+
+    function matchTentType(keywordRaw) {
+        const k = normalizeKey(keywordRaw);
+        if (!k) return '';
+
+        // Folding series
+        if (k.includes('wk-t30') || k.includes('t30') || k.includes('30square') || k.includes('squaretubeframeiron')) return 'folding30';
+        if (k.includes('wk-t40') || k.includes('t40') || k.includes('40hexagon') || k.includes('hexagonaluminum')) return 'folding40';
+        if (k.includes('wk-t50') || k.includes('t50') || k.includes('50hexagon') || k.includes('hexagonaluminumframe')) return 'folding50';
+
+        // Star tent
+        if (k.includes('star') || k.includes('star-tent') || k.includes('adt10')) return 'star_1';
+        if (k.includes('adt11')) return 'star_2';
+
+        // Awning
+        if (k.includes('awning') || k.includes('awning-tent') || k.includes('adt12')) return 'awning';
+
+        // Six-sided
+        if (k.includes('six') && k.includes('side')) return 'six_sided';
+        if (k.includes('six-sided') || k.includes('sixsided') || k.includes('wk-t80') || k.includes('t80b')) return 'six_sided';
+
+        return '';
+    }
+
     function goToSearch(q) {
         const keyword = (q || '').trim();
+        const tentType = matchTentType(keyword);
+        if (tentType) {
+            window.location.href = `tent-type.html?type=${encodeURIComponent(tentType)}`;
+            return;
+        }
+
         const url = keyword
             ? `all-products.html?q=${encodeURIComponent(keyword)}`
             : `all-products.html`;

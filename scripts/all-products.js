@@ -562,6 +562,10 @@
         const type = getQueryTentType();
         const folding = Array.isArray(data.folding) ? data.folding : [];
         const event = Array.isArray(data.event) ? data.event : [];
+        const inflatableAll = Array.isArray(data.inflatable) ? data.inflatable : [];
+        const inflatable = inflatableAll.find((x) => x && x.type === 'inflatable')
+            ? [inflatableAll.find((x) => x && x.type === 'inflatable')]
+            : inflatableAll;
 
         const lang = getCurrentLang();
         const getTitle = (item) => (lang === 'zh' ? (item.nameZh || item.nameEn || '') : (item.nameEn || item.nameZh || ''));
@@ -599,6 +603,10 @@
             <div class="tents-hub__section">
                 <h2 class="tents-hub__title" data-translate="tents_hub_event_title">Event Tents</h2>
                 <div class="tent-types__grid">${renderCards(event)}</div>
+            </div>
+            <div class="tents-hub__section">
+                <h2 class="tents-hub__title" data-translate="tents_hub_inflatable_title">Inflatable Tents</h2>
+                <div class="tent-types__grid">${renderCards(inflatable)}</div>
             </div>
         `;
     }

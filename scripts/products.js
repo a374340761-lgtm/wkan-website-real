@@ -64,112 +64,116 @@ window.HERO_SLIDES = [
 class ProductManager {
     constructor() {
         this.products = [
+            // ===== Stock folding tents (used by all-products + product-detail) =====
             {
-                id: 1,
+                id: 2001,
                 category: 'tents',
-                name: '帐篷',
-                        id: 2001,
-                        category: 'tents',
-                        type: 'stock',
-                        name: '30方管铁架帐篷',
-                        nameEn: '30 Square Tube Iron Frame Tent',
-                        nameZh: '30方管铁架帐篷',
-                        shortEn: 'Durable 30 square tube iron frame tent; waterproof and fire-retardant.',
-                        shortZh: '30方管铁架，防水阻燃，适合短期活动与租赁。',
-                        image: 'images/products/tents/30square-tube-frame-iron.png',
-                        gallery: [
-                            'images/products/tents/30square-tube-frame-iron.png',
-                            'images/products/tents/30square-tube-frame-iron-authenticaccessories.png',
-                            'images/products/tents/waterproof-fire-proof.png',
-                            'images/products/tents/frame-iron-30-square.png'
-                        ],
-                        options: {
-                            frameMaterial: { value: 'iron', detailEn: '30 square tube iron frame — robust and economical.', detailZh: '30方管铁架 — 结实且经济' },
-                            fabric: [ { value: '300D', labelEn: '300D', labelZh: '300D' }, { value: '600D', labelEn: '600D', labelZh: '600D' } ],
-                            printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
-                        },
-                        sizeTable: [
-                            { size: '1.5×1.5M', weight: '13KG' },
-                            { size: '2×2M', weight: '15KG' },
-                            { size: '2×3M', weight: '19KG' },
-                            { size: '2.5×2.5M', weight: '16.5KG' },
-                            { size: '3×3M', weight: '21KG' },
-                            { size: '3×4.5M', weight: '27KG' },
-                            { size: '3×6M', weight: '36KG' }
-                        ],
-                        keywords: ['WK-T30','30','30square','iron','30方管'],
-                        price: '询价'
-                descriptionJa: 'プロフェッショナルビーチフラッグポール、様々な素材と仕様を含む、屋外広告、ブランド展示、イベント識別に適しています',
-                descriptionKo: '전문 비치 깃발 폴, 다양한 소재 및 규격 포함, 야외 광고, 브랜드 전시, 이벤트 식별에 적합',
-                        id: 2002,
-                        category: 'tents',
-                        type: 'stock',
-                        name: '40六角铝合金架帐篷',
-                        nameEn: '40 Hexagon Aluminum Frame Tent',
-                        nameZh: '40六角铝合金架帐篷',
-                        shortEn: 'Hexagon 40 aluminum frame tent — lightweight and durable.',
-                        shortZh: '40六角铝合金框架，轻便耐用，适合常规活动使用。',
-                        image: 'images/products/tents/40square-tube-frame-aluminum.png',
-                        gallery: [
-                            'images/products/tents/40square-tube-frame-aluminum.png',
-                            'images/products/tents/40square-tube-frame-aluminum-authenticaccessories.png',
-                            'images/products/tents/waterproof-fire-proof.png',
-                            'images/products/tents/frame-aluminum-40-hexagon.png'
-                        ],
-                        options: {
-                            frameMaterial: { value: 'aluminum', detailEn: '40 hexagon aluminum frame — lighter, corrosion resistant.', detailZh: '40六角铝合金框架 — 更轻，耐腐蚀' },
-                            fabric: [ { value: '300D', labelEn: '300D', labelZh: '300D' }, { value: '600D', labelEn: '600D', labelZh: '600D' } ],
-                            printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
-                        },
-                        sizeTable: [
-                            { size: '1.5×1.5M', weight: '12.5KG' },
-                            { size: '2×2M', weight: '13KG' },
-                            { size: '2.5×2.5M', weight: '16KG' },
-                            { size: '3×3M', weight: '17KG' },
-                            { size: '3×4.5M', weight: '20KG' },
-                            { size: '3×6M', weight: '28KG' },
-                            { size: '4×4M', weight: '20.5KG' },
-                            { size: '4×6M', weight: '26KG' },
-                            { size: '4×8M', weight: '33KG' }
-                        ],
-                        keywords: ['WK-T40','40','40hexagon','aluminum','铝合金'],
-                        price: '询价'
+                type: 'stock',
+                model: 'WK-T30',
+                name: '30方管铁架帐篷',
+                nameEn: '30 Square Tube Iron Frame Tent',
+                nameZh: '30方管铁架帐篷',
+                shortEn: 'Durable 30 square tube iron frame tent; waterproof and fire-retardant.',
+                shortZh: '30方管铁架，防水阻燃，适合短期活动与租赁。',
+                image: 'images/products/tents/30square-tube-frame-iron.png',
+                gallery: [
+                    'images/products/tents/30square-tube-frame-iron.png',
+                    'images/products/tents/30square-tube-frame-iron-authenticaccessories.png',
+                    'images/products/tents/waterproof-fire-proof.png',
+                    'images/products/tents/frame-iron-30-square.png'
+                ],
+                options: {
+                    frameMaterial: { value: 'iron', detailEn: '30 square tube iron frame — robust and economical.', detailZh: '30方管铁架 — 结实且经济' },
+                    fabric: [ { value: '300D', labelEn: '300D', labelZh: '300D' }, { value: '600D', labelEn: '600D', labelZh: '600D' } ],
+                    printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
+                },
+                sizeTable: [
+                    { size: '1.5×1.5M', weight: '13KG' },
+                    { size: '2×2M', weight: '15KG' },
+                    { size: '2×3M', weight: '19KG' },
+                    { size: '2.5×2.5M', weight: '16.5KG' },
+                    { size: '3×3M', weight: '21KG' },
+                    { size: '3×4.5M', weight: '27KG' },
+                    { size: '3×6M', weight: '36KG' }
+                ],
+                keywords: ['WK-T30','30','30square','iron','30方管'],
+                tags: 'WK-T30, 30, iron, folding tent',
                 price: '询价'
             },
-                        id: 2003,
-                        category: 'tents',
-                        type: 'stock',
-                        name: '50六角铝合金架帐篷',
-                        nameEn: '50 Hexagon Aluminum Frame Tent',
-                        nameZh: '50六角铝合金架帐篷',
-                        shortEn: 'Heavy-duty 50 hexagon aluminum frame tent for larger events.',
-                        shortZh: '50六角铝合金框架，承重更强，适合更大尺度活动。',
-                        image: 'images/products/tents/50square-tube-frame-aluminum.png',
-                        gallery: [
-                            'images/products/tents/50square-tube-frame-aluminum.png',
-                            'images/products/tents/50square-tube-frame-aluminum-authenticaccessories.png',
-                            'images/products/tents/waterproof-fire-proof.png',
-                            'images/products/tents/frame-aluminum-50-hexagon.png'
-                        ],
-                        options: {
-                            frameMaterial: { value: 'aluminum', detailEn: '50 hexagon aluminum frame — maximum strength for larger spans.', detailZh: '50六角铝合金框架 — 更大跨度的更高强度' },
-                            fabric: [ { value: '300D', labelEn: '300D', labelZh: '300D' }, { value: '600D', labelEn: '600D', labelZh: '600D' } ],
-                            printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
-                        },
-                        sizeTable: [
-                            { size: '2×2M', weight: '20KG' },
-                            { size: '2.5×2.5M', weight: '22KG' },
-                            { size: '3×3M', weight: '29KG' },
-                            { size: '3×4.5M', weight: '40KG' },
-                            { size: '3×6M', weight: '55KG' },
-                            { size: '4×4M', weight: '36KG' },
-                            { size: '4×6M', weight: '51KG' },
-                            { size: '4×8M', weight: '67KG' }
-                        ],
-                        keywords: ['WK-T50','50','50hexagon','aluminum','铝合金'],
-                        price: '询价'
+            {
+                id: 2002,
+                category: 'tents',
+                type: 'stock',
+                model: 'WK-T40',
+                name: '40六角铝合金架帐篷',
+                nameEn: '40 Hexagon Aluminum Frame Tent',
+                nameZh: '40六角铝合金架帐篷',
+                shortEn: 'Hexagon 40 aluminum frame tent — lightweight and durable.',
+                shortZh: '40六角铝合金框架，轻便耐用，适合常规活动使用。',
+                image: 'images/products/tents/40square-tube-frame-aluminum.png',
+                gallery: [
+                    'images/products/tents/40square-tube-frame-aluminum.png',
+                    'images/products/tents/40square-tube-frame-aluminum-authenticaccessories.png',
+                    'images/products/tents/waterproof-fire-proof.png',
+                    'images/products/tents/frame-aluminum-40-hexagon.png'
+                ],
+                options: {
+                    frameMaterial: { value: 'aluminum', detailEn: '40 hexagon aluminum frame — lighter, corrosion resistant.', detailZh: '40六角铝合金框架 — 更轻，耐腐蚀' },
+                    fabric: [ { value: '300D', labelEn: '300D', labelZh: '300D' }, { value: '600D', labelEn: '600D', labelZh: '600D' } ],
+                    printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
+                },
+                sizeTable: [
+                    { size: '1.5×1.5M', weight: '12.5KG' },
+                    { size: '2×2M', weight: '13KG' },
+                    { size: '2.5×2.5M', weight: '16KG' },
+                    { size: '3×3M', weight: '17KG' },
+                    { size: '3×4.5M', weight: '20KG' },
+                    { size: '3×6M', weight: '28KG' },
+                    { size: '4×4M', weight: '20.5KG' },
+                    { size: '4×6M', weight: '26KG' },
+                    { size: '4×8M', weight: '33KG' }
+                ],
+                keywords: ['WK-T40','40','40hexagon','aluminum','铝合金'],
+                tags: 'WK-T40, 40, aluminum, folding tent',
                 price: '询价'
             },
+            {
+                id: 2003,
+                category: 'tents',
+                type: 'stock',
+                model: 'WK-T50',
+                name: '50六角铝合金架帐篷',
+                nameEn: '50 Hexagon Aluminum Frame Tent',
+                nameZh: '50六角铝合金架帐篷',
+                shortEn: 'Heavy-duty 50 hexagon aluminum frame tent for larger events.',
+                shortZh: '50六角铝合金框架，承重更强，适合更大尺度活动。',
+                image: 'images/products/tents/50square-tube-frame-aluminum.png',
+                gallery: [
+                    'images/products/tents/50square-tube-frame-aluminum.png',
+                    'images/products/tents/50square-tube-frame-aluminum-authenticaccessories.png',
+                    'images/products/tents/waterproof-fire-proof.png',
+                    'images/products/tents/frame-aluminum-50-hexagon.png'
+                ],
+                options: {
+                    frameMaterial: { value: 'aluminum', detailEn: '50 hexagon aluminum frame — maximum strength for larger spans.', detailZh: '50六角铝合金框架 — 更大跨度的更高强度' },
+                    fabric: [ { value: '300D', labelEn: '300D', labelZh: '300D' }, { value: '600D', labelEn: '600D', labelZh: '600D' } ],
+                    printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
+                },
+                sizeTable: [
+                    { size: '2×2M', weight: '20KG' },
+                    { size: '2.5×2.5M', weight: '22KG' },
+                    { size: '3×3M', weight: '29KG' },
+                    { size: '3×4.5M', weight: '40KG' },
+                    { size: '3×6M', weight: '55KG' },
+                    { size: '4×4M', weight: '36KG' },
+                    { size: '4×6M', weight: '51KG' },
+                    { size: '4×8M', weight: '67KG' }
+                ],
+                keywords: ['WK-T50','50','50hexagon','aluminum','铝合金'],
+                tags: 'WK-T50, 50, aluminum, folding tent',
+                price: '询价'
+            },
+
             // 24 accessories items mapped to the overview sprite (IDs 9001-9024)
             {
                 id: 9001,

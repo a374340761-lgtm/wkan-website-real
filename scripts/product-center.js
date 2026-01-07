@@ -115,27 +115,41 @@
     const lang = getCurrentLang();
     const safe = (s) => (s || '').toString();
 
+    const shortText = (s, max = 110) => {
+      const t = safe(s).replace(/\s+/g, ' ').trim();
+      if (!t) return '';
+      if (t.length <= max) return t;
+      return t.slice(0, max - 1) + '…';
+    };
+
     return `
       <div class="tents-hub__section">
         <h2 class="tents-hub__title" data-translate="${titleKey}">${titleFallback}</h2>
         <div class="tent-types__grid">
           ${(items || []).map((item) => {
             const title = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
-            const desc = lang === 'zh' ? safe(item.descriptionZh) : safe(item.descriptionEn);
+            const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
+            const rawDesc = lang === 'zh' ? safe(item.descriptionZh) : safe(item.descriptionEn);
+            const desc = shortText(hubDesc || rawDesc.split(/\n/)[0] || '');
             const href = `all-products.html?cat=tents&type=${encodeURIComponent(item.type)}`;
+            const viewTypeHref = `tent-type.html?type=${encodeURIComponent(item.type)}`;
             return `
-              <a class="tent-type-card" href="${href}">
-                <div class="tent-type-card__imgWrap">
-                  <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
-                </div>
+              <div class="tent-type-card">
+                <a class="tent-type-card__link" href="${href}" aria-label="${safe(title)}">
+                  <div class="tent-type-card__imgWrap">
+                    <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                  </div>
+                </a>
                 <div class="tent-type-card__body">
-                  <div class="tent-type-card__title">${title}</div>
-                  ${desc ? `<div class=\"tent-type-card__desc\">${safe(desc).replace(/\n/g, '<br>')}</div>` : ''}
+                  <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+                    <div class="tent-type-card__title">${title}</div>
+                    ${desc ? `<div class=\"tent-type-card__desc\">${safe(desc)}</div>` : ''}
+                  </a>
                   <div class="tent-type-card__cta">
-                    <span class="btn btn-secondary" data-translate="view_type_button">View Type</span>
+                    <a class="btn btn-secondary" href="${viewTypeHref}" data-translate="view_type_button">View Type</a>
                   </div>
                 </div>
-              </a>
+              </div>
             `;
           }).join('')}
         </div>
@@ -150,10 +164,16 @@
     const data = window.TENT_TYPES;
     const folding = data && Array.isArray(data.folding) ? data.folding : [];
     const event = data && Array.isArray(data.event) ? data.event : [];
+    const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
+
+    const inflatableSummary = inflatable.find((x) => x && x.type === 'inflatable')
+      ? [inflatable.find((x) => x && x.type === 'inflatable')]
+      : inflatable;
 
     container.innerHTML = [
       renderHubSection('tents_hub_folding_title', 'Folding Tents', folding),
-      renderHubSection('tents_hub_event_title', 'Event Tents', event)
+      renderHubSection('tents_hub_event_title', 'Event Tents', event),
+      renderHubSection('tents_hub_inflatable_title', 'Inflatable Tents', inflatableSummary)
     ].join('');
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {

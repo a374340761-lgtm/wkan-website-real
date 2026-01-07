@@ -5784,15 +5784,18 @@ html[lang="en"] .hero-slide p {
 }
 
 .tent-type-card{
-    display: block;
-    text-decoration: none;
-    color: inherit;
+    display: flex;
+    flex-direction: column;
     background: var(--wk-bg-card);
     border: 1px solid var(--wk-border-light);
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.tent-type-card__link{
+    display: block;
 }
 
 .tent-type-card:hover{
@@ -5819,6 +5822,9 @@ html[lang="en"] .hero-slide p {
 
 .tent-type-card__body{
     padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
 }
 
 .tent-type-card__title{
@@ -5835,4 +5841,133 @@ html[lang="en"] .hero-slide p {
 
 .tent-type-card__cta{
     margin-top: var(--spacing-sm);
+    margin-top: auto;
+}
+
+/* =========================
+     Tent Type Detail Panel
+     ========================= */
+.tent-type-detail{
+    margin-top: var(--spacing-lg);
+    background: var(--wk-bg-card);
+    border: 1px solid var(--wk-border-light);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.tent-type-detail__head{
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--wk-border-light);
+    background: var(--wk-bg-soft);
+}
+
+.tent-type-detail__title{
+    font-size: var(--font-size-xl);
+    font-weight: 800;
+    color: var(--wk-black);
+}
+
+.tent-type-detail__series{
+    font-weight: 600;
+    color: var(--wk-gray-700);
+}
+
+.tent-type-detail__block{
+    padding: var(--spacing-md);
+}
+
+.tent-type-detail__block + .tent-type-detail__block{
+    border-top: 1px solid var(--wk-border-light);
+}
+
+.tent-type-detail__blockTitle{
+    font-weight: 800;
+    color: var(--wk-black);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tent-type-detail__text{
+    color: var(--wk-gray-700);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+}
+
+.tent-type-detail__list{
+    margin: var(--spacing-sm) 0 0;
+    padding-left: 18px;
+    color: var(--wk-gray-700);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+}
+
+.tent-type-detail__list li{
+    margin: 6px 0;
+}
+
+.tent-type-detail__block .tent-type-detail__text + .tent-type-detail__text{
+    margin-top: var(--spacing-sm);
+}
+
+.tent-type-detail__tableWrap{
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tent-type-detail__table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.tent-type-detail__table th,
+.tent-type-detail__table td{
+    border: 1px solid var(--wk-border-light);
+    padding: 10px 12px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.tent-type-detail__table thead th{
+    background: var(--wk-bg-soft);
+    color: var(--wk-black);
+    font-weight: 800;
+}
+
+.tent-type-detail__biZh{
+    font-weight: 700;
+    color: var(--wk-black);
+}
+
+.tent-type-detail__biEn{
+    margin-top: 2px;
+    font-size: var(--font-size-xs);
+    color: var(--wk-gray-700);
+    font-weight: 600;
+}
+
+.tent-type-detail__visuals{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+@media (max-width: 900px){
+    .tent-type-detail__visuals{ grid-template-columns: 1fr; }
+}
+
+.tent-type-detail__visual{
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--wk-border-light);
+    border-radius: var(--radius-md);
+    background: var(--wk-bg-card);
+}
+
+/* Star tent accessories image should be much smaller */
+.tent-type-detail__visual--small{
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
 }

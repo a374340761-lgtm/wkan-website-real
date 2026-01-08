@@ -195,7 +195,54 @@ document.addEventListener('DOMContentLoaded', () => {
         const variantsEl = document.getElementById('productVariants');
         if (variantsEl) variantsEl.innerHTML = '';
 
-        if (variantsEl && product.variants && Array.isArray(product.variants) && product.variants.length > 0) {
+        // Custom variants/spec table (e.g., RaceGate)
+        if (variantsEl && product.variantTable && Array.isArray(product.variantTable.headers) && Array.isArray(product.variantTable.rows)) {
+            const tableTitle = document.createElement('h3');
+            tableTitle.setAttribute('data-translate', 'models_and_specs');
+            tableTitle.textContent = 'Models & Specifications';
+
+            const headers = product.variantTable.headers;
+            const rows = product.variantTable.rows;
+
+            const tbl = document.createElement('table');
+            tbl.className = 'variants-table';
+            tbl.style.width = '100%';
+            tbl.style.borderCollapse = 'collapse';
+
+            const thead = document.createElement('thead');
+            const trh = document.createElement('tr');
+            headers.forEach((h) => {
+                const th = document.createElement('th');
+                th.style.textAlign = 'left';
+                th.style.padding = '8px';
+                th.style.borderBottom = '1px solid #eaeaea';
+                th.textContent = h;
+                trh.appendChild(th);
+            });
+            thead.appendChild(trh);
+            tbl.appendChild(thead);
+
+            const tbody = document.createElement('tbody');
+            rows.forEach((r) => {
+                const tr = document.createElement('tr');
+                headers.forEach((h) => {
+                    const td = document.createElement('td');
+                    td.style.padding = '8px';
+                    td.style.borderBottom = '1px solid #f3f3f3';
+                    const key = (h || '').toString();
+                    const altKey = key.replace(/\s+/g, '');
+                    const lowKey = key.toLowerCase();
+                    const val = r && (r[key] ?? r[altKey] ?? r[lowKey]);
+                    td.textContent = val == null ? '' : String(val);
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+            tbl.appendChild(tbody);
+
+            variantsEl.appendChild(tableTitle);
+            variantsEl.appendChild(tbl);
+        } else if (variantsEl && product.variants && Array.isArray(product.variants) && product.variants.length > 0) {
             const tableTitle = document.createElement('h3');
             tableTitle.setAttribute('data-translate', 'models_and_specs');
             tableTitle.textContent = 'Models & Specifications';

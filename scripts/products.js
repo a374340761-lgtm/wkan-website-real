@@ -100,6 +100,104 @@ class ProductManager {
                 tags: 'WK-T30, 30, iron, folding tent',
                 price: '询价'
             },
+
+            // ===== RaceGate (fiberglass) =====
+            {
+                id: 9401,
+                category: 'racegate',
+                type: 'v',
+                model: 'RaceGate-V',
+                name: 'V型拱门',
+                nameEn: 'V Race Gate',
+                nameZh: 'V型拱门',
+                shortEn: 'Portable fiberglass race gate for events and racing. Sizes and packing specs from catalog.',
+                shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
+                descriptionEn: 'Fiberglass race gate (V shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
+                descriptionZh: '玻璃钢竞速拱门（V型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
+                image: 'images/products/racegate/pdf_p9.png',
+                images: [
+                    'images/products/racegate/pdf_p9.png'
+                ],
+                gallery: [
+                    'images/products/racegate/pdf_p9.png'
+                ],
+                variantTable: {
+                    headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
+                    rows: [
+                        { Model: 'AD-R40A', Material: 'Fiberglass', Size: 'L 2.5*H 1.4m', Diameter: '8mm', Thickness: '2.5mm', 'Pack Size': '118*25*15cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40B', Material: 'Fiberglass', Size: 'L 3.1*H 1.9m', Diameter: '10mm', Thickness: '2.5mm', 'Pack Size': '118*25*22cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40C', Material: 'Fiberglass', Size: 'L 3.6*H 2.4m', Diameter: '12mm', Thickness: '2.5mm', 'Pack Size': '118*25*22cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40D', Material: 'Fiberglass', Size: 'L 5.5*H 3.0m', Diameter: '12mm', Thickness: '2.5mm', 'Pack Size': '118*30*25cm', 'Pack Quantity': '5pcs/cartons' }
+                    ]
+                },
+                keywords: ['race gate', 'racegate', 'fpv', 'drone', '拱门', '竞速拱门', 'AD-R40A', 'AD-R40B', 'AD-R40C', 'AD-R40D', 'fiberglass', '玻璃钢'],
+                tags: 'RaceGate, Fiberglass',
+                price: '询价'
+            },
+            {
+                id: 9402,
+                category: 'racegate',
+                type: 'o',
+                model: 'RaceGate-O',
+                name: 'O型拱门',
+                nameEn: 'O Race Gate',
+                nameZh: 'O型拱门',
+                shortEn: 'Portable fiberglass race gate for events and racing. Sizes and packing specs from catalog.',
+                shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
+                descriptionEn: 'Fiberglass race gate (O shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
+                descriptionZh: '玻璃钢竞速拱门（O型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
+                image: 'images/products/racegate/pdf_p9.png',
+                images: [
+                    'images/products/racegate/pdf_p9.png'
+                ],
+                gallery: [
+                    'images/products/racegate/pdf_p9.png'
+                ],
+                variantTable: {
+                    headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
+                    rows: [
+                        { Model: 'AD-R40A', Material: 'Fiberglass', Size: 'L 2.5*H 1.4m', Diameter: '8mm', Thickness: '2.5mm', 'Pack Size': '118*25*15cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40B', Material: 'Fiberglass', Size: 'L 3.1*H 1.9m', Diameter: '10mm', Thickness: '2.5mm', 'Pack Size': '118*25*22cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40C', Material: 'Fiberglass', Size: 'L 3.6*H 2.4m', Diameter: '12mm', Thickness: '2.5mm', 'Pack Size': '118*25*22cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40D', Material: 'Fiberglass', Size: 'L 5.5*H 3.0m', Diameter: '12mm', Thickness: '2.5mm', 'Pack Size': '118*30*25cm', 'Pack Quantity': '5pcs/cartons' }
+                    ]
+                },
+                keywords: ['race gate', 'racegate', 'fpv', 'drone', '拱门', '竞速拱门', 'AD-R40A', 'AD-R40B', 'AD-R40C', 'AD-R40D', 'fiberglass', '玻璃钢'],
+                tags: 'RaceGate, Fiberglass',
+                price: '询价'
+            },
+            {
+                id: 9403,
+                category: 'racegate',
+                type: 'semi',
+                model: 'RaceGate-SemiCircle',
+                name: '半圆型拱门',
+                nameEn: 'Semi-circle Race Gate',
+                nameZh: '半圆型拱门',
+                shortEn: 'Portable fiberglass race gate for events and racing. Sizes and packing specs from catalog.',
+                shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
+                descriptionEn: 'Fiberglass race gate (semi-circle). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
+                descriptionZh: '玻璃钢竞速拱门（半圆型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
+                image: 'images/products/racegate/pdf_p9.png',
+                images: [
+                    'images/products/racegate/pdf_p9.png'
+                ],
+                gallery: [
+                    'images/products/racegate/pdf_p9.png'
+                ],
+                variantTable: {
+                    headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
+                    rows: [
+                        { Model: 'AD-R40A', Material: 'Fiberglass', Size: 'L 2.5*H 1.4m', Diameter: '8mm', Thickness: '2.5mm', 'Pack Size': '118*25*15cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40B', Material: 'Fiberglass', Size: 'L 3.1*H 1.9m', Diameter: '10mm', Thickness: '2.5mm', 'Pack Size': '118*25*22cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40C', Material: 'Fiberglass', Size: 'L 3.6*H 2.4m', Diameter: '12mm', Thickness: '2.5mm', 'Pack Size': '118*25*22cm', 'Pack Quantity': '10pcs/cartons' },
+                        { Model: 'AD-R40D', Material: 'Fiberglass', Size: 'L 5.5*H 3.0m', Diameter: '12mm', Thickness: '2.5mm', 'Pack Size': '118*30*25cm', 'Pack Quantity': '5pcs/cartons' }
+                    ]
+                },
+                keywords: ['race gate', 'racegate', 'fpv', 'drone', '拱门', '竞速拱门', 'AD-R40A', 'AD-R40B', 'AD-R40C', 'AD-R40D', 'fiberglass', '玻璃钢'],
+                tags: 'RaceGate, Fiberglass',
+                price: '询价'
+            },
             {
                 id: 2002,
                 category: 'tents',

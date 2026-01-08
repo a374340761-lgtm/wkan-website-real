@@ -597,11 +597,46 @@ function initSearch() {
         return '';
     }
 
+    function matchCategory(keywordRaw) {
+        const raw = (keywordRaw || '').toString();
+        const k = normalizeKey(raw);
+        if (!k) return '';
+
+        // RaceGate
+        if (k.includes('racegate') || k.includes('race-gate') || raw.includes('拱门') || raw.includes('竞速')) return 'racegate';
+
+        // Accessories
+        if (k.includes('accessor') || raw.includes('配件')) return 'accessories';
+
+        // Tents
+        if (k.includes('tent') || raw.includes('帐篷')) return 'tents';
+
+        // Flags
+        if (k.includes('flag') || raw.includes('沙滩旗') || raw.includes('旗杆')) return 'flags';
+
+        // Displays
+        if (k.includes('display') || raw.includes('快幕秀') || raw.includes('展架')) return 'displays';
+
+        return '';
+    }
+
     function goToSearch(q) {
         const keyword = (q || '').trim();
         const tentType = matchTentType(keyword);
         if (tentType) {
             window.location.href = `tent-type.html?type=${encodeURIComponent(tentType)}`;
+            return;
+        }
+
+        const cat = matchCategory(keyword);
+        if (cat === 'racegate') {
+            window.location.href = 'racegate-type.html';
+            return;
+        }
+        if (cat) {
+            window.location.href = keyword
+                ? `all-products.html?cat=${encodeURIComponent(cat)}&q=${encodeURIComponent(keyword)}`
+                : `all-products.html?cat=${encodeURIComponent(cat)}`;
             return;
         }
 

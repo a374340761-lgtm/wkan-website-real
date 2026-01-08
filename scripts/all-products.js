@@ -669,6 +669,33 @@
         const catFromUrl = getQueryCat();
         const validCats = Array.from(new Set(products.map(p => p.category).filter(Boolean)));
 
+        // Ensure category <select> contains all categories present in data
+        (function ensureCategoryOptions() {
+            if (!catSelect) return;
+
+            const labelMap = {
+                tents: { en: 'Tents', zh: '帐篷' },
+                flags: { en: 'Beach Flags', zh: '沙滩旗' },
+                displays: { en: 'Pop-up Display', zh: '快幕秀' },
+                accessories: { en: 'Accessories', zh: '配件' },
+                custom: { en: 'Custom', zh: '定制' },
+                racegate: { en: 'Race Gate', zh: '竞速拱门' }
+            };
+
+            const lang = getCurrentLang();
+            const existing = new Set(Array.from(catSelect.options).map(o => o.value));
+
+            validCats.forEach((cat) => {
+                if (!cat || existing.has(cat)) return;
+                const opt = document.createElement('option');
+                opt.value = cat;
+                const mapped = labelMap[cat];
+                opt.textContent = mapped ? (lang === 'zh' ? mapped.zh : mapped.en) : cat;
+                catSelect.appendChild(opt);
+                existing.add(cat);
+            });
+        })();
+
         // Show notice if URL cat is invalid, but still render products (all categories)
         const notice = ensureInvalidCatNotice();
         const urlCatIsValid = (catFromUrl === 'all') || validCats.includes(catFromUrl);

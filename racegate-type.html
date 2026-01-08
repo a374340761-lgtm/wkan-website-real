@@ -3,15 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Six-sided Promotional Booth - Wai Kwan</title>
-  <meta name="description" content="Six-sided promotional booth tent product page." />
+  <title>Race Gate - Wai Kwan</title>
+  <meta name="description" content="Race gate types, models and specifications." />
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/multilang.css" />
   <link rel="stylesheet" href="styles/cart.css" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
-<body data-page-category="six-sided">
+<body data-page-category="racegate-type">
+  <!-- Language Gate -->
+  <div id="languageGate" class="language-gate" style="display: none;">
+    <div class="language-gate-box">
+      <h2>Welcome</h2>
+      <p>Please select your language</p>
+      <div class="language-options">
+        <button data-lang="en">English</button>
+        <button data-lang="zh">中文</button>
+        <button data-lang="ja">日本語</button>
+        <button data-lang="ko">한국어</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Old language switcher (hidden) -->
+  <div class="language-switcher old-lang-switcher" style="display: none;">
+    <button class="lang-btn active" data-lang="zh">中文</button>
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="ja">日本語</button>
+    <button class="lang-btn" data-lang="ko">한국어</button>
+  </div>
+
+  <!-- Top bar -->
   <div class="top-bar">
     <div class="container">
       <div class="top-bar-content">
@@ -20,6 +43,7 @@
     </div>
   </div>
 
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
@@ -56,6 +80,15 @@
             <span class="zh">全部产品</span><span class="en">Browse Products</span>
           </a>
         </li>
+        <li class="nav-item-dropdown">
+          <a href="index.html#about" data-translate="nav_info">信息 <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="index.html#top3"><span class="zh">热销尺寸 Top3</span><span class="en">Top 3 Sizes</span></a></li>
+            <li><a href="index.html#about" data-translate="nav_about">关于我们</a></li>
+            <li><a href="index.html#services" data-translate="nav_services">服务范围</a></li>
+            <li><a href="index.html#contact" data-translate="nav_contact">联系我们</a></li>
+          </ul>
+        </li>
       </ul>
       <div class="nav-actions">
         <button class="nav-icon-btn" id="searchBtn" aria-label="搜索"><i class="fas fa-search"></i></button>
@@ -86,54 +119,23 @@
         <nav class="breadcrumb" style="margin-bottom: 1.5rem;">
           <a href="index.html" data-translate="breadcrumb_home">Home</a>
           <span>/</span>
-          <a href="product-center.html?cat=tents">Tents</a>
+          <a href="product-center.html" data-translate="breadcrumb_products">Products</a>
           <span>/</span>
-          <span class="current">
-            <span class="zh">六边促销展示台</span>
-            <span class="en">Six-sided Promotional Booth</span>
-          </span>
+          <span class="current" id="racegateBreadcrumb">Race Gate</span>
         </nav>
 
-        <div class="section-header" style="margin-bottom: var(--spacing-md);">
-          <h1>
-            <span class="zh">六边促销展示台（圆顶）</span>
-            <span class="en">Six-sided Promotional Booth (Dome Top)</span>
-          </h1>
-          <p>
-            <span class="zh">型号：WK-T80B｜材质：铁｜尺寸：3×3M｜重量：60KG</span>
-            <span class="en">Model: WK-T80B | Material: Iron | Size: 3×3M | Weight: 60KG</span>
-          </p>
-        </div>
-
-        <div class="tent-type-detail">
-          <div class="tent-type-detail__block">
-            <div class="tent-type-detail__blockTitle">
-              <span class="zh">产品图片</span>
-              <span class="en">Product Images</span>
-            </div>
-            <div id="sixSidedGallery" class="tent-type-detail__visuals" style="grid-template-columns: 1fr 1fr;">
-              <!-- filled by JS -->
-            </div>
-          </div>
-        </div>
-
+        <div id="racegateRoot"></div>
       </div>
     </section>
   </main>
 
-  <!-- Contact Bottom (copied from home page) -->
   <section class="contact-bottom">
     <div class="contact-bottom__bg"></div>
     <div class="contact-bottom__inner">
-      <!-- 左：快速信息 -->
       <div class="contact-bottom__grid">
         <div class="contact-bottom__brand">
-          <div class="contact-bottom__brandTitle" data-i18n="footer_company_line_cn">
-            广西伟群帐篷制造有限公司
-          </div>
-          <div class="contact-bottom__brandSub" data-i18n="footer_company_line_en">
-            Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010
-          </div>
+          <div class="contact-bottom__brandTitle" data-i18n="footer_company_line_cn">广西伟群帐篷制造有限公司</div>
+          <div class="contact-bottom__brandSub" data-i18n="footer_company_line_en">Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010</div>
         </div>
         <div class="contact-bottom__cols">
           <div class="contact-bottom__col">
@@ -146,15 +148,9 @@
           </div>
           <div class="contact-bottom__col">
             <div class="contact-bottom__h" data-i18n="footer_contact">Contact</div>
-            <a class="contact-bottom__link" href="mailto:a374340761@gmail.com">
-              a374340761@gmail.com
-            </a>
-            <a class="contact-bottom__link" href="https://wa.me/8613824540280" target="_blank">
-              WhatsApp: +86 138 2454 0280
-            </a>
-            <div class="contact-bottom__p">
-              WeChat: massifmyth
-            </div>
+            <a class="contact-bottom__link" href="mailto:a374340761@gmail.com">a374340761@gmail.com</a>
+            <a class="contact-bottom__link" href="https://wa.me/8613824540280" target="_blank">WhatsApp: +86 138 2454 0280</a>
+            <div class="contact-bottom__p">WeChat: massifmyth</div>
           </div>
           <div class="contact-bottom__col">
             <div class="contact-bottom__h" data-i18n="footer_companyinfo">Company Info</div>
@@ -164,30 +160,18 @@
           </div>
         </div>
       </div>
-      <!-- 右：询问/CTA 盒子 -->
       <div class="contact-bottom__ask">
-        <div class="contact-bottom__askTitle" data-i18n="footer_ask_title">
-          Ask anything about products or designs…
-        </div>
+        <div class="contact-bottom__askTitle" data-i18n="footer_ask_title">Ask anything about products or designs…</div>
         <div class="contact-bottom__askBox">
-          <div class="contact-bottom__askText" data-i18n="footer_ask_text">
-            Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
-          </div>
+          <div class="contact-bottom__askText" data-i18n="footer_ask_text">Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.</div>
           <div class="contact-bottom__askActions">
-            <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
-              Get a Quote
-            </a>
-            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
-              WhatsApp Now
-            </a>
+            <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">Get a Quote</a>
+            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">WhatsApp Now</a>
           </div>
         </div>
       </div>
-      <!-- 最底行：版权 + links -->
       <div class="contact-bottom__legal">
-        <div class="contact-bottom__copy" data-i18n="footer_copyright">
-          © 2026 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.
-        </div>
+        <div class="contact-bottom__copy" data-i18n="footer_copyright">© 2026 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.</div>
         <div class="contact-bottom__links">
           <a href="#" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
           <a href="#" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
@@ -200,7 +184,8 @@
   <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
   <script src="scripts/multilang.js"></script>
-  <script src="scripts/six-sided-booth.js"></script>
+  <script src="scripts/products.js"></script>
+  <script src="scripts/racegate-type.js"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/get-quote-footer.js"></script>
 </body>

@@ -50,6 +50,20 @@
       return;
     }
 
+    // Special case: Flags Hub
+    if (cat === 'flags') {
+      const showcase = document.querySelector('.product-categories-showcase');
+      if (showcase) showcase.style.display = 'none';
+      cards.forEach((card) => {
+        card.style.display = 'none';
+      });
+      if (backWrap) backWrap.style.display = '';
+      if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
+
+      renderFlagsHub();
+      return;
+    }
+
     if (!cat) {
       cards.forEach((card) => {
         card.style.display = '';
@@ -57,6 +71,7 @@
       const showcase = document.querySelector('.product-categories-showcase');
       if (showcase) showcase.style.display = '';
       removeTentsHub();
+      removeFlagsHub();
       if (backWrap) backWrap.style.display = notice ? '' : 'none';
       if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
       return;
@@ -78,6 +93,7 @@
       const showcase = document.querySelector('.product-categories-showcase');
       if (showcase) showcase.style.display = '';
       removeTentsHub();
+      removeFlagsHub();
       if (backWrap) backWrap.style.display = '';
       if (noticeEl) noticeEl.style.display = '';
       return;
@@ -90,6 +106,7 @@
     const showcase = document.querySelector('.product-categories-showcase');
     if (showcase) showcase.style.display = '';
     removeTentsHub();
+    removeFlagsHub();
   }
 
   function ensureTentsHubContainer() {
@@ -109,6 +126,116 @@
   function removeTentsHub() {
     const el = document.getElementById('tentsHub');
     if (el && el.parentElement) el.parentElement.removeChild(el);
+  }
+
+  function ensureFlagsHubContainer() {
+    let el = document.getElementById('flagsHub');
+    if (el) return el;
+
+    const anchor = document.querySelector('.section-header');
+    if (!anchor || !anchor.parentElement) return null;
+
+    el = document.createElement('section');
+    el.id = 'flagsHub';
+    el.className = 'tents-hub';
+    anchor.parentElement.insertBefore(el, anchor.nextSibling);
+    return el;
+  }
+
+  function removeFlagsHub() {
+    const el = document.getElementById('flagsHub');
+    if (el && el.parentElement) el.parentElement.removeChild(el);
+  }
+
+  function renderFlagsHubSection(titleKey, titleFallback, items) {
+    const lang = getCurrentLang();
+    const safe = (s) => (s || '').toString();
+
+    const shortText = (s, max = 110) => {
+      const t = safe(s).replace(/\s+/g, ' ').trim();
+      if (!t) return '';
+      if (t.length <= max) return t;
+      return t.slice(0, max - 1) + '…';
+    };
+
+    return `
+      <div class="tents-hub__section">
+        <h2 class="tents-hub__title" data-translate="${titleKey}">${titleFallback}</h2>
+        <div class="tent-types__grid">
+          ${(items || []).map((item) => {
+            const title = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+            const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
+            const rawDesc = lang === 'zh' ? safe(item.storyZh) : safe(item.storyEn);
+            const desc = shortText(hubDesc || (rawDesc || '').split(/\n/)[0] || '');
+            const href = `all-products.html?cat=flags&type=${encodeURIComponent(item.type)}`;
+            const viewTypeHref = `flag-type.html?type=${encodeURIComponent(item.type)}`;
+            return `
+              <div class="tent-type-card">
+                <a class="tent-type-card__link" href="${href}" aria-label="${safe(title)}">
+                  <div class="tent-type-card__imgWrap">
+                    <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                  </div>
+                </a>
+                <div class="tent-type-card__body">
+                  <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+                    <div class="tent-type-card__title">${title}</div>
+                    ${desc ? `<div class=\"tent-type-card__desc\">${safe(desc)}</div>` : ''}
+                  </a>
+                  <div class="tent-type-card__cta">
+                    <a class="btn btn-secondary" href="${viewTypeHref}" data-translate="view_type_button">View Type</a>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderFlagsBrochureGuide() {
+    const data = window.FLAG_TYPES;
+    const pages = data && data.common && Array.isArray(data.common.brochurePages) ? data.common.brochurePages : [];
+    if (!pages.length) return '';
+    return `
+      <div class="tents-hub__section">
+        <h2 class="tents-hub__title">Brochure PDF Guide</h2>
+        <div class="tent-types__grid">
+          ${pages.map((src) => {
+            const s = (src || '').toString();
+            return `
+              <a class="tent-type-card" href="${s}" target="_blank" rel="noopener" style="text-decoration:none;">
+                <div class="tent-type-card__imgWrap">
+                  <img class="tent-type-card__img" src="${s}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                </div>
+                <div class="tent-type-card__body">
+                  <div class="tent-type-card__title">${s.split('/').pop()}</div>
+                </div>
+              </a>
+            `;
+          }).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderFlagsHub() {
+    const container = ensureFlagsHubContainer();
+    if (!container) return;
+
+    const data = window.FLAG_TYPES;
+    const poles = data && Array.isArray(data.poles) ? data.poles : [];
+    const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
+
+    container.innerHTML = [
+      renderFlagsHubSection('flags_hub_poles_title', 'Beach Flags & Poles', poles),
+      renderFlagsHubSection('flags_hub_accessories_title', 'Bases & Accessories', accessories),
+      renderFlagsBrochureGuide()
+    ].join('');
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
   }
 
   function renderHubSection(titleKey, titleFallback, items) {
@@ -188,6 +315,9 @@
     document.addEventListener('languageChanged', () => {
       if (getQueryCat() === 'tents') {
         renderTentsHub();
+      }
+      if (getQueryCat() === 'flags') {
+        renderFlagsHub();
       }
     });
   }

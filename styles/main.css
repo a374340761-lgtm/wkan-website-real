@@ -615,6 +615,56 @@ header {
     color: var(--primary-color);
 }
 
+/* Dropdown submenu (2nd level) */
+.dropdown-item-with-submenu {
+    position: relative;
+}
+
+.dropdown-item-with-submenu > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dropdown-submenu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: var(--bg-white);
+    min-width: 240px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-sm) 0;
+    margin-left: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-10px);
+    transition: var(--transition-base);
+    border: 1px solid var(--border-color);
+    z-index: 1100;
+}
+
+.dropdown-item-with-submenu:hover .dropdown-submenu,
+.dropdown-item-with-submenu:focus-within .dropdown-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.dropdown-submenu a {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    display: block;
+    color: var(--text-dark);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.dropdown-submenu a:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+}
+
 /* 导航操作按钮 */
 .nav-actions {
     display: flex;

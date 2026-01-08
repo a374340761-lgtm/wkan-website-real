@@ -92,6 +92,9 @@ function initNavigation() {
     
     // 页面加载时确保滚动解锁
     lockScroll(false);
+
+    // Enhance Products dropdown: add flags subtype submenu
+    enhanceFlagsDropdown();
     
     // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页链接如 index.html#contact 不拦截）
     navLinks.forEach(link => {
@@ -135,6 +138,88 @@ function initNavigation() {
             }
         });
     })();
+}
+
+function enhanceFlagsDropdown() {
+    // Find the Products dropdown menu on the current page.
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const fallback = [
+        { type: 'fiberglass_pole', label: 'Fiberglass Pole' },
+        { type: 'alu_fiberglass_pole', label: 'Aluminium + Fiberglass' },
+        { type: 'fully_fiberglass_teardrop', label: 'Fully Fiberglass (Teardrop)' },
+        { type: 'fully_fiberglass_feather', label: 'Fully Fiberglass (Feather)' },
+        { type: 'outdoor_giant_flag', label: 'Outdoor Giant Flag' },
+        { type: 'square_flag_pole_fiberglass', label: 'Square Flag Pole (Fiberglass)' },
+        { type: 'alu_pole_semicircle', label: 'Aluminium Pole (Semicircle)' },
+        { type: 'alu_pole_square', label: 'Aluminium Pole (Square)' },
+        { type: 'alu_pole_new_feather', label: 'Aluminium Pole (New Feather)' },
+        { type: 'alu_pole_feather', label: 'Aluminium Pole (Feather/Teardrop)' },
+        { type: 'flag_bases_accessories', label: 'Bases & Accessories' }
+    ];
+
+    const getTypes = () => {
+        const data = window.FLAG_TYPES;
+        const poles = data && Array.isArray(data.poles) ? data.poles : [];
+        const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
+        const list = poles.concat(accessories);
+        if (!list.length) return fallback;
+        return list.map((x) => ({
+            type: x.type,
+            label: (x && (x.nameEn || x.nameZh)) ? (x.nameEn || x.nameZh) : x.type
+        }));
+    };
+
+    menus.forEach((menu) => {
+        // Prevent double-inject.
+        if (menu.querySelector('.dropdown-item-with-submenu[data-flags-submenu="1"]')) return;
+
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const flagsLink = links.find((a) => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            return href.includes('cat=flags');
+        });
+
+        if (!flagsLink) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dropdown-item-with-submenu';
+        wrapper.setAttribute('data-flags-submenu', '1');
+
+        // Move the existing anchor into the wrapper.
+        const parent = flagsLink.parentElement;
+        if (!parent) return;
+        parent.insertBefore(wrapper, flagsLink);
+        wrapper.appendChild(flagsLink);
+
+        // Add indicator on the right.
+        if (!flagsLink.querySelector('.wk-submenu-caret')) {
+            const caret = document.createElement('span');
+            caret.className = 'wk-submenu-caret';
+            caret.textContent = '›';
+            flagsLink.appendChild(caret);
+        }
+
+        const sub = document.createElement('div');
+        sub.className = 'dropdown-submenu';
+        const types = getTypes();
+
+        // Overview link
+        const overview = document.createElement('a');
+        overview.href = 'product-center.html?cat=flags';
+        overview.textContent = 'Overview';
+        sub.appendChild(overview);
+
+        types.forEach((t) => {
+            const a = document.createElement('a');
+            a.href = `flag-type.html?type=${encodeURIComponent(t.type)}`;
+            a.textContent = t.label;
+            sub.appendChild(a);
+        });
+
+        wrapper.appendChild(sub);
+    });
 }
 
 // 高亮当前页面部分

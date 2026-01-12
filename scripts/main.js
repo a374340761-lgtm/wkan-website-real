@@ -64,6 +64,12 @@ function initNavigation() {
     function closeMobileMenu() {
         if (navMenu) navMenu.classList.remove('active');
         if (hamburger) hamburger.classList.remove('active');
+        // Clear any open 2nd-level submenus (tap-to-open behavior)
+        document.querySelectorAll('.dropdown-item-with-submenu.is-open').forEach((el) => {
+            el.classList.remove('is-open');
+            const a = el.querySelector('a[aria-expanded]');
+            if (a) a.setAttribute('aria-expanded', 'false');
+        });
         lockScroll(false);
     }
     
@@ -95,6 +101,9 @@ function initNavigation() {
 
     // Enhance Products dropdown: add flags subtype submenu
     enhanceFlagsDropdown();
+
+    // Enhance Products dropdown: add tents subtype submenu
+    enhanceTentsDropdown();
     
     // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页链接如 index.html#contact 不拦截）
     navLinks.forEach(link => {
@@ -138,6 +147,119 @@ function initNavigation() {
             }
         });
     })();
+}
+
+function enhanceTentsDropdown() {
+    // Find the Products dropdown menu on the current page.
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const getCurrentLang = () => {
+        try {
+            if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
+                return (window.multiLang.getCurrentLanguage() || 'en').toLowerCase();
+            }
+        } catch (e) {}
+        const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+        return htmlLang || 'en';
+    };
+
+    const fallback = [
+        { type: 'folding30', nameEn: '30 Square Tube Frame Iron', nameZh: '30 方管铁架' },
+        { type: 'folding40', nameEn: '40 Hexagon Aluminum Frame', nameZh: '40 六角铝合金架' },
+        { type: 'folding50', nameEn: '50 Hexagon Aluminum Frame', nameZh: '50 六角铝合金架' },
+        { type: 'star_1', nameEn: 'Star Tent (Type 1)', nameZh: '星星帐篷（款式1）' },
+        { type: 'star_2', nameEn: 'Star Tent (Type 2)', nameZh: '星星帐篷（款式2）' },
+        { type: 'awning', nameEn: 'Awning Tent', nameZh: '天幕帐篷' },
+        { type: 'six_sided', nameEn: 'Six-sided Tent', nameZh: '六边帐篷' },
+        { type: 'inflatable', nameEn: 'Inflatable Tent', nameZh: '充气帐篷' }
+    ];
+
+    const getTypes = () => {
+        const data = window.TENT_TYPES;
+        const folding = data && Array.isArray(data.folding) ? data.folding : [];
+        const event = data && Array.isArray(data.event) ? data.event : [];
+        const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
+        const list = folding.concat(event, inflatable);
+        if (!list.length) return fallback;
+        return list
+            .filter((x) => x && x.type)
+            .map((x) => ({
+                type: x.type,
+                nameEn: x.nameEn || x.type,
+                nameZh: x.nameZh || x.nameEn || x.type
+            }));
+    };
+
+    const shouldTapToOpen = () => {
+        const navMenu = document.querySelector('.nav-menu');
+        const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
+        const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
+        return isMobileMenuOpen || noHover;
+    };
+
+    menus.forEach((menu) => {
+        // Prevent double-inject.
+        if (menu.querySelector('.dropdown-item-with-submenu[data-tents-submenu="1"]')) return;
+
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const tentsLink = links.find((a) => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            return href.includes('cat=tents');
+        });
+
+        if (!tentsLink) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dropdown-item-with-submenu';
+        wrapper.setAttribute('data-tents-submenu', '1');
+
+        // Move the existing anchor into the wrapper.
+        const parent = tentsLink.parentElement;
+        if (!parent) return;
+        parent.insertBefore(wrapper, tentsLink);
+        wrapper.appendChild(tentsLink);
+
+        tentsLink.setAttribute('aria-haspopup', 'true');
+        tentsLink.setAttribute('aria-expanded', 'false');
+
+        // Add indicator on the right.
+        if (!tentsLink.querySelector('.wk-submenu-caret')) {
+            const caret = document.createElement('span');
+            caret.className = 'wk-submenu-caret';
+            caret.textContent = '›';
+            tentsLink.appendChild(caret);
+        }
+
+        const sub = document.createElement('div');
+        sub.className = 'dropdown-submenu';
+
+        // Overview link
+        const overview = document.createElement('a');
+        overview.href = 'product-center.html?cat=tents';
+        overview.textContent = 'Overview';
+        sub.appendChild(overview);
+
+        const lang = getCurrentLang();
+        const types = getTypes();
+
+        types.forEach((t) => {
+            const a = document.createElement('a');
+            a.href = `tent-type.html?type=${encodeURIComponent(t.type)}`;
+            a.textContent = (lang && lang.startsWith('zh')) ? (t.nameZh || t.nameEn || t.type) : (t.nameEn || t.nameZh || t.type);
+            sub.appendChild(a);
+        });
+
+        wrapper.appendChild(sub);
+
+        // On touch/mobile, first tap opens submenu instead of navigating.
+        tentsLink.addEventListener('click', (e) => {
+            if (!shouldTapToOpen()) return;
+            e.preventDefault();
+            const isOpen = wrapper.classList.toggle('is-open');
+            tentsLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    });
 }
 
 function enhanceFlagsDropdown() {

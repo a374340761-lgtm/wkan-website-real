@@ -126,110 +126,144 @@
 
     <!-- 主要内容 -->
     <main>
-        <!-- 首页横幅 - Signazon 风格轮播 -->
-        <section id="home" class="hero hero-sz">
-            <div class="hero-sz-shell">
-                <div class="hero-sz-track" id="heroSzTrack">
-                    <!-- Slide 1 -->
-                    <article class="hero-sz-slide is-active" data-slide="0">
-                        <div class="hero-sz-left">
-                            <div class="top-seller-badge"><span class="zh">Top Seller</span> · <span class="en">Display System</span></div>
-                            <h1 class="hero-sz-title">Pop-up Display Backdrop</h1>
-                            <p class="hero-sz-sub">Portable pop-up display systems for exhibitions and events. Fast setup, lightweight structure, replaceable graphics.</p>
-
-                            <div class="hero-specs">
-                                <div class="spec-row">
-                                    <div class="spec-label">SIZE</div>
-                                    <div class="spec-value">2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m</div>
-                                </div>
-                                <div class="spec-row">
-                                    <div class="spec-label">MATERIAL</div>
-                                    <div class="spec-value">Aluminum frame + Fabric graphic</div>
-                                </div>
-                                <div class="spec-row">
-                                    <div class="spec-label">LEAD TIME</div>
-                                    <div class="spec-value">7–15 days (sample) · 15–25 days (bulk)</div>
-                                </div>
-                            </div>
-
-                            <div class="hero-buttons hero-sz-actions">
-                                <a href="products-lightbox.html" class="btn-view btn-primary">View Details</a>
-                            </div>
-                        </div>
-                        <div class="hero-sz-right">
-                            <div class="hero-sz-image-wrap is-contain">
-                                <img src="images/hero/伟群快幕秀照片.jpeg" alt="Pop-up Display Backdrop" loading="eager" decoding="async">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Slide 2 -->
-                    <article class="hero-sz-slide" data-slide="1">
-                        <div class="hero-sz-left">
-                            <div class="top-seller-badge"><span class="zh">Top Seller</span> · <span class="en">Tents</span></div>
-                            <h1 class="hero-sz-title">Pop Up Event Tents</h1>
-                            <p class="hero-sz-sub">Fast setup pop-up canopy tents for events and promotions. OEM/custom branding available.</p>
-
-                            <div class="hero-specs">
-                                <div class="spec-row">
-                                    <div class="spec-label">SIZE</div>
-                                    <div class="spec-value">3×3m · 3×4.5m · 3×6m</div>
-                                </div>
-                                <div class="spec-row">
-                                    <div class="spec-label">MATERIAL</div>
-                                    <div class="spec-value">Aluminum / steel frame + Printed canopy fabric</div>
-                                </div>
-                                <div class="spec-row">
-                                    <div class="spec-label">LEAD TIME</div>
-                                    <div class="spec-value">7–15 days (sample) · 15–25 days (bulk)</div>
-                                </div>
-                            </div>
-
-                            <div class="hero-buttons hero-sz-actions">
-                                <a href="product-center.html?cat=tents" class="btn-view btn-primary">View Details</a>
-                                <a href="#contact" class="btn btn-secondary"><span>Get Quote</span><i class="fas fa-phone"></i></a>
-                            </div>
-                        </div>
-                        <div class="hero-sz-right">
-                            <div class="hero-sz-image-wrap">
-                                <img src="images/hero/Waikwantentshero.png" alt="Pop Up Event Tent" loading="lazy">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Slide 3 -->
-                    <article class="hero-sz-slide" data-slide="2">
-                        <div class="hero-sz-left">
-                            <div class="hero-sz-kicker" data-translate="hero_kicker_3">OUTDOOR PROMO</div>
-                            <h1 class="hero-sz-title" data-translate="hero_title_3">Feather & Teardrop Flags</h1>
-                            <ul class="hero-sz-bullets">
-                                <li data-translate="hero_bullet_3_1">Durable poles with strong wind resistance</li>
-                                <li data-translate="hero_bullet_3_2">Multiple bases for grass or concrete</li>
-                                <li data-translate="hero_bullet_3_3">Fast sampling for urgent events</li>
-                            </ul>
-                            <div class="hero-buttons hero-sz-actions">
-                                <a href="products-flags.html" class="btn btn-primary" data-translate="hero_cta_primary_3">
-                                    <span>Shop Flags</span><i class="fas fa-arrow-right"></i>
-                                </a>
-                                <a href="index.html#contact" class="btn btn-secondary" data-translate="hero_cta_secondary_3">
-                                    <span>Contact Sales</span><i class="fas fa-phone"></i>
-                                </a>
-                            </div>
-                            <div class="hero-usps">
-                                <div class="hero-usp">✓ Factory Direct Manufacturer</div>
-                                <div class="hero-usp">✓ OEM / Custom Branding Available</div>
-                                <div class="hero-usp">✓ Fast Production & Global Shipping</div>
-                            </div>
-                        </div>
-                        <div class="hero-sz-right">
-                            <div class="hero-sz-image-wrap">
-                                <img src="images/hero/waikwanflagshero.png" alt="Feather & Teardrop Flags" loading="lazy">
-                            </div>
-                        </div>
-                    </article>
+        <!-- Homepage Hero Slider (B2B premium) -->
+        <section id="home" class="wk-hero">
+            <div class="wk-hero-shell">
+                <div id="heroSlider" class="wk-hero-slider"></div>
+                <div class="wk-hero-controls">
+                    <button class="wk-hero-nav" id="heroPrev" type="button"><i class="fas fa-chevron-left"></i></button>
+                    <div class="wk-hero-dots" id="heroDots"></div>
+                    <button class="wk-hero-nav" id="heroNext" type="button"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div class="hero-sz-controls" aria-label="Hero carousel controls">
-                    <button class="hero-sz-nav" id="heroSzPrev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-                    <div class="hero-sz-dots" id="heroSzDots" aria-label="Slide indicators"></div>
-                    <button class="hero-sz-nav" id="heroSzNext" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <!-- Popular Categories -->
+        <section class="wk-section" id="popular-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_popular_categories_title"></h2>
+                    <p data-translate="home_popular_categories_subtitle"></p>
+                </div>
+                <div id="homeCategoryGrid" class="wk-grid wk-cat-grid"></div>
+            </div>
+        </section>
+
+        <!-- Trusted by -->
+        <section class="wk-section wk-section--soft" id="trusted-by">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_trusted_by_title"></h2>
+                    <p data-translate="home_trusted_by_subtitle"></p>
+                </div>
+                <div id="trustedByGrid" class="wk-grid wk-logo-grid" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <!-- Best Sellers -->
+        <section class="wk-section" id="best-sellers">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_best_sellers_title"></h2>
+                    <p data-translate="home_best_sellers_subtitle"></p>
+                </div>
+                <div id="bestSellersGrid" class="wk-grid wk-product-grid"></div>
+                <div class="wk-section-actions">
+                    <a class="btn btn-secondary" href="./all-products.html" data-translate="home_view_all_products"></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Factory Strength -->
+        <section class="wk-section wk-section--soft" id="factory-strength">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_factory_title"></h2>
+                    <p data-translate="home_factory_subtitle"></p>
+                </div>
+
+                <div class="wk-grid wk-feature-grid">
+                    <div class="wk-card wk-feature-card">
+                        <div class="wk-feature-icon"><i class="fas fa-industry"></i></div>
+                        <h3 data-translate="home_factory_f1_title"></h3>
+                        <p data-translate="home_factory_f1_desc"></p>
+                    </div>
+                    <div class="wk-card wk-feature-card">
+                        <div class="wk-feature-icon"><i class="fas fa-print"></i></div>
+                        <h3 data-translate="home_factory_f2_title"></h3>
+                        <p data-translate="home_factory_f2_desc"></p>
+                    </div>
+                    <div class="wk-card wk-feature-card">
+                        <div class="wk-feature-icon"><i class="fas fa-truck-fast"></i></div>
+                        <h3 data-translate="home_factory_f3_title"></h3>
+                        <p data-translate="home_factory_f3_desc"></p>
+                    </div>
+                    <div class="wk-card wk-feature-card">
+                        <div class="wk-feature-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h3 data-translate="home_factory_f4_title"></h3>
+                        <p data-translate="home_factory_f4_desc"></p>
+                    </div>
+                </div>
+
+                <div class="wk-stats" role="list">
+                    <div class="wk-stat" role="listitem">
+                        <div class="wk-stat-value" data-translate="home_stat_years_value"></div>
+                        <div class="wk-stat-label" data-translate="home_stat_years_label"></div>
+                    </div>
+                    <div class="wk-stat" role="listitem">
+                        <div class="wk-stat-value" data-translate="home_stat_clients_value"></div>
+                        <div class="wk-stat-label" data-translate="home_stat_clients_label"></div>
+                    </div>
+                    <div class="wk-stat" role="listitem">
+                        <div class="wk-stat-value" data-translate="home_stat_models_value"></div>
+                        <div class="wk-stat-label" data-translate="home_stat_models_label"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources & FAQ -->
+        <section class="wk-section" id="resources">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_resources_title"></h2>
+                    <p data-translate="home_resources_subtitle"></p>
+                </div>
+                <div id="resourcesGrid" class="wk-grid wk-resource-grid"></div>
+
+                <div class="wk-faq-list">
+                    <div class="wk-faq-item" id="faq-moq">
+                        <h3 class="wk-faq-q" data-translate="home_faq_1_q"></h3>
+                        <p class="wk-faq-a" data-translate="home_faq_1_a"></p>
+                    </div>
+                    <div class="wk-faq-item" id="faq-printing">
+                        <h3 class="wk-faq-q" data-translate="home_faq_2_q"></h3>
+                        <p class="wk-faq-a" data-translate="home_faq_2_a"></p>
+                    </div>
+                    <div class="wk-faq-item" id="faq-shipping">
+                        <h3 class="wk-faq-q" data-translate="home_faq_3_q"></h3>
+                        <p class="wk-faq-a" data-translate="home_faq_3_a"></p>
+                    </div>
+                    <div class="wk-faq-item" id="faq-files">
+                        <h3 class="wk-faq-q" data-translate="home_faq_4_q"></h3>
+                        <p class="wk-faq-a" data-translate="home_faq_4_a"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conversion CTA -->
+        <section class="wk-section wk-cta" id="conversion-cta">
+            <div class="container">
+                <div class="wk-cta-box">
+                    <div class="wk-cta-text">
+                        <h2 data-translate="home_cta_title"></h2>
+                        <p data-translate="home_cta_subtitle"></p>
+                    </div>
+                    <div class="wk-cta-actions">
+                        <a class="btn btn-primary" href="#contact" data-translate="home_cta_primary"></a>
+                        <a class="btn btn-secondary" href="product-center.html" data-translate="home_cta_secondary"></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -864,6 +898,9 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- Mobile sticky CTA -->
+    <a class="wk-sticky-quote" href="#contact" data-translate="home_sticky_quote"></a>
+
     <!-- PDF下载模态框 -->
     <div id="pdfModal" class="modal">
         <div class="modal-content">
@@ -874,6 +911,7 @@
         </div>
     </div>
 
+    <script src="scripts/products.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/multilang.js"></script>
     <script src="scripts/cart.js"></script>

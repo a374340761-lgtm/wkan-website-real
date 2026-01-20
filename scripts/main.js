@@ -11,8 +11,446 @@ document.addEventListener('DOMContentLoaded', function() {
     renderHeroSlides();
     initHeroCarouselSz();
 
+    // New homepage redesign (safe no-op on other pages)
+    initHomeRedesign();
+
     initSearch(); // ✅ Search overlay + redirect
 });
+
+function initHomeRedesign() {
+    // Safer homepage detection: run when the new homepage hooks exist.
+    // This prevents accidental no-op if <body class="home"> is missing.
+    const hasHomeHooks = !!document.getElementById('heroSlider');
+    const isHome = (document.body && document.body.classList.contains('home')) || hasHomeHooks;
+    if (!isHome) return;
+
+    renderHomeHeroSlider();
+    initHomeHeroSlider();
+
+    renderHomeCategoryGrid();
+    renderTrustedByWall();
+    renderHomeResources();
+    renderHomeBestSellers();
+
+    // If multilang already exists (or appears later), ensure newly-injected nodes translate.
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+    }
+}
+
+// Always-available image placeholder to avoid broken UI even if assets are missing.
+const WK_PLACEHOLDER_IMG =
+    'data:image/svg+xml;utf8,' +
+    encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">'
+        + '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">'
+        + '<stop offset="0" stop-color="#f1f5f9"/>'
+        + '<stop offset="1" stop-color="#e2e8f0"/>'
+        + '</linearGradient></defs>'
+        + '<rect width="1200" height="800" fill="url(#g)"/>'
+        + '<rect x="120" y="120" width="960" height="560" rx="28" fill="#ffffff" opacity="0.55"/>'
+        + '<path d="M420 510l110-140 120 150 90-90 160 190H420z" fill="#cbd5e1"/>'
+        + '<circle cx="470" cy="350" r="46" fill="#cbd5e1"/>'
+        + '</svg>'
+    );
+
+function getCurrentLangSafe() {
+    try {
+        if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
+            return window.multiLang.getCurrentLanguage() || 'en';
+        }
+    } catch (e) {}
+    return document.documentElement.lang || 'en';
+}
+
+function waitForProductManager(cb, tries = 0) {
+    const pm = window.productManager;
+    if (pm && Array.isArray(pm.products)) {
+        cb(pm);
+        return;
+    }
+    if (tries > 200) {
+        cb(null);
+        return;
+    }
+    setTimeout(() => waitForProductManager(cb, tries + 1), 50);
+}
+
+function getLocalizedField(product, baseKey) {
+    const lang = (getCurrentLangSafe() || 'en').toLowerCase();
+    const suffixMap = { zh: '', en: 'En', ja: 'Ja', ko: 'Ko' };
+    const suffix = suffixMap[lang] ?? '';
+    const localizedKey = suffix ? `${baseKey}${suffix}` : baseKey;
+    return product && (product[localizedKey] || product[baseKey] || '');
+}
+
+function getCategoryTranslateKey(cat) {
+    const map = {
+        tents: 'category_tents',
+        flags: 'category_flags',
+        displays: 'category_displays',
+        accessories: 'category_accessories',
+        furniture: 'category_furniture',
+        custom: 'category_custom',
+        lightbox: 'category_lightbox',
+        inflatable: 'category_inflatable'
+    };
+    return map[String(cat || '').trim()] || '';
+}
+
+// ------------------------------
+// New Hero Slider (homepage)
+// ------------------------------
+function getHomeHeroSlides() {
+    // Use real filenames from /images/hero (verified in repo)
+    return [
+        { image: 'images/hero/Waikwantentshero.png', keyPrefix: 'home_hero_1' },
+        { image: 'images/hero/waikwanflagshero.png', keyPrefix: 'home_hero_2' },
+        { image: 'images/hero/伟群快幕秀照片.jpeg', keyPrefix: 'home_hero_3' }
+    ];
+}
+
+function renderHomeHeroSlider() {
+    const root = document.getElementById('heroSlider');
+    if (!root) return;
+
+    const slides = getHomeHeroSlides();
+    root.innerHTML = '';
+
+    slides.forEach((s, i) => {
+        const slide = document.createElement('article');
+        slide.className = 'wk-hero-slide' + (i === 0 ? ' is-active' : '');
+        slide.setAttribute('data-index', String(i));
+        slide.style.setProperty('--wk-hero-bg', `url("${s.image}")`);
+
+        const titleKey = `${s.keyPrefix}_title`;
+        const subtitleKey = `${s.keyPrefix}_subtitle`;
+        const kickerKey = `${s.keyPrefix}_kicker`;
+
+        slide.innerHTML = `
+            <div class="wk-hero-bg" aria-hidden="true"></div>
+            <div class="wk-hero-overlay" aria-hidden="true"></div>
+            <div class="wk-hero-inner container">
+                <div class="wk-hero-content">
+                    <div class="wk-hero-kicker" data-translate="${kickerKey}"></div>
+                    <h1 class="wk-hero-title" data-translate="${titleKey}"></h1>
+                    <p class="wk-hero-sub" data-translate="${subtitleKey}"></p>
+                    <div class="wk-hero-actions">
+                        <a class="btn btn-primary" href="#contact" data-translate="home_hero_primary_cta"></a>
+                        <a class="btn btn-secondary" href="product-center.html" data-translate="home_hero_secondary_cta"></a>
+                    </div>
+                </div>
+            </div>
+        `;
+        root.appendChild(slide);
+    });
+
+    // Build dots
+    const dotsWrap = document.getElementById('heroDots');
+    if (dotsWrap) {
+        dotsWrap.innerHTML = '';
+        slides.forEach((_, i) => {
+            const b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'wk-hero-dot' + (i === 0 ? ' is-active' : '');
+            b.setAttribute('aria-label', `Slide ${i + 1}`);
+            b.addEventListener('click', () => window.__wkHeroGoTo && window.__wkHeroGoTo(i, true));
+            dotsWrap.appendChild(b);
+        });
+    }
+}
+
+function initHomeHeroSlider() {
+    const root = document.getElementById('heroSlider');
+    if (!root) return;
+
+    const slides = Array.from(root.querySelectorAll('.wk-hero-slide'));
+    if (!slides.length) return;
+
+    const prevBtn = document.getElementById('heroPrev');
+    const nextBtn = document.getElementById('heroNext');
+    const dotsWrap = document.getElementById('heroDots');
+
+    let idx = slides.findIndex((s) => s.classList.contains('is-active'));
+    if (idx < 0) idx = 0;
+
+    const setActive = (i) => {
+        slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
+        if (dotsWrap) {
+            Array.from(dotsWrap.children).forEach((d, k) => d.classList.toggle('is-active', k === i));
+        }
+    };
+
+    let timer = null;
+    const stop = () => {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+    };
+    const start = () => {
+        stop();
+        timer = window.setInterval(() => goTo(idx + 1, false), 5000);
+    };
+
+    const goTo = (i, user = false) => {
+        idx = (i + slides.length) % slides.length;
+        setActive(idx);
+        if (user) start();
+    };
+
+    // Expose for dots to call even if rendered before init
+    window.__wkHeroGoTo = goTo;
+
+    prevBtn && prevBtn.addEventListener('click', () => goTo(idx - 1, true));
+    nextBtn && nextBtn.addEventListener('click', () => goTo(idx + 1, true));
+
+    // Pause on hover
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    setActive(idx);
+    start();
+}
+
+// ------------------------------
+// Popular Categories (homepage)
+// ------------------------------
+function renderHomeCategoryGrid() {
+    const grid = document.getElementById('homeCategoryGrid');
+    if (!grid) return;
+
+    // Category IDs are based on the existing filtering convention: all-products.html?cat=...
+    // and the product.category IDs present in scripts/products.js.
+    const categories = [
+        { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+        { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+        { id: 'racegate', img: null, titleKey: 'home_cat_racegate_title', descKey: 'home_cat_racegate_desc' },
+        { id: 'accessories', img: null, titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+    ];
+
+    // Use a real product image per category if available, else fallback to a hero image.
+    let accessoriesImg = '';
+    let racegateImg = '';
+    try {
+        const pm = window.productManager;
+        const list = pm && Array.isArray(pm.products) ? pm.products : [];
+        const pAcc = list.find(x => (x.category || '') === 'accessories' && x.image);
+        const pRace = list.find(x => (x.category || '') === 'racegate' && x.image);
+        accessoriesImg = (pAcc && pAcc.image) ? pAcc.image : '';
+        racegateImg = (pRace && pRace.image) ? pRace.image : '';
+    } catch (e) {}
+    // If no real category images exist, render a clean placeholder (no broken image).
+
+    grid.innerHTML = '';
+    categories.forEach((c) => {
+        const a = document.createElement('a');
+        a.className = 'wk-card wk-cat-card';
+        a.href = `./all-products.html?cat=${encodeURIComponent(c.id)}`;
+
+        const imgSrc = c.id === 'accessories'
+            ? accessoriesImg
+            : (c.id === 'racegate' ? racegateImg : c.img);
+
+        const mediaHtml = imgSrc
+            ? `
+                <img class="wk-card-img" src="${imgSrc}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
+              `
+            : `
+                <div class="wk-card-placeholder" aria-hidden="true">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+              `;
+
+        a.innerHTML = `
+            <div class="wk-card-media">
+                ${mediaHtml}
+            </div>
+            <div class="wk-card-body">
+                <h3 class="wk-card-title" data-translate="${c.titleKey}"></h3>
+                <p class="wk-card-desc" data-translate="${c.descKey}"></p>
+                <div class="wk-card-link" data-translate="home_cat_cta"></div>
+            </div>
+        `;
+        grid.appendChild(a);
+    });
+}
+
+// ------------------------------
+// Trusted By (homepage)
+// ------------------------------
+function renderTrustedByWall() {
+    const grid = document.getElementById('trustedByGrid');
+    if (!grid) return;
+
+    // If a logo list is provided in the future, render it.
+    // Otherwise render translated, neutral "badge" labels (no broken images).
+    const logos = Array.isArray(window.TRUSTED_BY_LOGOS) ? window.TRUSTED_BY_LOGOS : [];
+    grid.innerHTML = '';
+    grid.removeAttribute('aria-hidden');
+
+    if (logos.length) {
+        logos.slice(0, 12).forEach((src) => {
+            const item = document.createElement('div');
+            item.className = 'wk-logo-badge';
+            item.innerHTML = `<img class="wk-logo-img" src="${String(src)}" alt="" loading="lazy" onerror="this.style.display='none'" />`;
+            grid.appendChild(item);
+        });
+        return;
+    }
+
+    const badgeKeys = [
+        'home_trusted_badge_1',
+        'home_trusted_badge_2',
+        'home_trusted_badge_3',
+        'home_trusted_badge_4',
+        'home_trusted_badge_5',
+        'home_trusted_badge_6',
+        'home_trusted_badge_7',
+        'home_trusted_badge_8',
+        'home_trusted_badge_9',
+        'home_trusted_badge_10'
+    ];
+
+    badgeKeys.forEach((k) => {
+        const badge = document.createElement('div');
+        badge.className = 'wk-logo-badge wk-logo-badge--text';
+        badge.setAttribute('data-translate', k);
+        grid.appendChild(badge);
+    });
+}
+
+// ------------------------------
+// Best Sellers (homepage)
+// ------------------------------
+function computeBestSellers(products, limit = 6) {
+    const list = Array.isArray(products) ? products.slice() : [];
+    if (!list.length) return [];
+
+    // 1) If dataset has explicit best-seller signals, use them.
+    //    - rank (number): sort ascending
+    //    - flags: isPopular / featured / bestSeller / bestseller
+    const hasRank = list.some((p) => p && typeof p.rank === 'number');
+    if (hasRank) {
+        return list
+            .slice()
+            .sort((a, b) => {
+                const ra = (a && typeof a.rank === 'number') ? a.rank : Number.POSITIVE_INFINITY;
+                const rb = (b && typeof b.rank === 'number') ? b.rank : Number.POSITIVE_INFINITY;
+                if (ra !== rb) return ra - rb;
+                return String((a && a.id) || '').localeCompare(String((b && b.id) || ''));
+            })
+            .slice(0, limit);
+    }
+
+    const hasFlag = list.some((p) => p && (p.isPopular === true || p.featured === true || p.bestSeller === true || p.bestseller === true));
+    if (hasFlag) {
+        const flagged = list.filter((p) => p && (p.isPopular || p.featured || p.bestSeller || p.bestseller));
+        return (flagged.length ? flagged : list).slice(0, limit);
+    }
+
+    // 2) Fallback: tags contain any of the configured keywords
+    const keywords = ['best', 'bestseller', 'hot', 'popular', 'top', 'recommended'];
+    const hasKeyword = (p) => {
+        const tags = (p && p.tags) ? String(p.tags) : '';
+        const kw = Array.isArray(p && p.keywords) ? p.keywords.join(' ') : (p && p.keywords ? String(p.keywords) : '');
+        const model = (p && p.model) ? String(p.model) : '';
+        const name = (p && (p.nameEn || p.name || '')) ? String(p.nameEn || p.name || '') : '';
+        const hay = `${tags} ${kw} ${model} ${name}`.toLowerCase();
+        return keywords.some((k) => hay.includes(k));
+    };
+
+    const flagged = list.filter(hasKeyword);
+    if (flagged.length) return flagged.slice(0, limit);
+
+    // 3) Final fallback: first N products (deterministic)
+    return list.slice(0, limit);
+}
+
+function renderHomeBestSellers() {
+    const grid = document.getElementById('bestSellersGrid');
+    if (!grid) return;
+
+    const render = (products) => {
+        grid.innerHTML = '';
+        const picked = computeBestSellers(products, 6);
+        if (!picked.length) {
+            const empty = document.createElement('div');
+            empty.className = 'wk-empty';
+            empty.setAttribute('data-translate', 'home_best_sellers_empty');
+            grid.appendChild(empty);
+            return;
+        }
+
+        picked.forEach((p) => {
+            const safeProduct = p || {};
+            const name = getLocalizedField(safeProduct, 'name') || String(safeProduct.model || safeProduct.id || '');
+            const shortDesc = getLocalizedField(safeProduct, 'short') || getLocalizedField(safeProduct, 'description') || '';
+            const img = safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
+            const catKey = getCategoryTranslateKey(safeProduct.category);
+
+            const detailHref = safeProduct.id
+                ? `product-detail.html?id=${encodeURIComponent(safeProduct.id)}`
+                : `./all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`;
+
+            const card = document.createElement('div');
+            card.className = 'wk-card wk-product-card';
+            card.innerHTML = `
+                <a class="wk-product-media" href="${detailHref}" aria-label="${String(name).replace(/"/g, '&quot;')}">
+                    <img class="wk-product-img" src="${img}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
+                </a>
+                <div class="wk-card-body">
+                    <div class="wk-product-title">${name}</div>
+                    <div class="wk-product-specs">
+                        ${safeProduct.model ? `<span class="wk-tag">${String(safeProduct.model)}</span>` : ''}
+                        ${catKey ? `<span class="wk-tag" data-translate="${catKey}"></span>` : ''}
+                    </div>
+                    ${shortDesc ? `<div class="wk-product-desc">${String(shortDesc).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>` : ''}
+                    <div class="wk-product-actions">
+                        <a class="btn btn-secondary" href="${detailHref}" data-translate="view_details"></a>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    };
+
+    waitForProductManager((pm) => {
+        const products = pm && Array.isArray(pm.products) ? pm.products : [];
+        render(products);
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    });
+}
+
+// ------------------------------
+// Resources (homepage)
+// ------------------------------
+function renderHomeResources() {
+    const grid = document.getElementById('resourcesGrid');
+    if (!grid) return;
+
+    const items = [
+        { href: '#faq-moq', titleKey: 'home_resource_1_title', descKey: 'home_resource_1_desc' },
+        { href: '#faq-printing', titleKey: 'home_resource_2_title', descKey: 'home_resource_2_desc' },
+        { href: '#faq-shipping', titleKey: 'home_resource_3_title', descKey: 'home_resource_3_desc' },
+        { href: '#faq-files', titleKey: 'home_resource_4_title', descKey: 'home_resource_4_desc' }
+    ];
+
+    grid.innerHTML = '';
+    items.forEach((it) => {
+        const a = document.createElement('a');
+        a.className = 'wk-card wk-resource-card';
+        a.href = it.href;
+        a.innerHTML = `
+            <div class="wk-card-body">
+                <h3 class="wk-card-title" data-translate="${it.titleKey}"></h3>
+                <p class="wk-card-desc" data-translate="${it.descKey}"></p>
+                <div class="wk-card-link" data-translate="home_resource_cta"></div>
+            </div>
+        `;
+        grid.appendChild(a);
+    });
+}
 
 // 导航功能
 function initNavigation() {

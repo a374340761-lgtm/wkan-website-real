@@ -199,7 +199,7 @@
     if (!pages.length) return '';
     return `
       <div class="tents-hub__section">
-        <h2 class="tents-hub__title">Brochure PDF Guide</h2>
+        <h2 class="tents-hub__title" data-translate="flags_brochure_guide_title">Brochure PDF Guide</h2>
         <div class="tent-types__grid">
           ${pages.map((src) => {
             const s = (src || '').toString();

@@ -344,6 +344,9 @@ class MultiLanguageSystem {
                 view_details: '查看详情',
                 tents_hub_folding_title: '折叠帐篷',
                 tents_hub_event_title: '活动帐篷',
+                flags_hub_poles_title: '沙滩旗与旗杆',
+                flags_hub_accessories_title: '底座与配件',
+                flags_brochure_guide_title: '沙滩旗画册参考',
                 view_type_button: '查看该类型',
                 tent_types_title: '帐篷类型',
                 view_tent_type: '查看该类型',
@@ -351,6 +354,10 @@ class MultiLanguageSystem {
                 products_no_results: '未找到匹配的产品',
                 products_page_retired_title: '此页面已迁移',
                 products_page_retired_text: '请访问：',
+
+                // Accessories page
+                accessories_page_title: '配件',
+                accessories_search_placeholder: '搜索配件',
                 
                 // 面包屑和搜索
                 breadcrumb_home: '首页',
@@ -814,6 +821,9 @@ class MultiLanguageSystem {
                 view_details: 'View details',
                 tents_hub_folding_title: 'Folding Tents',
                 tents_hub_event_title: 'Event Tents',
+                flags_hub_poles_title: 'Beach Flags & Poles',
+                flags_hub_accessories_title: 'Bases & Accessories',
+                flags_brochure_guide_title: 'Brochure PDF Guide',
                 view_type_button: 'View Type',
                 tent_types_title: 'Tent Types',
                 view_tent_type: 'View Type',
@@ -821,6 +831,10 @@ class MultiLanguageSystem {
                 products_no_results: 'No products found',
                 products_page_retired_title: 'This page has been moved',
                 products_page_retired_text: 'Please visit:',
+
+                // Accessories page
+                accessories_page_title: 'Accessories',
+                accessories_search_placeholder: 'Search accessories',
                 
                 // Breadcrumb and Search
                 breadcrumb_home: 'Home',

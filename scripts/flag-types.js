@@ -6,6 +6,8 @@
 
   // NOTE: The folder name contains spaces; use URL-encoded paths in src/href.
   const PDF_BASE = 'images/products/flags/page%20in%20pdf';
+  // NOTE: The folder name contains Chinese characters; use encodeURI for safety.
+  const CATALOG_ALLPAGE_BASE = encodeURI('images/\u5e7f\u897f\u4f1f\u7fa4\u5e10\u7bf7\u5236\u9020\u6709\u9650\u516c\u53f82025allpagepng');
 
   window.FLAG_TYPES = {
     common: {
@@ -232,7 +234,7 @@
         hubDescZh: '方型玻纤旗杆，适配方旗/矩形旗。',
         storyEn: 'Square flag poles in fiberglass material.',
         storyZh: '方型沙滩旗杆（玻纤材质）。',
-        heroImage: 'images/products/flags/hero/SquareFlagPolehero.jpg',
+        heroImage: 'images/products/flags/hero/SquareFlagPolehero.png',
         guideImages: [`${PDF_BASE}/pdf_p14.png`],
         specTable: {
           columns: [
@@ -396,6 +398,7 @@
         storyZh: '沙滩旗配套底座与配件全系列。',
         heroImage: `${PDF_BASE}/pdf_p16.png`,
         guideImages: [`${PDF_BASE}/pdf_p16.png`],
+        exampleImages: [`${CATALOG_ALLPAGE_BASE}/14.png`, `${CATALOG_ALLPAGE_BASE}/15.png`],
         specTable: {
           columns: [
             { key: 'group', labelEn: 'Group', labelZh: '分类' },

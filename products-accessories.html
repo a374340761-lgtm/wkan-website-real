@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessories / 配件</title>
+    <title data-translate="accessories_page_title">Accessories</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multilang.css">
 </head>
@@ -16,17 +16,17 @@
             <section class="accessories-overview" style="text-align:center; margin-bottom:2rem;">
                 <div style="display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px;">
                     <nav aria-label="breadcrumb" style="flex:1; text-align:left;">
-                        <a href="index.html">Home</a>
+                        <a href="index.html" data-translate="breadcrumb_home">Home</a>
                          / 
-                        <a href="product-center.html">Products</a>
+                        <a href="product-center.html" data-translate="breadcrumb_products">Products</a>
                          / 
-                        <span>Accessories</span>
+                        <span data-translate="menu_accessories">Accessories</span>
                     </nav>
                     <div style="flex:0 0 auto; text-align:right;">
-                        <button id="accessoriesBackBtn" style="padding:8px 12px; border-radius:6px; border:1px solid var(--border-color); background:#fff; cursor:pointer;">Back / 返回</button>
+                        <button id="accessoriesBackBtn" style="padding:8px 12px; border-radius:6px; border:1px solid var(--border-color); background:#fff; cursor:pointer;"><span class="en">Back</span><span class="zh">返回</span></button>
                     </div>
                 </div>
-                <h1 style="font-size:2rem; margin-bottom:1rem;">Accessories <span class="zh">/ 配件</span></h1>
+                <h1 style="font-size:2rem; margin-bottom:1rem;"><span class="en">Accessories</span><span class="zh">配件</span></h1>
                 <div style="max-width:900px; margin:0 auto;">
                     <img id="accessoriesOverviewImg" src="images/products/accessories/tent-accessories.png" alt="Tent Accessories Overview" loading="lazy" width="1100" height="620" style="aspect-ratio: 1100 / 620; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.08); display:block; margin:0 auto; height:auto;" onerror="this.src='images/placeholder.png'">
                 </div>
@@ -35,7 +35,7 @@
 
             <section class="accessories-list">
                 <div style="display:flex; justify-content:center; margin-bottom:1rem;">
-                    <input id="accessoriesSearch" type="search" placeholder="Search accessories / 搜索配件" style="max-width:720px; width:100%; padding:12px 16px; border:1px solid var(--border-color); border-radius:8px;">
+                    <input id="accessoriesSearch" type="search" data-translate-placeholder="accessories_search_placeholder" placeholder="Search accessories" style="max-width:720px; width:100%; padding:12px 16px; border:1px solid var(--border-color); border-radius:8px;">
                 </div>
 
                 <div id="accessoriesGrid" class="ap-grid" style="padding: 1rem 0;">
@@ -43,7 +43,7 @@
                 </div>
 
                 <div id="accessoriesEmpty" class="ap-empty" style="display:none;">
-                    <p>Coming soon / 正在整理</p>
+                    <p><span class="en">Coming soon</span><span class="zh">正在整理</span></p>
                 </div>
             </section>
         </div>

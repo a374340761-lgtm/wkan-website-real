@@ -167,8 +167,38 @@
 
     return `
       <div class="tent-type-detail__block">
-        <div class="tent-type-detail__blockTitle">${lang === 'zh' ? 'Brochure PDF Guide' : 'Brochure PDF Guide'}</div>
+        <div class="tent-type-detail__blockTitle">${lang === 'zh' ? '产品画册参考 / Brochure PDF Guide' : 'Brochure PDF Guide'}</div>
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
+          ${imgs
+            .map((src) => {
+              const s = safe(src);
+              return `<a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" /></a>`;
+            })
+            .join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderExampleImages(item) {
+    const lang = getCurrentLang();
+    const imgs = [];
+    if (item && Array.isArray(item.exampleImages)) item.exampleImages.forEach((p) => p && imgs.push(p));
+    if (!imgs.length) return '';
+
+    const title = lang === 'zh'
+      ? '旗杆配件示例图 / Catalog Examples'
+      : 'Catalog Examples';
+
+    const subtitle = lang === 'zh'
+      ? '以下示例图为画册页截图，用于快速查看沙滩旗底座与配件款式（可点击放大）。'
+      : 'Example catalog pages for quick reference (click to open).';
+
+    return `
+      <div class="tent-type-detail__block">
+        <div class="tent-type-detail__blockTitle">${title}</div>
+        <div class="tent-type-detail__text">${subtitle}</div>
+        <div class="tent-type-detail__visuals" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
           ${imgs
             .map((src) => {
               const s = safe(src);
@@ -238,6 +268,7 @@
         ${renderSpecTable(item, selectedVariantKey)}
         ${renderStory(item)}
         ${renderInfoBlocks(item)}
+        ${renderExampleImages(item)}
         ${renderPdfGuide(item)}
       </div>
     `;

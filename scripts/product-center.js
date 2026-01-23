@@ -193,44 +193,19 @@
     `;
   }
 
-  function renderFlagsBrochureGuide() {
-    const data = window.FLAG_TYPES;
-    const pages = data && data.common && Array.isArray(data.common.brochurePages) ? data.common.brochurePages : [];
-    if (!pages.length) return '';
-    return `
-      <div class="tents-hub__section">
-        <h2 class="tents-hub__title" data-translate="flags_brochure_guide_title">Brochure PDF Guide</h2>
-        <div class="tent-types__grid">
-          ${pages.map((src) => {
-            const s = (src || '').toString();
-            return `
-              <a class="tent-type-card" href="${s}" target="_blank" rel="noopener" style="text-decoration:none;">
-                <div class="tent-type-card__imgWrap">
-                  <img class="tent-type-card__img" src="${s}" alt="" loading="lazy" onerror="this.style.display='none'" />
-                </div>
-                <div class="tent-type-card__body">
-                  <div class="tent-type-card__title">${s.split('/').pop()}</div>
-                </div>
-              </a>
-            `;
-          }).join('')}
-        </div>
-      </div>
-    `;
-  }
-
   function renderFlagsHub() {
     const container = ensureFlagsHubContainer();
     if (!container) return;
 
     const data = window.FLAG_TYPES;
     const poles = data && Array.isArray(data.poles) ? data.poles : [];
+    const special = data && Array.isArray(data.special) ? data.special : [];
     const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
 
     container.innerHTML = [
       renderFlagsHubSection('flags_hub_poles_title', 'Beach Flags & Poles', poles),
+      renderFlagsHubSection('flags_hub_special_title', 'Backpack & Street Flags', special),
       renderFlagsHubSection('flags_hub_accessories_title', 'Bases & Accessories', accessories),
-      renderFlagsBrochureGuide()
     ].join('');
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {

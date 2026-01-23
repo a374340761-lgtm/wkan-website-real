@@ -1,5 +1,4 @@
 // Flag Types Hub data (Beach Flags & Poles)
-// Source: flags brochure pages (images/products/flags/page in pdf/pdf_p10.png ... pdf_p16.png)
 // Global export: window.FLAG_TYPES
 (function () {
   'use strict';
@@ -9,19 +8,9 @@
   // NOTE: The folder name contains Chinese characters; use encodeURI for safety.
   const CATALOG_ALLPAGE_BASE = encodeURI('images/\u5e7f\u897f\u4f1f\u7fa4\u5e10\u7bf7\u5236\u9020\u6709\u9650\u516c\u53f82025allpagepng');
 
-  window.FLAG_TYPES = {
-    common: {
-      brochurePages: [
-        `${PDF_BASE}/pdf_p10.png`,
-        `${PDF_BASE}/pdf_p11.png`,
-        `${PDF_BASE}/pdf_p12.png`,
-        `${PDF_BASE}/pdf_p13.png`,
-        `${PDF_BASE}/pdf_p14.png`,
-        `${PDF_BASE}/pdf_p15.png`,
-        `${PDF_BASE}/pdf_p16.png`
-      ]
-    },
+  const FLAG_HERO = (fileName) => encodeURI(`images/products/flags/hero/${fileName}`);
 
+  window.FLAG_TYPES = {
     poles: [
       {
         type: 'fiberglass_pole',
@@ -31,8 +20,8 @@
         hubDescZh: '多段式玻纤旗杆，多种高度可选，适配水滴/刀旗。',
         storyEn: 'The third generation beach flag poles. Multiple heights available for different flag shapes.',
         storyZh: '第三代沙滩旗杆，多种高度可选，适配不同旗形。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p10.png`],
+        heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
+        guideImage: `${PDF_BASE}/10.png`,
         infoBlocks: [
           {
             titleEn: 'Available Heights (Flag Poles)',
@@ -76,8 +65,8 @@
         hubDescZh: '铝管段 + 玻纤段组合，两种版本可选。',
         storyEn: 'Hybrid aluminium + fiberglass poles for improved rigidity and portability.',
         storyZh: '铝管与玻纤组合旗杆，兼顾强度与便携。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p11.png`],
+        heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
+        guideImage: `${PDF_BASE}/10.png`,
         variants: [
           {
             key: 'v1',
@@ -135,8 +124,8 @@
         hubDescZh: '全玻纤水滴旗杆，适合户外活动。',
         storyEn: 'Fully fiberglass pole sets for teardrop beach flags.',
         storyZh: '全玻纤旗杆套装（水滴旗）。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p12.png`],
+        heroImage: FLAG_HERO('Teardropbeachflagpoleshero.jpg'),
+        guideImage: `${PDF_BASE}/11.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -163,8 +152,8 @@
         hubDescZh: '全玻纤刀旗杆，适合户外活动。',
         storyEn: 'Fully fiberglass pole sets for feather beach flags.',
         storyZh: '全玻纤旗杆套装（刀旗）。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p12.png`],
+        heroImage: FLAG_HERO('featherhero.png'),
+        guideImage: `${PDF_BASE}/11.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -199,8 +188,8 @@
           '伸缩铝旗杆插入可注水底座以增强稳定性。',
           '旗面通过顶帽与环固定，可随风向自由旋转。'
         ].join('\n'),
-        heroImage: 'images/products/flags/hero/outdoordisplayhero.png',
-        guideImages: [`${PDF_BASE}/pdf_p13.png`],
+        heroImage: FLAG_HERO('Outdoor Giant Flaghero.png'),
+        guideImage: `${PDF_BASE}/12.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -234,8 +223,8 @@
         hubDescZh: '方型玻纤旗杆，适配方旗/矩形旗。',
         storyEn: 'Square flag poles in fiberglass material.',
         storyZh: '方型沙滩旗杆（玻纤材质）。',
-        heroImage: 'images/products/flags/hero/SquareFlagPolehero.png',
-        guideImages: [`${PDF_BASE}/pdf_p14.png`],
+        heroImage: FLAG_HERO('SquareFlagPolehero.png'),
+        guideImage: `${PDF_BASE}/12.png`,
         specTable: {
           columns: [
             { key: 'material', labelEn: 'Material', labelZh: '材质' },
@@ -261,8 +250,8 @@
         hubDescZh: '美式铝杆（半圆）。',
         storyEn: 'Semicircle American aluminium poles. Optional diameters/thickness available.',
         storyZh: '半圆美式铝杆，可选不同直径/壁厚。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p15.png`],
+        heroImage: FLAG_HERO('semicirclehero.png'),
+        guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -296,8 +285,8 @@
         hubDescZh: '美式铝杆（方型）。',
         storyEn: 'Square American aluminium poles. Optional diameters/thickness available.',
         storyZh: '方型美式铝杆，可选不同直径/壁厚。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p15.png`],
+        heroImage: FLAG_HERO('sqaurehero.png'),
+        guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -331,8 +320,8 @@
         hubDescZh: '新型刀旗铝杆，3m/4m/5m 可选。',
         storyEn: 'New feather aluminium poles with defined graphic sizes.',
         storyZh: '新型刀旗铝杆，对应旗面尺寸明确。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p15.png`],
+        heroImage: FLAG_HERO('newfeatherhero.png'),
+        guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -358,8 +347,8 @@
         hubDescZh: '美式铝杆（刀旗/水滴）。',
         storyEn: 'American aluminium poles for feather/teardrop flags.',
         storyZh: '刀旗/水滴旗美式铝杆。',
-        heroImage: 'images/products/flags/hero/Teardropbeachflagpoleshero.jpg',
-        guideImages: [`${PDF_BASE}/pdf_p15.png`],
+        heroImage: FLAG_HERO('featherhero.png'),
+        guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -387,6 +376,252 @@
       }
     ],
 
+    special: [
+      {
+        type: 'backpack_street_flags',
+        nameEn: 'Backpack Flags & Street/Display Flags',
+        nameZh: '背包旗 & 街旗 / 展示旗',
+        hubDescEn: 'Portable backpack flags, street flags and compact display flag systems for outdoor promotion.',
+        hubDescZh: '背包旗、街旗与便携展示旗系统，适合户外推广与活动宣传。',
+        storyEn: [
+          'Portable flag solutions for street marketing, events, and brand promotion.',
+          'Includes backpack flag series and street/display flag series with multiple shapes and models.'
+        ].join('\n'),
+        storyZh: [
+          '便携式旗帜展示解决方案，适用于街头推广、活动宣传与品牌展示。',
+          '包含背包旗系列与街旗/展示旗系列，多种造型与型号可选。'
+        ].join('\n'),
+        heroImage: FLAG_HERO('Backpack Flagshero.png'),
+        guideImage: `${PDF_BASE}/16.png`,
+        infoBlocks: [
+          {
+            titleEn: 'Backpack Flag Series',
+            titleZh: '背包旗系列',
+            textEn: [
+              'BACKPACK FLAG SERIES',
+              'Backpack Flags / Street Flags / Display Flags',
+              '',
+              '1. Backpack Flags – Teardrop',
+              'Model: WK-C16a',
+              'Type: Backpack Flag (Teardrop Shape)',
+              'Flag size: 55 × 105 cm',
+              '',
+              '2. Backpack Flags – Feather',
+              'Model: WK-C16b',
+              'Type: Backpack Flag (Feather Shape)',
+              'Flag size: 40 × 110 cm',
+              '',
+              '3. Backpack Flags – Square',
+              'Model: WK-C16c',
+              'Type: Backpack Flag (Square)',
+              'Flag size: 40 × 125 cm',
+              '',
+              '4. Backpack Flags – X Type',
+              'Model: WK-C16x',
+              'Type: Backpack Flag (X Structure)',
+              'Flag size: 45 × 120 cm',
+              '',
+              'Package size (without individual packaging): 61 × 55 × 46 cm',
+              'Packing quantity: 10 pcs / carton',
+              'Gross weight: 16.5 kg',
+              '',
+              '5. Backpack (Back)',
+              'Type: Backpack (Rear View)',
+              'Ergonomic backpack structure',
+              'Designed for long-time outdoor promotion use',
+              '',
+              '6. Carry Bag',
+              'Type: Carry / Storage Bag',
+              'Used for backpack flag storage and transportation',
+              'Durable fabric, easy to carry',
+              '',
+              '7. Inflatable Backpack',
+              'Product Code: WK-L60A / WK-L60B',
+              'Type: Inflatable Advertising Backpack',
+              '• WK-L60A: 80 × 80 cm; 3 kg; Carton 60 × 35 × 25 cm; 2 pcs/carton',
+              '• WK-L60B: 100 × 135 cm; 5.5 kg; Carton 180 × 150 cm; 2 pcs/carton',
+              '',
+              '8. LED Backpack',
+              'Product Code: WK-L70',
+              'Type: LED Advertising Backpack',
+              'Carton size: 105 × 45 × 35 cm',
+              'Weight: 7.8 kg',
+              'Graphic size options:',
+              'Front: 75 × 70 cm',
+              'Back: 80 × 75 cm'
+            ].join('\n'),
+            textZh: [
+              '背包旗系列（Backpack Flag Series）',
+              '背包旗 / 街旗 / 展示旗',
+              '',
+              '1）背包旗—水滴型',
+              '型号：WK-C16a',
+              '类型：背包旗（水滴形）',
+              '旗面尺寸：55 × 105 cm',
+              '',
+              '2）背包旗—刀型',
+              '型号：WK-C16b',
+              '类型：背包旗（刀旗形）',
+              '旗面尺寸：40 × 110 cm',
+              '',
+              '3）背包旗—方形',
+              '型号：WK-C16c',
+              '类型：背包旗（方形）',
+              '旗面尺寸：40 × 125 cm',
+              '',
+              '4）背包旗—X 型',
+              '型号：WK-C16x',
+              '类型：背包旗（X 结构）',
+              '旗面尺寸：45 × 120 cm',
+              '',
+              '包装尺寸（无单个包装）：61 × 55 × 46 cm',
+              '装箱数量：10 件 / 箱',
+              '毛重：16.5 kg',
+              '',
+              '5）背包（背面）',
+              '类型：背包（后视）',
+              '人体工学背负结构',
+              '适合长时间户外推广使用',
+              '',
+              '6）手提/收纳袋',
+              '类型：手提 / 收纳袋',
+              '用于背包旗收纳与运输',
+              '面料耐用，携带方便',
+              '',
+              '7）充气背包',
+              '产品编号：WK-L60A / WK-L60B',
+              '类型：充气广告背包',
+              '• WK-L60A：80 × 80 cm；3 kg；箱规 60 × 35 × 25 cm；2 件/箱',
+              '• WK-L60B：100 × 135 cm；5.5 kg；箱规 180 × 150 cm；2 件/箱',
+              '',
+              '8）LED 背包',
+              '产品编号：WK-L70',
+              '类型：LED 广告背包',
+              '箱规：105 × 45 × 35 cm',
+              '重量：7.8 kg',
+              '画面尺寸可选：',
+              '正面：75 × 70 cm',
+              '背面：80 × 75 cm'
+            ].join('\n')
+          },
+          {
+            titleEn: 'Street Flag / Display Flag Series',
+            titleZh: '街旗 / 展示旗系列',
+            textEn: [
+              'STREET FLAG / DISPLAY FLAG SERIES',
+              '',
+              '9. Street Teardrop Flag',
+              'Model: AD-22',
+              'Pole size: 100 cm',
+              'Height after assembly: 78 cm',
+              'Weight: 0.18 kg',
+              'Package size (without individual packaging): 60 × 50 × 30 cm',
+              'Packing quantity: 100 sets / box',
+              'Gross weight: 19.7 kg',
+              '',
+              '10. Lantern Banner',
+              'Model: AD-C17',
+              'Type: Lantern Advertising Banner',
+              'Height after assembly: 2.4 m',
+              'Weight: 5.5 kg',
+              'Style: 3 sides',
+              'Package size (without individual packaging): 180 × 15 × 10 cm',
+              'Packing quantity: 25 sets / box',
+              'Gross weight: 12.4 kg',
+              '',
+              '11. Street Flag – Teardrop Shape',
+              'Model: AD-23',
+              'Pole size: 100 cm',
+              'Height after assembly: 78 cm',
+              'Weight: 0.18 kg',
+              'Package size: 62 × 40 × 40 cm (PP bag)',
+              'Packing quantity: 100 sets / box',
+              'Gross weight: 10.5 kg',
+              '',
+              '12. Wall Flag',
+              'Model: AD-21',
+              'Type: Wall Mounted Flag',
+              'Structure: base pipe, strap, pole, top cap and flag',
+              'Unfolded size: 52 × 60 cm',
+              'Package size (without individual packaging): 61 × 47 × 30 cm',
+              'Packing quantity: 150 sets / box',
+              'Gross weight: 22 kg',
+              '',
+              '13. Table Flags',
+              'Model: AD-23-B / AD-23-C',
+              'Type: Table Flag',
+              'Pole size: 55 cm',
+              'Weight: 0.18 kg',
+              'Package size (without individual packaging): 60 × 50 × 30 cm',
+              'Packing quantity: 100 sets / box',
+              'Gross weight: 19.7 kg',
+              '',
+              '14. Street Pole Flags',
+              'Models: WK-S80 / WK-S81 / WK-S82',
+              '• WK-S80: Straight Street Pole; Aluminum alloy; 60 × 120 cm; 1.7 kg',
+              '• WK-S81: Straight Street Pole; Aluminum alloy; 60 × 120 cm; 1.7 kg',
+              '• WK-S82: Feather Street Pole; Full fiberglass; 50 × 120 cm; 2.3 kg'
+            ].join('\n'),
+            textZh: [
+              '街旗 / 展示旗系列（Street / Display Flag Series）',
+              '',
+              '9）街头水滴旗',
+              '型号：AD-22',
+              '杆长：100 cm',
+              '组装后高度：78 cm',
+              '重量：0.18 kg',
+              '包装尺寸（无单个包装）：60 × 50 × 30 cm',
+              '装箱数量：100 套 / 箱',
+              '毛重：19.7 kg',
+              '',
+              '10）灯笼旗（Lantern Banner）',
+              '型号：AD-C17',
+              '类型：灯笼广告旗',
+              '组装后高度：2.4 m',
+              '重量：5.5 kg',
+              '样式：三面',
+              '包装尺寸（无单个包装）：180 × 15 × 10 cm',
+              '装箱数量：25 套 / 箱',
+              '毛重：12.4 kg',
+              '',
+              '11）街旗—水滴型',
+              '型号：AD-23',
+              '杆长：100 cm',
+              '组装后高度：78 cm',
+              '重量：0.18 kg',
+              '包装尺寸：62 × 40 × 40 cm（PP 袋）',
+              '装箱数量：100 套 / 箱',
+              '毛重：10.5 kg',
+              '',
+              '12）墙旗（Wall Flag）',
+              '型号：AD-21',
+              '类型：壁挂旗',
+              '结构：底管、绑带、旗杆、顶帽及旗面',
+              '展开尺寸：52 × 60 cm',
+              '包装尺寸（无单个包装）：61 × 47 × 30 cm',
+              '装箱数量：150 套 / 箱',
+              '毛重：22 kg',
+              '',
+              '13）桌旗（Table Flags）',
+              '型号：AD-23-B / AD-23-C',
+              '类型：桌面旗',
+              '杆长：55 cm',
+              '重量：0.18 kg',
+              '包装尺寸（无单个包装）：60 × 50 × 30 cm',
+              '装箱数量：100 套 / 箱',
+              '毛重：19.7 kg',
+              '',
+              '14）路灯旗（Street Pole Flags）',
+              '型号：WK-S80 / WK-S81 / WK-S82',
+              '• WK-S80：直杆路灯旗；材质：铝合金；尺寸：60 × 120 cm；重量：1.7 kg',
+              '• WK-S81：直杆路灯旗；材质：铝合金；尺寸：60 × 120 cm；重量：1.7 kg',
+              '• WK-S82：刀型路灯旗；材质：全玻纤；尺寸：50 × 120 cm；重量：2.3 kg'
+            ].join('\n')
+          }
+        ]
+      }
+    ],
+
     accessories: [
       {
         type: 'flag_bases_accessories',
@@ -396,8 +631,7 @@
         hubDescZh: '十字底座、注水底座、地插、转动轴与收纳袋。',
         storyEn: 'A full range of bases and accessories for beach flags.',
         storyZh: '沙滩旗配套底座与配件全系列。',
-        heroImage: `${PDF_BASE}/pdf_p16.png`,
-        guideImages: [`${PDF_BASE}/pdf_p16.png`],
+        heroImage: 'images/products/accessories/flag-accessories/hero.png',
         exampleImages: [`${CATALOG_ALLPAGE_BASE}/14.png`, `${CATALOG_ALLPAGE_BASE}/15.png`],
         specTable: {
           columns: [

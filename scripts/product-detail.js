@@ -2,6 +2,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     let attachedOnce = false;
 
+    const escapeHtml = (s) => {
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    };
+
+    const renderList = (items) => {
+        const list = Array.isArray(items) ? items.filter(Boolean) : [];
+        if (!list.length) return '';
+        return `<ul>${list.map((x) => `<li>${escapeHtml(x)}</li>`).join('')}</ul>`;
+    };
+
+    const renderBilingual = (zhItems, enItems) => {
+        const lang = getCurrentLang();
+        const zh = renderList(zhItems);
+        const en = renderList(enItems);
+        if (lang === 'zh') {
+            // In Chinese mode, show both CN + EN (industry-style bilingual).
+            return `${zh || ''}${en ? `<div style="margin-top:12px;opacity:.92">${en}</div>` : ''}`;
+        }
+        return en || zh || '';
+    };
+
     const getCurrentLang = () => {
         try {
             return window.multiLang ? window.multiLang.getCurrentLanguage() : 'en';
@@ -95,13 +121,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const name = getLocalized(product, 'name');
         const description = getLocalized(product, 'description');
+        const shortText = getLocalized(product, 'short');
         const specs = getLocalizedSpecs(product);
+
+        const detailContent = (pm && typeof pm.getProductDetailContent === 'function')
+            ? pm.getProductDetailContent(product)
+            : null;
 
         // Page title and SEO
         document.title = `${name} - 广西伟群帐篷制造有限公司`;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
-            metaDesc.content = description || `${name}`;
+            metaDesc.content = (shortText || description || `${name}`);
         }
 
         // Breadcrumb: Home / Products / (Category) / Product
@@ -159,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameEl = document.getElementById('productName');
         if (nameEl) nameEl.textContent = name;
         const descEl = document.getElementById('productDesc');
-        if (descEl) descEl.textContent = description || '';
+        if (descEl) descEl.textContent = (shortText || description || '').trim();
 
         // Images
         const imageEl = document.getElementById('productImage');
@@ -327,9 +358,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 specsEl.appendChild(table);
                 const tabDesc = document.getElementById('tab-desc');
-                if (tabDesc) tabDesc.innerHTML = `<p>${description || ''}</p>`;
+                if (tabDesc) {
+                    if (detailContent) {
+                        tabDesc.innerHTML = renderBilingual(detailContent.description.zh, detailContent.description.en);
+                    } else {
+                        tabDesc.innerHTML = `<p>${escapeHtml((description || shortText || '').trim())}</p>`;
+                    }
+                }
                 const tabSpecs = document.getElementById('tab-specs');
-                if (tabSpecs) tabSpecs.innerHTML = table.outerHTML;
+                if (tabSpecs) {
+                    const extra = detailContent ? renderBilingual(detailContent.technical.zh, detailContent.technical.en) : '';
+                    tabSpecs.innerHTML = `${table.outerHTML}${extra ? `<div style="margin-top:14px;">${extra}</div>` : ''}`;
+                }
             } else {
                 (specs || []).forEach(s => {
                     const li = document.createElement('li');
@@ -337,12 +377,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     specsEl.appendChild(li);
                 });
                 const tabDesc = document.getElementById('tab-desc');
-                if (tabDesc) tabDesc.innerHTML = `<p>${description || ''}</p>`;
+                if (tabDesc) {
+                    if (detailContent) {
+                        tabDesc.innerHTML = renderBilingual(detailContent.description.zh, detailContent.description.en);
+                    } else {
+                        tabDesc.innerHTML = `<p>${escapeHtml((description || shortText || '').trim())}</p>`;
+                    }
+                }
                 const tabSpecs = document.getElementById('tab-specs');
                 if (tabSpecs) {
-                    tabSpecs.innerHTML = (specs && specs.length > 0)
-                        ? `<ul>${specs.map(s => `<li>${s}</li>`).join('')}</ul>`
+                    const listHtml = (specs && specs.length > 0)
+                        ? `<ul>${specs.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>`
                         : `<p data-translate="no_specs">暂无技术参数</p>`;
+                    const extra = detailContent ? renderBilingual(detailContent.technical.zh, detailContent.technical.en) : '';
+                    tabSpecs.innerHTML = `${listHtml}${extra ? `<div style="margin-top:14px;">${extra}</div>` : ''}`;
                 }
             }
         }
@@ -351,9 +399,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const applications = pm.getApplicationScenarios ? pm.getApplicationScenarios(product.category) : [];
         const tabApps = document.getElementById('tab-apps');
         if (tabApps) {
-            tabApps.innerHTML = (applications && applications.length > 0)
-                ? `<ul>${applications.map(app => `<li>${app}</li>`).join('')}</ul>`
-                : `<p data-translate="default_applications">适用于各种户外活动和展览展示场景</p>`;
+            if (detailContent) {
+                tabApps.innerHTML = renderBilingual(detailContent.applications.zh, detailContent.applications.en);
+            } else {
+                tabApps.innerHTML = (applications && applications.length > 0)
+                    ? `<ul>${applications.map(app => `<li>${escapeHtml(app)}</li>`).join('')}</ul>`
+                    : `<p data-translate="default_applications">适用于各种户外活动和展览展示场景</p>`;
+            }
         }
 
         // Download

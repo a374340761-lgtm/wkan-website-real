@@ -2,6 +2,53 @@
 (function () {
   'use strict';
 
+  function ensureImageModal() {
+    let modal = document.getElementById('wkImageModal');
+    if (modal) return modal;
+
+    modal = document.createElement('div');
+    modal.id = 'wkImageModal';
+    modal.className = 'modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.innerHTML = `
+      <div class="modal-content" style="max-width: 1100px;">
+        <div class="modal-header">
+          <h3 id="wkImageModalTitle" style="margin:0;"></h3>
+          <button type="button" class="close-btn" aria-label="Close">×</button>
+        </div>
+        <div class="modal-body" style="padding: 16px;">
+          <img id="wkImageModalImg" src="" alt="" style="width: 100%; height: auto; display: block; max-height: 80vh; object-fit: contain;" />
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeBtn = modal.querySelector('.close-btn');
+    const close = () => modal.classList.remove('show');
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+
+    return modal;
+  }
+
+  function openImageModal(src, title) {
+    const s = (src || '').toString();
+    if (!s) return;
+
+    const modal = ensureImageModal();
+    const img = modal.querySelector('#wkImageModalImg');
+    const h = modal.querySelector('#wkImageModalTitle');
+    if (img) img.src = s;
+    if (h) h.textContent = (title || '').toString();
+    modal.classList.add('show');
+  }
+
   function getCurrentLang() {
     if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
       return window.multiLang.getCurrentLanguage();
@@ -75,6 +122,7 @@
     if (!data) return null;
     const all = []
       .concat(Array.isArray(data.poles) ? data.poles : [])
+      .concat(Array.isArray(data.special) ? data.special : [])
       .concat(Array.isArray(data.accessories) ? data.accessories : []);
     return all.find((x) => x && x.type === type) || null;
   }
@@ -159,27 +207,6 @@
     `;
   }
 
-  function renderPdfGuide(item) {
-    const lang = getCurrentLang();
-    const imgs = [];
-    if (item && Array.isArray(item.guideImages)) item.guideImages.forEach((p) => p && imgs.push(p));
-    if (!imgs.length) return '';
-
-    return `
-      <div class="tent-type-detail__block">
-        <div class="tent-type-detail__blockTitle">${lang === 'zh' ? '产品画册参考 / Brochure PDF Guide' : 'Brochure PDF Guide'}</div>
-        <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
-          ${imgs
-            .map((src) => {
-              const s = safe(src);
-              return `<a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" /></a>`;
-            })
-            .join('')}
-        </div>
-      </div>
-    `;
-  }
-
   function renderExampleImages(item) {
     const lang = getCurrentLang();
     const imgs = [];
@@ -211,12 +238,42 @@
   }
 
   function renderHero(item) {
-    if (!item || !item.heroImage) return '';
-    const src = safe(item.heroImage);
+    if (!item) return '';
+    const src = safe(item.heroImage || item.guideImage || (Array.isArray(item.guideImages) ? item.guideImages[0] : ''));
+    if (!src) return '';
     return `
       <div class="tent-type-detail__block">
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
-          <img class="tent-type-detail__visual" src="${src}" alt="" loading="lazy" onerror="this.style.display='none'" />
+          <button type="button" data-wk-image="${src}" data-wk-title="" aria-label="Open image" style="border:none;background:transparent;padding:0;display:block;width:100%;cursor:zoom-in;">
+            <img class="tent-type-detail__visual" src="${src}" alt="" loading="lazy" onerror="this.style.display='none'" />
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderPdfGuide(item) {
+    const lang = getCurrentLang();
+    const imgs = [];
+    if (item && Array.isArray(item.guideImages)) item.guideImages.forEach((p) => p && imgs.push(p));
+    else if (item && item.guideImage) imgs.push(item.guideImage);
+    if (!imgs.length) return '';
+
+    const title = lang === 'zh' ? '产品画册参考' : 'Brochure PDF Guide';
+    return `
+      <div class="tent-type-detail__block">
+        <div class="tent-type-detail__blockTitle">${title}</div>
+        <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
+          ${imgs
+            .map((src) => {
+              const s = safe(src);
+              return `
+                <button type="button" data-wk-image="${s}" data-wk-title="${safe(title)}" aria-label="Open brochure image" style="border:none;background:transparent;padding:0;display:block;width:100%;cursor:zoom-in;">
+                  <img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                </button>
+              `;
+            })
+            .join('')}
         </div>
       </div>
     `;
@@ -265,11 +322,11 @@
           <div class="tent-type-detail__title">${title}</div>
         </div>
         ${renderHero(item)}
+        ${renderPdfGuide(item)}
         ${renderSpecTable(item, selectedVariantKey)}
         ${renderStory(item)}
         ${renderInfoBlocks(item)}
         ${renderExampleImages(item)}
-        ${renderPdfGuide(item)}
       </div>
     `;
   }
@@ -292,6 +349,15 @@
 
     const renderWithVariant = (selectedKey) => {
       root.innerHTML = renderPage(item, selectedKey);
+
+      // Image popups: hero + brochure guide open in a modal (uses the same PNG as the thumbnail).
+      root.querySelectorAll('button[data-wk-image]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const src = btn.getAttribute('data-wk-image') || '';
+          const title = btn.getAttribute('data-wk-title') || '';
+          openImageModal(src, title);
+        });
+      });
 
       root.querySelectorAll('button[data-variant]').forEach((btn) => {
         btn.addEventListener('click', () => {

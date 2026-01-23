@@ -352,8 +352,15 @@
         } else {
             grid.innerHTML = list.map(p => {
             const name = getProductName(p);
-            let imgSrc = p.image || 'images/placeholder.jpg';
+            const resolved = (window.WK_getProductCardImage && typeof window.WK_getProductCardImage === 'function')
+                ? window.WK_getProductCardImage(p)
+                : '';
+
+            let imgSrc = resolved || p.image || 'images/placeholder.jpg';
             if (imgSrc && !imgSrc.startsWith('images/') && !imgSrc.startsWith('/') && !imgSrc.startsWith('./')) imgSrc = 'images/' + imgSrc;
+
+            let spriteSrc = p.image || '';
+            if (spriteSrc && !spriteSrc.startsWith('images/') && !spriteSrc.startsWith('/') && !spriteSrc.startsWith('./')) spriteSrc = 'images/' + spriteSrc;
             const model = p.model || '';
             const tags = p.tags || '';
             // 构建询价链接，带上产品信息参数
@@ -410,7 +417,8 @@
 
             // image area: if product.grid present, use sprite-thumb div to crop from sprite
             let imgHtml = '';
-            if (p.grid && p.grid.row && p.grid.col && imgSrc) {
+            const canUseSprite = (p.grid && p.grid.row && p.grid.col && spriteSrc && imgSrc === spriteSrc);
+            if (canUseSprite) {
                 const r = Number(p.grid.row);
                 const c = Number(p.grid.col);
                 const x = (c - 1) * 33.333333;

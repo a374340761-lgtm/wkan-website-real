@@ -75,12 +75,12 @@ class ProductManager {
                 nameZh: '30方管铁架帐篷',
                 shortEn: 'Durable 30 square tube iron frame tent; waterproof and fire-retardant.',
                 shortZh: '30方管铁架，防水阻燃，适合短期活动与租赁。',
-                image: 'images/products/tents/30square-tube-frame-iron.png',
+                image: 'images/products/tents/folding30/hero.png',
                 gallery: [
-                    'images/products/tents/30square-tube-frame-iron.png',
-                    'images/products/tents/30square-tube-frame-iron-authenticaccessories.png',
-                    'images/products/tents/waterproof-fire-proof.png',
-                    'images/products/tents/frame-iron-30-square.png'
+                    'images/products/tents/folding30/hero.png',
+                    'images/products/tents/folding30/30square-tube-frame-iron-authenticaccessories.png',
+                    'images/products/tents/folding30/2D.png',
+                    'images/products/tents/folding30/Pop-up%20Canopy%20Tent%20hero.png'
                 ],
                 options: {
                     frameMaterial: { value: 'iron', detailEn: '30 square tube iron frame — robust and economical.', detailZh: '30方管铁架 — 结实且经济' },
@@ -114,11 +114,13 @@ class ProductManager {
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
                 descriptionEn: 'Fiberglass race gate (V shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
                 descriptionZh: '玻璃钢竞速拱门（V型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
-                image: 'images/products/racegate/pdf_p9.png',
+                image: encodeURI('images/products/racegate/V Race Gate/hero.png'),
                 images: [
+                    encodeURI('images/products/racegate/V Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 gallery: [
+                    encodeURI('images/products/racegate/V Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 variantTable: {
@@ -146,11 +148,13 @@ class ProductManager {
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
                 descriptionEn: 'Fiberglass race gate (O shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
                 descriptionZh: '玻璃钢竞速拱门（O型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
-                image: 'images/products/racegate/pdf_p9.png',
+                image: encodeURI('images/products/racegate/O Race Gate/hero.png'),
                 images: [
+                    encodeURI('images/products/racegate/O Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 gallery: [
+                    encodeURI('images/products/racegate/O Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 variantTable: {
@@ -178,11 +182,13 @@ class ProductManager {
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
                 descriptionEn: 'Fiberglass race gate (semi-circle). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
                 descriptionZh: '玻璃钢竞速拱门（半圆型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
-                image: 'images/products/racegate/pdf_p9.png',
+                image: encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
                 images: [
+                    encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 gallery: [
+                    encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 variantTable: {
@@ -208,12 +214,10 @@ class ProductManager {
                 nameZh: '40六角铝合金架帐篷',
                 shortEn: 'Hexagon 40 aluminum frame tent — lightweight and durable.',
                 shortZh: '40六角铝合金框架，轻便耐用，适合常规活动使用。',
-                image: 'images/products/tents/40square-tube-frame-aluminum.png',
+                image: 'images/products/tents/folding40/hero.png',
                 gallery: [
-                    'images/products/tents/40square-tube-frame-aluminum.png',
-                    'images/products/tents/40square-tube-frame-aluminum-authenticaccessories.png',
-                    'images/products/tents/waterproof-fire-proof.png',
-                    'images/products/tents/frame-aluminum-40-hexagon.png'
+                    'images/products/tents/folding40/hero.png',
+                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png'
                 ],
                 options: {
                     frameMaterial: { value: 'aluminum', detailEn: '40 hexagon aluminum frame — lighter, corrosion resistant.', detailZh: '40六角铝合金框架 — 更轻，耐腐蚀' },
@@ -245,12 +249,10 @@ class ProductManager {
                 nameZh: '50六角铝合金架帐篷',
                 shortEn: 'Heavy-duty 50 hexagon aluminum frame tent for larger events.',
                 shortZh: '50六角铝合金框架，承重更强，适合更大尺度活动。',
-                image: 'images/products/tents/50square-tube-frame-aluminum.png',
+                image: 'images/products/tents/folding50/hero.png',
                 gallery: [
-                    'images/products/tents/50square-tube-frame-aluminum.png',
-                    'images/products/tents/50square-tube-frame-aluminum-authenticaccessories.png',
-                    'images/products/tents/waterproof-fire-proof.png',
-                    'images/products/tents/frame-aluminum-50-hexagon.png'
+                    'images/products/tents/folding50/hero.png',
+                    'images/products/tents/folding50/50square-tube-frame-aluminum-authenticaccessories.png'
                 ],
                 options: {
                     frameMaterial: { value: 'aluminum', detailEn: '50 hexagon aluminum frame — maximum strength for larger spans.', detailZh: '50六角铝合金框架 — 更大跨度的更高强度' },
@@ -864,6 +866,194 @@ class ProductManager {
         this.ensureProductIds();
 
         this.init();
+    }
+
+    // ------------------------------
+    // Product Detail Content (auto-generated, bilingual)
+    // ------------------------------
+    _safeText(v) {
+        return (v == null) ? '' : String(v);
+    }
+
+    _escapeHtml(s) {
+        return this._safeText(s)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    }
+
+    _uniq(list) {
+        const out = [];
+        const seen = new Set();
+        (Array.isArray(list) ? list : []).forEach((x) => {
+            const v = this._safeText(x).trim();
+            if (!v) return;
+            const key = v.toLowerCase();
+            if (seen.has(key)) return;
+            seen.add(key);
+            out.push(v);
+        });
+        return out;
+    }
+
+    _pickLocalized(product, baseKey) {
+        const lang = (this.currentLanguage || 'en').toLowerCase();
+        const suffixMap = { zh: '', en: 'En', ja: 'Ja', ko: 'Ko' };
+        const suffix = suffixMap[lang] ?? '';
+        const localizedKey = suffix ? `${baseKey}${suffix}` : baseKey;
+        return this._safeText((product && (product[localizedKey] ?? product[baseKey])) || '');
+    }
+
+    _getProductSummary(product) {
+        const short = this._pickLocalized(product, 'short');
+        const desc = this._pickLocalized(product, 'description');
+        return (short || desc || '').trim();
+    }
+
+    _getFrameHint(product) {
+        const fm = product && product.options && product.options.frameMaterial && product.options.frameMaterial.value;
+        const mapZh = { iron: '铁架', steel: '钢架', aluminum: '铝合金', aluminium: '铝合金', fiberglass: '玻纤', carbon: '碳纤' };
+        const mapEn = { iron: 'steel/iron', steel: 'steel', aluminum: 'aluminum', aluminium: 'aluminum', fiberglass: 'fiberglass', carbon: 'carbon fiber' };
+        const key = this._safeText(fm).toLowerCase();
+        return {
+            zh: mapZh[key] || (key ? key : ''),
+            en: mapEn[key] || (key ? key : '')
+        };
+    }
+
+    _getSizeHint(product) {
+        const sizes = [];
+        if (product && Array.isArray(product.sizeTable)) {
+            product.sizeTable.forEach((r) => r && r.size && sizes.push(String(r.size)));
+        }
+        if (!sizes.length && product && Array.isArray(product.variants)) {
+            product.variants.forEach((r) => r && r.size && sizes.push(String(r.size)));
+        }
+        const uniq = this._uniq(sizes);
+        const take = uniq.slice(0, 6);
+        return {
+            zh: take.length ? `常见尺寸：${take.join('、')}` : '',
+            en: take.length ? `Common sizes: ${take.join(', ')}` : ''
+        };
+    }
+
+    _defaultApplicationsByCategory(category) {
+        const cat = this._safeText(category).toLowerCase();
+        const map = {
+            tents: {
+                zh: ['展会与品牌推广', '体育赛事与活动现场', '户外促销/路演', '临时遮阳与接待区'],
+                en: ['Trade shows & brand activations', 'Sports events & race day setups', 'Outdoor promotions / roadshows', 'Temporary shade & reception areas']
+            },
+            flags: {
+                zh: ['门店引流与活动指引', '赛事/展会标识', '户外广告展示', '品牌形象陈列'],
+                en: ['Retail traffic & wayfinding', 'Event / expo signage', 'Outdoor advertising display', 'Brand visibility']
+            },
+            displays: {
+                zh: ['展会展台背景', '新品发布与路演', '商场快闪店', '会议与活动主视觉'],
+                en: ['Expo booth backdrops', 'Product launches & roadshows', 'Pop-up shops', 'Conference/event key visuals']
+            },
+            accessories: {
+                zh: ['帐篷配套加固与配重', '快速安装与收纳运输', '不同场地适配', '提升稳定性与使用寿命'],
+                en: ['Tent reinforcement & anchoring', 'Faster setup and transport', 'Different ground condition compatibility', 'Improve stability and service life']
+            },
+            racegate: {
+                zh: ['无人机竞速/穿越赛', '赛事起终点拱门', '活动入口与品牌陈列', '户外拍照打卡点'],
+                en: ['FPV drone racing', 'Start/finish gate', 'Event entrances & branding', 'Outdoor photo spot']
+            },
+            furniture: {
+                zh: ['展会接待与洽谈区', '户外活动配套', '临时休息区', '活动搭建配套'],
+                en: ['Expo reception & meeting areas', 'Outdoor event support', 'Temporary rest areas', 'Event setup accessories']
+            },
+            custom: {
+                zh: ['品牌定制项目', '异形结构与特殊尺寸', '多品类整套解决方案', '全球活动执行支持'],
+                en: ['Branded custom projects', 'Special structures & sizes', 'Full kit solutions', 'Global activation support']
+            }
+        };
+        return map[cat] || { zh: ['活动与展示场景'], en: ['Events and display scenarios'] };
+    }
+
+    getProductDetailContent(product) {
+        const p = product || {};
+        const cat = this._safeText(p.category);
+        const nameZh = this._safeText(p.nameZh || p.name || '');
+        const nameEn = this._safeText(p.nameEn || p.name || '');
+
+        const summaryZh = this._safeText(p.shortZh || p.short || p.descriptionZh || p.description || '').trim();
+        const summaryEn = this._safeText(p.shortEn || p.short || p.descriptionEn || p.description || '').trim();
+
+        const frame = this._getFrameHint(p);
+        const sizeHint = this._getSizeHint(p);
+
+        // Product Description (long)
+        const descZh = this._uniq([
+            summaryZh,
+            (cat === 'tents' && frame.zh) ? `框架：${frame.zh}（可按需求选配）` : '',
+            sizeHint.zh,
+            (cat === 'flags') ? '适配多种旗形与底座系统，支持LOGO与画面定制。' : '',
+            (cat === 'displays') ? '用于快速搭建的展示系统，可用于品牌主视觉与展台搭建。' : '',
+            (cat === 'racegate') ? '结构与规格参考产品型号表，支持项目定制与批量供货。' : '',
+            (cat === 'accessories') ? '用于提升主产品的稳定性、兼容性与使用便捷性。' : ''
+        ]);
+
+        const descEn = this._uniq([
+            summaryEn,
+            (cat === 'tents' && frame.en) ? `Frame: ${frame.en} (configurable to your needs)` : '',
+            sizeHint.en,
+            (cat === 'flags') ? 'Compatible with multiple flag shapes and base systems. Custom logo/graphics supported.' : '',
+            (cat === 'displays') ? 'Quick-setup display system for booth branding and key visuals.' : '',
+            (cat === 'racegate') ? 'Specs are based on the model table; customization and bulk supply available.' : '',
+            (cat === 'accessories') ? 'Designed to improve stability, compatibility and ease of use for the main products.' : ''
+        ]);
+
+        // Technical Reference (bullets)
+        const techZh = this._uniq([
+            p.model ? `型号：${this._safeText(p.model)}` : '',
+            (cat === 'tents') ? '面料与印刷：可选不同面料克重与工艺（以实际需求确认）' : '',
+            (cat === 'tents') ? '结构与配件：可搭配侧墙、配重、收纳袋等配套' : '',
+            (cat === 'flags') ? '可选高度/旗形：刀旗/水滴/方旗等（以具体型号为准）' : '',
+            (cat === 'flags') ? '底座与固定：十字底座、注水底座、地插等（按场地选择）' : '',
+            (cat === 'racegate') ? '尺寸/管径/壁厚/箱规：见型号参数表' : '',
+            (cat === 'accessories') ? '材质/尺寸/装箱：以产品规格表为准' : ''
+        ]);
+
+        const techEn = this._uniq([
+            p.model ? `Model: ${this._safeText(p.model)}` : '',
+            (cat === 'tents') ? 'Fabric & printing: multiple fabric weights and print options (confirm per project)' : '',
+            (cat === 'tents') ? 'Structure & accessories: sidewalls, weights, bags and connectors available' : '',
+            (cat === 'flags') ? 'Height/shape options: feather/teardrop/square and more (by model)' : '',
+            (cat === 'flags') ? 'Bases & anchoring: cross base, water base, ground spike, etc. (by venue)' : '',
+            (cat === 'racegate') ? 'Size/diameter/thickness/packing: see the model specification table' : '',
+            (cat === 'accessories') ? 'Material/size/packing: refer to the specification table' : ''
+        ]);
+
+        // Applications (product-specific overrides if provided, otherwise category defaults)
+        const defaultApps = this._defaultApplicationsByCategory(cat);
+        const appsZh = this._uniq(Array.isArray(p.applicationsZh) ? p.applicationsZh : defaultApps.zh);
+        const appsEn = this._uniq(Array.isArray(p.applicationsEn) ? p.applicationsEn : defaultApps.en);
+
+        // Allow per-product overrides (optional fields)
+        const overrideDescZh = Array.isArray(p.detailDescZh) ? p.detailDescZh : (p.detailDescZh ? [p.detailDescZh] : null);
+        const overrideDescEn = Array.isArray(p.detailDescEn) ? p.detailDescEn : (p.detailDescEn ? [p.detailDescEn] : null);
+        const overrideTechZh = Array.isArray(p.techRefsZh) ? p.techRefsZh : (p.techRefsZh ? [p.techRefsZh] : null);
+        const overrideTechEn = Array.isArray(p.techRefsEn) ? p.techRefsEn : (p.techRefsEn ? [p.techRefsEn] : null);
+
+        return {
+            name: { zh: nameZh, en: nameEn },
+            description: {
+                zh: this._uniq(overrideDescZh || descZh),
+                en: this._uniq(overrideDescEn || descEn)
+            },
+            technical: {
+                zh: this._uniq(overrideTechZh || techZh),
+                en: this._uniq(overrideTechEn || techEn)
+            },
+            applications: {
+                zh: appsZh,
+                en: appsEn
+            }
+        };
     }
 
     ensureProductIds() {
@@ -2339,4 +2529,40 @@ document.head.appendChild(styleSheet);
 // 初始化产品管理器
 document.addEventListener('DOMContentLoaded', () => {
     window.productManager = new ProductManager();
+
+    // Global helper: pick the best image for cards/listings.
+    // - Racegate: use the uploaded hero.png in its named folder.
+    // - Accessories: if it is a sprite-mapped item, use the extracted per-item image (page_4_img_N.png).
+    // - Fallback: product.image or first of product.images.
+    window.WK_getProductCardImage = function(product) {
+        const p = product || {};
+
+        // Racegate hero images (avoid showing PDF sprites in cards)
+        if (String(p.category || '') === 'racegate') {
+            const t = String(p.type || '').toLowerCase();
+            const folderMap = {
+                o: 'O Race Gate',
+                v: 'V Race Gate',
+                semi: 'Semi-circle Race Gate'
+            };
+            const folder = folderMap[t];
+            if (folder) {
+                return encodeURI(`images/products/racegate/${folder}/hero.png`);
+            }
+        }
+
+        // Accessories: convert sprite grid position -> extracted single image file
+        if (String(p.category || '') === 'accessories' && p.grid && p.grid.row && p.grid.col) {
+            const row = Number(p.grid.row);
+            const col = Number(p.grid.col);
+            if (Number.isFinite(row) && Number.isFinite(col) && row >= 1 && col >= 1) {
+                const idx = (row - 1) * 4 + col;
+                // These files exist under images/products/accessories/tent-accessories1/
+                return `images/products/accessories/tent-accessories1/page_4_img_${idx}.png`;
+            }
+        }
+
+        const raw = p.image || (Array.isArray(p.images) ? p.images[0] : '') || '';
+        return raw ? encodeURI(String(raw)) : '';
+    };
 });

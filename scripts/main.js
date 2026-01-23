@@ -106,7 +106,8 @@ function getHomeHeroSlides() {
     return [
         { image: 'images/hero/Waikwantentshero.png', keyPrefix: 'home_hero_1' },
         { image: 'images/hero/waikwanflagshero.png', keyPrefix: 'home_hero_2' },
-        { image: 'images/hero/伟群快幕秀照片.jpeg', keyPrefix: 'home_hero_3' }
+        // Cache-bust to ensure the updated JPEG shows immediately.
+        { image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }
     ];
 }
 
@@ -121,7 +122,12 @@ function renderHomeHeroSlider() {
         const slide = document.createElement('article');
         slide.className = 'wk-hero-slide' + (i === 0 ? ' is-active' : '');
         slide.setAttribute('data-index', String(i));
-        slide.style.setProperty('--wk-hero-bg', `url("${s.image}")`);
+        // Use encodeURI so non-ASCII filenames (e.g. Chinese) work reliably in CSS url().
+        const bgUrl = encodeURI(String(s.image || ''));
+        if (String(s.variant || '').toLowerCase() === 'light') {
+            slide.classList.add('wk-hero-slide--light');
+        }
+        slide.style.setProperty('--wk-hero-bg', `url("${bgUrl}")`);
 
         const titleKey = `${s.keyPrefix}_title`;
         const subtitleKey = `${s.keyPrefix}_subtitle`;
@@ -142,6 +148,10 @@ function renderHomeHeroSlider() {
                 </div>
             </div>
         `;
+
+        // Also set the bg inline for maximum compatibility (avoids CSS var parsing issues).
+        const bgEl = slide.querySelector('.wk-hero-bg');
+        if (bgEl) bgEl.style.backgroundImage = `url("${bgUrl}")`;
         root.appendChild(slide);
     });
 
@@ -223,22 +233,9 @@ function renderHomeCategoryGrid() {
     const categories = [
         { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
         { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-        { id: 'racegate', img: null, titleKey: 'home_cat_racegate_title', descKey: 'home_cat_racegate_desc' },
-        { id: 'accessories', img: null, titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+        { id: 'racegate', img: encodeURI('images/products/racegate/V Race Gate/hero.png'), titleKey: 'home_cat_racegate_title', descKey: 'home_cat_racegate_desc' },
+        { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
-
-    // Use a real product image per category if available, else fallback to a hero image.
-    let accessoriesImg = '';
-    let racegateImg = '';
-    try {
-        const pm = window.productManager;
-        const list = pm && Array.isArray(pm.products) ? pm.products : [];
-        const pAcc = list.find(x => (x.category || '') === 'accessories' && x.image);
-        const pRace = list.find(x => (x.category || '') === 'racegate' && x.image);
-        accessoriesImg = (pAcc && pAcc.image) ? pAcc.image : '';
-        racegateImg = (pRace && pRace.image) ? pRace.image : '';
-    } catch (e) {}
-    // If no real category images exist, render a clean placeholder (no broken image).
 
     grid.innerHTML = '';
     categories.forEach((c) => {
@@ -246,9 +243,8 @@ function renderHomeCategoryGrid() {
         a.className = 'wk-card wk-cat-card';
         a.href = `./all-products.html?cat=${encodeURIComponent(c.id)}`;
 
-        const imgSrc = c.id === 'accessories'
-            ? accessoriesImg
-            : (c.id === 'racegate' ? racegateImg : c.img);
+        // For category tiles, prefer curated hero assets (avoid random sprite/pdf images).
+        const imgSrc = c.img;
 
         const mediaHtml = imgSrc
             ? `
@@ -384,7 +380,10 @@ function renderHomeBestSellers() {
             const safeProduct = p || {};
             const name = getLocalizedField(safeProduct, 'name') || String(safeProduct.model || safeProduct.id || '');
             const shortDesc = getLocalizedField(safeProduct, 'short') || getLocalizedField(safeProduct, 'description') || '';
-            const img = safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
+            const resolved = (window.WK_getProductCardImage && typeof window.WK_getProductCardImage === 'function')
+                ? window.WK_getProductCardImage(safeProduct)
+                : '';
+            const img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
             const catKey = getCategoryTranslateKey(safeProduct.category);
 
             const detailHref = safeProduct.id
@@ -469,21 +468,29 @@ function initNavigation() {
         }
     });
     
-    // 产品分类卡片点击事件
-    categoryCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const category = card.dataset.category;
-            const productsSection = document.getElementById('products');
-            if (productsSection) {
-                productsSection.scrollIntoView({ behavior: 'smooth' });
-                // 触发产品筛选
-                setTimeout(() => {
-                    const categoryBtn = document.querySelector(`[data-category="${category}"]`);
-                    if (categoryBtn) {
-                        categoryBtn.click();
-                    }
-                }, 500);
-            }
+    // 产品分类卡片点击事件（统一跳转到对应分类页，避免首页滚动/筛选逻辑导致“跳回产品中心但内容缺失”）
+    // 注意：product-center.html 上的分类卡片已经有 inline onclick，这里不重复接管。
+    const categoryLandingMap = {
+        tents: 'product-center.html?cat=tents',
+        flags: 'product-center.html?cat=flags',
+        displays: 'products-displays.html',
+        accessories: 'products-accessories.html',
+        custom: 'products-custom.html',
+    };
+
+    categoryCards.forEach((card) => {
+        card.addEventListener('click', (e) => {
+            // If the card already has an inline click handler (e.g. on product-center.html), don't override it.
+            if (card.getAttribute('onclick')) return;
+
+            const category = (card.dataset.category || '').trim();
+            const href = categoryLandingMap[category];
+            if (!href) return;
+
+            // Prevent any other delegated handlers from trying to hijack the click.
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = href;
         });
     });
     

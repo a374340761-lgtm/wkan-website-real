@@ -85,7 +85,7 @@
       return `
         <article class="ap-card" style="overflow:hidden;">
           <div class="ap-img" style="height:180px;">
-            <img src="${img}" alt="${escapeHtml(name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='images/placeholder.jpg'">
+            <img src="${img}" alt="${escapeHtml(name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='images/placeholder.png'">
           </div>
           <div class="ap-body">
             <h3 style="margin:0 0 0.5rem 0;">${escapeHtml(name)}</h3>

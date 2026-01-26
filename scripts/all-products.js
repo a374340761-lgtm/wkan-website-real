@@ -356,7 +356,7 @@
                 ? window.WK_getProductCardImage(p)
                 : '';
 
-            let imgSrc = resolved || p.image || 'images/placeholder.jpg';
+            let imgSrc = resolved || p.image || 'images/placeholder.png';
             if (imgSrc && !imgSrc.startsWith('images/') && !imgSrc.startsWith('/') && !imgSrc.startsWith('./')) imgSrc = 'images/' + imgSrc;
 
             let spriteSrc = p.image || '';
@@ -425,7 +425,7 @@
                 const y = (r - 1) * 20;
                 imgHtml = `<div class="ap-img"><div class="sprite-thumb" style="background-image:url('${imgSrc}');background-position:${x}% ${y}%;height:180px;border-radius:12px;background-size:400% 600%;"></div></div>`;
             } else {
-                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder.jpg'"></div>`;
+                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder.png'"></div>`;
             }
 
             return `

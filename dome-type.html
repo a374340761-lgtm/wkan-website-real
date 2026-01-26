@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-translate="view_type_page_title_dome"></title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/multilang.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="" data-translate-aria-label="nav_home">
+        <img src="images/weiqun-logo.png" alt="" data-translate-alt="company_name" style="height:40px; width:auto;" onerror="this.style.display='none'" />
+      </a>
+      <nav class="nav-menu">
+        <a class="nav-link" href="index.html#home"><span class="zh" data-translate="nav_home"></span><span class="en" data-translate="nav_home"></span></a>
+        <a class="nav-link" href="product-center.html"><span class="zh" data-translate="nav_product_center"></span><span class="en" data-translate="nav_product_center"></span></a>
+        <a class="nav-link" href="all-products.html"><span class="zh" data-translate="nav_all_products"></span><span class="en" data-translate="nav_all_products"></span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 120px;">
+    <section class="container" style="margin-bottom: 28px;">
+      <nav class="breadcrumb" style="margin-bottom: 1.5rem;">
+        <a href="index.html" data-translate="breadcrumb_home"></a>
+        <span>/</span>
+        <a href="product-center.html" data-translate="product_center_title"></a>
+        <span>/</span>
+        <span class="current">
+          <span class="zh" data-translate="view_type_page_title_dome"></span>
+          <span class="en" data-translate="view_type_page_title_dome"></span>
+        </span>
+      </nav>
+
+      <div class="section-header">
+        <h1>
+          <span class="zh" data-translate="view_type_page_title_dome"></span>
+          <span class="en" data-translate="view_type_page_title_dome"></span>
+        </h1>
+        <p>
+          <span class="zh" data-translate="view_type_subtitle"></span>
+          <span class="en" data-translate="view_type_subtitle"></span>
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="display:grid; grid-template-columns: 1.15fr 0.85fr; gap: 18px; align-items:start;">
+      <div class="wk-card" style="padding: 18px;">
+        <h2 style="margin: 0 0 10px;">
+          <span class="zh" data-translate="view_type_models"></span>
+          <span class="en" data-translate="view_type_models"></span>
+        </h2>
+        <div id="domeTypeList" style="display:grid; grid-template-columns: 1fr; gap: 10px;"></div>
+        <div style="margin-top: 14px; display:flex; gap: 10px; flex-wrap:wrap;">
+          <a class="btn btn-secondary" href="all-products.html?cat=tents">
+            <span class="zh" data-translate="view_type_browse_all_tents"></span>
+            <span class="en" data-translate="view_type_browse_all_tents"></span>
+          </a>
+          <a class="btn btn-secondary" href="all-products.html?cat=furniture">
+            <span class="zh" data-translate="view_type_browse_all_furniture"></span>
+            <span class="en" data-translate="view_type_browse_all_furniture"></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="wk-card" style="padding: 18px;">
+        <h2 style="margin: 0 0 10px;">
+          <span class="zh" data-translate="view_type_brochure_ref"></span>
+          <span class="en" data-translate="view_type_brochure_ref"></span>
+        </h2>
+        <button type="button" id="domeBrochureBtn" style="border:none;background:transparent;padding:0;display:block;width:100%;cursor:zoom-in;">
+          <img id="domeBrochureImg" alt="" data-translate-alt="view_type_brochure_ref" loading="lazy" style="width:100%; height:auto; border-radius: 12px; border:1px solid var(--border-color); background: var(--bg-white);" />
+        </button>
+        <p style="margin: 10px 0 0; color: var(--text-muted); font-size: 0.95rem;">
+          <span class="zh" data-translate="view_type_brochure_source_17"></span>
+          <span class="en" data-translate="view_type_brochure_source_17"></span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script src="scripts/products.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/multilang.js"></script>
+  <script src="scripts/dome-type.js"></script>
+</body>
+</html>

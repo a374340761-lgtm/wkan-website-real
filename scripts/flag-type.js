@@ -339,13 +339,19 @@
 
     const item = findFlagTypeData(type);
     if (!item) {
-      root.innerHTML = `<div class="ap-empty"><p>Flag type not found.</p></div>`;
+      root.innerHTML = '<div class="ap-empty"><p data-translate="flag_type_not_found"></p></div>';
+      if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+      }
       return;
     }
 
     // Breadcrumb label
     const bc = document.getElementById('flagTypeBreadcrumb');
-    if (bc) bc.textContent = (getCurrentLang() === 'zh' ? (item.nameZh || item.nameEn || 'View Type') : (item.nameEn || item.nameZh || 'View Type'));
+    if (bc) {
+      const fallback = (window.multiLang && typeof window.multiLang.t === 'function') ? window.multiLang.t('view_type_button') : '';
+      bc.textContent = (getCurrentLang() === 'zh' ? (item.nameZh || item.nameEn || fallback) : (item.nameEn || item.nameZh || fallback));
+    }
 
     const renderWithVariant = (selectedKey) => {
       root.innerHTML = renderPage(item, selectedKey);

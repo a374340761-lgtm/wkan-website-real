@@ -28,20 +28,11 @@
         </div>
     </div>
 
-    <!-- 语言切换器 -->
-    <!-- Old language switcher (hidden) -->
-    <div class="language-switcher old-lang-switcher" role="toolbar" aria-label="Language switcher" style="display: none;">
-        <button class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
-        <button class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
-        <button class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
-        <button class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
-    </div>
-
     <!-- 顶部提示栏 -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
-                <span data-translate="top_bar_text">服务企业超过15年！值得信赖的客户服务！</span>
+                <span data-translate="top_bar_text"></span>
             </div>
         </div>
     </div>
@@ -51,12 +42,12 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <div class="nav-brand">
-                    <img src="images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="nav-logo-img">
+                    <img src="images/waikwancompanylogo.png" alt="" data-translate-alt="company_name" class="nav-logo-img">
                     <div class="nav-logo-text">
                         <div class="brand-text">
                             <div class="brand-name" data-company-cn></div>
                             <div class="brand-name-en" data-company-en></div>
-                            <div class="brand-sub">Since 2010</div>
+                            <div class="brand-sub" data-translate="brand_since_2010"></div>
                         </div>
                     </div>
                 </div>
@@ -64,25 +55,27 @@
             <ul class="nav-menu">
                 <li class="nav-item-dropdown">
                     <a href="product-center.html" class="nav-link">
-                        <span class="zh">产品中心</span><span class="en">Products</span>
+                        <span class="zh" data-translate="nav_product_center"></span><span class="en" data-translate="nav_product_center"></span>
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                                            <a href="product-center.html?cat=tents">Tents</a>
-                                            <a href="product-center.html?cat=flags">Beach Flags &amp; Poles</a>
-                                            <a href="product-center.html?cat=displays">Pop-up Displays</a>
-                                            <a href="product-center.html?cat=accessories">Accessories</a>
-                                            <a href="racegate-type.html">Race Gate</a>
-                                            <a href="product-center.html?notice=category_unavailable">Replacement Parts</a>
+                                            <a href="product-center.html?cat=tents"><span class="zh" data-translate="home_cat_tents_title"></span><span class="en" data-translate="home_cat_tents_title"></span></a>
+                                            <a href="product-center.html?cat=flags"><span class="zh" data-translate="menu_beach_flags"></span><span class="en" data-translate="menu_beach_flags"></span></a>
+                                            <a href="product-center.html?cat=displays"><span class="zh" data-translate="menu_popup_displays"></span><span class="en" data-translate="menu_popup_displays"></span></a>
+                                            <a href="product-center.html?cat=accessories"><span class="zh" data-translate="menu_accessories"></span><span class="en" data-translate="menu_accessories"></span></a>
+                                        <a href="furniture-type.html?type=table-chair-stool-toilet"><span class="zh" data-translate="menu_table_chair_stool_toilet"></span><span class="en" data-translate="menu_table_chair_stool_toilet"></span></a>
+                                        <a href="dome-type.html?type=dome-3-folders"><span class="zh" data-translate="menu_dome_3_folders"></span><span class="en" data-translate="menu_dome_3_folders"></span></a>
+                                            <a href="racegate-type.html"><span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span></a>
+                                            <a href="product-center.html?notice=category_unavailable"><span class="zh" data-translate="menu_replacement_parts"></span><span class="en" data-translate="menu_replacement_parts"></span></a>
                     </div>
                 </li>
                 <li class="nav-item">
                     <a href="all-products.html" class="nav-link">
-                        <span class="zh">全部产品</span><span class="en">Browse Products</span>
+                        <span class="zh" data-translate="nav_all_products"></span><span class="en" data-translate="nav_all_products"></span>
                     </a>
                 </li>
                 <li class="nav-item-dropdown">
-                    <a href="#about" data-translate="nav_info">信息 <i class="fas fa-chevron-down"></i></a>
+                    <a href="#about" data-translate="nav_info"><i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="#top3"><span class="zh">热销尺寸 Top3</span><span class="en">Top 3 Sizes</span></a></li>
                         <li><a href="#about" data-translate="nav_about">关于我们</a></li>
@@ -93,19 +86,19 @@
             </ul>
 
             <div class="nav-actions">
-                <button class="nav-icon-btn" id="searchBtn" aria-label="搜索">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="" data-translate-aria-label="aria_search">
                     <i class="fas fa-search"></i>
                 </button>
-                <button class="nav-icon-btn" id="accountBtn" aria-label="账户">
+                <button class="nav-icon-btn" id="accountBtn" aria-label="" data-translate-aria-label="aria_account">
                     <i class="fas fa-user"></i>
                 </button>
-                <button class="nav-icon-btn" id="cartBtn" aria-label="购物车">
+                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="cart-badge">0</span>
                 </button>
                 <!-- Language icon dropdown (next to cart) -->
                 <div class="lang-dropdown" id="langDropdown">
-                    <button class="nav-icon-btn lang-btn" type="button" aria-label="Language" id="langBtn">
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
                         <i class="fas fa-globe"></i>
                     </button>
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
@@ -157,6 +150,7 @@
                     <p data-translate="home_trusted_by_subtitle"></p>
                 </div>
                 <div id="trustedByGrid" class="wk-grid wk-logo-grid" aria-hidden="true"></div>
+                <p class="wk-disclaimer" data-translate="third_party_trademarks_disclaimer"></p>
             </div>
         </section>
 
@@ -342,7 +336,7 @@
                     <div class="about-image about-logo">
                         <div class="about-logo-container">
                             <img src="images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="about-logo-img">
-                            <span class="logo-since" data-translate="logo_since">Since 2010</span>
+                            <span class="logo-since" data-translate="logo_since"></span>
                         </div>
                     </div>
                 </div>
@@ -562,6 +556,23 @@
                         <h3 data-translate="products_category_custom_title">定制展示解决方案</h3>
                         <p data-translate="products_category_custom_desc">支持从结构、尺寸到画面印刷的全流程定制，满足不同市场与项目需求。</p>
                         <p class="category-desc-en" data-translate="products_category_custom_desc_en">Full customization available from structure and size to graphic printing, tailored to different markets and project requirements.</p>
+                    </div>
+
+                    <div class="category-card" data-category="furniture">
+                        <div class="category-image">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <h3>
+                            <span class="zh">桌 / 椅 / 凳 / 厕所</span>
+                            <span class="en">Table / Chair / Stool / Toilet</span>
+                        </h3>
+                        <p>
+                            <span class="zh">活动桌椅、吧桌吧椅、便携厕所等系列，支持多规格选择。</span>
+                            <span class="en">Event tables/chairs, cocktail tables, bar chairs and portable toilets with multiple options.</span>
+                        </p>
+                        <div style="margin-top: 10px;">
+                            <a class="btn btn-secondary" href="furniture-type.html?type=table-chair-stool-toilet" data-translate="view_details">View Details</a>
+                        </div>
                     </div>
                 </div>
             </div>

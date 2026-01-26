@@ -442,7 +442,7 @@
                                 <span class="zh">获取报价</span>
                                 <span class="en">Get a Quote</span>
                             </a>
-                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" style="flex: 1; text-align: center;" data-translate="view_details">View details</a>
+                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" style="flex: 1; text-align: center;" data-translate="view_details"></a>
                         </div>
                     </div>
                 </article>
@@ -669,7 +669,7 @@
         
         if (products.length === 0) {
             console.warn('All Products: No products found. Check ProductManager initialization.');
-            grid.innerHTML = '<div class="ap-empty"><p data-translate="products_no_results">未找到匹配的产品</p></div>';
+            grid.innerHTML = '<div class="ap-empty"><p data-translate="products_no_results"></p></div>';
             return;
         }
         

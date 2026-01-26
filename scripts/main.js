@@ -15,7 +15,211 @@ document.addEventListener('DOMContentLoaded', function() {
     initHomeRedesign();
 
     initSearch(); // ✅ Search overlay + redirect
+
+    initCookieConsent();
 });
+
+// ------------------------------
+// Cookie consent + customer cookie
+// ------------------------------
+const WK_COOKIE_CONSENT = 'wk_cookie_consent';
+const WK_CUSTOMER_ID = 'wk_customer_id';
+
+function wkSetCookie(name, value, days) {
+    try {
+        const maxAge = Math.max(0, Math.floor(days * 24 * 60 * 60));
+        const encoded = encodeURIComponent(String(value ?? ''));
+        document.cookie = `${encodeURIComponent(name)}=${encoded}; Max-Age=${maxAge}; Path=/; SameSite=Lax`;
+    } catch (e) {}
+}
+
+function wkGetCookie(name) {
+    try {
+        const target = `${encodeURIComponent(name)}=`;
+        const parts = String(document.cookie || '').split(';');
+        for (const part of parts) {
+            const p = part.trim();
+            if (p.startsWith(target)) return decodeURIComponent(p.slice(target.length));
+        }
+    } catch (e) {}
+    return '';
+}
+
+function wkRandomId() {
+    try {
+        if (window.crypto && typeof window.crypto.getRandomValues === 'function') {
+            const bytes = new Uint8Array(16);
+            window.crypto.getRandomValues(bytes);
+            return Array.from(bytes).map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+    } catch (e) {}
+    return String(Date.now()) + Math.random().toString(16).slice(2);
+}
+
+function wkReadConsent() {
+    const raw = wkGetCookie(WK_COOKIE_CONSENT);
+    if (!raw) return null;
+    try {
+        const obj = JSON.parse(raw);
+        if (!obj || typeof obj !== 'object') return null;
+        return {
+            necessary: true,
+            preferences: !!obj.preferences,
+            analytics: !!obj.analytics,
+            ts: Number(obj.ts || 0)
+        };
+    } catch {
+        return null;
+    }
+}
+
+function wkWriteConsent(consent) {
+    const payload = {
+        preferences: !!(consent && consent.preferences),
+        analytics: !!(consent && consent.analytics),
+        ts: Date.now()
+    };
+    wkSetCookie(WK_COOKIE_CONSENT, JSON.stringify(payload), 365);
+}
+
+function wkEnsureCustomerIdCookie() {
+    const existing = wkGetCookie(WK_CUSTOMER_ID);
+    if (existing) return existing;
+    const id = wkRandomId();
+    wkSetCookie(WK_CUSTOMER_ID, id, 365);
+    return id;
+}
+
+function wkMaybeTranslate() {
+    // Multi-lang can load before or after main.js depending on page.
+    const tryTranslate = () => {
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+            return true;
+        }
+        return false;
+    };
+    if (tryTranslate()) return;
+    let tries = 0;
+    const timer = setInterval(() => {
+        tries += 1;
+        if (tryTranslate() || tries > 80) clearInterval(timer);
+    }, 50);
+}
+
+function initCookieConsent() {
+    // Avoid duplicating UI
+    if (document.getElementById('wkCookieBanner')) return;
+
+    const existingConsent = wkReadConsent();
+    if (existingConsent) {
+        if (existingConsent.preferences) wkEnsureCustomerIdCookie();
+        window.wkCookieConsent = {
+            get: () => wkReadConsent() || { necessary: true, preferences: false, analytics: false, ts: 0 },
+            open: () => {
+                const modal = document.getElementById('wkCookieModal');
+                if (modal) modal.classList.add('is-open');
+            }
+        };
+        return;
+    }
+
+    // Banner
+    const banner = document.createElement('div');
+    banner.id = 'wkCookieBanner';
+    banner.className = 'wk-cookie-banner';
+    banner.innerHTML = `
+        <div class="wk-cookie-banner__card" role="dialog" aria-modal="false">
+            <div class="wk-cookie-banner__text" style="flex:1; min-width: 240px;">
+                <div class="wk-cookie-banner__title" data-translate="cookie_title"></div>
+                <div class="wk-cookie-banner__desc" data-translate="cookie_text"></div>
+            </div>
+            <div class="wk-cookie-banner__actions">
+                <button type="button" class="btn btn-secondary" data-wk-cookie="reject" data-translate="cookie_reject_all"></button>
+                <button type="button" class="btn btn-secondary" data-wk-cookie="customize" data-translate="cookie_customize"></button>
+                <button type="button" class="btn btn-primary" data-wk-cookie="accept" data-translate="cookie_accept_all"></button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(banner);
+
+    // Modal
+    const modal = document.createElement('div');
+    modal.id = 'wkCookieModal';
+    modal.className = 'wk-cookie-modal';
+    modal.innerHTML = `
+        <div class="wk-cookie-modal__panel" role="dialog" aria-modal="true">
+            <div class="wk-cookie-modal__head">
+                <div class="wk-cookie-modal__title" data-translate="cookie_settings_title"></div>
+                <button type="button" class="btn btn-secondary" data-wk-cookie="close" data-translate="cookie_close"></button>
+            </div>
+            <div class="wk-cookie-modal__body">
+                <div class="wk-cookie-row">
+                    <div class="wk-cookie-row__label" data-translate="cookie_category_necessary"></div>
+                    <input type="checkbox" checked disabled aria-hidden="true" />
+                </div>
+                <div class="wk-cookie-row">
+                    <div class="wk-cookie-row__label" data-translate="cookie_category_preferences"></div>
+                    <input id="wkCookiePref" type="checkbox" />
+                </div>
+                <div class="wk-cookie-row">
+                    <div class="wk-cookie-row__label" data-translate="cookie_category_analytics"></div>
+                    <input id="wkCookieAnalytics" type="checkbox" />
+                </div>
+            </div>
+            <div class="wk-cookie-modal__foot">
+                <button type="button" class="btn btn-primary" data-wk-cookie="save" data-translate="cookie_save"></button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeModal = () => modal.classList.remove('is-open');
+    const openModal = () => modal.classList.add('is-open');
+
+    const setAndApply = (consent) => {
+        wkWriteConsent(consent);
+        if (consent && consent.preferences) wkEnsureCustomerIdCookie();
+        banner.remove();
+        closeModal();
+        window.wkCookieConsent = {
+            get: () => wkReadConsent() || { necessary: true, preferences: false, analytics: false, ts: 0 },
+            open: openModal
+        };
+    };
+
+    banner.querySelectorAll('[data-wk-cookie]').forEach((el) => {
+        el.addEventListener('click', () => {
+            const action = el.getAttribute('data-wk-cookie');
+            if (action === 'accept') setAndApply({ necessary: true, preferences: true, analytics: true });
+            if (action === 'reject') setAndApply({ necessary: true, preferences: false, analytics: false });
+            if (action === 'customize') openModal();
+        });
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    modal.querySelectorAll('[data-wk-cookie]').forEach((el) => {
+        el.addEventListener('click', () => {
+            const action = el.getAttribute('data-wk-cookie');
+            if (action === 'close') closeModal();
+            if (action === 'save') {
+                const preferences = !!document.getElementById('wkCookiePref')?.checked;
+                const analytics = !!document.getElementById('wkCookieAnalytics')?.checked;
+                setAndApply({ necessary: true, preferences, analytics });
+            }
+        });
+    });
+
+    window.wkCookieConsent = {
+        get: () => wkReadConsent() || { necessary: true, preferences: false, analytics: false, ts: 0 },
+        open: openModal
+    };
+
+    wkMaybeTranslate();
+}
 
 function initHomeRedesign() {
     // Safer homepage detection: run when the new homepage hooks exist.
@@ -475,6 +679,7 @@ function initNavigation() {
         flags: 'product-center.html?cat=flags',
         displays: 'products-displays.html',
         accessories: 'products-accessories.html',
+        furniture: 'furniture-type.html?type=table-chair-stool-toilet',
         custom: 'products-custom.html',
     };
 
@@ -544,6 +749,9 @@ function initNavigation() {
     // 页面加载时确保滚动解锁
     lockScroll(false);
 
+    // Ensure new series appear in the Products hover dropdown (fast, no heavy render)
+    enhanceProductsDropdownExtras();
+
     // Enhance Products dropdown: add flags subtype submenu
     enhanceFlagsDropdown();
 
@@ -592,6 +800,63 @@ function initNavigation() {
             }
         });
     })();
+}
+
+function enhanceProductsDropdownExtras() {
+    // Add missing entries to the top-nav Products dropdown.
+    // This keeps navigation consistent across many static HTML pages.
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const extras = [
+        {
+            href: 'furniture-type.html?type=table-chair-stool-toilet',
+            key: 'menu_table_chair_stool_toilet'
+        },
+        {
+            href: 'dome-type.html?type=dome-3-folders',
+            key: 'menu_dome_3_folders'
+        }
+    ];
+
+    const isProductsMenu = (menu) => {
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const hasTents = links.some((a) => (a.getAttribute('href') || '').toLowerCase().includes('cat=tents'));
+        const hasFlags = links.some((a) => (a.getAttribute('href') || '').toLowerCase().includes('cat=flags'));
+        return hasTents && hasFlags;
+    };
+
+    menus.forEach((menu) => {
+        if (!isProductsMenu(menu)) return;
+
+        const existing = Array.from(menu.querySelectorAll('a[href]')).map((a) => a.getAttribute('href') || '');
+        const raceGateLink = Array.from(menu.querySelectorAll('a[href]')).find((a) => (a.getAttribute('href') || '') === 'racegate-type.html');
+
+        extras.forEach((x) => {
+            if (existing.includes(x.href)) return;
+            const a = document.createElement('a');
+            a.href = x.href;
+
+            // Use bilingual spans controlled by CSS (.zh/.en) and populated by multilang.
+            const zh = document.createElement('span');
+            zh.className = 'zh';
+            zh.setAttribute('data-translate', x.key);
+
+            const en = document.createElement('span');
+            en.className = 'en';
+            en.setAttribute('data-translate', x.key);
+
+            a.appendChild(zh);
+            a.appendChild(en);
+
+            // Insert before Race Gate if possible; otherwise append.
+            if (raceGateLink && raceGateLink.parentElement === menu) {
+                menu.insertBefore(a, raceGateLink);
+            } else {
+                menu.appendChild(a);
+            }
+        });
+    });
 }
 
 function enhanceTentsDropdown() {
@@ -682,7 +947,8 @@ function enhanceTentsDropdown() {
         // Overview link
         const overview = document.createElement('a');
         overview.href = 'product-center.html?cat=tents';
-        overview.textContent = 'Overview';
+        overview.setAttribute('data-translate', 'ui_overview');
+        overview.textContent = '';
         sub.appendChild(overview);
 
         const lang = getCurrentLang();
@@ -696,6 +962,10 @@ function enhanceTentsDropdown() {
         });
 
         wrapper.appendChild(sub);
+
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
 
         // On touch/mobile, first tap opens submenu instead of navigating.
         tentsLink.addEventListener('click', (e) => {
@@ -775,7 +1045,8 @@ function enhanceFlagsDropdown() {
         // Overview link
         const overview = document.createElement('a');
         overview.href = 'product-center.html?cat=flags';
-        overview.textContent = 'Overview';
+        overview.setAttribute('data-translate', 'ui_overview');
+        overview.textContent = '';
         sub.appendChild(overview);
 
         types.forEach((t) => {
@@ -786,6 +1057,10 @@ function enhanceFlagsDropdown() {
         });
 
         wrapper.appendChild(sub);
+
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
     });
 }
 
@@ -906,7 +1181,7 @@ function addPDFDownloadButtons() {
     productItems.forEach(item => {
         const downloadBtn = document.createElement('button');
         downloadBtn.className = 'btn btn-secondary';
-        downloadBtn.innerHTML = '<i class="fas fa-download"></i> 下载资料';
+        downloadBtn.innerHTML = '<i class="fas fa-download"></i> <span data-translate="download_materials"></span>';
         downloadBtn.addEventListener('click', () => {
             document.getElementById('pdfModal').style.display = 'block';
         });
@@ -1012,7 +1287,9 @@ function submitForm(form) {
     // 显示提交中状态
     const submitBtn = form.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = '提交中...';
+    submitBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
+        ? window.wkI18n.t('inquiry_form_sending')
+        : '';
     submitBtn.disabled = true;
     
     // 模拟提交
@@ -1021,7 +1298,9 @@ function submitForm(form) {
         if (formMessage) {
             formMessage.style.display = 'block';
             formMessage.className = 'form-message success';
-            formMessage.textContent = '消息发送成功！我们会尽快联系您。';
+            formMessage.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
+                ? window.wkI18n.t('inquiry_form_success')
+                : '';
         }
         
         // 重置表单

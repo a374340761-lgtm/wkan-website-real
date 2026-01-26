@@ -48,7 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = "Sending...";
+        submitBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
+          ? window.wkI18n.t('inquiry_form_sending')
+          : '';
       }
 
       const fd = buildFormData(form);
@@ -59,17 +61,22 @@ document.addEventListener("DOMContentLoaded", () => {
       await postToGoogleSheet(fd);
 
       if (successBox) successBox.style.display = "block";
-      setMsg("✅ Sent successfully. We will reply within 24 hours.", true);
+      setMsg((window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_success') : '', true);
 
       form.reset();
     } catch (err) {
       console.error(err);
-      setMsg("❌ Failed to send. " + (err.message || err), false);
-      alert("❌ Failed to send. " + (err.message || err));
+      const base = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_failed') : '';
+      const detail = (err && (err.message || err)) ? ` ${err.message || err}` : '';
+      const msg = `${base}${detail}`.trim();
+      setMsg(msg, false);
+      if (msg) alert(msg);
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = "Submit Inquiry";
+        submitBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
+          ? window.wkI18n.t('inquiry_form_submit')
+          : '';
       }
     }
   });

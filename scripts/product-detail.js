@@ -129,7 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             : null;
 
         // Page title and SEO
-        document.title = `${name} - 广西伟群帐篷制造有限公司`;
+        const companyName = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('company_name') : '';
+        document.title = companyName ? `${name} - ${companyName}` : `${name}`;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.content = (shortText || description || `${name}`);
@@ -149,12 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const aHome = document.createElement('a');
             aHome.href = 'index.html';
             aHome.setAttribute('data-translate', 'breadcrumb_home');
-            aHome.textContent = 'Home';
+            aHome.textContent = '';
 
             const aProducts = document.createElement('a');
             aProducts.href = 'product-center.html';
             aProducts.setAttribute('data-translate', 'breadcrumb_products');
-            aProducts.textContent = 'Products';
+            aProducts.textContent = '';
 
             const aCat = document.createElement('a');
             aCat.href = `all-products.html?cat=${encodeURIComponent(product.category || '')}`;
@@ -230,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (variantsEl && product.variantTable && Array.isArray(product.variantTable.headers) && Array.isArray(product.variantTable.rows)) {
             const tableTitle = document.createElement('h3');
             tableTitle.setAttribute('data-translate', 'models_and_specs');
-            tableTitle.textContent = 'Models & Specifications';
+            tableTitle.textContent = '';
 
             const headers = product.variantTable.headers;
             const rows = product.variantTable.rows;
@@ -276,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (variantsEl && product.variants && Array.isArray(product.variants) && product.variants.length > 0) {
             const tableTitle = document.createElement('h3');
             tableTitle.setAttribute('data-translate', 'models_and_specs');
-            tableTitle.textContent = 'Models & Specifications';
+            tableTitle.textContent = '';
 
             const tbl = document.createElement('table');
             tbl.className = 'variants-table';
@@ -285,12 +286,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const thead = document.createElement('thead');
             const trh = document.createElement('tr');
-            ['Model / 型号', 'Size / 尺寸', 'Weight / 重量'].forEach(h => {
+            [
+                { key: 'spec_col_model' },
+                { key: 'spec_col_size' },
+                { key: 'spec_col_weight' },
+            ].forEach(({ key }) => {
                 const th = document.createElement('th');
                 th.style.textAlign = 'left';
                 th.style.padding = '8px';
                 th.style.borderBottom = '1px solid #eaeaea';
-                th.textContent = h;
+                th.setAttribute('data-translate', key);
+                th.textContent = '';
                 trh.appendChild(th);
             });
             thead.appendChild(trh);
@@ -473,7 +479,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (productElement) grid.appendChild(productElement);
                 });
             } else {
-                grid.innerHTML = '<p data-translate="no_related_products">暂无相关产品</p>';
+                grid.innerHTML = '<p data-translate="no_related_products"></p>';
             }
         }
 

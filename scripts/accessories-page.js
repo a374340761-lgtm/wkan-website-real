@@ -166,7 +166,7 @@
         detailsLink.className = 'btn btn-secondary product-details-btn';
         detailsLink.href = `product-detail.html?id=${encodeURIComponent(id)}`;
         detailsLink.setAttribute('data-translate', 'view_details');
-        detailsLink.textContent = 'View details';
+        detailsLink.textContent = '';
 
         const go = () => {
             location.href = `product-detail.html?id=${encodeURIComponent(id)}`;
@@ -196,6 +196,11 @@
         const frag = document.createDocumentFragment();
         list.forEach(p => frag.appendChild(buildCard(p)));
         grid.appendChild(frag);
+
+        // Apply translations for injected nodes
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
 
         if (empty) empty.style.display = (list.length ? 'none' : 'block');
     }

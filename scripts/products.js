@@ -581,6 +581,404 @@ class ProductManager {
                 specsKo: ['알루미늄 소재', '방수 원단', '빠른 접기', '휴대용 수납'],
                 price: '起价 ¥599/套'
             },
+
+            // ===== Furniture series: Table / Chair / Stool / Toilet (hero/image pending) =====
+            {
+                id: 31001,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Z122',
+                name: '对折桌（WK-Z122）',
+                nameEn: 'Folding In Half Table (WK-Z122)',
+                description: '便携式对折桌，适用于展会、活动与户外使用。',
+                descriptionEn: 'Portable folding-in-half table for events, exhibitions and outdoor use.',
+                image: '',
+                specs: ['对折收纳', '便携', '适用活动/户外'],
+                specsEn: ['Folds in half', 'Portable', 'For events/outdoor'],
+                keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-Z122']
+            },
+            {
+                id: 31002,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Z153',
+                name: '对折桌（WK-Z153）',
+                nameEn: 'Folding In Half Table (WK-Z153)',
+                description: '便携式对折桌，适用于展会、活动与户外使用。',
+                descriptionEn: 'Portable folding-in-half table for events, exhibitions and outdoor use.',
+                image: '',
+                specs: ['对折收纳', '便携', '适用活动/户外'],
+                specsEn: ['Folds in half', 'Portable', 'For events/outdoor'],
+                keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-Z153']
+            },
+            {
+                id: 31003,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Z183',
+                name: '对折桌（WK-Z183）',
+                nameEn: 'Folding In Half Table (WK-Z183)',
+                description: '便携式对折桌，适用于展会、活动与户外使用。',
+                descriptionEn: 'Portable folding-in-half table for events, exhibitions and outdoor use.',
+                image: '',
+                specs: ['对折收纳', '便携', '适用活动/户外'],
+                specsEn: ['Folds in half', 'Portable', 'For events/outdoor'],
+                keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-Z183']
+            },
+            {
+                id: 31004,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Z244',
+                name: '对折桌（WK-Z244）',
+                nameEn: 'Folding In Half Table (WK-Z244)',
+                description: '便携式对折桌，适用于展会、活动与户外使用。',
+                descriptionEn: 'Portable folding-in-half table for events, exhibitions and outdoor use.',
+                image: '',
+                specs: ['对折收纳', '便携', '适用活动/户外'],
+                specsEn: ['Folds in half', 'Portable', 'For events/outdoor'],
+                keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-Z244']
+            },
+            {
+                id: 31005,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-FZ88',
+                name: '方桌（WK-FZ88）',
+                nameEn: 'Square Table (WK-FZ88)',
+                description: '方形便携桌，适用于活动、餐饮与户外使用。',
+                descriptionEn: 'Square portable table for events, catering and outdoor use.',
+                image: '',
+                specs: ['方形台面', '便携', '适用多场景'],
+                specsEn: ['Square top', 'Portable', 'Multi-scenario use'],
+                keywords: ['furniture', 'table', 'square table', '方桌', 'WK-FZ88']
+            },
+            {
+                id: 31006,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Y183',
+                name: '对折长凳（WK-Y183）',
+                nameEn: 'Folding In Half Bench (WK-Y183)',
+                description: '可折叠长凳，快速展开，适用于活动与户外。',
+                descriptionEn: 'Folding-in-half bench with fast setup for events and outdoor use.',
+                image: '',
+                specs: ['对折收纳', '快速展开', '多人座位'],
+                specsEn: ['Folds in half', 'Fast setup', 'Multi-seat'],
+                keywords: ['furniture', 'bench', 'folding bench', '长凳', 'WK-Y183']
+            },
+            {
+                id: 31007,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Y45',
+                name: '折叠椅（WK-Y45）',
+                nameEn: 'Folding Chair (WK-Y45)',
+                description: '轻便折叠椅，适用于活动、展会与临时座位。',
+                descriptionEn: 'Lightweight folding chair for events, exhibitions and temporary seating.',
+                image: '',
+                specs: ['折叠收纳', '轻便', '快速使用'],
+                specsEn: ['Foldable', 'Lightweight', 'Ready to use'],
+                keywords: ['furniture', 'chair', 'folding chair', '折叠椅', 'WK-Y45']
+            },
+            {
+                id: 31008,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Y30A',
+                name: '折叠凳（WK-Y30A）',
+                nameEn: 'Folding Stool (WK-Y30A)',
+                description: '便携折叠凳，适用于户外、排队区和活动场景。',
+                descriptionEn: 'Portable folding stool for outdoor use, queue areas and events.',
+                image: '',
+                specs: ['折叠收纳', '便携', '稳固支撑'],
+                specsEn: ['Foldable', 'Portable', 'Stable support'],
+                keywords: ['furniture', 'stool', 'folding stool', '折叠凳', 'WK-Y30A']
+            },
+            {
+                id: 31009,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-YZ80',
+                name: '圆桌（伞桌）（WK-YZ80）',
+                nameEn: 'Umbrella Round Table (WK-YZ80)',
+                description: '圆形伞桌，适合户外休闲与活动接待。',
+                descriptionEn: 'Round umbrella table for outdoor leisure and event reception.',
+                image: '',
+                specs: ['圆形台面', '适配遮阳伞', '户外使用'],
+                specsEn: ['Round top', 'Umbrella compatible', 'Outdoor use'],
+                keywords: ['furniture', 'table', 'round table', 'umbrella table', '伞桌', 'WK-YZ80']
+            },
+            {
+                id: 31010,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-YZ120',
+                name: '圆形对折桌（WK-YZ120）',
+                nameEn: 'Round Folding In Half Table (WK-YZ120)',
+                description: '圆形对折桌，便携收纳，适用于活动与户外。',
+                descriptionEn: 'Round folding-in-half table for events and outdoor use.',
+                image: '',
+                specs: ['圆形台面', '对折收纳', '便携'],
+                specsEn: ['Round top', 'Folds in half', 'Portable'],
+                keywords: ['furniture', 'table', 'round table', 'folding table', '圆形对折桌', 'WK-YZ120']
+            },
+            {
+                id: 31011,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-YZ150',
+                name: '圆形对折桌（WK-YZ150）',
+                nameEn: 'Round Folding In Half Table (WK-YZ150)',
+                description: '圆形对折桌，便携收纳，适用于活动与户外。',
+                descriptionEn: 'Round folding-in-half table for events and outdoor use.',
+                image: '',
+                specs: ['圆形台面', '对折收纳', '便携'],
+                specsEn: ['Round top', 'Folds in half', 'Portable'],
+                keywords: ['furniture', 'table', 'round table', 'folding table', '圆形对折桌', 'WK-YZ150']
+            },
+            {
+                id: 31012,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-YZ180',
+                name: '圆形对折桌（WK-YZ180）',
+                nameEn: 'Round Folding In Half Table (WK-YZ180)',
+                description: '圆形对折桌，便携收纳，适用于活动与户外。',
+                descriptionEn: 'Round folding-in-half table for events and outdoor use.',
+                image: '',
+                specs: ['圆形台面', '对折收纳', '便携'],
+                specsEn: ['Round top', 'Folds in half', 'Portable'],
+                keywords: ['furniture', 'table', 'round table', 'folding table', '圆形对折桌', 'WK-YZ180']
+            },
+            {
+                id: 31013,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-BZ80',
+                name: '鸡尾酒桌（WK-BZ80）',
+                nameEn: 'Cocktail Table (WK-BZ80)',
+                description: '高脚鸡尾酒桌，适用于展会接待、活动酒会与品牌推广。',
+                descriptionEn: 'High-top cocktail table for receptions, events and brand promotions.',
+                image: '',
+                specs: ['高脚桌', '活动接待', '便携'],
+                specsEn: ['High-top', 'For receptions', 'Portable'],
+                keywords: ['furniture', 'table', 'cocktail table', 'bar table', '鸡尾酒桌', 'WK-BZ80']
+            },
+            {
+                id: 31014,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-Y45A',
+                name: '吧椅（折叠）（WK-Y45A）',
+                nameEn: 'Bar Folding Chair (WK-Y45A)',
+                description: '折叠吧椅，适用于吧台、酒会与活动接待。',
+                descriptionEn: 'Folding bar chair for bars, receptions and events.',
+                image: '',
+                specs: ['折叠收纳', '吧台/酒会', '便携'],
+                specsEn: ['Foldable', 'Bar/reception', 'Portable'],
+                keywords: ['furniture', 'chair', 'bar chair', 'folding chair', '吧椅', 'WK-Y45A']
+            },
+            {
+                id: 31015,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-F115',
+                name: '对折桌（WK-F115）',
+                nameEn: 'Folding Into Half Table (WK-F115)',
+                description: '对折桌，便携收纳，适用于活动/户外/临时用餐。',
+                descriptionEn: 'Folding-into-half table for events, outdoor use and temporary dining.',
+                image: '',
+                specs: ['对折收纳', '便携', '多场景使用'],
+                specsEn: ['Folds in half', 'Portable', 'Multi-scenario'],
+                keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-F115']
+            },
+            {
+                id: 31016,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                model: 'WK-PT20',
+                name: '便携厕所（WK-PT20）',
+                nameEn: 'Portable Toilet (WK-PT20)',
+                description: '便携厕所，适用于露营、活动与临时户外场景。',
+                descriptionEn: 'Portable toilet for camping, events and temporary outdoor scenarios.',
+                image: '',
+                specs: ['便携', '易清洁', '适合户外'],
+                specsEn: ['Portable', 'Easy to clean', 'Outdoor use'],
+                keywords: ['furniture', 'toilet', 'portable toilet', '便携厕所', 'WK-PT20']
+            },
+
+            // ===== Table/Chair cover fabric series (hero/image pending) =====
+            {
+                id: 31101,
+                category: 'custom',
+                subcategory: 'covers',
+                model: 'TableCover-3D',
+                name: '立体弹力桌布（4/5/6/8FT）',
+                nameEn: 'Three Dimensional Fabric Table Cover (4/5/6/8FT)',
+                description: '用于桌椅的立体弹力布套，可按尺寸与图案定制（多色可选）。',
+                descriptionEn: '3D stretch fabric cover for tables/chairs. Custom size and graphics (multiple colors available).',
+                image: '',
+                specs: ['尺寸：4FT / 5FT / 6FT / 8FT', '弹力面料', '支持定制印刷'],
+                specsEn: ['Sizes: 4FT / 5FT / 6FT / 8FT', 'Stretch fabric', 'Custom printing'],
+                keywords: ['custom', 'cover', 'table cover', 'stretch', '3d fabric', '桌布', '弹力桌布']
+            },
+            {
+                id: 31102,
+                category: 'custom',
+                subcategory: 'covers',
+                model: 'TableCover-Square',
+                name: '方桌罩布（4/5/6/8FT）',
+                nameEn: 'Square Cover Fabric (4/5/6/8FT)',
+                description: '方桌罩布，适配多种尺寸，可定制印刷与颜色。',
+                descriptionEn: 'Square table cover fabric with size options. Custom printing and colors available.',
+                image: '',
+                specs: ['尺寸：4FT / 5FT / 6FT / 8FT', '可定制印刷', '多色可选'],
+                specsEn: ['Sizes: 4FT / 5FT / 6FT / 8FT', 'Custom printing', 'Multiple colors'],
+                keywords: ['custom', 'cover', 'square cover', 'table cover', '方桌罩布']
+            },
+            {
+                id: 31103,
+                category: 'custom',
+                subcategory: 'covers',
+                model: 'Fabric-Square',
+                name: '方形桌布（4/5/6/8FT）',
+                nameEn: 'Square Fabric (4/5/6/8FT)',
+                description: '方形桌布系列，尺寸可选，支持定制。',
+                descriptionEn: 'Square fabric series with size options and customization.',
+                image: '',
+                specs: ['尺寸：4FT / 5FT / 6FT / 8FT', '支持定制', '多色可选'],
+                specsEn: ['Sizes: 4FT / 5FT / 6FT / 8FT', 'Customizable', 'Multiple colors'],
+                keywords: ['custom', 'fabric', 'square fabric', 'table cloth', '方形桌布']
+            },
+            {
+                id: 31104,
+                category: 'custom',
+                subcategory: 'covers',
+                model: '3D-Cover-FoldingTable',
+                name: '立体对折桌布',
+                nameEn: '3D Folding In Half Table Fabric',
+                description: '适配对折桌的立体布套，支持定制印刷与多色选择。',
+                descriptionEn: '3D fabric cover for folding-in-half tables, customizable printing and colors.',
+                image: '',
+                specs: ['立体版型', '适配对折桌', '可定制印刷'],
+                specsEn: ['3D fit', 'For folding tables', 'Custom printing'],
+                keywords: ['custom', 'cover', '3d', 'folding table', 'table fabric', '对折桌布']
+            },
+            {
+                id: 31105,
+                category: 'custom',
+                subcategory: 'covers',
+                model: '3D-Cover-RoundFoldingTable',
+                name: '立体圆形对折桌布',
+                nameEn: '3D Round Folding In Half Table Fabric',
+                description: '适配圆形对折桌的立体布套，支持定制印刷。',
+                descriptionEn: '3D fabric cover for round folding-in-half tables, customizable printing.',
+                image: '',
+                specs: ['立体版型', '适配圆形对折桌', '可定制印刷'],
+                specsEn: ['3D fit', 'For round folding tables', 'Custom printing'],
+                keywords: ['custom', 'cover', '3d', 'round table', 'table fabric', '圆形对折桌布']
+            },
+            {
+                id: 31106,
+                category: 'custom',
+                subcategory: 'covers',
+                model: '3D-Cover-FoldingChair',
+                name: '立体折叠椅套',
+                nameEn: '3D Folding Chair Fabric',
+                description: '适配折叠椅的立体布套，可定制印刷与颜色。',
+                descriptionEn: '3D fabric cover for folding chairs. Custom printing and colors available.',
+                image: '',
+                specs: ['立体版型', '适配折叠椅', '可定制印刷'],
+                specsEn: ['3D fit', 'For folding chairs', 'Custom printing'],
+                keywords: ['custom', 'cover', 'chair cover', '3d', 'folding chair', '折叠椅套']
+            },
+            {
+                id: 31107,
+                category: 'custom',
+                subcategory: 'covers',
+                model: '3D-Cover-CocktailTable',
+                name: '立体鸡尾酒桌布',
+                nameEn: '3D Cocktail Table Fabric',
+                description: '适配鸡尾酒桌的立体桌布，支持多色与定制印刷。',
+                descriptionEn: '3D fabric cover for cocktail tables, multiple colors and custom printing.',
+                image: '',
+                specs: ['立体版型', '适配鸡尾酒桌', '多色可选'],
+                specsEn: ['3D fit', 'For cocktail tables', 'Multiple colors'],
+                keywords: ['custom', 'cover', 'cocktail table', 'bar table', '3d', '鸡尾酒桌布']
+            },
+
+            // ===== DOME 3 FOLDERS (hero/image pending) =====
+            {
+                id: 31201,
+                category: 'tents',
+                subcategory: 'dome-3-folders',
+                model: 'WK-TENT188',
+                name: '车顶帐篷（WK-TENT188）',
+                nameEn: 'Car Tent (WK-TENT188)',
+                description: '车顶帐篷系列，便携收纳，适用于露营与户外出行。',
+                descriptionEn: 'Car tent series for camping and outdoor travel. Portable and easy to pack.',
+                image: '',
+                specs: ['尺寸：120×222×22CM', '重量：17KG', '纸箱：3×3M', '数量：1PCS'],
+                specsEn: ['Size: 120×222×22 CM', 'Weight: 17 KG', 'Carton: 3×3M', 'Qty: 1 PCS'],
+                keywords: ['tents', 'car tent', 'camping', 'WK-TENT188']
+            },
+            {
+                id: 31202,
+                category: 'tents',
+                subcategory: 'dome-3-folders',
+                model: 'WK-TENT190',
+                name: '户外更衣室（WK-TENT190）',
+                nameEn: 'Outdoor Dressing Room (WK-TENT190)',
+                description: '户外更衣室/淋浴帐篷，便携快速搭建。',
+                descriptionEn: 'Outdoor dressing room / privacy tent with quick setup.',
+                image: '',
+                specs: ['尺寸：120×120×190CM', '重量：2.5KG', '纸箱：55×55×30CM', '数量：10PCS', '毛重：26KG'],
+                specsEn: ['Size: 120×120×190 CM', 'Weight: 2.5 KG', 'Carton: 55×55×30 CM', 'Qty: 10 PCS', 'G.W.: 26 KG'],
+                keywords: ['tents', 'privacy tent', 'dressing room', 'outdoor', 'WK-TENT190']
+            },
+            {
+                id: 31203,
+                category: 'furniture',
+                subcategory: 'dome-3-folders',
+                model: 'WK-C56',
+                name: '方形折叠收纳篮（WK-C56）',
+                nameEn: 'Square Folding Clothes Basket (WK-C56)',
+                description: '方形折叠收纳篮，便携收纳，适用于旅行与户外。',
+                descriptionEn: 'Square folding storage basket for travel and outdoor use.',
+                image: '',
+                specs: ['尺寸：34×34×56CM', '重量：0.22KG', '纸箱：50×50×35CM', '数量：50PCS', '毛重：12KG'],
+                specsEn: ['Size: 34×34×56 CM', 'Weight: 0.22 KG', 'Carton: 50×50×35 CM', 'Qty: 50 PCS', 'G.W.: 12 KG'],
+                keywords: ['furniture', 'basket', 'storage', 'folding', 'WK-C56']
+            },
+            {
+                id: 31204,
+                category: 'furniture',
+                subcategory: 'dome-3-folders',
+                model: 'WK-C59',
+                name: '圆形折叠收纳篮（WK-C59）',
+                nameEn: 'Round Folding Clothes Basket (WK-C59)',
+                description: '圆形折叠收纳篮，便携收纳，适用于旅行与户外。',
+                descriptionEn: 'Round folding storage basket for travel and outdoor use.',
+                image: '',
+                specs: ['尺寸：35×59CM', '重量：0.28KG', '纸箱：50×50×35CM', '数量：50PCS', '毛重：26KG'],
+                specsEn: ['Size: 35×59 CM', 'Weight: 0.28 KG', 'Carton: 50×50×35 CM', 'Qty: 50 PCS', 'G.W.: 26 KG'],
+                keywords: ['furniture', 'basket', 'storage', 'folding', 'WK-C59']
+            },
+            {
+                id: 31205,
+                category: 'furniture',
+                subcategory: 'dome-3-folders',
+                model: 'WK-C35',
+                name: '圆形折叠收纳篮（WK-C35）',
+                nameEn: 'Round Folding Clothes Basket (WK-C35)',
+                description: '圆形折叠收纳篮，便携收纳，适用于旅行与户外。',
+                descriptionEn: 'Round folding storage basket for travel and outdoor use.',
+                image: '',
+                specs: ['尺寸：28×35CM', '重量：0.35KG', '纸箱：48×48×43CM', '数量：60PCS', '毛重：23KG'],
+                specsEn: ['Size: 28×35 CM', 'Weight: 0.35 KG', 'Carton: 48×48×43 CM', 'Qty: 60 PCS', 'G.W.: 23 KG'],
+                keywords: ['furniture', 'basket', 'storage', 'folding', 'WK-C35']
+            },
             {
                 id: 5,
                 category: 'tents',
@@ -1291,7 +1689,10 @@ class ProductManager {
 
         // 5) count
         const countEl = document.getElementById('productsCount');
-        if (countEl) countEl.textContent = `${total} items`;
+        if (countEl) {
+            const unit = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_items_unit') : '';
+            countEl.textContent = unit ? `${total} ${unit}` : `${total}`;
+        }
 
         // 6) pagination render
         this.renderPagination(total, paginationEl);
@@ -1301,6 +1702,8 @@ class ProductManager {
         const productDiv = document.createElement('div');
         productDiv.className = 'product-item';
         productDiv.setAttribute('data-category', product.category);
+
+        const t = (key) => (window.multiLang && typeof window.multiLang.t === 'function') ? window.multiLang.t(key) : '';
         
         const name = this.getLocalizedName(product);
         const description = this.getLocalizedDescription(product);
@@ -1318,12 +1721,12 @@ class ProductManager {
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
-                    <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(product.id)}" data-translate="view_details">View details</a>
+                    <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(product.id)}" data-translate="view_details"></a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
-                        <i class="fas fa-shopping-cart"></i> 加入购物车
+                        <i class="fas fa-shopping-cart"></i> ${t('btn_add_to_cart')}
                     </button>
                     <button class="btn btn-secondary product-btn" onclick="window.productManager.downloadProductInfo(${product.id})">
-                        <i class="fas fa-download"></i> 下载资料
+                        <i class="fas fa-download"></i> ${t('download_materials')}
                     </button>
                 </div>
             </div>
@@ -2015,16 +2418,16 @@ getProductIcon(category) {
             const text = document.getElementById('rfqText')?.value || '';
             try {
                 await navigator.clipboard.writeText(text);
-                copyBtn.textContent = 'Copied!';
-                setTimeout(() => copyBtn.textContent = 'Copy', 1200);
+                copyBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copied') : '';
+                setTimeout(() => copyBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copy') : '', 1200);
             } catch {
                 // 备用方案：选中文本
                 const textarea = document.getElementById('rfqText');
                 if (textarea) {
                     textarea.select();
                     document.execCommand('copy');
-                    copyBtn.textContent = 'Copied!';
-                    setTimeout(() => copyBtn.textContent = 'Copy', 1200);
+                    copyBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copied') : '';
+                    setTimeout(() => copyBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copy') : '', 1200);
                 }
             }
         });
@@ -2057,13 +2460,13 @@ getProductIcon(category) {
                 qty: ci.qty || 1
             })).filter(x => x.product);
             const hintEl = document.getElementById('rfqHint');
-            if (hintEl) hintEl.textContent = 'Tip: These items come from your cart. You can change quantity here.';
+            if (hintEl) hintEl.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_tip_cart_items') : '';
         } else {
             // 无购物车时：用当前筛选结果（最多 6 个），提示用户最好先 Add to Cart
             const filtered = this.getFilteredProductsNow().slice(0, 6);
             items = filtered.map(p => ({ product: p, qty: 1 }));
             const hintEl = document.getElementById('rfqHint');
-            if (hintEl) hintEl.textContent = 'Tip: Your cart is empty. Showing top filtered products. For precise RFQ, please add products to cart first.';
+            if (hintEl) hintEl.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_tip_cart_empty') : '';
         }
 
         this.rfqItems = items; // 缓存
@@ -2302,8 +2705,8 @@ WeChat: massifmyth
             copyIdBtn.addEventListener('click', async () => {
                 try {
                     await navigator.clipboard.writeText(idText.textContent.trim());
-                    copyIdBtn.textContent = 'Copied!';
-                    setTimeout(() => copyIdBtn.textContent = 'Copy WeChat ID', 1200);
+                    copyIdBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copied') : '';
+                    setTimeout(() => copyIdBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copy_wechat_id') : '', 1200);
                 } catch {
                     // 备用方案
                     const textarea = document.createElement('textarea');
@@ -2312,8 +2715,8 @@ WeChat: massifmyth
                     textarea.select();
                     document.execCommand('copy');
                     document.body.removeChild(textarea);
-                    copyIdBtn.textContent = 'Copied!';
-                    setTimeout(() => copyIdBtn.textContent = 'Copy WeChat ID', 1200);
+                    copyIdBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copied') : '';
+                    setTimeout(() => copyIdBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_copy_wechat_id') : '', 1200);
                 }
             });
         }

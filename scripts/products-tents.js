@@ -40,9 +40,9 @@
       const actions = document.createElement('div');
       actions.className = 'tent-actions';
       actions.innerHTML = `
-        <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(p.id)}" data-translate="view_details">View details</a>
-        <button class="btn" data-quote="${p.id}">Get Quote</button>
-        <button class="btn" data-addcart="${p.id}">Add to Cart</button>
+        <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(p.id)}" data-translate="view_details"></a>
+        <button class="btn" data-quote="${p.id}" data-translate="btn_get_quote"></button>
+        <button class="btn" data-addcart="${p.id}" data-translate="btn_add_to_cart"></button>
       `;
 
       card.appendChild(img);
@@ -54,6 +54,11 @@
     });
 
     container.appendChild(grid);
+
+    // Translate injected UI
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
 
     // attach handlers
     container.querySelectorAll('[data-addcart]').forEach(btn=>{
@@ -80,8 +85,13 @@
 
     const tabs = document.createElement('div');
     tabs.className = 'tent-tabs';
-    const btnStock = document.createElement('button'); btnStock.className='active'; btnStock.textContent='Stock Tents';
-    const btnCustom = document.createElement('button'); btnCustom.textContent='Custom Tents';
+    const btnStock = document.createElement('button');
+    btnStock.className='active';
+    btnStock.setAttribute('data-translate', 'menu_stock_tents');
+    btnStock.textContent='';
+    const btnCustom = document.createElement('button');
+    btnCustom.setAttribute('data-translate', 'menu_custom_tents');
+    btnCustom.textContent='';
     tabs.appendChild(btnStock); tabs.appendChild(btnCustom);
 
     root.appendChild(tabs);
@@ -101,6 +111,10 @@
 
     // initial
     renderCards(pm, 'stock');
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
   }
 
   document.addEventListener('DOMContentLoaded', ()=>{

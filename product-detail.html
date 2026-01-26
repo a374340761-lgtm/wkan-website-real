@@ -37,12 +37,12 @@
             <div class="nav-logo">
                 <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
                     <div class="nav-brand">
-                        <img src="images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="nav-logo-img">
+                        <img src="images/waikwancompanylogo.png" alt="" data-translate-alt="company_name" class="nav-logo-img">
                         <div class="nav-logo-text">
                             <div class="brand-text">
                                 <div class="brand-name" data-company-cn></div>
                                 <div class="brand-name-en" data-company-en></div>
-                                <div class="brand-sub">Since 2010</div>
+                                <div class="brand-sub" data-translate="brand_since_2010"></div>
                             </div>
                         </div>
                     </div>
@@ -51,21 +51,23 @@
             <ul class="nav-menu">
                 <li class="nav-item-dropdown">
                     <a href="product-center.html" class="nav-link">
-                        <span class="zh">产品中心</span><span class="en">Products</span>
+                        <span class="zh" data-translate="nav_product_center"></span><span class="en" data-translate="nav_product_center"></span>
                         <i class="fas fa-chevron-down"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="product-center.html?cat=tents">Tents</a>
-                        <a href="product-center.html?cat=flags">Beach Flags &amp; Poles</a>
-                        <a href="product-center.html?cat=displays">Pop-up Displays</a>
-                        <a href="product-center.html?cat=accessories">Accessories</a>
-                        <a href="racegate-type.html">Race Gate</a>
-                        <a href="product-center.html?notice=category_unavailable">Replacement Parts</a>
+                        <a href="product-center.html?cat=tents"><span class="zh" data-translate="home_cat_tents_title"></span><span class="en" data-translate="home_cat_tents_title"></span></a>
+                        <a href="product-center.html?cat=flags"><span class="zh" data-translate="menu_beach_flags"></span><span class="en" data-translate="menu_beach_flags"></span></a>
+                        <a href="product-center.html?cat=displays"><span class="zh" data-translate="menu_popup_displays"></span><span class="en" data-translate="menu_popup_displays"></span></a>
+                        <a href="product-center.html?cat=accessories"><span class="zh" data-translate="menu_accessories"></span><span class="en" data-translate="menu_accessories"></span></a>
+                        <a href="furniture-type.html?type=table-chair-stool-toilet"><span class="zh" data-translate="menu_table_chair_stool_toilet"></span><span class="en" data-translate="menu_table_chair_stool_toilet"></span></a>
+                        <a href="dome-type.html?type=dome-3-folders"><span class="zh" data-translate="menu_dome_3_folders"></span><span class="en" data-translate="menu_dome_3_folders"></span></a>
+                        <a href="racegate-type.html"><span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span></a>
+                        <a href="product-center.html?notice=category_unavailable"><span class="zh" data-translate="menu_replacement_parts"></span><span class="en" data-translate="menu_replacement_parts"></span></a>
                     </div>
                 </li>
                 <li><a href="product-center.html" data-translate="nav_products_by_size">按尺寸</a></li>
                 <li class="nav-item-dropdown">
-                    <a href="index.html#about" data-translate="nav_info">信息 <i class="fas fa-chevron-down"></i></a>
+                    <a href="index.html#about" data-translate="nav_info"><i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="index.html#about" data-translate="nav_about">关于我们</a></li>
                         <li><a href="index.html#services" data-translate="nav_services">服务范围</a></li>
@@ -74,9 +76,9 @@
                 </li>
             </ul>
             <div class="nav-actions">
-                <button class="nav-icon-btn" id="searchBtn" aria-label="搜索"><i class="fas fa-search"></i></button>
-                <button class="nav-icon-btn" id="accountBtn" aria-label="账户"><i class="fas fa-user"></i></button>
-                <button class="nav-icon-btn" id="cartBtn" aria-label="购物车">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="" data-translate-aria-label="aria_search"><i class="fas fa-search"></i></button>
+                <button class="nav-icon-btn" id="accountBtn" aria-label="" data-translate-aria-label="aria_account"><i class="fas fa-user"></i></button>
+                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="cart-badge">0</span>
                 </button>
@@ -88,18 +90,18 @@
     <main class="product-detail">
         <!-- Breadcrumb -->
         <nav class="breadcrumbs" style="margin-top: 110px;">
-            <a href="index.html" data-translate="breadcrumb_home">首页</a>
+            <a href="index.html" data-translate="breadcrumb_home"></a>
             <span class="sep">/</span>
-            <a href="product-center.html" data-translate="breadcrumb_products">产品中心</a>
+            <a href="product-center.html" data-translate="breadcrumb_products"></a>
             <span class="sep">/</span>
             <span id="breadcrumbProduct"></span>
         </nav>
 
         <!-- Not found -->
         <section id="productNotFound" class="pdp-not-found" style="display:none;margin-top:24px;">
-            <h1 data-translate="product_not_found_title">Product not found</h1>
-            <p data-translate="product_not_found_desc">The product you’re looking for doesn’t exist or the link is invalid.</p>
-            <a class="btn btn-secondary" href="all-products.html" data-translate="back_to_products">Back to Products</a>
+            <h1 data-translate="product_not_found_title"></h1>
+            <p data-translate="product_not_found_desc"></p>
+            <a class="btn btn-secondary" href="all-products.html" data-translate="back_to_products"></a>
         </section>
 
         <!-- Top Section -->

@@ -333,11 +333,13 @@ class MultiLanguageSystem {
                 back_to_product_center: '返回产品中心',
                 category_not_available: '该分类暂未开放，已为你显示全部分类。',
                 // Products 下拉菜单
+                menu_tents: '帐篷',
                 menu_custom_tents: '定制帐篷',
                 menu_stock_tents: '现货帐篷',
                 menu_beach_flags: '沙滩旗及旗杆',
                 menu_popup_displays: '快幕秀展示系统',
                 menu_accessories: '配件',
+                menu_racegate: '竞速拱门',
                 menu_replacement_parts: '替换零件',
                 category_view_all: '查看该类全部',
                 category_search_products: '去搜索产品',
@@ -358,6 +360,81 @@ class MultiLanguageSystem {
                 // Accessories page
                 accessories_page_title: '配件',
                 accessories_search_placeholder: '搜索配件',
+                accessories_page_intro: '向下浏览配件并点击查看参数。',
+                accessories_coming_soon: '正在整理',
+                accessories_overview_alt: '配件概览',
+
+                // Buttons
+                btn_back: '返回',
+
+                // ARIA labels
+                aria_search: '搜索',
+                aria_account: '账户',
+                aria_cart: '购物车',
+                aria_language: '语言',
+                aria_select_language: '选择语言',
+                aria_breadcrumb: '面包屑导航',
+
+                // Language names
+                lang_name_en: 'English',
+                lang_name_zh: '中文',
+                lang_name_ja: '日本語',
+                lang_name_ko: '한국어',
+
+                // Common buttons
+                download_materials: '下载资料',
+
+                // Common labels
+                label_model: '型号',
+
+                // View-type pages
+                flag_type_not_found: '未找到该旗帜类型。',
+
+                // Nav extras
+                nav_top3_sizes: '热销尺寸 Top3',
+
+                // Six-sided booth page
+                six_sided_booth_name: '六边促销展示台',
+                six_sided_booth_title: '六边促销展示台（圆顶）',
+                six_sided_booth_specs: '型号：WK-T80B｜材质：铁｜尺寸：3×3M｜重量：60KG',
+                six_sided_booth_images_title: '产品图片',
+
+                // Legal / disclaimer
+                third_party_trademarks_disclaimer:
+                    '本网站中出现的第三方商标、标识及品牌名称均归其各自权利人所有。\n'
+                    + '其展示仅用于产品示例或识别说明，不构成任何形式的授权、合作或背书关系。',
+
+                // Cookie consent
+                cookie_title: 'Cookie 设置',
+                cookie_text: '我们使用 Cookie 来保障网站正常运行，并在您同意的情况下用于偏好与分析，以改善体验。您可以随时调整设置。',
+                cookie_accept_all: '全部接受',
+                cookie_reject_all: '全部拒绝',
+                cookie_customize: '自定义',
+                cookie_settings_title: 'Cookie 偏好设置',
+                cookie_category_necessary: '必要 Cookie（始终启用）',
+                cookie_category_preferences: '偏好 Cookie（例如：客户识别）',
+                cookie_category_analytics: '统计分析 Cookie',
+                cookie_save: '保存设置',
+                cookie_close: '关闭',
+
+                // Common UI attributes
+                brand_since_2010: '始于2010',
+                form_submit_success: '消息发送成功！我们会尽快回复您。',
+
+                // Products dropdown extras
+                menu_table_chair_stool_toilet: '桌 / 椅 / 凳 / 厕所',
+                menu_dome_3_folders: 'DOME 3 折叠系列',
+
+                // View-type pages
+                view_type_models: '型号清单',
+                view_type_brochure_ref: '产品画册参考',
+                view_type_brochure_source_17: '来源：目录图片 17.png',
+                view_type_page_title_furniture: '桌 / 椅 / 凳 / 厕所',
+                view_type_page_title_dome: 'DOME 3 折叠系列',
+                view_type_subtitle: '型号清单与画册参考（可点击图片放大）。',
+                view_type_browse_all_tents: '查看全部帐篷',
+                view_type_browse_all_furniture: '查看全部家具',
+                view_type_browse_all_furniture_products: '查看全部家具产品',
                 
                 // 面包屑和搜索
                 breadcrumb_home: '首页',
@@ -451,8 +528,27 @@ class MultiLanguageSystem {
                 inquiry_form_customer_project: '活动/项目采购方',
                 inquiry_form_message: '请描述您的需求（尺寸、用途、时间等）*',
                 inquiry_form_submit: '提交询盘',
+                inquiry_form_sending: '提交中...',
                 inquiry_form_note: '我们尊重您的隐私。您的信息仅用于回复您的询盘。',
                 inquiry_form_success: '消息已发送。我们将在24小时内回复。',
+                inquiry_form_failed: '发送失败。请稍后重试。',
+
+                // UI
+                ui_copy: '复制',
+                ui_copied: '已复制！',
+                ui_items_unit: '个',
+                ui_tip_cart_items: '提示：这些条目来自您的购物车，您可以在此修改数量。',
+                ui_tip_cart_empty: '提示：您的购物车为空。已展示筛选后的热门产品。为获取更精准报价，请先将产品加入购物车。',
+                ui_copy_wechat_id: '复制微信号',
+                ui_overview: '概览',
+
+                // Specs
+                spec_col_model: '型号',
+                spec_col_size: '尺寸',
+                spec_col_weight: '重量',
+
+                // View-type pages
+                view_type_no_items_yet: '该系列暂无产品（数据尚未录入）。',
                 contact_seo_footer: '正在寻找可靠的定制帐篷、旗帜或展示系统制造商？立即联系伟群，讨论您的项目需求。',
                 
                 // Logo Badge
@@ -810,11 +906,13 @@ class MultiLanguageSystem {
                 back_to_product_center: 'Back to Product Center',
                 category_not_available: 'Category not available yet. Showing all categories.',
                 // Products Dropdown Menu
+                menu_tents: 'Tents',
                 menu_custom_tents: 'Custom Tents',
                 menu_stock_tents: 'Stock Tents',
                 menu_beach_flags: 'Beach Flags & Poles',
                 menu_popup_displays: 'Pop-up Displays',
                 menu_accessories: 'Accessories',
+                menu_racegate: 'Race Gate',
                 menu_replacement_parts: 'Replacement Parts',
                 category_view_all: 'View All',
                 category_search_products: 'Search Products',
@@ -835,6 +933,82 @@ class MultiLanguageSystem {
                 // Accessories page
                 accessories_page_title: 'Accessories',
                 accessories_search_placeholder: 'Search accessories',
+                accessories_page_intro: 'Browse our accessories below and click any item to view specifications.',
+                accessories_coming_soon: 'Coming soon',
+                accessories_overview_alt: 'Accessories overview',
+
+                // Buttons
+                btn_back: 'Back',
+
+                // ARIA labels
+                aria_search: 'Search',
+                aria_account: 'Account',
+                aria_cart: 'Cart',
+                aria_language: 'Language',
+                aria_select_language: 'Select language',
+                aria_breadcrumb: 'Breadcrumb',
+
+                // Language names
+                lang_name_en: 'English',
+                lang_name_zh: 'Chinese',
+                lang_name_ja: 'Japanese',
+                lang_name_ko: 'Korean',
+
+                // Common buttons
+                download_materials: 'Download materials',
+
+                // Common labels
+                label_model: 'Model',
+
+                // View-type pages
+                flag_type_not_found: 'Flag type not found.',
+
+                // Nav extras
+                nav_top3_sizes: 'Top 3 Sizes',
+
+                // Six-sided booth page
+                six_sided_booth_name: 'Six-sided Promotional Booth',
+                six_sided_booth_title: 'Six-sided Promotional Booth (Dome Top)',
+                six_sided_booth_specs: 'Model: WK-T80B | Material: Iron | Size: 3×3M | Weight: 60KG',
+                six_sided_booth_images_title: 'Product Images',
+
+                // Legal / disclaimer
+                third_party_trademarks_disclaimer:
+                    'All third-party trademarks, logos, and brand names shown on this website are the property of their respective owners.\n'
+                    + 'Their use does not imply any affiliation, endorsement, or sponsorship by Guangxi WaiKwan Tent Manufacturing Co., Ltd.\n'
+                    + 'They are displayed solely for identification and demonstration purposes.',
+
+                // Cookie consent
+                cookie_title: 'Cookie Settings',
+                cookie_text: 'We use cookies to ensure the website functions properly, and—only with your consent—for preferences and analytics to improve your experience. You can change your settings anytime.',
+                cookie_accept_all: 'Accept all',
+                cookie_reject_all: 'Reject all',
+                cookie_customize: 'Customize',
+                cookie_settings_title: 'Cookie Preferences',
+                cookie_category_necessary: 'Necessary cookies (always on)',
+                cookie_category_preferences: 'Preference cookies (e.g., customer identifier)',
+                cookie_category_analytics: 'Analytics cookies',
+                cookie_save: 'Save settings',
+                cookie_close: 'Close',
+
+                // Common UI attributes
+                brand_since_2010: 'Since 2010',
+                form_submit_success: 'Message sent successfully! We will reply to you as soon as possible.',
+
+                // Products dropdown extras
+                menu_table_chair_stool_toilet: 'Table / Chair / Stool / Toilet',
+                menu_dome_3_folders: 'DOME 3 FOLDERS',
+
+                // View-type pages
+                view_type_models: 'Models',
+                view_type_brochure_ref: 'Brochure PDF Guide',
+                view_type_brochure_source_17: 'Source: catalog page 17.png',
+                view_type_page_title_furniture: 'Table / Chair / Stool / Toilet',
+                view_type_page_title_dome: 'DOME 3 FOLDERS',
+                view_type_subtitle: 'Model list and catalog reference (click the image to zoom).',
+                view_type_browse_all_tents: 'Browse all tents',
+                view_type_browse_all_furniture: 'Browse all furniture',
+                view_type_browse_all_furniture_products: 'Browse all furniture products',
                 
                 // Breadcrumb and Search
                 breadcrumb_home: 'Home',
@@ -928,8 +1102,27 @@ class MultiLanguageSystem {
                 inquiry_form_customer_project: 'Event / Project Buyer',
                 inquiry_form_message: 'Please describe your requirements (size, usage, timeline, etc.) *',
                 inquiry_form_submit: 'Submit Inquiry',
+                inquiry_form_sending: 'Sending...',
                 inquiry_form_note: 'We respect your privacy. Your information will only be used to respond to your inquiry.',
                 inquiry_form_success: 'Message sent. We will reply within 24 hours.',
+                inquiry_form_failed: 'Failed to send. Please try again later.',
+
+                // UI
+                ui_copy: 'Copy',
+                ui_copied: 'Copied!',
+                ui_items_unit: 'items',
+                ui_tip_cart_items: 'Tip: These items come from your cart. You can change quantity here.',
+                ui_tip_cart_empty: 'Tip: Your cart is empty. Showing top filtered products. For precise RFQ, please add products to cart first.',
+                ui_copy_wechat_id: 'Copy WeChat ID',
+                ui_overview: 'Overview',
+
+                // Specs
+                spec_col_model: 'Model',
+                spec_col_size: 'Size',
+                spec_col_weight: 'Weight',
+
+                // View-type pages
+                view_type_no_items_yet: 'No items found for this series yet.',
                 contact_seo_footer: 'Looking for a reliable manufacturer of custom tents, flags or display systems? Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your project.',
                 
                 // Logo Badge
@@ -1458,6 +1651,17 @@ class MultiLanguageSystem {
         bind('.lang-btn');
         bind('.lang-item'); // ✅ 新增：支持下拉菜单语言项
     }
+
+    // Minimal helper for JS modules to fetch translated strings.
+    // Keeps behavior consistent with translatePage(): current lang -> en fallback -> provided fallback.
+    t(key, fallback = '') {
+        if (!key) return fallback || '';
+        const lang = this.currentLanguage || DEFAULT_LANG;
+        return (this.translations[lang] && this.translations[lang][key])
+            || (this.translations['en'] && this.translations['en'][key])
+            || fallback
+            || '';
+    }
     
     switchLanguage(lang) {
         if (this.translations[lang]) {
@@ -1529,6 +1733,42 @@ class MultiLanguageSystem {
                 || '';
             element.placeholder = text;
         });
+
+        // 处理 title 属性
+        const titleElements = document.querySelectorAll('[data-translate-title], [data-i18n-title]');
+        titleElements.forEach(element => {
+            const key = element.dataset.translateTitle || element.dataset.i18nTitle;
+            if (!key) return;
+
+            const text = (this.translations[this.currentLanguage] && this.translations[this.currentLanguage][key])
+                || this.translations['en'][key]
+                || '';
+            element.title = text;
+        });
+
+        // 处理 alt 属性
+        const altElements = document.querySelectorAll('[data-translate-alt], [data-i18n-alt]');
+        altElements.forEach(element => {
+            const key = element.dataset.translateAlt || element.dataset.i18nAlt;
+            if (!key) return;
+
+            const text = (this.translations[this.currentLanguage] && this.translations[this.currentLanguage][key])
+                || this.translations['en'][key]
+                || '';
+            element.alt = text;
+        });
+
+        // 处理 aria-label 属性
+        const ariaLabelElements = document.querySelectorAll('[data-translate-aria-label], [data-i18n-aria-label]');
+        ariaLabelElements.forEach(element => {
+            const key = element.dataset.translateAriaLabel || element.dataset.i18nAriaLabel;
+            if (!key) return;
+
+            const text = (this.translations[this.currentLanguage] && this.translations[this.currentLanguage][key])
+                || this.translations['en'][key]
+                || '';
+            element.setAttribute('aria-label', text);
+        });
         
         // ✅ 公司名：全局写入中英文（双语对照）
         document.querySelectorAll('[data-company-cn]').forEach(el => {
@@ -1558,14 +1798,11 @@ class MultiLanguageSystem {
     
     handleFormSubmit() {
         // 显示成功消息（根据当前语言）
-        const successMessages = {
-            zh: '消息发送成功！我们会尽快回复您。',
-            en: 'Message sent successfully! We will reply to you as soon as possible.',
-            ja: 'メッセージが正常に送信されました！できるだけ早くご返信いたします。',
-            ko: '메시지가 성공적으로 전송되었습니다! 가능한 빨리 답변드리겠습니다.'
-        };
-        
-        alert(successMessages[this.currentLanguage]);
+        const key = 'form_submit_success';
+        const msg = (this.translations[this.currentLanguage] && this.translations[this.currentLanguage][key])
+            || this.translations['en'][key]
+            || '';
+        if (msg) alert(msg);
         
         // 重置表单
         const form = document.querySelector('.contact-form form');
@@ -1631,6 +1868,24 @@ class MultiLanguageSystem {
 // 初始化多语言系统
 document.addEventListener('DOMContentLoaded', () => {
     window.multiLang = new MultiLanguageSystem();
+
+    // Lightweight i18n helper for other scripts (avoid hard-coded UI strings)
+    window.wkI18n = {
+        t: (key) => {
+            try {
+                const ml = window.multiLang;
+                const lang = (ml && typeof ml.getCurrentLanguage === 'function') ? ml.getCurrentLanguage() : getLang();
+                const dict = (ml && ml.translations) ? ml.translations : {};
+                return (dict[lang] && dict[lang][key]) || (dict.en && dict.en[key]) || '';
+            } catch {
+                return '';
+            }
+        },
+        lang: () => (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function')
+            ? window.multiLang.getCurrentLanguage()
+            : getLang(),
+        setLang,
+    };
 });
 
 // ===== Language Gate - 不再自动弹出 =====

@@ -418,8 +418,11 @@
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
             const quoteUrl = `./index.html?product=${productParam}#contact`;
-            // 构建产品详情页链接（product.html）；无 id 时回退到分类页
-            const detailUrl = p.id ? `./product.html?id=${encodeURIComponent(p.id)}` : `./all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
+            // DETAIL ROUTING (trace)
+            // Flow B (Browse Products / all-products.html cards) generates the “View details / 查看详情” link here.
+            // Canonical route: product.html?id=...
+            // Fallback: all-products.html?cat=...
+            const detailUrl = p.id ? `product.html?id=${encodeURIComponent(p.id)}` : `all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
             
             // 提取规格信息（从 tags 或 category 推断）
             const specs = [];

@@ -590,8 +590,12 @@ function renderHomeBestSellers() {
             const img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
             const catKey = getCategoryTranslateKey(safeProduct.category);
 
+            // DETAIL ROUTING (trace)
+            // Canonical product detail route: product.html?id=...
+            // Legacy (removed): product-detail.html?id=... (duplicate detail UI).
+            // This is one of the historical “View Details” sources (homepage Best Sellers).
             const detailHref = safeProduct.id
-                ? `product-detail.html?id=${encodeURIComponent(safeProduct.id)}`
+                ? `product.html?id=${encodeURIComponent(safeProduct.id)}`
                 : `./all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`;
 
             const card = document.createElement('div');
@@ -904,6 +908,23 @@ function enhanceTentsDropdown() {
             }));
     };
 
+    // DETAIL ROUTING (trace)
+    // Flow A described by user: Product Center hover menu (Tents -> e.g. “40 六角铝合金架”).
+    // Canonical product detail route is product.html?id=...; map known stock series types to their product IDs.
+    // For other tent types, keep the type landing page.
+    const STOCK_TENT_ID_BY_TYPE = {
+        folding30: 2001,
+        folding40: 2002,
+        folding50: 2003,
+    };
+
+    const getTentTypeHref = (type) => {
+        const key = String(type || '').trim();
+        const productId = STOCK_TENT_ID_BY_TYPE[key];
+        if (productId != null) return `product.html?id=${encodeURIComponent(productId)}`;
+        return `tent-type.html?type=${encodeURIComponent(key)}`;
+    };
+
     const shouldTapToOpen = () => {
         const navMenu = document.querySelector('.nav-menu');
         const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
@@ -959,7 +980,7 @@ function enhanceTentsDropdown() {
 
         types.forEach((t) => {
             const a = document.createElement('a');
-            a.href = `tent-type.html?type=${encodeURIComponent(t.type)}`;
+            a.href = getTentTypeHref(t.type);
             a.textContent = (lang && lang.startsWith('zh')) ? (t.nameZh || t.nameEn || t.type) : (t.nameEn || t.nameZh || t.type);
             sub.appendChild(a);
         });
@@ -1090,6 +1111,11 @@ function enhanceDisplaysDropdown() {
     };
 
     const items = [
+        // New: key sub-types for Pop-up Displays
+        { href: 'all-products.html?cat=displays&tag=backdrop', translateKey: 'menu_popup_backdrop' },
+        { href: 'all-products.html?cat=displays&tag=counter', translateKey: 'menu_popup_counter' },
+
+        // Existing: keep legacy A-Frame entries
         { href: 'product.html?id=42001', zh: 'A字架（A-Frame）', en: 'A-Frame' },
         { href: 'product.html?id=42002', zh: 'A字架背板系统（Backdrop）', en: 'A-Frame Backdrop System' }
     ];
@@ -1141,7 +1167,12 @@ function enhanceDisplaysDropdown() {
         items.forEach((it) => {
             const a = document.createElement('a');
             a.href = it.href;
-            a.textContent = (lang && lang.startsWith('zh')) ? it.zh : it.en;
+            if (it.translateKey) {
+                a.setAttribute('data-translate', it.translateKey);
+                a.textContent = '';
+            } else {
+                a.textContent = (lang && lang.startsWith('zh')) ? it.zh : it.en;
+            }
             sub.appendChild(a);
         });
 

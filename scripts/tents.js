@@ -33,6 +33,7 @@ container.innerHTML = tents.map(t => `
     <img src="${t.image}" alt="${t.name}">
     <h3>${t.name}</h3>
     <p>Frame Material: ${t.material}</p>
-    <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(t.id)}" data-translate="view_details"></a>
+    <!-- Canonical detail route: product.html?id=... (legacy product-detail.html removed) -->
+    <a class="btn btn-secondary product-details-btn" href="product.html?id=${encodeURIComponent(t.id)}" data-translate="view_details"></a>
   </div>
 `).join("");

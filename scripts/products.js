@@ -182,7 +182,7 @@ class ProductManager {
                     ],
                     keywords: ['A-Frame', 'A frame', 'AD-H18', 'backdrop', 'display', 'A字架', '背板', '活动展示'],
                     tags: 'A-Frame, AD-H18A, AD-H18B, AD-H18C, backdrop, display',
-                    pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=29',
+                    pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                     price: '询价'
                 },
                 {
@@ -221,7 +221,142 @@ class ProductManager {
                     ],
                     keywords: ['Backdrop', 'Backdrop System', 'AD-H1', 'A-Frame', 'display', '背板', '背景板'],
                     tags: 'Backdrop System, AD-H1, A-Frame backdrop, display',
-                    pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=30',
+                    pdf: '广西伟群帐篷制造有限公司2025改.pdf',
+                    price: '询价'
+                },
+                {
+                    id: 42003,
+                    category: 'displays',
+                    subcategory: 'popup',
+                    model: 'WK-PO-01',
+                    name: '快幕秀布拉网',
+                    nameEn: 'Fabric Pop Up Display',
+                    nameZh: '快幕秀布拉网',
+                    short: '便携式折叠结构，快速安装，适用于展会背景、品牌展示、活动使用。',
+                    shortEn: 'Portable folding structure with fast setup, ideal for exhibition backdrops, brand displays and events.',
+                    shortZh: '便携式折叠结构，快速安装，适用于展会背景、品牌展示、活动使用。',
+                    description: '快幕秀布拉网（Fabric Pop-up Display）是最典型、最正统的快幕秀产品。采用折叠式铝合金框架与拉网结构，用作背景墙/展会背板，快速展开、无需工具。常见尺寸：3m / 4m / 5m 宽。可更换画面，便携收纳包装。',
+                    descriptionEn: 'Fabric Pop-up Display is the most standard and authentic pop-up backdrop product. Features folding aluminum frame with tension fabric structure, used as backdrop wall for exhibitions. Tool-free quick setup. Common widths: 3m / 4m / 5m. Replaceable graphics with portable carrying case.',
+                    descriptionZh: '快幕秀布拉网（Fabric Pop-up Display）是最典型、最正统的快幕秀产品。采用折叠式铝合金框架与拉网结构，用作背景墙/展会背板，快速展开、无需工具。常见尺寸：3m / 4m / 5m 宽。可更换画面，便携收纳包装。',
+                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    images: [
+                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                    ],
+                    gallery: [
+                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                    ],
+                    variantTables: [
+                        {
+                            titleZh: '产品特点',
+                            titleEn: 'Product Features',
+                            description: '便携式折叠结构 · 快速安装 · 可更换画面 · 适用于展会背景、品牌展示、活动使用'
+                        },
+                        {
+                            titleZh: '配件展示',
+                            titleEn: 'Included Accessories',
+                            items: ['铝合金折叠框架 / Aluminum folding frame', '画面布 / Fabric graphic', '便携收纳包 / Portable carrying bag']
+                        },
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-PO-01', size: '225×225×30 CM', carton: '44×44×94 CM', qty: '1', weight: '8 KG' },
+                                { model: 'WK-PO-01', size: '300×225×30 CM', carton: '45×45×105 CM', qty: '1', weight: '9 KG' },
+                                { model: 'WK-PO-01', size: '375×225×30 CM', carton: '72×44×100 CM', qty: '1', weight: '12 KG' }
+                            ]
+                        }
+                    ],
+                    keywords: ['快幕秀', '布拉网', 'pop up display', 'popup display', 'fabric display', 'backdrop', 'exhibition backdrop', 'WK-PO-01', 'trade show', 'portable display'],
+                    tags: 'Fabric Pop Up Display, 快幕秀, 布拉网, WK-PO-01, backdrop, exhibition',
+                    pdf: '广西伟群帐篷制造有限公司2025改.pdf',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+                {
+                    id: 42004,
+                    category: 'displays',
+                    subcategory: 'counter',
+                    model: 'WK-PO-01-A/B/C',
+                    name: '快幕秀前台 / 张拉布前台',
+                    nameEn: 'Tension Fabric Counter',
+                    nameZh: '快幕秀前台 / 张拉布前台',
+                    short: '张拉布展示系统，可选发光/不发光，适用于前台/接待桌/展位家具。',
+                    shortEn: 'Tension fabric display system with optional illumination, ideal for reception counters and booth furniture.',
+                    shortZh: '张拉布展示系统，可选发光/不发光，适用于前台/接待桌/展位家具。',
+                    description: '张拉布前台（Tension Fabric Counter）是快幕秀展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
+                    descriptionEn: 'Tension Fabric Counter is an accessory product for pop-up display systems. Features the same tension fabric + quick-setup structure, but designed for reception counters, desks and booth furniture rather than backdrops. Available in illuminated and non-illuminated versions with multiple packaging protection. Enhanced visual appeal at night.',
+                    descriptionZh: '张拉布前台（Tension Fabric Counter）是快幕秀展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
+                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    images: [
+                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                    ],
+                    gallery: [
+                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                    ],
+                    variantTables: [
+                        {
+                            titleZh: '产品类型',
+                            titleEn: 'Product Types',
+                            items: ['张拉布前台 / Fabric Counter', '前台桌 / Reception Desk']
+                        },
+                        {
+                            titleZh: '前台结构类型',
+                            titleEn: 'Counter Structure Types',
+                            items: ['方形 Square', '椭圆 Ellipse', '圆形 Round']
+                        },
+                        {
+                            titleZh: '产品特性',
+                            titleEn: 'Product Features',
+                            description: 'Illuminated and non-illuminated both available（可选发光/不发光）· Luminous, moving, more gorgeous · Night is even more appealing'
+                        },
+                        {
+                            titleZh: '常规尺寸',
+                            titleEn: 'Standard Sizes',
+                            items: ['40 × 70 × 95 CM', '42 × 100 × 95 CM', '60 × 90 CM']
+                        },
+                        {
+                            titleZh: '安装步骤',
+                            titleEn: 'Installation Steps',
+                            steps: [
+                                '取出所有配件 / Take out all the accessories',
+                                '连接杆 / Connecting rod',
+                                '互相紧密连接 / Each other closely',
+                                '杆插入底座固定 / The rod is inserted into the chassis fixed',
+                                '支架固定在弹力布上 / The bracket is attached on the elastic cloth',
+                                '安装完成 / Installation is completed'
+                            ]
+                        },
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-PO-01-A', size: '39.5×95.5×100 CM', graphic: '104×140 CM', carton: '62×43.5×13.5 CM', qty: '1', weight: '7 KG' },
+                                { model: 'WK-PO-02-B', size: '49.5×79.5×100 CM', graphic: '104×340 CM', carton: '84×53×13.5 CM', qty: '1', weight: '8 KG' },
+                                { model: 'WK-PO-03-C', size: '59.5×95.5×100 CM', graphic: '104×185 CM', carton: '65×65×11 CM', qty: '1', weight: '7 KG' }
+                            ]
+                        }
+                    ],
+                    keywords: ['张拉布', '前台', 'tension fabric', 'fabric counter', 'reception counter', 'display counter', 'WK-PO-01-A', 'WK-PO-02-B', 'WK-PO-03-C', 'illuminated', 'booth furniture'],
+                    tags: 'Tension Fabric Counter, 张拉布前台, Fabric Counter, counter, reception desk, exhibition counter',
+                    pdf: '广西伟群帐篷制造有限公司2025改.pdf',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
 
@@ -247,7 +382,7 @@ class ProductManager {
                     encodeURI('images/products/racegate/V Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
-                pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=9',
+                pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                 variantTable: {
                     headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
                     rows: [
@@ -282,7 +417,7 @@ class ProductManager {
                     encodeURI('images/products/racegate/O Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
-                pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=9',
+                pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                 variantTable: {
                     headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
                     rows: [
@@ -317,7 +452,7 @@ class ProductManager {
                     encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
-                pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=9',
+                pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                 variantTable: {
                     headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
                     rows: [
@@ -1156,8 +1291,8 @@ class ProductManager {
         // Default PDF mapping (catalogs)
         // If a product does not provide a dedicated PDF/page link, attach the most relevant catalog.
         const DEFAULT_PDF_BY_CATEGORY = {
-            tents: 'data/奥动帐篷产品画册20250925.pdf',
-            default: 'data/广西伟群帐篷制造有限公司2025改.pdf'
+            tents: '广西伟群帐篷制造有限公司2025改.pdf',
+            default: '广西伟群帐篷制造有限公司2025改.pdf'
         };
 
         this.products.forEach((p) => {
@@ -2296,7 +2431,7 @@ getProductIcon(category) {
         const modal = document.getElementById('pdfModal');
         if (!modal) return;
 
-        const defaultPdf = 'data/广西伟群帐篷制造有限公司2025改.pdf';
+        const defaultPdf = '广西伟群帐篷制造有限公司2025改.pdf';
         const productPdf = (product && product.pdf) ? String(product.pdf) : '';
         const href = productPdf || defaultPdf;
 

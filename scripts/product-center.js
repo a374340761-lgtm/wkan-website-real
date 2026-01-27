@@ -2,6 +2,23 @@
 (function () {
   'use strict';
 
+  // DETAIL ROUTING (deep-link support)
+  // If someone lands on product-center.html with ?open=<id> or ?id=<id>,
+  // redirect to the canonical product detail route: product.html?id=<id>.
+  // This keeps all entry points compatible with id-based routing.
+  (function maybeRedirectToProductDetail() {
+    try {
+      const url = new URL(window.location.href);
+      const openId = url.searchParams.get('open') || url.searchParams.get('id') || '';
+      // Don't hijack normal category browsing (cat=...)
+      const cat = url.searchParams.get('cat') || '';
+      if (!openId || cat) return;
+      window.location.replace(`product.html?id=${encodeURIComponent(openId)}`);
+    } catch (e) {
+      // ignore
+    }
+  })();
+
   function getCurrentLang() {
     const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
     if (htmlLang === 'zh' || htmlLang === 'en') return htmlLang;

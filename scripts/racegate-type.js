@@ -80,7 +80,7 @@
     const cards = products.map(p => {
       const name = (getLang() === 'zh') ? (p.nameZh || p.name || p.nameEn) : (p.nameEn || p.name || p.nameZh);
       const desc = (getLang() === 'zh') ? (p.shortZh || p.descriptionZh || '') : (p.shortEn || p.descriptionEn || '');
-      const detailUrl = `product-detail.html?id=${encodeURIComponent(p.id)}`;
+      const detailUrl = `product.html?id=${encodeURIComponent(p.id)}`;
 
       return `
         <article class="ap-card" style="overflow:hidden;">

@@ -396,6 +396,51 @@ document.addEventListener('DOMContentLoaded', () => {
             variantsEl.appendChild(tbl);
         }
 
+        // Catalog reference image (产品画册参考)
+        if (variantsEl && (product.referenceImage || product.referenceImageLabel)) {
+            const src = product.referenceImage || '';
+            if (src) {
+                const block = document.createElement('div');
+
+                const title = document.createElement('h3');
+                // Requirement: section named “产品画册参考”
+                title.textContent = '产品画册参考';
+                block.appendChild(title);
+
+                const caption = document.createElement('div');
+                caption.style.marginTop = '4px';
+                caption.style.opacity = '0.85';
+                caption.style.fontSize = '13px';
+                caption.textContent = (getCurrentLang() === 'zh')
+                    ? '参考目录图片（用于对照款式与参数）'
+                    : 'Catalog reference image (for style/spec reference)';
+                block.appendChild(caption);
+
+                const img = document.createElement('img');
+                img.src = src;
+                img.alt = (product.referenceImageLabel || '产品画册参考');
+                img.loading = 'lazy';
+                img.style.display = 'block';
+                img.style.width = '100%';
+                img.style.maxWidth = '920px';
+                img.style.marginTop = '10px';
+                img.style.border = '1px solid #eee';
+                img.style.borderRadius = '10px';
+                img.style.cursor = 'zoom-in';
+                img.onerror = function() { this.style.display = 'none'; };
+                img.addEventListener('click', () => {
+                    try {
+                        window.open(src, '_blank', 'noopener');
+                    } catch (e) {
+                        // ignore
+                    }
+                });
+                block.appendChild(img);
+
+                variantsEl.appendChild(block);
+            }
+        }
+
         const hasSpecObjects = product.specsZh || product.specsEn;
         if (specsEl) {
             if (hasSpecObjects) {

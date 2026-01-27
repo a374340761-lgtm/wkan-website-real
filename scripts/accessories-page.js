@@ -164,12 +164,12 @@
 
         const detailsLink = document.createElement('a');
         detailsLink.className = 'btn btn-secondary product-details-btn';
-        detailsLink.href = `product-detail.html?id=${encodeURIComponent(id)}`;
+        detailsLink.href = `product.html?id=${encodeURIComponent(id)}`;
         detailsLink.setAttribute('data-translate', 'view_details');
         detailsLink.textContent = '';
 
         const go = () => {
-            location.href = `product-detail.html?id=${encodeURIComponent(id)}`;
+            location.href = `product.html?id=${encodeURIComponent(id)}`;
         };
 
         thumb.addEventListener('click', go);

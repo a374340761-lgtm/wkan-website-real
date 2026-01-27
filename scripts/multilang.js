@@ -45,6 +45,26 @@ class MultiLanguageSystem {
                 nav_products: '产品中心',
                 nav_services: '服务范围',
                 nav_contact: '联系我们',
+
+                // Language gate
+                language_gate_title: '欢迎',
+                language_gate_desc: '请选择语言',
+
+                // All Products
+                products_cat_all: '全部分类',
+
+                // Listing spec tags
+                spec_sizes_sml: '尺寸：S / M / L',
+                spec_print_single_double: '印刷：单面 / 双面',
+                spec_base_options: '底座可选',
+                spec_sizes_prefix: '尺寸：',
+                spec_weight_prefix: '重量：',
+                spec_sizes_default: '尺寸：3×3m / 3×6m',
+                spec_custom_print: '支持定制印刷',
+                spec_display_width: '宽度：3m / 4m / 5m',
+                spec_display_height: '高度：2.3m',
+                spec_display_shapes: '直形 / 弧形',
+                spec_customizable: '支持定制',
                 
                 // 公司信息
                 company_name: '广西伟群帐篷制造有限公司',
@@ -616,6 +636,26 @@ class MultiLanguageSystem {
                 nav_products: 'Products',
                 nav_services: 'Services',
                 nav_contact: 'Contact',
+
+                // Language gate
+                language_gate_title: 'Welcome',
+                language_gate_desc: 'Please select your language',
+
+                // All Products
+                products_cat_all: 'All Categories',
+
+                // Listing spec tags
+                spec_sizes_sml: 'Sizes: S / M / L',
+                spec_print_single_double: 'Print: Single / Double',
+                spec_base_options: 'Base Options',
+                spec_sizes_prefix: 'Sizes:',
+                spec_weight_prefix: 'Weight:',
+                spec_sizes_default: 'Sizes: 3×3m / 3×6m',
+                spec_custom_print: 'Custom Print',
+                spec_display_width: 'Width: 3m / 4m / 5m',
+                spec_display_height: 'Height: 2.3m',
+                spec_display_shapes: 'Straight / Curved',
+                spec_customizable: 'Customizable',
                 
                 // Company Info
                 company_name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
@@ -1777,11 +1817,13 @@ class MultiLanguageSystem {
         document.querySelectorAll('[data-company-en]').forEach(el => {
             el.textContent = COMPANY_NAME.en;
         });
-        
+
         // ✅ 根据 ENABLED_LANGS 自动隐藏/显示语言选项
-        document.querySelectorAll('[data-lang-option]').forEach(btn => {
-            const code = btn.getAttribute('data-lang-option');
-            btn.style.display = ENABLED_LANGS.includes(code) ? '' : 'none';
+        // 兼容：部分页面使用 data-lang（但未加 data-lang-option）
+        document.querySelectorAll('[data-lang-option], [data-lang]').forEach(el => {
+            const code = (el.getAttribute('data-lang-option') || el.getAttribute('data-lang') || '').toLowerCase();
+            if (!code) return;
+            el.style.display = ENABLED_LANGS.includes(code) ? '' : 'none';
         });
     }
     

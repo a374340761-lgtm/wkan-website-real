@@ -1,6 +1,18 @@
-// Universal product detail page controller (product-detail.html?id=...)
+// Universal product detail page controller (product.html?id=...)
 document.addEventListener('DOMContentLoaded', () => {
     let attachedOnce = false;
+
+    // Legacy route compatibility: product-detail.html?id=... -> product.html?id=...
+    try {
+        const path = String(window.location.pathname || '').toLowerCase();
+        if (path.endsWith('/product-detail.html') || path.endsWith('product-detail.html')) {
+            const target = `product.html${window.location.search || ''}${window.location.hash || ''}`;
+            window.location.replace(target);
+            return;
+        }
+    } catch (e) {
+        // ignore
+    }
 
     const escapeHtml = (s) => {
         return String(s == null ? '' : s)
@@ -34,6 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (e) {
             return 'en';
         }
+    };
+
+    const getCategoryLabel = (cat) => {
+        const map = {
+            tents: 'home_cat_tents_title',
+            flags: 'menu_beach_flags',
+            displays: 'menu_popup_displays',
+            accessories: 'menu_accessories',
+            racegate: 'home_cat_racegate_title',
+            custom: 'category_custom'
+        };
+        const key = map[String(cat || '').toLowerCase()];
+        if (!key) return String(cat || '');
+        if (window.multiLang && typeof window.multiLang.t === 'function') return window.multiLang.t(key);
+        return String(cat || '');
     };
 
     const getLocalized = (product, field) => {
@@ -78,35 +105,21 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => waitForProductManager(cb, tries + 1), 50);
     };
 
-    const renderNotFound = () => {
-        const notFound = document.getElementById('productNotFound');
-        const body = document.getElementById('productDetailBody');
-        const tabs = document.getElementById('productTabs');
-        const related = document.getElementById('relatedSection');
-        setVisible(notFound, true);
-        setVisible(body, false);
-        setVisible(tabs, false);
-        setVisible(related, false);
-
-        const bc = document.getElementById('breadcrumbProduct');
-        if (bc) bc.textContent = '';
-
-        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
-            window.multiLang.translatePage();
-        }
+    const redirectToAllProducts = () => {
+        window.location.replace('all-products.html');
     };
 
     const renderDetail = (pm) => {
         const params = new URLSearchParams(location.search);
         const productId = params.get('id');
         if (!pm || !productId) {
-            renderNotFound();
+            redirectToAllProducts();
             return;
         }
 
         const product = pm.products.find(p => String(p.id) === String(productId));
         if (!product) {
-            renderNotFound();
+            redirectToAllProducts();
             return;
         }
 
@@ -159,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const aCat = document.createElement('a');
             aCat.href = `all-products.html?cat=${encodeURIComponent(product.category || '')}`;
-            aCat.textContent = product.category || '';
+            aCat.textContent = getCategoryLabel(product.category || '');
 
             const cur = document.createElement('span');
             cur.id = 'breadcrumbProduct';
@@ -179,13 +192,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (bc) bc.textContent = name;
         }
 
-        // Back-to-products link (if present)
+        // If page contains any legacy back links, normalize them
         const backLink = document.querySelector('#productNotFound a[href^="all-products.html"]');
-        if (backLink) {
-            backLink.href = product.category
-                ? `all-products.html?cat=${encodeURIComponent(product.category)}`
-                : 'all-products.html';
-        }
+        if (backLink) backLink.href = 'all-products.html';
 
         // Main text
         const nameEl = document.getElementById('productName');
@@ -227,14 +236,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const variantsEl = document.getElementById('productVariants');
         if (variantsEl) variantsEl.innerHTML = '';
 
-        // Custom variants/spec table (e.g., RaceGate)
-        if (variantsEl && product.variantTable && Array.isArray(product.variantTable.headers) && Array.isArray(product.variantTable.rows)) {
-            const tableTitle = document.createElement('h3');
-            tableTitle.setAttribute('data-translate', 'models_and_specs');
-            tableTitle.textContent = '';
+        const renderVariantTable = (tableDef) => {
+            if (!tableDef) return null;
+            const lang = getCurrentLang();
 
-            const headers = product.variantTable.headers;
-            const rows = product.variantTable.rows;
+            const title = (lang === 'zh')
+                ? (tableDef.titleZh || tableDef.title || '')
+                : (tableDef.titleEn || tableDef.title || '');
+            const titleKey = tableDef.titleKey;
+
+            const columns = Array.isArray(tableDef.columns) ? tableDef.columns : null;
+            const headers = Array.isArray(tableDef.headers)
+                ? tableDef.headers
+                : (lang === 'zh' ? tableDef.headersZh : tableDef.headersEn);
+            const rows = Array.isArray(tableDef.rows) ? tableDef.rows : [];
+
+            if ((!columns || columns.length === 0) && (!headers || headers.length === 0)) return null;
+
+            const wrap = document.createElement('div');
+
+            if (titleKey || title) {
+                const h3 = document.createElement('h3');
+                if (titleKey) {
+                    h3.setAttribute('data-translate', titleKey);
+                    h3.textContent = '';
+                } else {
+                    h3.textContent = title;
+                }
+                wrap.appendChild(h3);
+            }
 
             const tbl = document.createElement('table');
             tbl.className = 'variants-table';
@@ -243,37 +273,76 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const thead = document.createElement('thead');
             const trh = document.createElement('tr');
-            headers.forEach((h) => {
-                const th = document.createElement('th');
-                th.style.textAlign = 'left';
-                th.style.padding = '8px';
-                th.style.borderBottom = '1px solid #eaeaea';
-                th.textContent = h;
-                trh.appendChild(th);
-            });
+
+            if (columns) {
+                columns.forEach((c) => {
+                    const th = document.createElement('th');
+                    th.style.textAlign = 'left';
+                    th.style.padding = '8px';
+                    th.style.borderBottom = '1px solid #eaeaea';
+                    th.textContent = (lang === 'zh') ? (c.labelZh || c.label || c.key || '') : (c.labelEn || c.label || c.key || '');
+                    trh.appendChild(th);
+                });
+            } else {
+                (headers || []).forEach((h) => {
+                    const th = document.createElement('th');
+                    th.style.textAlign = 'left';
+                    th.style.padding = '8px';
+                    th.style.borderBottom = '1px solid #eaeaea';
+                    th.textContent = h;
+                    trh.appendChild(th);
+                });
+            }
+
             thead.appendChild(trh);
             tbl.appendChild(thead);
 
             const tbody = document.createElement('tbody');
             rows.forEach((r) => {
                 const tr = document.createElement('tr');
-                headers.forEach((h) => {
-                    const td = document.createElement('td');
-                    td.style.padding = '8px';
-                    td.style.borderBottom = '1px solid #f3f3f3';
-                    const key = (h || '').toString();
-                    const altKey = key.replace(/\s+/g, '');
-                    const lowKey = key.toLowerCase();
-                    const val = r && (r[key] ?? r[altKey] ?? r[lowKey]);
-                    td.textContent = val == null ? '' : String(val);
-                    tr.appendChild(td);
-                });
+                if (columns) {
+                    columns.forEach((c) => {
+                        const td = document.createElement('td');
+                        td.style.padding = '8px';
+                        td.style.borderBottom = '1px solid #f3f3f3';
+                        const val = r && (r[c.key] ?? r[String(c.key).toLowerCase()]);
+                        td.textContent = val == null ? '' : String(val);
+                        tr.appendChild(td);
+                    });
+                } else {
+                    (headers || []).forEach((h) => {
+                        const td = document.createElement('td');
+                        td.style.padding = '8px';
+                        td.style.borderBottom = '1px solid #f3f3f3';
+                        const key = (h || '').toString();
+                        const altKey = key.replace(/\s+/g, '');
+                        const lowKey = key.toLowerCase();
+                        const val = r && (r[key] ?? r[altKey] ?? r[lowKey]);
+                        td.textContent = val == null ? '' : String(val);
+                        tr.appendChild(td);
+                    });
+                }
                 tbody.appendChild(tr);
             });
             tbl.appendChild(tbody);
 
-            variantsEl.appendChild(tableTitle);
-            variantsEl.appendChild(tbl);
+            wrap.appendChild(tbl);
+            return wrap;
+        };
+
+        // Custom variants/spec table(s)
+        if (variantsEl && Array.isArray(product.variantTables) && product.variantTables.length > 0) {
+            product.variantTables.forEach((t) => {
+                const node = renderVariantTable(t);
+                if (node) variantsEl.appendChild(node);
+            });
+        } else if (variantsEl && product.variantTable && Array.isArray(product.variantTable.headers) && Array.isArray(product.variantTable.rows)) {
+            const node = renderVariantTable({
+                titleKey: 'models_and_specs',
+                headers: product.variantTable.headers,
+                rows: product.variantTable.rows
+            });
+            if (node) variantsEl.appendChild(node);
         } else if (variantsEl && product.variants && Array.isArray(product.variants) && product.variants.length > 0) {
             const tableTitle = document.createElement('h3');
             tableTitle.setAttribute('data-translate', 'models_and_specs');

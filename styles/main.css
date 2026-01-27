@@ -6048,9 +6048,18 @@ html[lang="en"] .hero-slide p {
     margin-top: var(--spacing-sm);
 }
 
+.tent-type-detail__meta{
+    color: var(--wk-gray-700);
+    line-height: 1.6;
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+}
+
 .tent-type-detail__tableWrap{
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .tent-type-detail__table{
@@ -6065,6 +6074,7 @@ html[lang="en"] .hero-slide p {
     padding: 10px 12px;
     vertical-align: top;
     text-align: left;
+    white-space: nowrap;
 }
 
 .tent-type-detail__table thead th{

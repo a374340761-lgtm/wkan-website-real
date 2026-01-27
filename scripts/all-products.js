@@ -98,6 +98,49 @@
         return url.searchParams.get('cat') || 'all';
     }
 
+    function setQueryParams(nextParams) {
+        const url = new URL(window.location.href);
+        Object.entries(nextParams || {}).forEach(([key, value]) => {
+            if (value === null || value === undefined || value === '' || value === false) url.searchParams.delete(key);
+            else url.searchParams.set(key, String(value));
+        });
+        // Normalize cat=all to no param
+        if (url.searchParams.get('cat') === 'all') url.searchParams.delete('cat');
+        const next = url.pathname + (url.searchParams.toString() ? `?${url.searchParams.toString()}` : '') + url.hash;
+        window.history.replaceState({}, '', next);
+    }
+
+    function getCategoryLabelKey(cat) {
+        const map = {
+            tents: 'home_cat_tents_title',
+            flags: 'menu_beach_flags',
+            displays: 'menu_popup_displays',
+            accessories: 'menu_accessories',
+            racegate: 'home_cat_racegate_title',
+            custom: 'category_custom'
+        };
+        return map[cat] || null;
+    }
+
+    function updateHeadingAndBreadcrumb(cat) {
+        const headingEl = document.getElementById('allProductsHeading');
+        const crumbEl = document.getElementById('allProductsBreadcrumbCurrent');
+        const t = (key) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(key) : key);
+
+        if (!headingEl && !crumbEl) return;
+
+        if (!cat || cat === 'all') {
+            if (headingEl) headingEl.textContent = t('nav_all_products');
+            if (crumbEl) crumbEl.textContent = t('nav_all_products');
+            return;
+        }
+
+        const key = getCategoryLabelKey(cat);
+        const label = key ? t(key) : cat;
+        if (headingEl) headingEl.textContent = label;
+        if (crumbEl) crumbEl.textContent = label;
+    }
+
     function ensureInvalidCatNotice() {
         if (invalidCatNoticeEl) return invalidCatNoticeEl;
         // Inline notice (shown only when URL cat is invalid)
@@ -165,6 +208,15 @@
         if (lang === 'ja' && product.nameJa) return product.nameJa;
         if (lang === 'ko' && product.nameKo) return product.nameKo;
         return product.name || product.nameEn || 'Product';
+    }
+
+    function safeText(text) {
+        return String(text == null ? '' : text)
+            .replaceAll('&', '&amp;')
+            .replaceAll('<', '&lt;')
+            .replaceAll('>', '&gt;')
+            .replaceAll('"', '&quot;')
+            .replaceAll("'", '&#39;');
     }
 
     // ===================== Multi-language Search Dictionary (CN -> EN) =====================
@@ -366,15 +418,15 @@
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
             const quoteUrl = `./index.html?product=${productParam}#contact`;
-            // 构建产品详情页链接（product-detail.html）；无 id 时回退到分类页
-            const detailUrl = p.id ? `./product-detail.html?id=${encodeURIComponent(p.id)}` : `./all-products.html?cat=${p.category}`;
+            // 构建产品详情页链接（product.html）；无 id 时回退到分类页
+            const detailUrl = p.id ? `./product.html?id=${encodeURIComponent(p.id)}` : `./all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
             
             // 提取规格信息（从 tags 或 category 推断）
             const specs = [];
             if (p.category === 'flags') {
-                specs.push('<span class="spec-tag">Sizes: S / M / L</span>');
-                specs.push('<span class="spec-tag">Print: Single / Double</span>');
-                specs.push('<span class="spec-tag">Base Options</span>');
+                specs.push('<span class="spec-tag" data-translate="spec_sizes_sml"></span>');
+                specs.push('<span class="spec-tag" data-translate="spec_print_single_double"></span>');
+                specs.push('<span class="spec-tag" data-translate="spec_base_options"></span>');
             } else if (p.category === 'tents') {
                 // Prefer exact size/weight info from dataset (30/40/50 stock tents)
                 const sizes = [];
@@ -396,23 +448,23 @@
 
                 if (uniqSizes.length) {
                     const shortSizes = uniqSizes.slice(0, 4).join(' / ') + (uniqSizes.length > 4 ? ' …' : '');
-                    specs.push(`<span class="spec-tag">Sizes: ${shortSizes}</span>`);
+                    specs.push(`<span class="spec-tag">${safeText((window.multiLang && typeof window.multiLang.t === 'function') ? window.multiLang.t('spec_sizes_prefix') : 'Sizes:')} ${safeText(shortSizes)}</span>`);
                 }
                 if (uniqWeights.length) {
                     const shortWeights = uniqWeights.slice(0, 4).join(' / ') + (uniqWeights.length > 4 ? ' …' : '');
-                    specs.push(`<span class="spec-tag">Weight: ${shortWeights}</span>`);
+                    specs.push(`<span class="spec-tag">${safeText((window.multiLang && typeof window.multiLang.t === 'function') ? window.multiLang.t('spec_weight_prefix') : 'Weight:')} ${safeText(shortWeights)}</span>`);
                 }
                 if (!uniqSizes.length && !uniqWeights.length) {
-                    specs.push('<span class="spec-tag">Sizes: 3×3m / 3×6m</span>');
+                    specs.push('<span class="spec-tag" data-translate="spec_sizes_default"></span>');
                 }
                 // Surface-level defaults for the rest
-                specs.push('<span class="spec-tag">Custom Print</span>');
+                specs.push('<span class="spec-tag" data-translate="spec_custom_print"></span>');
             } else if (p.category === 'displays') {
-                specs.push('<span class="spec-tag">Width: 3m / 4m / 5m</span>');
-                specs.push('<span class="spec-tag">Height: 2.3m</span>');
-                specs.push('<span class="spec-tag">Straight / Curved</span>');
+                specs.push('<span class="spec-tag" data-translate="spec_display_width"></span>');
+                specs.push('<span class="spec-tag" data-translate="spec_display_height"></span>');
+                specs.push('<span class="spec-tag" data-translate="spec_display_shapes"></span>');
             } else {
-                specs.push('<span class="spec-tag">Customizable</span>');
+                specs.push('<span class="spec-tag" data-translate="spec_customizable"></span>');
             }
 
             // image area: if product.grid present, use sprite-thumb div to crop from sprite
@@ -438,16 +490,18 @@
                             ${specs.join('')}
                         </div>
                         <div class="product-actions" style="display: flex; gap: 10px; margin-top: 1rem;">
-                            <a class="btn btn-primary product-btn" href="${quoteUrl}" style="flex: 1; text-align: center;">
-                                <span class="zh">获取报价</span>
-                                <span class="en">Get a Quote</span>
-                            </a>
+                            <a class="btn btn-primary product-btn" href="${quoteUrl}" style="flex: 1; text-align: center;" data-translate="btn_get_quote"></a>
                             <a class="btn btn-secondary product-details-btn" href="${detailUrl}" style="flex: 1; text-align: center;" data-translate="view_details"></a>
                         </div>
                     </div>
                 </article>
             `;
             }).join('');
+
+            // Ensure newly created translatable nodes are translated
+            if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                window.multiLang.translatePage();
+            }
         }
 
         // Tent Types section (tents category only)
@@ -626,6 +680,16 @@
         const tag = getQueryTag(); // 获取 URL 中的 tag 参数
         const tentType = getQueryTentType();
 
+        // Keep URL in sync with current interactive state
+        setQueryParams({
+            cat: cat,
+            q: q,
+            // type only makes sense under tents
+            type: (cat === 'tents') ? (tentType || null) : null
+        });
+
+        updateHeadingAndBreadcrumb(cat);
+
         const typeNotice = ensureTentTypeNotice();
         typeNotice.style.display = 'none';
 
@@ -639,14 +703,17 @@
                 hitType = inferTentType(p) === tentType;
             }
 
-            // 标签筛选（用于 stock / replacement）
+            // 标签筛选（用于 stock / replacement 等）
             let hitTag = true;
             if (tag) {
+                const t = String(tag || '').toLowerCase();
                 const productTags = Array.isArray(p.tags) ? p.tags.join(' ') : (p.tags || '');
                 const productName = getProductName(p) || '';
                 const productModel = (p.model || '') || '';
-                const searchText = `${productTags} ${productName} ${productModel}`.toLowerCase();
-                hitTag = searchText.includes(tag.toLowerCase());
+                const productType = (p.type || '') || '';
+                const productSub = (p.subcategory || p.subCategory || '') || '';
+                const searchText = `${productTags} ${productName} ${productModel} ${productType} ${productSub}`.toLowerCase();
+                hitTag = searchText.includes(t);
             }
 
             // 搜索关键词筛选（支持中文→英文扩展）
@@ -676,6 +743,9 @@
         // 1) URL cat 预选
         const catFromUrl = getQueryCat();
         const validCats = Array.from(new Set(products.map(p => p.category).filter(Boolean)));
+
+        // Make sure heading/breadcrumb matches URL on load
+        updateHeadingAndBreadcrumb((catFromUrl && validCats.includes(catFromUrl)) ? catFromUrl : 'all');
 
         // Ensure category <select> contains all categories present in data
         (function ensureCategoryOptions() {

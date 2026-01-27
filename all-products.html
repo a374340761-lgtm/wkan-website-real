@@ -150,13 +150,13 @@
     <!-- Language Gate -->
     <div id="languageGate" class="language-gate" style="display: none;">
         <div class="language-gate-box">
-            <h2>Welcome</h2>
-            <p>Please select your language</p>
+            <h2 data-translate="language_gate_title"></h2>
+            <p data-translate="language_gate_desc"></p>
             <div class="language-options">
-                <button data-lang="en">English</button>
-                <button data-lang="zh">中文</button>
-                <button data-lang="ja">日本語</button>
-                <button data-lang="ko">한국어</button>
+                <button data-lang="en" data-lang-option="en">English</button>
+                <button data-lang="zh" data-lang-option="zh">中文</button>
+                <button data-lang="ja" data-lang-option="ja">日本語</button>
+                <button data-lang="ko" data-lang-option="ko">한국어</button>
             </div>
         </div>
     </div>
@@ -255,86 +255,31 @@
             <div class="container">
                 <!-- 面包屑 -->
                 <nav class="breadcrumb" style="margin-bottom: 1.5rem;">
-                    <a href="index.html" data-translate="breadcrumb_home">Home</a>
+                    <a href="index.html" data-translate="breadcrumb_home"></a>
                     <span>/</span>
-                    <span class="current">
-                        <span class="zh">全部产品</span>
-                        <span class="en">All Products</span>
-                    </span>
+                    <span id="allProductsBreadcrumbCurrent" class="current" data-translate="nav_all_products"></span>
                 </nav>
 
                 <div class="ap-head">
-                    <h1>
-                        <span class="zh">全部产品</span>
-                        <span class="en">Browse Products</span>
-                    </h1>
+                    <h1 id="allProductsHeading" data-translate="nav_all_products"></h1>
 
                     <div class="ap-tools">
                         <input id="searchInput" type="text"
-                            placeholder="Search by name / model / keyword..."
+                            placeholder=""
                             data-translate-placeholder="products_search_placeholder" />
                         <select id="catSelect">
-                            <option value="all">
-                                <span class="zh">全部分类</span>
-                                <span class="en">All Categories</span>
-                            </option>
-                            <option value="tents">
-                                <span class="zh">帐篷</span>
-                                <span class="en">Tents</span>
-                            </option>
-                            <option value="flags">
-                                <span class="zh">沙滩旗</span>
-                                <span class="en">Beach Flags</span>
-                            </option>
-                            <option value="displays">
-                                <span class="zh">快幕秀</span>
-                                <span class="en">Pop-up Display</span>
-                            </option>
-                            <option value="accessories">
-                                <span class="zh">配件</span>
-                                <span class="en">Accessories</span>
-                            </option>
-                            <option value="racegate">
-                                <span class="zh">竞速拱门</span>
-                                <span class="en">Race Gate</span>
-                            </option>
-                            <option value="custom">
-                                <span class="zh">定制</span>
-                                <span class="en">Custom</span>
-                            </option>
+                            <option value="all" data-translate="products_cat_all"></option>
+                            <option value="tents" data-translate="home_cat_tents_title"></option>
+                            <option value="flags" data-translate="menu_beach_flags"></option>
+                            <option value="displays" data-translate="menu_popup_displays"></option>
+                            <option value="accessories" data-translate="menu_accessories"></option>
+                            <option value="racegate" data-translate="home_cat_racegate_title"></option>
+                            <option value="custom" data-translate="category_custom"></option>
                         </select>
                     </div>
                 </div>
 
-                <div id="productsGrid" class="ap-grid">
-                    <div class="ap-card">
-                        <div class="ap-img">
-                            <img src="images/products/tents/aodong-tent.png" alt="Tent" loading="lazy" onerror="this.src='images/placeholder.png';">
-                        </div>
-                        <div class="ap-body">
-                            <h3>帐篷</h3>
-                            <p>专业帐篷系列，包括快幕秀、拉网、升降台等多种类型，适用于各种户外活动和展览展示</p>
-                        </div>
-                    </div>
-                    <div class="ap-card">
-                        <div class="ap-img">
-                            <img src="images/products/flags/beach-flag-poles.png" alt="Weiqun Beach Flag Poles" loading="lazy" onerror="this.src='images/placeholder.png';">
-                        </div>
-                        <div class="ap-body">
-                            <h3>伟群牌沙滩旗杆</h3>
-                            <p>专业沙滩旗杆产品，包括多种材质和规格，适用于户外广告、品牌展示和活动标识</p>
-                        </div>
-                    </div>
-                    <div class="ap-card">
-                        <div class="ap-img">
-                            <img src="images/products/tents/tent-frame.png" alt="Tent Frame" loading="lazy" onerror="this.src='images/placeholder.png';">
-                        </div>
-                        <div class="ap-body">
-                            <h3>帐篷框架</h3>
-                            <p>专业帐篷框架系统，结构坚固，易于组装，适用于各种帐篷搭建需求</p>
-                        </div>
-                    </div>
-                </div>
+                <div id="productsGrid" class="ap-grid"></div>
                 <div id="emptyState" class="ap-empty" style="display: none;">
                     <p data-translate="products_no_results">未找到匹配的产品</p>
                 </div>

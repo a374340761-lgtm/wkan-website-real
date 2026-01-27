@@ -125,6 +125,7 @@
   function renderTableFromSpec(item, selectedVariantKey) {
     const lang = getCurrentLang();
     let table = item && item.specTable ? item.specTable : null;
+    let materialNoteHtml = '';
 
     // Inflatable: one type with internal variants.
     if (!table && item && Array.isArray(item.variants) && item.variants.length) {
@@ -152,11 +153,18 @@
 
     // Back-compat: folding types use {models, materialEn/materialZh, nameEn/nameZh}
     if (!table && item && Array.isArray(item.models) && item.models.length) {
+      if (item.materialEn || item.materialZh) {
+        const label = lang === 'zh' ? renderBilingual('材质', 'Material') : 'Material';
+        const value = lang === 'zh'
+          ? renderBilingual(safe(item.materialZh || ''), safe(item.materialEn || ''))
+          : safe(item.materialEn || item.materialZh || '');
+        materialNoteHtml = `<div class="tent-type-detail__meta">${label}: ${value}</div>`;
+      }
+
       table = {
         columns: [
           { key: 'model', labelZh: '型号', labelEn: 'Model' },
           { key: 'name', labelZh: '名称', labelEn: 'Name' },
-          { key: 'material', labelZh: '材质', labelEn: 'Material' },
           { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
           { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
         ],
@@ -165,9 +173,6 @@
           name: lang === 'zh'
             ? `${safe(item.nameZh || '')} / ${safe(item.nameEn || '')}`
             : safe(item.nameEn || ''),
-          material: lang === 'zh'
-            ? `${safe(item.materialZh || '')} / ${safe(item.materialEn || '')}`
-            : safe(item.materialEn || ''),
           size: m.size,
           weight: m.weight
         }))
@@ -212,6 +217,7 @@
 
         <div class="tent-type-detail__block">
           <div class="tent-type-detail__blockTitle">${lang === 'zh' ? '型号参数' : 'Models & Specs'}</div>
+          ${materialNoteHtml}
           <div class="tent-type-detail__tableWrap">
             <table class="tent-type-detail__table">
               <thead><tr>${headerHtml}</tr></thead>

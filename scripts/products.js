@@ -2,22 +2,22 @@
 
 // Hero slides data (centralized)
 window.HERO_SLIDES = [
-  {
-    id: 'displays',
-    image: 'images/hero/伟群快幕秀照片.jpeg',
-    alt: 'Pop-up Display System',
-    kickerZh: '畅销产品 · 展示系统',
-    kickerEn: 'Top Seller · Display System',
-    titleZh: '快幕秀展示系统',
-    titleEn: 'Pop-up Display Backdrop',
-    subZh: '适用于展会、活动与品牌推广的快速搭建展示系统，轻便易携带，画面可更换。',
-    subEn: 'Portable pop-up display systems for exhibitions and events. Fast setup, lightweight structure, replaceable graphics.',
-    highlights: [
-      { label: 'Size', valueZh: '2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m', valueEn: '2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m' },
-      { label: 'Material', valueZh: '铝合金框架 + 布喷画面', valueEn: 'Aluminum frame + Fabric graphic' },
-      { label: 'Lead Time', valueZh: '样品 7–15 天｜大货 15–25 天', valueEn: '7–15 days (sample) · 15–25 days (bulk)' }
-    ],
-    ctaHref: './product-center.html?cat=displays',
+    {
+        id: 'displays',
+        image: 'images/hero/伟群快幕秀照片.jpeg',
+        alt: 'Pop-up Display System',
+        kickerZh: '畅销产品 · 展示系统',
+        kickerEn: 'Top Seller · Display System',
+        titleZh: '快幕秀展示系统',
+        titleEn: 'Pop-up Display Backdrop',
+        subZh: '适用于展会、活动与品牌推广的快速搭建展示系统，轻便易携带，画面可更换。',
+        subEn: 'Portable pop-up display systems for exhibitions and events. Fast setup, lightweight structure, replaceable graphics.',
+        highlights: [
+            { label: 'Size', valueZh: '2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m', valueEn: '2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m' },
+            { label: 'Material', valueZh: '铝合金框架 + 布喷画面', valueEn: 'Aluminum frame + Fabric graphic' },
+            { label: 'Lead Time', valueZh: '样品 7–15 天｜大货 15–25 天', valueEn: '7–15 days (sample) · 15–25 days (bulk)' }
+        ],
+        ctaHref: './product-center.html?cat=displays',
     ctaTextZh: '查看详情',
     ctaTextEn: 'View Details'
   },
@@ -69,18 +69,41 @@ class ProductManager {
                 id: 2001,
                 category: 'tents',
                 type: 'stock',
+                subcategory: 'stock',
                 model: 'WK-T30',
                 name: '30方管铁架帐篷',
                 nameEn: '30 Square Tube Iron Frame Tent',
                 nameZh: '30方管铁架帐篷',
                 shortEn: 'Durable 30 square tube iron frame tent; waterproof and fire-retardant.',
                 shortZh: '30方管铁架，防水阻燃，适合短期活动与租赁。',
+                short: '30方管铁架，防水阻燃，适合短期活动与租赁。',
+                descriptionEn: 'Economical pop-up canopy tent with 30 square tube iron frame. Great for rentals and short-term events. Optional 300D/600D fabric and custom printing.',
+                descriptionZh: '30方管铁架快开帐篷，经济耐用，适合租赁与短期活动。可选300D/600D面料及定制印刷。',
+                description: '30方管铁架快开帐篷，经济耐用，适合租赁与短期活动。可选300D/600D面料及定制印刷。',
+                materialEn: 'Iron',
+                materialZh: '铁',
                 image: 'images/products/tents/folding30/hero.png',
+                images: [
+                    'images/products/tents/folding30/hero.png',
+                    'images/products/tents/folding30/30square-tube-frame-iron-authenticaccessories.png',
+                    'images/products/tents/folding30/2D.png',
+                    'images/products/tents/folding30/Pop-up%20Canopy%20Tent%20hero.png'
+                ],
                 gallery: [
                     'images/products/tents/folding30/hero.png',
                     'images/products/tents/folding30/30square-tube-frame-iron-authenticaccessories.png',
                     'images/products/tents/folding30/2D.png',
                     'images/products/tents/folding30/Pop-up%20Canopy%20Tent%20hero.png'
+                ],
+                // Unified size table (model -> size -> weight)
+                variants: [
+                    { model: 'WK-T30I', size: '1.5 × 1.5 M', weight: '13 KG' },
+                    { model: 'WK-T30H', size: '2 × 2 M', weight: '15 KG' },
+                    { model: 'WK-T30A', size: '2 × 3 M', weight: '19 KG' },
+                    { model: 'WK-T30B', size: '2.5 × 2.5 M', weight: '16.5 KG' },
+                    { model: 'WK-T30C', size: '3 × 3 M', weight: '21 KG' },
+                    { model: 'WK-T30D', size: '3 × 4.5 M', weight: '27 KG' },
+                    { model: 'WK-T30E', size: '3 × 6 M', weight: '36 KG' }
                 ],
                 options: {
                     frameMaterial: { value: 'iron', detailEn: '30 square tube iron frame — robust and economical.', detailZh: '30方管铁架 — 结实且经济' },
@@ -88,18 +111,119 @@ class ProductManager {
                     printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
                 },
                 sizeTable: [
-                    { size: '1.5×1.5M', weight: '13KG' },
-                    { size: '2×2M', weight: '15KG' },
-                    { size: '2×3M', weight: '19KG' },
-                    { size: '2.5×2.5M', weight: '16.5KG' },
-                    { size: '3×3M', weight: '21KG' },
-                    { size: '3×4.5M', weight: '27KG' },
-                    { size: '3×6M', weight: '36KG' }
+                    { size: '1.5 × 1.5 M', weight: '13 KG' },
+                    { size: '2 × 2 M', weight: '15 KG' },
+                    { size: '2 × 3 M', weight: '19 KG' },
+                    { size: '2.5 × 2.5 M', weight: '16.5 KG' },
+                    { size: '3 × 3 M', weight: '21 KG' },
+                    { size: '3 × 4.5 M', weight: '27 KG' },
+                    { size: '3 × 6 M', weight: '36 KG' }
                 ],
+                searchableKeywords: ['WK-T30I','WK-T30H','WK-T30A','WK-T30B','WK-T30C','WK-T30D','WK-T30E','WK-T30','30','30square','iron','30方管'],
                 keywords: ['WK-T30','30','30square','iron','30方管'],
-                tags: 'WK-T30, 30, iron, folding tent',
+                tags: 'WK-T30, WK-T30I, WK-T30H, WK-T30A, WK-T30B, WK-T30C, WK-T30D, WK-T30E, 30, iron, folding tent, stock',
                 price: '询价'
             },
+                // ===== Displays: A-Frame / Backdrop =====
+                {
+                    id: 42001,
+                    category: 'displays',
+                    subcategory: 'a-frame',
+                    model: 'AD-H18 Series',
+                    name: 'A字架（A-Frame）',
+                    nameEn: 'A-Frame',
+                    nameZh: 'A字架（A-Frame）',
+                    short: 'A字架展示系统，可用于活动背板与品牌画面展示。',
+                    shortEn: 'A-frame display system for event branding and backdrop graphics.',
+                    shortZh: 'A字架展示系统，可用于活动背板与品牌画面展示。',
+                    description: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
+                    descriptionEn: 'A-frame display system (AD-H18 series). Multiple model sizes plus multiple graphic shape/size options for events, exhibitions and outdoor displays.',
+                    descriptionZh: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
+                    image: 'images/placeholder.svg',
+                    images: ['images/placeholder.svg'],
+                    gallery: ['images/placeholder.svg'],
+                    variantTables: [
+                        {
+                            titleZh: '形状与尺寸（S / M / L）',
+                            titleEn: 'Shape Types & Sizes (S / M / L)',
+                            columns: [
+                                { key: 'type', labelZh: '类型', labelEn: 'Type' },
+                                { key: 's', labelZh: 'S', labelEn: 'S' },
+                                { key: 'm', labelZh: 'M', labelEn: 'M' },
+                                { key: 'l', labelZh: 'L', labelEn: 'L' }
+                            ],
+                            rows: [
+                                { type: 'A', s: '70 × 120 cm', m: '100 × 200 cm', l: '110 × 260 cm' },
+                                { type: 'B', s: '62 × 126 cm', m: '100 × 200 cm', l: '110 × 260 cm' },
+                                { type: 'C', s: '100 × 100 cm', m: '120 × 120 cm', l: '150 × 150 cm' },
+                                { type: 'D', s: '100 × 100 cm', m: '120 × 120 cm', l: '150 × 150 cm' },
+                                { type: 'E', s: '', m: '80 × 120 cm', l: '110 × 220 cm' },
+                                { type: 'F', s: '80 × 100 cm', m: '80 × 120 cm', l: '110 × 220 cm' },
+                                { type: 'G', s: '80 × 100 cm', m: '80 × 120 cm', l: '110 × 220 cm' },
+                                { type: 'H', s: '80 × 150 cm', m: '100 × 200 cm', l: '100 × 250 cm' }
+                            ]
+                        },
+                        {
+                            titleZh: 'A字架型号参数',
+                            titleEn: 'A-Frame Models',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'AD-H18A', size: '100 × 200 cm', carton: '125 × 14 × 11 cm', qty: '1', weight: '5.5 kg' },
+                                { model: 'AD-H18B', size: '100 × 250 cm', carton: '125 × 14 × 11 cm', qty: '1', weight: '6.2 kg' },
+                                { model: 'AD-H18C', size: '100 × 300 cm', carton: '100 × 24 × 11 cm', qty: '1', weight: '7.0 kg' }
+                            ]
+                        }
+                    ],
+                    keywords: ['A-Frame', 'A frame', 'AD-H18', 'backdrop', 'display', 'A字架', '背板', '活动展示'],
+                    tags: 'A-Frame, AD-H18A, AD-H18B, AD-H18C, backdrop, display',
+                    pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=29',
+                    price: '询价'
+                },
+                {
+                    id: 42002,
+                    category: 'displays',
+                    subcategory: 'a-frame-backdrop',
+                    model: 'AD-H1',
+                    name: 'A字架背板系统（Backdrop）',
+                    nameEn: 'A-Frame Backdrop System',
+                    nameZh: 'A字架背板系统（Backdrop）',
+                    short: 'A字架背板系统，适合活动主视觉与背景展示。',
+                    shortEn: 'A-frame backdrop system for key visuals and event backdrops.',
+                    shortZh: 'A字架背板系统，适合活动主视觉与背景展示。',
+                    description: 'Backdrop System（AD-H1）。提供 150 × 90 cm / 180 × 90 cm 两种尺寸，装箱信息见型号参数表。',
+                    descriptionEn: 'Backdrop System (AD-H1). Two size options: 150 × 90 cm / 180 × 90 cm. Packing details are listed in the model table.',
+                    descriptionZh: 'Backdrop System（AD-H1）。提供 150 × 90 cm / 180 × 90 cm 两种尺寸，装箱信息见型号参数表。',
+                    image: 'images/placeholder.svg',
+                    images: ['images/placeholder.svg'],
+                    gallery: ['images/placeholder.svg'],
+                    variantTables: [
+                        {
+                            titleZh: 'Backdrop System 参数',
+                            titleEn: 'Backdrop System Specs',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'AD-H1', size: '150 × 90 cm', carton: '105 × 11 × 26 cm', qty: '1 set', weight: '8.2 kg' },
+                                { model: 'AD-H1', size: '180 × 90 cm', carton: '105 × 11 × 26 cm', qty: '1 set', weight: '8.2 kg' }
+                            ]
+                        }
+                    ],
+                    keywords: ['Backdrop', 'Backdrop System', 'AD-H1', 'A-Frame', 'display', '背板', '背景板'],
+                    tags: 'Backdrop System, AD-H1, A-Frame backdrop, display',
+                    pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=30',
+                    price: '询价'
+                },
 
             // ===== RaceGate (fiberglass) =====
             {
@@ -123,6 +247,7 @@ class ProductManager {
                     encodeURI('images/products/racegate/V Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
+                pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=9',
                 variantTable: {
                     headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
                     rows: [
@@ -157,6 +282,7 @@ class ProductManager {
                     encodeURI('images/products/racegate/O Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
+                pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=9',
                 variantTable: {
                     headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
                     rows: [
@@ -191,6 +317,7 @@ class ProductManager {
                     encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
+                pdf: 'data/广西伟群帐篷制造有限公司2025改.pdf#page=9',
                 variantTable: {
                     headers: ['Model', 'Material', 'Size', 'Diameter', 'Thickness', 'Pack Size', 'Pack Quantity'],
                     rows: [
@@ -208,16 +335,38 @@ class ProductManager {
                 id: 2002,
                 category: 'tents',
                 type: 'stock',
+                subcategory: 'stock',
                 model: 'WK-T40',
                 name: '40六角铝合金架帐篷',
                 nameEn: '40 Hexagon Aluminum Frame Tent',
                 nameZh: '40六角铝合金架帐篷',
                 shortEn: 'Hexagon 40 aluminum frame tent — lightweight and durable.',
                 shortZh: '40六角铝合金框架，轻便耐用，适合常规活动使用。',
+                short: '40六角铝合金框架，轻便耐用，适合常规活动使用。',
+                descriptionEn: 'Pop-up canopy tent with 40 hexagon aluminum frame — lighter and corrosion-resistant. Supports multiple sizes with 300D/600D fabric and optional printing.',
+                descriptionZh: '40六角铝合金快开帐篷，轻便耐腐蚀。多尺寸可选，支持300D/600D面料与定制印刷。',
+                description: '40六角铝合金快开帐篷，轻便耐腐蚀。多尺寸可选，支持300D/600D面料与定制印刷。',
+                materialEn: 'Aluminum',
+                materialZh: '铝合金',
                 image: 'images/products/tents/folding40/hero.png',
+                images: [
+                    'images/products/tents/folding40/hero.png',
+                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png'
+                ],
                 gallery: [
                     'images/products/tents/folding40/hero.png',
                     'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png'
+                ],
+                variants: [
+                    { model: 'WK-T40I', size: '1.5 × 1.5 M', weight: '12.5 KG' },
+                    { model: 'WK-T40H', size: '2 × 2 M', weight: '13 KG' },
+                    { model: 'WK-T40A', size: '2.5 × 2.5 M', weight: '16 KG' },
+                    { model: 'WK-T40B', size: '3 × 3 M', weight: '17 KG' },
+                    { model: 'WK-T40C', size: '3 × 4.5 M', weight: '20 KG' },
+                    { model: 'WK-T40D', size: '3 × 6 M', weight: '28 KG' },
+                    { model: 'WK-T40E', size: '4 × 4 M', weight: '20.5 KG' },
+                    { model: 'WK-T40F', size: '4 × 6 M', weight: '26 KG' },
+                    { model: 'WK-T40G', size: '4 × 8 M', weight: '33 KG' }
                 ],
                 options: {
                     frameMaterial: { value: 'aluminum', detailEn: '40 hexagon aluminum frame — lighter, corrosion resistant.', detailZh: '40六角铝合金框架 — 更轻，耐腐蚀' },
@@ -225,34 +374,56 @@ class ProductManager {
                     printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
                 },
                 sizeTable: [
-                    { size: '1.5×1.5M', weight: '12.5KG' },
-                    { size: '2×2M', weight: '13KG' },
-                    { size: '2.5×2.5M', weight: '16KG' },
-                    { size: '3×3M', weight: '17KG' },
-                    { size: '3×4.5M', weight: '20KG' },
-                    { size: '3×6M', weight: '28KG' },
-                    { size: '4×4M', weight: '20.5KG' },
-                    { size: '4×6M', weight: '26KG' },
-                    { size: '4×8M', weight: '33KG' }
+                    { size: '1.5 × 1.5 M', weight: '12.5 KG' },
+                    { size: '2 × 2 M', weight: '13 KG' },
+                    { size: '2.5 × 2.5 M', weight: '16 KG' },
+                    { size: '3 × 3 M', weight: '17 KG' },
+                    { size: '3 × 4.5 M', weight: '20 KG' },
+                    { size: '3 × 6 M', weight: '28 KG' },
+                    { size: '4 × 4 M', weight: '20.5 KG' },
+                    { size: '4 × 6 M', weight: '26 KG' },
+                    { size: '4 × 8 M', weight: '33 KG' }
                 ],
+                searchableKeywords: ['WK-T40I','WK-T40H','WK-T40A','WK-T40B','WK-T40C','WK-T40D','WK-T40E','WK-T40F','WK-T40G','WK-T40','40','40hexagon','aluminum','铝合金','六角'],
                 keywords: ['WK-T40','40','40hexagon','aluminum','铝合金'],
-                tags: 'WK-T40, 40, aluminum, folding tent',
+                tags: 'WK-T40, WK-T40I, WK-T40H, WK-T40A, WK-T40B, WK-T40C, WK-T40D, WK-T40E, WK-T40F, WK-T40G, 40, aluminum, folding tent, stock',
                 price: '询价'
             },
             {
                 id: 2003,
                 category: 'tents',
                 type: 'stock',
+                subcategory: 'stock',
                 model: 'WK-T50',
                 name: '50六角铝合金架帐篷',
                 nameEn: '50 Hexagon Aluminum Frame Tent',
                 nameZh: '50六角铝合金架帐篷',
                 shortEn: 'Heavy-duty 50 hexagon aluminum frame tent for larger events.',
                 shortZh: '50六角铝合金框架，承重更强，适合更大尺度活动。',
+                short: '50六角铝合金框架，承重更强，适合更大尺度活动。',
+                descriptionEn: 'Heavy-duty pop-up canopy with 50 hexagon aluminum frame for larger spans and frequent use. Multiple sizes available with 300D/600D fabric and optional printing.',
+                descriptionZh: '50六角铝合金快开帐篷，强度更高，适合更大跨度与高频使用。多尺寸可选，支持300D/600D面料与定制印刷。',
+                description: '50六角铝合金快开帐篷，强度更高，适合更大跨度与高频使用。多尺寸可选，支持300D/600D面料与定制印刷。',
+                materialEn: 'Aluminum',
+                materialZh: '铝合金',
                 image: 'images/products/tents/folding50/hero.png',
+                images: [
+                    'images/products/tents/folding50/hero.png',
+                    'images/products/tents/folding50/50square-tube-frame-aluminum-authenticaccessories.png'
+                ],
                 gallery: [
                     'images/products/tents/folding50/hero.png',
                     'images/products/tents/folding50/50square-tube-frame-aluminum-authenticaccessories.png'
+                ],
+                variants: [
+                    { model: 'WK-T50H', size: '2 × 2 M', weight: '20 KG' },
+                    { model: 'WK-T50A', size: '2.5 × 2.5 M', weight: '22 KG' },
+                    { model: 'WK-T50B', size: '3 × 3 M', weight: '29 KG' },
+                    { model: 'WK-T50C', size: '3 × 4.5 M', weight: '40 KG' },
+                    { model: 'WK-T50D', size: '3 × 6 M', weight: '55 KG' },
+                    { model: 'WK-T50E', size: '4 × 4 M', weight: '36 KG' },
+                    { model: 'WK-T50F', size: '4 × 6 M', weight: '51 KG' },
+                    { model: 'WK-T50G', size: '4 × 8 M', weight: '67 KG' }
                 ],
                 options: {
                     frameMaterial: { value: 'aluminum', detailEn: '50 hexagon aluminum frame — maximum strength for larger spans.', detailZh: '50六角铝合金框架 — 更大跨度的更高强度' },
@@ -260,17 +431,18 @@ class ProductManager {
                     printing: [ { value: 'printed', labelEn: 'Printed', labelZh: '印刷' }, { value: 'plain', labelEn: 'Plain', labelZh: '无印' } ]
                 },
                 sizeTable: [
-                    { size: '2×2M', weight: '20KG' },
-                    { size: '2.5×2.5M', weight: '22KG' },
-                    { size: '3×3M', weight: '29KG' },
-                    { size: '3×4.5M', weight: '40KG' },
-                    { size: '3×6M', weight: '55KG' },
-                    { size: '4×4M', weight: '36KG' },
-                    { size: '4×6M', weight: '51KG' },
-                    { size: '4×8M', weight: '67KG' }
+                    { size: '2 × 2 M', weight: '20 KG' },
+                    { size: '2.5 × 2.5 M', weight: '22 KG' },
+                    { size: '3 × 3 M', weight: '29 KG' },
+                    { size: '3 × 4.5 M', weight: '40 KG' },
+                    { size: '3 × 6 M', weight: '55 KG' },
+                    { size: '4 × 4 M', weight: '36 KG' },
+                    { size: '4 × 6 M', weight: '51 KG' },
+                    { size: '4 × 8 M', weight: '67 KG' }
                 ],
+                searchableKeywords: ['WK-T50H','WK-T50A','WK-T50B','WK-T50C','WK-T50D','WK-T50E','WK-T50F','WK-T50G','WK-T50','50','50hexagon','aluminum','铝合金','六角'],
                 keywords: ['WK-T50','50','50hexagon','aluminum','铝合金'],
-                tags: 'WK-T50, 50, aluminum, folding tent',
+                tags: 'WK-T50, WK-T50H, WK-T50A, WK-T50B, WK-T50C, WK-T50D, WK-T50E, WK-T50F, WK-T50G, 50, aluminum, folding tent, stock',
                 price: '询价'
             },
 
@@ -978,276 +1150,21 @@ class ProductManager {
                 specs: ['尺寸：28×35CM', '重量：0.35KG', '纸箱：48×48×43CM', '数量：60PCS', '毛重：23KG'],
                 specsEn: ['Size: 28×35 CM', 'Weight: 0.35 KG', 'Carton: 48×48×43 CM', 'Qty: 60 PCS', 'G.W.: 23 KG'],
                 keywords: ['furniture', 'basket', 'storage', 'folding', 'WK-C35']
-            },
-            {
-                id: 5,
-                category: 'tents',
-                name: '快幕秀',
-                nameEn: 'Pop-up Display',
-                nameJa: '快幕秀',
-                nameKo: '팝업 디스플레이',
-                description: '快速搭建的快幕秀产品，适用于展览、活动、户外展示等多种场景',
-                descriptionEn: 'Quick-setup pop-up display products, suitable for exhibitions, events, outdoor displays and various scenarios',
-                descriptionJa: '迅速設置可能な快幕秀製品、展示、イベント、屋外展示など様々なシーンに適しています',
-                descriptionKo: '빠른 설치 팝업 디스플레이 제품, 전시, 이벤트, 야외 전시 등 다양한 시나리오에 적합',
-                image: 'popup-display.jpg',
-                specs: ['快速搭建', '便携设计', '多种尺寸', '品牌定制'],
-                specsEn: ['Quick Setup', 'Portable Design', 'Various Sizes', 'Brand Customization'],
-                specsJa: ['迅速設置', 'ポータブルデザイン', '様々なサイズ', 'ブランドカスタマイズ'],
-                specsKo: ['빠른 설치', '휴대용 설계', '다양한 크기', '브랜드 맞춤'],
-                price: '询价'
-            },
-            {
-                id: 6,
-                category: 'tents',
-                name: '拉网帐篷',
-                nameEn: 'Mesh Tent',
-                nameJa: 'メッシュテント',
-                nameKo: '메쉬 텐트',
-                description: '专业拉网帐篷，通风透气，适用于户外活动和临时搭建',
-                descriptionEn: 'Professional mesh tent, breathable and ventilated, suitable for outdoor activities and temporary setup',
-                descriptionJa: 'プロフェッショナルメッシュテント、通気性が良く、アウトドア活動や一時的な設置に適しています',
-                descriptionKo: '전문 메쉬 텐트, 통기성 좋음, 야외 활동 및 임시 설치에 적합',
-                image: 'mesh-tent.jpg',
-                specs: ['通风透气', '防蚊虫', '快速搭建', '多种规格'],
-                specsEn: ['Breathable', 'Mosquito-proof', 'Quick Setup', 'Various Specifications'],
-                specsJa: ['通気性', '防虫', '迅速設置', '様々な仕様'],
-                specsKo: ['통기성', '방충', '빠른 설치', '다양한 규격'],
-                price: '询价'
-            },
-            {
-                id: 7,
-                category: 'tents',
-                name: '升降台',
-                nameEn: 'Lifting Platform',
-                nameJa: 'リフティングプラットフォーム',
-                nameKo: '리프팅 플랫폼',
-                description: '专业升降台产品，可调节高度，适用于舞台、展览等多种应用场景',
-                descriptionEn: 'Professional lifting platform, adjustable height, suitable for stages, exhibitions and various application scenarios',
-                descriptionJa: 'プロフェッショナルリフティングプラットフォーム、高さ調整可能、ステージ、展示など様々な応用シーンに適しています',
-                descriptionKo: '전문 리프팅 플랫폼, 높이 조절 가능, 무대, 전시 등 다양한 응용 시나리오에 적합',
-                image: 'lifting-platform.jpg',
-                specs: ['高度可调', '安全可靠', '多种规格', '易于操作'],
-                specsEn: ['Adjustable Height', 'Safe and Reliable', 'Various Specifications', 'Easy to Operate'],
-                specsJa: ['高さ調整可能', '安全で信頼性', '様々な仕様', '操作簡単'],
-                specsKo: ['높이 조절 가능', '안전하고 신뢰성', '다양한 규격', '조작 용이'],
-                price: '询价'
-            },
-            {
-                id: 8,
-                category: 'tents',
-                name: '定制品牌大帐篷',
-                nameEn: 'Customized Branding Marquee',
-                nameJa: 'カスタムブランディングマーキー',
-                nameKo: '맞춤형 브랜딩 마키',
-                description: '专业定制品牌大帐篷，可承载企业标识，适合品牌推广活动',
-                descriptionEn: 'Professional customized branding marquee, can carry corporate logos, suitable for brand promotion activities',
-                descriptionJa: 'プロフェッショナルカスタムブランディングマーキー、企業ロゴを搭載でき、ブランドプロモーション活動に適しています',
-                descriptionKo: '전문 맞춤형 브랜딩 마키, 기업 로고를 담을 수 있으며 브랜드 홍보 활동에 적합',
-                image: 'custom-marquee.jpg',
-                specs: ['定制设计', '品牌印刷', '防风防水', '快速搭建'],
-                specsEn: ['Custom Design', 'Brand Printing', 'Windproof & Waterproof', 'Quick Setup'],
-                specsJa: ['カスタムデザイン', 'ブランド印刷', '防風・防水', '迅速設置'],
-                specsKo: ['맞춤 디자인', '브랜드 인쇄', '방풍 방수', '빠른 설치'],
-                price: '询价'
-            },
-            {
-                id: 9,
-                category: 'flags',
-                name: '羽毛旗杆和底座',
-                nameEn: 'Feather Flag Poles and Bases',
-                nameJa: 'フェザーフラッグポールとベース',
-                nameKo: '깃털 깃발 폴과 베이스',
-                description: '专业羽毛旗杆和底座，材质多样，适合各种户外广告展示',
-                descriptionEn: 'Professional feather flag poles and bases, various materials, suitable for various outdoor advertising displays',
-                descriptionJa: 'プロフェッショナルフェザーフラッグポールとベース、多様な素材、様々な屋外広告展示に適しています',
-                descriptionKo: '전문 깃털 깃발 폴과 베이스, 다양한 소재, 다양한 야외 광고 전시에 적합',
-                image: 'flag-poles.jpg',
-                specs: ['玻璃钢材质', '铝合金材质', '防风设计', '便携安装'],
-                specsEn: ['Fiberglass Material', 'Aluminum Material', 'Windproof Design', 'Portable Installation'],
-                specsJa: ['グラスファイバー素材', 'アルミ素材', '防風デザイン', 'ポータブル設置'],
-                specsKo: ['글래스파이버 소재', '알루미늄 소재', '방풍 설계', '휴대용 설치'],
-                price: '询价'
-            },
-            {
-                id: 4,
-                category: 'custom',
-                name: '弹性桌布',
-                nameEn: 'Stretchy Table Cloth',
-                nameJa: 'ストレッチテーブルクロス',
-                nameKo: '스트레치 테이블 클로스',
-                description: '高质量弹性桌布，可定制印刷，适合各种活动场合',
-                descriptionEn: 'High-quality stretchy table cloth, customizable printing, suitable for various event occasions',
-                descriptionJa: '高品質ストレッチテーブルクロス、カスタム印刷可能、様々なイベントシーンに適しています',
-                descriptionKo: '고품질 스트레치 테이블 클로스, 맞춤형 인쇄 가능, 다양한 이벤트 장소에 적합',
-                image: 'table-cloth.jpg',
-                specs: ['弹性面料', '定制印刷', '易清洁', '多种尺寸'],
-                specsEn: ['Stretchy Fabric', 'Custom Printing', 'Easy Clean', 'Various Sizes'],
-                specsJa: ['ストレッチ生地', 'カスタム印刷', '簡単清掃', '様々なサイズ'],
-                specsKo: ['스트레치 원단', '맞춤 인쇄', '쉬운 청소', '다양한 크기'],
-                price: '起价 ¥99/张'
-            },
-            {
-                id: 5,
-                category: 'tents',
-                name: '车辆遮阳篷',
-                nameEn: 'Vehicle Shelter',
-                nameJa: '車両日除け',
-                nameKo: '차량 차양막',
-                description: '专业车辆遮阳篷，保护车辆免受日晒雨淋，适合各种户外停车需求',
-                descriptionEn: 'Professional vehicle shelter, protects vehicles from sun and rain, suitable for various outdoor parking needs',
-                descriptionJa: 'プロフェッショナル車両日除け、車両を日差しや雨から保護、様々な屋外駐車ニーズに適しています',
-                descriptionKo: '전문 차량 차양막, 차량을 햇빛과 비로부터 보호, 다양한 야외 주차 요구에 적합',
-                image: 'vehicle-shelter.jpg',
-                specs: ['防水材料', '防晒涂层', '防风设计', '快速搭建'],
-                specsEn: ['Waterproof Material', 'Sun Protection Coating', 'Windproof Design', 'Quick Setup'],
-                specsJa: ['防水材料', '日焼け防止コーティング', '防風デザイン', '迅速設置'],
-                specsKo: ['방수 소재', '자외선 차단 코팅', '방풍 설계', '빠른 설치'],
-                price: '起价 ¥799/顶'
-            },
-            {
-                id: 6,
-                category: 'flags',
-                name: '染料升华印刷旗帜',
-                nameEn: 'Dye-sub Printed Flag',
-                nameJa: '染料昇華印刷フラッグ',
-                nameKo: '염료 승화 인쇄 깃발',
-                description: '高质量染料升华印刷旗帜，色彩鲜艳持久，适合品牌宣传展示',
-                descriptionEn: 'High-quality dye-sub printed flag, bright and durable colors, suitable for brand promotion display',
-                descriptionJa: '高品質染料昇華印刷フラッグ、鮮やかで耐久性のある色、ブランドプロモーション展示に適しています',
-                descriptionKo: '고품질 염료 승화 인쇄 깃발, 선명하고 내구성이 뛰어난 색상, 브랜드 홍보 전시에 적합',
-                image: 'dye-flag.jpg',
-                specs: ['染料升华', '色彩持久', '防水防晒', '多种尺寸'],
-                specsEn: ['Dye Sublimation', 'Color Fast', 'Waterproof & UV Resistant', 'Various Sizes'],
-                specsJa: ['染料昇華', '色落ちしない', '防水・日焼け防止', '様々なサイズ'],
-                specsKo: ['염료 승화', '색상 고정', '방수 자외선 차단', '다양한 크기'],
-                price: '起价 ¥199/面'
-            },
-            {
-                id: 7,
-                category: 'custom',
-                name: '织物横幅',
-                nameEn: 'Fabric Banner',
-                nameJa: 'ファブリックバナー',
-                nameKo: '패브릭 배너',
-                description: '专业织物横幅，可定制印刷，适合各类宣传展示活动',
-                descriptionEn: 'Professional fabric banner, customizable printing, suitable for various promotional display activities',
-                descriptionJa: 'プロフェッショナルファブリックバナー、カスタム印刷可能、様々なプロモーション展示活動に適しています',
-                descriptionKo: '전문 패브릭 배너, 맞춤형 인쇄 가능, 다양한 홍보 전시 활동에 적합',
-                image: 'fabric-banner.jpg',
-                specs: ['优质织物', '定制印刷', '防水防晒', '多种规格'],
-                specsEn: ['Quality Fabric', 'Custom Printing', 'Waterproof & UV Resistant', 'Various Specifications'],
-                specsJa: ['高品質ファブリック', 'カスタム印刷', '防水・日焼け防止', '様々な仕様'],
-                specsKo: ['고품질 패브릭', '맞춤 인쇄', '방수 자외선 차단', '다양한 규격'],
-                price: '起价 ¥299/平米'
-            },
-            {
-                id: 8,
-                category: 'tents',
-                name: '帐篷框架和配件',
-                nameEn: 'Tent Frame and Accessories',
-                nameJa: 'テントフレームとアクセサリー',
-                nameKo: '텐트 프레임과 액세서리',
-                description: '专业帐篷框架和配件，结构坚固，配件齐全，适合各种帐篷搭建需求',
-                descriptionEn: 'Professional tent frame and accessories, sturdy structure, complete accessories, suitable for various tent setup needs',
-                descriptionJa: 'プロフェッショナルテントフレームとアクセサリー、頑丈な構造、完全なアクセサリー、様々なテント設置ニーズに適しています',
-                descriptionKo: '전문 텐트 프레임과 액세서리, 견고한 구조, 완전한 액세서리, 다양한 텐트 설치 요구에 적합',
-                image: 'tent-frame.jpg',
-                specs: ['铝合金框架', '不锈钢配件', '快速组装', '多种规格'],
-                specsEn: ['Aluminum Frame', 'Stainless Steel Accessories', 'Quick Assembly', 'Various Specifications'],
-                specsJa: ['アルミフレーム', 'ステンレスアクセサリー', '迅速組み立て', '様々な仕様'],
-                specsKo: ['알루미늄 프레임', '스테인리스 액세서리', '빠른 조립', '다양한 규격'],
-                price: '起价 ¥899/套'
             }
-                ];
+        ];
 
-                // Explicitly add three fixed tent products (30/40/50) with fixed material and variants
-                this.products.push(
-                    {
-                        id: 2001,
-                        category: 'tents',
-                        name: '30方管铁架帐篷',
-                        nameEn: '30 Square Tube Iron Frame Tent',
-                        nameZh: '30方管铁架帐篷',
-                        materialEn: 'Iron',
-                        materialZh: '铁',
-                        variants: [
-                            { model: 'WK-T30I', size: '1.5×1.5M', weight: '13KG' },
-                            { model: 'WK-T30H', size: '2×2M', weight: '15KG' },
-                            { model: 'WK-T30A', size: '2×3M', weight: '19KG' },
-                            { model: 'WK-T30B', size: '2.5×2.5M', weight: '16.5KG' },
-                            { model: 'WK-T30C', size: '3×3M', weight: '21KG' },
-                            { model: 'WK-T30F', size: '3×4.5M', weight: '27KG' },
-                            { model: 'WK-T30G', size: '3×6M', weight: '36KG' }
-                        ],
-                        image: 'images/products/tents/30square-tube-frame-iron.png',
-                        gallery: [
-                            'images/products/tents/30square-tube-frame-iron.png',
-                            'images/products/tents/30square-tube-frame-iron-authenticaccessories.png',
-                            'images/products/tents/waterproof-fireproof.png'
-                        ],
-                        subcategory: 'stock',
-                        searchableKeywords: ['WK-T30I','WK-T30H','WK-T30A','WK-T30B','WK-T30C','WK-T30F','WK-T30G','30 square tube','iron','铁','30方管'],
-                        price: '询价'
-                    },
-                    {
-                        id: 2002,
-                        category: 'tents',
-                        name: '40六角铝合金架帐篷',
-                        nameEn: '40 Hexagon Aluminum Frame Tent',
-                        nameZh: '40六角铝合金架帐篷',
-                        materialEn: 'Aluminum',
-                        materialZh: '铝合金',
-                        variants: [
-                            { model: 'WK-T40I', size: '1.5×1.5M', weight: '12.5KG' },
-                            { model: 'WK-T40H', size: '2×2M', weight: '13KG' },
-                            { model: 'WK-T40A', size: '2.5×2.5M', weight: '16KG' },
-                            { model: 'WK-T40B', size: '3×3M', weight: '17KG' },
-                            { model: 'WK-T40C', size: '3×4.5M', weight: '20KG' },
-                            { model: 'WK-T40D', size: '3×6M', weight: '28KG' },
-                            { model: 'WK-T40E', size: '4×4M', weight: '20.5KG' },
-                            { model: 'WK-T40F', size: '4×6M', weight: '26KG' },
-                            { model: 'WK-T40G', size: '4×8M', weight: '33KG' }
-                        ],
-                        image: 'images/products/tents/40square-tube-frame-aluminum.png',
-                        gallery: [
-                            'images/products/tents/40square-tube-frame-aluminum.png',
-                            'images/products/tents/40square-tube-frame-aluminum-authenticaccessories.png',
-                            'images/products/tents/waterproof-fireproof.png'
-                        ],
-                        subcategory: 'stock',
-                        searchableKeywords: ['WK-T40I','WK-T40H','WK-T40A','WK-T40B','WK-T40C','WK-T40D','WK-T40E','WK-T40F','WK-T40G','40 hexagon','aluminum','铝合金','六角'],
-                        price: '询价'
-                    },
-                    {
-                        id: 2003,
-                        category: 'tents',
-                        name: '50六角铝合金架帐篷',
-                        nameEn: '50 Hexagon Aluminum Frame Tent',
-                        nameZh: '50六角铝合金架帐篷',
-                        materialEn: 'Aluminum',
-                        materialZh: '铝合金',
-                        variants: [
-                            { model: 'WK-T50H', size: '2×2M', weight: '20KG' },
-                            { model: 'WK-T50A', size: '2.5×2.5M', weight: '22KG' },
-                            { model: 'WK-T50B', size: '3×3M', weight: '29KG' },
-                            { model: 'WK-T50C', size: '3×4.5M', weight: '40KG' },
-                            { model: 'WK-T50D', size: '3×6M', weight: '55KG' },
-                            { model: 'WK-T50E', size: '4×4M', weight: '36KG' },
-                            { model: 'WK-T50F', size: '4×6M', weight: '51KG' },
-                            { model: 'WK-T50G', size: '4×8M', weight: '67KG' }
-                        ],
-                        image: 'images/products/tents/50square-tube-frame-aluminum.png',
-                        gallery: [
-                            'images/products/tents/50square-tube-frame-aluminum.png',
-                            'images/products/tents/50square-tube-frame-aluminum-authenticaccessories.png',
-                            'images/products/tents/waterproof-fireproof.png'
-                        ],
-                        subcategory: 'stock',
-                        searchableKeywords: ['WK-T50H','WK-T50A','WK-T50B','WK-T50C','WK-T50D','WK-T50E','WK-T50F','WK-T50G','50 hexagon','aluminum','铝合金','六角'],
-                        price: '询价'
-                    }
-                );
+        // Default PDF mapping (catalogs)
+        // If a product does not provide a dedicated PDF/page link, attach the most relevant catalog.
+        const DEFAULT_PDF_BY_CATEGORY = {
+            tents: 'data/奥动帐篷产品画册20250925.pdf',
+            default: 'data/广西伟群帐篷制造有限公司2025改.pdf'
+        };
+
+        this.products.forEach((p) => {
+            if (!p || p.pdf) return;
+            const cat = String(p.category || '').toLowerCase();
+            p.pdf = DEFAULT_PDF_BY_CATEGORY[cat] || DEFAULT_PDF_BY_CATEGORY.default;
+        });
         this.currentCategory = 'all';
         this.currentLanguage = 'zh';
         this.searchQuery = '';
@@ -1721,7 +1638,7 @@ class ProductManager {
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
-                    <a class="btn btn-secondary product-details-btn" href="product-detail.html?id=${encodeURIComponent(product.id)}" data-translate="view_details"></a>
+                    <a class="btn btn-secondary product-details-btn" href="product.html?id=${encodeURIComponent(product.id)}" data-translate="view_details"></a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
                         <i class="fas fa-shopping-cart"></i> ${t('btn_add_to_cart')}
                     </button>
@@ -2283,7 +2200,7 @@ getProductIcon(category) {
 
             <div class="product-row-info">
                 <h3>
-                    <a href="product-detail.html?id=${encodeURIComponent(product.id)}" style="text-decoration:none;color:inherit;">
+                    <a href="product.html?id=${encodeURIComponent(product.id)}" style="text-decoration:none;color:inherit;">
                         ${name}
                     </a>
                 </h3>
@@ -2375,11 +2292,31 @@ getProductIcon(category) {
     }
 
     openPdfModal(product) {
-        // 显示PDF下载模态框
+        // 显示PDF下载模态框（按产品填充对应PDF）
         const modal = document.getElementById('pdfModal');
-        if (modal) {
-            modal.style.display = 'block';
+        if (!modal) return;
+
+        const defaultPdf = 'data/广西伟群帐篷制造有限公司2025改.pdf';
+        const productPdf = (product && product.pdf) ? String(product.pdf) : '';
+        const href = productPdf || defaultPdf;
+
+        const link = modal.querySelector('#pdfDownloadLink') || modal.querySelector('a[data-translate="btn_download_pdf"]');
+        if (link) {
+            link.setAttribute('href', href);
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener');
         }
+
+        const title = modal.querySelector('#pdfModalTitle');
+        if (title) {
+            const current = title.textContent || '';
+            const base = title.getAttribute('data-base-title') || current;
+            if (!title.getAttribute('data-base-title')) title.setAttribute('data-base-title', base);
+            const name = (product && this.getLocalizedName) ? this.getLocalizedName(product) : '';
+            title.textContent = name ? `${base} - ${name}` : base;
+        }
+
+        modal.style.display = 'block';
     }
 
     addToCart(product) {

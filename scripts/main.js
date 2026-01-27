@@ -757,6 +757,9 @@ function initNavigation() {
 
     // Enhance Products dropdown: add tents subtype submenu
     enhanceTentsDropdown();
+
+    // Enhance Products dropdown: add displays subtype submenu
+    enhanceDisplaysDropdown();
     
     // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页链接如 index.html#contact 不拦截）
     navLinks.forEach(link => {
@@ -1061,6 +1064,100 @@ function enhanceFlagsDropdown() {
         if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
             window.multiLang.translatePage();
         }
+    });
+}
+
+function enhanceDisplaysDropdown() {
+    // Find the Products dropdown menu on the current page.
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const getCurrentLang = () => {
+        try {
+            if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
+                return (window.multiLang.getCurrentLanguage() || 'en').toLowerCase();
+            }
+        } catch (e) {}
+        const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+        return htmlLang || 'en';
+    };
+
+    const shouldTapToOpen = () => {
+        const navMenu = document.querySelector('.nav-menu');
+        const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
+        const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
+        return isMobileMenuOpen || noHover;
+    };
+
+    const items = [
+        { href: 'product.html?id=42001', zh: 'A字架（A-Frame）', en: 'A-Frame' },
+        { href: 'product.html?id=42002', zh: 'A字架背板系统（Backdrop）', en: 'A-Frame Backdrop System' }
+    ];
+
+    menus.forEach((menu) => {
+        // Prevent double-inject.
+        if (menu.querySelector('.dropdown-item-with-submenu[data-displays-submenu="1"]')) return;
+
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const displaysLink = links.find((a) => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            return href.includes('cat=displays');
+        });
+
+        if (!displaysLink) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dropdown-item-with-submenu';
+        wrapper.setAttribute('data-displays-submenu', '1');
+
+        // Move the existing anchor into the wrapper.
+        const parent = displaysLink.parentElement;
+        if (!parent) return;
+        parent.insertBefore(wrapper, displaysLink);
+        wrapper.appendChild(displaysLink);
+
+        displaysLink.setAttribute('aria-haspopup', 'true');
+        displaysLink.setAttribute('aria-expanded', 'false');
+
+        // Add indicator on the right.
+        if (!displaysLink.querySelector('.wk-submenu-caret')) {
+            const caret = document.createElement('span');
+            caret.className = 'wk-submenu-caret';
+            caret.textContent = '›';
+            displaysLink.appendChild(caret);
+        }
+
+        const sub = document.createElement('div');
+        sub.className = 'dropdown-submenu';
+
+        // Overview link (keep existing target behavior)
+        const overview = document.createElement('a');
+        overview.href = displaysLink.getAttribute('href') || 'product-center.html?cat=displays';
+        overview.setAttribute('data-translate', 'ui_overview');
+        overview.textContent = '';
+        sub.appendChild(overview);
+
+        const lang = getCurrentLang();
+        items.forEach((it) => {
+            const a = document.createElement('a');
+            a.href = it.href;
+            a.textContent = (lang && lang.startsWith('zh')) ? it.zh : it.en;
+            sub.appendChild(a);
+        });
+
+        wrapper.appendChild(sub);
+
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+
+        // On touch/mobile, first tap opens submenu instead of navigating.
+        displaysLink.addEventListener('click', (e) => {
+            if (!shouldTapToOpen()) return;
+            e.preventDefault();
+            const isOpen = wrapper.classList.toggle('is-open');
+            displaysLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
     });
 }
 

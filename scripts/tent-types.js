@@ -54,7 +54,7 @@
                 type: 'folding30',
                 seriesCode: 'WK-T30',
                 nameZh: '30 方管铁架',
-                nameEn: '30 Square Tube Frame Iron',
+                nameEn: '30 Square Tube Iron Frame',
                 hubDescZh: '高性价比折叠帐篷，适合促销与展会。',
                 hubDescEn: 'Cost-effective folding tent for promotions and exhibitions.',
                 storyZh: [
@@ -77,15 +77,13 @@
                 ].join('\n'),
                 // Model/spec table for the View Type panel
                 models: [
-                    { model: 'WK-T30I', size: '1.5*1.5M', weight: '13KG' },
-                    { model: 'WK-T30H', size: '2*2M', weight: '15KG' },
-                    { model: 'WK-T30A', size: '2*3M', weight: '19KG' },
-                    { model: 'WK-T30B', size: '2.5*2.5M', weight: '16.5KG' },
-                    { model: 'WK-T30C', size: '3*3M', weight: '21KG' },
-                    // The brochure lists additional model codes (WK-T30D/E/F/G) but only one size/weight line per size.
-                    // Show them grouped by the two largest sizes to keep all model codes present without inventing new sizes.
-                    { model: 'WK-T30D / WK-T30E', size: '3*4.5M', weight: '27KG' },
-                    { model: 'WK-T30F / WK-T30G', size: '3*6M', weight: '36KG' }
+                    { model: 'WK-T30I', size: '1.5 × 1.5 M', weight: '13 KG' },
+                    { model: 'WK-T30H', size: '2 × 2 M', weight: '15 KG' },
+                    { model: 'WK-T30A', size: '2 × 3 M', weight: '19 KG' },
+                    { model: 'WK-T30B', size: '2.5 × 2.5 M', weight: '16.5 KG' },
+                    { model: 'WK-T30C', size: '3 × 3 M', weight: '21 KG' },
+                    { model: 'WK-T30D', size: '3 × 4.5 M', weight: '27 KG' },
+                    { model: 'WK-T30E', size: '3 × 6 M', weight: '36 KG' }
                 ],
                 materialEn: 'Iron',
                 materialZh: '铁',
@@ -124,15 +122,15 @@
                     'Weights: 12.5KG / 13KG / 16KG / 17KG / 20KG / 20.5KG / 26KG / 28KG / 33KG'
                 ].join('\n'),
                 models: [
-                    { model: 'WK-T40I', size: '1.5*1.5M', weight: '12.5KG' },
-                    { model: 'WK-T40H', size: '2*2M', weight: '13KG' },
-                    { model: 'WK-T40A', size: '2.5*2.5M', weight: '16KG' },
-                    { model: 'WK-T40B', size: '3*3M', weight: '17KG' },
-                    { model: 'WK-T40C', size: '3*4.5M', weight: '20KG' },
-                    { model: 'WK-T40D', size: '3*6M', weight: '28KG' },
-                    { model: 'WK-T40E', size: '4*4M', weight: '20.5KG' },
-                    { model: 'WK-T40F', size: '4*6M', weight: '26KG' },
-                    { model: 'WK-T40G', size: '4*8M', weight: '33KG' }
+                    { model: 'WK-T40I', size: '1.5 × 1.5 M', weight: '12.5 KG' },
+                    { model: 'WK-T40H', size: '2 × 2 M', weight: '13 KG' },
+                    { model: 'WK-T40A', size: '2.5 × 2.5 M', weight: '16 KG' },
+                    { model: 'WK-T40B', size: '3 × 3 M', weight: '17 KG' },
+                    { model: 'WK-T40C', size: '3 × 4.5 M', weight: '20 KG' },
+                    { model: 'WK-T40D', size: '3 × 6 M', weight: '28 KG' },
+                    { model: 'WK-T40E', size: '4 × 4 M', weight: '20.5 KG' },
+                    { model: 'WK-T40F', size: '4 × 6 M', weight: '26 KG' },
+                    { model: 'WK-T40G', size: '4 × 8 M', weight: '33 KG' }
                 ],
                 materialEn: 'Aluminum',
                 materialZh: '铝合金',
@@ -171,14 +169,14 @@
                     'Weights: 20KG / 22KG / 29KG / 36KG / 40KG / 51KG / 55KG / 67KG'
                 ].join('\n'),
                 models: [
-                    { model: 'WK-T50H', size: '2*2M', weight: '20KG' },
-                    { model: 'WK-T50A', size: '2.5*2.5M', weight: '22KG' },
-                    { model: 'WK-T50B', size: '3*3M', weight: '29KG' },
-                    { model: 'WK-T50C', size: '3*4.5M', weight: '40KG' },
-                    { model: 'WK-T50D', size: '3*6M', weight: '55KG' },
-                    { model: 'WK-T50E', size: '4*4M', weight: '36KG' },
-                    { model: 'WK-T50F', size: '4*6M', weight: '51KG' },
-                    { model: 'WK-T50G', size: '4*8M', weight: '67KG' }
+                    { model: 'WK-T50H', size: '2 × 2 M', weight: '20 KG' },
+                    { model: 'WK-T50A', size: '2.5 × 2.5 M', weight: '22 KG' },
+                    { model: 'WK-T50B', size: '3 × 3 M', weight: '29 KG' },
+                    { model: 'WK-T50C', size: '3 × 4.5 M', weight: '40 KG' },
+                    { model: 'WK-T50D', size: '3 × 6 M', weight: '55 KG' },
+                    { model: 'WK-T50E', size: '4 × 4 M', weight: '36 KG' },
+                    { model: 'WK-T50F', size: '4 × 6 M', weight: '51 KG' },
+                    { model: 'WK-T50G', size: '4 × 8 M', weight: '67 KG' }
                 ],
                 materialEn: 'Aluminum',
                 materialZh: '铝合金',

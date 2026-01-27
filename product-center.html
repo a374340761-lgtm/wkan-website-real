@@ -16,13 +16,13 @@
     <!-- Language Gate -->
     <div id="languageGate" class="language-gate" style="display: none;">
         <div class="language-gate-box">
-            <h2>Welcome</h2>
-            <p>Please select your language</p>
+            <h2 data-translate="language_gate_title"></h2>
+            <p data-translate="language_gate_desc"></p>
             <div class="language-options">
-                <button data-lang="en">English</button>
-                <button data-lang="zh">中文</button>
-                <button data-lang="ja">日本語</button>
-                <button data-lang="ko">한국어</button>
+                <button data-lang="en" data-lang-option="en">English</button>
+                <button data-lang="zh" data-lang-option="zh">中文</button>
+                <button data-lang="ja" data-lang-option="ja">日本語</button>
+                <button data-lang="ko" data-lang-option="ko">한국어</button>
             </div>
         </div>
     </div>
@@ -68,13 +68,13 @@
                         <i class="fas fa-chevron-down"></i>
                     </a>
                         <div class="dropdown-menu">
-                                                    <a href="product-center.html?cat=tents"><span class="zh" data-translate="home_cat_tents_title"></span><span class="en" data-translate="home_cat_tents_title"></span></a>
-                                                    <a href="product-center.html?cat=flags"><span class="zh" data-translate="menu_beach_flags"></span><span class="en" data-translate="menu_beach_flags"></span></a>
-                                                    <a href="product-center.html?cat=displays"><span class="zh" data-translate="menu_popup_displays"></span><span class="en" data-translate="menu_popup_displays"></span></a>
-                                                    <a href="product-center.html?cat=accessories"><span class="zh" data-translate="menu_accessories"></span><span class="en" data-translate="menu_accessories"></span></a>
+                                        <a href="all-products.html?cat=tents"><span class="zh" data-translate="home_cat_tents_title"></span><span class="en" data-translate="home_cat_tents_title"></span></a>
+                                        <a href="all-products.html?cat=flags"><span class="zh" data-translate="menu_beach_flags"></span><span class="en" data-translate="menu_beach_flags"></span></a>
+                                        <a href="all-products.html?cat=displays"><span class="zh" data-translate="menu_popup_displays"></span><span class="en" data-translate="menu_popup_displays"></span></a>
+                                        <a href="all-products.html?cat=accessories"><span class="zh" data-translate="menu_accessories"></span><span class="en" data-translate="menu_accessories"></span></a>
                                                             <a href="furniture-type.html?type=table-chair-stool-toilet"><span class="zh" data-translate="menu_table_chair_stool_toilet"></span><span class="en" data-translate="menu_table_chair_stool_toilet"></span></a>
                                                             <a href="dome-type.html?type=dome-3-folders"><span class="zh" data-translate="menu_dome_3_folders"></span><span class="en" data-translate="menu_dome_3_folders"></span></a>
-                                                    <a href="racegate-type.html"><span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span></a>
+                                        <a href="all-products.html?cat=racegate"><span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span></a>
                                                     <a href="product-center.html?notice=category_unavailable"><span class="zh" data-translate="menu_replacement_parts"></span><span class="en" data-translate="menu_replacement_parts"></span></a>
                         </div>
                 </li>
@@ -143,7 +143,7 @@
                 <div class="product-categories-showcase">
                     <div class="categories-grid">
                         <!-- 1. Custom Tents -->
-                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?cat=tents'">
+                        <div class="category-card" data-category="tents" onclick="location.href='all-products.html?cat=tents'">
                             <div class="category-image">
                                 <i class="fa-solid fa-campground"></i>
                             </div>
@@ -162,7 +162,7 @@
                         </div>
 
                         <!-- 2. Stock Tents -->
-                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?cat=tents'">
+                        <div class="category-card" data-category="tents" onclick="location.href='all-products.html?cat=tents&tag=stock'">
                             <div class="category-image">
                                 <i class="fa-solid fa-warehouse"></i>
                             </div>
@@ -181,7 +181,7 @@
                         </div>
 
                         <!-- 3. Beach Flags & Poles -->
-                        <div class="category-card" data-category="flags" onclick="location.href='product-center.html?cat=flags'">
+                        <div class="category-card" data-category="flags" onclick="location.href='all-products.html?cat=flags'">
                             <div class="category-image">
                                 <i class="fa-solid fa-flag"></i>
                             </div>
@@ -200,7 +200,7 @@
                         </div>
 
                         <!-- 4. Pop-up Displays -->
-                        <div class="category-card" data-category="displays" onclick="location.href='product-center.html?cat=displays'">
+                        <div class="category-card" data-category="displays" onclick="location.href='all-products.html?cat=displays'">
                             <div class="category-image">
                                 <i class="fa-solid fa-cube"></i>
                             </div>
@@ -219,7 +219,7 @@
                         </div>
 
                         <!-- 5. Accessories -->
-                        <div class="category-card" data-category="accessories" onclick="location.href='products-accessories.html'">
+                        <div class="category-card" data-category="accessories" onclick="location.href='all-products.html?cat=accessories'">
                             <div class="category-image">
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
                             </div>
@@ -238,7 +238,7 @@
                         </div>
 
                         <!-- 6. Replacement Parts -->
-                        <div class="category-card" data-category="tents" onclick="location.href='all-products.html'">
+                        <div class="category-card" data-category="accessories" onclick="location.href='all-products.html?cat=accessories'">
                             <div class="category-image">
                                 <i class="fa-solid fa-gears"></i>
                             </div>
@@ -257,7 +257,7 @@
                         </div>
 
                         <!-- 7. Race Gate -->
-                        <div class="category-card" data-category="racegate" onclick="location.href='racegate-type.html'">
+                        <div class="category-card" data-category="racegate" onclick="location.href='all-products.html?cat=racegate'">
                             <div class="category-image">
                                 <i class="fa-solid fa-flag-checkered"></i>
                             </div>

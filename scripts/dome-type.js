@@ -112,7 +112,7 @@
       const name = lang === 'zh' ? (p.name || p.nameZh || p.nameEn || p.model) : (p.nameEn || p.name || p.nameZh || p.model);
       const model = p.model || '';
       const cat = String(p.category || '');
-      const href = (p.id != null) ? `product.html?id=${encodeURIComponent(p.id)}` : 'all-products.html';
+      const href = (p.id != null) ? `product.html?cat=custom&id=${encodeURIComponent(p.id)}` : 'all-products.html';
       const icon = p.icon || (cat === 'tents' ? 'fa-campground' : 'fa-chair');
       const badgeKey = cat === 'tents' ? 'home_cat_tents_title' : 'category_furniture';
 

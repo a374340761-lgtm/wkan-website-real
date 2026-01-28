@@ -398,7 +398,7 @@
     const bc = document.getElementById('tentTypeBreadcrumb');
     if (bc) {
       const lang = getCurrentLang();
-      bc.textContent = item ? (lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn)) : 'View Type';
+      bc.textContent = item ? (lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn)) : (lang === 'zh' ? '查看类型' : 'View Type');
     }
 
     if (!item) {

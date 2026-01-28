@@ -360,6 +360,387 @@ class ProductManager {
                     price: '询价'
                 },
 
+                // ===== Tension Fabric Displays: Fabric Banner Stands & Accessories (Catalog p20) =====
+                {
+                    id: 42005,
+                    category: 'displays',
+                    subcategory: 'fabric-banner-stands',
+                    model: 'WK-H-01',
+                    sku: 'WK-H-01',
+                    nameEn: 'Fabric Banner Stand (WK-H-01)',
+                    nameZh: '立牌系列（WK-H-01）',
+                    shortEn: 'Tension fabric banner stand for exhibitions and retail promotions.',
+                    shortZh: '张力布立牌，适用于展会背景、门店陈列与活动展示。',
+                    descriptionEn: 'Portable tension fabric banner stand with aluminum frame and push-fit SEG graphic. Clean look, quick setup, easy graphic change.',
+                    descriptionZh: '便携式张力布立牌，铝合金框架 + 卡槽式（SEG）画面安装。外观干净利落，安装快捷，画面易更换。',
+                    image: 'images/products/displays/tension-fabric-displays/20.png',
+                    images: ['images/products/displays/tension-fabric-displays/20.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/20.png'],
+                    specsZh: {
+                        Size: '80 × 200 CM',
+                        'Graphic Size': '83 × 205 CM',
+                        Carton: '30 × 19 × 100 CM',
+                        Quantity: '1',
+                        Weight: '9 KG'
+                    },
+                    specsEn: {
+                        Size: '80 × 200 CM',
+                        'Graphic Size': '83 × 205 CM',
+                        Carton: '30 × 19 × 100 CM',
+                        Quantity: '1',
+                        Weight: '9 KG'
+                    },
+                    detailDescEn: [
+                        'Aluminum frame system with tension fabric graphic; clean modern look.',
+                        'Silicone edge / push-fit (SEG) graphic: silicone strip pressed into the frame channel for a drum-tight, wrinkle-reduced finish.',
+                        'Dye-sublimation printing on stretch fabric; vibrant colors; easy graphic change.',
+                        'Tool-free or minimal-tool setup; portable for trade shows; compatible with optional lighting and wheeled cases.'
+                    ],
+                    detailDescZh: [
+                        '铝合金框架 + 张力布画面，整体更轻便、外观更高级。',
+                        '硅胶边条/卡槽式（Push-fit/SEG）安装：布边硅胶条压入框架槽口，画面更平整、减皱、边缘更干净。',
+                        '热升华印刷，色彩饱和；画面可更换，维护成本低。',
+                        '免工具/少工具快速安装，适用于展会、活动背景、店铺陈列；可搭配照明与收纳运输箱。'
+                    ],
+                    applicationsEn: ['Trade shows & exhibitions', 'Retail promotions & storefront display', 'Event branding & photo area'],
+                    applicationsZh: ['展会与展览展示', '门店促销与陈列', '活动品牌展示与拍照区'],
+                    variantTables: [
+                        {
+                            titleZh: '规格参数',
+                            titleEn: 'Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-H-01', size: '80 × 200 CM', graphic: '83 × 205 CM', carton: '30 × 19 × 100 CM', qty: '1', weight: '9 KG' }
+                            ]
+                        },
+                        {
+                            titleZh: '可选配件',
+                            titleEn: 'Optional Accessories',
+                            items: ['照明灯套装 / Lighting kit', '收纳运输箱 / Transport cases']
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-H-01', 'WK H 01', 'fabric banner stand', 'tension fabric', 'seg', 'push-fit', '立牌', '立牌', '张力布', '快幕秀'],
+                    keywords: ['WK-H-01', 'fabric banner stand', 'tension fabric', 'SEG', 'push-fit', '立牌', '张力布', '快幕秀'],
+                    tags: 'WK-H-01, Fabric Banner Stand, tension fabric, SEG, push-fit, display',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+                {
+                    id: 42006,
+                    category: 'displays',
+                    subcategory: 'fabric-banner-stands',
+                    model: 'WK-H-02',
+                    sku: 'WK-H-02',
+                    nameEn: 'Fabric Banner Stand (WK-H-02)',
+                    nameZh: '立牌系列（WK-H-02）',
+                    shortEn: 'Lightweight tension fabric banner stand for events and brand displays.',
+                    shortZh: '轻量化张力布立牌，适用于活动与品牌展示。',
+                    descriptionEn: 'Portable tension fabric banner stand with aluminum frame and push-fit SEG graphic. Quick setup and easy graphic replacement.',
+                    descriptionZh: '便携式张力布立牌，铝合金框架 + 卡槽式（SEG）画面安装。快速搭建，画面更换便捷。',
+                    image: 'images/products/displays/tension-fabric-displays/20.png',
+                    images: ['images/products/displays/tension-fabric-displays/20.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/20.png'],
+                    specsZh: {
+                        Size: '80 × 200 CM',
+                        'Graphic Size': '83 × 205 CM',
+                        Carton: '30 × 19 × 100 CM',
+                        Quantity: '1',
+                        Weight: '3.5 KG'
+                    },
+                    specsEn: {
+                        Size: '80 × 200 CM',
+                        'Graphic Size': '83 × 205 CM',
+                        Carton: '30 × 19 × 100 CM',
+                        Quantity: '1',
+                        Weight: '3.5 KG'
+                    },
+                    detailDescEn: [
+                        'Aluminum frame system with tension fabric graphic; clean modern look.',
+                        'Silicone edge / push-fit (SEG) graphic: silicone strip pressed into the frame channel for a drum-tight, wrinkle-reduced finish.',
+                        'Dye-sublimation printing on stretch fabric; vibrant colors; easy graphic change.',
+                        'Tool-free or minimal-tool setup; portable for trade shows; compatible with optional lighting and wheeled cases.'
+                    ],
+                    detailDescZh: [
+                        '铝合金框架 + 张力布画面，整体更轻便、外观更高级。',
+                        '硅胶边条/卡槽式（Push-fit/SEG）安装：布边硅胶条压入框架槽口，画面更平整、减皱、边缘更干净。',
+                        '热升华印刷，色彩饱和；画面可更换，维护成本低。',
+                        '免工具/少工具快速安装，适用于展会、活动背景、店铺陈列；可搭配照明与收纳运输箱。'
+                    ],
+                    applicationsEn: ['Trade shows & exhibitions', 'Retail promotions & storefront display', 'Event branding & photo area'],
+                    applicationsZh: ['展会与展览展示', '门店促销与陈列', '活动品牌展示与拍照区'],
+                    variantTables: [
+                        {
+                            titleZh: '规格参数',
+                            titleEn: 'Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-H-02', size: '80 × 200 CM', graphic: '83 × 205 CM', carton: '30 × 19 × 100 CM', qty: '1', weight: '3.5 KG' }
+                            ]
+                        },
+                        {
+                            titleZh: '可选配件',
+                            titleEn: 'Optional Accessories',
+                            items: ['照明灯套装 / Lighting kit', '收纳运输箱 / Transport cases']
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-H-02', 'WK H 02', 'fabric banner stand', 'tension fabric', 'seg', 'push-fit', '立牌', '立牌', '张力布', '快幕秀'],
+                    keywords: ['WK-H-02', 'fabric banner stand', 'tension fabric', 'SEG', 'push-fit', '立牌', '张力布', '快幕秀'],
+                    tags: 'WK-H-02, Fabric Banner Stand, tension fabric, SEG, push-fit, display',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+
+                // ===== Tension Fabric Displays: Straight Line Series (Catalog p21) =====
+                {
+                    id: 42009,
+                    category: 'displays',
+                    subcategory: 'tfd-straight-line',
+                    model: 'WK-HZ',
+                    sku: 'WK-HZ',
+                    nameEn: 'Straight Line Tension Fabric Backwall (WK-HZ)',
+                    nameZh: '直型系列（WK-HZ）',
+                    shortEn: 'Straight-line tension fabric backwall system for trade shows, booths and media walls.',
+                    shortZh: '直型张力布背景墙系统，适用于展会、展台与媒体墙。',
+                    descriptionEn: 'Straight Line Series tension fabric display with modular aluminum tube frame and SEG push-fit graphic. Fast setup, seamless full-bleed visual, and easy graphic replacement.',
+                    descriptionZh: '直型系列张力布展示系统：模块化铝合金管结构 + SEG（卡槽式）画面压入。搭建快速，画面满版平整，可更换维护成本低。',
+                    image: 'images/products/displays/tension-fabric-displays/21.png',
+                    images: ['images/products/displays/tension-fabric-displays/21.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    specsZh: {
+                        '型号': 'WK-HZ',
+                        '尺寸': '225×245 CM / 225×295 CM / 225×590 CM',
+                        '画面尺寸': '230×250 CM / 230×300 CM / 230×595 CM',
+                        '外箱尺寸': '28×28×80 CM',
+                        '数量': '1 套'
+                    },
+                    specsEn: {
+                        Model: 'WK-HZ',
+                        Sizes: '225×245 CM / 225×295 CM / 225×590 CM',
+                        'Graphic Size': '230×250 CM / 230×300 CM / 230×595 CM',
+                        Carton: '28×28×80 CM',
+                        Quantity: '1 set'
+                    },
+                    detailDescEn: [
+                        'Aluminum tube frame with modular snap-fit connections.',
+                        'Stretch tension fabric graphic with elastic property and silicone edge (SEG / push-fit system).',
+                        'Dye-sublimation printing for vivid colors and seamless full-bleed visuals.',
+                        'Wrinkle-resistant fabric under tension; easy graphic replacement.',
+                        'Tool-free or minimal-tool setup; portable and exhibition-ready.'
+                    ],
+                    detailDescZh: [
+                        '模块化铝合金管结构，插接式连接，稳固且便于运输。',
+                        '高弹性张力布画面，硅胶边条（SEG / 卡槽式）压入框架，画面平整无褶皱。',
+                        '热升华印刷，色彩饱和，支持满版展示。',
+                        '张力结构有效减少褶皱，画面可更换，维护成本低。',
+                        '免工具或少工具安装，适用于展会、活动背景与商业陈列。'
+                    ],
+                    applicationsEn: ['Trade show backwalls', 'Exhibition booths', 'Brand promotion events', 'Retail & showroom displays', 'Media walls and photo backdrops'],
+                    applicationsZh: ['展会背景墙', '展览展示系统', '品牌推广活动', '门店与展厅陈列', '拍照背景与媒体墙'],
+                    variantTables: [
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-HZ', size: '225×245 CM', graphic: '230×250 CM', carton: '28×28×80 CM', qty: '1 set', weight: '10 KG' },
+                                { model: 'WK-HZ', size: '225×295 CM', graphic: '230×300 CM', carton: '28×28×80 CM', qty: '1 set', weight: '13 KG' },
+                                { model: 'WK-HZ', size: '225×590 CM', graphic: '230×595 CM', carton: '28×28×80 CM', qty: '1 set', weight: '17 KG' }
+                            ]
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-HZ', 'WK HZ', 'straight line', 'backwall', 'tension fabric', 'SEG', 'push-fit', '直型系列', '快幕秀'],
+                    keywords: ['WK-HZ', 'straight line', 'backwall', 'tension fabric', 'SEG', '直型系列', '快幕秀'],
+                    tags: 'WK-HZ, Straight Line Series, tension fabric, SEG, display backwall',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+
+                // ===== Tension Fabric Displays: C-Shaped Series (Catalog p21) =====
+                {
+                    id: 42010,
+                    category: 'displays',
+                    subcategory: 'tfd-c-shaped',
+                    model: 'WK-HC',
+                    sku: 'WK-HC',
+                    nameEn: 'C-Shaped Tension Fabric Backwall (WK-HC)',
+                    nameZh: 'C型系列（WK-HC）',
+                    shortEn: 'C-shaped tension fabric backwall system for eye-catching booth backdrops and photo areas.',
+                    shortZh: 'C型张力布背景墙系统，更具造型感，适用于展位背景与拍照区。',
+                    descriptionEn: 'C-Shaped Series tension fabric display with modular aluminum tube frame and SEG push-fit graphic. Curved profile draws attention while keeping a clean, seamless fabric finish.',
+                    descriptionZh: 'C型系列张力布展示系统：模块化铝合金管结构 + SEG（卡槽式）画面压入。弧形轮廓更吸睛，画面平整干净。',
+                    image: 'images/products/displays/tension-fabric-displays/21.png',
+                    images: ['images/products/displays/tension-fabric-displays/21.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    specsZh: {
+                        '型号': 'WK-HC',
+                        '尺寸': '225×280 CM / 225×510 CM',
+                        '画面尺寸': '230×326 CM / 230×530 CM',
+                        '数量': '1 套'
+                    },
+                    specsEn: {
+                        Model: 'WK-HC',
+                        Sizes: '225×280 CM / 225×510 CM',
+                        'Graphic Size': '230×326 CM / 230×530 CM',
+                        Quantity: '1 set'
+                    },
+                    detailDescEn: [
+                        'Aluminum tube frame with modular snap-fit connections.',
+                        'Stretch tension fabric graphic with silicone edge (SEG / push-fit system) for a smooth, wrinkle-reduced finish.',
+                        'Dye-sublimation printing for vibrant, full-bleed visuals.',
+                        'Curved C-shaped profile increases visibility and creates a premium backdrop look.',
+                        'Tool-free or minimal-tool setup; portable and exhibition-ready.'
+                    ],
+                    detailDescZh: [
+                        '模块化铝合金管结构，插接式连接，稳固且便于运输。',
+                        '高弹性张力布画面，硅胶边条（SEG / 卡槽式）压入框架，画面更平整、减皱。',
+                        '热升华印刷，色彩饱和，支持满版展示。',
+                        'C型弧形造型更醒目，适合作为高端背景与主视觉展示。',
+                        '免工具或少工具安装，适用于展会、活动背景与商业陈列。'
+                    ],
+                    applicationsEn: ['Trade show backwalls', 'Exhibition booths', 'Brand promotion events', 'Retail & showroom displays', 'Media walls and photo backdrops'],
+                    applicationsZh: ['展会背景墙', '展览展示系统', '品牌推广活动', '门店与展厅陈列', '拍照背景与媒体墙'],
+                    variantTables: [
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-HC', size: '225×280 CM', graphic: '230×326 CM', carton: '29×29.5×80 CM', qty: '1 set', weight: '13 KG' },
+                                { model: 'WK-HC', size: '225×510 CM', graphic: '230×530 CM', carton: '29×52×80 CM', qty: '1 set', weight: '17 KG' }
+                            ]
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-HC', 'WK HC', 'c-shaped', 'curved', 'backwall', 'tension fabric', 'SEG', 'C型系列', '快幕秀'],
+                    keywords: ['WK-HC', 'c-shaped', 'curved backwall', 'tension fabric', 'SEG', 'C型系列', '快幕秀'],
+                    tags: 'WK-HC, C-Shaped Series, tension fabric, SEG, curved backwall',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+                {
+                    id: 42007,
+                    category: 'displays',
+                    subcategory: 'tfd-accessories',
+                    model: 'WK-TFD-LIGHT',
+                    sku: 'WK-TFD-LIGHT',
+                    nameEn: 'Lighting System (WK-TFD-LIGHT)',
+                    nameZh: '照明系统（WK-TFD-LIGHT）',
+                    shortEn: 'Optional lighting system for tension fabric displays: brighter visuals and stronger booth presence.',
+                    shortZh: '快幕秀展示系统可选照明套件：提升画面亮度与展位吸引力。',
+                    descriptionEn: 'Shared lighting accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes LED spotlight, clamp-on light arm and power cable (final configuration depends on project).',
+                    descriptionZh: '快幕秀展示系统通用照明配件（立牌/直型/C型通用）：包含 LED 射灯、夹装式灯臂与电源线（具体配置按项目确定）。',
+                    image: 'images/products/displays/tension-fabric-displays/21.png',
+                    images: ['images/products/displays/tension-fabric-displays/21.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    specsZh: {
+                        '包含': 'LED 射灯 / 夹装式灯臂 / 电源线',
+                        '适用': '立牌系列 / 直型系列 / C型系列（快幕秀）',
+                        '备注': '具体数量与款式按项目确定'
+                    },
+                    specsEn: {
+                        Includes: 'LED spotlight / clamp-on light arm / power cable',
+                        Compatibility: 'Banner stands / straight line series / C-shaped series (TFD)',
+                        Note: 'Quantity and types depend on project'
+                    },
+                    variantTables: [
+                        {
+                            titleZh: '组件清单',
+                            titleEn: 'Components',
+                            items: ['LED 射灯 / LED spotlight', '夹装式灯臂 / Clamp-on light arm', '电源线 / Power cable']
+                        },
+                        {
+                            titleZh: '适用场景',
+                            titleEn: 'Applications',
+                            items: ['展会背景补光', '门店陈列提升亮度', '活动主视觉照明']
+                        }
+                    ],
+                    searchableKeywords: ['WK-TFD-LIGHT', 'tension fabric light', 'spotlight', 'lighting system', 'SEG light', '照明系统', '照明', '快幕秀 配件'],
+                    keywords: ['WK-TFD-LIGHT', 'lighting system', 'tension fabric', 'spotlight', '照明系统', '快幕秀配件'],
+                    tags: 'WK-TFD-LIGHT, Lighting System, tension fabric displays, accessories',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+                {
+                    id: 42008,
+                    category: 'displays',
+                    subcategory: 'tfd-accessories',
+                    model: 'WK-TFD-CASE',
+                    sku: 'WK-TFD-CASE',
+                    nameEn: 'Transport & Storage System (WK-TFD-CASE)',
+                    nameZh: '收纳运输系统（WK-TFD-CASE）',
+                    shortEn: 'Shared transport and storage options for tension fabric display systems.',
+                    shortZh: '快幕秀展示系统通用收纳运输方案（软包/硬箱/带轮箱）。',
+                    descriptionEn: 'Shared transport & storage accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes soft carry bag, hard case and wheeled trolley case options (matched by model/size).',
+                    descriptionZh: '快幕秀展示系统通用收纳运输配件（立牌/直型/C型通用）：软包、硬箱、带轮拉杆箱等可选（按型号/尺寸匹配）。',
+                    image: 'images/products/displays/tension-fabric-displays/21.png',
+                    images: ['images/products/displays/tension-fabric-displays/21.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    specsZh: {
+                        '包含': '软包 / 硬箱 / 带轮拉杆箱',
+                        '优势': '便于运输与保护框架、画面与配件',
+                        '备注': '箱型按型号/尺寸匹配'
+                    },
+                    specsEn: {
+                        Includes: 'Soft carry bag / hard case / wheeled trolley case',
+                        Benefit: 'Easy transport and protection for frames, graphics and parts',
+                        Note: 'Case type depends on model/size'
+                    },
+                    variantTables: [
+                        {
+                            titleZh: '箱包类型',
+                            titleEn: 'Case Types',
+                            items: ['软包 / Soft carry bag', '硬箱 / Hard case', '带轮拉杆箱 / Wheeled trolley case']
+                        },
+                        {
+                            titleZh: '建议搭配',
+                            titleEn: 'Recommended Pairing',
+                            items: ['用于张力布展示系统/立牌/背景框架的运输与收纳']
+                        }
+                    ],
+                    searchableKeywords: ['WK-TFD-CASE', 'transport case', 'wheeled case', 'hard case', 'soft bag', '收纳运输', '收纳箱', '运输箱', '拉杆箱', '快幕秀 配件'],
+                    keywords: ['WK-TFD-CASE', 'transport', 'storage', 'wheeled case', 'carry bag', '收纳运输', '快幕秀配件'],
+                    tags: 'WK-TFD-CASE, Transport & Storage, tension fabric displays, accessories',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+
             // ===== RaceGate (fiberglass) =====
             {
                 id: 9401,
@@ -1315,7 +1696,21 @@ class ProductManager {
         // Ensure every product has a stable id for deep-linking.
         this.ensureProductIds();
 
-        this.init();
+        // Only initialize listing-page UI when the required DOM exists.
+        // This allows loading product data + modal detail on other pages (e.g., product-center.html).
+        try {
+            const hasListUi = !!(
+                document.querySelector('.products-list') ||
+                document.getElementById('productSearchInput') ||
+                document.getElementById('productsSort') ||
+                document.getElementById('productsPagination')
+            );
+            if (hasListUi) {
+                this.init();
+            }
+        } catch (e) {
+            // If DOM APIs are unavailable for some reason, skip UI init.
+        }
     }
 
     // ------------------------------
@@ -1323,6 +1718,10 @@ class ProductManager {
     // ------------------------------
     _safeText(v) {
         return (v == null) ? '' : String(v);
+    }
+
+    _hasCjk(text) {
+        return /[\u3400-\u9FFF\uF900-\uFAFF]/.test(String(text || ''));
     }
 
     _escapeHtml(s) {
@@ -1427,11 +1826,19 @@ class ProductManager {
     getProductDetailContent(product) {
         const p = product || {};
         const cat = this._safeText(p.category);
-        const nameZh = this._safeText(p.nameZh || p.name || '');
-        const nameEn = this._safeText(p.nameEn || p.name || '');
+        // Strict language separation: do not fall back to the other language.
+        const legacyName = this._safeText(p.name || '');
+        const legacySummary = this._safeText(p.short || p.description || '');
 
-        const summaryZh = this._safeText(p.shortZh || p.short || p.descriptionZh || p.description || '').trim();
-        const summaryEn = this._safeText(p.shortEn || p.short || p.descriptionEn || p.description || '').trim();
+        const nameZh = this._safeText(p.nameZh || (this._hasCjk(legacyName) ? legacyName : '') || '');
+        const nameEn = this._safeText(p.nameEn || (!this._hasCjk(legacyName) ? legacyName : '') || '');
+
+        const summaryZh = this._safeText(
+            p.shortZh || p.descriptionZh || (this._hasCjk(legacySummary) ? legacySummary : '') || ''
+        ).trim();
+        const summaryEn = this._safeText(
+            p.shortEn || p.descriptionEn || (!this._hasCjk(legacySummary) ? legacySummary : '') || ''
+        ).trim();
 
         const frame = this._getFrameHint(p);
         const sizeHint = this._getSizeHint(p);
@@ -1773,7 +2180,7 @@ class ProductManager {
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
-                    <a class="btn btn-secondary product-details-btn" href="product.html?id=${encodeURIComponent(product.id)}" data-translate="view_details"></a>
+                    <a class="btn btn-secondary product-details-btn" href="product.html?cat=${encodeURIComponent(product.category || 'all')}&id=${encodeURIComponent(product.id)}" data-translate="view_details"></a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
                         <i class="fas fa-shopping-cart"></i> ${t('btn_add_to_cart')}
                     </button>
@@ -1808,33 +2215,36 @@ getProductIcon(category) {
 
     
     getLocalizedName(product) {
-        const nameMap = {
-            zh: product.name,
-            en: product.nameEn,
-            ja: product.nameJa,
-            ko: product.nameKo
-        };
-        return nameMap[this.currentLanguage] || product.name;
+        const lang = this.currentLanguage || 'en';
+        const legacy = product ? (product.name || '') : '';
+
+        if (lang === 'zh') return product.nameZh || (this._hasCjk(legacy) ? legacy : '') || '产品';
+        if (lang === 'en') return product.nameEn || (!this._hasCjk(legacy) ? legacy : '') || 'Product';
+        if (lang === 'ja') return product.nameJa || '';
+        if (lang === 'ko') return product.nameKo || '';
+
+        return product.nameEn || product.nameZh || legacy || 'Product';
     }
     
     getLocalizedDescription(product) {
-        const descMap = {
-            zh: product.description,
-            en: product.descriptionEn,
-            ja: product.descriptionJa,
-            ko: product.descriptionKo
-        };
-        return descMap[this.currentLanguage] || product.description;
+        const lang = this.currentLanguage || 'en';
+        const legacy = product ? (product.description || product.short || '') : '';
+
+        if (lang === 'zh') return product.shortZh || product.descriptionZh || (this._hasCjk(legacy) ? legacy : '') || '';
+        if (lang === 'en') return product.shortEn || product.descriptionEn || (!this._hasCjk(legacy) ? legacy : '') || '';
+        if (lang === 'ja') return product.descriptionJa || '';
+        if (lang === 'ko') return product.descriptionKo || '';
+
+        return product.descriptionEn || product.descriptionZh || legacy || '';
     }
     
     getLocalizedSpecs(product) {
-        const specsMap = {
-            zh: product.specs,
-            en: product.specsEn,
-            ja: product.specsJa,
-            ko: product.specsKo
-        };
-        return specsMap[this.currentLanguage] || product.specs;
+        const lang = this.currentLanguage || 'en';
+        if (lang === 'zh') return product.specsZh || product.specs || [];
+        if (lang === 'en') return product.specsEn || product.specs || [];
+        if (lang === 'ja') return product.specsJa || [];
+        if (lang === 'ko') return product.specsKo || [];
+        return product.specs || [];
     }
     
     setupLanguageListener() {
@@ -2335,7 +2745,7 @@ getProductIcon(category) {
 
             <div class="product-row-info">
                 <h3>
-                    <a href="product.html?id=${encodeURIComponent(product.id)}" style="text-decoration:none;color:inherit;">
+                    <a href="product.html?cat=${encodeURIComponent(product.category || 'all')}&id=${encodeURIComponent(product.id)}" style="text-decoration:none;color:inherit;">
                         ${name}
                     </a>
                 </h3>
@@ -2795,7 +3205,7 @@ WeChat: massifmyth
     }
 
     showProductModal(productId) {
-        const product = this.products.find(p => p.id === productId);
+        const product = this.products.find(p => String(p.id) === String(productId));
         if (!product) return;
         
         const name = this.getLocalizedName(product);

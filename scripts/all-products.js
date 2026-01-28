@@ -95,7 +95,7 @@
     // 获取 URL 参数中的分类
     function getQueryCat() {
         const url = new URL(window.location.href);
-        return url.searchParams.get('cat') || 'all';
+        return url.searchParams.get('cat') || url.searchParams.get('category') || 'all';
     }
 
     function setQueryParams(nextParams) {
@@ -186,10 +186,27 @@
         return url.searchParams.get('type') || '';
     }
 
+    // 获取 URL 参数中的通用子类目（用于非 tents：sub / subcat / series / type 等）
+    function getQuerySub(cat) {
+        const url = new URL(window.location.href);
+        const sub = url.searchParams.get('sub')
+            || url.searchParams.get('subcat')
+            || url.searchParams.get('subcategory')
+            || url.searchParams.get('series')
+            || url.searchParams.get('line')
+            || url.searchParams.get('collection')
+            || '';
+
+        // Compatibility: for non-tents categories, allow using type= as a subcategory value.
+        const type = url.searchParams.get('type') || '';
+        if (!sub && cat && cat !== 'tents' && type) return type;
+        return sub;
+    }
+
     // 获取 URL 参数中的 q（搜索关键词）
     function getQueryQ() {
         const url = new URL(window.location.href);
-        return url.searchParams.get('q') || '';
+        return url.searchParams.get('q') || url.searchParams.get('search') || '';
     }
 
     // 获取当前语言
@@ -200,14 +217,19 @@
         return document.documentElement.lang || 'en';
     }
 
+    function hasCjk(text) {
+        return /[\u3400-\u9FFF\uF900-\uFAFF]/.test(String(text || ''));
+    }
+
     // 获取产品名称（根据当前语言）
     function getProductName(product) {
         const lang = getCurrentLang();
-        if (lang === 'zh' && product.name) return product.name;
-        if (lang === 'en' && product.nameEn) return product.nameEn;
-        if (lang === 'ja' && product.nameJa) return product.nameJa;
-        if (lang === 'ko' && product.nameKo) return product.nameKo;
-        return product.name || product.nameEn || 'Product';
+        const legacy = product ? (product.name || '') : '';
+        if (lang === 'zh') return product.nameZh || (hasCjk(legacy) ? legacy : '') || '产品';
+        if (lang === 'en') return product.nameEn || (!hasCjk(legacy) ? legacy : '') || 'Product';
+        if (lang === 'ja') return product.nameJa || '';
+        if (lang === 'ko') return product.nameKo || '';
+        return product.nameEn || product.nameZh || legacy || 'Product';
     }
 
     function safeText(text) {
@@ -418,11 +440,12 @@
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
             const quoteUrl = `./index.html?product=${productParam}#contact`;
-            // DETAIL ROUTING (trace)
+            // DETAIL ROUTING
             // Flow B (Browse Products / all-products.html cards) generates the “View details / 查看详情” link here.
-            // Canonical route: product.html?id=...
-            // Fallback: all-products.html?cat=...
-            const detailUrl = p.id ? `product.html?id=${encodeURIComponent(p.id)}` : `all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
+            // Route to the dedicated product detail page.
+            const detailUrl = (p.id != null)
+                ? `product.html?cat=${encodeURIComponent(p.category || 'all')}&id=${encodeURIComponent(p.id)}`
+                : `all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
             
             // 提取规格信息（从 tags 或 category 推断）
             const specs = [];
@@ -489,12 +512,12 @@
                     <div class="ap-body">
                         <h3>${name}</h3>
                         <p class="ap-meta">${model} ${tags ? '· ' + tags : ''}</p>
-                        <div class="product-specs" style="display: flex; flex-wrap: wrap; gap: 6px; margin: 0.75rem 0;">
+                        <div class="ap-specs">
                             ${specs.join('')}
                         </div>
-                        <div class="product-actions" style="display: flex; gap: 10px; margin-top: 1rem;">
-                            <a class="btn btn-primary product-btn" href="${quoteUrl}" style="flex: 1; text-align: center;" data-translate="btn_get_quote"></a>
-                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" style="flex: 1; text-align: center;" data-translate="view_details"></a>
+                        <div class="ap-actions">
+                            <a class="btn btn-primary product-btn" href="${quoteUrl}" data-translate="btn_get_quote"></a>
+                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" data-translate="view_details"></a>
                         </div>
                     </div>
                 </article>
@@ -682,13 +705,16 @@
         const cat = catSelect.value;
         const tag = getQueryTag(); // 获取 URL 中的 tag 参数
         const tentType = getQueryTentType();
+        const sub = getQuerySub(cat);
 
         // Keep URL in sync with current interactive state
         setQueryParams({
             cat: cat,
             q: q,
             // type only makes sense under tents
-            type: (cat === 'tents') ? (tentType || null) : null
+            type: (cat === 'tents') ? (tentType || null) : null,
+            // sub only for non-tents
+            sub: (cat && cat !== 'tents') ? (sub || null) : null
         });
 
         updateHeadingAndBreadcrumb(cat);
@@ -722,7 +748,14 @@
             // 搜索关键词筛选（支持中文→英文扩展）
             const hitQ = !q || productMatches(p, q);
 
-            return hitCat && hitType && hitTag && hitQ;
+            // 通用子类目筛选（用于非 tents）
+            let hitSub = true;
+            if (sub && cat !== 'tents') {
+                const raw = (p.subCategory || p.subcategory || p.sub_category || p.series || p.type || p.subType || p.line || p.collection || '');
+                hitSub = String(raw).toLowerCase() === String(sub).toLowerCase();
+            }
+
+            return hitCat && hitType && hitTag && hitQ && hitSub;
         });
 
         // If type filter yields no results, show a friendly notice + empty state (not blank)

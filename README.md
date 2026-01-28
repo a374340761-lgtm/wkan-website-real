@@ -36,7 +36,8 @@
 - **面包屑导航**：清晰的页面层级导航
 
 #### 产品详情页（PDP）
-- **独立产品页面**：`product.html?id=xxx`
+- **产品详情（统一入口）**：`product-center.html?open=xxx`（可选 `&cat=...`）
+- **兼容旧链接**：`product.html?id=xxx` / `product-detail.html?id=xxx` 会自动跳转到 Product Center
 - **完整产品信息**：图片、名称、描述、规格、应用场景
 - **标签页内容**：
   - 产品描述

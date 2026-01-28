@@ -435,10 +435,10 @@ function renderHomeCategoryGrid() {
     // Category IDs are based on the existing filtering convention: all-products.html?cat=...
     // and the product.category IDs present in scripts/products.js.
     const categories = [
-        { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
-        { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-        { id: 'racegate', img: encodeURI('images/products/racegate/V Race Gate/hero.png'), titleKey: 'home_cat_racegate_title', descKey: 'home_cat_racegate_desc' },
-        { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+            { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+            { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+            { id: 'racegate', img: encodeURI('images/products/racegate/V Race Gate/hero.png'), titleKey: 'home_cat_racegate_title', descKey: 'home_cat_racegate_desc' },
+            { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
 
     grid.innerHTML = '';
@@ -590,12 +590,10 @@ function renderHomeBestSellers() {
             const img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
             const catKey = getCategoryTranslateKey(safeProduct.category);
 
-            // DETAIL ROUTING (trace)
-            // Canonical product detail route: product.html?id=...
-            // Legacy (removed): product-detail.html?id=... (duplicate detail UI).
-            // This is one of the historical “View Details” sources (homepage Best Sellers).
-            const detailHref = safeProduct.id
-                ? `product.html?id=${encodeURIComponent(safeProduct.id)}`
+            // DETAIL ROUTING
+            // Route to the dedicated product detail page.
+            const detailHref = (safeProduct.id != null)
+                ? `product.html?cat=${encodeURIComponent(safeProduct.category || 'all')}&id=${encodeURIComponent(safeProduct.id)}`
                 : `./all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`;
 
             const card = document.createElement('div');
@@ -910,7 +908,7 @@ function enhanceTentsDropdown() {
 
     // DETAIL ROUTING (trace)
     // Flow A described by user: Product Center hover menu (Tents -> e.g. “40 六角铝合金架”).
-    // Canonical product detail route is product.html?id=...; map known stock series types to their product IDs.
+    // Stock series types map to product IDs, opened via product-center.html?cat=tents&open=<id>.
     // For other tent types, keep the type landing page.
     const STOCK_TENT_ID_BY_TYPE = {
         folding30: 2001,
@@ -921,7 +919,7 @@ function enhanceTentsDropdown() {
     const getTentTypeHref = (type) => {
         const key = String(type || '').trim();
         const productId = STOCK_TENT_ID_BY_TYPE[key];
-        if (productId != null) return `product.html?id=${encodeURIComponent(productId)}`;
+        if (productId != null) return `product-center.html?cat=tents&open=${encodeURIComponent(productId)}`;
         return `tent-type.html?type=${encodeURIComponent(key)}`;
     };
 
@@ -975,13 +973,21 @@ function enhanceTentsDropdown() {
         overview.textContent = '';
         sub.appendChild(overview);
 
-        const lang = getCurrentLang();
         const types = getTypes();
 
         types.forEach((t) => {
             const a = document.createElement('a');
             a.href = getTentTypeHref(t.type);
-            a.textContent = (lang && lang.startsWith('zh')) ? (t.nameZh || t.nameEn || t.type) : (t.nameEn || t.nameZh || t.type);
+
+            // Use bilingual spans so language switching never leaves English in zh mode (or vice versa).
+            const zh = document.createElement('span');
+            zh.className = 'zh';
+            zh.textContent = t.nameZh || t.nameEn || t.type;
+            const en = document.createElement('span');
+            en.className = 'en';
+            en.textContent = t.nameEn || t.nameZh || t.type;
+            a.appendChild(zh);
+            a.appendChild(en);
             sub.appendChild(a);
         });
 
@@ -1007,17 +1013,17 @@ function enhanceFlagsDropdown() {
     if (!menus.length) return;
 
     const fallback = [
-        { type: 'fiberglass_pole', label: 'Fiberglass Pole' },
-        { type: 'alu_fiberglass_pole', label: 'Aluminium + Fiberglass' },
-        { type: 'fully_fiberglass_teardrop', label: 'Fully Fiberglass (Teardrop)' },
-        { type: 'fully_fiberglass_feather', label: 'Fully Fiberglass (Feather)' },
-        { type: 'outdoor_giant_flag', label: 'Outdoor Giant Flag' },
-        { type: 'square_flag_pole_fiberglass', label: 'Square Flag Pole (Fiberglass)' },
-        { type: 'alu_pole_semicircle', label: 'Aluminium Pole (Semicircle)' },
-        { type: 'alu_pole_square', label: 'Aluminium Pole (Square)' },
-        { type: 'alu_pole_new_feather', label: 'Aluminium Pole (New Feather)' },
-        { type: 'alu_pole_feather', label: 'Aluminium Pole (Feather/Teardrop)' },
-        { type: 'flag_bases_accessories', label: 'Bases & Accessories' }
+        { type: 'fiberglass_pole', nameEn: 'Fiberglass Pole', nameZh: '玻璃纤维旗杆' },
+        { type: 'alu_fiberglass_pole', nameEn: 'Aluminium + Fiberglass', nameZh: '铝合金 + 玻璃纤维' },
+        { type: 'fully_fiberglass_teardrop', nameEn: 'Fully Fiberglass (Teardrop)', nameZh: '全玻璃纤维（泪滴）' },
+        { type: 'fully_fiberglass_feather', nameEn: 'Fully Fiberglass (Feather)', nameZh: '全玻璃纤维（羽毛）' },
+        { type: 'outdoor_giant_flag', nameEn: 'Outdoor Giant Flag', nameZh: '户外巨型旗' },
+        { type: 'square_flag_pole_fiberglass', nameEn: 'Square Flag Pole (Fiberglass)', nameZh: '方形旗杆（玻璃纤维）' },
+        { type: 'alu_pole_semicircle', nameEn: 'Aluminium Pole (Semicircle)', nameZh: '铝合金旗杆（半圆）' },
+        { type: 'alu_pole_square', nameEn: 'Aluminium Pole (Square)', nameZh: '铝合金旗杆（方形）' },
+        { type: 'alu_pole_new_feather', nameEn: 'Aluminium Pole (New Feather)', nameZh: '铝合金旗杆（新羽毛）' },
+        { type: 'alu_pole_feather', nameEn: 'Aluminium Pole (Feather/Teardrop)', nameZh: '铝合金旗杆（羽毛/泪滴）' },
+        { type: 'flag_bases_accessories', nameEn: 'Bases & Accessories', nameZh: '底座与配件' }
     ];
 
     const getTypes = () => {
@@ -1028,7 +1034,8 @@ function enhanceFlagsDropdown() {
         if (!list.length) return fallback;
         return list.map((x) => ({
             type: x.type,
-            label: (x && (x.nameEn || x.nameZh)) ? (x.nameEn || x.nameZh) : x.type
+            nameEn: (x && (x.nameEn || x.nameZh)) ? (x.nameEn || x.nameZh) : x.type,
+            nameZh: (x && (x.nameZh || x.nameEn)) ? (x.nameZh || x.nameEn) : x.type
         }));
     };
 
@@ -1076,7 +1083,16 @@ function enhanceFlagsDropdown() {
         types.forEach((t) => {
             const a = document.createElement('a');
             a.href = `flag-type.html?type=${encodeURIComponent(t.type)}`;
-            a.textContent = t.label;
+
+            // Use bilingual spans so Chinese mode never shows English-only labels.
+            const zh = document.createElement('span');
+            zh.className = 'zh';
+            zh.textContent = t.nameZh || t.nameEn || t.type;
+            const en = document.createElement('span');
+            en.className = 'en';
+            en.textContent = t.nameEn || t.nameZh || t.type;
+            a.appendChild(zh);
+            a.appendChild(en);
             sub.appendChild(a);
         });
 
@@ -1111,13 +1127,17 @@ function enhanceDisplaysDropdown() {
     };
 
     const items = [
-        // New: key sub-types for Pop-up Displays
-        { href: 'all-products.html?cat=displays&tag=backdrop', translateKey: 'menu_popup_backdrop' },
-        { href: 'all-products.html?cat=displays&tag=counter', translateKey: 'menu_popup_counter' },
+        // Displays subcategories (match Product Center subcategory overview)
+        { href: 'all-products.html?cat=displays&sub=popup', translateKey: 'menu_popup_backdrop' },
+        { href: 'all-products.html?cat=displays&sub=counter', translateKey: 'menu_popup_counter' },
+        { href: 'all-products.html?cat=displays&sub=fabric-banner-stands', translateKey: 'menu_popup_fabric_banner_stands' },
+        { href: 'all-products.html?cat=displays&sub=tfd-straight-line', translateKey: 'menu_popup_tfd_straight_line_series' },
+        { href: 'all-products.html?cat=displays&sub=tfd-c-shaped', translateKey: 'menu_popup_tfd_c_shaped_series' },
+        { href: 'all-products.html?cat=displays&sub=tfd-accessories', translateKey: 'menu_popup_tfd_accessories' },
 
-        // Existing: keep legacy A-Frame entries
-        { href: 'product.html?id=42001', zh: 'A字架（A-Frame）', en: 'A-Frame' },
-        { href: 'product.html?id=42002', zh: 'A字架背板系统（Backdrop）', en: 'A-Frame Backdrop System' }
+        // Direct product entries
+        { href: 'product.html?cat=displays&id=42001', translateKey: 'menu_displays_aframe' },
+        { href: 'product.html?cat=displays&id=42002', translateKey: 'menu_displays_aframe_backdrop' }
     ];
 
     menus.forEach((menu) => {
@@ -1156,14 +1176,13 @@ function enhanceDisplaysDropdown() {
         const sub = document.createElement('div');
         sub.className = 'dropdown-submenu';
 
-        // Overview link (keep existing target behavior)
+        // Overview link (category overview)
         const overview = document.createElement('a');
         overview.href = displaysLink.getAttribute('href') || 'product-center.html?cat=displays';
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);
 
-        const lang = getCurrentLang();
         items.forEach((it) => {
             const a = document.createElement('a');
             a.href = it.href;
@@ -1171,7 +1190,14 @@ function enhanceDisplaysDropdown() {
                 a.setAttribute('data-translate', it.translateKey);
                 a.textContent = '';
             } else {
-                a.textContent = (lang && lang.startsWith('zh')) ? it.zh : it.en;
+                const zh = document.createElement('span');
+                zh.className = 'zh';
+                zh.textContent = it.zh || it.en || '';
+                const en = document.createElement('span');
+                en.className = 'en';
+                en.textContent = it.en || it.zh || '';
+                a.appendChild(zh);
+                a.appendChild(en);
             }
             sub.appendChild(a);
         });
@@ -1723,7 +1749,7 @@ function initSearch() {
                 </div>
 
                 <div class="search-row">
-                    <input id="searchOverlayInput" type="text" placeholder="Search tents / flags / displays..." autocomplete="off" />
+                    <input id="searchOverlayInput" type="text" data-translate-placeholder="products_search_placeholder" placeholder="" autocomplete="off" />
                     <button id="searchOverlayGo" class="btn btn-primary" type="button">
                         <span class="en">Search</span><span class="zh">搜索</span>
                     </button>
@@ -1736,6 +1762,11 @@ function initSearch() {
             </div>
         `;
         document.body.appendChild(overlay);
+
+        // Apply translations for newly injected markup (including placeholder).
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
     }
 
     const input = overlay.querySelector('#searchOverlayInput');

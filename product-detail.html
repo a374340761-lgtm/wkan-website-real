@@ -6,6 +6,30 @@
     <title>Product Detail - 广西伟群帐篷制造有限公司</title>
     <meta name="description" content="" />
 
+    <script>
+        (function () {
+            try {
+                var url = new URL(window.location.href);
+                var id = url.searchParams.get('id') || url.searchParams.get('open') || '';
+                var cat = url.searchParams.get('cat') || url.searchParams.get('category') || '';
+                if (!id) {
+                    // No product specified: go to Product Center (category optional)
+                    var hub = new URL('product-center.html', url);
+                    if (cat) hub.searchParams.set('cat', cat);
+                    window.location.replace(hub.toString());
+                    return;
+                }
+
+                var target = new URL('product-center.html', url);
+                if (cat) target.searchParams.set('cat', cat);
+                target.searchParams.set('open', id);
+                window.location.replace(target.toString());
+            } catch (e) {
+                // ignore
+            }
+        })();
+    </script>
+
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multilang.css">
     <link rel="stylesheet" href="styles/cart.css">

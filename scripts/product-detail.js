@@ -1,18 +1,23 @@
-// Universal product detail page controller (product.html?id=...)
+// Redirect shim: product.html / product-detail.html -> product-center.html?open=<id>
 document.addEventListener('DOMContentLoaded', () => {
-    let attachedOnce = false;
-
-    // Legacy route compatibility: product-detail.html?id=... -> product.html?id=...
     try {
-        const path = String(window.location.pathname || '').toLowerCase();
-        if (path.endsWith('/product-detail.html') || path.endsWith('product-detail.html')) {
-            const target = `product.html${window.location.search || ''}${window.location.hash || ''}`;
-            window.location.replace(target);
+        const url = new URL(window.location.href);
+        const openId = url.searchParams.get('open') || url.searchParams.get('id') || '';
+        if (openId) {
+            const cat = url.searchParams.get('cat') || '';
+            const target = new URL('product-center.html', url);
+            if (cat) target.searchParams.set('cat', cat);
+            target.searchParams.set('open', openId);
+            window.location.replace(target.toString());
             return;
         }
     } catch (e) {
         // ignore
     }
+
+    let attachedOnce = false;
+
+    // Legacy route compatibility handled above by redirect shim.
 
     const escapeHtml = (s) => {
         return String(s == null ? '' : s)

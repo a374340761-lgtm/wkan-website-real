@@ -1,28 +1,28 @@
 // tents.js — render tents category only (Stock / Custom sections)
 const tents = [
   {
-    id: "tent-30-iron",
+    id: 2001,
     name: "30 Square Tube Iron Frame Tent",
     category: "stock",
     image: "images/products/tents/30square-tube-frame-iron.png",
     material: "Iron",
-    detailPage: "tent-detail.html?id=tent-30-iron"
+    detailPage: "product-center.html?cat=tents&open=2001"
   },
   {
-    id: "tent-40-aluminum",
+    id: 2002,
     name: "40 Hexagon Aluminum Frame Tent",
     category: "stock",
     image: "images/products/tents/40square-tube-frame-aluminum.png",
     material: "Aluminum",
-    detailPage: "tent-detail.html?id=tent-40-aluminum"
+    detailPage: "product-center.html?cat=tents&open=2002"
   },
   {
-    id: "tent-50-aluminum",
+    id: 2003,
     name: "50 Hexagon Aluminum Frame Tent",
     category: "stock",
     image: "images/products/tents/50square-tube-frame-aluminum.png",
     material: "Aluminum",
-    detailPage: "tent-detail.html?id=tent-50-aluminum"
+    detailPage: "product-center.html?cat=tents&open=2003"
   }
 ];
 
@@ -33,7 +33,6 @@ container.innerHTML = tents.map(t => `
     <img src="${t.image}" alt="${t.name}">
     <h3>${t.name}</h3>
     <p>Frame Material: ${t.material}</p>
-    <!-- Canonical detail route: product.html?id=... (legacy product-detail.html removed) -->
-    <a class="btn btn-secondary product-details-btn" href="product.html?id=${encodeURIComponent(t.id)}" data-translate="view_details"></a>
+    <a class="btn btn-secondary product-details-btn" href="product-center.html?cat=tents&open=${encodeURIComponent(t.id)}" data-translate="view_details"></a>
   </div>
 `).join("");

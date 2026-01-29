@@ -103,7 +103,8 @@
     wrap.innerHTML = items.map((p) => {
       const name = lang === 'zh' ? (p.name || p.nameEn || p.model) : (p.nameEn || p.name || p.model);
       const model = p.model || '';
-      const href = p.id ? `product.html?cat=furniture&id=${encodeURIComponent(p.id)}` : 'all-products.html?cat=furniture';
+      const preferredSku = (p && p.sku != null && String(p.sku).trim() !== '') ? String(p.sku).trim() : (p && p.id != null ? String(p.id).trim() : '');
+      const href = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html?cat=furniture';
       return `
         <div style="display:flex; gap:10px; align-items:flex-start; padding: 12px; border:1px solid var(--border-color); border-radius: 12px; background: var(--bg-white);">
           <div style="width:38px; height:38px; border-radius: 10px; display:flex; align-items:center; justify-content:center; background: rgba(15,23,42,0.06); color:#0f172a;">

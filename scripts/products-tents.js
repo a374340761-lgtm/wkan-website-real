@@ -33,11 +33,15 @@
       const zhName = (p && (p.nameZh || (hasCjk(legacyName) ? legacyName : ''))) || '';
       const enName = (p && (p.nameEn || (!hasCjk(legacyName) ? legacyName : ''))) || '';
 
+      const hero = document.createElement('div');
+      hero.className = 'ap-img';
+
       const img = document.createElement('img');
       img.src = p.image;
       img.alt = (lang && lang.startsWith('zh')) ? (zhName || '产品') : (enName || 'Product');
       img.loading = 'lazy';
       img.onerror = function(){ this.src='images/placeholder.png'; };
+      hero.appendChild(img);
 
       const h3 = document.createElement('h3');
       h3.textContent = (lang && lang.startsWith('zh')) ? (zhName || '产品') : (enName || 'Product');
@@ -48,12 +52,12 @@
       const actions = document.createElement('div');
       actions.className = 'tent-actions';
       actions.innerHTML = `
-        <a class="btn btn-secondary product-details-btn" href="product.html?cat=tents&id=${encodeURIComponent(p.id)}" data-translate="view_details"></a>
+        <a class="btn btn-secondary product-details-btn" href="product-detail.html?sku=${encodeURIComponent((p && p.sku) ? p.sku : p.id)}" data-translate="view_details"></a>
         <button class="btn" data-quote="${p.id}" data-translate="btn_get_quote"></button>
         <button class="btn" data-addcart="${p.id}" data-translate="btn_add_to_cart"></button>
       `;
 
-      card.appendChild(img);
+      card.appendChild(hero);
       card.appendChild(h3);
       card.appendChild(desc);
       card.appendChild(actions);

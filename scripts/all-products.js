@@ -115,12 +115,66 @@
             tents: 'home_cat_tents_title',
             flags: 'menu_beach_flags',
             displays: 'menu_popup_displays',
+            lightbox: 'category_lightbox',
             accessories: 'menu_accessories',
             racegate: 'home_cat_racegate_title',
             custom: 'category_custom'
         };
         return map[cat] || null;
     }
+
+    function getPreferredSku(product) {
+        if (!product) return '';
+        const sku = (product.sku != null && String(product.sku).trim() !== '') ? String(product.sku).trim() : '';
+        if (sku) return sku;
+        const id = (product.id != null && String(product.id).trim() !== '') ? String(product.id).trim() : '';
+        return id;
+    }
+
+    function buildUnifiedDetailUrlFromSku(sku) {
+        const s = (sku == null ? '' : String(sku)).trim();
+        if (!s) return '';
+        return `product-detail.html?sku=${encodeURIComponent(s)}`;
+    }
+
+    function extractSkuFromHref(href) {
+        try {
+            const u = new URL(href, window.location.href);
+            const p = u.searchParams;
+            // unified param
+            const sku = p.get('sku');
+            if (sku) return sku;
+            // legacy params
+            const legacy = p.get('id') || p.get('open') || p.get('pid') || p.get('product') || p.get('model');
+            return legacy || '';
+        } catch (e) {
+            return '';
+        }
+    }
+
+    // Global click safeguard (All Products only): force all "View details / 查看详情" clicks to the unified PDP.
+    // Works even if some legacy href remains in dynamically-rendered DOM.
+    document.addEventListener('click', (e) => {
+        const a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+        if (!a) return;
+
+        const isDetails = a.classList.contains('product-details-btn') || a.getAttribute('data-translate') === 'view_details';
+        if (!isDetails) return;
+
+        const href = a.getAttribute('href') || '';
+        const isUnified = /(^|\/)(product-detail\.html)(\?|#|$)/i.test(href);
+        if (isUnified) return;
+
+        const skuFromData = a.getAttribute('data-sku') || (a.closest('[data-sku]') && a.closest('[data-sku]').getAttribute('data-sku')) || '';
+        const skuFromHref = extractSkuFromHref(href);
+        const nextSku = (skuFromData || skuFromHref || '').trim();
+        const unified = buildUnifiedDetailUrlFromSku(nextSku);
+        if (!unified) return;
+
+        e.preventDefault();
+        e.stopPropagation();
+        window.location.assign(unified);
+    }, true);
 
     function updateHeadingAndBreadcrumb(cat) {
         const headingEl = document.getElementById('allProductsHeading');
@@ -442,9 +496,10 @@
             const quoteUrl = `./index.html?product=${productParam}#contact`;
             // DETAIL ROUTING
             // Flow B (Browse Products / all-products.html cards) generates the “View details / 查看详情” link here.
-            // Route to the dedicated product detail page.
-            const detailUrl = (p.id != null)
-                ? `product.html?cat=${encodeURIComponent(p.category || 'all')}&id=${encodeURIComponent(p.id)}`
+            // Route to the ONE unified product detail page.
+            const preferredSku = getPreferredSku(p);
+            const detailUrl = preferredSku
+                ? buildUnifiedDetailUrlFromSku(preferredSku)
                 : `all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
             
             // 提取规格信息（从 tags 或 category 推断）
@@ -501,13 +556,13 @@
                 const c = Number(p.grid.col);
                 const x = (c - 1) * 33.333333;
                 const y = (r - 1) * 20;
-                imgHtml = `<div class="ap-img"><div class="sprite-thumb" style="background-image:url('${imgSrc}');background-position:${x}% ${y}%;height:180px;border-radius:12px;background-size:400% 600%;"></div></div>`;
+                imgHtml = `<div class="ap-img"><div class="sprite-thumb" style="background-image:url('${imgSrc}');background-position:${x}% ${y}%;background-size:400% 600%;"></div></div>`;
             } else {
                 imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder.png'"></div>`;
             }
 
             return `
-                <article class="ap-card" data-cat="${p.category}">
+                <article class="ap-card" data-cat="${p.category}" data-sku="${safeText(preferredSku)}">
                     ${imgHtml}
                     <div class="ap-body">
                         <h3>${name}</h3>
@@ -517,7 +572,7 @@
                         </div>
                         <div class="ap-actions">
                             <a class="btn btn-primary product-btn" href="${quoteUrl}" data-translate="btn_get_quote"></a>
-                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" data-translate="view_details"></a>
+                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" data-sku="${safeText(preferredSku)}" data-translate="view_details"></a>
                         </div>
                     </div>
                 </article>

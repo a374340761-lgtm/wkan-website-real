@@ -42,34 +42,13 @@
                 #accessoriesGrid.ap-grid{ grid-template-columns:repeat(1,minmax(0,1fr)); }
             }
 
-            .ap-card{
-                background:#fff;
-                border-radius:12px;
-                overflow:hidden;
-                box-shadow:0 8px 22px rgba(0,0,0,.06);
-                border:1px solid rgba(0,0,0,.04);
-                display:flex;
-                flex-direction:column;
-            }
-            .ap-thumb{
-                height:150px;
+            /* Accessories uses the global .ap-card/.ap-img styles from main.css.
+               We only set the sprite image source here.
+            */
+            #accessoriesGrid .ap-img .sprite-thumb{
                 background-image:url("${SPRITE}");
                 background-size:400% 600%;
-                background-repeat:no-repeat;
                 background-color:#fff;
-                border-bottom:1px solid rgba(0,0,0,.06);
-            }
-            .ap-body{ padding:12px; display:flex; flex-direction:column; gap:6px; }
-            .ap-title{ margin:0; font-size:1rem; font-weight:600; cursor:pointer; }
-            .ap-model{ font-size:.86rem; opacity:.75; }
-            .ap-actions{ margin-top:8px; display:flex; gap:10px; }
-            .ap-btn{
-                padding:8px 10px;
-                border-radius:8px;
-                border:1px solid rgba(0,0,0,.12);
-                background:#fff;
-                cursor:pointer;
-                font-size:.9rem;
             }
         `;
         const s = document.createElement('style');
@@ -144,19 +123,22 @@
         const card = document.createElement('article');
         card.className = 'ap-card';
 
-        const thumb = document.createElement('div');
-        thumb.className = 'ap-thumb';
-        thumb.style.backgroundPosition = bgPos(Number(p.grid.row), Number(p.grid.col));
+        const hero = document.createElement('div');
+        hero.className = 'ap-img';
+
+        const sprite = document.createElement('div');
+        sprite.className = 'sprite-thumb';
+        sprite.style.backgroundPosition = bgPos(Number(p.grid.row), Number(p.grid.col));
+        hero.appendChild(sprite);
 
         const body = document.createElement('div');
         body.className = 'ap-body';
 
         const title = document.createElement('h3');
-        title.className = 'ap-title';
         title.textContent = name;
 
-        const model = document.createElement('div');
-        model.className = 'ap-model';
+        const model = document.createElement('p');
+        model.className = 'ap-meta';
         model.textContent = p.model || '';
 
         const actions = document.createElement('div');
@@ -164,15 +146,15 @@
 
         const detailsLink = document.createElement('a');
         detailsLink.className = 'btn btn-secondary product-details-btn';
-        detailsLink.href = `product.html?cat=accessories&id=${encodeURIComponent(id)}`;
+        detailsLink.href = `product-detail.html?sku=${encodeURIComponent(id)}`;
         detailsLink.setAttribute('data-translate', 'view_details');
         detailsLink.textContent = '';
 
         const go = () => {
-            location.href = `product.html?cat=accessories&id=${encodeURIComponent(id)}`;
+            location.href = `product-detail.html?sku=${encodeURIComponent(id)}`;
         };
 
-        thumb.addEventListener('click', go);
+        hero.addEventListener('click', go);
         title.addEventListener('click', go);
 
         actions.appendChild(detailsLink);
@@ -180,7 +162,7 @@
         body.appendChild(model);
         body.appendChild(actions);
 
-        card.appendChild(thumb);
+        card.appendChild(hero);
         card.appendChild(body);
         return card;
     }

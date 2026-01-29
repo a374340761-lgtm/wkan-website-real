@@ -514,7 +514,7 @@ class ProductManager {
                     category: 'displays',
                     subcategory: 'tfd-straight-line',
                     model: 'WK-HZ',
-                    sku: 'WK-HZ',
+                    sku: 'WK-HZ-STRAIGHT',
                     nameEn: 'Straight Line Tension Fabric Backwall (WK-HZ)',
                     nameZh: '直型系列（WK-HZ）',
                     shortEn: 'Straight-line tension fabric backwall system for trade shows, booths and media walls.',
@@ -578,6 +578,212 @@ class ProductManager {
                     keywords: ['WK-HZ', 'straight line', 'backwall', 'tension fabric', 'SEG', '直型系列', '快幕秀'],
                     tags: 'WK-HZ, Straight Line Series, tension fabric, SEG, display backwall',
                     referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+
+                // ===== Tension Fabric Displays: S-shaped Series (Catalog p22) =====
+                {
+                    id: 42011,
+                    category: 'displays',
+                    subcategory: 'tension-fabric',
+                    model: 'WK-HS',
+                    sku: 'WK-HS',
+                    seriesKey: 'tension_s_shaped',
+                    nameEn: 'S-shaped Tension Fabric Display',
+                    nameZh: 'S型张拉布展示（S型系列）',
+                    shortEn: 'S-shaped tension fabric display for premium booth backwalls and brand backdrops.',
+                    shortZh: 'S型张力布展示系统，适用于展会背景墙与品牌展示。',
+                    descriptionEn: 'S-shaped tension fabric display with modular aluminum tube frame and SEG push-fit silicone edge graphic. Fast setup, seamless full-bleed visual, and easy graphic replacement.',
+                    descriptionZh: 'S型张力布展示系统：模块化铝合金管结构 + SEG（卡槽式）硅胶边条压入。搭建快速，画面满版平整，可更换维护成本低。',
+                    image: 'images/products/displays/tension-fabric-displays/22.png',
+                    images: ['images/products/displays/tension-fabric-displays/22.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/22.png'],
+                    specsZh: {
+                        '型号': 'WK-HS',
+                        '数量': '1 套'
+                    },
+                    specsEn: {
+                        Model: 'WK-HS',
+                        Quantity: '1 set'
+                    },
+                    detailDescEn: [
+                        'Aluminum tube frame with modular snap-fit connections.',
+                        'Stretch tension fabric graphic with elastic property and silicone edge (SEG / push-fit system).',
+                        'Dye-sublimation printing for vivid colors and seamless full-bleed visuals.',
+                        'Wrinkle-resistant fabric under tension; easy graphic replacement.',
+                        'Tool-free or minimal-tool setup; portable and exhibition-ready.'
+                    ],
+                    detailDescZh: [
+                        '模块化铝合金管结构，插接式连接，稳固且便于运输。',
+                        '高弹性张力布画面，硅胶边条（SEG / 卡槽式）压入框架，画面平整无褶皱。',
+                        '热升华印刷，色彩饱和，支持满版展示。',
+                        '张力结构有效减少褶皱，画面可更换，维护成本低。',
+                        '免工具或少工具安装，适用于展会、活动背景与商业陈列。'
+                    ],
+                    applicationsEn: ['Trade show backwalls', 'Exhibition booths', 'Brand promotion events', 'Retail & showroom displays', 'Media walls and photo backdrops'],
+                    applicationsZh: ['展会背景墙', '展览展示系统', '品牌推广活动', '门店与展厅陈列', '拍照背景与媒体墙'],
+                    variantTables: [
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-HS', size: '225×295 CM', graphic: '230×320 CM', carton: '29×29.5×80 CM', qty: '1', weight: '13 KG' },
+                                { model: 'WK-HS', size: '225×590 CM', graphic: '230×655 CM', carton: '29×52×80 CM', qty: '1', weight: '17 KG' }
+                            ]
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-HS', 'S-shaped', 'tension fabric display', 'SEG', 'push-fit', 'S型', '张拉布', '张力布', '快幕秀'],
+                    keywords: ['WK-HS', 'S-shaped', 'tension fabric', 'SEG', 'S型系列', '张拉布'],
+                    tags: 'WK-HS, S-shaped series, tension fabric display, SEG',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/22.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+
+                // ===== Tension Fabric Displays: Hanging Banner (Catalog p22) =====
+                {
+                    id: 42012,
+                    category: 'displays',
+                    subcategory: 'tension-fabric',
+                    model: 'WK-HB',
+                    sku: 'WK-HB',
+                    seriesKey: 'tension_hanging_banner',
+                    nameEn: 'Tension Fabric Hanging Banner',
+                    nameZh: '吊挂张拉布（吊环系列）',
+                    shortEn: 'Hanging banners with tension fabric graphics for overhead branding at trade shows.',
+                    shortZh: '吊挂张力布展示系统，用于展会顶部导视与品牌曝光。',
+                    descriptionEn: 'Hanging banner system with tension fabric SEG graphics. Available in circle / rectangle / triangle shapes. Ideal for attracting attention above booths and guiding traffic.',
+                    descriptionZh: '吊挂张力布展示系统，采用 SEG（卡槽式）画面结构，可选圆形/矩形/三角形造型，适合展位上方悬挂引流与品牌曝光。',
+                    image: 'images/products/displays/tension-fabric-displays/22.png',
+                    images: ['images/products/displays/tension-fabric-displays/22.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/22.png'],
+                    specsZh: {
+                        '造型': '圆形 / 矩形 / 三角形',
+                        '数量': '1 套'
+                    },
+                    specsEn: {
+                        Shapes: 'Circle / Rectangle / Triangle',
+                        Quantity: '1 set'
+                    },
+                    detailDescEn: [
+                        'Lightweight aluminum tube frame with snap-fit connections for quick assembly.',
+                        'SEG / push-fit silicone edge graphic for a clean, seamless look.',
+                        'Dye-sublimation printing for vibrant, full-bleed visuals.',
+                        'Overhead placement increases visibility and helps booth wayfinding.',
+                        'Reusable structure with replaceable graphics.'
+                    ],
+                    detailDescZh: [
+                        '轻量化铝合金管结构，插接式连接，便于快速安装。',
+                        'SEG / 卡槽式硅胶边条压入，画面平整、边缘干净。',
+                        '热升华印刷，色彩饱和，支持满版展示。',
+                        '悬挂于展位上方，提高远距离可见度并引导人流。',
+                        '结构可重复使用，画面可更换。'
+                    ],
+                    applicationsEn: ['Overhead booth branding', 'Trade show wayfinding', 'Retail ceiling signage', 'Event venue guidance'],
+                    applicationsZh: ['展位顶部品牌展示', '展会导视引流', '门店吊顶标识', '活动场馆指引'],
+                    variantTables: [
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-HB-1', size: '295×84 CM', graphic: '915×85 CM', carton: '待定 / TBD', qty: '1', weight: '待定 / TBD' },
+                                { model: 'WK-HB-2', size: '237×93 CM', graphic: '915×94 CM', carton: '待定 / TBD', qty: '1', weight: '待定 / TBD' },
+                                { model: 'WK-HB-3', size: '451×107 CM', graphic: '1337×108 CM', carton: '待定 / TBD', qty: '1', weight: '待定 / TBD' }
+                            ]
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-HB', 'WK-HB-1', 'WK-HB-2', 'WK-HB-3', 'hanging banner', 'tension fabric', 'SEG', '吊挂', '吊环', '快幕秀'],
+                    keywords: ['WK-HB', 'hanging banner', 'tension fabric', 'SEG', '吊挂张拉布'],
+                    tags: 'WK-HB, Hanging Banner, tension fabric, SEG',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/22.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    price: '询价'
+                },
+
+                // ===== Tension Fabric Displays: Curved Line Series (Catalog p23) =====
+                {
+                    id: 42013,
+                    category: 'displays',
+                    subcategory: 'tension-fabric',
+                    model: 'WK-HZ',
+                    sku: 'WK-HZ',
+                    seriesKey: 'tension_curved_line',
+                    nameEn: 'Curved Tension Fabric Display',
+                    nameZh: '弧型张拉布展示（弧型系列）',
+                    shortEn: 'Curved tension fabric display for premium booth backdrops and photo walls.',
+                    shortZh: '弧型张力布展示系统，适用于展位背景与拍照媒体墙。',
+                    descriptionEn: 'Curved line tension fabric display with modular aluminum tube frame and SEG push-fit silicone edge graphic. Smooth curved profile and seamless full-bleed fabric visuals.',
+                    descriptionZh: '弧型张力布展示系统：模块化铝合金管结构 + SEG（卡槽式）硅胶边条压入。弧形轮廓更吸睛，画面满版平整。',
+                    image: 'images/products/displays/tension-fabric-displays/23.png',
+                    images: ['images/products/displays/tension-fabric-displays/23.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/23.png'],
+                    specsZh: {
+                        '型号': 'WK-HZ',
+                        '数量': '1 套'
+                    },
+                    specsEn: {
+                        Model: 'WK-HZ',
+                        Quantity: '1 set'
+                    },
+                    detailDescEn: [
+                        'Aluminum tube frame with modular snap-fit connections.',
+                        'Stretch tension fabric graphic with silicone edge (SEG / push-fit system) for a smooth, wrinkle-reduced finish.',
+                        'Dye-sublimation printing for vivid colors and seamless full-bleed visuals.',
+                        'Curved profile enhances booth presence and creates a premium backdrop look.',
+                        'Tool-free or minimal-tool setup; portable and exhibition-ready.'
+                    ],
+                    detailDescZh: [
+                        '模块化铝合金管结构，插接式连接，稳固且便于运输。',
+                        '高弹性张力布画面，硅胶边条（SEG / 卡槽式）压入框架，画面平整无褶皱。',
+                        '热升华印刷，色彩饱和，支持满版展示。',
+                        '弧形造型更醒目，适合作为高端背景与主视觉展示。',
+                        '免工具或少工具安装，适用于展会、活动背景与商业陈列。'
+                    ],
+                    applicationsEn: ['Trade show backwalls', 'Exhibition booths', 'Brand promotion events', 'Retail & showroom displays', 'Media walls and photo backdrops'],
+                    applicationsZh: ['展会背景墙', '展览展示系统', '品牌推广活动', '门店与展厅陈列', '拍照背景与媒体墙'],
+                    variantTables: [
+                        {
+                            titleZh: '型号与规格',
+                            titleEn: 'Model & Specifications',
+                            columns: [
+                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
+                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
+                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                            ],
+                            rows: [
+                                { model: 'WK-HZ', size: '225×245 CM', graphic: '230×265 CM', carton: '28×28×80 CM', qty: '1', weight: '10 KG' },
+                                { model: 'WK-HZ', size: '225×300 CM', graphic: '230×325 CM', carton: '28×28×80 CM', qty: '1', weight: '13 KG' },
+                                { model: 'WK-HZ', size: '225×600 CM', graphic: '230×658 CM', carton: '28×48×80 CM', qty: '1', weight: '17 KG' }
+                            ]
+                        }
+                    ],
+                    optionalAccessoryIds: [42007, 42008],
+                    searchableKeywords: ['WK-HZ', 'curved line', 'curved tension fabric display', 'tension fabric', 'SEG', '弧型', '弧型系列', '张拉布', '快幕秀'],
+                    keywords: ['WK-HZ', 'curved', 'tension fabric', 'SEG', '弧型系列', '张拉布'],
+                    tags: 'WK-HZ, Curved line series, tension fabric display, SEG',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -810,6 +1016,143 @@ class ProductManager {
                 },
                 keywords: ['race gate', 'racegate', 'fpv', 'drone', '拱门', '竞速拱门', 'AD-R40A', 'AD-R40B', 'AD-R40C', 'AD-R40D', 'fiberglass', '玻璃钢'],
                 tags: 'RaceGate, Fiberglass',
+                price: '询价'
+            },
+
+            // ===== Light Box Series (Catalog p23) =====
+            {
+                id: 43001,
+                category: 'lightbox',
+                subcategory: 'round-tube-light-box',
+                model: 'WK-LB-RT',
+                sku: 'WK-LB-RT',
+                nameEn: 'Round Tube Light Box Series',
+                nameZh: '圆管灯箱系列',
+                shortEn: 'Portable LED backlit SEG light box with round-tube frame profile.',
+                shortZh: '圆管结构 LED 背光卡布灯箱，便携模块化安装。',
+                descriptionEn: 'LED backlit light box series with aluminum frame and SEG silicone edge fabric graphic. Energy-efficient lighting, seamless visuals and quick graphic replacement. Custom sizes available.',
+                descriptionZh: 'LED 背光灯箱系列：铝合金框架 + SEG（卡布）硅胶边条画面。发光均匀节能，画面无缝平整，画面可快速更换，支持定制尺寸。',
+                image: 'images/products/displays/tension-fabric-displays/23.png',
+                images: ['images/products/displays/tension-fabric-displays/23.png'],
+                gallery: ['images/products/displays/tension-fabric-displays/23.png'],
+                specsZh: {
+                    '尺寸': '支持定制',
+                    '光源': 'LED 背光',
+                    '画面': 'SEG（卡布）布画'
+                },
+                specsEn: {
+                    Size: 'Custom sizes available',
+                    Lighting: 'LED backlit',
+                    Graphic: 'SEG silicone edge fabric'
+                },
+                detailDescEn: [
+                    'Aluminum frame with round tube profile; modular structure for transport and setup.',
+                    'SEG silicone edge fabric graphic for a clean, seamless finish.',
+                    'LED backlit illumination for high-impact visuals; energy-efficient and durable.',
+                    'Quick graphic replacement; ideal for frequent campaign updates.',
+                    'Suitable for trade shows, retail and showroom environments.'
+                ],
+                detailDescZh: [
+                    '圆管型材铝合金框架，模块化结构便于运输与安装。',
+                    'SEG 卡布结构，硅胶边条压入，画面平整无缝。',
+                    'LED 背光发光均匀，节能耐用，视觉冲击力强。',
+                    '画面可快速更换，适合频繁更换活动主视觉。',
+                    '适用于展会、门店陈列、展厅与品牌展示。'
+                ],
+                applicationsEn: ['Trade shows', 'Retail displays', 'Showrooms', 'Brand activation events', 'Indoor advertising'],
+                applicationsZh: ['展会展示', '门店陈列', '展厅展示', '品牌活动', '室内广告'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+            {
+                id: 43002,
+                category: 'lightbox',
+                subcategory: 'aluminum-profile-seg-light-box',
+                model: 'WK-LB-AP',
+                sku: 'WK-LB-AP',
+                nameEn: 'Aluminum Profile SEG Light Box Series',
+                nameZh: '铝型材卡布灯箱系列',
+                shortEn: 'SEG light box with aluminum profile frame and LED backlighting.',
+                shortZh: '铝型材框架 LED 背光卡布灯箱，适用于品牌展示与零售陈列。',
+                descriptionEn: 'Professional SEG light box series using aluminum profiles, LED backlit modules and silicone edge fabric graphics. Seamless appearance, modular build and quick graphic replacement. Custom sizes available.',
+                descriptionZh: '专业卡布灯箱系列：铝型材框架 + LED 背光模块 + SEG 硅胶边条布画。外观无缝平整，模块化结构，画面更换便捷，支持定制尺寸。',
+                image: 'images/products/displays/tension-fabric-displays/23.png',
+                images: ['images/products/displays/tension-fabric-displays/23.png'],
+                gallery: ['images/products/displays/tension-fabric-displays/23.png'],
+                specsZh: {
+                    '尺寸': '支持定制',
+                    '光源': 'LED 背光',
+                    '画面': 'SEG（卡布）布画'
+                },
+                specsEn: {
+                    Size: 'Custom sizes available',
+                    Lighting: 'LED backlit',
+                    Graphic: 'SEG silicone edge fabric'
+                },
+                detailDescEn: [
+                    'Rigid aluminum profile frame for stable, premium presentation.',
+                    'Uniform LED backlighting for bright, consistent illumination.',
+                    'SEG silicone edge fabric graphics for seamless full-bleed visuals.',
+                    'Modular assembly and easy transport for exhibitions and pop-up retail.',
+                    'Quick-change graphics reduce maintenance cost and downtime.'
+                ],
+                detailDescZh: [
+                    '铝型材框架稳固耐用，整体更显高端。',
+                    'LED 背光发光均匀，亮度一致。',
+                    'SEG 卡布结构，画面无缝满版展示。',
+                    '模块化组装，便于运输与现场安装。',
+                    '画面更换快捷，降低维护成本与停机时间。'
+                ],
+                applicationsEn: ['Retail signage', 'Brand walls', 'Showrooms', 'Trade show booths', 'Indoor promotions'],
+                applicationsZh: ['门店广告', '品牌形象墙', '展厅展示', '展会展位', '室内促销'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+            {
+                id: 43003,
+                category: 'lightbox',
+                subcategory: 'seg-net-light-box',
+                model: 'WK-LB-NET',
+                sku: 'WK-LB-NET',
+                nameEn: 'SEG Net Light Box Series',
+                nameZh: '卡布拉网灯箱系列',
+                shortEn: 'Large-format SEG net light box for wide backlit brand walls.',
+                shortZh: '适用于大面积发光背景墙的卡布拉网灯箱系统。',
+                descriptionEn: 'SEG net light box series designed for large backlit walls. Aluminum structure with LED backlighting and silicone edge fabric graphics. Seamless look, modular assembly and custom sizes available.',
+                descriptionZh: '卡布拉网灯箱系列，适合大面积发光背景墙：铝合金结构 + LED 背光 + SEG 硅胶边条布画。外观无缝平整，模块化安装，支持定制尺寸。',
+                image: 'images/products/displays/tension-fabric-displays/23.png',
+                images: ['images/products/displays/tension-fabric-displays/23.png'],
+                gallery: ['images/products/displays/tension-fabric-displays/23.png'],
+                specsZh: {
+                    '尺寸': '支持定制（大尺寸可拼接）',
+                    '光源': 'LED 背光',
+                    '画面': 'SEG（卡布）布画'
+                },
+                specsEn: {
+                    Size: 'Custom sizes available (modular for large formats)',
+                    Lighting: 'LED backlit',
+                    Graphic: 'SEG silicone edge fabric'
+                },
+                detailDescEn: [
+                    'Designed for large-format lightbox walls with modular expansion.',
+                    'SEG fabric graphics provide a seamless, premium appearance.',
+                    'LED backlighting for high brightness and consistent light distribution.',
+                    'Fast assembly; ideal for exhibitions, retail and showrooms.',
+                    'Replaceable graphics for campaigns and seasonal updates.'
+                ],
+                detailDescZh: [
+                    '适合大尺寸灯箱背景墙，支持模块化拼接扩展。',
+                    'SEG 卡布画面无缝平整，整体更显高级。',
+                    'LED 背光亮度高、发光均匀。',
+                    '安装快捷，适用于展会、门店与展厅。',
+                    '画面可更换，适合活动与季节性更新。'
+                ],
+                applicationsEn: ['Large brand walls', 'Showrooms', 'Retail flagship stores', 'Exhibitions', 'Indoor advertising'],
+                applicationsZh: ['大面积品牌形象墙', '展厅展示', '旗舰店陈列', '展会展示', '室内广告'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
             {
@@ -2168,6 +2511,11 @@ class ProductManager {
         const description = this.getLocalizedDescription(product);
         const specs = this.getLocalizedSpecs(product);
         
+        const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
+            ? String(product.sku).trim()
+            : (product && product.id != null ? String(product.id).trim() : '');
+        const detailHref = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html';
+
         productDiv.innerHTML = `
             <div class="product-image">
                 <i class="fas fa-${this.getProductIcon(product.category)}"></i>
@@ -2180,7 +2528,7 @@ class ProductManager {
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
-                    <a class="btn btn-secondary product-details-btn" href="product.html?cat=${encodeURIComponent(product.category || 'all')}&id=${encodeURIComponent(product.id)}" data-translate="view_details"></a>
+                    <a class="btn btn-secondary product-details-btn" href="${detailHref}" data-sku="${preferredSku.replace(/"/g, '&quot;')}" data-translate="view_details"></a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
                         <i class="fas fa-shopping-cart"></i> ${t('btn_add_to_cart')}
                     </button>
@@ -2716,6 +3064,10 @@ getProductIcon(category) {
         row.className = 'product-row';
 
         const name = this.getLocalizedName(product);
+                const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
+                    ? String(product.sku).trim()
+                    : (product && product.id != null ? String(product.id).trim() : '');
+                const detailHref = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html';
         const description = this.getLocalizedDescription(product);
         const specs = this.getLocalizedSpecs(product);
 
@@ -2745,7 +3097,7 @@ getProductIcon(category) {
 
             <div class="product-row-info">
                 <h3>
-                    <a href="product.html?cat=${encodeURIComponent(product.category || 'all')}&id=${encodeURIComponent(product.id)}" style="text-decoration:none;color:inherit;">
+                    <a href="${detailHref}" style="text-decoration:none;color:inherit;">
                         ${name}
                     </a>
                 </h3>

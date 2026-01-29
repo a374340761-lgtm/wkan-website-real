@@ -80,11 +80,12 @@
     const cards = products.map(p => {
       const name = (getLang() === 'zh') ? (p.nameZh || p.name || p.nameEn) : (p.nameEn || p.name || p.nameZh);
       const desc = (getLang() === 'zh') ? (p.shortZh || p.descriptionZh || '') : (p.shortEn || p.descriptionEn || '');
-      const detailUrl = `product.html?cat=racegate&id=${encodeURIComponent(p.id)}`;
+      const preferredSku = (p && p.sku != null && String(p.sku).trim() !== '') ? String(p.sku).trim() : String(p.id);
+      const detailUrl = `product-detail.html?sku=${encodeURIComponent(preferredSku)}`;
 
       return `
         <article class="ap-card" style="overflow:hidden;">
-          <div class="ap-img" style="height:180px;">
+          <div class="ap-img">
             <img src="${img}" alt="${escapeHtml(name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='images/placeholder.png'">
           </div>
           <div class="ap-body">

@@ -6,7 +6,7 @@ const tents = [
     category: "stock",
     image: "images/products/tents/30square-tube-frame-iron.png",
     material: "Iron",
-    detailPage: "product-center.html?cat=tents&open=2001"
+    detailPage: "product-detail.html?sku=" + encodeURIComponent(2001)
   },
   {
     id: 2002,
@@ -14,7 +14,7 @@ const tents = [
     category: "stock",
     image: "images/products/tents/40square-tube-frame-aluminum.png",
     material: "Aluminum",
-    detailPage: "product-center.html?cat=tents&open=2002"
+    detailPage: "product-detail.html?sku=" + encodeURIComponent(2002)
   },
   {
     id: 2003,
@@ -22,7 +22,7 @@ const tents = [
     category: "stock",
     image: "images/products/tents/50square-tube-frame-aluminum.png",
     material: "Aluminum",
-    detailPage: "product-center.html?cat=tents&open=2003"
+    detailPage: "product-detail.html?sku=" + encodeURIComponent(2003)
   }
 ];
 
@@ -33,6 +33,6 @@ container.innerHTML = tents.map(t => `
     <img src="${t.image}" alt="${t.name}">
     <h3>${t.name}</h3>
     <p>Frame Material: ${t.material}</p>
-    <a class="btn btn-secondary product-details-btn" href="product-center.html?cat=tents&open=${encodeURIComponent(t.id)}" data-translate="view_details"></a>
+    <a class="btn btn-secondary product-details-btn" href="product-detail.html?sku=${encodeURIComponent(t.id)}" data-translate="view_details"></a>
   </div>
 `).join("");

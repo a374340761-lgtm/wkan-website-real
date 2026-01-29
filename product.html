@@ -6,7 +6,28 @@
     <title>Product Detail - 广西伟群帐篷制造有限公司</title>
     <meta name="description" content="" />
 
-    <!-- Dedicated product detail page: rendered by scripts/product-page.js -->
+    <!-- Legacy entry point. Canonical PDP is product-detail.html?sku=XXXX -->
+    <script>
+        (function () {
+            try {
+                var url = new URL(window.location.href);
+                var p = url.searchParams;
+                var sku = (p.get('sku') || '').trim();
+                var legacy = (p.get('id') || p.get('open') || p.get('pid') || p.get('product') || p.get('model') || '').trim();
+                var chosen = sku || legacy;
+                if (!chosen) {
+                    window.location.replace('all-products.html');
+                    return;
+                }
+                var target = new URL('product-detail.html', url);
+                target.searchParams.set('sku', chosen);
+                target.hash = url.hash;
+                window.location.replace(target.toString());
+            } catch (e) {
+                // ignore
+            }
+        })();
+    </script>
     
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multilang.css">

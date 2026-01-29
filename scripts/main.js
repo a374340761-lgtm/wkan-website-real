@@ -590,10 +590,12 @@ function renderHomeBestSellers() {
             const img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
             const catKey = getCategoryTranslateKey(safeProduct.category);
 
-            // DETAIL ROUTING
-            // Route to the dedicated product detail page.
-            const detailHref = (safeProduct.id != null)
-                ? `product.html?cat=${encodeURIComponent(safeProduct.category || 'all')}&id=${encodeURIComponent(safeProduct.id)}`
+            // DETAIL ROUTING (unified)
+            const preferredSku = (safeProduct && safeProduct.sku != null && String(safeProduct.sku).trim() !== '')
+                ? String(safeProduct.sku).trim()
+                : (safeProduct && safeProduct.id != null ? String(safeProduct.id).trim() : '');
+            const detailHref = preferredSku
+                ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}`
                 : `./all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`;
 
             const card = document.createElement('div');
@@ -762,6 +764,9 @@ function initNavigation() {
 
     // Enhance Products dropdown: add displays subtype submenu
     enhanceDisplaysDropdown();
+
+    // Ensure Products dropdown includes new Light Box Series entry
+    ensureProductCenterDropdownHasLightbox();
     
     // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页链接如 index.html#contact 不拦截）
     navLinks.forEach(link => {
@@ -908,7 +913,7 @@ function enhanceTentsDropdown() {
 
     // DETAIL ROUTING (trace)
     // Flow A described by user: Product Center hover menu (Tents -> e.g. “40 六角铝合金架”).
-    // Stock series types map to product IDs, opened via product-center.html?cat=tents&open=<id>.
+    // Stock series types map to product IDs, opened via the unified PDP.
     // For other tent types, keep the type landing page.
     const STOCK_TENT_ID_BY_TYPE = {
         folding30: 2001,
@@ -919,7 +924,7 @@ function enhanceTentsDropdown() {
     const getTentTypeHref = (type) => {
         const key = String(type || '').trim();
         const productId = STOCK_TENT_ID_BY_TYPE[key];
-        if (productId != null) return `product-center.html?cat=tents&open=${encodeURIComponent(productId)}`;
+        if (productId != null) return `product-detail.html?sku=${encodeURIComponent(productId)}`;
         return `tent-type.html?type=${encodeURIComponent(key)}`;
     };
 
@@ -1130,14 +1135,15 @@ function enhanceDisplaysDropdown() {
         // Displays subcategories (match Product Center subcategory overview)
         { href: 'all-products.html?cat=displays&sub=popup', translateKey: 'menu_popup_backdrop' },
         { href: 'all-products.html?cat=displays&sub=counter', translateKey: 'menu_popup_counter' },
+        { href: 'all-products.html?cat=displays&sub=tension-fabric', translateKey: 'menu_displays_tension_fabric' },
         { href: 'all-products.html?cat=displays&sub=fabric-banner-stands', translateKey: 'menu_popup_fabric_banner_stands' },
         { href: 'all-products.html?cat=displays&sub=tfd-straight-line', translateKey: 'menu_popup_tfd_straight_line_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-c-shaped', translateKey: 'menu_popup_tfd_c_shaped_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-accessories', translateKey: 'menu_popup_tfd_accessories' },
 
         // Direct product entries
-        { href: 'product.html?cat=displays&id=42001', translateKey: 'menu_displays_aframe' },
-        { href: 'product.html?cat=displays&id=42002', translateKey: 'menu_displays_aframe_backdrop' }
+        { href: `product-detail.html?sku=${encodeURIComponent('42001')}`, translateKey: 'menu_displays_aframe' },
+        { href: `product-detail.html?sku=${encodeURIComponent('42002')}`, translateKey: 'menu_displays_aframe_backdrop' }
     ];
 
     menus.forEach((menu) => {
@@ -1216,6 +1222,49 @@ function enhanceDisplaysDropdown() {
             displaysLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
     });
+}
+
+function ensureProductCenterDropdownHasLightbox() {
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const hasLightboxLink = (menu) => {
+        return Array.from(menu.querySelectorAll('a[href]')).some((a) => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            return href.includes('product-center.html') && (href.includes('cat=lightbox') || href.includes('category=lightbox'));
+        });
+    };
+
+    const makeLink = () => {
+        const a = document.createElement('a');
+        a.href = 'product-center.html?cat=lightbox';
+        a.innerHTML = `<span class="zh" data-translate="menu_light_box_series"></span><span class="en" data-translate="menu_light_box_series"></span>`;
+        return a;
+    };
+
+    menus.forEach((menu) => {
+        if (hasLightboxLink(menu)) return;
+
+        // Insert after Displays if present, otherwise append.
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const displays = links.find((a) => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            return href.includes('cat=displays') || href.includes('category=displays');
+        });
+
+        const node = makeLink();
+        if (displays && displays.parentElement === menu) {
+            const next = displays.nextSibling;
+            if (next) menu.insertBefore(node, next);
+            else menu.appendChild(node);
+        } else {
+            menu.appendChild(node);
+        }
+    });
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+    }
 }
 
 // 高亮当前页面部分

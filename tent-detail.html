@@ -4,6 +4,21 @@
   <title>Tent Details</title>
   <link rel="stylesheet" href="styles/main.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+    (function () {
+      try {
+        var url = new URL(window.location.href);
+        var id = (url.searchParams.get('sku') || url.searchParams.get('id') || '').trim();
+        if (id) {
+          window.location.replace('product-detail.html?sku=' + encodeURIComponent(id));
+          return;
+        }
+        window.location.replace('product-center.html?cat=tents');
+      } catch (e) {
+        // ignore
+      }
+    })();
+  </script>
 </head>
 <body>
 

@@ -70,11 +70,14 @@
 
     const tryOpen = () => {
       const pm = window.productManager;
-      if (!pm || typeof pm.showProductModal !== 'function') return false;
+      if (!pm || !Array.isArray(pm.products)) return false;
 
       const found = findByKey(pm);
       if (found) {
-        pm.showProductModal(found.id);
+        const preferredSku = (found && found.sku != null && String(found.sku).trim() !== '')
+          ? String(found.sku).trim()
+          : String(found.id);
+        window.location.replace(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
         return true;
       }
 
@@ -305,9 +308,15 @@
           'popup': 'menu_popup_backdrop',
           'counter': 'menu_popup_counter',
           'fabric-banner-stands': 'menu_popup_fabric_banner_stands',
+            'tension-fabric': 'menu_displays_tension_fabric',
             'tfd-straight-line': 'menu_popup_tfd_straight_line_series',
             'tfd-c-shaped': 'menu_popup_tfd_c_shaped_series',
             'tfd-accessories': 'menu_popup_tfd_accessories'
+          },
+          lightbox: {
+            'round-tube-light-box': 'menu_lightbox_round_tube',
+            'aluminum-profile-seg-light-box': 'menu_lightbox_aluminum_profile',
+            'seg-net-light-box': 'menu_lightbox_seg_net'
         }
       };
       const key = mapByCat[c] && mapByCat[c][v];

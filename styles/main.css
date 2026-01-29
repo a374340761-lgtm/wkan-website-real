@@ -190,14 +190,72 @@ section { scroll-margin-top: 110px; }
 /* ===== All Products (ap-*) styles (remove inline styles from JS) ===== */
 .ap-card { display: flex; flex-direction: column; }
 .ap-img { aspect-ratio: 4 / 3; background: rgba(15,23,42,.04); overflow: hidden; }
-.ap-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.ap-img .sprite-thumb { height: 100%; border-radius: 0; }
+.ap-img img { width: 100%; height: 100%; object-fit: cover; object-position: var(--wk-hero-object-position, center); display: block; }
+.ap-img .sprite-thumb { width: 100%; height: 100%; border-radius: 0; background-repeat: no-repeat; background-position: center; }
 .ap-body { padding: 16px 16px 18px; }
 .ap-body h3 { margin: 0 0 8px; color: var(--text-dark); }
 .ap-meta { margin: 0 0 10px; font-size: 13px; color: var(--text-faint); }
 .ap-specs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
 .ap-actions { display: flex; gap: 10px; margin-top: 10px; }
 .ap-actions .btn { flex: 1; text-align: center; justify-content: center; }
+
+/* ===== Unified hero media (cards) =====
+   Ensures consistent card image height across grids and dynamic templates.
+   Default aspect ratio: 4 / 3
+*/
+.ap-img,
+.product-row-image,
+.product-image,
+.tent-type-card__imgWrap,
+.home .wk-product-media {
+    --wk-hero-object-position: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.02));
+}
+
+/* Back-compat fallback (older browsers): keep a reasonable fixed height */
+@supports not (aspect-ratio: 1 / 1) {
+    .ap-img,
+    .product-row-image,
+    .product-image,
+    .tent-type-card__imgWrap,
+    .home .wk-product-media {
+        height: 200px;
+    }
+}
+
+.product-image img,
+.product-row-image img,
+.tent-type-card__img,
+.home .wk-product-media img,
+.home .wk-product-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: var(--wk-hero-object-position, center);
+}
+
+/* Optional crop focus overrides (use on the image container) */
+.hero-top,
+[data-object-position="top"] { --wk-hero-object-position: top; }
+.hero-bottom,
+[data-object-position="bottom"] { --wk-hero-object-position: bottom; }
+.hero-left,
+[data-object-position="left"] { --wk-hero-object-position: left; }
+.hero-right,
+[data-object-position="right"] { --wk-hero-object-position: right; }
+.hero-top-left,
+[data-object-position="top left"] { --wk-hero-object-position: top left; }
+.hero-top-right,
+[data-object-position="top right"] { --wk-hero-object-position: top right; }
+.hero-bottom-left,
+[data-object-position="bottom left"] { --wk-hero-object-position: bottom left; }
+.hero-bottom-right,
+[data-object-position="bottom right"] { --wk-hero-object-position: bottom right; }
 
 /* Spec tags look more premium */
 .spec-tag {
@@ -1869,7 +1927,6 @@ html[lang="en"] .since{
 }
 
 .product-image {
-    height: 200px;
     background: var(--secondary-color);
     display: flex;
     align-items: center;
@@ -2993,6 +3050,8 @@ main { flex: 1; }
 /* image */
 .product-row-image img {
     width: 100%;
+    height: 100%;
+    display: block;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -5971,7 +6030,8 @@ html[lang="en"] .hero-slide p {
 
 /* sprite thumbnail used by product lists when product.grid is provided */
 .sprite-thumb{
-    height:180px;
+    width: 100%;
+    height: 100%;
     background-repeat:no-repeat;
     background-color:#fff;
     background-size:400% 600%;
@@ -6054,15 +6114,13 @@ html[lang="en"] .hero-slide p {
 
 .tent-type-card__imgWrap{
     background: var(--wk-bg-soft);
-    aspect-ratio: 16 / 10;
-    width: 100%;
 }
 
 .tent-type-card__img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: var(--wk-hero-object-position, center);
     display: block;
 }
 
@@ -6546,7 +6604,6 @@ html[lang="en"] .hero-slide p {
 
 .home .wk-product-media{
     display: block;
-    height: 210px;
     background: var(--wk-bg-soft);
 }
 

@@ -1,13 +1,20 @@
-// Redirect shim: product.html / product-detail.html -> product-center.html?open=<id>
+// Unified Product Detail (canonical): product-detail.html?sku=XXXX
+// sku priority: product.sku then product.id (fallback)
 document.addEventListener('DOMContentLoaded', () => {
+    // Normalize legacy parameters into the canonical URL format.
     try {
         const url = new URL(window.location.href);
-        const openId = url.searchParams.get('open') || url.searchParams.get('id') || '';
-        if (openId) {
-            const cat = url.searchParams.get('cat') || '';
-            const target = new URL('product-center.html', url);
-            if (cat) target.searchParams.set('cat', cat);
-            target.searchParams.set('open', openId);
+        const p = url.searchParams;
+        const sku = (p.get('sku') || '').trim();
+        const legacy = (p.get('id') || p.get('open') || p.get('pid') || p.get('product') || p.get('model') || '').trim();
+        const chosen = sku || legacy;
+
+        // Canonicalize: always use only ?sku=...
+        const needsCanonical = (!sku && legacy) || p.has('id') || p.has('open') || p.has('pid') || p.has('product') || p.has('model') || p.has('cat') || p.has('category');
+        if (chosen && needsCanonical) {
+            const target = new URL('product-detail.html', url);
+            target.searchParams.set('sku', chosen);
+            target.hash = url.hash;
             window.location.replace(target.toString());
             return;
         }
@@ -58,8 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
             tents: 'home_cat_tents_title',
             flags: 'menu_beach_flags',
             displays: 'menu_popup_displays',
+            lightbox: 'category_lightbox',
             accessories: 'menu_accessories',
             racegate: 'home_cat_racegate_title',
+            inflatable: 'category_inflatable',
+            furniture: 'category_furniture',
             custom: 'category_custom'
         };
         const key = map[String(cat || '').toLowerCase()];
@@ -116,17 +126,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const renderDetail = (pm) => {
         const params = new URLSearchParams(location.search);
-        const productId = params.get('id');
-        if (!pm || !productId) {
+        const requested = (params.get('sku') || '').trim();
+        if (!pm || !requested) {
             redirectToAllProducts();
             return;
         }
 
-        const product = pm.products.find(p => String(p.id) === String(productId));
+        // sku priority: exact sku match first, then id match
+        const product = pm.products.find(p => p && String(p.sku || '').trim() === requested)
+            || pm.products.find(p => p && String(p.id) === requested);
         if (!product) {
             redirectToAllProducts();
             return;
         }
+
+        // Ensure URL always uses sku if available.
+        try {
+            const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
+                ? String(product.sku).trim()
+                : String(product.id);
+            if (preferredSku && preferredSku !== requested) {
+                window.location.replace(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
+                return;
+            }
+        } catch (e) {}
 
         const notFound = document.getElementById('productNotFound');
         const body = document.getElementById('productDetailBody');

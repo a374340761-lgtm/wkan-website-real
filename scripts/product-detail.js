@@ -66,6 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
             flags: 'menu_beach_flags',
             displays: 'menu_popup_displays',
             lightbox: 'category_lightbox',
+            'advertising-arch': 'category_advertising_arch',
+            'water-filled-a-poster-stand': 'category_water_filled_a_poster_stand',
             accessories: 'menu_accessories',
             racegate: 'home_cat_racegate_title',
             inflatable: 'category_inflatable',
@@ -431,8 +433,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const block = document.createElement('div');
 
                 const title = document.createElement('h3');
-                // Requirement: section named “产品画册参考”
-                title.textContent = '产品画册参考';
+                title.setAttribute('data-translate', 'view_type_brochure_ref');
+                title.textContent = '';
                 block.appendChild(title);
 
                 const caption = document.createElement('div');

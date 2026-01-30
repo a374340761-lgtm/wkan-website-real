@@ -435,10 +435,11 @@ function renderHomeCategoryGrid() {
     // Category IDs are based on the existing filtering convention: all-products.html?cat=...
     // and the product.category IDs present in scripts/products.js.
     const categories = [
-            { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
-            { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-            { id: 'racegate', img: encodeURI('images/products/racegate/V Race Gate/hero.png'), titleKey: 'home_cat_racegate_title', descKey: 'home_cat_racegate_desc' },
-            { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+        { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
+        { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+        { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+        { id: 'lightbox', img: encodeURI('images/\u5e7f\u897f\u4f1f\u7fa4\u5e10\u7bf7\u5236\u9020\u6709\u9650\u516c\u53f82025allpagepng/23.png'), titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
+        { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
 
     grid.innerHTML = '';
@@ -1140,6 +1141,10 @@ function enhanceDisplaysDropdown() {
         { href: 'all-products.html?cat=displays&sub=tfd-straight-line', translateKey: 'menu_popup_tfd_straight_line_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-c-shaped', translateKey: 'menu_popup_tfd_c_shaped_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-accessories', translateKey: 'menu_popup_tfd_accessories' },
+
+        // Newly added display-system subcategories (catalog p26)
+        { href: 'all-products.html?cat=displays&sub=roll-up-stand', translateKey: 'menu_displays_roll_up_stand' },
+        { href: 'all-products.html?cat=displays&sub=promotion-counter', translateKey: 'menu_displays_promotion_counter' },
 
         // Direct product entries
         { href: `product-detail.html?sku=${encodeURIComponent('42001')}`, translateKey: 'menu_displays_aframe' },

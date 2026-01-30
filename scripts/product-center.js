@@ -251,6 +251,13 @@
     const pm = window.productManager;
     const list = pm && Array.isArray(pm.products) ? pm.products : [];
     const target = String(cat || '').toLowerCase();
+    // Display Systems umbrella: include Light Box series under Display Systems overview.
+    if (target === 'displays') {
+      return list.filter((p) => {
+        const c = p && String(p.category || '').toLowerCase();
+        return c === 'displays' || c === 'lightbox';
+      });
+    }
     return list.filter((p) => p && String(p.category || '').toLowerCase() === target);
   }
 

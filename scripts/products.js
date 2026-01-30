@@ -5,13 +5,13 @@ window.HERO_SLIDES = [
     {
         id: 'displays',
         image: 'images/hero/伟群快幕秀照片.jpeg',
-        alt: 'Pop-up Display System',
+        alt: 'Display Systems',
         kickerZh: '畅销产品 · 展示系统',
-        kickerEn: 'Top Seller · Display System',
-        titleZh: '快幕秀展示系统',
-        titleEn: 'Pop-up Display Backdrop',
-        subZh: '适用于展会、活动与品牌推广的快速搭建展示系统，轻便易携带，画面可更换。',
-        subEn: 'Portable pop-up display systems for exhibitions and events. Fast setup, lightweight structure, replaceable graphics.',
+        kickerEn: 'Top Seller · Display Systems',
+        titleZh: '展示系统',
+        titleEn: 'Display Systems',
+        subZh: '面向展会、活动与品牌推广的快速搭建展示系统：背景墙、张拉布、前台、灯箱等，轻便易携带，画面可更换。',
+        subEn: 'Quick-setup display systems for trade shows and events: backdrops, tension fabric, counters and light boxes. Portable, fast setup, replaceable graphics.',
         highlights: [
             { label: 'Size', valueZh: '2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m', valueEn: '2.3×2.3m · 2.3×3m · 2.3×4m · 2.3×6m' },
             { label: 'Material', valueZh: '铝合金框架 + 布喷画面', valueEn: 'Aluminum frame + Fabric graphic' },
@@ -291,9 +291,9 @@ class ProductManager {
                     short: '张拉布展示系统，可选发光/不发光，适用于前台/接待桌/展位家具。',
                     shortEn: 'Tension fabric display system with optional illumination, ideal for reception counters and booth furniture.',
                     shortZh: '张拉布展示系统，可选发光/不发光，适用于前台/接待桌/展位家具。',
-                    description: '张拉布前台（Tension Fabric Counter）是快幕秀展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
-                    descriptionEn: 'Tension Fabric Counter is an accessory product for pop-up display systems. Features the same tension fabric + quick-setup structure, but designed for reception counters, desks and booth furniture rather than backdrops. Available in illuminated and non-illuminated versions with multiple packaging protection. Enhanced visual appeal at night.',
-                    descriptionZh: '张拉布前台（Tension Fabric Counter）是快幕秀展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
+                    description: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
+                    descriptionEn: 'Tension Fabric Counter is an accessory product for display systems. Features the same tension fabric + quick-setup structure, but designed for reception counters, desks and booth furniture rather than backdrops. Available in illuminated and non-illuminated versions with multiple packaging protection. Enhanced visual appeal at night.',
+                    descriptionZh: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
                     image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
                     images: [
                         encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
@@ -867,9 +867,9 @@ class ProductManager {
                     nameEn: 'Lighting System (WK-TFD-LIGHT)',
                     nameZh: '照明系统（WK-TFD-LIGHT）',
                     shortEn: 'Optional lighting system for tension fabric displays: brighter visuals and stronger booth presence.',
-                    shortZh: '快幕秀展示系统可选照明套件：提升画面亮度与展位吸引力。',
+                    shortZh: '展示系统可选照明套件：提升画面亮度与展位吸引力。',
                     descriptionEn: 'Shared lighting accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes LED spotlight, clamp-on light arm and power cable (final configuration depends on project).',
-                    descriptionZh: '快幕秀展示系统通用照明配件（立牌/直型/C型通用）：包含 LED 射灯、夹装式灯臂与电源线（具体配置按项目确定）。',
+                    descriptionZh: '展示系统通用照明配件（立牌/直型/C型通用）：包含 LED 射灯、夹装式灯臂与电源线（具体配置按项目确定）。',
                     image: 'images/products/displays/tension-fabric-displays/21.png',
                     images: ['images/products/displays/tension-fabric-displays/21.png'],
                     gallery: ['images/products/displays/tension-fabric-displays/21.png'],
@@ -911,9 +911,9 @@ class ProductManager {
                     nameEn: 'Transport & Storage System (WK-TFD-CASE)',
                     nameZh: '收纳运输系统（WK-TFD-CASE）',
                     shortEn: 'Shared transport and storage options for tension fabric display systems.',
-                    shortZh: '快幕秀展示系统通用收纳运输方案（软包/硬箱/带轮箱）。',
+                    shortZh: '展示系统通用收纳运输方案（软包/硬箱/带轮箱）。',
                     descriptionEn: 'Shared transport & storage accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes soft carry bag, hard case and wheeled trolley case options (matched by model/size).',
-                    descriptionZh: '快幕秀展示系统通用收纳运输配件（立牌/直型/C型通用）：软包、硬箱、带轮拉杆箱等可选（按型号/尺寸匹配）。',
+                    descriptionZh: '展示系统通用收纳运输配件（立牌/直型/C型通用）：软包、硬箱、带轮拉杆箱等可选（按型号/尺寸匹配）。',
                     image: 'images/products/displays/tension-fabric-displays/21.png',
                     images: ['images/products/displays/tension-fabric-displays/21.png'],
                     gallery: ['images/products/displays/tension-fabric-displays/21.png'],
@@ -1152,6 +1152,377 @@ class ProductManager {
                 applicationsEn: ['Large brand walls', 'Showrooms', 'Retail flagship stores', 'Exhibitions', 'Indoor advertising'],
                 applicationsZh: ['大面积品牌形象墙', '展厅展示', '旗舰店陈列', '展会展示', '室内广告'],
                 referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+
+            // ===== Light Box Series (Base-style variants, Catalog p25) =====
+            {
+                id: 43004,
+                category: 'lightbox',
+                subcategory: 'base-style-variant',
+                model: 'WK-IS001',
+                sku: 'WK-IS001',
+                nameEn: 'Light Box Stand (Base Variant) - WK-IS001',
+                nameZh: '灯箱展示架（底座款）- WK-IS001',
+                shortEn: 'Picture size: 60×80 CM. Different base design for different ground conditions.',
+                shortZh: '画面尺寸：60×80 CM。不同底座设计适配不同场地。',
+                descriptionEn: 'A portable light box stand variant with quick-change fabric graphic. Designed as a base-style option for different ground conditions.',
+                descriptionZh: '便携式灯箱展示架底座款，支持快速更换布画面，适配不同场地的底座方案之一。',
+                image: 'images/products/light-box-series/hero.png',
+                images: ['images/products/light-box-series/hero.png'],
+                gallery: ['images/products/light-box-series/hero.png'],
+                specsZh: {
+                    '画面尺寸': '60 × 80 CM',
+                    '画面': '布画 / SEG（卡布）画面（按方案）',
+                    '背光': '可选 LED 背光',
+                    '底座': '金属底座（适合室内/硬地面）'
+                },
+                specsEn: {
+                    Size: 'Picture Size: 60 × 80 CM',
+                    Graphic: 'Fabric graphic / SEG (by solution)',
+                    Backlit: 'Optional LED backlit',
+                    Base: 'Metal base (for indoor / hard floors)'
+                },
+                detailDescEn: [
+                    'Different base designs for different ground conditions (metal base / curved base / weighted base / floor standing base).',
+                    'Quick-change fabric/SEG graphic for fast campaign updates.',
+                    'Optional LED backlit for higher impact visuals.',
+                    'Portable for trade shows, retail and indoor promotions.'
+                ],
+                detailDescZh: [
+                    '不同底座设计适配不同场地（金属底座 / 弧形底座 / 配重底座 / 落地底座）。',
+                    '布画/SEG 卡布结构，画面可快速更换。',
+                    '可选 LED 背光，提升视觉效果。',
+                    '适用于展会、零售门店与室内推广。'
+                ],
+                applicationsEn: ['Trade shows', 'Retail displays', 'Indoor promotions'],
+                applicationsZh: ['展会展示', '门店陈列', '室内促销'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+            {
+                id: 43005,
+                category: 'lightbox',
+                subcategory: 'base-style-variant',
+                model: 'WK-IS002',
+                sku: 'WK-IS002',
+                nameEn: 'Light Box Stand (Base Variant) - WK-IS002',
+                nameZh: '灯箱展示架（底座款）- WK-IS002',
+                shortEn: 'Picture size: 60×80 CM. Curved base design for stable placement.',
+                shortZh: '画面尺寸：60×80 CM。弧形底座设计，摆放更稳。',
+                descriptionEn: 'A portable light box stand variant with curved base design. Quick-change fabric/SEG graphic; optional LED backlit.',
+                descriptionZh: '弧形底座款灯箱展示架，支持布画/SEG 画面快速更换，可选 LED 背光。',
+                image: 'images/products/light-box-series/hero.png',
+                images: ['images/products/light-box-series/hero.png'],
+                gallery: ['images/products/light-box-series/hero.png'],
+                specsZh: {
+                    '画面尺寸': '60 × 80 CM',
+                    '画面': '布画 / SEG（卡布）画面（按方案）',
+                    '背光': '可选 LED 背光',
+                    '底座': '弧形底座（适合公共区域与零售场景）'
+                },
+                specsEn: {
+                    Size: 'Picture Size: 60 × 80 CM',
+                    Graphic: 'Fabric graphic / SEG (by solution)',
+                    Backlit: 'Optional LED backlit',
+                    Base: 'Curved base (for retail/public areas)'
+                },
+                detailDescEn: [
+                    'Different base designs for different ground conditions (metal base / curved base / weighted base / floor standing base).',
+                    'Curved base style for stable placement and clean retail look.',
+                    'Quick-change fabric/SEG graphic for fast updates.',
+                    'Optional LED backlit.'
+                ],
+                detailDescZh: [
+                    '不同底座设计适配不同场地（金属底座 / 弧形底座 / 配重底座 / 落地底座）。',
+                    '弧形底座造型适合零售与公共区域陈列。',
+                    '画面可快速更换，维护便捷。',
+                    '可选 LED 背光。'
+                ],
+                applicationsEn: ['Retail signage', 'Promotions', 'Indoor advertising'],
+                applicationsZh: ['门店广告', '促销活动', '室内宣传'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+            {
+                id: 43006,
+                category: 'lightbox',
+                subcategory: 'base-style-variant',
+                model: 'WK-IS003',
+                sku: 'WK-IS003',
+                nameEn: 'Light Box Stand (Base Variant) - WK-IS003',
+                nameZh: '灯箱展示架（底座款）- WK-IS003',
+                shortEn: 'Picture size: 60×80 CM. Weighted base style for better wind resistance.',
+                shortZh: '画面尺寸：60×80 CM。配重底座款，更适合抗风与人流区域。',
+                descriptionEn: 'A portable light box stand with a weighted-base style option. Quick-change fabric/SEG graphic; optional LED backlit.',
+                descriptionZh: '配重底座款灯箱展示架，支持布画/SEG 画面快速更换，可选 LED 背光。',
+                image: 'images/products/light-box-series/hero.png',
+                images: ['images/products/light-box-series/hero.png'],
+                gallery: ['images/products/light-box-series/hero.png'],
+                specsZh: {
+                    '画面尺寸': '60 × 80 CM',
+                    '画面': '布画 / SEG（卡布）画面（按方案）',
+                    '背光': '可选 LED 背光',
+                    '底座': '配重底座（适合人流较大区域）'
+                },
+                specsEn: {
+                    Size: 'Picture Size: 60 × 80 CM',
+                    Graphic: 'Fabric graphic / SEG (by solution)',
+                    Backlit: 'Optional LED backlit',
+                    Base: 'Weighted base style (for busier areas)'
+                },
+                detailDescEn: [
+                    'Different base designs for different ground conditions (metal base / curved base / weighted base / floor standing base).',
+                    'Weighted-base style helps stability in busier areas.',
+                    'Quick-change fabric/SEG graphic.',
+                    'Optional LED backlit.'
+                ],
+                detailDescZh: [
+                    '不同底座设计适配不同场地（金属底座 / 弧形底座 / 配重底座 / 落地底座）。',
+                    '配重底座方案更适合人流较大区域，提高稳定性。',
+                    '画面可快速更换。',
+                    '可选 LED 背光。'
+                ],
+                applicationsEn: ['Retail stores', 'Brand activation', 'Indoor displays'],
+                applicationsZh: ['零售门店', '品牌推广', '室内展示'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+            {
+                id: 43007,
+                category: 'lightbox',
+                subcategory: 'base-style-variant',
+                model: 'WK-IS004',
+                sku: 'WK-IS004',
+                nameEn: 'Light Box Stand (Base Variant) - WK-IS004',
+                nameZh: '灯箱展示架（落地款）- WK-IS004',
+                shortEn: 'Picture size: 100×200 CM. Floor-standing base for large-format graphics.',
+                shortZh: '画面尺寸：100×200 CM。落地底座款，适合大画面展示。',
+                descriptionEn: 'A floor-standing light box stand variant for large-format graphics. Quick-change fabric/SEG graphic; optional LED backlit.',
+                descriptionZh: '适合大尺寸画面的落地款灯箱展示架，支持布画/SEG 画面快速更换，可选 LED 背光。',
+                image: 'images/products/light-box-series/hero.png',
+                images: ['images/products/light-box-series/hero.png'],
+                gallery: ['images/products/light-box-series/hero.png'],
+                specsZh: {
+                    '画面尺寸': '100 × 200 CM',
+                    '画面': '布画 / SEG（卡布）画面（按方案）',
+                    '背光': '可选 LED 背光',
+                    '底座': '落地底座（适合大画面与长期陈列）'
+                },
+                specsEn: {
+                    Size: 'Picture Size: 100 × 200 CM',
+                    Graphic: 'Fabric graphic / SEG (by solution)',
+                    Backlit: 'Optional LED backlit',
+                    Base: 'Floor-standing base (for large-format / long-term display)'
+                },
+                detailDescEn: [
+                    'Different base designs for different ground conditions (metal base / curved base / weighted base / floor standing base).',
+                    'Floor-standing structure for large-format graphic presentation.',
+                    'Quick-change fabric/SEG graphic.',
+                    'Optional LED backlit.'
+                ],
+                detailDescZh: [
+                    '不同底座设计适配不同场地（金属底座 / 弧形底座 / 配重底座 / 落地底座）。',
+                    '落地结构适合大尺寸画面展示与长期陈列。',
+                    '画面可快速更换。',
+                    '可选 LED 背光。'
+                ],
+                applicationsEn: ['Retail flagship stores', 'Showrooms', 'Indoor advertising'],
+                applicationsZh: ['旗舰店陈列', '展厅展示', '室内广告'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+
+            // ===== Advertising Arch (Catalog p24) =====
+            {
+                id: 44001,
+                category: 'advertising-arch',
+                subcategory: 'advertising-arch',
+                model: 'WK-AD Series',
+                sku: 'WK-AD',
+                nameEn: 'Advertising Arch',
+                nameZh: '广告拱门',
+                shortEn: 'Portable advertising arch structure for events and promotions. Specs are based on the catalog model table.',
+                shortZh: '适用于赛事与活动的广告拱门结构，参数以目录型号表为准。',
+                descriptionEn: 'Advertising arch for event entrances and brand activation. Refer to the model/spec table for available sizes and packing information.',
+                descriptionZh: '广告拱门适用于活动入口、赛事拱门与品牌展示。可选多种尺寸，装箱信息见型号参数表。',
+                image: 'images/products/advertising-arch/hero.png',
+                images: ['images/products/advertising-arch/hero.png'],
+                gallery: ['images/products/advertising-arch/hero.png'],
+                variantTables: [
+                    {
+                        titleKey: 'models_and_specs',
+                        columns: [
+                            { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'carton', labelZh: '箱规', labelEn: 'Carton Size' },
+                            { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                            { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                        ],
+                        rows: [
+                            { model: 'WK-AD-01', size: '300 × 80 × 240 CM', carton: '150 × 20 × 20 CM', qty: '1', weight: '22 KG' },
+                            { model: 'WK-AD-02', size: '500 × 90 × 280 CM', carton: '150 × 25 × 20 CM', qty: '1', weight: '23 KG' },
+                            { model: 'WK-AD-03', size: '600 × 100 × 300 CM', carton: '150 × 25 × 20 CM', qty: '1', weight: '24.5 KG' }
+                        ]
+                    }
+                ],
+                applicationsEn: ['Event entrances', 'Races & sports events', 'Outdoor promotions', 'Brand activation'],
+                applicationsZh: ['活动入口', '赛事与运动活动', '户外促销', '品牌推广'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/24.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+
+            // ===== Water Filled A Poster Stand (Catalog p24) =====
+            {
+                id: 44002,
+                category: 'water-filled-a-poster-stand',
+                subcategory: 'water-filled-a-poster-stand',
+                model: 'WK-AP Series',
+                sku: 'WK-AP',
+                nameEn: 'Water Filled A Poster Stand',
+                nameZh: '注水A字海报架',
+                shortEn: 'Water/sand fillable base for stability and outdoor sidewalk use. Specs are based on the catalog model table.',
+                shortZh: '可注水/注沙底座提升稳定性，适合户外人行道广告。参数以目录型号表为准。',
+                descriptionEn: 'A water-filled A poster stand designed for outdoor advertising. Portable and easy to change graphics. Double-sided poster options depending on configuration.',
+                descriptionZh: '注水 A 字海报架，面向户外广告场景。便携易安装，画面更换快捷，支持双面展示（按配置）。',
+                image: 'images/products/water-filled-a-poster-stand/hero.png',
+                images: ['images/products/water-filled-a-poster-stand/hero.png'],
+                gallery: ['images/products/water-filled-a-poster-stand/hero.png'],
+                variantTables: [
+                    {
+                        titleKey: 'models_and_specs',
+                        columns: [
+                            { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'carton', labelZh: '箱规', labelEn: 'Carton Size' },
+                            { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                            { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                        ],
+                        rows: [
+                            { model: 'WK-AP-01', size: 'W60 × H90 CM', carton: '112 × 10.5 × 70 CM', qty: '1', weight: '9.5 KG' },
+                            { model: 'WK-AP-02', size: 'W55 × H73 CM', carton: '92 × 10 × 70 CM', qty: '1', weight: '5.5 KG' }
+                        ]
+                    }
+                ],
+                detailDescEn: [
+                    'Water/sand fillable base for stability in outdoor use.',
+                    'Wind-resistant design (commonly via flexible connectors / spring mechanisms depending on build).',
+                    'Double-sided poster display options depending on configuration.',
+                    'Easy graphic change and portable for sidewalk advertising.'
+                ],
+                detailDescZh: [
+                    '底座可注水/注沙，提高户外使用稳定性。',
+                    '抗风设计（通常通过弹簧连接/柔性结构实现，具体以配置为准）。',
+                    '支持双面海报展示方案（按配置）。',
+                    '画面更换方便，适合户外人行道与门店引流。'
+                ],
+                applicationsEn: ['Sidewalk advertising', 'Retail storefront', 'Outdoor promotions'],
+                applicationsZh: ['人行道广告', '门店门口', '户外促销'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/24.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+
+            // ===== Display Systems: Roll Up Stand (Catalog p26) =====
+            {
+                id: 42014,
+                category: 'displays',
+                subcategory: 'roll-up-stand',
+                model: 'Roll Up Stand',
+                sku: 'WK-RUS',
+                nameEn: 'Roll Up Stand',
+                nameZh: '易拉宝',
+                shortEn: 'Retractable banner stand with anodized aluminum base. Tool-free setup with carry bag. Specs are based on the catalog model table.',
+                shortZh: '铝合金底座易拉宝，收放式卷轴结构，无需工具快速安装，含收纳袋。参数以目录型号表为准。',
+                descriptionEn: 'Roll up banner stand for promotions and exhibitions. Designed for quick setup and easy transport.',
+                descriptionZh: '易拉宝展示架，适用于促销与展会展示，安装快捷，便于携带。',
+                image: 'images/products/display-systems/roll-up-stand/hero.png',
+                images: ['images/products/display-systems/roll-up-stand/hero.png'],
+                gallery: ['images/products/display-systems/roll-up-stand/hero.png'],
+                variantTables: [
+                    {
+                        titleKey: 'models_and_specs',
+                        columns: [
+                            { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'carton', labelZh: '箱规', labelEn: 'Carton Size' },
+                            { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                            { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                        ],
+                        rows: [
+                            { model: 'WK-RUS-01', size: '80 × 200 CM', carton: '36 × 24 × 92 CM', qty: '4 PCS', weight: '17 KG' },
+                            { model: 'WK-RUS-02', size: '80 × 200 CM', carton: '30 × 20 × 92 CM', qty: '6 PCS', weight: '13 KG' }
+                        ]
+                    }
+                ],
+                detailDescEn: [
+                    'Anodized aluminum base with retractable roll mechanism.',
+                    'Tool-free setup for fast deployment at events.',
+                    'Comes with carry bag for transport and storage.'
+                ],
+                detailDescZh: [
+                    '阳极氧化铝合金底座，内置卷轴回弹机构。',
+                    '无需工具，快速安装，适合活动现场部署。',
+                    '配收纳袋，便于运输与存放。'
+                ],
+                applicationsEn: ['Trade shows', 'Retail promotions', 'Wayfinding signage'],
+                applicationsZh: ['展会展示', '门店促销', '导视指引'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/26.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                price: '询价'
+            },
+
+            // ===== Display Systems: Promotion Counter (Catalog p26) =====
+            {
+                id: 42015,
+                category: 'displays',
+                subcategory: 'promotion-counter',
+                model: 'Promotion Counter',
+                sku: 'WK-CH',
+                nameEn: 'Promotion Counter',
+                nameZh: '促销台',
+                shortEn: 'Foldable promotion counter with quick assembly, internal shelf/storage and top header for branding. Specs are based on the catalog model table.',
+                shortZh: '折叠式促销台，快速组装，带内置层板/收纳空间与顶部品牌头牌。参数以目录型号表为准。',
+                descriptionEn: 'Promotion counter for sampling, demo and reception use. Portable structure with branding header and internal storage.',
+                descriptionZh: '促销台适用于试吃试用、产品演示与接待。便携结构，顶部头牌展示品牌信息，内部带收纳。',
+                image: 'images/products/display-systems/promotion-counter/hero.png',
+                images: ['images/products/display-systems/promotion-counter/hero.png'],
+                gallery: ['images/products/display-systems/promotion-counter/hero.png'],
+                variantTables: [
+                    {
+                        titleKey: 'models_and_specs',
+                        columns: [
+                            { key: 'model', labelZh: '型号', labelEn: 'Model' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'carton', labelZh: '箱规', labelEn: 'Carton Size' },
+                            { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
+                            { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
+                        ],
+                        rows: [
+                            { model: 'WK-CH-01', size: '23 × 80 CM / 40 × 80 CM', carton: '89.5 × 86 × 22 CM', qty: '4', weight: '29 KG' },
+                            { model: 'WK-CH-02', size: '23 × 60 CM / 30 × 60 CM', carton: '89.5 × 86 × 22 CM', qty: '5', weight: '22 KG' }
+                        ]
+                    }
+                ],
+                detailDescEn: [
+                    'Foldable structure with quick assembly for event use.',
+                    'Internal shelf/storage helps keep sampling materials organized.',
+                    'Top header for branding and visibility at demos and receptions.'
+                ],
+                detailDescZh: [
+                    '折叠结构，快速组装，适合活动现场使用。',
+                    '内置层板/收纳空间，便于放置物料与样品。',
+                    '顶部头牌用于品牌展示，适合试吃试用与接待。'
+                ],
+                applicationsEn: ['Sampling', 'Product demos', 'Reception counter', 'Pop-up events'],
+                applicationsZh: ['试吃试用', '产品演示', '接待台', '快闪活动'],
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/26.png'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -2553,6 +2924,8 @@ getProductIcon(category) {
     // 你菜单里已经有这些类目（products.html 下拉里能看到）
     displays: 'display',
     lightbox: 'lightbulb',
+        'advertising-arch': 'archway',
+        'water-filled-a-poster-stand': 'sign-hanging',
     inflatable: 'balloon',
     accessories: 'screwdriver-wrench',
     popup: 'cube',
@@ -2752,8 +3125,10 @@ getProductIcon(category) {
             tents: 'Tents',
             flags: 'Flags',
             furniture: 'Furniture',
-            displays: 'Displays',
+            displays: 'Display Systems',
             lightbox: 'Lightbox',
+            'advertising-arch': 'Advertising Arch',
+            'water-filled-a-poster-stand': 'Water Filled A Poster Stand',
             inflatable: 'Inflatable',
             accessories: 'Accessories',
             custom: 'Custom'
@@ -2847,6 +3222,14 @@ getProductIcon(category) {
                 title: 'Lightbox Systems | LED Display Solutions | Weiqun',
                 desc: 'Professional lightbox systems and LED display solutions for advertising and branding. Custom sizes and designs available for your business needs.'
             },
+            'advertising-arch': {
+                title: 'Advertising Arch | Event Entrance Branding | Weiqun',
+                desc: 'Advertising arches for races, events and brand activation. Portable structures with multiple size options based on catalog model tables.'
+            },
+            'water-filled-a-poster-stand': {
+                title: 'Water Filled A Poster Stand | Sidewalk Sign | Weiqun',
+                desc: 'Water/sand fillable A-frame poster stands for outdoor sidewalk advertising. Easy graphic change and stable base for windy environments.'
+            },
             inflatable: {
                 title: 'Inflatable Products | Custom Inflatable Displays | Weiqun',
                 desc: 'Custom inflatable displays and products for promotions and events. Eye-catching inflatable solutions for outdoor advertising and brand awareness.'
@@ -2907,6 +3290,8 @@ getProductIcon(category) {
                     flags: 'category_flags',
                     displays: 'category_displays',
                     lightbox: 'category_lightbox',
+                    'advertising-arch': 'category_advertising_arch',
+                    'water-filled-a-poster-stand': 'category_water_filled_a_poster_stand',
                     inflatable: 'category_inflatable',
                     accessories: 'category_accessories',
                     furniture: 'category_furniture',
@@ -3002,6 +3387,8 @@ getProductIcon(category) {
             flags: 'category_flags',
             displays: 'category_displays',
             lightbox: 'category_lightbox',
+            'advertising-arch': 'category_advertising_arch',
+            'water-filled-a-poster-stand': 'category_water_filled_a_poster_stand',
             inflatable: 'category_inflatable',
             accessories: 'category_accessories',
             furniture: 'category_furniture',

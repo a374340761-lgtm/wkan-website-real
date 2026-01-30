@@ -52,7 +52,7 @@
                 id: 4,
                 category: 'displays',
                 name: '快幕秀',
-                nameEn: 'Pop-up Display',
+                nameEn: 'Display Systems',
                 model: 'WK-DISPLAY-3M',
                 tags: 'backdrop, display, 3m',
                 image: 'images/page_24_img_10.png'
@@ -116,6 +116,8 @@
             flags: 'menu_beach_flags',
             displays: 'menu_popup_displays',
             lightbox: 'category_lightbox',
+            'advertising-arch': 'category_advertising_arch',
+            'water-filled-a-poster-stand': 'category_water_filled_a_poster_stand',
             accessories: 'menu_accessories',
             racegate: 'home_cat_racegate_title',
             custom: 'category_custom'
@@ -779,7 +781,12 @@
 
         const filteredWithType = products.filter(p => {
             // 分类筛选
-            const hitCat = (cat === 'all') || (p.category === cat);
+            const pCat = String(p.category || '').toLowerCase();
+            const requestedCat = String(cat || '').toLowerCase();
+            // Display Systems umbrella: when cat=displays, also include lightbox products.
+            const hitCat = (requestedCat === 'all')
+                || (pCat === requestedCat)
+                || (requestedCat === 'displays' && pCat === 'lightbox');
 
             // tents 子类型筛选（仅当 cat=tents 且 URL 有 type）
             let hitType = true;
@@ -845,7 +852,9 @@
             const labelMap = {
                 tents: { en: 'Tents', zh: '帐篷' },
                 flags: { en: 'Beach Flags', zh: '沙滩旗' },
-                displays: { en: 'Pop-up Display', zh: '快幕秀' },
+                displays: { en: 'Display Systems', zh: '展示系统' },
+                'advertising-arch': { en: 'Advertising Arch', zh: '广告拱门' },
+                'water-filled-a-poster-stand': { en: 'Water Filled A Poster Stand', zh: '注水A字海报架' },
                 accessories: { en: 'Accessories', zh: '配件' },
                 custom: { en: 'Custom', zh: '定制' },
                 racegate: { en: 'Race Gate', zh: '竞速拱门' }

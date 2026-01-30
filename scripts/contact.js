@@ -1,27 +1,47 @@
-// ===================== Contact Form -> Google Sheets (Apps Script) =====================
+// ===================== Contact / Get Quote (replaceable submit hook) =====================
+// IMPORTANT:
+// - This file should NOT hard-bind to EmailJS / Google Sheet / backend endpoints.
+// - Keep the form structure and event listener, but leave submission as a replaceable hook.
+// TODO: Connect to Google Sheet or Email service (via backend or Apps Script)
 
-// ✅ 这里必须是 Apps Script Web App 的 /exec URL
-const SHEETS_WEBAPP_URL =
-  "https://script.google.com/macros/s/AKfycbzBZ5unnSti-8W0isH-J9s_5Y95A8miiF773amFt_oNM4lzsgov_QmIG0kcq3e7XaZ5/exec";
+function buildInquiryPayload(form) {
+  const get = (name) => {
+    const el = form.elements && form.elements[name];
+    const value = el && typeof el.value === 'string' ? el.value : '';
+    return String(value || '').trim();
+  };
 
-function buildFormData(form) {
-  const fd = new FormData(form);
+  return {
+    name: get('name'),
+    email: get('email'),
+    product: get('product'),
+    quantity: get('quantity'),
+    target_market: get('target_market'),
+    message: get('message'),
+    page_url: window.location.href,
+    user_agent: navigator.userAgent,
+    submitted_at: new Date().toISOString(),
+  };
+}
 
-  // 补充系统字段（这些在你的 Apps Script HEADERS 里有）
-  fd.set("time", new Date().toISOString());
-  fd.set("page_url", window.location.href);
-  fd.set("user_agent", navigator.userAgent);
-
+function toFormData(payload) {
+  const fd = new FormData();
+  Object.keys(payload || {}).forEach((k) => {
+    const v = payload[k];
+    if (v === undefined || v === null) return;
+    fd.set(String(k), String(v));
+  });
   return fd;
 }
 
-async function postToGoogleSheet(fd) {
-  // no-cors 下前端读不到返回值，但写入是 OK 的
-  await fetch(SHEETS_WEBAPP_URL, {
-    method: "POST",
-    mode: "no-cors",
-    body: fd,
-  });
+async function submitInquiry(payload, fd) {
+  // Optional integration hook.
+  // - Preferred: provide window.WK_INQUIRY_SUBMIT(payload, fd) externally.
+  // - This keeps business logic replaceable and avoids hard-binding here.
+  if (typeof window.WK_INQUIRY_SUBMIT === 'function') {
+    return await window.WK_INQUIRY_SUBMIT(payload, fd);
+  }
+  return { ok: false, reason: 'hook_missing' };
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -46,6 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
     if (msgBox) msgBox.style.display = "none";
 
     try {
+      // Use native constraints, but keep custom handling (form has novalidate).
+      if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
+        if (typeof form.reportValidity === 'function') form.reportValidity();
+        return;
+      }
+
+      // Simple spam honeypot
+      const honey = form.elements && form.elements['website'] ? String(form.elements['website'].value || '') : '';
+      if (honey.trim()) return;
+
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
@@ -53,24 +83,27 @@ document.addEventListener("DOMContentLoaded", () => {
           : '';
       }
 
-      const fd = buildFormData(form);
+      const payload = buildInquiryPayload(form);
+      const fd = toFormData(payload);
+      const result = await submitInquiry(payload, fd);
 
-      // ✅ 调试：确认这里能看到 name/email/product 都有值
-      console.log("FINAL PAYLOAD:", Object.fromEntries(fd.entries()));
+      if (result && result.ok) {
+        if (successBox) successBox.style.display = "block";
+        setMsg((window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_success') : '', true);
+        form.reset();
+        return;
+      }
 
-      await postToGoogleSheet(fd);
-
-      if (successBox) successBox.style.display = "block";
-      setMsg((window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_success') : '', true);
-
-      form.reset();
+      // Not connected yet: keep UI production-ready, but do not pretend it was submitted.
+      const pending = (window.wkI18n && typeof window.wkI18n.t === 'function')
+        ? window.wkI18n.t('inquiry_form_unconfigured')
+        : '';
+      setMsg(pending, false);
     } catch (err) {
-      console.error(err);
       const base = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_failed') : '';
       const detail = (err && (err.message || err)) ? ` ${err.message || err}` : '';
       const msg = `${base}${detail}`.trim();
       setMsg(msg, false);
-      if (msg) alert(msg);
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;

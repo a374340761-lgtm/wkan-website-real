@@ -734,6 +734,12 @@ function initNavigation() {
             const isOpen = navMenu.classList.toggle('active');
             hamburger.classList.toggle('active', isOpen);
             lockScroll(isOpen);
+
+            // On mobile, the nav can include dynamically enhanced dropdown nodes.
+            // Re-apply translations when opening to keep language switching consistent.
+            if (isOpen && window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                window.multiLang.translatePage();
+            }
         });
     }
     

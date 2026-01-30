@@ -2682,6 +2682,61 @@ html[lang="en"] .since{
     .nav-menu {
         display: none;
     }
+
+    /* Mobile hamburger menu: JS toggles .nav-menu.active */
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 98px; /* top-bar + navbar (mobile) */
+        bottom: 0;
+        padding: 16px 18px;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        overflow: auto;
+        z-index: 999; /* under navbar (1000), above page */
+
+        /* override later desktop-centering rules */
+        transform: none !important;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .nav-menu.active > li { width: 100%; }
+    .nav-menu.active a {
+        padding: 12px 6px;
+        font-size: 16px;
+    }
+
+    /* Mobile: show dropdown items inline (no hover on touch) */
+    .nav-menu.active .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 6px 0 0;
+        background: transparent;
+        min-width: 0;
+    }
+    .nav-menu.active .dropdown-menu a { padding: 10px 16px; }
+    .nav-menu.active .dropdown-submenu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        margin-left: 0;
+        background: transparent;
+        min-width: 0;
+        padding: 0;
+    }
+    .nav-menu.active .dropdown-submenu a { padding: 10px 26px; }
     
     .nav-actions {
         gap: var(--spacing-sm);
@@ -4334,6 +4389,55 @@ footer {
 @media (max-width: 992px) {
     .contact-form .quote-form label { flex-direction: column; align-items: stretch; }
     .contact-form .quote-form label span { flex-basis: auto; margin-bottom: 6px; }
+}
+
+/* Mobile: ensure inquiry form fields are visible + usable */
+@media (max-width: 768px) {
+    /* Prevent any accidental clipping */
+    #contact,
+    #contact .contact-card,
+    #contact .contact-right,
+    #contact .contact-form {
+        overflow: visible;
+    }
+
+    .contact-page { padding-left: 16px; padding-right: 16px; }
+    .contact-card { padding: 18px; }
+
+    .contact-form form { gap: 12px; }
+
+    .contact-form .quote-form input,
+    .contact-form .quote-form select,
+    .contact-form .quote-form textarea {
+        width: 100%;
+        min-height: 44px;
+        font-size: 16px; /* avoid iOS zoom + improve readability */
+        box-sizing: border-box;
+    }
+
+    /* Product field: guarantee visibility & tap-ability */
+    .contact-form .quote-form #product {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Buttons: wrap cleanly, never push off-screen */
+    .contact-form .quote-form > div[style] {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .contact-form .quote-form > div[style] .btn {
+        flex: 1 1 160px;
+        min-height: 44px;
+    }
+}
+
+/* Mobile sticky CTA can overlap the very bottom of the page */
+@media (max-width: 640px) {
+    #contact { padding-bottom: 90px; }
 }
 
 .form-row {

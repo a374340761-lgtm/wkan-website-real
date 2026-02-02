@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /backend/
+Disallow: /index.original.html
+Disallow: /index.wireframe.html
+Disallow: /test_logo.html
+Disallow: /test_stats.html
+
+Sitemap: /sitemap.xml

@@ -6,4 +6,4 @@ Disallow: /index.wireframe.html
 Disallow: /test_logo.html
 Disallow: /test_stats.html
 
-Sitemap: /sitemap.xml
+Sitemap: https://waikwantent.com/sitemap.xml

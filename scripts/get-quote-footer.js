@@ -28,6 +28,22 @@
     container.querySelectorAll('a[href="#about"]').forEach((a) => {
       if (!hasAboutHere) a.setAttribute('href', 'index.html#about');
     });
+
+    // Normalize legal links (some pages still have placeholder href="#").
+    container.querySelectorAll('a[data-i18n="footer_terms"]').forEach((a) => {
+      const href = (a.getAttribute('href') || '').trim();
+      if (!href || href === '#') a.setAttribute('href', 'terms.html');
+    });
+
+    container.querySelectorAll('a[data-i18n="footer_privacy"]').forEach((a) => {
+      const href = (a.getAttribute('href') || '').trim();
+      if (!href || href === '#') a.setAttribute('href', 'privacy.html');
+    });
+
+    container.querySelectorAll('a[data-i18n="footer_sitemap"]').forEach((a) => {
+      const href = (a.getAttribute('href') || '').trim();
+      if (!href || href === '#') a.setAttribute('href', 'site-map.html');
+    });
   }
 
   function buildFooterElement() {
@@ -84,9 +100,13 @@
         <div class="contact-bottom__legal">
           <div class="contact-bottom__copy" data-i18n="footer_copyright">© 2026 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.</div>
           <div class="contact-bottom__links">
-            <a href="#" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
-            <a href="#" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
-            <a href="#" class="contact-bottom__link2" data-i18n="footer_sitemap">Site Map</a>
+            <a href="faq.html" class="contact-bottom__link2">FAQ</a>
+            <a href="custom-canopy-tent-manufacturer.html" class="contact-bottom__link2">Canopy Tent Manufacturer</a>
+            <a href="beach-flag-supplier.html" class="contact-bottom__link2">Beach Flag Supplier</a>
+            <a href="portable-display-systems.html" class="contact-bottom__link2">Display Systems Manufacturer</a>
+            <a href="terms.html" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
+            <a href="privacy.html" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
+            <a href="site-map.html" class="contact-bottom__link2" data-i18n="footer_sitemap">Site Map</a>
           </div>
         </div>
       </div>

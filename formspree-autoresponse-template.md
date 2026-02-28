@@ -35,7 +35,7 @@ Best regards,
 
 Wai Kwan Team  
 
-Email: a374340761@gmail.com  
+Email: yishu@waikwantent.com  
 
 WhatsApp: +86 138 2454 0280  
 
@@ -149,7 +149,7 @@ Kind regards,
 
 Wai Kwan Sales Team  
 
-Email: a374340761@gmail.com  
+Email: yishu@waikwantent.com  
 
 WhatsApp: +86 138 2454 0280
 ```

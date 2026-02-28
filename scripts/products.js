@@ -3788,8 +3788,8 @@ getProductIcon(category) {
     }
 
     buildMailtoLink() {
-        // 你们接收询价的邮箱：建议你在这里换成公司询价邮箱
-        const to = 'a374340761@gmail.com';
+        // 你们接收询价的邮箱：网站上显示的企业邮箱
+        const to = 'yishu@waikwantent.com';
         const subject = encodeURIComponent('RFQ - Request a Quote');
         const body = encodeURIComponent(document.getElementById('rfqText')?.value || '');
         return `mailto:${to}?subject=${subject}&body=${body}`;

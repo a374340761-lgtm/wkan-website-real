@@ -116,7 +116,7 @@ app.post('/api/contact', limiter, contactValidation, async (req, res) => {
                         <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 20px 0;">
                             <h4 style="color: #1e3c72; margin-top: 0;">联系方式：</h4>
                             <p><strong>电话:</strong> +86 183 7878 1011</p>
-                            <p><strong>邮箱:</strong> a374340761@gmail.com</p>
+                            <p><strong>邮箱:</strong> yishu@waikwantent.com</p>
                             <p><strong>地址:</strong> 2nd Xuweiqian Building, Bridge South xilian Dong Cun Gaosha Development District, Nanhai Danzao, Foshan, China</p>
                         </div>
                         

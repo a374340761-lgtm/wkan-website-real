@@ -3,8 +3,11 @@
   - Ensures canonical link exists and is consistent
   - Fills OpenGraph/Twitter URL + image with absolute URLs
   - Normalizes canonical for product detail pages
+  - Injects Organization JSON-LD
 */
 (function () {
+  var BASE_URL = 'https://waikwantent.com';
+
   function upsertMeta(attrName, attrValue, content) {
     try {
       var selector = 'meta[' + attrName + '="' + String(attrValue) + '"]';
@@ -30,14 +33,15 @@
   }
 
   function toAbsoluteUrl(maybeUrl) {
+    if (!maybeUrl || typeof maybeUrl !== 'string') return '';
+    var trimmed = String(maybeUrl).trim();
+    if (!trimmed) return '';
     try {
-      return new URL(maybeUrl, window.location.origin + window.location.pathname.replace(/[^/]*$/, '')).toString();
+      if (/^https?:\/\//i.test(trimmed)) return trimmed;
+      var base = BASE_URL.replace(/\/$/, '');
+      return (base + (trimmed.charAt(0) === '/' ? '' : '/') + trimmed);
     } catch (e) {
-      try {
-        return new URL(maybeUrl, window.location.origin).toString();
-      } catch (e2) {
-        return '';
-      }
+      return '';
     }
   }
 
@@ -85,9 +89,10 @@
           url.search = '';
         }
 
-        // Product detail canonical must reflect sku normalization.
-        ensureCanonical(url.toString());
-        return url.toString();
+        // Product detail canonical: always use production URL for SEO
+        var canonicalUrl = BASE_URL.replace(/\/$/, '') + url.pathname.replace(/^\//, '/') + url.search;
+        ensureCanonical(canonicalUrl);
+        return canonicalUrl;
       }
 
       // Legacy entry points should not be canonical.
@@ -103,8 +108,13 @@
       // If the HTML already declared a canonical, keep it (but make it absolute).
       if (existing) return existing;
 
-      ensureCanonical(url.toString());
-      return url.toString();
+      // Use production URL for canonical (important when developing on localhost)
+      var finalUrl = url.toString();
+      if (finalUrl.indexOf('127.0.0.1') !== -1 || finalUrl.indexOf('localhost') !== -1) {
+        finalUrl = BASE_URL.replace(/\/$/, '') + (url.pathname || '/') + url.search;
+      }
+      ensureCanonical(finalUrl);
+      return finalUrl;
     } catch (e) {
       return '';
     }
@@ -114,12 +124,17 @@
     var title = String(document.title || '').trim() || 'WaiKwan';
     var desc = getDescription();
 
-    // Choose a stable default hero image
     var defaultImg = 'images/hero/Waikwantentshero.png';
     var ogImg = (document.head.querySelector('meta[property="og:image"]') || document.head.querySelector('meta[name="twitter:image"]'));
     var imgContent = (ogImg && ogImg.getAttribute('content')) || defaultImg;
 
     var absUrl = canonicalAbs || (function () { try { return new URL(window.location.href).toString(); } catch { return ''; } })();
+    if (absUrl && (absUrl.indexOf('127.0.0.1') !== -1 || absUrl.indexOf('localhost') !== -1)) {
+      try {
+        var u = new URL(absUrl);
+        absUrl = BASE_URL.replace(/\/$/, '') + (u.pathname || '/') + u.search;
+      } catch (e) {}
+    }
     var absImg = toAbsoluteUrl(imgContent || defaultImg);
 
     upsertMeta('property', 'og:site_name', 'WaiKwan');
@@ -136,10 +151,42 @@
     upsertMeta('name', 'twitter:url', absUrl);
   }
 
+  function injectOrganizationJsonLd() {
+    if (document.getElementById('wk-org-jsonld')) return;
+    var script = document.createElement('script');
+    script.id = 'wk-org-jsonld';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
+      alternateName: 'WaiKwan',
+      url: BASE_URL,
+      logo: toAbsoluteUrl('images/waikwancompanylogo.png'),
+      description: 'Factory-direct manufacturer of custom canopy tents, beach flags and portable display systems. OEM/ODM support, fast quotes, global export.',
+      foundingDate: '2010',
+      contactPoint: {
+        '@type': 'ContactPoint',
+        email: 'yishu@waikwantent.com',
+        contactType: 'sales',
+        availableLanguage: ['English', 'Chinese', 'Japanese', 'Korean'],
+        areaServed: 'Worldwide'
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Luchuan County',
+        addressRegion: 'Yulin',
+        addressCountry: 'CN'
+      }
+    });
+    document.head.appendChild(script);
+  }
+
   function run() {
     try {
       var canonicalAbs = normalizeCanonical();
       applySocialTags(canonicalAbs);
+      injectOrganizationJsonLd();
     } catch (e) {}
   }
 

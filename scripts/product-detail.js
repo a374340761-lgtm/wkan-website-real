@@ -179,6 +179,27 @@ document.addEventListener('DOMContentLoaded', () => {
             metaDesc.content = (shortText || description || `${name}`);
         }
 
+        // Product JSON-LD for rich snippets
+        const BASE_URL = 'https://waikwantent.com';
+        const toAbs = (p) => (p && !/^https?:\/\//i.test(p)) ? (BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p) : (p || '');
+        const productImage = product.image || (product.images && product.images[0]) || '';
+        let ld = document.getElementById('wk-product-jsonld');
+        if (ld) ld.remove();
+        ld = document.createElement('script');
+        ld.id = 'wk-product-jsonld';
+        ld.type = 'application/ld+json';
+        ld.textContent = JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: name,
+            description: (shortText || description || name).substring(0, 500),
+            image: productImage ? toAbs(productImage) : toAbs('images/hero/Waikwantentshero.png'),
+            sku: String(product.sku || product.id || ''),
+            brand: { '@type': 'Brand', name: 'WaiKwan' },
+            offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock' }
+        });
+        document.head.appendChild(ld);
+
         // Breadcrumb: Home / Products / (Category) / Product
         const bcNav = document.querySelector('.breadcrumbs');
         if (bcNav) {

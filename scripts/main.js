@@ -1239,6 +1239,14 @@ function ensureProductCenterDropdownHasLightbox() {
     const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
     if (!menus.length) return;
 
+    // 仅产品中心下拉：包含 product-center 的 tents/flags 链接
+    const isProductsMenu = (menu) => {
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const hasTents = links.some((a) => (a.getAttribute('href') || '').toLowerCase().includes('cat=tents') || (a.getAttribute('href') || '').toLowerCase().includes('category=tents'));
+        const hasFlags = links.some((a) => (a.getAttribute('href') || '').toLowerCase().includes('cat=flags') || (a.getAttribute('href') || '').toLowerCase().includes('category=flags'));
+        return hasTents && hasFlags;
+    };
+
     const hasLightboxLink = (menu) => {
         return Array.from(menu.querySelectorAll('a[href]')).some((a) => {
             const href = (a.getAttribute('href') || '').toLowerCase();
@@ -1254,6 +1262,7 @@ function ensureProductCenterDropdownHasLightbox() {
     };
 
     menus.forEach((menu) => {
+        if (!isProductsMenu(menu)) return;  // 只处理产品中心下拉，不添加到信息下拉
         if (hasLightboxLink(menu)) return;
 
         // Insert after Displays if present, otherwise append.
@@ -1271,6 +1280,16 @@ function ensureProductCenterDropdownHasLightbox() {
         } else {
             menu.appendChild(node);
         }
+    });
+
+    // 从信息下拉中移除灯箱系列（若被误添加）
+    menus.forEach((menu) => {
+        if (isProductsMenu(menu)) return;
+        const lightboxLink = Array.from(menu.querySelectorAll('a[href]')).find((a) => {
+            const href = (a.getAttribute('href') || '').toLowerCase();
+            return href.includes('cat=lightbox') || href.includes('category=lightbox');
+        });
+        if (lightboxLink) lightboxLink.remove();
     });
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {

@@ -949,7 +949,7 @@ function enhanceTentsDropdown() {
         const links = Array.from(menu.querySelectorAll('a[href]'));
         const tentsLink = links.find((a) => {
             const href = (a.getAttribute('href') || '').toLowerCase();
-            return href.includes('cat=tents');
+            return href.includes('cat=tents') || href.includes('category=tents');
         });
 
         if (!tentsLink) return;
@@ -1058,7 +1058,7 @@ function enhanceFlagsDropdown() {
         const links = Array.from(menu.querySelectorAll('a[href]'));
         const flagsLink = links.find((a) => {
             const href = (a.getAttribute('href') || '').toLowerCase();
-            return href.includes('cat=flags');
+            return href.includes('cat=flags') || href.includes('category=flags');
         });
 
         if (!flagsLink) return;
@@ -1164,7 +1164,7 @@ function enhanceDisplaysDropdown() {
         const links = Array.from(menu.querySelectorAll('a[href]'));
         const displaysLink = links.find((a) => {
             const href = (a.getAttribute('href') || '').toLowerCase();
-            return href.includes('cat=displays');
+            return href.includes('cat=displays') || href.includes('category=displays');
         });
 
         if (!displaysLink) return;

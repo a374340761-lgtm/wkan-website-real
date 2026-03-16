@@ -242,11 +242,13 @@
     const src = safe(item.heroImage || item.guideImage || (Array.isArray(item.guideImages) ? item.guideImages[0] : ''));
     if (!src) return '';
     return `
-      <div class="tent-type-detail__block">
-        <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
-          <button type="button" data-wk-image="${src}" data-wk-title="" aria-label="Open image" style="border:none;background:transparent;padding:0;display:block;width:100%;cursor:zoom-in;">
-            <img class="tent-type-detail__visual" src="${src}" alt="" loading="lazy" onerror="this.style.display='none'" />
-          </button>
+      <div class="tent-type-detail__block tent-type-detail__block--hero">
+        <div class="tent-type-detail__visuals tent-type-detail__visuals--hero" style="grid-template-columns: 1fr;">
+          <div class="tent-type-detail__hero-wrap">
+            <button type="button" data-wk-image="${src}" data-wk-title="" aria-label="Open image" class="tent-type-detail__hero-btn">
+              <img class="tent-type-detail__visual tent-type-detail__visual--hero" src="${src}" alt="" loading="lazy" onerror="this.style.display='none'" />
+            </button>
+          </div>
         </div>
       </div>
     `;

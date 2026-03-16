@@ -6465,6 +6465,45 @@ html[lang="en"] .hero-slide p {
     margin-right: auto;
 }
 
+/* Flag-type hero: constrain tall/narrow images (e.g. Outdoor Giant Flag) to normal viewing size */
+body[data-page-category="flag-type"] .tent-type-detail__visuals--hero,
+.tent-type-detail__visuals--hero {
+    max-width: 400px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+body[data-page-category="flag-type"] .tent-type-detail__hero-wrap,
+.tent-type-detail__hero-wrap {
+    width: 100%;
+    max-height: 480px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.tent-type-detail__hero-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    display: block;
+    width: 100%;
+    cursor: zoom-in;
+    max-height: 480px;
+}
+body[data-page-category="flag-type"] .tent-type-detail__visual--hero,
+body[data-page-category="flag-type"] .tent-type-detail__visuals--hero img,
+.tent-type-detail__visual--hero,
+.tent-type-detail__visuals--hero .tent-type-detail__visual,
+.tent-type-detail__visuals--hero img.tent-type-detail__visual {
+    width: 100% !important;
+    max-width: 400px !important;
+    max-height: 480px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center top;
+    display: block;
+}
+
 /* ===============================
    Homepage redesign (2026)
    Scoped to .home to avoid regressions

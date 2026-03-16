@@ -388,7 +388,7 @@ section { scroll-margin-top: 110px; }
 }
 
 .nav-container {
-    max-width: 100%;                 /* ✅ 让导航内容区变宽/全宽 */
+    max-width: 1200px;               /* ✅ 限制宽度，让左右更靠中间 */
     margin: 0 auto;
     padding: 14px 24px;               /* ✅ 左右 padding 24px */
     display: flex;
@@ -496,8 +496,8 @@ header {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 14px;
-    min-width: 220px;
+    gap: 10px;                       /* ✅ 图标之间更紧凑 */
+    min-width: 0;                    /* ✅ 不强制占太宽 */
     justify-content: flex-end;
 }
 

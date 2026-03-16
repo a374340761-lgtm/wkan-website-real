@@ -9,7 +9,7 @@ const ENABLED_LANGS = ['en', 'zh']; // 将来要开：['en','zh','ja','ko']
 
 // ✅ 公司名（统一来源，避免在多个 HTML 写死）
 const COMPANY_NAME = {
-    en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
+    en: 'Guangxi WaiKwan Tent',
     zh: '广西伟群帐篷制造有限公司',
     // ja: '（暂时隐藏）',
     // ko: '（暂时隐藏）'

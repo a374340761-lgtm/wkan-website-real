@@ -139,9 +139,17 @@ class ProductManager {
                     description: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
                     descriptionEn: 'A-frame display system (AD-H18 series). Multiple model sizes plus multiple graphic shape/size options for events, exhibitions and outdoor displays.',
                     descriptionZh: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
-                    image: 'images/placeholder.svg',
-                    images: ['images/placeholder.svg'],
-                    gallery: ['images/placeholder.svg'],
+                    image: encodeURI('images/products/displays/A Frame/A Frame Pop Up hero.jpg'),
+                    images: [
+                        encodeURI('images/products/displays/A Frame/A Frame Pop Up hero.jpg'),
+                        encodeURI('images/products/displays/A Frame/A Frame 注释图.jpg')
+                    ],
+                    gallery: [
+                        encodeURI('images/products/displays/A Frame/A Frame Pop Up hero.jpg'),
+                        encodeURI('images/products/displays/A Frame/A Frame 注释图.jpg')
+                    ],
+                    referenceImage: encodeURI('images/products/displays/A Frame/A Frame 注释图.jpg'),
+                    referenceImageLabel: 'A字架规格注释图 / A-Frame Specification Diagram',
                     variantTables: [
                         {
                             titleZh: '形状与尺寸（S / M / L）',

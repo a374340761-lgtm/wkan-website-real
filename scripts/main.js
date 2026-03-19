@@ -1003,6 +1003,13 @@ function enhanceTentsDropdown() {
             sub.appendChild(a);
         });
 
+        // Accessories (配件) - tent accessories, as subcategory under Tents
+        const accessoriesLink = document.createElement('a');
+        accessoriesLink.href = 'product-center.html?cat=accessories';
+        accessoriesLink.setAttribute('data-translate', 'menu_accessories');
+        accessoriesLink.textContent = '';
+        sub.appendChild(accessoriesLink);
+
         wrapper.appendChild(sub);
 
         if (window.multiLang && typeof window.multiLang.translatePage === 'function') {

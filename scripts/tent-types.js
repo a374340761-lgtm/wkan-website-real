@@ -587,6 +587,63 @@
                     variants
                 })
             ];
-        })()
+        })(),
+
+        // Tent accessories hub — single full-range listing (XLS + catalog p.4); hero: tentsaccessorieshero.jpg
+        accessories: [
+            (function () {
+                const CATALOG04 = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/04.png');
+                return {
+                    type: 'tent_accessories',
+                    nameZh: '帐篷配件（全系列）',
+                    nameEn: 'Tent Accessories & Grips (Full Range)',
+                    hubDescZh: '压重、拉绳、连接件、刀旗套件等全系列配件。',
+                    hubDescEn: 'Weights, tie-downs, connectors, blade-flag kits, and more.',
+                    storyZh: '下表为编码、名称与备注；详情页可切换中英文。',
+                    storyEn: 'Code, name, and specs below; switch language in the page header.',
+                    heroImage: 'images/products/accessories/tent-accessories1/tentsaccessorieshero.jpg',
+                    exampleImages: [CATALOG04],
+                    skipCommonDetails: true,
+                    skipAccessoriesBlock: true,
+                    guideImages: [],
+                    links: [
+                        { href: 'all-products.html?cat=accessories', labelZh: '帐篷配件产品一览（Browse Products）', labelEn: 'Browse all tent accessory products' }
+                    ],
+                    specTable: {
+                        columns: [
+                            { key: 'model', labelZh: '编码', labelEn: 'Code' },
+                            { key: 'name', labelZh: '名称', labelEn: 'Name' },
+                            { key: 'remarks', labelZh: '备注', labelEn: 'Specifications' }
+                        ],
+                        rows: [
+                            { model: 'AD-t01', nameZh: '帐篷半围横杆', nameEn: 'Half wall cross bar', remarksZh: '重量:0.85KG 尺寸:3M', remarksEn: 'Weight: 0.85KG, Size: 3M' },
+                            { model: 'AD-t10', nameZh: '帐篷刀旗套件', nameEn: 'Tent blade flag kit', remarksZh: '颜色:铁镀铬 重量:0.4KG 尺寸:19/25MM 箱规:40×30×30CM 箱规数量:50PCS 毛重:21KG', remarksEn: 'Color: Chrome-plated iron, Weight: 0.4KG, Size: 19/25MM, Carton: 40×30×30CM, Qty: 50PCS, G.W.: 21KG' },
+                            { model: 'AD-to3', nameZh: '压重铁', nameEn: 'Press weight (iron)', remarksZh: '颜色:铁喷涂 重量:7KG 尺寸:25.4×25.4×10CM 箱规:26.5×26.5×21CM 箱规数量:2PCS 毛重:14.5KG', remarksEn: 'Color: Painted iron, Weight: 7KG, Size: 25.4×25.4×10CM, Carton: 26.5×26.5×21CM, Qty: 2PCS, G.W.: 14.5KG' },
+                            { model: 'AD-to4', nameZh: '沙袋', nameEn: 'Sand bag', remarksZh: '重量:0.15KG 尺寸:50×20CM 箱规:45×40×35CM 箱规数量:100PCS 毛重:16KG', remarksEn: 'Weight: 0.15KG, Size: 50×20CM, Carton: 45×40×35CM, Qty: 100PCS, G.W.: 16KG' },
+                            { model: 'AD-to5', nameZh: '帐篷刀旗连接件', nameEn: 'Tent blade flag connector', remarksZh: '颜色:铁镀铬+尼龙黑 重量:0.7KG 尺寸:14.5/16/16.5MM 箱规:40×30×30CM 箱规数量:24PCS 毛重:17.7KG', remarksEn: 'Color: Chrome-plated iron + black nylon, Weight: 0.7KG, Size: 14.5/16/16.5MM, Carton: 40×30×30CM, Qty: 24PCS, G.W.: 17.7KG' },
+                            { model: 'AD-to6', nameZh: '拖轮包', nameEn: 'Wheeled carry bag', remarksZh: '重量:0.65KG 尺寸:157×26×26CM', remarksEn: 'Weight: 0.65KG, Size: 157×26×26CM' },
+                            { model: 'AD-to7', nameZh: '半围连接件', nameEn: 'Half wall connector', remarksZh: '颜色:尼龙黑 重量:0.09KG 尺寸:30# / 40# 箱规:45×40×30CM 箱规数量:200PCS 毛重:19KG', remarksEn: 'Color: Black nylon, Weight: 0.09KG, Size: 30# / 40#, Carton: 45×40×30CM, Qty: 200PCS, G.W.: 19KG' },
+                            { model: 'AD-to8', nameZh: '半围刀旗连接件', nameEn: 'Half wall blade-flag connector', remarksZh: '颜色:PC 重量:0.21KG 尺寸:40# / 50# 六棱角 箱规:45×40×30CM 箱规数量:100PCS 毛重:22KG', remarksEn: 'Color: PC, Weight: 0.21KG, Size: 40# / 50# hex, Carton: 45×40×30CM, Qty: 100PCS, G.W.: 22KG' },
+                            { model: 'AD-to9', nameZh: '半围刀旗连接件9', nameEn: 'Half wall blade-flag connector (9)', remarksZh: '颜色:尼龙黑 重量:0.1KG 尺寸:40/50# 六棱角管 箱规:45×40×30CM 箱规数量:150PCS 毛重:16KG', remarksEn: 'Color: Black nylon, Weight: 0.1KG, Size: 40/50# hex tube, Carton: 45×40×30CM, Qty: 150PCS, G.W.: 16KG' },
+                            { model: 'WK T15', nameZh: '30/40方型帐篷架连接件', nameEn: '30/40 square frame connector', remarksZh: '重量:0.2KG', remarksEn: 'Weight: 0.2KG' },
+                            { model: 'WK-T01A', nameZh: '遮阳档杆', nameEn: 'Sun shade bar', remarksZh: '重量:1.4KG 尺寸:0.7×3M', remarksEn: 'Weight: 1.4KG, Size: 0.7×3M' },
+                            { model: 'WK-T02', nameZh: '帐篷压重水桶方型', nameEn: 'Square water weight bucket', remarksZh: '重量:0.8KG 尺寸:35×35×10CM 箱规:44×38×38CM 箱规数量:4PCS 毛重:3.8KG', remarksEn: 'Weight: 0.8KG, Size: 35×35×10CM, Carton: 44×38×38CM, Qty: 4PCS, G.W.: 3.8KG' },
+                            { model: 'WK-T02A', nameZh: '帐篷压重水桶圆型', nameEn: 'Round water weight bucket', remarksZh: '重量:1.1KG 尺寸:24×25CM 箱规:52×25×48CM 箱规数量:4PCS 毛重:4.5KG', remarksEn: 'Weight: 1.1KG, Size: 24×25CM, Carton: 52×25×48CM, Qty: 4PCS, G.W.: 4.5KG' },
+                            { model: 'WK-T03A', nameZh: '压重铁圆款', nameEn: 'Round press weight (iron)', remarksZh: '重量:5KG/10KG/15KG 尺寸:26×3CM 箱规:27×27×4CM 箱规数量:1', remarksEn: 'Weight: 5KG/10KG/15KG, Size: 26×3CM, Carton: 27×27×4CM, Qty: 1' },
+                            { model: 'WK-T03D', nameZh: '压重铁d', nameEn: 'Press weight iron (D)', remarksZh: '重量:15KG 尺寸:26×3CM 箱规:27×27×7CM 箱规数量:1 毛重:15.3KG', remarksEn: 'Weight: 15KG, Size: 26×3CM, Carton: 27×27×7CM, Qty: 1, G.W.: 15.3KG' },
+                            { model: 'WK-T05-1', nameZh: '帐篷雨沟', nameEn: 'Tent rain gutter', remarksZh: '重量:0.6KG 尺寸:0.25×3M', remarksEn: 'Weight: 0.6KG, Size: 0.25×3M' },
+                            { model: 'WK-T06-2', nameZh: '帐篷手提袋', nameEn: 'Tent carry bag', remarksZh: '重量:0.25KG/0.35KG/0.55KG 尺寸:3×3 / 3×4.5 / 3×6M', remarksEn: 'Weight: 0.25KG/0.35KG/0.55KG, Size: 3×3 / 3×4.5 / 3×6M' },
+                            { model: 'WK-T11', nameZh: '帐篷固定绳子', nameEn: 'Tent tie-down rope', remarksZh: '重量:0.3KG 尺寸:0.6×25CM / 0.4×3M', remarksEn: 'Weight: 0.3KG, Size: 0.6×25CM / 0.4×3M' },
+                            { model: 'WK-T11-A', nameZh: '帐篷固定绳子A', nameEn: 'Tent tie-down rope (A)', remarksZh: '重量:0.6KG 尺寸:0.6×25CM / 2.2×300CM', remarksEn: 'Weight: 0.6KG, Size: 0.6×25CM / 2.2×300CM' },
+                            { model: 'WK-T12', nameZh: '刀旗连接件', nameEn: 'Blade flag connector', remarksZh: '重量:0.5KG', remarksEn: 'Weight: 0.5KG' },
+                            { model: 'WK-T12-B', nameZh: '刀旗连接件B', nameEn: 'Blade flag connector (B)', remarksZh: '重量:1KG', remarksEn: 'Weight: 1KG' },
+                            { model: 'WK-T13/T13-2/T13-3', nameZh: '帐篷夹具', nameEn: 'Tent clamp / grip', remarksZh: '重量:0.4KG', remarksEn: 'Weight: 0.4KG' },
+                            { model: 'WK-T14', nameZh: '帐篷半围杆连接件90度', nameEn: 'Half wall pole connector 90°', remarksZh: '重量:0.5KG', remarksEn: 'Weight: 0.5KG' },
+                            { model: 'WK-T16', nameZh: '40/50菱形帐篷架连接件', nameEn: '40/50 diamond frame connector', remarksZh: '重量:0.15KG', remarksEn: 'Weight: 0.15KG' }
+                        ]
+                    }
+                };
+            })()
+        ]
     };
 })();

@@ -139,16 +139,17 @@ class ProductManager {
                     description: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
                     descriptionEn: 'A-frame display system (AD-H18 series). Multiple model sizes plus multiple graphic shape/size options for events, exhibitions and outdoor displays.',
                     descriptionZh: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
-                    image: encodeURI('images/products/displays/A Frame/A Frame Pop Up hero.jpg'),
+                    // Plain paths only — WK_getProductCardImage() applies encodeURI once (double-encoding breaks Browse Products cards).
+                    image: 'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
                     images: [
-                        encodeURI('images/products/displays/A Frame/A Frame Pop Up hero.jpg'),
-                        encodeURI('images/products/displays/A Frame/A Frame 注释图.jpg')
+                        'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
+                        'images/products/displays/A Frame/A Frame 注释图.jpg'
                     ],
                     gallery: [
-                        encodeURI('images/products/displays/A Frame/A Frame Pop Up hero.jpg'),
-                        encodeURI('images/products/displays/A Frame/A Frame 注释图.jpg')
+                        'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
+                        'images/products/displays/A Frame/A Frame 注释图.jpg'
                     ],
-                    referenceImage: encodeURI('images/products/displays/A Frame/A Frame 注释图.jpg'),
+                    referenceImage: 'images/products/displays/A Frame/A Frame 注释图.jpg',
                     referenceImageLabel: 'A字架规格注释图 / A-Frame Specification Diagram',
                     variantTables: [
                         {
@@ -302,12 +303,14 @@ class ProductManager {
                     description: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
                     descriptionEn: 'Tension Fabric Counter is an accessory product for display systems. Features the same tension fabric + quick-setup structure, but designed for reception counters, desks and booth furniture rather than backdrops. Available in illuminated and non-illuminated versions with multiple packaging protection. Enhanced visual appeal at night.',
                     descriptionZh: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
-                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    image: encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
                     images: [
-                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                        encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+                        encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
                     ],
                     gallery: [
-                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                        encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+                        encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
                     ],
                     variantTables: [
                         {
@@ -529,9 +532,15 @@ class ProductManager {
                     shortZh: '直型张力布背景墙系统，适用于展会、展台与媒体墙。',
                     descriptionEn: 'Straight Line Series tension fabric display with modular aluminum tube frame and SEG push-fit graphic. Fast setup, seamless full-bleed visual, and easy graphic replacement.',
                     descriptionZh: '直型系列张力布展示系统：模块化铝合金管结构 + SEG（卡槽式）画面压入。搭建快速，画面满版平整，可更换维护成本低。',
-                    image: 'images/products/displays/tension-fabric-displays/21.png',
-                    images: ['images/products/displays/tension-fabric-displays/21.png'],
-                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    image: 'images/products/displays/tension-fabric-displays/tesionfacbricdisplacestraightlinehero.png',
+                    images: [
+                        'images/products/displays/tension-fabric-displays/tesionfacbricdisplacestraightlinehero.png',
+                        'images/products/displays/tension-fabric-displays/Straight Line Tension Fabric Backwall-produced product.jpg'
+                    ],
+                    gallery: [
+                        'images/products/displays/tension-fabric-displays/tesionfacbricdisplacestraightlinehero.png',
+                        'images/products/displays/tension-fabric-displays/Straight Line Tension Fabric Backwall-produced product.jpg'
+                    ],
                     specsZh: {
                         '型号': 'WK-HZ',
                         '尺寸': '225×245 CM / 225×295 CM / 225×590 CM',
@@ -1085,9 +1094,16 @@ class ProductManager {
                 shortZh: '铝型材框架 LED 背光卡布灯箱，适用于品牌展示与零售陈列。',
                 descriptionEn: 'Professional SEG light box series using aluminum profiles, LED backlit modules and silicone edge fabric graphics. Seamless appearance, modular build and quick graphic replacement. Custom sizes available.',
                 descriptionZh: '专业卡布灯箱系列：铝型材框架 + LED 背光模块 + SEG 硅胶边条布画。外观无缝平整，模块化结构，画面更换便捷，支持定制尺寸。',
-                image: 'images/products/displays/tension-fabric-displays/23.png',
-                images: ['images/products/displays/tension-fabric-displays/23.png'],
-                gallery: ['images/products/displays/tension-fabric-displays/23.png'],
+                // Plain path — WK_getProductCardImage / detail page apply encodeURI once (double encode breaks listing cards)
+                image: 'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+                images: [
+                    'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+                    'images/products/displays/tension-fabric-displays/23.png'
+                ],
+                gallery: [
+                    'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+                    'images/products/displays/tension-fabric-displays/23.png'
+                ],
                 specsZh: {
                     '尺寸': '支持定制',
                     '光源': 'LED 背光',
@@ -1589,11 +1605,13 @@ class ProductManager {
                 image: 'images/products/tents/folding40/hero.png',
                 images: [
                     'images/products/tents/folding40/hero.png',
-                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png'
+                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png',
+                    'images/products/tents/folding40/3x6aluminium1.2mm4cmdiameter.png'
                 ],
                 gallery: [
                     'images/products/tents/folding40/hero.png',
-                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png'
+                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png',
+                    'images/products/tents/folding40/3x6aluminium1.2mm4cmdiameter.png'
                 ],
                 variants: [
                     { model: 'WK-T40I', size: '1.5 × 1.5 M', weight: '12.5 KG' },
@@ -2471,10 +2489,14 @@ class ProductManager {
 
     _pickLocalized(product, baseKey) {
         const lang = (this.currentLanguage || 'en').toLowerCase();
-        const suffixMap = { zh: '', en: 'En', ja: 'Ja', ko: 'Ko' };
-        const suffix = suffixMap[lang] ?? '';
-        const localizedKey = suffix ? `${baseKey}${suffix}` : baseKey;
-        return this._safeText((product && (product[localizedKey] ?? product[baseKey])) || '');
+        const p = product || {};
+        const base = p[baseKey];
+        // zh must use *Zh (e.g. nameZh), not plain baseKey — many products omit legacy `name`
+        if (lang === 'zh') return this._safeText(p[`${baseKey}Zh`] ?? base ?? '');
+        if (lang === 'en') return this._safeText(p[`${baseKey}En`] ?? base ?? '');
+        if (lang === 'ja') return this._safeText(p[`${baseKey}Ja`] ?? p[`${baseKey}En`] ?? base ?? '');
+        if (lang === 'ko') return this._safeText(p[`${baseKey}Ko`] ?? p[`${baseKey}En`] ?? base ?? '');
+        return this._safeText(p[`${baseKey}En`] ?? p[`${baseKey}Zh`] ?? base ?? '');
     }
 
     _getProductSummary(product) {
@@ -2545,6 +2567,52 @@ class ProductManager {
         return map[cat] || { zh: ['活动与展示场景'], en: ['Events and display scenarios'] };
     }
 
+    /**
+     * “画册示例 / Catalog Examples” block (same idea as flag-type.html), appended to product description tab.
+     */
+    _catalogExamplesAppendHtml(product) {
+        const p = product || {};
+        const id = p.id;
+        let paths = [];
+        let subZh = '';
+        let subEn = '';
+
+        if (id === 42001 || id === 42002) {
+            paths = ['images/广西伟群帐篷制造有限公司2025allpagepng/18.png'];
+            subZh = '以下为画册页示例，用于快速对照 A 字架与背板系统款式（可点击放大）。';
+            subEn = 'Example catalog pages for quick reference (click to open).';
+        } else if (id === 42009 || String(p.sku || '').toUpperCase() === 'WK-HZ-STRAIGHT') {
+            paths = [
+                'images/products/displays/tension-fabric-displays/tesionfacbricdisplacestraightlinehero.png',
+                'images/products/displays/tension-fabric-displays/Straight Line Tension Fabric Backwall-produced product.jpg'
+            ];
+            subZh = '画册页示例：产品主视觉与带成品画面的安装效果（可点击放大）。';
+            subEn = 'Catalog-style reference: product visual and finished installation with branded graphics (click to enlarge).';
+        } else {
+            return '';
+        }
+
+        const cells = paths
+            .map((raw) => {
+                const src = encodeURI(raw);
+                return `<a href="${src}" target="_blank" rel="noopener" class="pdp-catalog-examples__link"><img class="pdp-catalog-examples__img" src="${src}" alt="" loading="lazy" /></a>`;
+            })
+            .join('');
+
+        return `
+<div class="pdp-catalog-examples">
+  <div class="pdp-catalog-examples__title">
+    <span class="zh">画册示例</span>
+    <span class="en">Catalog Examples</span>
+  </div>
+  <p class="pdp-catalog-examples__sub">
+    <span class="zh">${subZh}</span>
+    <span class="en">${subEn}</span>
+  </p>
+  <div class="pdp-catalog-examples__grid">${cells}</div>
+</div>`;
+    }
+
     getProductDetailContent(product) {
         const p = product || {};
         const cat = this._safeText(p.category);
@@ -2572,6 +2640,7 @@ class ProductManager {
             sizeHint.zh,
             (cat === 'flags') ? '适配多种旗形与底座系统，支持LOGO与画面定制。' : '',
             (cat === 'displays') ? '用于快速搭建的展示系统，可用于品牌主视觉与展台搭建。' : '',
+            (p.subcategory === 'counter') ? '结构类型：圆桌、椭圆桌、矩形桌。' : '',
             (cat === 'racegate') ? '结构与规格参考产品型号表，支持项目定制与批量供货。' : '',
             (cat === 'accessories') ? '用于提升主产品的稳定性、兼容性与使用便捷性。' : ''
         ]);
@@ -2582,6 +2651,7 @@ class ProductManager {
             sizeHint.en,
             (cat === 'flags') ? 'Compatible with multiple flag shapes and base systems. Custom logo/graphics supported.' : '',
             (cat === 'displays') ? 'Quick-setup display system for booth branding and key visuals.' : '',
+            (p.subcategory === 'counter') ? 'Structure types: round, ellipse, and rectangular counters.' : '',
             (cat === 'racegate') ? 'Specs are based on the model table; customization and bulk supply available.' : '',
             (cat === 'accessories') ? 'Designed to improve stability, compatibility and ease of use for the main products.' : ''
         ]);
@@ -2618,7 +2688,8 @@ class ProductManager {
         const overrideTechZh = Array.isArray(p.techRefsZh) ? p.techRefsZh : (p.techRefsZh ? [p.techRefsZh] : null);
         const overrideTechEn = Array.isArray(p.techRefsEn) ? p.techRefsEn : (p.techRefsEn ? [p.techRefsEn] : null);
 
-        return {
+        const tabDescAppendHtml = this._catalogExamplesAppendHtml(p);
+        const out = {
             name: { zh: nameZh, en: nameEn },
             description: {
                 zh: this._uniq(overrideDescZh || descZh),
@@ -2633,6 +2704,8 @@ class ProductManager {
                 en: appsEn
             }
         };
+        if (tabDescAppendHtml) out.tabDescAppendHtml = tabDescAppendHtml;
+        return out;
     }
 
     ensureProductIds() {

@@ -79,8 +79,39 @@
     const all = []
       .concat(Array.isArray(data.folding) ? data.folding : [])
       .concat(Array.isArray(data.event) ? data.event : [])
-      .concat(Array.isArray(data.inflatable) ? data.inflatable : []);
+      .concat(Array.isArray(data.inflatable) ? data.inflatable : [])
+      .concat(Array.isArray(data.accessories) ? data.accessories : []);
     return all.find((x) => x && x.type === type) || null;
+  }
+
+  function renderExampleImages(item) {
+    const lang = getCurrentLang();
+    const imgs = [];
+    if (item && Array.isArray(item.exampleImages)) item.exampleImages.forEach((p) => p && imgs.push(p));
+    if (!imgs.length) return '';
+
+    const title = lang === 'zh'
+      ? '画册示例 / Catalog Examples'
+      : 'Catalog Examples';
+
+    const subtitle = lang === 'zh'
+      ? '画册页截图（P4），用于快速对照配件与 Grip 等型号（可点击放大）。'
+      : 'Example catalog page for quick reference (click to open).';
+
+    return `
+      <div class="tent-type-detail__block">
+        <div class="tent-type-detail__blockTitle">${title}</div>
+        <div class="tent-type-detail__text">${subtitle}</div>
+        <div class="tent-type-detail__visuals" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
+          ${imgs
+            .map((src) => {
+              const s = safe(src);
+              return `<a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" /></a>`;
+            })
+            .join('')}
+        </div>
+      </div>
+    `;
   }
 
   function renderBilingual(zh, en) {
@@ -188,10 +219,18 @@
       return `<th>${safe(c.labelEn || c.labelZh || '')}</th>`;
     }).join('');
 
+    const cellValue = (row, key) => {
+      const zh = row[`${key}Zh`];
+      const en = row[`${key}En`];
+      if (zh === undefined && en === undefined) return safe(row[key]);
+      if (lang === 'zh') return safe(zh != null && String(zh).trim() !== '' ? zh : en);
+      return safe(en != null && String(en).trim() !== '' ? en : zh);
+    };
+
     const bodyHtml = table.rows.map((row) => {
       return `
         <tr>
-          ${cols.map((c) => `<td>${safe(row[c.key])}</td>`).join('')}
+          ${cols.map((c) => `<td>${cellValue(row, c.key)}</td>`).join('')}
         </tr>
       `;
     }).join('');
@@ -228,9 +267,10 @@
         </div>
 
         ${renderStory(item)}
+        ${renderExampleImages(item)}
         ${renderInfoBlocks(item)}
-        ${renderCommonDetails()}
-        ${renderAccessories(item)}
+        ${item && item.skipCommonDetails ? '' : renderCommonDetails()}
+        ${item && item.skipAccessoriesBlock ? '' : renderAccessories(item)}
         ${renderPdfGuide(item)}
         ${renderRelatedLinks(item)}
       </div>

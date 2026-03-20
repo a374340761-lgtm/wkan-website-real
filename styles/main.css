@@ -190,7 +190,8 @@ section { scroll-margin-top: 110px; }
 /* ===== All Products (ap-*) styles (remove inline styles from JS) ===== */
 .ap-card { display: flex; flex-direction: column; }
 .ap-img { aspect-ratio: 4 / 3; background: rgba(15,23,42,.04); overflow: hidden; }
-.ap-img img { width: 100%; height: 100%; object-fit: cover; object-position: var(--wk-hero-object-position, center); display: block; }
+/* contain: full product visible inside card; avoids portrait heroes blowing up card height */
+.ap-img img { width: 100%; height: 100%; object-fit: contain; object-position: var(--wk-hero-object-position, center); display: block; }
 .ap-img .sprite-thumb { width: 100%; height: 100%; border-radius: 0; background-repeat: no-repeat; background-position: center; }
 .ap-body { padding: 16px 16px 18px; }
 .ap-body h3 { margin: 0 0 8px; color: var(--text-dark); }
@@ -800,6 +801,10 @@ header {
     left: 100%;
     background: var(--bg-white);
     min-width: 240px;
+    max-height: min(70vh, calc(100vh - 100px));
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: var(--radius-md);
     padding: var(--spacing-sm) 0;
@@ -3243,17 +3248,59 @@ main { flex: 1; }
     background: var(--bg-light);
     border-radius: 16px;
     overflow: hidden;
-    min-height: 400px;
+    min-height: 0;
+    max-height: min(58vh, 520px);
+    aspect-ratio: 4 / 3;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 12px;
+    box-sizing: border-box;
 }
 
-.pdp-image img {
+/* Main hero: scale to box without aggressive crop (was cover + min-height 400px) */
+.pdp-image > img,
+.pdp-image #productImage {
+    flex: 1 1 0;
+    min-height: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 16px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+}
+
+/* Thumbnail strip under main image */
+.pdp-image .image-carousel:empty {
+    display: none;
+}
+
+.pdp-image .image-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding-top: 10px;
+    margin-top: auto;
+    flex-shrink: 0;
+    max-width: 100%;
+}
+
+.pdp-image .image-carousel img {
+    width: 72px;
+    height: 54px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.pdp-image .image-carousel img.is-active {
+    border-color: var(--primary-color, #c41e3a);
+    box-shadow: 0 0 0 2px rgba(196, 30, 58, 0.25);
 }
 
 .pdp-info h1 {
@@ -3279,6 +3326,13 @@ main { flex: 1; }
     margin-bottom: 6px;
     font-size: 14px;
     color: var(--text-dark);
+}
+
+/* Brochure / catalog reference images in right column (tall PNGs) */
+#productVariants img {
+    max-height: min(65vh, 560px);
+    object-fit: contain;
+    object-position: top center;
 }
 
 .pdp-actions {
@@ -3340,6 +3394,61 @@ main { flex: 1; }
     margin-bottom: 8px;
 }
 
+/* Product detail: catalog-style examples (same spirit as flag-type “Catalog Examples”) */
+.pdp-catalog-examples {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.pdp-catalog-examples__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0 0 0.5rem;
+}
+
+.pdp-catalog-examples__sub {
+    margin: 0 0 0.85rem;
+    font-size: 0.95rem;
+    opacity: 0.88;
+    line-height: 1.55;
+}
+
+.pdp-catalog-examples__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    align-items: start;
+}
+
+.pdp-catalog-examples__link {
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fafafa;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    max-height: min(48vh, 420px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pdp-catalog-examples__link:hover {
+    border-color: rgba(164, 22, 26, 0.35);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.pdp-catalog-examples__img {
+    display: block;
+    width: 100%;
+    max-height: min(48vh, 420px);
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
 /* related */
 .related-products {
     margin-top: 50px;
@@ -3361,7 +3470,7 @@ main { flex: 1; }
     }
 
     .pdp-image {
-        min-height: 300px;
+        max-height: min(50vh, 440px);
     }
 
     .pdp-actions {

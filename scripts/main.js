@@ -282,10 +282,13 @@ function waitForProductManager(cb, tries = 0) {
 
 function getLocalizedField(product, baseKey) {
     const lang = (getCurrentLangSafe() || 'en').toLowerCase();
-    const suffixMap = { zh: '', en: 'En', ja: 'Ja', ko: 'Ko' };
-    const suffix = suffixMap[lang] ?? '';
-    const localizedKey = suffix ? `${baseKey}${suffix}` : baseKey;
-    return product && (product[localizedKey] || product[baseKey] || '');
+    if (!product) return '';
+    const base = product[baseKey];
+    if (lang === 'zh') return product[`${baseKey}Zh`] || base || '';
+    if (lang === 'en') return product[`${baseKey}En`] || base || '';
+    if (lang === 'ja') return product[`${baseKey}Ja`] || product[`${baseKey}En`] || base || '';
+    if (lang === 'ko') return product[`${baseKey}Ko`] || product[`${baseKey}En`] || base || '';
+    return product[`${baseKey}En`] || product[`${baseKey}Zh`] || base || '';
 }
 
 function getCategoryTranslateKey(cat) {
@@ -907,7 +910,8 @@ function enhanceTentsDropdown() {
         const folding = data && Array.isArray(data.folding) ? data.folding : [];
         const event = data && Array.isArray(data.event) ? data.event : [];
         const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
-        const list = folding.concat(event, inflatable);
+        const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
+        const list = folding.concat(event, inflatable, accessories);
         if (!list.length) return fallback;
         return list
             .filter((x) => x && x.type)
@@ -1003,9 +1007,9 @@ function enhanceTentsDropdown() {
             sub.appendChild(a);
         });
 
-        // Accessories (配件) - tent accessories, as subcategory under Tents
+        // Accessories (配件) - tent accessories hub (same UX as flag bases & accessories)
         const accessoriesLink = document.createElement('a');
-        accessoriesLink.href = 'product-center.html?cat=accessories';
+        accessoriesLink.href = 'tent-type.html?type=tent_accessories';
         accessoriesLink.setAttribute('data-translate', 'menu_accessories');
         accessoriesLink.textContent = '';
         sub.appendChild(accessoriesLink);
@@ -1154,6 +1158,9 @@ function enhanceDisplaysDropdown() {
         { href: 'all-products.html?cat=displays&sub=tfd-straight-line', translateKey: 'menu_popup_tfd_straight_line_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-c-shaped', translateKey: 'menu_popup_tfd_c_shaped_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-accessories', translateKey: 'menu_popup_tfd_accessories' },
+
+        // Light box (灯箱) — same category hub as top-level 灯箱系列
+        { href: 'product-center.html?cat=lightbox', translateKey: 'menu_light_box_series' },
 
         // Newly added display-system subcategories (catalog p26)
         { href: 'all-products.html?cat=displays&sub=roll-up-stand', translateKey: 'menu_displays_roll_up_stand' },

@@ -260,7 +260,9 @@
 		const lang = getLang();
 		if (tabDesc) {
 			if (detailContent) {
-				tabDesc.innerHTML = renderList(detailContent.description && detailContent.description[lang]);
+				let html = renderList(detailContent.description && detailContent.description[lang]);
+				if (detailContent.tabDescAppendHtml) html += detailContent.tabDescAppendHtml;
+				tabDesc.innerHTML = html;
 			} else {
 				tabDesc.innerHTML = shortText ? `<p>${escapeHtml(shortText)}</p>` : '';
 			}

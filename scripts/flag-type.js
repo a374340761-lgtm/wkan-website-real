@@ -214,12 +214,12 @@
     if (!imgs.length) return '';
 
     const title = lang === 'zh'
-      ? '旗杆配件示例图 / Catalog Examples'
-      : 'Catalog Examples';
+      ? safe(item.exampleImagesTitleZh || '旗杆配件示例图 / Catalog Examples')
+      : safe(item.exampleImagesTitleEn || 'Catalog Examples');
 
     const subtitle = lang === 'zh'
-      ? '以下示例图为画册页截图，用于快速查看沙滩旗底座与配件款式（可点击放大）。'
-      : 'Example catalog pages for quick reference (click to open).';
+      ? safe(item.exampleImagesSubtitleZh || '以下示例图为画册页截图，用于快速查看沙滩旗底座与配件款式（可点击放大）。')
+      : safe(item.exampleImagesSubtitleEn || 'Example catalog pages for quick reference (click to open).');
 
     return `
       <div class="tent-type-detail__block">

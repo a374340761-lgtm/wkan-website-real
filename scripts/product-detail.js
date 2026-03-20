@@ -82,18 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getLocalized = (product, field) => {
         const lang = getCurrentLang();
-        const suffixMap = {
-            zh: '',
-            en: 'En',
-            ja: 'Ja',
-            ko: 'Ko'
-        };
-
-        const suffix = suffixMap[lang] ?? '';
-        const baseKey = field;
-        const localizedKey = suffix ? `${baseKey}${suffix}` : baseKey;
-
-        return product[localizedKey] || product[baseKey] || '';
+        const base = product[field] || '';
+        const zhKey = `${field}Zh`;
+        const enKey = `${field}En`;
+        const jaKey = `${field}Ja`;
+        const koKey = `${field}Ko`;
+        // Match productManager.getLocalizedName / getLocalizedDescription: zh uses *Zh, not plain `name`
+        if (lang === 'zh') return product[zhKey] || base || '';
+        if (lang === 'en') return product[enKey] || base || '';
+        if (lang === 'ja') return product[jaKey] || product[enKey] || base || '';
+        if (lang === 'ko') return product[koKey] || product[enKey] || base || '';
+        return product[enKey] || product[zhKey] || base || '';
     };
 
     const getLocalizedSpecs = (product) => {
@@ -251,13 +250,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const nameEl = document.getElementById('productName');
         if (nameEl) nameEl.textContent = name;
         const descEl = document.getElementById('productDesc');
-        if (descEl) descEl.textContent = (shortText || description || '').trim();
+        if (descEl) {
+            let heroDesc = (shortText || description || '').trim();
+            // Tension Fabric Counter: shape note under subtitle (ZH/EN)
+            if (String(product.category) === 'displays' && String(product.subcategory) === 'counter') {
+                const lang = getCurrentLang();
+                const shapeNote = lang === 'zh'
+                    ? ' 结构类型：圆桌、椭圆桌、矩形桌。'
+                    : ' Structure types: round, ellipse, and rectangular counters.';
+                heroDesc = (heroDesc + shapeNote).trim();
+            }
+            descEl.textContent = heroDesc;
+        }
 
         // Images
         const imageEl = document.getElementById('productImage');
         const carouselEl = document.querySelector('.image-carousel');
+        const imgs = Array.isArray(product.images) && product.images.length
+            ? product.images.filter(Boolean)
+            : (product.image ? [product.image] : []);
+        const primaryImage = imgs[0] || product.image || 'images/placeholder.png';
         if (imageEl) {
-            const primaryImage = product.image || (product.images && product.images[0]) || 'images/placeholder.png';
             imageEl.src = primaryImage;
             imageEl.alt = name;
             imageEl.onerror = function() {
@@ -268,17 +281,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         if (carouselEl) {
             carouselEl.innerHTML = '';
-            const imgs = Array.isArray(product.images) ? product.images : [];
-            if (imgs.length > 1) {
-                imgs.forEach(img => {
-                    const imgEl = document.createElement('img');
-                    imgEl.src = img;
-                    imgEl.alt = name;
-                    imgEl.loading = 'lazy';
-                    imgEl.onerror = function() { this.style.display = 'none'; };
-                    carouselEl.appendChild(imgEl);
+            const thumbList = imgs.length > 1 ? imgs.slice(0, 12) : [];
+            const setActiveThumb = (activeEl) => {
+                carouselEl.querySelectorAll('img').forEach((n) => n.classList.remove('is-active'));
+                if (activeEl) activeEl.classList.add('is-active');
+            };
+            thumbList.forEach((src) => {
+                const imgEl = document.createElement('img');
+                imgEl.src = src;
+                imgEl.alt = name;
+                imgEl.loading = 'lazy';
+                imgEl.setAttribute('role', 'button');
+                imgEl.tabIndex = 0;
+                imgEl.onerror = function() { this.style.display = 'none'; };
+                imgEl.addEventListener('click', () => {
+                    if (imageEl) {
+                        imageEl.src = src;
+                        imageEl.alt = name;
+                    }
+                    setActiveThumb(imgEl);
                 });
-            }
+                imgEl.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        imgEl.click();
+                    }
+                });
+                carouselEl.appendChild(imgEl);
+            });
+            const firstThumb = carouselEl.querySelector('img');
+            if (firstThumb) setActiveThumb(firstThumb);
         }
 
         // Specs + variants
@@ -496,16 +528,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if (specsEl) {
             if (hasSpecObjects) {
                 const lang = getCurrentLang();
-                const specObj = (lang === 'zh') ? (product.specsZh || {}) : (product.specsEn || product.specsZh || {});
-                const rows = [
-                    ['Model/型号', product.model || ''],
-                    ['Name/名称', name || ''],
-                    ['Color/颜色', specObj.Color || specObj.color || ''],
-                    ['Size/尺寸', specObj.Size || specObj.size || ''],
-                    ['Weight/重量', specObj.Weight || specObj.weight || ''],
-                    ['Carton/外箱', specObj.Carton || specObj.carton || ''],
-                    ['Quantity/数量', specObj.Quantity || specObj.quantity || '']
-                ];
+                const specZh = product.specsZh && typeof product.specsZh === 'object' ? product.specsZh : null;
+                const specEn = product.specsEn && typeof product.specsEn === 'object' ? product.specsEn : null;
+                // Chinese specs often use keys like 尺寸 / 光源 (not Color/Size) — render those rows instead of empty cells
+                let rows;
+                if (lang === 'zh' && specZh && Object.keys(specZh).length > 0) {
+                    rows = [
+                        ['Model/型号', product.model || ''],
+                        ['Name/名称', name || ''],
+                        ...Object.entries(specZh).map(([k, v]) => [k, String(v == null ? '' : v)])
+                    ];
+                } else {
+                    const specObj = (lang === 'zh')
+                        ? { ...(specEn || {}), ...(specZh || {}) }
+                        : { ...(specZh || {}), ...(specEn || {}) };
+                    rows = [
+                        ['Model/型号', product.model || ''],
+                        ['Name/名称', name || ''],
+                        ['Color/颜色', specObj.Color || specObj.color || specObj['颜色'] || ''],
+                        ['Size/尺寸', specObj.Size || specObj.size || specObj['尺寸'] || ''],
+                        ['Weight/重量', specObj.Weight || specObj.weight || specObj['重量'] || ''],
+                        ['Carton/外箱', specObj.Carton || specObj.carton || specObj['外箱'] || ''],
+                        ['Quantity/数量', specObj.Quantity || specObj.quantity || specObj['数量'] || '']
+                    ];
+                }
 
                 const table = document.createElement('table');
                 table.className = 'pdp-spec-table';
@@ -531,7 +577,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tabDesc = document.getElementById('tab-desc');
                 if (tabDesc) {
                     if (detailContent) {
-                        tabDesc.innerHTML = renderBilingual(detailContent.description.zh, detailContent.description.en);
+                        let descHtml = renderBilingual(detailContent.description.zh, detailContent.description.en);
+                        if (detailContent.tabDescAppendHtml) descHtml += detailContent.tabDescAppendHtml;
+                        tabDesc.innerHTML = descHtml;
                     } else {
                         tabDesc.innerHTML = `<p>${escapeHtml((description || shortText || '').trim())}</p>`;
                     }
@@ -550,7 +598,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tabDesc = document.getElementById('tab-desc');
                 if (tabDesc) {
                     if (detailContent) {
-                        tabDesc.innerHTML = renderBilingual(detailContent.description.zh, detailContent.description.en);
+                        let descHtml = renderBilingual(detailContent.description.zh, detailContent.description.en);
+                        if (detailContent.tabDescAppendHtml) descHtml += detailContent.tabDescAppendHtml;
+                        tabDesc.innerHTML = descHtml;
                     } else {
                         tabDesc.innerHTML = `<p>${escapeHtml((description || shortText || '').trim())}</p>`;
                     }

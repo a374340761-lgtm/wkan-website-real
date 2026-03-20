@@ -9,6 +9,8 @@
   const CATALOG_ALLPAGE_BASE = encodeURI('images/\u5e7f\u897f\u4f1f\u7fa4\u5e10\u7bf7\u5236\u9020\u6709\u9650\u516c\u53f82025allpagepng');
 
   const FLAG_HERO = (fileName) => encodeURI(`images/products/flags/hero/${fileName}`);
+  // Local accessory photos (folder may contain spaces in filenames)
+  const FLAG_ACCESSORIES_IMG = (fileName) => encodeURI(`images/products/flags/accessories/${fileName}`);
 
   window.FLAG_TYPES = {
     poles: [
@@ -631,8 +633,20 @@
         hubDescZh: '十字底座、注水底座、地插、转动轴与收纳袋。',
         storyEn: 'A full range of bases and accessories for beach flags.',
         storyZh: '沙滩旗配套底座与配件全系列。',
+        // Top hero (P1): original brochure-style hero — unchanged
         heroImage: 'images/products/accessories/flag-accessories/hero.png',
-        exampleImages: [`${CATALOG_ALLPAGE_BASE}/14.png`, `${CATALOG_ALLPAGE_BASE}/15.png`],
+        // Real product photos only in the example block below (not the hero)
+        exampleImages: [
+          FLAG_ACCESSORIES_IMG('1.png'),
+          FLAG_ACCESSORIES_IMG('2.png'),
+          FLAG_ACCESSORIES_IMG('flags poles.png'),
+          `${CATALOG_ALLPAGE_BASE}/14.png`,
+          `${CATALOG_ALLPAGE_BASE}/15.png`
+        ],
+        exampleImagesTitleZh: '实物图 / 画册页对照',
+        exampleImagesTitleEn: 'Product photos & catalog pages',
+        exampleImagesSubtitleZh: '含沙滩旗底座与配件实物图，并附画册第 14/15 页，便于对照款式与参数（可点击放大）。',
+        exampleImagesSubtitleEn: 'Real-life photos plus catalog pages 14–15 for quick reference (click to open).',
         specTable: {
           columns: [
             { key: 'group', labelEn: 'Group', labelZh: '分类' },

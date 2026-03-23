@@ -395,7 +395,7 @@ class MultiLanguageSystem {
                 home_news_title: '最新动态',
                 home_news_intro: '了解我们的近期展会、产品亮点与公司动态。',
                 home_news_feature_title: '伟群帐篷亮相上海 APPPEXPO 2026 展会',
-                home_news_feature_summary: '我们近期参加了上海 APPPEXPO 2026 展会，展示了沙滩旗、展示器材及定制品牌宣传产品，并与客户进行了现场交流。',
+                home_news_feature_summary: '伟群帐篷参展上海 APPPEXPO 2026，现场展示沙滩旗、展示器材与定制品牌宣传方案，并与海内外客户面对面交流。',
                 home_news_btn_all: '查看全部动态',
                 home_news_btn_read: '阅读更多',
                 news_meta_label: '展会',
@@ -513,7 +513,7 @@ class MultiLanguageSystem {
 
                 // Common UI attributes
                 brand_since_2010: '始于2010',
-                form_submit_success: '消息发送成功！我们会尽快回复您。',
+                form_submit_success: '感谢您的留言，我们已收到，将尽快与您联系。',
 
                 // Products dropdown extras
                 menu_table_chair_stool_toilet: '桌 / 椅 / 凳 / 厕所',
@@ -654,7 +654,7 @@ class MultiLanguageSystem {
                 inquiry_form_customer_distributor: '经销商/批发商',
                 inquiry_form_customer_project: '活动/项目采购方',
                 inquiry_form_message: '请描述您的需求（尺寸、用途、时间等）*',
-                inquiry_form_submit: '提交询盘',
+                inquiry_form_submit: '发送询盘',
                 inquiry_form_sending: '提交中...',
                 inquiry_form_note: '我们尊重您的隐私。您的信息仅用于回复您的询盘。',
                 inquiry_form_success: '消息已发送。我们将在24小时内回复。',
@@ -1015,13 +1015,13 @@ class MultiLanguageSystem {
                 // Testimonials
                 testimonials_title: 'Customer Reviews',
                 testimonials_subtitle: 'Real feedback from customers worldwide',
-                testimonial_1_text: '"Excellent product quality, professional service, timely delivery. We are very satisfied with our cooperation with Weiqun."',
+                testimonial_1_text: '"Consistent product quality, responsive service, and on-time delivery. We have been pleased to work with Wai Kwan Tent."',
                 testimonial_1_name: 'David T.',
                 testimonial_1_role: 'Event Planning Company',
-                testimonial_2_text: '"Very professional customization service, able to meet our special needs. Product quality exceeded expectations."',
+                testimonial_2_text: '"Strong customization support for our requirements, and finished goods consistently met our quality bar."',
                 testimonial_2_name: 'Antonio C.',
                 testimonial_2_role: 'Restaurant Owner',
-                testimonial_3_text: '"Very professional team, quick response. Beautiful product design, perfectly matches our brand image."',
+                testimonial_3_text: '"Knowledgeable team with fast replies. The products aligned well with our brand guidelines."',
                 testimonial_3_name: 'Owen B.',
                 testimonial_3_role: 'Entertainment Industry',
                 
@@ -1057,7 +1057,7 @@ class MultiLanguageSystem {
                 products_category_custom_title: 'Custom Solutions',
                 products_category_custom_desc: 'Full customization available from structure and size to graphic printing, tailored to different markets and project requirements.',
                 products_category_custom_desc_en: '',
-                products_cta_text: 'Contact us today to get detailed specifications and a customized quotation.',
+                products_cta_text: 'Contact us for specifications and a tailored quotation for your market.',
                 products_cta_text_en: '',
                 products_cta_button: 'Get a Quote',
                 category_all: 'All Products',
@@ -1093,7 +1093,7 @@ class MultiLanguageSystem {
                 home_news_title: 'Latest News',
                 home_news_intro: 'Follow our recent exhibitions, product highlights, and company updates.',
                 home_news_feature_title: 'Wai Kwan Tent Showcased at APPPEXPO 2026 in Shanghai',
-                home_news_feature_summary: 'We recently participated in APPPEXPO 2026 in Shanghai, presenting beach flags, display hardware, and custom branding solutions while meeting customers face-to-face.',
+                home_news_feature_summary: 'At APPPEXPO 2026 in Shanghai we presented beach flags, display hardware, and custom branding solutions, and met buyers on the show floor.',
                 home_news_btn_all: 'View All News',
                 home_news_btn_read: 'Read More',
                 news_meta_label: 'Exhibition',
@@ -1134,7 +1134,7 @@ class MultiLanguageSystem {
                 menu_replacement_parts: 'Replacement Parts',
                 category_view_all: 'View All',
                 category_search_products: 'Search Products',
-                view_details: 'View details',
+                view_details: 'View Details',
                 tents_hub_folding_title: 'Folding Tents',
                 tents_hub_event_title: 'Event Tents',
                 tents_hub_accessories_title: 'Tent Accessories (Full Range)',
@@ -1212,7 +1212,7 @@ class MultiLanguageSystem {
 
                 // Common UI attributes
                 brand_since_2010: 'Since 2010',
-                form_submit_success: 'Message sent successfully! We will reply to you as soon as possible.',
+                form_submit_success: 'Thank you — your message was sent. We will respond as soon as possible.',
 
                 // Products dropdown extras
                 menu_table_chair_stool_toilet: 'Table / Chair / Stool / Toilet',
@@ -1245,7 +1245,7 @@ class MultiLanguageSystem {
                 // Product Categories
                 product_categories_title: 'Product Categories',
                 category_tents_desc: 'Professional tent products for various event scenarios',
-                category_flags_desc: 'Beach flags, banners and advertising display products',
+                category_flags_desc: 'Beach flags, poles, bases, and outdoor advertising display products',
                 category_popup_desc: 'Quick-setup display systems',
                 category_furniture_desc: 'Foldable tables and chairs for outdoor use',
                 category_frames_desc: 'Professional tent frames and accessories',
@@ -1336,7 +1336,7 @@ class MultiLanguageSystem {
                 inquiry_form_country: 'Country / Region *',
                 inquiry_form_product_placeholder: 'Product Category *',
                 inquiry_form_product_tent: 'Canopy Tent',
-                inquiry_form_product_flag: 'Beach Flag',
+                inquiry_form_product_flag: 'Beach Flags',
                 inquiry_form_product_display: 'Display Systems',
                 inquiry_form_product_custom: 'Custom Display Solution',
                 inquiry_form_quantity_placeholder: 'Estimated Quantity',
@@ -1352,7 +1352,7 @@ class MultiLanguageSystem {
                 inquiry_form_customer_distributor: 'Distributor / Wholesaler',
                 inquiry_form_customer_project: 'Event / Project Buyer',
                 inquiry_form_message: 'Please describe your requirements (size, usage, timeline, etc.) *',
-                inquiry_form_submit: 'Submit Inquiry',
+                inquiry_form_submit: 'Send Inquiry',
                 inquiry_form_sending: 'Sending...',
                 inquiry_form_note: 'We respect your privacy. Your information will only be used to respond to your inquiry.',
                 inquiry_form_success: 'Message sent. We will reply within 24 hours.',

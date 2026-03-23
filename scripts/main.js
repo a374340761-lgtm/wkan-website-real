@@ -1655,12 +1655,12 @@ function initHeroCarouselSz() {
         fallback.innerHTML = `
             <div class="hero-sz-left">
                 <div class="hero-sz-kicker">Welcome</div>
-                <h1 class="hero-sz-title">Welcome to WaiKwan</h1>
-                <p class="hero-sz-sub">Quality tents and displays — factory direct</p>
+                <h1 class="hero-sz-title">Wai Kwan Tent</h1>
+                <p class="hero-sz-sub">OEM/ODM canopy tents, beach flags &amp; display hardware — direct from factory</p>
             </div>
             <div class="hero-sz-right">
                 <div class="hero-sz-image-wrap">
-                    <img src="images/快幕秀图片.jpg" alt="WaiKwan Hero" loading="lazy">
+                    <img src="images/快幕秀图片.jpg" alt="Portable display backdrop — Wai Kwan Tent product range" loading="lazy">
                 </div>
             </div>
         `;

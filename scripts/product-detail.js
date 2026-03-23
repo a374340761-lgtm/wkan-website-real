@@ -170,9 +170,13 @@ document.addEventListener('DOMContentLoaded', () => {
             ? pm.getProductDetailContent(product)
             : null;
 
-        // Page title and SEO
+        // Page title and SEO (EN: short brand; ZH: full company name from i18n)
         const companyName = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('company_name') : '';
-        document.title = companyName ? `${name} - ${companyName}` : `${name}`;
+        const lang = (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function')
+            ? window.multiLang.getCurrentLanguage()
+            : 'en';
+        const brandSuffix = lang === 'zh' ? (companyName || '伟群帐篷') : 'Wai Kwan Tent';
+        document.title = `${name} | ${brandSuffix}`;
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) {
             metaDesc.content = (shortText || description || `${name}`);

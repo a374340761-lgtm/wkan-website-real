@@ -373,9 +373,10 @@
             }
         ],
 
-        // New tent series: Inflatable Tent (source: images/products/tents/_reference/pdf_p8.png)
+        // New tent series: Inflatable Tent (brochure page — images/广西伟群帐篷制造有限公司2025allpagepng/08.png)
         // UX: One "Inflatable Tent" type with internal AirTent size selection.
         inflatable: (function () {
+            const INFLATABLE_BROCHURE_GUIDE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/08.png');
             const commonBlocks = {
                 accessories: {
                     titleZh: '充气帐篷配件',
@@ -503,7 +504,7 @@
                     'Supports walls, connectors, LED options and multi-unit combinations to build a complete branded space.'
                 ].join('\n'),
                 heroImage: 'images/products/tents/inflatable/hero.jpg',
-                guideImages: ['images/products/tents/_reference/pdf_p8.png'],
+                guideImages: [INFLATABLE_BROCHURE_GUIDE],
                 pdfPage: 8,
                 infoBlocks: [
                     commonBlocks.accessories,

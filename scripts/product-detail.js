@@ -182,8 +182,19 @@ document.addEventListener('DOMContentLoaded', () => {
             metaDesc.content = (shortText || description || `${name}`);
         }
 
-        // Product JSON-LD for rich snippets
+        // Align canonical + og:url with the real indexed URL (?sku=...) so Google does not
+        // flag "Duplicate, Google chose different canonical than user".
         const BASE_URL = 'https://waikwantent.com';
+        const skuForCanonical = (product.sku != null && String(product.sku).trim() !== '')
+            ? String(product.sku).trim()
+            : String(product.id || requested).trim();
+        const canonicalProductUrl = `${BASE_URL}/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
+        const linkCanonical = document.querySelector('link[rel="canonical"]');
+        if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
+        const ogUrlMeta = document.querySelector('meta[property="og:url"]');
+        if (ogUrlMeta) ogUrlMeta.setAttribute('content', canonicalProductUrl);
+
+        // Product JSON-LD for rich snippets
         const toAbs = (p) => (p && !/^https?:\/\//i.test(p)) ? (BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p) : (p || '');
         const productImage = product.image || (product.images && product.images[0]) || '';
         let ld = document.getElementById('wk-product-jsonld');
@@ -195,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '@context': 'https://schema.org',
             '@type': 'Product',
             name: name,
+            url: canonicalProductUrl,
             description: (shortText || description || name).substring(0, 500),
             image: productImage ? toAbs(productImage) : toAbs('images/hero/Waikwantentshero.png'),
             sku: String(product.sku || product.id || ''),

@@ -175,16 +175,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function')
             ? window.multiLang.getCurrentLanguage()
             : 'en';
-        const brandSuffix = lang === 'zh' ? (companyName || '伟群帐篷') : 'Wai Kwan Tent';
+        const brandSuffix = lang === 'zh' ? (companyName || '伟群帐篷') : 'Tent & Display Manufacturer | WaiKwan';
         document.title = `${name} | ${brandSuffix}`;
         const metaDesc = document.querySelector('meta[name="description"]');
+        const descForSeo = (shortText || description || `${name}`).trim();
         if (metaDesc) {
-            metaDesc.content = (shortText || description || `${name}`);
+            if (lang === 'zh') {
+                metaDesc.content = descForSeo;
+            } else {
+                metaDesc.content = `Factory direct ${name}. OEM & custom printing available. Export quality, fast delivery.`;
+            }
         }
 
         // Align canonical + og:url with the real indexed URL (?sku=...) so Google does not
         // flag "Duplicate, Google chose different canonical than user".
-        const BASE_URL = 'https://waikwantent.com';
+        const BASE_URL = 'https://www.waikwantent.com';
         const skuForCanonical = (product.sku != null && String(product.sku).trim() !== '')
             ? String(product.sku).trim()
             : String(product.id || requested).trim();
@@ -193,6 +198,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
         const ogUrlMeta = document.querySelector('meta[property="og:url"]');
         if (ogUrlMeta) ogUrlMeta.setAttribute('content', canonicalProductUrl);
+        const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+        if (ogTitleMeta) ogTitleMeta.setAttribute('content', document.title);
+        const ogDescMeta = document.querySelector('meta[property="og:description"]');
+        if (ogDescMeta) {
+            const mc = metaDesc ? metaDesc.getAttribute('content') : '';
+            ogDescMeta.setAttribute('content', mc || descForSeo);
+        }
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', document.title);
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc) {
+            const mc2 = metaDesc ? metaDesc.getAttribute('content') : '';
+            twDesc.setAttribute('content', mc2 || descForSeo);
+        }
 
         // Product JSON-LD for rich snippets
         const toAbs = (p) => (p && !/^https?:\/\//i.test(p)) ? (BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p) : (p || '');
@@ -697,10 +716,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Related products
-        const related = pm.products
-            .filter(p => p.category === product.category && String(p.id) !== String(product.id))
-            .slice(0, 4);
+        // Related products (min 4: same category first, then fill from other categories)
+        const sameCat = pm.products.filter((p) => p.category === product.category && String(p.id) !== String(product.id));
+        const pool = pm.products.filter((p) => String(p.id) !== String(product.id));
+        const related = [...sameCat.slice(0, 4)];
+        let ri = 0;
+        while (related.length < 4 && ri < pool.length) {
+            const p = pool[ri++];
+            if (!related.some((x) => String(x.id) === String(p.id))) related.push(p);
+        }
         const grid = document.getElementById('relatedGrid');
         if (grid) {
             grid.innerHTML = '';

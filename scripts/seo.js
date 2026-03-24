@@ -6,7 +6,7 @@
   - Injects Organization JSON-LD
 */
 (function () {
-  var BASE_URL = 'https://waikwantent.com';
+  var BASE_URL = 'https://www.waikwantent.com';
 
   function upsertMeta(attrName, attrValue, content) {
     try {
@@ -37,7 +37,9 @@
     var trimmed = String(maybeUrl).trim();
     if (!trimmed) return '';
     try {
-      if (/^https?:\/\//i.test(trimmed)) return trimmed;
+      if (/^https?:\/\//i.test(trimmed)) {
+        return trimmed.replace(/^https:\/\/waikwantent\.com/i, 'https://www.waikwantent.com');
+      }
       var base = BASE_URL.replace(/\/$/, '');
       return (base + (trimmed.charAt(0) === '/' ? '' : '/') + trimmed);
     } catch (e) {
@@ -97,12 +99,12 @@
 
       // Legacy entry points should not be canonical.
       if (/\b(product\.html|tent-detail\.html)\b/i.test(url.pathname)) {
-        // Prefer canonical target without trying to guess SKU.
         var target = new URL('product-detail.html', url);
         var maybeSku = (url.searchParams.get('sku') || url.searchParams.get('id') || '').trim();
         if (maybeSku) target.searchParams.set('sku', maybeSku);
-        ensureCanonical(target.toString());
-        return target.toString();
+        var absLegacy = new URL(target.pathname + target.search, BASE_URL + '/');
+        ensureCanonical(absLegacy.toString());
+        return absLegacy.toString();
       }
 
       // If the HTML already declared a canonical, keep it (but make it absolute).
@@ -167,6 +169,7 @@
       foundingDate: '2010',
       contactPoint: {
         '@type': 'ContactPoint',
+        telephone: '+86-189-2278-7581',
         email: 'yishu@waikwantent.com',
         contactType: 'sales',
         availableLanguage: ['English', 'Chinese', 'Japanese', 'Korean'],

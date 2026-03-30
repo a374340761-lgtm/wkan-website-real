@@ -1,6 +1,13 @@
+# Waikwan Tent — https://www.waikwantent.com/robots.txt
+# Submit sitemap in Google Search Console: Sitemaps → https://www.waikwantent.com/sitemap.xml
+
 User-agent: *
 Allow: /
+
+# Server / dev-only (not for indexing)
 Disallow: /backend/
+
+# Legacy / test HTML (not public site pages)
 Disallow: /index.original.html
 Disallow: /index.wireframe.html
 Disallow: /test_logo.html

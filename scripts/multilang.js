@@ -360,6 +360,7 @@ class MultiLanguageSystem {
                 category_flags: '旗帜广告',
                 category_displays: '展示系统',
                 category_custom: '定制产品',
+                category_tablecloths: '桌布',
                 category_popup: '快幕秀',
                 category_lightbox: '灯箱系列',
                 menu_light_box_series: '灯箱系列',
@@ -549,6 +550,7 @@ class MultiLanguageSystem {
                 category_flags_desc: '沙滩旗、横幅等广告展示产品',
                 category_popup_desc: '快速搭建的展示系统',
                 category_furniture_desc: '可折叠桌椅等户外家具',
+                category_tablecloths_desc: '对折桌等配套桌布与罩布',
                 category_frames_desc: '专业帐篷框架和配件',
                 category_custom_desc: '根据需求定制专属产品',
                 
@@ -1065,6 +1067,7 @@ class MultiLanguageSystem {
                 category_tents: 'Tent Display',
                 category_flags: 'Flag Advertising',
                 category_custom: 'Custom Products',
+                category_tablecloths: 'Tablecloths',
                 category_popup: 'Display Systems',
                 category_displays: 'Display Systems',
                 category_lightbox: 'Light Box Series',
@@ -1248,6 +1251,7 @@ class MultiLanguageSystem {
                 category_flags_desc: 'Beach flags, poles, bases, and outdoor advertising display products',
                 category_popup_desc: 'Quick-setup display systems',
                 category_furniture_desc: 'Foldable tables and chairs for outdoor use',
+                category_tablecloths_desc: 'Tablecloths and fitted covers for folding tables',
                 category_frames_desc: 'Professional tent frames and accessories',
                 category_custom_desc: 'Custom products tailored to your needs',
                 

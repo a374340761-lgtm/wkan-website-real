@@ -441,14 +441,14 @@ function renderHomeCategoryGrid() {
         { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
         { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
         { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-        { id: 'lightbox', img: encodeURI('images/\u5e7f\u897f\u4f1f\u7fa4\u5e10\u7bf7\u5236\u9020\u6709\u9650\u516c\u53f82025allpagepng/23.png'), titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
+        { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
         { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
 
     grid.innerHTML = '';
     categories.forEach((c) => {
         const a = document.createElement('a');
-        a.className = 'wk-card wk-cat-card';
+        a.className = c.id === 'lightbox' ? 'wk-card wk-cat-card wk-cat-card--lightbox' : 'wk-card wk-cat-card';
         a.href = `./all-products.html?cat=${encodeURIComponent(c.id)}`;
 
         // For category tiles, prefer curated hero assets (avoid random sprite/pdf images).
@@ -774,6 +774,9 @@ function initNavigation() {
 
     // Enhance Products dropdown: add displays subtype submenu
     enhanceDisplaysDropdown();
+
+    // Table / Chair / Stool / Toilet: hover submenu with product links
+    enhanceFurnitureDropdown();
 
     // Ensure Products dropdown includes new Light Box Series entry
     ensureProductCenterDropdownHasLightbox();
@@ -1247,6 +1250,118 @@ function enhanceDisplaysDropdown() {
             displaysLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         });
     });
+}
+
+/** Nav submenu: drop parenthetical model codes (WK-…) — full SKU stays on the product page. */
+function stripWkModelSuffixInNavLabel(label) {
+    if (!label) return '';
+    let s = String(label).trim();
+    s = s.replace(/\s*[（(][^)）]*WK-[^)）]*[）)]\s*$/u, '').trim();
+    return s;
+}
+
+function enhanceFurnitureDropdown() {
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const shouldTapToOpen = () => {
+        const navMenu = document.querySelector('.nav-menu');
+        const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
+        const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
+        return isMobileMenuOpen || noHover;
+    };
+
+    const waitForProductManager = (cb, tries = 0) => {
+        if (window.productManager && Array.isArray(window.productManager.products)) {
+            cb(window.productManager);
+            return;
+        }
+        if (tries > 120) {
+            cb(null);
+            return;
+        }
+        setTimeout(() => waitForProductManager(cb, tries + 1), 50);
+    };
+
+    const inject = (pm) => {
+        menus.forEach((menu) => {
+            if (menu.querySelector('.dropdown-item-with-submenu[data-furniture-submenu="1"]')) return;
+
+            const links = Array.from(menu.querySelectorAll('a[href]'));
+            const furnitureLink = links.find((a) => {
+                const href = (a.getAttribute('href') || '').toLowerCase();
+                return href.includes('furniture-type.html') && href.includes('table-chair-stool-toilet');
+            });
+            if (!furnitureLink) return;
+
+            const products = (pm && pm.products)
+                ? pm.products.filter((p) =>
+                    p && String(p.category || '') === 'furniture' && String(p.subcategory || '') === 'table-chair-stool-toilet'
+                )
+                : [];
+
+            const wrapper = document.createElement('div');
+            wrapper.className = 'dropdown-item-with-submenu';
+            wrapper.setAttribute('data-furniture-submenu', '1');
+
+            const parent = furnitureLink.parentElement;
+            if (!parent) return;
+            parent.insertBefore(wrapper, furnitureLink);
+            wrapper.appendChild(furnitureLink);
+
+            furnitureLink.setAttribute('aria-haspopup', 'true');
+            furnitureLink.setAttribute('aria-expanded', 'false');
+
+            if (!furnitureLink.querySelector('.wk-submenu-caret')) {
+                const caret = document.createElement('span');
+                caret.className = 'wk-submenu-caret';
+                caret.textContent = '›';
+                furnitureLink.appendChild(caret);
+            }
+
+            const sub = document.createElement('div');
+            sub.className = 'dropdown-submenu';
+
+            const overview = document.createElement('a');
+            overview.href = 'furniture-type.html?type=table-chair-stool-toilet';
+            overview.setAttribute('data-translate', 'ui_overview');
+            overview.textContent = '';
+            sub.appendChild(overview);
+
+            products.forEach((p) => {
+                const a = document.createElement('a');
+                const preferredSku = (p.sku != null && String(p.sku).trim() !== '')
+                    ? String(p.sku).trim()
+                    : (p.id != null ? String(p.id).trim() : '');
+                a.href = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html?cat=furniture';
+
+                const zh = document.createElement('span');
+                zh.className = 'zh';
+                zh.textContent = stripWkModelSuffixInNavLabel(p.nameZh || p.name || p.nameEn || p.model || '');
+                const en = document.createElement('span');
+                en.className = 'en';
+                en.textContent = stripWkModelSuffixInNavLabel(p.nameEn || p.name || p.nameZh || p.model || '');
+                a.appendChild(zh);
+                a.appendChild(en);
+                sub.appendChild(a);
+            });
+
+            wrapper.appendChild(sub);
+
+            furnitureLink.addEventListener('click', (e) => {
+                if (!shouldTapToOpen()) return;
+                e.preventDefault();
+                const isOpen = wrapper.classList.toggle('is-open');
+                furnitureLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            });
+        });
+
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    };
+
+    waitForProductManager(inject);
 }
 
 function ensureProductCenterDropdownHasLightbox() {

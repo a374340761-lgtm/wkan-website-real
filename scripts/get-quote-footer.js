@@ -104,6 +104,7 @@
             <a href="custom-canopy-tent-manufacturer.html" class="contact-bottom__link2">Canopy Tent Manufacturer</a>
             <a href="beach-flag-supplier.html" class="contact-bottom__link2">Beach Flag Supplier</a>
             <a href="portable-display-systems.html" class="contact-bottom__link2">Display Systems Manufacturer</a>
+            <a href="site-map.html#seo-guides" class="contact-bottom__link2">B2B Guides</a>
             <a href="terms.html" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
             <a href="privacy.html" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
             <a href="site-map.html" class="contact-bottom__link2" data-i18n="footer_sitemap">Site Map</a>

@@ -155,32 +155,53 @@
 
   function injectOrganizationJsonLd() {
     if (document.getElementById('wk-org-jsonld')) return;
+    try {
+      var path = (window.location.pathname || '/').replace(/\\/g, '/');
+      var isHome = path === '/' || /\/index\.html$/i.test(path);
+      if (!isHome) return;
+    } catch (e) {
+      return;
+    }
     var script = document.createElement('script');
     script.id = 'wk-org-jsonld';
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
-      alternateName: 'WaiKwan',
-      url: BASE_URL,
-      logo: toAbsoluteUrl('images/waikwancompanylogo.png'),
-      description: 'Factory-direct manufacturer of custom canopy tents, beach flags and portable display systems. OEM/ODM support, fast quotes, global export.',
-      foundingDate: '2010',
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+86-189-2278-7581',
-        email: 'yishu@waikwantent.com',
-        contactType: 'sales',
-        availableLanguage: ['English', 'Chinese', 'Japanese', 'Korean'],
-        areaServed: 'Worldwide'
-      },
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Luchuan County',
-        addressRegion: 'Yulin',
-        addressCountry: 'CN'
-      }
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': BASE_URL + '/#organization',
+          name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
+          alternateName: 'WaiKwan',
+          url: BASE_URL + '/',
+          logo: toAbsoluteUrl('images/waikwancompanylogo.png'),
+          description: 'Factory-direct manufacturer of custom canopy tents, beach flags and portable display systems. OEM/ODM support, fast quotes, global export.',
+          foundingDate: '2010',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            telephone: '+86-138-2454-0280',
+            email: 'yishu@waikwantent.com',
+            contactType: 'sales',
+            availableLanguage: ['English', 'Chinese'],
+            areaServed: 'Worldwide'
+          },
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Daping Changtangao, Luyin Village, Gucheng Town',
+            addressLocality: 'Luchuan County',
+            addressRegion: 'Yulin',
+            addressCountry: 'CN'
+          }
+        },
+        {
+          '@type': 'WebSite',
+          '@id': BASE_URL + '/#website',
+          url: BASE_URL + '/',
+          name: 'WaiKwan',
+          publisher: { '@id': BASE_URL + '/#organization' },
+          inLanguage: ['en', 'zh']
+        }
+      ]
     });
     document.head.appendChild(script);
   }

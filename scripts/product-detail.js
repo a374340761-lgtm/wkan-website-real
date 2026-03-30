@@ -133,6 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
+        // Merged SKUs → single PDP (rect bi-fold Z-series; round YZ-series)
+        const legacyMergedSku = {
+            '31002': '31001', '31003': '31001', '31004': '31001',
+            '31011': '31010', '31012': '31010'
+        };
+        if (legacyMergedSku[requested]) {
+            window.location.replace(`product-detail.html?sku=${encodeURIComponent(legacyMergedSku[requested])}`);
+            return;
+        }
+
         // sku priority: exact sku match first, then id match
         const product = pm.products.find(p => p && String(p.sku || '').trim() === requested)
             || pm.products.find(p => p && String(p.id) === requested);
@@ -198,6 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
         const ogUrlMeta = document.querySelector('meta[property="og:url"]');
         if (ogUrlMeta) ogUrlMeta.setAttribute('content', canonicalProductUrl);
+        const ogTypeMeta = document.querySelector('meta[property="og:type"]');
+        if (ogTypeMeta) ogTypeMeta.setAttribute('content', 'product');
         const ogTitleMeta = document.querySelector('meta[property="og:title"]');
         if (ogTitleMeta) ogTitleMeta.setAttribute('content', document.title);
         const ogDescMeta = document.querySelector('meta[property="og:description"]');
@@ -221,7 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ld = document.createElement('script');
         ld.id = 'wk-product-jsonld';
         ld.type = 'application/ld+json';
-        ld.textContent = JSON.stringify({
+        const catForSchema = String(product.category || '').trim();
+        const productLd = {
             '@context': 'https://schema.org',
             '@type': 'Product',
             name: name,
@@ -230,8 +243,17 @@ document.addEventListener('DOMContentLoaded', () => {
             image: productImage ? toAbs(productImage) : toAbs('images/hero/Waikwantentshero.png'),
             sku: String(product.sku || product.id || ''),
             brand: { '@type': 'Brand', name: 'WaiKwan' },
-            offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock' }
-        });
+            manufacturer: {
+                '@type': 'Organization',
+                name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
+                url: BASE_URL + '/'
+            },
+            offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: canonicalProductUrl }
+        };
+        if (catForSchema) {
+            productLd.category = catForSchema;
+        }
+        ld.textContent = JSON.stringify(productLd);
         document.head.appendChild(ld);
 
         // Breadcrumb: Home / Products / (Category) / Product
@@ -514,48 +536,62 @@ document.addEventListener('DOMContentLoaded', () => {
             variantsEl.appendChild(tbl);
         }
 
-        // Catalog reference image (产品画册参考)
-        if (variantsEl && (product.referenceImage || product.referenceImageLabel)) {
-            const src = product.referenceImage || '';
-            if (src) {
-                const block = document.createElement('div');
+        // Catalog reference image (产品画册参考) — catalog p.17.png; all 桌/椅/凳/厕所 PDPs use same source
+        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/17.png');
+        const isFurnitureTableChairCat = product
+            && String(product.category) === 'furniture'
+            && String(product.subcategory) === 'table-chair-stool-toilet';
+        const brochureSrc = (product.referenceImage && String(product.referenceImage).trim())
+            || (isFurnitureTableChairCat ? FURNITURE_CATALOG_BROCHURE : '');
 
-                const title = document.createElement('h3');
-                title.setAttribute('data-translate', 'view_type_brochure_ref');
-                title.textContent = '';
-                block.appendChild(title);
+        if (variantsEl && brochureSrc) {
+            const block = document.createElement('div');
+            block.className = 'pdp-brochure-ref';
+            block.style.marginTop = '18px';
 
-                const caption = document.createElement('div');
-                caption.style.marginTop = '4px';
-                caption.style.opacity = '0.85';
-                caption.style.fontSize = '13px';
-                caption.textContent = (getCurrentLang() === 'zh')
-                    ? '参考目录图片（用于对照款式与参数）'
-                    : 'Catalog reference image (for style/spec reference)';
-                block.appendChild(caption);
+            const title = document.createElement('h3');
+            title.setAttribute('data-translate', 'view_type_brochure_ref');
+            title.textContent = '';
+            block.appendChild(title);
 
-                const img = document.createElement('img');
-                img.src = src;
-                img.alt = (product.referenceImageLabel || '产品画册参考');
-                img.loading = 'lazy';
-                img.style.display = 'block';
-                img.style.width = '100%';
-                img.style.maxWidth = '920px';
-                img.style.marginTop = '10px';
-                img.style.border = '1px solid #eee';
-                img.style.borderRadius = '10px';
-                img.style.cursor = 'zoom-in';
-                img.onerror = function() { this.style.display = 'none'; };
-                img.addEventListener('click', () => {
-                    try {
-                        window.open(src, '_blank', 'noopener');
-                    } catch (e) {
-                        // ignore
-                    }
-                });
-                block.appendChild(img);
+            const caption = document.createElement('div');
+            caption.style.marginTop = '4px';
+            caption.style.opacity = '0.85';
+            caption.style.fontSize = '13px';
+            const capZh = document.createElement('span');
+            capZh.className = 'zh';
+            capZh.setAttribute('data-translate', 'view_type_brochure_source_17');
+            const capEn = document.createElement('span');
+            capEn.className = 'en';
+            capEn.setAttribute('data-translate', 'view_type_brochure_source_17');
+            caption.appendChild(capZh);
+            caption.appendChild(capEn);
+            block.appendChild(caption);
 
-                variantsEl.appendChild(block);
+            const img = document.createElement('img');
+            img.src = brochureSrc;
+            img.setAttribute('data-translate-alt', 'view_type_brochure_ref');
+            img.loading = 'lazy';
+            img.style.display = 'block';
+            img.style.width = '100%';
+            img.style.maxWidth = '920px';
+            img.style.marginTop = '10px';
+            img.style.border = '1px solid var(--border-color, #eee)';
+            img.style.borderRadius = '10px';
+            img.style.cursor = 'zoom-in';
+            img.onerror = function() { this.style.display = 'none'; };
+            img.addEventListener('click', () => {
+                try {
+                    window.open(brochureSrc, '_blank', 'noopener');
+                } catch (e) {
+                    // ignore
+                }
+            });
+            block.appendChild(img);
+
+            variantsEl.appendChild(block);
+            if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                window.multiLang.translatePage();
             }
         }
 

@@ -6,6 +6,7 @@
   - Injects Organization JSON-LD
 */
 (function () {
+  /** Single production origin — must match sitemap and HTML rel=canonical. */
   var BASE_URL = 'https://www.waikwantent.com';
 
   function upsertMeta(attrName, attrValue, content) {
@@ -130,7 +131,10 @@
     var ogImg = (document.head.querySelector('meta[property="og:image"]') || document.head.querySelector('meta[name="twitter:image"]'));
     var imgContent = (ogImg && ogImg.getAttribute('content')) || defaultImg;
 
-    var absUrl = canonicalAbs || (function () { try { return new URL(window.location.href).toString(); } catch { return ''; } })();
+    var absUrl = canonicalAbs || (function () { try { return new URL(window.location.href).toString(); } catch (e) { return ''; } })();
+    if (absUrl && /^https?:\/\//i.test(absUrl)) {
+      absUrl = absUrl.replace(/^https:\/\/waikwantent\.com\//i, 'https://www.waikwantent.com/');
+    }
     if (absUrl && (absUrl.indexOf('127.0.0.1') !== -1 || absUrl.indexOf('localhost') !== -1)) {
       try {
         var u = new URL(absUrl);
@@ -214,15 +218,23 @@
     } catch (e) {}
   }
 
-  // Run once when DOM is ready, and once after a short delay.
-  // This helps pages where title/description are filled by i18n scripts.
+  function isProductDetailPage() {
+    try {
+      return /\bproduct-detail\.html$/i.test(String(window.location.pathname || '').replace(/\\/g, '/'));
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Run when DOM is ready. Delayed second run helps i18n title/description on most pages;
+  // skip repeat on product-detail.html so scripts/product-detail.js canonical + og tags are not overwritten.
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       run();
-      setTimeout(run, 800);
+      if (!isProductDetailPage()) setTimeout(run, 800);
     });
   } else {
     run();
-    setTimeout(run, 800);
+    if (!isProductDetailPage()) setTimeout(run, 800);
   }
 })();

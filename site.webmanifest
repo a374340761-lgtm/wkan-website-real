@@ -1,7 +1,7 @@
 {
   "name": "Guangxi WaiKwan Tent Manufacturing Co., Ltd",
   "short_name": "WaiKwan",
-  "start_url": "index.html",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#a4161a",

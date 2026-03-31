@@ -1,0 +1,19 @@
+# Paste into Google Search Console → URL Inspection (one at a time)
+# Preferred property: https://www.waikwantent.com/
+
+https://www.waikwantent.com/
+https://www.waikwantent.com/product-center.html
+https://www.waikwantent.com/all-products.html
+https://www.waikwantent.com/product-detail.html?sku=31010
+https://www.waikwantent.com/seo/seg-fabric-light-box-manufacturer-b2b-custom-sizes.html
+https://www.waikwantent.com/dome-type.html
+https://www.waikwantent.com/furniture-type.html
+https://www.waikwantent.com/products-accessories.html
+https://www.waikwantent.com/racegate-type.html
+https://www.waikwantent.com/six-sided-booth.html
+
+# Sitemap (submit once under Sitemaps if not already):
+https://www.waikwantent.com/sitemap.xml
+
+# robots.txt check:
+https://www.waikwantent.com/robots.txt

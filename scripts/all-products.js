@@ -92,6 +92,13 @@
         return;
     }
 
+    const DEFAULT_PAGE_TITLE = 'All Products | Search Canopy Tents, Beach Flags & Display Hardware | Wai Kwan Tent';
+    const DEFAULT_META_DESC = 'Search and browse OEM/ODM products: custom canopy tents, beach flags, display hardware, and accessories. Factory-direct pricing — request a quote.';
+    const DEFAULT_OG_TITLE = 'All Products | Wai Kwan Tent';
+    const DEFAULT_OG_DESC = 'Search tents, beach flags, display hardware, and accessories — OEM/ODM from factory.';
+    const DEFAULT_TW_TITLE = 'All Products | Wai Kwan Tent';
+    const DEFAULT_TW_DESC = 'Search OEM/ODM canopy tents, beach flags, and display hardware.';
+
     // 获取 URL 参数中的分类
     function getQueryCat() {
         const url = new URL(window.location.href);
@@ -123,6 +130,49 @@
             custom: 'category_custom'
         };
         return map[cat] || null;
+    }
+
+    /** Differentiate title/meta when ?cat= is set (canonical stays all-products.html). */
+    function updateCategorySeo(cat) {
+        const t = (key) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(key) : key);
+        const lang = getCurrentLang();
+        const metaDesc = document.querySelector('meta[name="description"]');
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+
+        if (!cat || cat === 'all') {
+            document.title = DEFAULT_PAGE_TITLE;
+            if (metaDesc) metaDesc.setAttribute('content', DEFAULT_META_DESC);
+            if (ogTitle) ogTitle.setAttribute('content', DEFAULT_OG_TITLE);
+            if (ogDesc) ogDesc.setAttribute('content', DEFAULT_OG_DESC);
+            if (twTitle) twTitle.setAttribute('content', DEFAULT_TW_TITLE);
+            if (twDesc) twDesc.setAttribute('content', DEFAULT_TW_DESC);
+            return;
+        }
+
+        const key = getCategoryLabelKey(cat);
+        const label = key ? t(key) : cat;
+
+        if (lang === 'zh') {
+            document.title = `${label} · 产品目录 | 伟群帐篷`;
+            const zhDesc = `在伟群工厂目录中按分类浏览「${label}」：OEM/ODM 定制、规格与报价。`;
+            if (metaDesc) metaDesc.setAttribute('content', zhDesc);
+            if (ogTitle) ogTitle.setAttribute('content', `${label} · 产品目录 | 伟群帐篷`);
+            if (ogDesc) ogDesc.setAttribute('content', zhDesc);
+            if (twTitle) twTitle.setAttribute('content', `${label} · 产品目录 | 伟群帐篷`);
+            if (twDesc) twDesc.setAttribute('content', zhDesc);
+            return;
+        }
+
+        document.title = `${label} | OEM Catalog | WaiKwan`;
+        const enDesc = `Browse ${label} in the WaiKwan factory catalog — OEM/ODM, specifications, and B2B quotes.`;
+        if (metaDesc) metaDesc.setAttribute('content', enDesc);
+        if (ogTitle) ogTitle.setAttribute('content', `${label} | Browse OEM | WaiKwan`);
+        if (ogDesc) ogDesc.setAttribute('content', enDesc);
+        if (twTitle) twTitle.setAttribute('content', `${label} | OEM Catalog | WaiKwan`);
+        if (twDesc) twDesc.setAttribute('content', enDesc);
     }
 
     function getPreferredSku(product) {
@@ -775,6 +825,7 @@
         });
 
         updateHeadingAndBreadcrumb(cat);
+        updateCategorySeo(cat);
 
         const typeNotice = ensureTentTypeNotice();
         typeNotice.style.display = 'none';

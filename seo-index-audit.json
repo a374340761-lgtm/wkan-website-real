@@ -1,0 +1,217 @@
+{
+  "auditMeta": {
+    "site": "https://www.waikwantent.com/",
+    "repository": "wkan-website-real",
+    "generatedAt": "2026-03-30",
+    "htmlFilesScanned": 75,
+    "sitemapUrlEntries": 144,
+    "preferredDomainInRepo": "https://www.waikwantent.com",
+    "apexDomainInHtmlCanonicals": false,
+    "notes": "All static canonical hrefs in HTML use https://www.waikwantent.com. No https://waikwantent.com/ (non-www) in rel=canonical across .html files. product-detail.js may set canonical to window.location.origin (apex or www) at runtime; scripts/seo.js uses fixed www and re-runs on DOMContentLoaded + 800ms delay, which can conflict with PDP JS on apex hosts."
+  },
+  "preferredDomainInconsistencies": [
+    {
+      "type": "runtime_vs_static",
+      "detail": "scripts/seo.js uses BASE_URL = https://www.waikwantent.com for canonical normalization and Organization JSON-LD.",
+      "detail2": "scripts/product-detail.js sets canonical from window.location.origin when available, aligning with crawled host (mitigates GSC 'different canonical' for apex)."
+    },
+    {
+      "type": "potential_pdp_race",
+      "detail": "seo.js normalizeCanonical() forces www for product-detail.html paths; run() is invoked on DOMContentLoaded and again after 800ms, possibly overwriting PDP canonical after product-detail.js runs."
+    }
+  ],
+  "pagesWithMissingStaticTitle": [
+    { "path": "dome-type.html", "note": "<title> uses data-translate only; empty until JS/i18n runs." },
+    { "path": "furniture-type.html", "note": "<title> uses data-translate only; empty until JS/i18n runs." },
+    { "path": "products-accessories.html", "note": "<title> uses data-translate only; empty until JS/i18n runs." },
+    { "path": "googlead697dfed14475b1.html", "note": "Google Search Console verification file; no title tag." }
+  ],
+  "duplicateTitles": [
+    {
+      "title": "Redirecting…",
+      "paths": ["index.original.html", "index.wireframe.html"]
+    }
+  ],
+  "pagesWithMissingOrEmptyMetaDescription": [
+    { "path": "googlead697dfed14475b1.html", "reason": "verification stub" },
+    { "path": "products.html", "reason": "redirect page; description empty in head" },
+    { "path": "products-custom.html", "reason": "noindex redirect; meta description empty" },
+    { "path": "products-displays.html", "reason": "noindex redirect; meta description empty" },
+    { "path": "products-flags.html", "reason": "noindex redirect; meta description empty" },
+    { "path": "products-furniture.html", "reason": "noindex redirect; meta description empty" },
+    { "path": "products-inflatable.html", "reason": "noindex redirect; meta description empty" },
+    { "path": "products-lightbox.html", "reason": "noindex redirect; meta description empty" },
+    { "path": "index.original.html", "reason": "legacy; minimal head" },
+    { "path": "index.wireframe.html", "reason": "wireframe; minimal head" },
+    { "path": "test_logo.html", "reason": "test page" },
+    { "path": "test_stats.html", "reason": "test page" }
+  ],
+  "brokenOrMismatchedCanonicals": [
+    {
+      "path": "index.original.html",
+      "issue": "rel=canonical href is relative (index.html), not absolute https URL."
+    },
+    {
+      "path": "index.wireframe.html",
+      "issue": "rel=canonical href is relative (index.html)."
+    },
+    {
+      "path": "test_logo.html",
+      "issue": "rel=canonical href is relative (index.html); robots noindex,nofollow."
+    },
+    {
+      "path": "test_stats.html",
+      "issue": "rel=canonical href is relative (index.html); robots noindex,nofollow."
+    },
+    {
+      "path": "product-detail.html",
+      "issue": "Static HTML canonical is https://www.waikwantent.com/product-detail.html without ?sku=; runtime JS is required for per-SKU canonical. Crawlers that do not execute JS may see generic PDP URL."
+    },
+    {
+      "path": "product.html",
+      "note": "Canonical points to product-detail.html without query; intentional noindex legacy entry; redirects via JS."
+    },
+    {
+      "path": "products.html",
+      "note": "Canonical points to product-center.html (consolidation); noindex,follow."
+    },
+    {
+      "path": "tent-detail.html",
+      "note": "Canonical points to product-center.html?cat=tents; noindex; page redirects via JS."
+    }
+  ],
+  "noindexPages": [
+    { "path": "product.html", "robots": "noindex,follow" },
+    { "path": "products.html", "robots": "noindex,follow" },
+    { "path": "tent-detail.html", "robots": "noindex,follow" },
+    { "path": "products-furniture.html", "robots": "noindex,follow" },
+    { "path": "products-custom.html", "robots": "noindex,follow" },
+    { "path": "products-inflatable.html", "robots": "noindex,follow" },
+    { "path": "products-lightbox.html", "robots": "noindex,follow" },
+    { "path": "products-displays.html", "robots": "noindex,follow" },
+    { "path": "products-flags.html", "robots": "noindex,follow" },
+    { "path": "index.wireframe.html", "robots": "noindex,follow" },
+    { "path": "index.original.html", "robots": "noindex,follow" },
+    { "path": "test_stats.html", "robots": "noindex,nofollow" },
+    { "path": "test_logo.html", "robots": "noindex,nofollow" }
+  ],
+  "pagesRiskCrawledNotIndexed": [
+    {
+      "pattern": "product-detail.html?sku=*",
+      "reason": "Large set of SKU URLs sharing one HTML shell; thin differentiation if specs overlap; classic soft-duplicate risk."
+    },
+    {
+      "paths": ["racegate-type.html", "six-sided-booth.html"],
+      "reason": "Shorter unique copy vs pillar pages; may compete with category/tent-type content."
+    }
+  ],
+  "pagesRiskDuplicateCanonicalUserVsGoogle": [
+    {
+      "path": "product-detail.html (dynamic)",
+      "reason": "Host mismatch if GSC property is apex (https://waikwantent.com) while static assets assume www; mitigated by product-detail.js using location.origin for canonical when set."
+    },
+    {
+      "path": "scripts/seo.js",
+      "reason": "Forces www in canonical for PDP; can conflict with apex crawls if 800ms run() wins after PDP script."
+    }
+  ],
+  "excludedFromSitemap": [
+    {
+      "path": "googlead697dfed14475b1.html",
+      "reason": "Verification file; should not be in sitemap."
+    },
+    {
+      "path": "index.html",
+      "reason": "Homepage represented as https://www.waikwantent.com/ in sitemap (not index.html string); equivalent."
+    },
+    {
+      "path": "index.original.html",
+      "reason": "Legacy; robots.txt Disallow; not in sitemap."
+    },
+    {
+      "path": "index.wireframe.html",
+      "reason": "Wireframe; robots.txt Disallow; not in sitemap."
+    },
+    {
+      "path": "test_logo.html",
+      "reason": "Test; robots.txt Disallow; not in sitemap."
+    },
+    {
+      "path": "test_stats.html",
+      "reason": "Test; robots.txt Disallow; not in sitemap."
+    },
+    {
+      "path": "product-detail.html",
+      "reason": "Bare URL without sku not listed; intentional—no-sku request redirects to all-products in JS."
+    }
+  ],
+  "sitemapConflicts": [
+    {
+      "path": "tent-detail.html",
+      "issue": "Listed in sitemap.xml but page has meta robots noindex,follow and redirects—should be removed from sitemap or indexing policy aligned."
+    }
+  ],
+  "jsInjectedSeo": [
+    {
+      "file": "scripts/seo.js",
+      "behaviors": [
+        "normalizeCanonical() / ensureCanonical()",
+        "applySocialTags() — og:url, twitter:url aligned to canonical",
+        "injectOrganizationJsonLd() — homepage only",
+        "Re-run on DOMContentLoaded + setTimeout(800ms)"
+      ]
+    },
+    {
+      "file": "scripts/product-detail.js",
+      "behaviors": [
+        "document.title, meta description, link[rel=canonical], og:url, og:type product, Product JSON-LD after productManager loads"
+      ]
+    }
+  ],
+  "redirectLogic": [
+    { "file": "product-detail.js", "behavior": "Legacy query params merged to ?sku=; merged SKUs redirect (e.g. 31011→31010)." },
+    { "file": "tent-detail.html", "behavior": "Inline script redirects to product-detail or product-center." },
+    { "file": "products-lightbox.html", "behavior": "meta refresh to product-center?cat=lightbox" },
+    { "file": "scripts/seo.js", "behavior": "product.html / tent-detail.html paths rewritten to product-detail canonical in normalizeCanonical" }
+  ],
+  "robotsTxt": {
+    "allowsRoot": true,
+    "disallowPaths": ["/backend/", "/index.original.html", "/index.wireframe.html", "/test_logo.html", "/test_stats.html"],
+    "sitemap": "https://www.waikwantent.com/sitemap.xml"
+  },
+  "multilingualAlternateUrls": {
+    "hreflangAlternateLinks": "not detected in HTML head (no rel=alternate hreflang in repo scan)"
+  },
+  "internalLinkingNotes": [
+    "index.html links to core categories, Guides (seo/), buyer resources, news.",
+    "site-map.html aggregates product, FAQ, and seo#seo-guides links.",
+    "SEO pillar pages cross-link in Related guides sections.",
+    "Weak discovery risk for pages only linked deep in one branch—review orphan paths via crawler."
+  ],
+  "recommendedFixesPriority": [
+    {
+      "priority": 1,
+      "action": "Unify host: enforce single 301 (apex↔www) at CDN/server; align GSC property with live canonical host."
+    },
+    {
+      "priority": 2,
+      "action": "Resolve seo.js vs product-detail.js canonical race on PDP (single source of truth; avoid 800ms overwrite conflicting with location.origin)."
+    },
+    {
+      "priority": 3,
+      "action": "Remove tent-detail.html from sitemap OR remove noindex—pick one indexing policy."
+    },
+    {
+      "priority": 4,
+      "action": "Replace relative canonical (index.html) on test/wireframe/original with absolute www URLs or leave disallowed-only."
+    },
+    {
+      "priority": 5,
+      "action": "Add static fallback text in <title> for data-translate-only pages (dome-type, furniture-type, products-accessories) for crawlers without JS."
+    },
+    {
+      "priority": 6,
+      "action": "Review PDP template duplication: unique paragraphs/spec copy per high-value SKU where possible to reduce soft-duplicate risk."
+    }
+  ]
+}

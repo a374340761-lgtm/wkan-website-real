@@ -238,7 +238,7 @@
     return `
       <div class="tent-type-detail">
         <div class="tent-type-detail__head">
-          <div class="tent-type-detail__title">
+          <h2 class="tent-type-detail__title">
             ${lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn)}
             ${item.seriesCode ? ` <span class=\"tent-type-detail__series\">(${safe(item.seriesCode)})</span>` : ''}
             ${Array.isArray(item.variants) && item.variants.length
@@ -251,7 +251,7 @@
               })()
               : ''
             }
-          </div>
+          </h2>
         </div>
 
         <div class="tent-type-detail__block">

@@ -23,6 +23,37 @@
     <meta name="twitter:title" content="Product | Wai Kwan Tent" />
     <meta name="twitter:description" content="OEM/ODM custom tents, beach flags &amp; display hardware — specifications and quotes." />
     <meta name="twitter:image" content="https://www.waikwantent.com/images/hero/Waikwantentshero.png" />
+    <meta name="twitter:url" content="https://www.waikwantent.com/product-detail.html" />
+
+    <!-- Early PDP SEO: when ?sku= is present, align canonical / social URLs and interim title+meta before deferred scripts and product data load (scripts/product-detail.js replaces with product-specific values). -->
+    <script>
+    (function () {
+      try {
+        var u = new URL(window.location.href);
+        u.hash = '';
+        var sku = (u.searchParams.get('sku') || '').trim();
+        if (!sku) return;
+        var origin = 'https://www.waikwantent.com';
+        var canonical = origin + '/product-detail.html?sku=' + encodeURIComponent(sku);
+        function attr(sel, name, val) {
+          var el = document.querySelector(sel);
+          if (el) el.setAttribute(name, val);
+        }
+        attr('link[rel="canonical"]', 'href', canonical);
+        attr('meta[property="og:url"]', 'content', canonical);
+        attr('meta[name="twitter:url"]', 'content', canonical);
+        attr('meta[property="og:type"]', 'content', 'product');
+        var interimTitle = 'SKU ' + sku + ' | Tent & Display Manufacturer | WaiKwan';
+        document.title = interimTitle;
+        attr('meta[property="og:title"]', 'content', interimTitle);
+        attr('meta[name="twitter:title"]', 'content', interimTitle);
+        var interimDesc = 'OEM/ODM product SKU ' + sku + ' — specifications, printing options and factory quotes from WaiKwan.';
+        attr('meta[name="description"]', 'content', interimDesc);
+        attr('meta[property="og:description"]', 'content', interimDesc);
+        attr('meta[name="twitter:description"]', 'content', interimDesc);
+      } catch (e) {}
+    })();
+    </script>
 
     <!-- Unified product detail page.
          Canonical URL format: product-detail.html?sku=XXXX
@@ -135,6 +166,15 @@
 
             <div class="pdp-info">
                 <h1 id="productName"></h1>
+                <script>
+                (function () {
+                  try {
+                    var sku = (new URLSearchParams(window.location.search).get('sku') || '').trim();
+                    var h = document.getElementById('productName');
+                    if (h && sku && !String(h.textContent || '').trim()) h.textContent = 'SKU ' + sku;
+                  } catch (e) {}
+                })();
+                </script>
                 <p id="productDesc" class="pdp-desc"></p>
 
                 <ul id="productSpecs" class="pdp-specs"></ul>

@@ -321,7 +321,7 @@
     return `
       <div class="tent-type-detail">
         <div class="tent-type-detail__head">
-          <div class="tent-type-detail__title">${title}</div>
+          <h2 class="tent-type-detail__title">${title}</h2>
         </div>
         ${renderHero(item)}
         ${renderPdfGuide(item)}

@@ -6473,6 +6473,7 @@ html[lang="en"] .hero-slide p {
     font-size: var(--font-size-xl);
     font-weight: 800;
     color: var(--wk-black);
+    margin: 0;
 }
 
 .tent-type-detail__series{
@@ -7311,4 +7312,11 @@ body[data-page-category="flag-type"] .tent-type-detail__visuals--hero img,
 @media (max-width: 720px){
     .wk-cookie-banner__card{ flex-direction: column; }
     .wk-cookie-banner__actions{ justify-content: flex-start; }
+}
+
+/* Secondary SEO copy below product listings (product-center, all-products, etc.) */
+.seo-content{
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
 }

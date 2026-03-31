@@ -1,5 +1,8 @@
 // Unified Product Detail (canonical): product-detail.html?sku=XXXX
 // sku priority: product.sku then product.id (fallback)
+/** Must match production host in sitemap / HTML canonicals (avoid apex vs www conflicts in GSC). */
+const WK_PREFERRED_ORIGIN = 'https://www.waikwantent.com';
+
 document.addEventListener('DOMContentLoaded', () => {
     // Normalize legacy parameters into the canonical URL format.
     try {
@@ -180,6 +183,11 @@ document.addEventListener('DOMContentLoaded', () => {
             ? pm.getProductDetailContent(product)
             : null;
 
+        const skuForCanonical = (product.sku != null && String(product.sku).trim() !== '')
+            ? String(product.sku).trim()
+            : String(product.id || requested).trim();
+        const catLabel = getCategoryLabel(product.category);
+
         // Page title and SEO (EN: short brand; ZH: full company name from i18n)
         const companyName = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('company_name') : '';
         const lang = (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function')
@@ -193,16 +201,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (lang === 'zh') {
                 metaDesc.content = descForSeo;
             } else {
-                metaDesc.content = `Factory direct ${name}. OEM & custom printing available. Export quality, fast delivery.`;
+                const skuPart = skuForCanonical ? `SKU ${skuForCanonical}. ` : '';
+                const catPart = (catLabel && String(catLabel).trim()) ? `${catLabel}. ` : '';
+                const snippet = descForSeo.length > 220 ? `${descForSeo.slice(0, 217).trim()}…` : descForSeo;
+                let en = `${skuPart}${name}. ${catPart}${snippet} OEM factory quotes, custom printing, export-ready packing.`.replace(/\s+/g, ' ').trim();
+                if (en.length > 320) en = `${en.slice(0, 317)}…`;
+                metaDesc.content = en;
             }
         }
 
-        // Align canonical + og:url with the real indexed URL (?sku=...) so Google does not
-        // flag "Duplicate, Google chose different canonical than user".
-        const BASE_URL = 'https://www.waikwantent.com';
-        const skuForCanonical = (product.sku != null && String(product.sku).trim() !== '')
-            ? String(product.sku).trim()
-            : String(product.id || requested).trim();
+        // Align canonical + og:url + JSON-LD + Twitter with final www URL (single preferred origin).
+        const BASE_URL = WK_PREFERRED_ORIGIN;
         const canonicalProductUrl = `${BASE_URL}/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
         const linkCanonical = document.querySelector('link[rel="canonical"]');
         if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
@@ -224,10 +233,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const mc2 = metaDesc ? metaDesc.getAttribute('content') : '';
             twDesc.setAttribute('content', mc2 || descForSeo);
         }
+        const twUrl = document.querySelector('meta[name="twitter:url"]');
+        if (twUrl) twUrl.setAttribute('content', canonicalProductUrl);
 
-        // Product JSON-LD for rich snippets
         const toAbs = (p) => (p && !/^https?:\/\//i.test(p)) ? (BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p) : (p || '');
-        const productImage = product.image || (product.images && product.images[0]) || '';
+        const imgsList = Array.isArray(product.images) && product.images.length
+            ? product.images.filter(Boolean)
+            : (product.image ? [product.image] : []);
+        const primaryImagePath = imgsList[0] || product.image || '';
+        const productImageAbs = primaryImagePath ? toAbs(primaryImagePath) : '';
+        if (productImageAbs) {
+            const ogIm = document.querySelector('meta[property="og:image"]');
+            const twIm = document.querySelector('meta[name="twitter:image"]');
+            if (ogIm) ogIm.setAttribute('content', productImageAbs);
+            if (twIm) twIm.setAttribute('content', productImageAbs);
+        }
+
+        // Product JSON-LD for rich snippets (url/@id match rel=canonical)
         let ld = document.getElementById('wk-product-jsonld');
         if (ld) ld.remove();
         ld = document.createElement('script');
@@ -237,10 +259,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const productLd = {
             '@context': 'https://schema.org',
             '@type': 'Product',
+            '@id': `${canonicalProductUrl}#product`,
             name: name,
             url: canonicalProductUrl,
             description: (shortText || description || name).substring(0, 500),
-            image: productImage ? toAbs(productImage) : toAbs('images/hero/Waikwantentshero.png'),
+            image: productImageAbs || toAbs('images/hero/Waikwantentshero.png'),
             sku: String(product.sku || product.id || ''),
             brand: { '@type': 'Brand', name: 'WaiKwan' },
             manufacturer: {

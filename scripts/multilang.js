@@ -45,6 +45,7 @@ class MultiLanguageSystem {
                 nav_products: '产品中心',
                 nav_services: '服务范围',
                 nav_contact: '联系我们',
+                nav_faq: '常见问题',
                 nav_factory_strength: '工厂实力',
                 nav_core_categories: '核心分类',
                 nav_why_choose_us: '为什么选择我们',
@@ -75,7 +76,7 @@ class MultiLanguageSystem {
                 
                 // 首页
                 hero_badge: '专业制造',
-                hero_title: 'Canopy Tents • Flags • Display Systems',
+                hero_title: '折叠帐篷 · 旗帜 · 展示系统',
                 hero_subtitle: '专注帐篷、沙滩旗与快幕秀等展示系统的研发与制造，为全球客户提供高品质可定制的展示解决方案',
                 btn_explore: '探索产品',
                 btn_contact: '联系我们',
@@ -192,11 +193,128 @@ class MultiLanguageSystem {
                 home_cta_secondary: '前往产品中心',
 
                 home_sticky_quote: '获取报价',
+
+                // Homepage — Guides & Buyer Resources (SEO blocks)
+                nav_buyer_resources: '采购资源',
+                home_core_partner_intro_html:
+                    '寻找工厂合作？从这里开始：<a href="custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a>、'
+                    + '<a href="beach-flag-supplier.html">沙滩旗供应商</a>、'
+                    + '<a href="portable-display-systems.html">便携式展示系统制造商</a>。'
+                    + '新买家建议先阅读 <a href="faq.html">MOQ / 设计稿 / 物流常见问题</a>。',
+                home_fast_start_html:
+                    '快速开始：将尺寸、数量、设计稿发给我们即可获取报价；或查阅指南：'
+                    + '<a href="faq-moq.html">起订量（MOQ）</a>、'
+                    + '<a href="faq-artwork-files.html">设计稿文件</a>、'
+                    + '<a href="faq-shipping.html">物流方式</a>。',
+                home_guides_title: '采购指南',
+                home_guides_subtitle:
+                    '面向经销商与采购团队的 OEM/ODM、出口包装与产品规格等简短说明。',
+                home_guide_read_cta: '阅读指南',
+                home_guide_1_title: 'SEG 卡布灯箱制造商（B2B 定制尺寸）',
+                home_guide_1_desc: '铝型材、背光软膜与 LED 模组，适用于零售、展会与批发项目。',
+                home_guide_2_title: '定制印刷广告帐篷制造商（中国 OEM）',
+                home_guide_2_desc: '折叠框架、品牌顶篷、批量起订与出口包装，服务经销商与品牌方。',
+                home_guide_3_title: '便携式展会背景墙（出口）',
+                home_guide_3_desc: '可折叠框架、印刷画面与出口纸箱，便于经销商全球发货。',
+                home_guide_4_title: '铝合金折叠帐篷（工厂直供出口）',
+                home_guide_4_desc: '轻质六角管型材、品牌篷布与围布，配套收纳袋与 OEM 包装。',
+                home_guide_5_title: '活动羽毛旗印刷（工厂直供）',
+                home_guide_5_desc: '涤纶热升华、旗杆套装与底座，面向活动公司与批发客户。',
+                home_guide_6_title: '重型活动帐篷（欧洲线发货）',
+                home_guide_6_desc: '加强框架、顶篷与围布，出口包装适配欧盟目的地。',
+                home_guide_7_title: '模块化展览展示器材（ODM）',
+                home_guide_7_desc: '铝型材、连接件与布艺或板材填充，服务展台搭建商与经销商。',
+                home_guide_8_title: '张拉布展示墙（展会 OEM）',
+                home_guide_8_desc: '铝架、SEG 或枕套画面与便携包，面向展商与批发客户。',
+                home_guides_view_all: '查看全部指南',
+                home_guides_footer_html:
+                    '浏览：<a href="product-center.html">产品中心</a> · '
+                    + '<a href="all-products.html">全部产品</a> · '
+                    + '<a href="all-products.html?cat=lightbox">灯箱系列</a> · '
+                    + '<a href="all-products.html?cat=tents">广告帐篷</a> · '
+                    + '<a href="news/index.html">新闻</a> · '
+                    + '<a href="site-map.html">站点地图</a>',
+
+                home_buyer_title: '采购资源',
+                home_buyer_subtitle:
+                    '快速了解起订量、交期、设计稿、配色与物流；并提供关键词落地页，便于匹配供应商。',
+                home_br_1_title: 'SEG 卡布灯箱制造商',
+                home_br_1_desc: 'SEG 框架、布艺灯箱与背光系统，适用于零售与展会。',
+                home_br_2_title: '张拉布背景墙',
+                home_br_2_desc: '展会布艺背景：直型、弧型与模块化张拉系统。',
+                home_br_3_title: '铝合金折叠帐篷',
+                home_br_3_desc: '加强铝架、防水顶篷与定制印刷。',
+                home_br_4_title: '定制广告帐篷制造商',
+                home_br_4_desc: '产品线、起订量、交期、出口支持与快速报价。',
+                home_br_5_title: '沙滩旗供应商',
+                home_br_5_desc: '羽毛旗/水滴旗与旗杆、底座及印刷说明。',
+                home_br_6_title: '便携式展示系统',
+                home_br_6_desc: '展会展示、前台、易拉宝与套装。',
+                home_br_7_title: '常见问题（MOQ / 设计稿 / 物流）',
+                home_br_7_desc: '花 5–10 分钟阅读，可大幅减少规格往返沟通。',
+                home_buyer_btn_moq: '从起订量开始',
+                home_buyer_seo_links_html:
+                    '<a href="seg-light-box-manufacturer.html" style="color: var(--wk-red-700); font-weight: 600;">SEG 卡布灯箱制造商</a>'
+                    + '<a href="tension-fabric-backwall.html" style="color: var(--wk-red-700); font-weight: 600;">张拉布背景墙</a>'
+                    + '<a href="aluminum-folding-tent.html" style="color: var(--wk-red-700); font-weight: 600;">铝合金折叠帐篷</a>'
+                    + '<a href="product-center.html?cat=tents" style="color: var(--wk-red-700); font-weight: 600;">定制广告帐篷制造商</a>'
+                    + '<a href="product-center.html?cat=flags" style="color: var(--wk-red-700); font-weight: 600;">沙滩旗与羽毛旗系统</a>'
+                    + '<a href="product-center.html?cat=displays" style="color: var(--wk-red-700); font-weight: 600;">便携式展示与展会背景墙</a>'
+                    + '<a href="products-accessories.html" style="color: var(--wk-red-700); font-weight: 600;">帐篷与展示配件</a>'
+                    + '<a href="all-products.html" style="color: var(--wk-red-700); font-weight: 600;">全部产品目录</a>'
+                    + '<a href="seo/trade-show-canopy-tent-manufacturer-for-distributors.html" style="color: var(--wk-red-700); font-weight: 600;">展会帐篷采购（B2B）</a>'
+                    + '<a href="seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html" style="color: var(--wk-red-700); font-weight: 600;">沙滩旗批发制造</a>'
+                    + '<a href="seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html" style="color: var(--wk-red-700); font-weight: 600;">OEM 张拉布展示</a>'
+                    + '<a href="site-map.html#seo-guides" style="color: var(--wk-red-700); font-weight: 600;">更多 B2B 采购指南</a>',
+
+                // Landing: custom-canopy-tent-manufacturer.html
+                landing_top_bar_canopy: '源头工厂 · OEM/ODM · 24 小时内回复',
+                landing_canopy_h1: '定制广告帐篷制造商',
+                landing_canopy_lead: 'OEM/ODM 印刷折叠帐篷、活动篷房与配件 — 中国工厂直供，面向全球出口。',
+                landing_canopy_card_range_t: '产品线',
+                landing_canopy_card_range_d: '折叠广告帐篷、加强框架、定制顶篷/围布、遮阳与配件。',
+                landing_canopy_card_moq_t: '起订量（MOQ）',
+                landing_canopy_card_moq_d: '视型号与工艺灵活起订（常见样品 1–5 套，批量 10 套起）。',
+                landing_canopy_card_lead_t: '交期',
+                landing_canopy_card_lead_d: '设计确认后通常生产 7–15 天，可加急。',
+                landing_canopy_card_export_t: '出口支持',
+                landing_canopy_card_export_d: '出口包装、HS 归类协助，海运/空运/快递至欧美澳等。',
+                landing_canopy_btn_wa: 'WhatsApp',
+                landing_canopy_btn_browse: '浏览帐篷产品',
+                landing_canopy_contact_line_html:
+                    '联系：<a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp：'
+                    + '<a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · 微信：massifmyth',
+                landing_canopy_popular_h2: '热门定制选项',
+                landing_canopy_popular_sub: '请告知尺寸、框架等级、印刷需求与目标市场，我们将推荐合适方案。',
+                landing_canopy_popular_note_html:
+                    '加强框架：<a href="aluminum-folding-tent.html">铝合金折叠帐篷</a> · 背光展示：'
+                    + '<a href="seg-light-box-manufacturer.html">SEG 卡布灯箱</a> · 布艺背景：'
+                    + '<a href="tension-fabric-backwall.html">张拉布背景墙</a>。延伸阅读：'
+                    + '<a href="seo/custom-printed-canopy-tent-manufacturer-oem-china.html">中国 OEM 定制印刷帐篷</a> · '
+                    + '<a href="seo/folding-event-tent-supplier-wholesale-moq.html">折叠活动帐篷批发 MOQ</a> · '
+                    + '<a href="site-map.html#seo-guides">更多 B2B 指南</a>。',
+                landing_canopy_opt_size_t: '尺寸',
+                landing_canopy_opt_size_d: '10×10 ft、10×15 ft、10×20 ft（及公制尺寸），支持定制。',
+                landing_canopy_opt_frame_t: '框架',
+                landing_canopy_opt_frame_d: '铝架或钢架；轻量、加强、抗风等可选。',
+                landing_canopy_opt_print_t: '印刷',
+                landing_canopy_opt_print_d: '全彩 CMYK，单面/双面，顶篷与围布；抗 UV 面料。',
+                landing_canopy_opt_acc_t: '配件',
+                landing_canopy_opt_acc_d: '沙袋、地钉、滚轮包、LED、遮阳、连接水槽等。',
+                landing_canopy_faq_h2: '采购常见问题（推荐）',
+                landing_canopy_faq_sub: '帮助团队更快确认规格，减少设计稿与物流差错。',
+                landing_canopy_faq_moq_q: '起订量是多少？',
+                landing_canopy_faq_moq_d: '按型号/印刷区分，样品政策与小额试单说明。',
+                landing_canopy_faq_lead_q: '交期多久？',
+                landing_canopy_faq_lead_d: '常规生产周期及影响发货的因素。',
+                landing_canopy_faq_art_q: '需要哪些设计稿？',
+                landing_canopy_faq_art_d: 'AI/PDF 规范、出血、字体与色彩配置。',
+                landing_canopy_faq_view_all: '查看全部常见问题',
                 
                 // 公司介绍
                 about_title: '关于伟群',
                 about_subtitle: '帐篷、沙滩旗与展示系统的专业源头制造工厂',
-                about_intro: '广西伟群帐篷制造有限公司是一家专注于帐篷、沙滩旗、展示系统（Display Systems）及户外品牌展示系统研发与制造的源头工厂。公司深耕便携式户外展示行业25年以上，为全球客户提供稳定、高效、可定制的展示解决方案。',
+                about_intro: '广西伟群帐篷制造有限公司是一家专注于帐篷、沙滩旗、快幕秀等展示系统及户外品牌展示产品研发与制造的源头工厂。公司深耕便携式户外展示行业25年以上，为全球客户提供稳定、高效、可定制的展示解决方案。',
                 about_intro_rest: '公司深耕便携式户外展示行业<strong>25年以上</strong>，为全球客户提供稳定、高效、可定制的展示解决方案。',
                 about_mission_title: '我们的使命',
                 about_mission: '我们的使命', // 兼容旧key
@@ -209,9 +327,9 @@ class MultiLanguageSystem {
                 about_stat_products: '产品型号',
                 about_products_title: '产品与能力范围',
                 about_products_main: '主要产品系列：',
-                about_product_1: '帐篷系列（Pop-up Tent / Marquee / Event Tent）',
-                about_product_2: '沙滩旗及旗杆系列（Feather Flag / Teardrop Flag）',
-                about_product_3: '展示系统（Display Systems）',
+                about_product_1: '帐篷系列（折叠帐篷、篷房、大型活动帐篷）',
+                about_product_2: '沙滩旗及旗杆系列（羽毛旗、水滴旗、刀旗等）',
+                about_product_3: '展示系统（快幕秀、背景墙等）',
                 about_product_4: '桌布、布艺展示及品牌配件',
                 about_product_5: '定制化品牌展示解决方案',
                 about_printing_title: '印刷与工艺：',
@@ -244,9 +362,9 @@ class MultiLanguageSystem {
                 // 产品常规尺寸参考
                 sizes_title: '产品常规尺寸参考',
                 sizes_subtitle: '以下为常用标准尺寸，支持定制与模块化组合',
-                sizes_tent_title: '快装帐篷（Pop-up Canopy Tent）',
-                sizes_giant_title: '大型活动帐篷（Large Event / Giant Tent）',
-                sizes_display_title: '展示系统（Display Systems / Quick Display）',
+                sizes_tent_title: '快装帐篷（折叠广告帐篷）',
+                sizes_giant_title: '大型活动帐篷（篷房 / 活动大棚）',
+                sizes_display_title: '展示系统（快幕秀 / 背景墙）',
                 sizes_tag_hot: '热销',
                 sizes_tag_modular: '模块拼接',
                 sizes_tag_fast: '快速搭建',
@@ -273,14 +391,14 @@ class MultiLanguageSystem {
                 sizes_display_app: '展会展示、背景墙、品牌形象展示',
                 sizes_view_products: '查看产品',
                 sizes_get_quote: '获取报价',
-                sizes_note: '以上尺寸为常规参考，欢迎联系我们获取定制方案\nStandard sizes are for reference only. Contact us for custom solutions.',
+                sizes_note: '以上尺寸为常规参考，欢迎联系我们获取定制方案。',
                 sizes_cta: '获取报价',
                 // 保留旧键名以兼容
                 popular_sizes_title: '产品常规尺寸参考',
                 popular_sizes_subtitle: '以下为常用标准尺寸，支持定制与模块化组合',
-                size_category_tent_title: '快装帐篷（Pop-up Canopy Tent）',
-                size_category_large_title: '大型活动帐篷（Large Event Tent / Giant Tent）',
-                size_category_display_title: '展示系统（Display Systems / Quick Display）',
+                size_category_tent_title: '快装帐篷（折叠广告帐篷）',
+                size_category_large_title: '大型活动帐篷（篷房 / 活动大棚）',
+                size_category_display_title: '展示系统（快幕秀 / 背景墙）',
                 size_standard_sizes: '常规尺寸：',
                 size_standard_combination: '常规组合尺寸：',
                 size_standard_options: '常规规格：',
@@ -304,7 +422,7 @@ class MultiLanguageSystem {
                 size_display_feature_3: '画面可更换，支持高精度印刷',
                 size_display_applications: '展会展示、背景墙、品牌形象展示',
                 size_cta_text: '以上尺寸为常规参考，欢迎联系我们获取定制方案',
-                size_cta_text_en: 'Standard sizes are for reference only. Contact us for custom solutions.',
+                size_cta_text_en: '',
                 
                 // 客户评价
                 testimonials_title: '客户评价',
@@ -322,7 +440,7 @@ class MultiLanguageSystem {
                 // 产品中心
                 products_title: '产品中心',
                 products_subtitle: '帐篷 · 沙滩旗 · 展示系统 · 户外品牌展示系统',
-                products_subtitle_en: 'Tents · Flags · Display Systems · Outdoor Branding Systems',
+                products_subtitle_en: '',
                 // 标准 i18n key（统一命名）
                 products_tents_title: '帐篷系列',
                 products_tents_desc: '提供多种规格与结构的帐篷产品，适用于促销活动、展会展示及大型户外活动，支持定制尺寸与品牌印刷。',
@@ -338,22 +456,22 @@ class MultiLanguageSystem {
                 // 兼容旧key
                 products_category_tents_title: '帐篷系列',
                 products_category_tents_desc: '提供多种规格与结构的帐篷产品，适用于促销活动、展会展示及大型户外活动，支持定制尺寸与品牌印刷。',
-                products_category_tents_desc_en: 'A full range of tent solutions designed for promotions, exhibitions and outdoor events. Custom sizes and branding options available.',
+                products_category_tents_desc_en: '',
                 products_category_flags_title: '沙滩旗及旗杆',
                 products_category_flags_desc: '多种造型与尺寸的沙滩旗及旗杆系统，适合户外宣传、赛事活动及商业展示，支持多种印刷工艺。',
-                products_category_flags_desc_en: 'A variety of beach flag shapes and pole systems for outdoor promotion, events and branding, with multiple printing options.',
+                products_category_flags_desc_en: '',
                 products_category_displays_title: '展示系统',
                 products_category_displays_desc: '便携式展示系统：背景墙、张拉布、前台、灯箱等，适用于展会与品牌展示。',
-                products_category_displays_desc_en: 'Portable display systems: backdrops, tension fabric, counters and light boxes for trade shows and branding.',
+                products_category_displays_desc_en: '',
                 products_category_accessories_title: '布艺展示及配件',
                 products_category_accessories_desc: '包括桌布、布艺横幅及展示配件，满足整体品牌展示系统的配套需求。',
-                products_category_accessories_desc_en: 'Table covers, fabric banners and display accessories designed to complete outdoor branding systems.',
+                products_category_accessories_desc_en: '',
                 products_category_custom_title: '定制展示解决方案',
                 products_category_custom_desc: '支持从结构、尺寸到画面印刷的全流程定制，满足不同市场与项目需求。',
-                products_category_custom_desc_en: 'Full customization available from structure and size to graphic printing, tailored to different markets and project requirements.',
+                products_category_custom_desc_en: '',
                 products_cta_text: '所有产品均支持定制，欢迎联系我们获取详细规格与报价。',
-                products_cta_text_en: 'All products are customizable. Contact us for detailed specifications and quotations.',
-                products_cta_button: 'Get a Quote',
+                products_cta_text_en: '',
+                products_cta_button: '获取报价',
                 category_all: '全部产品',
                 category_furniture: '户外家具',
                 category_tents: '帐篷展示',
@@ -486,7 +604,7 @@ class MultiLanguageSystem {
                 flag_type_not_found: '未找到该旗帜类型。',
 
                 // Nav extras
-                nav_top3_sizes: '热销尺寸 Top3',
+                nav_top3_sizes: '热销前三尺寸',
 
                 // Six-sided booth page
                 six_sided_booth_name: '六边促销展示台',
@@ -534,6 +652,8 @@ class MultiLanguageSystem {
                 // 面包屑和搜索
                 breadcrumb_home: '首页',
                 breadcrumb_products: '产品中心',
+                search_overlay_title: '搜索产品',
+                search_overlay_button: '搜索',
                 products_search_placeholder: '搜索产品（名称/关键词/规格）',
                 filters_title: '筛选',
                 filters_clear: '清空',
@@ -569,22 +689,22 @@ class MultiLanguageSystem {
                 // 联系我们
                 contact_title: '联系我们',
                 contact_subtitle: '我们期待与您的合作',
-                contact_seo_text: 'Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.',
+                contact_seo_text: '欢迎联系广西伟群帐篷制造有限公司，洽谈定制帐篷、旗帜与展示项目需求。',
                 contact_address_label: '公司地址',
-                contact_address_title: '地址 Address',
-                contact_address_value: 'Address: Daping Changtangao, Luyin Village, Gucheng Town, Luchuan County, Yulin City, China',
-                contact_address: '2nd Xuweiqian Building, Bridge South xilian Dong Cun Gaosha Development District, Nanhai Danzao, Foshan, China', // 兼容旧key
+                contact_address_title: '地址',
+                contact_address_value: '地址：广西玉林市陆川县古城镇陆因村大坪队长塘坳',
+                contact_address: '广西玉林市陆川县古城镇陆因村大坪队长塘坳',
                 contact_phone_label: '联系电话',
-                contact_phone_title: '联系电话', // 兼容旧key
+                contact_phone_title: '联系电话',
                 contact_email_label: '电子邮箱',
-                contact_email_title: '电子邮箱', // 兼容旧key
+                contact_email_title: '电子邮箱',
                 contact_qr_title: '扫码联系',
                 whatsapp_label: 'WhatsApp',
-                contact_whatsapp_title: 'WhatsApp（WhatsApp）',
-                contact_whatsapp_note: '扫码添加 WhatsApp 咨询 / Scan to chat on WhatsApp',
+                contact_whatsapp_title: 'WhatsApp',
+                contact_whatsapp_note: '扫码添加 WhatsApp 咨询',
                 wechat_label: 'WeChat',
-                contact_wechat_title: '微信 WeChat',
-                contact_wechat_note: '扫码添加微信咨询 / Scan to add on WeChat',
+                contact_wechat_title: '微信',
+                contact_wechat_note: '扫码添加微信咨询',
                 
                 // 表单
                 contact_form_name: '您的姓名',
@@ -592,11 +712,11 @@ class MultiLanguageSystem {
                 contact_form_phone: '联系电话',
                 contact_form_message: '您的需求',
                 contact_form_submit: '发送消息',
-                form_name: '您的姓名', // 兼容旧key
-                form_email: '您的邮箱', // 兼容旧key
-                form_phone: '联系电话', // 兼容旧key
-                form_message: '您的需求', // 兼容旧key
-                form_submit: '发送消息', // 兼容旧key
+                form_name: '您的姓名',
+                form_email: '您的邮箱',
+                form_phone: '联系电话',
+                form_message: '您的需求',
+                form_submit: '发送消息',
                 
                 // Inquiry Form (B2B High-Conversion)
                 inquiry_form_title: '获取报价',
@@ -681,7 +801,7 @@ class MultiLanguageSystem {
                 contact_seo_footer: '正在寻找可靠的定制帐篷、旗帜或展示系统制造商？立即联系伟群，讨论您的项目需求。',
                 
                 // Logo Badge
-                logo_since: 'Since 2010',
+                logo_since: '始于2010',
                 
                 // 页脚
                 footer_desc: '专业的户外家具制造服务提供商，致力于为客户提供最优质的产品和服务。',
@@ -707,21 +827,21 @@ class MultiLanguageSystem {
                 // Contact Bottom (Signazon-style)
                 footer_company_line_cn: '广西伟群帐篷制造有限公司',
                 footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
-                footer_findus: '地址 Find Us',
-                footer_address: 'Address: Daping Changtangao, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, China',
-                footer_contact: '联系 Contact',
-                footer_companyinfo: '公司信息 Company Info',
-                footer_about: '关于我们 About Us',
-                footer_products: '产品中心 Products',
-                footer_contactus: '联系我们 Contact Us',
-                footer_ask_title: '产品/设计咨询 Ask anything…',
-                footer_ask_text: '请告诉我们产品类型、尺寸、数量与印刷需求，我们将在 24 小时内回复 / We reply within 24 hours.',
-                footer_ask_btn: '获取报价 Get a Quote',
-                footer_ask_btn2: 'WhatsApp 咨询 WhatsApp Now',
-                footer_copyright: '© 2026 广西伟群帐篷制造有限公司 / Guangxi WaiKwan Tent Manufacturing Co., Ltd. 保留所有权利 All Rights Reserved.',
-                footer_terms: '条款 Terms',
-                footer_privacy: '隐私 Privacy',
-                footer_sitemap: '站点地图 Site Map',
+                footer_findus: '地址',
+                footer_address: '广西玉林市陆川县古城镇陆因村大坪队长塘坳<br>中国',
+                footer_contact: '联系',
+                footer_companyinfo: '公司信息',
+                footer_about: '关于我们',
+                footer_products: '产品中心',
+                footer_contactus: '联系我们',
+                footer_ask_title: '产品与设计咨询',
+                footer_ask_text: '请告诉我们产品类型、尺寸、数量与印刷需求，我们将在 24 小时内回复。',
+                footer_ask_btn: '获取报价',
+                footer_ask_btn2: 'WhatsApp 咨询',
+                footer_copyright: '© 2026 广西伟群帐篷制造有限公司 保留所有权利',
+                footer_terms: '使用条款',
+                footer_privacy: '隐私政策',
+                footer_sitemap: '站点地图',
                 
                 // 产品详情页标签
                 tab_desc: '产品描述',
@@ -745,6 +865,7 @@ class MultiLanguageSystem {
                 nav_products: 'Products',
                 nav_services: 'Services',
                 nav_contact: 'Contact',
+                nav_faq: 'FAQ',
                 nav_factory_strength: 'Factory Strength',
                 nav_core_categories: 'Core Categories',
                 nav_why_choose_us: 'Why Choose Us',
@@ -900,6 +1021,123 @@ class MultiLanguageSystem {
                 home_cta_secondary: 'Go to Product Center',
 
                 home_sticky_quote: 'Get a Quote',
+
+                nav_buyer_resources: 'Buyer Resources',
+                home_core_partner_intro_html:
+                    'Looking for a factory partner? Start here: '
+                    + '<a href="custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a>, '
+                    + '<a href="beach-flag-supplier.html">beach flag supplier</a>, '
+                    + '<a href="portable-display-systems.html">portable display systems manufacturer</a>. '
+                    + 'New buyers: read our <a href="faq.html">MOQ / artwork / shipping FAQ</a> first.',
+                home_fast_start_html:
+                    'Fast start: send your size/quantity/artwork to get a quote, or use our guides: '
+                    + '<a href="faq-moq.html">MOQ</a>, '
+                    + '<a href="faq-artwork-files.html">artwork files</a>, '
+                    + '<a href="faq-shipping.html">shipping options</a>.',
+                home_guides_title: 'Guides',
+                home_guides_subtitle:
+                    'Short B2B sourcing guides on OEM/ODM programs, export packing, and product specs — written for distributors and procurement teams.',
+                home_guide_read_cta: 'Read guide',
+                home_guide_1_title: 'SEG Fabric Light Box Manufacturer (B2B Custom Sizes)',
+                home_guide_1_desc: 'Aluminum extrusions, backlit fabric and LED modules for retail, exhibitions and wholesale programs.',
+                home_guide_2_title: 'Custom Printed Canopy Tent Manufacturer (OEM China)',
+                home_guide_2_desc: 'Pop-up frames, branded canopies, bulk MOQ and export packing for distributors and brands.',
+                home_guide_3_title: 'Portable Trade Show Booth Backdrop (Export)',
+                home_guide_3_desc: 'Collapsible frames, printed skins and export cartons for distributors shipping globally.',
+                home_guide_4_title: 'Aluminum Frame Pop-Up Tent (Factory Direct Export)',
+                home_guide_4_desc: 'Lightweight hex profiles, branded canopies, walls and roller bags with OEM packing support.',
+                home_guide_5_title: 'Event Feather Flag Printing (Factory Direct)',
+                home_guide_5_desc: 'Dye-sublimation on polyester, pole kits and bases for events, agencies and wholesale buyers.',
+                home_guide_6_title: 'Heavy Duty Gazebo Tent (Europe Shipping)',
+                home_guide_6_desc: 'Reinforced frames, tops and sidewalls with export-friendly packing for EU destinations.',
+                home_guide_7_title: 'Modular Exhibition Display Hardware (ODM)',
+                home_guide_7_desc: 'Aluminum profiles, connectors and fabric or panel infills for booth builders and distributors.',
+                home_guide_8_title: 'Tension Fabric Display Wall (OEM Trade Show)',
+                home_guide_8_desc: 'Aluminum frames, SEG or pillowcase graphics and portable bags for exhibitors and wholesale buyers.',
+                home_guides_view_all: 'View all guides',
+                home_guides_footer_html:
+                    'Browse products: '
+                    + '<a href="product-center.html">Product center</a> · '
+                    + '<a href="all-products.html">All products</a> · '
+                    + '<a href="all-products.html?cat=lightbox">Light box series</a> · '
+                    + '<a href="all-products.html?cat=tents">Canopy tents</a> · '
+                    + '<a href="news/index.html">News</a> · '
+                    + '<a href="site-map.html">Site map</a>',
+
+                home_buyer_title: 'Buyer Resources',
+                home_buyer_subtitle:
+                    'Quick pages for MOQ, lead time, artwork files, color matching and shipping — plus keyword landing pages for fast supplier matching.',
+                home_br_1_title: 'SEG light box manufacturer',
+                home_br_1_desc: 'SEG frames, fabric light boxes and backlit systems for retail and exhibitions.',
+                home_br_2_title: 'tension fabric backwall',
+                home_br_2_desc: 'Trade show fabric backdrops: straight, curved and modular tension systems.',
+                home_br_3_title: 'aluminum folding tent',
+                home_br_3_desc: 'Heavy-duty aluminum frames, waterproof canopies and custom printing.',
+                home_br_4_title: 'Custom Canopy Tent Manufacturer',
+                home_br_4_desc: 'Product range, MOQ, lead time, export support and fast quote.',
+                home_br_5_title: 'Beach Flag Supplier',
+                home_br_5_desc: 'Feather/teardrop flags with poles & bases, printing guidance.',
+                home_br_6_title: 'Portable Display Systems',
+                home_br_6_desc: 'Trade show displays, counters, roll-up stands and kits.',
+                home_br_7_title: 'FAQ (MOQ / Artwork / Shipping)',
+                home_br_7_desc: '5–10 minute reading saves days of back-and-forth on specs.',
+                home_buyer_btn_moq: 'Start with MOQ',
+                home_buyer_seo_links_html:
+                    '<a href="seg-light-box-manufacturer.html" style="color: var(--wk-red-700); font-weight: 600;">SEG light box manufacturer</a>'
+                    + '<a href="tension-fabric-backwall.html" style="color: var(--wk-red-700); font-weight: 600;">tension fabric backwall</a>'
+                    + '<a href="aluminum-folding-tent.html" style="color: var(--wk-red-700); font-weight: 600;">aluminum folding tent</a>'
+                    + '<a href="product-center.html?cat=tents" style="color: var(--wk-red-700); font-weight: 600;">Custom canopy tents manufacturer</a>'
+                    + '<a href="product-center.html?cat=flags" style="color: var(--wk-red-700); font-weight: 600;">Beach flags &amp; feather flag systems</a>'
+                    + '<a href="product-center.html?cat=displays" style="color: var(--wk-red-700); font-weight: 600;">Pop-up display systems &amp; trade show backwalls</a>'
+                    + '<a href="products-accessories.html" style="color: var(--wk-red-700); font-weight: 600;">Tent &amp; display accessories</a>'
+                    + '<a href="all-products.html" style="color: var(--wk-red-700); font-weight: 600;">All products catalog</a>'
+                    + '<a href="seo/trade-show-canopy-tent-manufacturer-for-distributors.html" style="color: var(--wk-red-700); font-weight: 600;">Trade show tent sourcing (B2B)</a>'
+                    + '<a href="seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html" style="color: var(--wk-red-700); font-weight: 600;">Wholesale beach flag manufacturing</a>'
+                    + '<a href="seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html" style="color: var(--wk-red-700); font-weight: 600;">OEM tension fabric displays</a>'
+                    + '<a href="site-map.html#seo-guides" style="color: var(--wk-red-700); font-weight: 600;">More B2B sourcing guides</a>',
+
+                landing_top_bar_canopy: 'Factory direct · OEM/ODM · Reply within 24 hours',
+                landing_canopy_h1: 'Custom Canopy Tents Manufacturer',
+                landing_canopy_lead: 'OEM/ODM printed pop up tents, event canopies and accessories — factory-direct from China, exporting worldwide.',
+                landing_canopy_card_range_t: 'Product Range',
+                landing_canopy_card_range_d: 'Pop up canopy tents, heavy-duty frames, custom printed canopies/walls, awnings and accessories.',
+                landing_canopy_card_moq_t: 'MOQ',
+                landing_canopy_card_moq_d: 'Flexible MOQ depending on model and printing (commonly 1–5 sets for sample, 10+ for bulk).',
+                landing_canopy_card_lead_t: 'Lead Time',
+                landing_canopy_card_lead_d: 'Typical production 7–15 days after artwork approval. Rush options available.',
+                landing_canopy_card_export_t: 'Export Support',
+                landing_canopy_card_export_d: 'Export-ready packing, HS code support, sea/air/express shipping to US/EU/AU and more.',
+                landing_canopy_btn_wa: 'WhatsApp',
+                landing_canopy_btn_browse: 'Browse Tent Products',
+                landing_canopy_contact_line_html:
+                    'Contact: <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp: '
+                    + '<a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · WeChat: massifmyth',
+                landing_canopy_popular_h2: 'Popular Custom Options',
+                landing_canopy_popular_sub: 'Tell us your size, frame grade, printing needs and target market — we will recommend the best setup.',
+                landing_canopy_popular_note_html:
+                    'Heavy-duty frame focus: <a href="aluminum-folding-tent.html">aluminum folding tent</a> · Backlit displays: '
+                    + '<a href="seg-light-box-manufacturer.html">SEG light box manufacturer</a> · Fabric backwalls: '
+                    + '<a href="tension-fabric-backwall.html">tension fabric backwall</a>. '
+                    + 'Deeper reads: <a href="seo/custom-printed-canopy-tent-manufacturer-oem-china.html">custom printed canopy OEM (China)</a> · '
+                    + '<a href="seo/folding-event-tent-supplier-wholesale-moq.html">folding event tent wholesale MOQ</a> · '
+                    + '<a href="site-map.html#seo-guides">more B2B guides</a>.',
+                landing_canopy_opt_size_t: 'Sizes',
+                landing_canopy_opt_size_d: '10x10 ft, 10x15 ft, 10x20 ft (and metric sizes). Custom size supported.',
+                landing_canopy_opt_frame_t: 'Frames',
+                landing_canopy_opt_frame_d: 'Aluminum or steel frames; lightweight, heavy-duty, wind-resistant options.',
+                landing_canopy_opt_print_t: 'Printing',
+                landing_canopy_opt_print_d: 'Full color CMYK, single/double side, canopy + walls; UV resistant fabrics.',
+                landing_canopy_opt_acc_t: 'Accessories',
+                landing_canopy_opt_acc_d: 'Sandbags, stakes, wheeled bags, LED lights, awnings, connecting gutters.',
+                landing_canopy_faq_h2: 'Buyer FAQs (Recommended)',
+                landing_canopy_faq_sub: 'These pages help your team confirm specs faster and reduce mistakes on artwork and shipping.',
+                landing_canopy_faq_moq_q: 'What is your MOQ?',
+                landing_canopy_faq_moq_d: 'MOQ by model/printing, sample policy, and how to start small safely.',
+                landing_canopy_faq_lead_q: 'What is your lead time?',
+                landing_canopy_faq_lead_d: 'Typical production timeline and what affects delivery dates.',
+                landing_canopy_faq_art_q: 'What artwork files do you need?',
+                landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
+                landing_canopy_faq_view_all: 'View all FAQs',
                 
                 // About
                 about_title: 'About Guangxi WaiKwan Tent Manufacturing Co., Ltd',
@@ -907,10 +1145,10 @@ class MultiLanguageSystem {
                 about_intro: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd is a professional source manufacturer specializing in tents, beach flags, display systems and portable outdoor branding systems. With over 25 years of manufacturing experience, we focus on delivering reliable, easy-to-install and fully customizable display solutions for global brands, distributors and project clients. From product design and material selection to printing and final assembly, all processes are completed in-house to ensure consistent quality, stable lead time and competitive pricing.',
                 about_intro_rest: 'With over <strong>25 years</strong> in portable outdoor display solutions, we deliver stable, efficient and customizable systems for customers worldwide.',
                 about_mission_title: 'Our Mission',
-                about_mission: 'Our Mission', // 兼容旧key
+                about_mission: 'Our Mission',
                 about_mission_text: 'Our mission is to support brand visibility and marketing success by providing high-quality, customizable and easy-to-use tent and display solutions for events, exhibitions and outdoor promotions worldwide.',
                 about_vision_title: 'Our Vision',
-                about_vision: 'Our Vision', // 兼容旧key
+                about_vision: 'Our Vision',
                 about_vision_text: 'Our vision is to become a long-term, trusted manufacturing partner in the global tent and display system industry, delivering stable quality, flexible customization and sustainable value for our clients.',
                 about_stat_years: 'Years Manufacturing Experience',
                 about_stat_clients: 'Global Clients',
@@ -983,7 +1221,6 @@ class MultiLanguageSystem {
                 sizes_get_quote: 'Get Quote',
                 sizes_note: 'Standard sizes are for reference only. Contact us for custom solutions.',
                 sizes_cta: 'Get a Quote',
-                // 保留旧键名以兼容
                 popular_sizes_title: 'Standard Size Options',
                 popular_sizes_subtitle: 'Standard sizes shown below. Custom sizes & modular combinations available.',
                 size_category_tent_title: 'Pop-up Canopy Tent',
@@ -1031,7 +1268,6 @@ class MultiLanguageSystem {
                 products_title: 'Products',
                 products_subtitle: 'Tents · Flags · Display Systems · Outdoor Branding Systems',
                 products_subtitle_en: '',
-                // 标准 i18n key（统一命名）
                 products_tents_title: 'Tents',
                 products_tents_desc: 'We offer a complete range of tent solutions including pop-up tents, marquees and large event tents. Designed for exhibitions, promotions and outdoor events, our tents are available in standard sizes or fully customized to meet specific project requirements.',
                 products_flags_title: 'Beach Flags & Poles',
@@ -1043,7 +1279,6 @@ class MultiLanguageSystem {
                 products_custom_title: 'Custom Solutions',
                 products_custom_desc: 'We provide OEM and ODM services, offering full customization from structure design and sizing to graphic printing. Our team works closely with clients to deliver tailored solutions for different markets and applications.',
                 products_cta: 'Get a Quote',
-                // 兼容旧key
                 products_category_tents_title: 'Tents',
                 products_category_tents_desc: 'A full range of tent solutions designed for promotions, exhibitions and outdoor events. Custom sizes and branding options available.',
                 products_category_tents_desc_en: '',
@@ -1235,6 +1470,8 @@ class MultiLanguageSystem {
                 // Breadcrumb and Search
                 breadcrumb_home: 'Home',
                 breadcrumb_products: 'Products',
+                search_overlay_title: 'Search products',
+                search_overlay_button: 'Search',
                 products_search_placeholder: 'Search products (name / keywords / specs)',
                 filters_title: 'Filters',
                 filters_clear: 'Clear',
@@ -1273,12 +1510,12 @@ class MultiLanguageSystem {
                 contact_seo_text: 'Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.',
                 contact_address_label: 'Address',
                 contact_address_title: 'Address',
-                contact_address_value: 'Daping Changtangao, Luyin Village, Gucheng Town, Luchuan County, Yulin City, China',
-                contact_address: 'Daping Changtangao, Luyin Village, Gucheng Town, Luchuan County, Yulin City, Guangxi, China', // 兼容旧key
+                contact_address_value: 'Changtangao, Daping Team, Luyin Village, Gucheng Town, Luchuan County, Yulin City, Guangxi, China',
+                contact_address: 'Changtangao, Daping Team, Luyin Village, Gucheng Town, Luchuan County, Yulin City, Guangxi, China',
                 contact_phone_label: 'Phone',
-                contact_phone_title: 'Phone Number', // 兼容旧key
+                contact_phone_title: 'Phone Number',
                 contact_email_label: 'Email',
-                contact_email_title: 'Email Address', // 兼容旧key
+                contact_email_title: 'Email Address',
                 contact_qr_title: 'Scan to Contact',
                 whatsapp_label: 'WhatsApp',
                 contact_whatsapp_title: 'WhatsApp',
@@ -1293,11 +1530,11 @@ class MultiLanguageSystem {
                 contact_form_phone: 'Phone Number',
                 contact_form_message: 'Your Message',
                 contact_form_submit: 'Send Message',
-                form_name: 'Your Name', // 兼容旧key
-                form_email: 'Your Email', // 兼容旧key
-                form_phone: 'Phone Number', // 兼容旧key
-                form_message: 'Your Message', // 兼容旧key
-                form_submit: 'Send Message', // 兼容旧key
+                form_name: 'Your Name',
+                form_email: 'Your Email',
+                form_phone: 'Phone Number',
+                form_message: 'Your Message',
+                form_submit: 'Send Message',
                 
                 // Inquiry Form (B2B High-Conversion)
                 inquiry_form_title: 'Get a Quote',
@@ -1408,7 +1645,7 @@ class MultiLanguageSystem {
                 footer_company_line_cn: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
                 footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
                 footer_findus: 'Find Us',
-                footer_address: 'Daping Changtangao, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, China',
+                footer_address: 'Changtangao, Daping Team, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, Guangxi, China',
                 footer_contact: 'Contact',
                 footer_companyinfo: 'Company Info',
                 footer_about: 'About Us',
@@ -1577,6 +1814,8 @@ class MultiLanguageSystem {
                 // パンくずリストと検索
                 breadcrumb_home: 'ホーム',
                 breadcrumb_products: '製品センター',
+                search_overlay_title: '製品を検索',
+                search_overlay_button: '検索',
                 products_search_placeholder: '製品を検索（名前/キーワード/仕様）',
                 filters_title: 'フィルター',
                 filters_clear: 'クリア',
@@ -1661,7 +1900,7 @@ class MultiLanguageSystem {
                 footer_company_line_cn: '広西偉群テント製造有限公司',
                 footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
                 footer_findus: '所在地',
-                footer_address: 'Daping Changtangao, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, China',
+                footer_address: 'Changtangao, Daping Team, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, Guangxi, China',
                 footer_contact: '連絡先',
                 footer_companyinfo: '会社情報',
                 footer_about: '会社概要',
@@ -1816,6 +2055,8 @@ class MultiLanguageSystem {
                 // 브레드크럼 및 검색
                 breadcrumb_home: '홈',
                 breadcrumb_products: '제품센터',
+                search_overlay_title: '제품 검색',
+                search_overlay_button: '검색',
                 products_search_placeholder: '제품 검색 (이름/키워드/사양)',
                 filters_title: '필터',
                 filters_clear: '지우기',
@@ -1899,7 +2140,7 @@ class MultiLanguageSystem {
                 footer_company_line_cn: '광시웨이췬 텐트 제조 유한공사',
                 footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
                 footer_findus: '위치',
-                footer_address: 'Daping Changtangao, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, China',
+                footer_address: 'Changtangao, Daping Team, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, Guangxi, China',
                 footer_contact: '연락처',
                 footer_companyinfo: '회사 정보',
                 footer_about: '회사 소개',

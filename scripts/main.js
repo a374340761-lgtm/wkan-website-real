@@ -1952,14 +1952,14 @@ function initSearch() {
                 </button>
 
                 <div class="search-title">
-                    <span class="en">Search products</span>
-                    <span class="zh">搜索产品</span>
+                    <span class="zh" data-translate="search_overlay_title"></span>
+                    <span class="en" data-translate="search_overlay_title"></span>
                 </div>
 
                 <div class="search-row">
                     <input id="searchOverlayInput" type="text" data-translate-placeholder="products_search_placeholder" placeholder="" autocomplete="off" />
                     <button id="searchOverlayGo" class="btn btn-primary" type="button">
-                        <span class="en">Search</span><span class="zh">搜索</span>
+                        <span class="zh" data-translate="search_overlay_button"></span><span class="en" data-translate="search_overlay_button"></span>
                     </button>
                 </div>
 

@@ -63,7 +63,7 @@
           <div class="contact-bottom__cols">
             <div class="contact-bottom__col">
               <div class="contact-bottom__h" data-i18n="footer_findus">Find Us</div>
-              <div class="contact-bottom__p" data-i18n="footer_address">Daping Changtangao, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, China</div>
+              <div class="contact-bottom__p" data-i18n="footer_address">Changtangao, Daping Team, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, Guangxi, China</div>
             </div>
             <div class="contact-bottom__col">
               <div class="contact-bottom__h" data-i18n="footer_contact">Contact</div>

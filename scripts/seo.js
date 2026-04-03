@@ -191,7 +191,7 @@
           },
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Daping Changtangao, Luyin Village, Gucheng Town',
+            streetAddress: 'Changtangao, Daping Team, Luyin Village, Gucheng Town',
             addressLocality: 'Luchuan County',
             addressRegion: 'Yulin',
             addressCountry: 'CN'

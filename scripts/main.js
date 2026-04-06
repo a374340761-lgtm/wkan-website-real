@@ -311,10 +311,23 @@ function getCategoryTranslateKey(cat) {
 function getHomeHeroSlides() {
     // Use real filenames from /images/hero (verified in repo)
     return [
-        { image: 'images/hero/Waikwantentshero.png', keyPrefix: 'home_hero_1' },
-        { image: 'images/hero/waikwanflagshero.png', keyPrefix: 'home_hero_2' },
+        {
+            image: 'images/hero/Waikwantentshero.png',
+            keyPrefix: 'home_hero_1',
+            secondaryHref: 'product-center.html?cat=tents'
+        },
+        {
+            image: 'images/hero/waikwanflagshero.png',
+            keyPrefix: 'home_hero_2',
+            secondaryHref: 'product-center.html?cat=flags'
+        },
         // Cache-bust to ensure the updated JPEG shows immediately.
-        { image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }
+        {
+            image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123',
+            keyPrefix: 'home_hero_3',
+            variant: 'light',
+            secondaryHref: 'product-center.html?category=displays'
+        }
     ];
 }
 
@@ -339,6 +352,7 @@ function renderHomeHeroSlider() {
         const titleKey = `${s.keyPrefix}_title`;
         const subtitleKey = `${s.keyPrefix}_subtitle`;
         const kickerKey = `${s.keyPrefix}_kicker`;
+        const secondaryHref = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
 
         slide.innerHTML = `
             <div class="wk-hero-bg" aria-hidden="true"></div>
@@ -350,7 +364,7 @@ function renderHomeHeroSlider() {
                     <p class="wk-hero-sub" data-translate="${subtitleKey}"></p>
                     <div class="wk-hero-actions">
                         <a class="btn btn-primary" href="#contact" data-translate="home_hero_primary_cta"></a>
-                        <a class="btn btn-secondary" href="product-center.html" data-translate="home_hero_secondary_cta"></a>
+                        <a class="btn btn-secondary" href="${secondaryHref}" data-translate="home_hero_secondary_cta"></a>
                     </div>
                 </div>
             </div>

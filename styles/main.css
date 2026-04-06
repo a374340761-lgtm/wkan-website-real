@@ -2697,6 +2697,9 @@ html[lang="en"] .since{
     
     .hamburger {
         display: flex;
+        position: relative;
+        z-index: 6;
+        flex-shrink: 0;
     }
     
     .nav-menu {
@@ -2717,7 +2720,8 @@ html[lang="en"] .since{
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
         overflow: auto;
-        z-index: 999; /* under navbar (1000), above page */
+        /* Above .back-to-top (1000), .wk-sticky-quote (1003), .wk-cookie-banner (1200); below .modal (2000) */
+        z-index: 1400;
 
         /* override later desktop-centering rules */
         transform: none !important;
@@ -2760,6 +2764,21 @@ html[lang="en"] .since{
     
     .nav-actions {
         gap: var(--spacing-sm);
+        flex-shrink: 0;
+        position: relative;
+        z-index: 5;
+    }
+
+    /* 窄屏下取消 980px 段的 min-width:220px，避免品牌区盖住右侧图标/汉堡 */
+    .nav-logo {
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .nav-brand {
+        min-width: 0 !important;
+        max-width: calc(100vw - 180px);
     }
     
     .nav-icon-btn {

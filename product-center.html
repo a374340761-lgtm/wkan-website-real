@@ -39,8 +39,6 @@
             <div class="language-options">
                 <button data-lang="en" data-lang-option="en">English</button>
                 <button data-lang="zh" data-lang-option="zh">中文</button>
-                <button data-lang="ja" data-lang-option="ja">日本語</button>
-                <button data-lang="ko" data-lang-option="ko">한국어</button>
             </div>
         </div>
     </div>
@@ -49,8 +47,6 @@
     <div class="language-switcher old-lang-switcher" style="display: none;">
         <button class="lang-btn active" data-lang="zh">中文</button>
         <button class="lang-btn" data-lang="en">English</button>
-        <button class="lang-btn" data-lang="ja">日本語</button>
-        <button class="lang-btn" data-lang="ko">한국어</button>
     </div>
 
     <!-- 顶部提示栏 -->
@@ -86,15 +82,15 @@
                         <i class="fas fa-chevron-down"></i>
                     </a>
                         <div class="dropdown-menu">
-                                        <a href="product-center.html?category=tents"><span class="zh" data-translate="home_cat_tents_title"></span><span class="en" data-translate="home_cat_tents_title"></span></a>
-                                        <a href="product-center.html?category=flags"><span class="zh" data-translate="menu_beach_flags"></span><span class="en" data-translate="menu_beach_flags"></span></a>
-                                        <a href="product-center.html?category=displays"><span class="zh" data-translate="menu_popup_displays"></span><span class="en" data-translate="menu_popup_displays"></span></a>
-                                        <a href="product-center.html?category=advertising-arch"><span class="zh" data-translate="category_advertising_arch"></span><span class="en" data-translate="category_advertising_arch"></span></a>
-                                        <a href="product-center.html?category=water-filled-a-poster-stand"><span class="zh" data-translate="category_water_filled_a_poster_stand"></span><span class="en" data-translate="category_water_filled_a_poster_stand"></span></a>
-                                        <a href="product-center.html?category=lightbox"><span class="zh" data-translate="category_lightbox"></span><span class="en" data-translate="category_lightbox"></span></a>
+                                        <a href="product-center.html?cat=tents"><span class="zh" data-translate="home_cat_tents_title"></span><span class="en" data-translate="home_cat_tents_title"></span></a>
+                                        <a href="product-center.html?cat=flags"><span class="zh" data-translate="menu_beach_flags"></span><span class="en" data-translate="menu_beach_flags"></span></a>
+                                        <a href="product-center.html?cat=displays"><span class="zh" data-translate="menu_popup_displays"></span><span class="en" data-translate="menu_popup_displays"></span></a>
+                                        <a href="product-center.html?cat=advertising-arch"><span class="zh" data-translate="category_advertising_arch"></span><span class="en" data-translate="category_advertising_arch"></span></a>
+                                        <a href="product-center.html?cat=water-filled-a-poster-stand"><span class="zh" data-translate="category_water_filled_a_poster_stand"></span><span class="en" data-translate="category_water_filled_a_poster_stand"></span></a>
+                                        <a href="product-center.html?cat=lightbox"><span class="zh" data-translate="category_lightbox"></span><span class="en" data-translate="category_lightbox"></span></a>
                                                             <a href="furniture-type.html?type=table-chair-stool-toilet"><span class="zh" data-translate="menu_table_chair_stool_toilet"></span><span class="en" data-translate="menu_table_chair_stool_toilet"></span></a>
                                                             <a href="dome-type.html?type=dome-3-folders"><span class="zh" data-translate="menu_dome_3_folders"></span><span class="en" data-translate="menu_dome_3_folders"></span></a>
-                                        <a href="product-center.html?category=racegate"><span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span></a>
+                                        <a href="product-center.html?cat=racegate"><span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span></a>
                                                     <a href="product-center.html?notice=category_unavailable"><span class="zh" data-translate="menu_replacement_parts"></span><span class="en" data-translate="menu_replacement_parts"></span></a>
                         </div>
                 </li>
@@ -132,8 +128,6 @@
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
                         <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
                         <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
-                        <button type="button" class="lang-item" data-lang="ja" data-lang-option="ja">日本語</button>
-                        <button type="button" class="lang-item" data-lang="ko" data-lang-option="ko">한국어</button>
                     </div>
                 </div>
             </div>
@@ -158,6 +152,19 @@
                     </span>
                 </nav>
 
+                <div id="productCenterContext" class="pc-context-banner" hidden>
+                    <div class="pc-context-banner__inner">
+                        <div class="pc-context-banner__text">
+                            <span class="pc-context-banner__badge" id="pcContextBadge"></span>
+                            <span class="pc-context-banner__hint" data-translate="pc_context_overview_hint"></span>
+                        </div>
+                        <div class="pc-context-banner__actions">
+                            <a class="btn btn-secondary" id="pcContextCatalog" href="all-products.html" data-translate="pc_context_browse_skus"></a>
+                            <a class="btn btn-tertiary" href="product-center.html" data-translate="pc_context_all_categories"></a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="section-header">
                     <h1 data-translate="product_center_title">产品中心</h1>
                     <p data-translate="product_center_subtitle">选择分类进入，或去"全部产品"搜索。</p>
@@ -168,7 +175,7 @@
                 <div class="product-categories-showcase">
                     <div class="categories-grid">
                         <!-- 1. Custom Tents -->
-                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?category=tents'">
+                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?cat=tents'">
                             <div class="category-image">
                                 <i class="fa-solid fa-campground"></i>
                             </div>
@@ -187,7 +194,7 @@
                         </div>
 
                         <!-- 2. Stock Tents -->
-                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?category=tents&notice=stock'">
+                        <div class="category-card" data-category="tents" onclick="location.href='product-center.html?cat=tents&notice=stock'">
                             <div class="category-image">
                                 <i class="fa-solid fa-warehouse"></i>
                             </div>
@@ -206,7 +213,7 @@
                         </div>
 
                         <!-- 3. Beach Flags & Poles -->
-                        <div class="category-card" data-category="flags" onclick="location.href='product-center.html?category=flags'">
+                        <div class="category-card" data-category="flags" onclick="location.href='product-center.html?cat=flags'">
                             <div class="category-image">
                                 <i class="fa-solid fa-flag"></i>
                             </div>
@@ -225,7 +232,7 @@
                         </div>
 
                         <!-- 4. Display Systems (renamed) -->
-                        <div class="category-card" data-category="displays" onclick="location.href='product-center.html?category=displays'">
+                        <div class="category-card" data-category="displays" onclick="location.href='product-center.html?cat=displays'">
                             <div class="category-image">
                                 <i class="fa-solid fa-cube"></i>
                             </div>
@@ -244,7 +251,7 @@
                         </div>
 
                         <!-- 4.2 Advertising Arch -->
-                        <div class="category-card" data-category="advertising-arch" onclick="location.href='product-center.html?category=advertising-arch'">
+                        <div class="category-card" data-category="advertising-arch" onclick="location.href='product-center.html?cat=advertising-arch'">
                             <div class="category-image">
                                 <i class="fa-solid fa-archway"></i>
                             </div>
@@ -254,7 +261,7 @@
                         </div>
 
                         <!-- 4.3 Water Filled A Poster Stand -->
-                        <div class="category-card" data-category="water-filled-a-poster-stand" onclick="location.href='product-center.html?category=water-filled-a-poster-stand'">
+                        <div class="category-card" data-category="water-filled-a-poster-stand" onclick="location.href='product-center.html?cat=water-filled-a-poster-stand'">
                             <div class="category-image">
                                 <i class="fa-solid fa-sign-hanging"></i>
                             </div>
@@ -264,7 +271,7 @@
                         </div>
 
                         <!-- 4.5 Light Box Series -->
-                        <div class="category-card" data-category="lightbox" onclick="location.href='product-center.html?category=lightbox'">
+                        <div class="category-card" data-category="lightbox" onclick="location.href='product-center.html?cat=lightbox'">
                             <div class="category-image">
                                 <i class="fa-solid fa-lightbulb"></i>
                             </div>
@@ -312,7 +319,7 @@
                         </div>
 
                         <!-- 7. Race Gate -->
-                        <div class="category-card" data-category="racegate" onclick="location.href='product-center.html?category=racegate'">
+                        <div class="category-card" data-category="racegate" onclick="location.href='product-center.html?cat=racegate'">
                             <div class="category-image">
                                 <i class="fa-solid fa-flag-checkered"></i>
                             </div>
@@ -436,12 +443,11 @@
                             Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
                         </div>
                         <div class="contact-bottom__askActions">
-                            <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
-                                Get a Quote
-                            </a>
-                            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
-                                WhatsApp Now
-                            </a>
+                            <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
+                            <a href="all-products.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
+                        </div>
+                        <div class="contact-bottom__askSupport">
+                            <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
                         </div>
                     </div>
                 </div>

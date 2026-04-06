@@ -18,8 +18,8 @@ window.HERO_SLIDES = [
             { label: 'Lead Time', valueZh: '样品 7–15 天｜大货 15–25 天', valueEn: '7–15 days (sample) · 15–25 days (bulk)' }
         ],
         ctaHref: './product-center.html?cat=displays',
-    ctaTextZh: '查看详情',
-    ctaTextEn: 'View Details'
+    ctaTextZh: '浏览该分类',
+    ctaTextEn: 'Browse Category'
   },
   {
     id: 'flags',
@@ -37,8 +37,8 @@ window.HERO_SLIDES = [
       { label: 'Application', valueZh: '展会 · 商业推广 · 户外活动', valueEn: 'Events · Promotions · Outdoor use' }
     ],
     ctaHref: './product-center.html?cat=flags',
-    ctaTextZh: '查看详情',
-    ctaTextEn: 'View Details'
+    ctaTextZh: '浏览该分类',
+    ctaTextEn: 'Browse Category'
   },
   {
     id: 'tents',
@@ -56,8 +56,8 @@ window.HERO_SLIDES = [
       { label: 'Customization', valueZh: 'LOGO 印刷 · 颜色定制 · 配件可选', valueEn: 'Logo printing · Color options · Accessories' }
     ],
     ctaHref: './product-center.html?cat=tents',
-    ctaTextZh: '查看详情',
-    ctaTextEn: 'View Details'
+    ctaTextZh: '浏览该分类',
+    ctaTextEn: 'Browse Category'
   }
 ];
 
@@ -1996,17 +1996,11 @@ class ProductManager {
                 category: 'furniture',
                 name: '可折叠户外桌椅套装',
                 nameEn: 'Foldable Outdoor Table and Chair Set',
-                nameJa: '折りたたみ式アウトドアテーブルチェアセット',
-                nameKo: '접이식 아웃도어 테이블 의자 세트',
                 description: '高品质可折叠户外桌椅套装，便携易用，适合各种户外活动',
                 descriptionEn: 'High-quality foldable outdoor table and chair set, portable and easy to use, suitable for various outdoor activities',
-                descriptionJa: '高品質折りたたみ式アウトドアテーブルチェアセット、ポータブルで使いやすく、様々なアウトドア活動に適しています',
-                descriptionKo: '고품질 접이식 아웃도어 테이블 의자 세트, 휴대용이고 사용하기 쉬우며 다양한 아웃도어 활동에 적합',
                 image: 'outdoor-furniture.jpg',
                 specs: ['铝合金材质', '防水面料', '快速折叠', '便携收纳'],
                 specsEn: ['Aluminum Material', 'Waterproof Fabric', 'Quick Fold', 'Portable Storage'],
-                specsJa: ['アルミ素材', '防水生地', '高速折りたたみ', 'ポータブル収納'],
-                specsKo: ['알루미늄 소재', '방수 원단', '빠른 접기', '휴대용 수납'],
                 price: '起价 ¥599/套'
             },
 
@@ -2404,8 +2398,6 @@ class ProductManager {
         // zh must use *Zh (e.g. nameZh), not plain baseKey — many products omit legacy `name`
         if (lang === 'zh') return this._safeText(p[`${baseKey}Zh`] ?? base ?? '');
         if (lang === 'en') return this._safeText(p[`${baseKey}En`] ?? base ?? '');
-        if (lang === 'ja') return this._safeText(p[`${baseKey}Ja`] ?? p[`${baseKey}En`] ?? base ?? '');
-        if (lang === 'ko') return this._safeText(p[`${baseKey}Ko`] ?? p[`${baseKey}En`] ?? base ?? '');
         return this._safeText(p[`${baseKey}En`] ?? p[`${baseKey}Zh`] ?? base ?? '');
     }
 
@@ -2780,12 +2772,8 @@ class ProductManager {
                 const hay = [
                     product.name, product.description,
                     product.nameEn, product.descriptionEn,
-                    product.nameJa, product.descriptionJa,
-                    product.nameKo, product.descriptionKo,
                     ...(product.specs || []),
                     ...(product.specsEn || []),
-                    ...(product.specsJa || []),
-                    ...(product.specsKo || []),
                     ...(product.keywords || []),
                     ...((product.variants && product.variants.map(v => v.model)) || []),
                     ...(product.searchableKeywords || [])
@@ -2807,9 +2795,7 @@ class ProductManager {
             if (tags && tags.size) {
                 const specs = [
                     ...(product.specs || []),
-                    ...(product.specsEn || []),
-                    ...(product.specsJa || []),
-                    ...(product.specsKo || [])
+                    ...(product.specsEn || [])
                 ].join(' ');
                 let hit = false;
                 tags.forEach(t => {
@@ -2876,7 +2862,11 @@ class ProductManager {
         const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
             ? String(product.sku).trim()
             : (product && product.id != null ? String(product.id).trim() : '');
+        const typeHref = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
         const detailHref = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html';
+        const primaryHref = typeHref || detailHref;
+        const primaryTranslate = typeHref ? 'view_type_button' : 'view_details';
+        const primaryClass = typeHref ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
 
         productDiv.innerHTML = `
             <div class="product-image">
@@ -2890,7 +2880,7 @@ class ProductManager {
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
-                    <a class="btn btn-secondary product-details-btn" href="${detailHref}" data-sku="${preferredSku.replace(/"/g, '&quot;')}" data-translate="view_details"></a>
+                    <a class="${primaryClass}" href="${primaryHref}" data-sku="${preferredSku.replace(/"/g, '&quot;')}" data-translate="${primaryTranslate}"></a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
                         <i class="fas fa-shopping-cart"></i> ${t('btn_add_to_cart')}
                     </button>
@@ -2932,8 +2922,6 @@ getProductIcon(category) {
 
         if (lang === 'zh') return product.nameZh || (this._hasCjk(legacy) ? legacy : '') || '产品';
         if (lang === 'en') return product.nameEn || (!this._hasCjk(legacy) ? legacy : '') || 'Product';
-        if (lang === 'ja') return product.nameJa || '';
-        if (lang === 'ko') return product.nameKo || '';
 
         return product.nameEn || product.nameZh || legacy || 'Product';
     }
@@ -2944,8 +2932,6 @@ getProductIcon(category) {
 
         if (lang === 'zh') return product.shortZh || product.descriptionZh || (this._hasCjk(legacy) ? legacy : '') || '';
         if (lang === 'en') return product.shortEn || product.descriptionEn || (!this._hasCjk(legacy) ? legacy : '') || '';
-        if (lang === 'ja') return product.descriptionJa || '';
-        if (lang === 'ko') return product.descriptionKo || '';
 
         return product.descriptionEn || product.descriptionZh || legacy || '';
     }
@@ -2954,8 +2940,6 @@ getProductIcon(category) {
         const lang = this.currentLanguage || 'en';
         if (lang === 'zh') return product.specsZh || product.specs || [];
         if (lang === 'en') return product.specsEn || product.specs || [];
-        if (lang === 'ja') return product.specsJa || [];
-        if (lang === 'ko') return product.specsKo || [];
         return product.specs || [];
     }
     
@@ -3413,11 +3397,8 @@ getProductIcon(category) {
         };
 
         this.products.forEach(p => {
-            // 多语言 specs 都算一遍，保证英文/日文/韩文搜索也能命中
             (p.specs || []).forEach(add);
             (p.specsEn || []).forEach(add);
-            (p.specsJa || []).forEach(add);
-            (p.specsKo || []).forEach(add);
         });
 
         return [...map.entries()]
@@ -3445,7 +3426,9 @@ getProductIcon(category) {
                 const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
                     ? String(product.sku).trim()
                     : (product && product.id != null ? String(product.id).trim() : '');
+                const typeHref = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
                 const detailHref = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html';
+                const titleHref = typeHref || detailHref;
         const description = this.getLocalizedDescription(product);
         const specs = this.getLocalizedSpecs(product);
 
@@ -3475,13 +3458,13 @@ getProductIcon(category) {
 
             <div class="product-row-info">
                 <h3>
-                    <a href="${detailHref}" style="text-decoration:none;color:inherit;">
+                    <a href="${titleHref}" style="text-decoration:none;color:inherit;">
                         ${name}
                     </a>
                 </h3>
                 <p>${description || ''}</p>
                 <div class="product-specs">
-                    ${(specs || []).slice(0, 4).map(s => `<span>• ${s}</span>`).join('')}
+                    ${(specs || []).slice(0, 4).map(s => `<span class="spec-tag">${this._escapeHtml(String(s))}</span>`).join('')}
                 </div>
             </div>
 
@@ -3853,12 +3836,8 @@ getProductIcon(category) {
                 const hay = [
                     product.name, product.description,
                     product.nameEn, product.descriptionEn,
-                    product.nameJa, product.descriptionJa,
-                    product.nameKo, product.descriptionKo,
                     ...(product.specs || []),
-                    ...(product.specsEn || []),
-                    ...(product.specsJa || []),
-                    ...(product.specsKo || [])
+                    ...(product.specsEn || [])
                 ].filter(Boolean).join(' ').toLowerCase();
                 if (!hay.includes(q)) return false;
             }
@@ -4140,6 +4119,55 @@ const productModalStyles = `
 const styleSheet = document.createElement('style');
 styleSheet.textContent = productModalStyles;
 document.head.appendChild(styleSheet);
+
+/**
+ * Map stock folding tent rows (type "stock") to TENT_TYPES hub keys (folding30 / folding40 / folding50).
+ */
+function mapStockTentToFoldingType(p) {
+    if (!p) return '';
+    const id = Number(p.id);
+    if (id === 2001) return 'folding30';
+    if (id === 2002) return 'folding40';
+    if (id === 2003) return 'folding50';
+    const m = String(p.model || '').toUpperCase();
+    if (m.includes('T30')) return 'folding30';
+    if (m.includes('T40')) return 'folding40';
+    if (m.includes('T50')) return 'folding50';
+    return '';
+}
+
+/**
+ * Primary browse URL for a product: dedicated *-type.html hub when one exists, else empty (caller uses PDP).
+ * Paths are site-root relative (same as existing product-detail.html links).
+ */
+window.WK_getProductTypePageUrl = function (product) {
+    const p = product || {};
+    const cat = String(p.category || '').toLowerCase();
+    const sub = String(p.subcategory || '').trim();
+    const type = String(p.type || '').trim();
+
+    if (sub === 'dome-3-folders') {
+        return 'dome-type.html';
+    }
+    if (cat === 'furniture' && sub === 'table-chair-stool-toilet') {
+        return 'furniture-type.html';
+    }
+    if (cat === 'racegate') {
+        return 'racegate-type.html';
+    }
+    if (cat === 'flags' && type) {
+        return `flag-type.html?type=${encodeURIComponent(type)}`;
+    }
+    if (cat === 'tents') {
+        if (type === 'stock' || sub === 'stock') {
+            const ft = mapStockTentToFoldingType(p);
+            if (ft) return `tent-type.html?type=${encodeURIComponent(ft)}`;
+        } else if (type && type !== 'stock') {
+            return `tent-type.html?type=${encodeURIComponent(type)}`;
+        }
+    }
+    return '';
+};
 
 // 初始化产品管理器
 document.addEventListener('DOMContentLoaded', () => {

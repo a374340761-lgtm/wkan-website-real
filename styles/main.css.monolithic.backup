@@ -11,4 +11,3 @@
 @import url("modules/contact-page.css");
 @import url("modules/layout-misc.css");
 @import url("modules/home.css");
-@import url("modules/product-cards.css");

@@ -286,8 +286,6 @@ function getLocalizedField(product, baseKey) {
     const base = product[baseKey];
     if (lang === 'zh') return product[`${baseKey}Zh`] || base || '';
     if (lang === 'en') return product[`${baseKey}En`] || base || '';
-    if (lang === 'ja') return product[`${baseKey}Ja`] || product[`${baseKey}En`] || base || '';
-    if (lang === 'ko') return product[`${baseKey}Ko`] || product[`${baseKey}En`] || base || '';
     return product[`${baseKey}En`] || product[`${baseKey}Zh`] || base || '';
 }
 
@@ -363,8 +361,8 @@ function renderHomeHeroSlider() {
                     <h1 class="wk-hero-title" data-translate="${titleKey}"></h1>
                     <p class="wk-hero-sub" data-translate="${subtitleKey}"></p>
                     <div class="wk-hero-actions">
-                        <a class="btn btn-primary" href="#contact" data-translate="home_hero_primary_cta"></a>
-                        <a class="btn btn-secondary" href="${secondaryHref}" data-translate="home_hero_secondary_cta"></a>
+                        <a class="btn btn-primary" href="#contact" data-translate="cta_primary"></a>
+                        <a class="btn btn-secondary" href="${secondaryHref}" data-translate="cta_secondary"></a>
                     </div>
                 </div>
             </div>
@@ -451,44 +449,40 @@ function renderHomeCategoryGrid() {
 
     // Category IDs are based on the existing filtering convention: all-products.html?cat=...
     // and the product.category IDs present in scripts/products.js.
+    // Order matches main buyer journeys: tents → flags → displays → light boxes → accessories
     const categories = [
-        { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
         { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
         { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+        { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
         { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
         { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
 
     grid.innerHTML = '';
     categories.forEach((c) => {
-        const a = document.createElement('a');
-        a.className = c.id === 'lightbox' ? 'wk-card wk-cat-card wk-cat-card--lightbox' : 'wk-card wk-cat-card';
-        a.href = `./all-products.html?cat=${encodeURIComponent(c.id)}`;
+        const wrap = document.createElement('div');
+        wrap.className = c.id === 'lightbox' ? 'wk-cat-card-wrap wk-cat-card-wrap--lightbox' : 'wk-cat-card-wrap';
 
-        // For category tiles, prefer curated hero assets (avoid random sprite/pdf images).
+        const hubHref = `./product-center.html?cat=${encodeURIComponent(c.id)}`;
+        const catalogHref = `./all-products.html?cat=${encodeURIComponent(c.id)}`;
+
         const imgSrc = c.img;
-
         const mediaHtml = imgSrc
-            ? `
-                <img class="wk-card-img" src="${imgSrc}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
-              `
-            : `
-                <div class="wk-card-placeholder" aria-hidden="true">
-                    <i class="fas fa-layer-group"></i>
-                </div>
-              `;
+            ? `<img class="wk-card-img" src="${imgSrc}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />`
+            : `<div class="wk-card-placeholder" aria-hidden="true"><i class="fas fa-layer-group"></i></div>`;
 
-        a.innerHTML = `
-            <div class="wk-card-media">
-                ${mediaHtml}
-            </div>
-            <div class="wk-card-body">
-                <h3 class="wk-card-title" data-translate="${c.titleKey}"></h3>
-                <p class="wk-card-desc" data-translate="${c.descKey}"></p>
-                <div class="wk-card-link" data-translate="home_cat_cta"></div>
-            </div>
+        wrap.innerHTML = `
+            <a class="wk-card wk-cat-card wk-cat-card__primary" href="${hubHref}">
+                <div class="wk-card-media">${mediaHtml}</div>
+                <div class="wk-card-body">
+                    <h3 class="wk-card-title" data-translate="${c.titleKey}"></h3>
+                    <p class="wk-card-desc" data-translate="${c.descKey}"></p>
+                    <div class="wk-card-link" data-translate="home_cat_cta_hub"></div>
+                </div>
+            </a>
+            <a class="wk-cat-card__catalog" href="${catalogHref}" data-translate="home_cat_browse_catalog"></a>
         `;
-        grid.appendChild(a);
+        grid.appendChild(wrap);
     });
 }
 
@@ -608,18 +602,23 @@ function renderHomeBestSellers() {
             const img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
             const catKey = getCategoryTranslateKey(safeProduct.category);
 
-            // DETAIL ROUTING (unified)
             const preferredSku = (safeProduct && safeProduct.sku != null && String(safeProduct.sku).trim() !== '')
                 ? String(safeProduct.sku).trim()
                 : (safeProduct && safeProduct.id != null ? String(safeProduct.id).trim() : '');
+            const typeHref = (typeof window.WK_getProductTypePageUrl === 'function')
+                ? window.WK_getProductTypePageUrl(safeProduct)
+                : '';
             const detailHref = preferredSku
                 ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}`
                 : `./all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`;
+            const primaryHref = typeHref || detailHref;
+            const primaryTranslate = typeHref ? 'view_type_button' : 'view_details';
+            const btnClass = typeHref ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
 
             const card = document.createElement('div');
             card.className = 'wk-card wk-product-card';
             card.innerHTML = `
-                <a class="wk-product-media" href="${detailHref}" aria-label="${String(name).replace(/"/g, '&quot;')}">
+                <a class="wk-product-media" href="${primaryHref}" aria-label="${String(name).replace(/"/g, '&quot;')}">
                     <img class="wk-product-img" src="${img}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
                 </a>
                 <div class="wk-card-body">
@@ -630,7 +629,7 @@ function renderHomeBestSellers() {
                     </div>
                     ${shortDesc ? `<div class="wk-product-desc">${String(shortDesc).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>` : ''}
                     <div class="wk-product-actions">
-                        <a class="btn btn-secondary" href="${detailHref}" data-translate="view_details"></a>
+                        <a class="${btnClass}" href="${primaryHref}" data-translate="${primaryTranslate}"></a>
                     </div>
                 </div>
             `;
@@ -735,7 +734,13 @@ function initNavigation() {
     
     function closeMobileMenu() {
         if (navMenu) navMenu.classList.remove('active');
-        if (hamburger) hamburger.classList.remove('active');
+        if (hamburger) {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+        document.querySelectorAll('.nav-item-dropdown.is-expanded').forEach((el) => {
+            el.classList.remove('is-expanded');
+        });
         // Clear any open 2nd-level submenus (tap-to-open behavior)
         document.querySelectorAll('.dropdown-item-with-submenu.is-open').forEach((el) => {
             el.classList.remove('is-open');
@@ -744,12 +749,56 @@ function initNavigation() {
         });
         lockScroll(false);
     }
+
+    if (navMenu && !navMenu.id) {
+        navMenu.id = 'wk-primary-nav';
+    }
+    if (hamburger) {
+        hamburger.setAttribute('role', 'button');
+        hamburger.setAttribute('tabindex', '0');
+        hamburger.setAttribute('aria-expanded', 'false');
+        if (navMenu && navMenu.id) {
+            hamburger.setAttribute('aria-controls', navMenu.id);
+        }
+    }
+
+    /** Mobile-only: top-level dropdowns collapse until user taps the row (clearer than a long flat list). */
+    function initMobileNavAccordion() {
+        const menu = document.querySelector('.nav-menu');
+        if (!menu) return;
+        const mq = window.matchMedia('(max-width: 768px)');
+
+        menu.addEventListener('click', (e) => {
+            if (!mq.matches || !menu.classList.contains('active')) return;
+            const li = e.target.closest('li.nav-item-dropdown');
+            if (!li) return;
+            if (e.target.closest('.dropdown-menu')) return;
+            const trigger = li.querySelector(':scope > a');
+            if (!trigger || !trigger.contains(e.target)) return;
+            const panel = li.querySelector(':scope > .dropdown-menu');
+            if (!panel) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const willOpen = !li.classList.contains('is-expanded');
+            menu.querySelectorAll(':scope > li.nav-item-dropdown.is-expanded').forEach((x) => {
+                if (x !== li) x.classList.remove('is-expanded');
+            });
+            li.classList.toggle('is-expanded', willOpen);
+        });
+    }
+    initMobileNavAccordion();
     
     // 移动端菜单切换
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', () => {
             const isOpen = navMenu.classList.toggle('active');
             hamburger.classList.toggle('active', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            if (!isOpen) {
+                navMenu.querySelectorAll('.nav-item-dropdown.is-expanded').forEach((el) => {
+                    el.classList.remove('is-expanded');
+                });
+            }
             lockScroll(isOpen);
 
             // On mobile, the nav can include dynamically enhanced dropdown nodes.
@@ -758,11 +807,27 @@ function initNavigation() {
                 window.multiLang.translatePage();
             }
         });
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                hamburger.click();
+            }
+        });
     }
     
-    // 点击导航链接后：关闭菜单+恢复滚动
+    // 点击导航链接后：关闭菜单+恢复滚动（排除移动端折叠面板的父级触发器）
     document.addEventListener('click', (e) => {
-        if (e.target.closest('a.nav-link, .dropdown-menu a, .category-card a')) {
+        if (e.target.closest('.category-card a')) {
+            closeMobileMenu();
+            return;
+        }
+        const activeMenu = document.querySelector('.nav-menu.active');
+        if (!activeMenu || !e.target.closest('.nav-menu.active')) return;
+        if (e.target.closest('.dropdown-menu a')) {
+            closeMobileMenu();
+            return;
+        }
+        if (e.target.closest('li.nav-item:not(.nav-item-dropdown) > a')) {
             closeMobileMenu();
         }
     });
@@ -813,10 +878,8 @@ function initNavigation() {
                     behavior: 'smooth'
                 });
                 
-                // 关闭移动端菜单
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    hamburger.classList.remove('active');
+                if (navMenu && navMenu.classList.contains('active')) {
+                    closeMobileMenu();
                 }
             }
         });
@@ -1141,6 +1204,23 @@ function enhanceFlagsDropdown() {
         if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
             window.multiLang.translatePage();
         }
+
+        const shouldTapToOpenFlags = () => {
+            const navMenuEl = document.querySelector('.nav-menu');
+            const isMobileMenuOpen = !!(navMenuEl && navMenuEl.classList.contains('active'));
+            const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
+            return isMobileMenuOpen || noHover;
+        };
+
+        flagsLink.setAttribute('aria-haspopup', 'true');
+        flagsLink.setAttribute('aria-expanded', 'false');
+
+        flagsLink.addEventListener('click', (e) => {
+            if (!shouldTapToOpenFlags()) return;
+            e.preventDefault();
+            const isOpen = wrapper.classList.toggle('is-open');
+            flagsLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
     });
 }
 

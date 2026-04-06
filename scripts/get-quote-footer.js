@@ -86,13 +86,16 @@
           </div>
         </div>
         <!-- 右：询问/CTA 盒子 -->
-        <div class="contact-bottom__ask">
+            <div class="contact-bottom__ask">
           <div class="contact-bottom__askTitle" data-i18n="footer_ask_title">Ask anything about products or designs…</div>
           <div class="contact-bottom__askBox">
             <div class="contact-bottom__askText" data-i18n="footer_ask_text">Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.</div>
             <div class="contact-bottom__askActions">
-              <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">Get a Quote</a>
-              <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">WhatsApp Now</a>
+              <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
+              <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
+            </div>
+            <div class="contact-bottom__askSupport">
+              <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
             </div>
           </div>
         </div>

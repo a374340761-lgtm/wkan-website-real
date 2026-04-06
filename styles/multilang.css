@@ -10,14 +10,6 @@
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 }
 
-[lang="ja"] {
-    font-family: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
-}
-
-[lang="ko"] {
-    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-}
-
 /* 语言切换动画 */
 .lang-transition {
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -139,36 +131,9 @@
     gap: 2rem;
 }
 
-[lang="ja"] .nav-menu {
-    gap: 1.5rem;
-}
-
-[lang="ko"] .nav-menu {
-    gap: 1.5rem;
-}
-
 /* 语言特定的按钮宽度调整 */
 [lang="en"] .btn {
     min-width: 120px;
-}
-
-[lang="ja"] .btn {
-    min-width: 140px;
-}
-
-[lang="ko"] .btn {
-    min-width: 130px;
-}
-
-/* 语言特定的表单样式 */
-[lang="ja"] .form-group input,
-[lang="ja"] .form-group textarea {
-    padding: 12px 16px;
-}
-
-[lang="ko"] .form-group input,
-[lang="ko"] .form-group textarea {
-    padding: 12px 16px;
 }
 
 /* 语言特定的统计数字样式 */
@@ -176,25 +141,9 @@
     font-size: 2rem;
 }
 
-[lang="ja"] .stat-item h4 {
-    font-size: 1.8rem;
-}
-
-[lang="ko"] .stat-item h4 {
-    font-size: 1.9rem;
-}
-
 /* 语言特定的产品分类按钮 */
 [lang="en"] .category-btn {
     padding: 12px 20px;
-}
-
-[lang="ja"] .category-btn {
-    padding: 12px 24px;
-}
-
-[lang="ko"] .category-btn {
-    padding: 12px 22px;
 }
 
 /* 深色模式支持（为未来扩展准备） */

@@ -62,25 +62,9 @@
             background: var(--bg-white);
             cursor: pointer;
         }
+        /* Grid + ap-card: styles/modules/product-cards.css + tokens-base */
         .ap-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
             margin-top: 2rem;
-        }
-        /* ap-card/ap-img styling is unified in styles/main.css */
-        .ap-body {
-            padding: 1.5rem;
-        }
-        .ap-body h3 {
-            font-size: 1.1rem;
-            margin: 0 0 0.5rem 0;
-            color: var(--text-dark);
-        }
-        .ap-meta {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin: 0.5rem 0 1rem 0;
         }
         .ap-btn {
             display: inline-block;
@@ -100,31 +84,6 @@
             padding: 3rem;
             color: var(--text-light);
         }
-        .product-specs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin: 0.75rem 0;
-        }
-        .product-specs .spec-tag {
-            background: var(--bg-light);
-            color: var(--text-light);
-            padding: 4px 10px;
-            border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-            white-space: nowrap;
-        }
-        .product-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-        .product-actions .product-btn {
-            flex: 1;
-            text-align: center;
-            padding: 10px 16px;
-            font-size: 0.9rem;
-        }
         @media (max-width: 768px) {
             .ap-tools {
                 flex-direction: column;
@@ -132,9 +91,6 @@
             .ap-tools input[type="text"],
             .ap-tools select {
                 width: 100%;
-            }
-            .ap-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -148,8 +104,6 @@
             <div class="language-options">
                 <button data-lang="en" data-lang-option="en">English</button>
                 <button data-lang="zh" data-lang-option="zh">中文</button>
-                <button data-lang="ja" data-lang-option="ja">日本語</button>
-                <button data-lang="ko" data-lang-option="ko">한국어</button>
             </div>
         </div>
     </div>
@@ -158,8 +112,6 @@
     <div class="language-switcher old-lang-switcher" style="display: none;">
         <button class="lang-btn active" data-lang="zh">中文</button>
         <button class="lang-btn" data-lang="en">English</button>
-        <button class="lang-btn" data-lang="ja">日本語</button>
-        <button class="lang-btn" data-lang="ko">한국어</button>
     </div>
 
     <!-- 顶部提示栏 -->
@@ -238,8 +190,6 @@
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
                         <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
                         <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
-                        <button type="button" class="lang-item" data-lang="ja" data-lang-option="ja">日本語</button>
-                        <button type="button" class="lang-item" data-lang="ko" data-lang-option="ko">한국어</button>
                     </div>
                 </div>
             </div>
@@ -259,6 +209,14 @@
 
                 <div class="ap-head">
                     <h1 id="allProductsHeading" data-translate="nav_all_products"></h1>
+                    <p id="apContextHint" class="ap-context-hint" data-translate="ap_page_role_hint"></p>
+
+                    <div id="apContextBanner" class="ap-context-banner" hidden>
+                        <div class="ap-context-banner__inner">
+                            <span class="ap-context-banner__badge" id="apContextBadge"></span>
+                            <a class="ap-context-banner__hub" id="apContextHub" href="product-center.html" data-translate="ap_open_category_hub"></a>
+                        </div>
+                    </div>
 
                     <div class="ap-tools">
                         <input id="searchInput" type="text"
@@ -356,12 +314,11 @@
                             Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
                         </div>
                         <div class="contact-bottom__askActions">
-                            <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
-                                Get a Quote
-                            </a>
-                            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
-                                WhatsApp Now
-                            </a>
+                            <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
+                            <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
+                        </div>
+                        <div class="contact-bottom__askSupport">
+                            <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
                         </div>
                     </div>
                 </div>

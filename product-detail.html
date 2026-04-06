@@ -72,8 +72,6 @@
     <div class="language-switcher" role="toolbar" aria-label="Language switcher">
         <button class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
         <button class="lang-btn active" data-lang="en" aria-pressed="true">English</button>
-        <button class="lang-btn" data-lang="ja" aria-pressed="false">日本語</button>
-        <button class="lang-btn" data-lang="ko" aria-pressed="false">한국어</button>
     </div>
 
     <!-- 顶部提示栏 -->
@@ -149,6 +147,13 @@
             <span class="sep">/</span>
             <span id="breadcrumbProduct"></span>
         </nav>
+
+        <div class="pdp-return" id="pdpReturnRow" hidden>
+            <a class="btn btn-secondary pdp-return__btn" id="pdpBackListing" href="all-products.html">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                <span data-translate="pdp_back_to_listing">Back to previous list</span>
+            </a>
+        </div>
 
         <!-- Not found -->
         <section id="productNotFound" class="pdp-not-found" style="display:none;margin-top:24px;">
@@ -263,12 +268,11 @@
                         Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
                     </div>
                     <div class="contact-bottom__askActions">
-                        <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
-                            Get a Quote
-                        </a>
-                        <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
-                            WhatsApp Now
-                        </a>
+                        <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
+                        <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
+                    </div>
+                    <div class="contact-bottom__askSupport">
+                        <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
                     </div>
                 </div>
             </div>

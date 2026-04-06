@@ -4,28 +4,24 @@
 const LANG_KEY = 'site_language';
 const DEFAULT_LANG = 'en';
 
-// ✅ 只开放中英（先隐藏日/韩）
-const ENABLED_LANGS = ['en', 'zh']; // 将来要开：['en','zh','ja','ko']
+// ✅ Site languages: English + Chinese only
+const ENABLED_LANGS = ['en', 'zh'];
 
 // ✅ 公司名（统一来源，避免在多个 HTML 写死）
 const COMPANY_NAME = {
     en: 'Guangxi WaiKwan Tent',
     zh: '广西伟群帐篷制造有限公司',
-    // ja: '（暂时隐藏）',
-    // ko: '（暂时隐藏）'
 };
 
-// ✅ 获取语言：优先从 localStorage 读取，如果保存的是禁用语言则回退到英文
+// ✅ 获取语言：优先从 localStorage 读取；未知语言回退到英文
 function getLang() {
     const saved = localStorage.getItem(LANG_KEY);
-    // 如果保存的是 ja/ko，但你现在禁用了，就回退到英文
     if (saved && ENABLED_LANGS.includes(saved)) return saved;
     return DEFAULT_LANG;
 }
 
-// ✅ 设置语言：禁用语言直接忽略
+// ✅ 设置语言：仅允许 ENABLED_LANGS
 function setLang(lang) {
-    // 禁用语言直接忽略
     if (!ENABLED_LANGS.includes(lang)) return;
     localStorage.setItem(LANG_KEY, lang);
     // 应用语言（使用 multiLang 实例）
@@ -98,8 +94,14 @@ class MultiLanguageSystem {
                 home_hero_3_subtitle: '轻便结构，画面可更换，适用于展会背景、舞台与品牌形象展示。',
 
                 home_popular_categories_title: '核心产品分类',
-                home_popular_categories_subtitle: '快速进入五大核心品类，支持按类筛选与搜索。',
+                home_popular_categories_subtitle: '快速进入五大核心品类：先进入分类总览，或直接打开可搜索的产品目录。',
+                discover_hub_title: '产品中心',
+                discover_hub_desc: '按大类查看子系列与入口',
+                discover_catalog_title: '全部产品',
+                discover_catalog_desc: '搜索与筛选全部 SKU',
                 home_cat_cta: '浏览该分类',
+                home_cat_cta_hub: '进入分类总览',
+                home_cat_browse_catalog: '查看该分类全部 SKU',
                 home_cat_tents_title: '帐篷',
                 home_cat_tents_desc: '折叠帐篷与活动帐篷，支持品牌定制与配件选配。',
                 home_cat_flags_title: '旗帜与旗杆',
@@ -189,8 +191,12 @@ class MultiLanguageSystem {
 
                 home_cta_title: '准备开始您的项目？',
                 home_cta_subtitle: '告诉我们产品类型、尺寸、数量与印刷需求，我们会尽快回复。',
+                /* Site-wide CTA hierarchy: primary = quote, secondary = catalog, WhatsApp = support */
+                cta_primary: '获取报价',
+                cta_secondary: '查看产品',
+                footer_whatsapp_support: 'WhatsApp',
                 home_cta_primary: '获取报价',
-                home_cta_secondary: '前往产品中心',
+                home_cta_secondary: '查看产品',
 
                 home_sticky_quote: '获取报价',
 
@@ -530,6 +536,12 @@ class MultiLanguageSystem {
                 product_center_title: '产品中心',
                 product_center_subtitle: '选择分类进入，或去"全部产品"搜索。',
                 back_to_product_center: '返回产品中心',
+                pc_context_overview_hint: '当前为分类总览（子系列与入口）',
+                pc_context_browse_skus: '查看该分类全部 SKU',
+                pc_context_all_categories: '全部分类',
+                ap_page_role_hint: '可搜索、筛选的完整产品目录。需要按子系列浏览请前往「产品中心」。',
+                ap_open_category_hub: '打开该分类总览（产品中心）',
+                pdp_back_to_listing: '返回上一页列表',
                 category_not_available: '该分类暂未开放，已为你显示全部分类。',
                 // Products 下拉菜单
                 menu_tents: '帐篷',
@@ -591,8 +603,6 @@ class MultiLanguageSystem {
                 // Language names
                 lang_name_en: 'English',
                 lang_name_zh: '中文',
-                lang_name_ja: '日本語',
-                lang_name_ko: '한국어',
 
                 // Common buttons
                 download_materials: '下载资料',
@@ -837,7 +847,7 @@ class MultiLanguageSystem {
                 footer_ask_title: '产品与设计咨询',
                 footer_ask_text: '请告诉我们产品类型、尺寸、数量与印刷需求，我们将在 24 小时内回复。',
                 footer_ask_btn: '获取报价',
-                footer_ask_btn2: 'WhatsApp 咨询',
+                footer_ask_btn2: 'WhatsApp',
                 footer_copyright: '© 2026 广西伟群帐篷制造有限公司 保留所有权利',
                 footer_terms: '使用条款',
                 footer_privacy: '隐私政策',
@@ -902,7 +912,7 @@ class MultiLanguageSystem {
                 btn_contact: 'Contact Us',
 
                 // Homepage (2026 redesign)
-                home_hero_primary_cta: 'Get a Quote',
+                home_hero_primary_cta: 'Get Quote',
                 home_hero_secondary_cta: 'View Products',
 
                 home_hero_1_kicker: 'Factory Direct · OEM/ODM',
@@ -926,8 +936,14 @@ class MultiLanguageSystem {
                 cat_water_filled_a_poster_stand_desc: 'Fillable base for stability, great for outdoor sidewalk and storefront promotions.',
 
                 home_popular_categories_title: 'Core Product Categories',
-                home_popular_categories_subtitle: 'Jump into our five core product categories and filter instantly.',
+                home_popular_categories_subtitle: 'Jump into five core ranges: open the category overview first, or go straight to the searchable catalog.',
+                discover_hub_title: 'Product Center',
+                discover_hub_desc: 'Browse ranges & sub-series by group',
+                discover_catalog_title: 'All Products',
+                discover_catalog_desc: 'Search & filter the full SKU list',
                 home_cat_cta: 'Browse Category',
+                home_cat_cta_hub: 'Open category overview',
+                home_cat_browse_catalog: 'Browse all SKUs in this category',
                 home_cat_tents_title: 'Tents',
                 home_cat_tents_desc: 'Folding event tents with branding and accessory options.',
                 home_cat_flags_title: 'Flags & Poles',
@@ -1017,10 +1033,13 @@ class MultiLanguageSystem {
 
                 home_cta_title: 'Ready to Start Your Project?',
                 home_cta_subtitle: 'Tell us product type, size, quantity and printing needs — we’ll get back to you quickly.',
-                home_cta_primary: 'Get a Quote',
-                home_cta_secondary: 'Go to Product Center',
+                cta_primary: 'Get Quote',
+                cta_secondary: 'View Products',
+                footer_whatsapp_support: 'WhatsApp',
+                home_cta_primary: 'Get Quote',
+                home_cta_secondary: 'View Products',
 
-                home_sticky_quote: 'Get a Quote',
+                home_sticky_quote: 'Get Quote',
 
                 nav_buyer_resources: 'Buyer Resources',
                 home_core_partner_intro_html:
@@ -1220,7 +1239,7 @@ class MultiLanguageSystem {
                 sizes_view_products: 'View Products',
                 sizes_get_quote: 'Get Quote',
                 sizes_note: 'Standard sizes are for reference only. Contact us for custom solutions.',
-                sizes_cta: 'Get a Quote',
+                sizes_cta: 'Get Quote',
                 popular_sizes_title: 'Standard Size Options',
                 popular_sizes_subtitle: 'Standard sizes shown below. Custom sizes & modular combinations available.',
                 size_category_tent_title: 'Pop-up Canopy Tent',
@@ -1278,7 +1297,7 @@ class MultiLanguageSystem {
                 products_accessories_desc: 'We supply a full range of fabric displays and accessories including table covers, banners and supporting components, designed to complete integrated outdoor branding systems.',
                 products_custom_title: 'Custom Solutions',
                 products_custom_desc: 'We provide OEM and ODM services, offering full customization from structure design and sizing to graphic printing. Our team works closely with clients to deliver tailored solutions for different markets and applications.',
-                products_cta: 'Get a Quote',
+                products_cta: 'Get Quote',
                 products_category_tents_title: 'Tents',
                 products_category_tents_desc: 'A full range of tent solutions designed for promotions, exhibitions and outdoor events. Custom sizes and branding options available.',
                 products_category_tents_desc_en: '',
@@ -1296,7 +1315,7 @@ class MultiLanguageSystem {
                 products_category_custom_desc_en: '',
                 products_cta_text: 'Contact us for specifications and a tailored quotation for your market.',
                 products_cta_text_en: '',
-                products_cta_button: 'Get a Quote',
+                products_cta_button: 'Get Quote',
                 category_all: 'All Products',
                 category_furniture: 'Outdoor Furniture',
                 category_tents: 'Tent Display',
@@ -1347,6 +1366,12 @@ class MultiLanguageSystem {
                 product_center_title: 'Product Center',
                 product_center_subtitle: 'Browse categories or search in "All Products".',
                 back_to_product_center: 'Back to Product Center',
+                pc_context_overview_hint: 'Category overview — sub-series and entry points',
+                pc_context_browse_skus: 'Browse full SKU list for this category',
+                pc_context_all_categories: 'All categories',
+                ap_page_role_hint: 'Searchable catalog of every SKU. To browse by sub-series, use Product Center.',
+                ap_open_category_hub: 'Open category overview (Product Center)',
+                pdp_back_to_listing: 'Back to previous list',
                 category_not_available: 'Category not available yet. Showing all categories.',
                 // Products Dropdown Menu
                 menu_tents: 'Tents',
@@ -1408,8 +1433,6 @@ class MultiLanguageSystem {
                 // Language names
                 lang_name_en: 'English',
                 lang_name_zh: 'Chinese',
-                lang_name_ja: 'Japanese',
-                lang_name_ko: 'Korean',
 
                 // Common buttons
                 download_materials: 'Download materials',
@@ -1537,7 +1560,7 @@ class MultiLanguageSystem {
                 form_submit: 'Send Message',
                 
                 // Inquiry Form (B2B High-Conversion)
-                inquiry_form_title: 'Get a Quote',
+                inquiry_form_title: 'Get Quote',
                 inquiry_form_subtitle: 'Tell us about your project and our team will get back to you within 24 hours.',
                 inquiry_form_reset: 'Reset',
                 inquiry_form_unconfigured: 'Form submission is not connected yet. Please contact us via WhatsApp or email — we typically reply within 24 hours.',
@@ -1653,8 +1676,8 @@ class MultiLanguageSystem {
                 footer_contactus: 'Contact Us',
                 footer_ask_title: 'Ask anything about products or designs…',
                 footer_ask_text: 'Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.',
-                footer_ask_btn: 'Get a Quote',
-                footer_ask_btn2: 'WhatsApp Now',
+                footer_ask_btn: 'Get Quote',
+                footer_ask_btn2: 'WhatsApp',
                 footer_copyright: '© 2026 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.',
                 footer_terms: 'Terms',
                 footer_privacy: 'Privacy Policy',
@@ -1674,487 +1697,6 @@ class MultiLanguageSystem {
                 default_applications: 'Suitable for various outdoor events and exhibition display scenarios.',
                 download_contact_us: 'Please contact us for detailed product files.',
                 no_related_products: 'No related products'
-            },
-            ja: {
-                // トップバー
-                top_bar_text: '15年以上の信頼できる製造経験',
-                
-                // ナビゲーション
-                nav_home: 'ホーム',
-                nav_about: '会社概要',
-                nav_products: '製品センター',
-                nav_services: 'サービス',
-                nav_contact: 'お問い合わせ',
-                // Products ドロップダウンメニュー
-                menu_custom_tents: 'カスタムテント',
-                menu_stock_tents: '在庫テント',
-                menu_beach_flags: 'ビーチフラッグ・ポール',
-                menu_popup_displays: 'ポップアップ展示',
-                menu_popup_fabric_banner_stands: 'バナースタンド',
-                menu_popup_tfd_accessories: 'アクセサリー',
-                menu_popup_tfd_straight_line_series: 'ストレート（直線）シリーズ',
-                menu_popup_tfd_c_shaped_series: 'C型シリーズ',
-
-                pdp_optional_accessories: 'オプションアクセサリー',
-                menu_displays_aframe: 'Aフレーム',
-                menu_displays_aframe_backdrop: 'Aフレーム・バックドロップ',
-                menu_accessories: 'アクセサリー',
-                menu_replacement_parts: '交換パーツ',
-                
-                // 会社情報
-                company_name: '広西偉群',
-                tagline: 'プロフェッショナル印刷サービス',
-                
-                // ホームページ
-                hero_title: 'プロフェッショナル印刷ソリューション',
-                hero_subtitle: 'ブランドに高品質で革新的な印刷サービスを提供',
-                btn_explore: '製品を探す',
-                btn_contact: 'お問い合わせ',
-                
-                // 会社概要
-                about_title: '偉群について',
-                about_subtitle: 'テント、ビーチフラッグ、ディスプレイシステムの専門製造工場',
-                about_mission: '私たちの使命',
-                about_mission_text: 'テント、ビーチフラッグ、ポータブルディスプレイシステムの研究開発と製造に専念し、世界中の顧客に高品質でカスタマイズ可能なディスプレイソリューションを提供し、ブランドが様々なイベントや商業シーンで際立つことを支援します。',
-                about_vision: '私たちのビジョン',
-                about_vision_text: 'テントとディスプレイシステム分野で信頼できるグローバル製造パートナーとなり、製造プロセスと製品品質を継続的に向上させ、顧客に長期的で安定した商業価値を創造します。',
-                stat_years: '年の製造経験',
-                stat_clients: 'グローバルクライアント',
-                stat_products: '製品モデル',
-                
-                // 製品特徴
-                feature_quality: '最高品質',
-                feature_quality_desc: '高品質材料を使用し、厳格な品質管理により、製品の耐久性と信頼性を確保',
-                feature_fast: '迅速な配送',
-                feature_fast_desc: '効率的な生産プロセス、迅速な物流配送により、タイムリーな到着を確保',
-                feature_custom: 'カスタマイズサービス',
-                feature_custom_desc: 'プロフェッショナルなデザインチーム、OEM/ODM対応、お客様の個別ニーズに対応',
-                feature_global: 'グローバル輸出',
-                feature_global_desc: '複数の国に製品を輸出、豊富な国際市場経験',
-                
-                // サイズページ（英文占位 - 安全版）
-                sizes_title: 'Standard Size Options',
-                sizes_subtitle: 'Standard sizes shown below. Custom sizes & modular combinations available.',
-                sizes_tent_title: 'Pop-up Canopy Tent',
-                sizes_giant_title: 'Large Event / Giant Tent',
-                sizes_display_title: 'Pop-up Display / Quick Display System',
-                sizes_tag_hot: 'Best Seller',
-                sizes_tag_modular: 'Modular',
-                sizes_tag_fast: 'Fast Setup',
-                sizes_standard: 'Standard Sizes',
-                sizes_standard_combo: 'Standard Combination Sizes',
-                sizes_standard_options: 'Standard Options',
-                sizes_features: 'Features',
-                sizes_apps: 'Applications',
-                sizes_tent_f1: 'Folding aluminum or steel frame',
-                sizes_tent_f2: 'Tool-free and fast installation',
-                sizes_tent_f3: 'Custom printed canopy and sidewalls available',
-                sizes_tent_app: 'Brand promotion, outdoor events, exhibitions and marketing activities',
-                sizes_giant_custom: 'Larger sizes available with modular connection',
-                sizes_giant_f1: 'Modular structure system',
-                sizes_giant_f2: 'Heavy-duty aluminum frame',
-                sizes_giant_f3: 'Custom span and height available',
-                sizes_giant_app: 'Large-scale events, exhibitions, temporary halls and brand showcases',
-                sizes_display_s1: 'Width modules: 3 m / 4 m / 5 m',
-                sizes_display_s2: 'Shapes: Straight / Curved / U-shape',
-                sizes_display_s3: 'Single-sided or double-sided display',
-                sizes_display_f1: 'Lightweight and portable structure',
-                sizes_display_f2: 'Fast setup and easy transportation',
-                sizes_display_f3: 'Replaceable graphics with high-resolution printing',
-                sizes_display_app: 'Trade shows, backdrop displays and brand presentation',
-                sizes_view_products: 'View Products',
-                sizes_get_quote: 'Get Quote',
-                sizes_note: 'Standard sizes are for reference only. Contact us for custom solutions.',
-                sizes_cta: 'Get a Quote',
-                
-                // 製品標準サイズ参考
-                popular_sizes_title: '製品標準サイズ参考',
-                popular_sizes_subtitle: '以下は一般的な標準サイズです。カスタムサイズとモジュール組み合わせ対応可能',
-                size_category_tent_title: 'クイックセットアップテント（Pop-up Canopy Tent）',
-                size_category_large_title: '大型イベントテント（Large Event Tent / Giant Tent）',
-                size_category_display_title: 'クイックディスプレイシステム（Pop-up Display / Quick Display）',
-                size_standard_sizes: '標準サイズ：',
-                size_standard_combination: '標準組み合わせサイズ：',
-                size_standard_options: '標準オプション：',
-                size_features: '構造特徴：',
-                size_product_features: '製品特徴：',
-                size_applications: '適用シーン：',
-                size_tent_feature_1: '折りたたみ式アルミニウムまたは鋼製フレーム',
-                size_tent_feature_2: '工具不要、迅速な設置',
-                size_tent_feature_3: 'キャノピーとサイドウォールのカスタム印刷対応',
-                size_tent_applications: 'ブランドプロモーション、屋外イベント、展示ブース、一時展示',
-                size_category_large_note: 'より大きなサイズはモジュール接続で対応可能',
-                size_large_feature_1: 'モジュラー式組み立て構造',
-                size_large_feature_2: '高強度アルミニウムフレーム',
-                size_large_feature_3: 'プロジェクト要件に応じて高さとスパンをカスタマイズ可能',
-                size_large_applications: '大型イベント、商業展示会、一時展示館、ブランド発表',
-                size_display_option_1: '幅モジュール：3m / 4m / 5m',
-                size_display_option_2: '構造形式：直線型 / 曲線型 / U字型',
-                size_display_option_3: '片面または両面展示',
-                size_display_feature_1: '軽量で折りたたみ可能な構造',
-                size_display_feature_2: '迅速な設置、輸送が容易',
-                size_display_feature_3: 'グラフィック交換可能、高解像度印刷対応',
-                size_display_applications: '展示会、背景壁、ブランドイメージ展示',
-                size_cta_text: '上記サイズは参考用です。カスタムソリューションについてはお問い合わせください。',
-                size_cta_text_en: '',
-                
-                // お客様の声
-                testimonials_title: 'お客様の声',
-                testimonials_subtitle: '世界中のお客様からの実際のフィードバック',
-                testimonial_1_text: '"製品品質は非常に優れており、サービスもプロフェッショナルで、配送も迅速でした。ウェイチュンとの協力に非常に満足しています。"',
-                testimonial_1_name: 'David T.',
-                testimonial_1_role: 'イベント企画会社',
-                testimonial_2_text: '"カスタマイズサービスは非常にプロフェッショナルで、私たちの特別なニーズに対応できました。製品品質は期待を超えました。"',
-                testimonial_2_name: 'Antonio C.',
-                testimonial_2_role: 'レストランオーナー',
-                testimonial_3_text: '"チームは非常にプロフェッショナルで、対応も迅速でした。製品デザインは美しく、私たちのブランドイメージに完全に一致しています。"',
-                testimonial_3_name: 'Owen B.',
-                testimonial_3_role: 'エンターテインメント業界',
-                
-                // パンくずリストと検索
-                breadcrumb_home: 'ホーム',
-                breadcrumb_products: '製品センター',
-                search_overlay_title: '製品を検索',
-                search_overlay_button: '検索',
-                products_search_placeholder: '製品を検索（名前/キーワード/仕様）',
-                filters_title: 'フィルター',
-                filters_clear: 'クリア',
-                filters_category: 'カテゴリー',
-                filters_quick_tags: '人気キーワード',
-                sort_by: '並び替え',
-                sort_popular: '人気順',
-                sort_new: '新着',
-                sort_name: '名前 A–Z',
-                
-                // 製品センター
-                products_title: '製品センター',
-                products_subtitle: '多様な印刷ソリューションで、様々なニーズに対応',
-                category_displays: '展示システム',
-                category_all: '全製品',
-                category_displays: '展示システム',
-                category_lightbox: 'ライトボックスシリーズ',
-                menu_light_box_series: 'ライトボックスシリーズ',
-                cat_lightbox_title: 'ライトボックスシリーズ',
-                cat_lightbox_desc: '展示会・店舗向けのLEDバックライトSEGライトボックス。',
-
-                menu_displays_tension_fabric: 'テンションファブリックディスプレイ',
-                menu_lightbox_round_tube: '丸管ライトボックス',
-                menu_lightbox_aluminum_profile: 'アルミプロファイルSEGライトボックス',
-                menu_lightbox_seg_net: 'SEGネットライトボックス',
-                category_inflatable: 'インフレータブル製品',
-                category_accessories: 'アクセサリ',
-                category_commercial: '商業印刷',
-                category_packaging: '包装印刷',
-                category_digital: 'デジタル印刷',
-                category_large: '大型印刷',
-                
-                // サービス
-                services_title: 'サービス範囲',
-                services_subtitle: 'デザインから完成品まで、包括的な印刷サービス',
-                service_design: 'デザインサービス',
-                service_design_desc: 'プロフェッショナルなグラフィックデザインチームが、ユニークなビジュアルアイデンティティを作成',
-                service_printing: '印刷サービス',
-                service_printing_desc: '先進的な印刷設備で、すべての作品を完璧に表現',
-                service_finishing: '仕上げサービス',
-                service_finishing_desc: 'プロフェッショナルな製本、ラミネート、ホットスタンプなどの仕上げサービス',
-                service_delivery: '配送サービス',
-                service_delivery_desc: '迅速で安全な物流配送で、製品のタイムリーな配送を保証',
-                
-                // お問い合わせ
-                contact_title: 'お問い合わせ',
-                contact_subtitle: '皆様とのご協力をお待ちしております',
-                contact_address_title: '会社住所',
-                contact_address: '2nd Xuweiqian Building, Bridge South xilian Dong Cun Gaosha Development District, Nanhai Danzao, Foshan, China',
-                contact_phone_title: '電話番号',
-                contact_email_title: 'メールアドレス',
-                
-                // フォーム
-                form_name: 'お名前',
-                form_email: 'メールアドレス',
-                form_phone: '電話番号',
-                form_message: 'お問い合わせ内容',
-                form_submit: 'メッセージを送信',
-                
-                // フッター
-                footer_desc: 'プロフェッショナル印刷サービスプロバイダーとして、お客様に最高品質の製品とサービスを提供することをお約束します。',
-                footer_links_title: 'クイックリンク',
-                footer_contact_title: '連絡先情報',
-                footer_rights: 'すべての権利を保有。',
-                
-                // PDFダウンロード
-                pdf_download_title: '製品資料ダウンロード',
-                pdf_download_desc: '下のボタンをクリックして、完全な製品カタログと会社紹介をダウンロードしてください。',
-                btn_download_pdf: 'PDFダウンロード',
-                btn_get_quote: '見積もりを取得',
-                btn_download: 'ダウンロード',
-                btn_add_to_cart: 'カートに追加',
-                
-                // 製品詳細ページタブ
-                tab_desc: '製品説明',
-                tab_specs: '技術仕様',
-                tab_apps: '応用シーン',
-                tab_download: '資料ダウンロード',
-                related_products: '関連製品',
-                
-                // Contact Bottom (Signazon-style)
-                footer_company_line_cn: '広西偉群テント製造有限公司',
-                footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
-                footer_findus: '所在地',
-                footer_address: 'Changtangao, Daping Team, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, Guangxi, China',
-                footer_contact: '連絡先',
-                footer_companyinfo: '会社情報',
-                footer_about: '会社概要',
-                footer_products: '製品',
-                footer_news: 'ニュース',
-                footer_contactus: 'お問い合わせ',
-                footer_ask_title: '製品・デザインについて何でもお尋ねください…',
-                footer_ask_text: '製品タイプ、サイズ、数量、印刷要件をお知らせください。24時間以内に返信いたします。',
-                footer_ask_btn: '見積もりを取得',
-                footer_ask_btn2: 'WhatsAppで今すぐ',
-                footer_copyright: '© 2026 広西偉群テント製造有限公司。全著作権所有。',
-                footer_terms: '利用規約',
-                footer_privacy: 'プライバシーポリシー',
-                footer_sitemap: 'サイトマップ'
-            },
-            ko: {
-                // 상단 바
-                top_bar_text: '15년 이상의 신뢰할 수 있는 제조 경험',
-                
-                // 내비게이션
-                nav_home: '홈',
-                nav_about: '회사소개',
-                nav_products: '제품센터',
-                nav_services: '서비스',
-                nav_contact: '문의하기',
-                // Products 드롭다운 메뉴
-                menu_custom_tents: '맞춤 텐트',
-                menu_stock_tents: '재고 텐트',
-                menu_beach_flags: '비치 플래그 & 폴',
-                menu_popup_displays: '팝업 디스플레이',
-                menu_popup_fabric_banner_stands: '배너 스탠드',
-                menu_popup_tfd_accessories: '액세서리',
-                menu_popup_tfd_straight_line_series: '직선형 시리즈',
-                menu_popup_tfd_c_shaped_series: 'C형 시리즈',
-
-                pdp_optional_accessories: '선택 액세서리',
-                menu_displays_aframe: 'A-프레임',
-                menu_displays_aframe_backdrop: 'A-프레임 백드롭',
-                menu_accessories: '액세서리',
-                menu_replacement_parts: '교체 부품',
-                
-                // 회사 정보
-                company_name: '광시웨이췬',
-                tagline: '전문 인쇄 서비스',
-                
-                // 홈페이지
-                hero_title: '전문 인쇄 솔루션',
-                hero_subtitle: '브랜드를 위한 고품질, 혁신적인 인쇄 서비스 제공',
-                btn_explore: '제품 둘러보기',
-                btn_contact: '문의하기',
-                
-                // 회사소개
-                about_title: '웨이췬에 대해',
-                about_subtitle: '텐트, 비치 플래그 및 디스플레이 시스템 전문 제조 공장',
-                about_mission: '우리의 사명',
-                about_mission_text: '텐트, 비치 플래그 및 휴대용 디스플레이 시스템의 연구 개발 및 제조에 전념하여 전 세계 고객에게 고품질 및 맞춤형 디스플레이 솔루션을 제공하여 브랜드가 다양한 이벤트 및 상업적 시나리오에서 돋보이도록 돕습니다.',
-                about_vision: '우리의 비전',
-                about_vision_text: '텐트 및 디스플레이 시스템 분야에서 신뢰할 수 있는 글로벌 제조 파트너가 되어 제조 공정과 제품 품질을 지속적으로 향상시키고 고객에게 장기적이고 안정적인 상업적 가치를 창출합니다.',
-                stat_years: '년 제조 경험',
-                stat_clients: '글로벌 고객',
-                stat_products: '제품 모델',
-                
-                // 제품 특징
-                feature_quality: '최고 품질',
-                feature_quality_desc: '고품질 소재 사용, 엄격한 품질 관리로 제품의 내구성과 신뢰성 보장',
-                feature_fast: '빠른 배송',
-                feature_fast_desc: '효율적인 생산 프로세스, 빠른 물류 배송으로 적시 도착 보장',
-                feature_custom: '맞춤 서비스',
-                feature_custom_desc: '전문 디자인 팀, OEM/ODM 지원, 고객의 개별 요구사항 충족',
-                feature_global: '글로벌 수출',
-                feature_global_desc: '여러 국가로 제품 수출, 풍부한 국제 시장 경험',
-                
-                // サイズページ（英文占位 - 安全版）
-                sizes_title: 'Standard Size Options',
-                sizes_subtitle: 'Standard sizes shown below. Custom sizes & modular combinations available.',
-                sizes_tent_title: 'Pop-up Canopy Tent',
-                sizes_giant_title: 'Large Event / Giant Tent',
-                sizes_display_title: 'Pop-up Display / Quick Display System',
-                sizes_tag_hot: 'Best Seller',
-                sizes_tag_modular: 'Modular',
-                sizes_tag_fast: 'Fast Setup',
-                sizes_standard: 'Standard Sizes',
-                sizes_standard_combo: 'Standard Combination Sizes',
-                sizes_standard_options: 'Standard Options',
-                sizes_features: 'Features',
-                sizes_apps: 'Applications',
-                sizes_tent_f1: 'Folding aluminum or steel frame',
-                sizes_tent_f2: 'Tool-free and fast installation',
-                sizes_tent_f3: 'Custom printed canopy and sidewalls available',
-                sizes_tent_app: 'Brand promotion, outdoor events, exhibitions and marketing activities',
-                sizes_giant_custom: 'Larger sizes available with modular connection',
-                sizes_giant_f1: 'Modular structure system',
-                sizes_giant_f2: 'Heavy-duty aluminum frame',
-                sizes_giant_f3: 'Custom span and height available',
-                sizes_giant_app: 'Large-scale events, exhibitions, temporary halls and brand showcases',
-                sizes_display_s1: 'Width modules: 3 m / 4 m / 5 m',
-                sizes_display_s2: 'Shapes: Straight / Curved / U-shape',
-                sizes_display_s3: 'Single-sided or double-sided display',
-                sizes_display_f1: 'Lightweight and portable structure',
-                sizes_display_f2: 'Fast setup and easy transportation',
-                sizes_display_f3: 'Replaceable graphics with high-resolution printing',
-                sizes_display_app: 'Trade shows, backdrop displays and brand presentation',
-                sizes_view_products: 'View Products',
-                sizes_get_quote: 'Get Quote',
-                sizes_note: 'Standard sizes are for reference only. Contact us for custom solutions.',
-                sizes_cta: 'Get a Quote',
-                
-                // 인기 사이즈
-                popular_sizes_title: '제품 표준 사이즈 참고',
-                popular_sizes_subtitle: '아래는 일반적인 표준 사이즈입니다. 맞춤 사이즈 및 모듈 조합 가능',
-                size_category_tent_title: '빠른 설치 텐트（Pop-up Canopy Tent）',
-                size_category_large_title: '대형 이벤트 텐트（Large Event Tent / Giant Tent）',
-                size_category_display_title: '빠른 디스플레이 시스템（Pop-up Display / Quick Display）',
-                size_standard_sizes: '표준 사이즈：',
-                size_standard_combination: '표준 조합 사이즈：',
-                size_standard_options: '표준 옵션：',
-                size_features: '구조 특징：',
-                size_product_features: '제품 특징：',
-                size_applications: '적용 시나리오：',
-                size_tent_feature_1: '접이식 알루미늄 또는 강제 프레임',
-                size_tent_feature_2: '도구 없이 빠른 설치',
-                size_tent_feature_3: '천막 및 사이드월 맞춤 인쇄 가능',
-                size_tent_applications: '브랜드 프로모션, 야외 이벤트, 전시 부스, 임시 전시',
-                size_category_large_note: '더 큰 사이즈는 모듈 연결로 맞춤 제작 가능',
-                size_large_feature_1: '모듈식 조립 구조',
-                size_large_feature_2: '고강도 알루미늄 프레임',
-                size_large_feature_3: '프로젝트 요구에 따라 높이와 스팬 맞춤 제작 가능',
-                size_large_applications: '대형 이벤트, 상업 전시회, 임시 전시관, 브랜드 발표',
-                size_display_option_1: '폭 모듈：3m / 4m / 5m',
-                size_display_option_2: '구조 형태：직선형 / 곡선형 / U자형',
-                size_display_option_3: '단면 또는 양면 전시',
-                size_display_feature_1: '경량 접이식 구조',
-                size_display_feature_2: '빠른 설치, 운송 용이',
-                size_display_feature_3: '그래픽 교체 가능, 고해상도 인쇄 지원',
-                size_display_applications: '전시회, 배경벽, 브랜드 이미지 전시',
-                size_cta_text: '위 사이즈는 참고용입니다. 맞춤 솔루션은 문의해 주세요.',
-                size_cta_text_en: '',
-                
-                // 고객 후기
-                testimonials_title: '고객 후기',
-                testimonials_subtitle: '전 세계 고객들의 실제 피드백',
-                testimonial_1_text: '"제품 품질이 매우 우수하고, 서비스도 전문적이며, 배송도 신속했습니다. 웨이췬과의 협력에 매우 만족합니다."',
-                testimonial_1_name: 'David T.',
-                testimonial_1_role: '이벤트 기획 회사',
-                testimonial_2_text: '"맞춤 서비스가 매우 전문적이며, 우리의 특별한 요구사항을 충족할 수 있었습니다. 제품 품질은 기대를 뛰어넘었습니다."',
-                testimonial_2_name: 'Antonio C.',
-                testimonial_2_role: '레스토랑 사장',
-                testimonial_3_text: '"팀이 매우 전문적이며, 대응도 신속했습니다. 제품 디자인이 아름답고, 우리의 브랜드 이미지와 완벽하게 일치합니다."',
-                testimonial_3_name: 'Owen B.',
-                testimonial_3_role: '엔터테인먼트 업계',
-                
-                // 브레드크럼 및 검색
-                breadcrumb_home: '홈',
-                breadcrumb_products: '제품센터',
-                search_overlay_title: '제품 검색',
-                search_overlay_button: '검색',
-                products_search_placeholder: '제품 검색 (이름/키워드/사양)',
-                filters_title: '필터',
-                filters_clear: '지우기',
-                filters_category: '카테고리',
-                filters_quick_tags: '인기 키워드',
-                sort_by: '정렬',
-                sort_popular: '인기순',
-                sort_new: '최신',
-                sort_name: '이름 A–Z',
-                
-                // 제품센터
-                products_title: '제품센터',
-                products_subtitle: '다양한 인쇄 솔루션으로 다양한 요구사항 충족',
-                category_all: '전체 제품',
-                category_displays: '전시 시스템',
-                category_lightbox: '라이트박스 시리즈',
-                menu_light_box_series: '라이트박스 시리즈',
-                cat_lightbox_title: '라이트박스 시리즈',
-                cat_lightbox_desc: '전시회·리테일용 LED 백라이트 SEG 라이트박스.',
-
-                menu_displays_tension_fabric: '텐션 패브릭 디스플레이',
-                menu_lightbox_round_tube: '원형 튜브 라이트박스',
-                menu_lightbox_aluminum_profile: '알루미늄 프로파일 SEG 라이트박스',
-                menu_lightbox_seg_net: 'SEG 네트 라이트박스',
-                category_inflatable: '인플레이터블 제품',
-                category_accessories: '액세서리',
-                category_commercial: '상업 인쇄',
-                category_packaging: '포장 인쇄',
-                category_digital: '디지털 인쇄',
-                category_large: '대형 인쇄',
-                
-                // 서비스
-                services_title: '서비스 범위',
-                services_subtitle: '디자인에서 완성품까지 전방위적인 인쇄 서비스',
-                service_design: '디자인 서비스',
-                service_design_desc: '전문 그래픽 디자인 팀이 고유한 비주얼 아이덴티티를 제작',
-                service_printing: '인쇄 서비스',
-                service_printing_desc: '첨단 인쇄 장비로 모든 작품을 완벽하게 표현',
-                service_finishing: '후가공 서비스',
-                service_finishing_desc: '전문적인 제본, 라미네이션, 황금박 등의 후가공 서비스',
-                service_delivery: '배송 서비스',
-                service_delivery_desc: '빠르고 안전한 물류 배송으로 제품의 적시 배송 보장',
-                
-                // 문의하기
-                contact_title: '문의하기',
-                contact_subtitle: '여러분과의 협력을 기대합니다',
-                contact_address_title: '회사 주소',
-                contact_address: '2nd Xuweiqian Building, Bridge South xilian Dong Cun Gaosha Development District, Nanhai Danzao, Foshan, China',
-                contact_phone_title: '전화번호',
-                contact_email_title: '이메일 주소',
-                
-                // 폼
-                form_name: '성함',
-                form_email: '이메일 주소',
-                form_phone: '전화번호',
-                form_message: '문의 내용',
-                form_submit: '메시지 보내기',
-                
-                // 푸터
-                footer_desc: '전문 인쇄 서비스 제공업체로서 고객에게 최고 품질의 제품과 서비스를 제공하기 위해 최선을 다하겠습니다.',
-                footer_links_title: '빠른 링크',
-                footer_contact_title: '연락처 정보',
-                footer_rights: '모든 권리 보유.',
-                
-                // PDF 다운로드
-                pdf_download_title: '제품 자료 다운로드',
-                pdf_download_desc: '아래 버튼을 클릭하여 완전한 제품 카탈로그와 회사 소개를 다운로드하세요.',
-                btn_download_pdf: 'PDF 다운로드',
-                btn_get_quote: '견적 받기',
-                btn_download: '다운로드',
-                btn_add_to_cart: '장바구니에 추가',
-                
-                // 제품 상세 페이지 탭
-                tab_desc: '제품 설명',
-                tab_specs: '기술 사양',
-                tab_apps: '응용 시나리오',
-                tab_download: '자료 다운로드',
-                related_products: '관련 제품',
-                
-                // Contact Bottom (Signazon-style)
-                footer_company_line_cn: '광시웨이췬 텐트 제조 유한공사',
-                footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
-                footer_findus: '위치',
-                footer_address: 'Changtangao, Daping Team, Luyin Village,<br>Gucheng Town, Luchuan County,<br>Yulin City, Guangxi, China',
-                footer_contact: '연락처',
-                footer_companyinfo: '회사 정보',
-                footer_about: '회사 소개',
-                footer_products: '제품',
-                footer_news: '뉴스',
-                footer_contactus: '문의하기',
-                footer_ask_title: '제품 또는 디자인에 대해 무엇이든 물어보세요…',
-                footer_ask_text: '제품 유형, 크기, 수량 및 인쇄 요구사항을 알려주세요. 24시간 이내에 답변드리겠습니다.',
-                footer_ask_btn: '견적 받기',
-                footer_ask_btn2: '지금 WhatsApp',
-                footer_copyright: '© 2026 광시웨이췬 텐트 제조 유한공사. 모든 권리 보유.',
-                footer_terms: '이용 약관',
-                footer_privacy: '개인정보 보호정책',
-                footer_sitemap: '사이트맵'
             }
         };
         
@@ -2194,6 +1736,7 @@ class MultiLanguageSystem {
     }
     
     switchLanguage(lang) {
+        if (!ENABLED_LANGS.includes(lang)) return;
         if (this.translations[lang]) {
             this.currentLanguage = lang;
             this.saveLanguage(lang);
@@ -2351,7 +1894,7 @@ class MultiLanguageSystem {
     
     updateBodyLanguageClass(lang) {
         // 移除所有语言类
-        document.body.classList.remove('lang-zh', 'lang-en', 'lang-ja', 'lang-ko');
+        document.body.classList.remove('lang-zh', 'lang-en');
         // 添加当前语言类
         document.body.classList.add(`lang-${lang}`);
     }

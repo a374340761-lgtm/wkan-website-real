@@ -41,8 +41,6 @@
             <div class="language-options">
                 <button data-lang="en">English</button>
                 <button data-lang="zh">中文</button>
-                <button data-lang="ja">日本語</button>
-                <button data-lang="ko">한국어</button>
             </div>
         </div>
     </div>
@@ -129,8 +127,6 @@
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
                         <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
                         <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
-                        <button type="button" class="lang-item" data-lang="ja" data-lang-option="ja">日本語</button>
-                        <button type="button" class="lang-item" data-lang="ko" data-lang-option="ko">한국어</button>
                     </div>
                 </div>
                 <!-- 画册下载图标：放在语言图标右侧 -->
@@ -161,8 +157,36 @@
             </div>
         </section>
 
+        <!-- Core Product Categories (conversion path: browse ranges first) -->
+        <section class="wk-section wk-section--conversion" id="core-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_popular_categories_title"></h2>
+                    <p data-translate="home_popular_categories_subtitle"></p>
+                    <p class="wk-disclaimer" style="margin-top: 10px;" data-translate="home_core_partner_intro_html"></p>
+                </div>
+                <div class="wk-discover-bar" role="navigation" aria-label="Product browsing">
+                    <a class="wk-discover-bar__tile" href="product-center.html">
+                        <span class="wk-discover-bar__icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
+                        <span class="wk-discover-bar__text">
+                            <span class="wk-discover-bar__title" data-translate="discover_hub_title"></span>
+                            <span class="wk-discover-bar__desc" data-translate="discover_hub_desc"></span>
+                        </span>
+                    </a>
+                    <a class="wk-discover-bar__tile" href="all-products.html">
+                        <span class="wk-discover-bar__icon" aria-hidden="true"><i class="fas fa-list-ul"></i></span>
+                        <span class="wk-discover-bar__text">
+                            <span class="wk-discover-bar__title" data-translate="discover_catalog_title"></span>
+                            <span class="wk-discover-bar__desc" data-translate="discover_catalog_desc"></span>
+                        </span>
+                    </a>
+                </div>
+                <div id="homeCategoryGrid" class="wk-grid wk-cat-grid"></div>
+            </div>
+        </section>
+
         <!-- Factory Strength -->
-        <section class="wk-section wk-section--soft" id="factory-strength">
+        <section class="wk-section wk-section--soft wk-section--conversion" id="factory-strength">
             <div class="container">
                 <div class="section-header">
                     <h2 data-translate="home_factory_title"></h2>
@@ -194,20 +218,8 @@
             </div>
         </section>
 
-        <!-- Core Product Categories -->
-        <section class="wk-section" id="core-categories">
-            <div class="container">
-                <div class="section-header">
-                    <h2 data-translate="home_popular_categories_title"></h2>
-                    <p data-translate="home_popular_categories_subtitle"></p>
-                    <p class="wk-disclaimer" style="margin-top: 10px;" data-translate="home_core_partner_intro_html"></p>
-                </div>
-                <div id="homeCategoryGrid" class="wk-grid wk-cat-grid"></div>
-            </div>
-        </section>
-
         <!-- Why Choose Us -->
-        <section class="wk-section wk-section--soft" id="why-choose-us">
+        <section class="wk-section wk-section--conversion" id="why-choose-us">
             <div class="container">
                 <div class="section-header">
                     <h2 data-translate="home_why_title"></h2>
@@ -241,15 +253,193 @@
             </div>
         </section>
 
-        <!-- B2B guides (SEO pillar pages) -->
-        <section class="wk-section" id="home-guides" aria-labelledby="home-guides-heading">
+        <!-- Best-selling / key product proof (filled by renderHomeBestSellers) -->
+        <section class="wk-section wk-section--soft wk-section--conversion" id="best-sellers" aria-labelledby="best-sellers-heading">
             <div class="container">
                 <div class="section-header">
+                    <h2 id="best-sellers-heading" data-translate="home_best_sellers_title"></h2>
+                    <p data-translate="home_best_sellers_subtitle"></p>
+                </div>
+                <div id="bestSellersGrid" class="wk-grid wk-product-grid"></div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="wk-section wk-section--soft wk-section--conversion" id="social-proof">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="home_trusted_by_title"></h2>
+                    <p data-translate="home_trusted_by_subtitle"></p>
+                </div>
+
+                <div class="wk-grid wk-feature-grid" aria-label="Social proof highlights">
+                    <div class="wk-card wk-feature-card">
+                        <div class="wk-feature-icon"><i class="fas fa-earth-asia"></i></div>
+                        <h3 data-translate="home_social_export_title"></h3>
+                        <p data-translate="home_social_export_desc"></p>
+                    </div>
+                    <div class="wk-card wk-feature-card">
+                        <div class="wk-feature-icon"><i class="fas fa-briefcase"></i></div>
+                        <h3 data-translate="home_social_clients_title"></h3>
+                        <p data-translate="home_social_clients_desc"></p>
+                    </div>
+                </div>
+
+                <div id="trustedByGrid" class="wk-grid wk-logo-grid" aria-hidden="true"></div>
+                <p class="wk-disclaimer" data-translate="third_party_trademarks_disclaimer"></p>
+            </div>
+        </section>
+
+        <!-- 联系我们 -->
+        <section id="contact" class="contact contact-page">
+            <div class="contact-hero">
+                <h2 data-translate="contact_title">联系我们</h2>
+                <p data-translate="contact_subtitle">我们期待与您的合作</p>
+                <p class="contact-hero__seo contact-seo-text" data-translate="contact_seo_text">Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.</p>
+            </div>
+            <div class="contact-mobile-quick" role="navigation" aria-label="Quick contact">
+                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--wa" href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" data-translate="contact_whatsapp_title">WhatsApp</a>
+                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--mail" href="mailto:yishu@waikwantent.com" data-translate="contact_email_label">Email</a>
+            </div>
+            <div class="contact-grid">
+                <!-- Left: info -->
+                <aside class="contact-card soft-panel contact-info">
+                    <h3 data-translate="contact_info_title">联系方式</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-text">
+                            <div class="contact-title" data-i18n="contact_address_title">Address</div>
+                            <div class="contact-value" data-i18n="contact_address_value">
+                                Changtangao, Daping Team, Luyin Village, Gucheng Town, Luchuan County, Yulin City, Guangxi, China
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div class="contact-text">
+                            <div class="contact-title" data-i18n="contact_whatsapp_title">WhatsApp</div>
+                            <a
+                                href="https://wa.me/8613824540280"
+                                target="_blank"
+                                class="contact-link"
+                            >
+                                +86 138 2454 0280
+                            </a>
+                            <div class="qr-wrapper">
+                                <img
+                                    src="images/boss_whatsapp.jpg"
+                                    alt="WhatsApp QR Code"
+                                    class="qr-img"
+                                >
+                            </div>
+                            <div class="contact-note" data-i18n="contact_whatsapp_note">
+                                Scan to chat on WhatsApp
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div class="label" data-translate="contact_email_label">Email</div>
+                            <div class="value">
+                                <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-weixin"></i>
+                        <div class="contact-text">
+                            <div class="contact-title" data-i18n="contact_wechat_title">WeChat</div>
+                            <div class="contact-value">massifmyth</div>
+                            <div class="qr-wrapper">
+                                <img src="images/boss_wechat.jpg" alt="WeChat QR Code" class="qr-img">
+                            </div>
+                            <div class="contact-note" data-i18n="contact_wechat_note">
+                                Scan to add on WeChat
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Right: inquiry funnel (trust + form). Keep IDs for replaceable submit hook. -->
+                <div class="contact-right">
+                    <!-- Inquiry form (standardized fields) -->
+                    <div class="contact-card soft-panel contact-form inquiry-form">
+                        <h3 data-translate="contact_form_title">Request a Quote</h3>
+
+                        <p class="wk-disclaimer" data-translate="contact_promise_24h"></p>
+
+                        <ul class="contact-trust-bullets" role="list">
+                            <li data-translate="trust_factory_direct"></li>
+                            <li data-translate="trust_no_middleman"></li>
+                            <li data-translate="trust_oem_odm"></li>
+                            <li data-translate="trust_export_experience"></li>
+                        </ul>
+
+                        <div id="contactSuccess" class="contact-alert contact-alert--success" style="display:none;" data-translate="contact_reply_24h_success"></div>
+                        <div id="formMessage" class="contact-alert contact-alert--message" style="display:none;"></div>
+
+                        <form id="getQuoteForm" class="quote-form" action="javascript:void(0);" novalidate>
+                            <label>
+                                <span data-translate="inquiry_form_name">Your Name *</span>
+                                <input type="text" name="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
+                            </label>
+
+                            <label>
+                                <span data-translate="inquiry_form_email">Your Email *</span>
+                                <input type="email" name="email" required data-translate-placeholder="inquiry_form_email" />
+                            </label>
+
+                            <label>
+                                <span data-translate="inquiry_field_product_label"></span>
+                                <input id="product" type="text" name="product" required data-translate-placeholder="inquiry_field_product_placeholder" />
+                                <div class="form-helper" data-translate="inquiry_helper_size_example"></div>
+                            </label>
+
+                            <label>
+                                <span data-translate="inquiry_field_quantity_label"></span>
+                                <input type="text" name="quantity" required inputmode="numeric" data-translate-placeholder="inquiry_field_quantity_placeholder" />
+                                <div class="form-helper" data-translate="inquiry_helper_quantity_example"></div>
+                            </label>
+
+                            <label>
+                                <span data-translate="inquiry_field_market_label"></span>
+                                <input type="text" name="target_market" required data-translate-placeholder="inquiry_field_market_placeholder" />
+                            </label>
+
+                            <label>
+                                <span data-translate="inquiry_field_message_label"></span>
+                                <textarea name="message" rows="4" data-translate-placeholder="inquiry_field_message_placeholder"></textarea>
+                            </label>
+
+                            <!-- Honeypot 防垃圾 -->
+                            <input type="text" name="website" class="contact-honeypot" tabindex="-1" autocomplete="off" />
+
+                            <div class="contact-form__actions">
+                                <button id="contactSubmitBtn" class="btn btn-primary contact-form__submit" type="submit" data-translate="inquiry_form_submit">Send Inquiry</button>
+                                <button type="reset" class="btn btn-secondary contact-form__reset" data-translate="inquiry_form_reset"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- SEO + 转化文案（桌面端为主；移动端隐藏以减少滚动） -->
+            <div class="contact-seo-footer">
+                <p data-translate="contact_seo_footer">
+                    Looking for a reliable manufacturer of custom tents, flags or display systems? Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your project.
+                </p>
+            </div>
+        </section>
+
+        <!-- Secondary: pillar guides, topic hubs, news & long-form about (indexed; visually subordinate to conversion path) -->
+        <div class="home-secondary" aria-label="Supporting resources and guides">
+        <section class="wk-section wk-section--secondary" id="home-guides" aria-labelledby="home-guides-heading">
+            <div class="container">
+                <div class="section-header home-secondary__header">
                     <h2 id="home-guides-heading" data-translate="home_guides_title"></h2>
                     <p data-translate="home_guides_subtitle"></p>
                 </div>
 
-                <div class="wk-grid wk-feature-grid wk-resource-grid">
+                <div class="wk-grid wk-feature-grid wk-resource-grid home-guides-grid">
                     <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="seo/seg-fabric-light-box-manufacturer-b2b-custom-sizes.html">
                         <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
                         <h3 data-translate="home_guide_1_title"></h3>
@@ -303,19 +493,18 @@
                 <div class="wk-section-actions">
                     <a class="btn btn-secondary" href="site-map.html#seo-guides" data-translate="home_guides_view_all"></a>
                 </div>
-                <p class="wk-disclaimer" style="margin-top: 12px; max-width: 46rem;" data-translate="home_guides_footer_html"></p>
+                <p class="wk-disclaimer home-secondary__foot" data-translate="home_guides_footer_html"></p>
             </div>
         </section>
 
-        <!-- Buyer Resources (SEO internal links) -->
-        <section class="wk-section" id="buyer-resources">
+        <section class="wk-section wk-section--secondary" id="buyer-resources">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header home-secondary__header">
                     <h2 data-translate="home_buyer_title"></h2>
                     <p data-translate="home_buyer_subtitle"></p>
                 </div>
 
-                <div class="wk-grid wk-feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+                <div class="wk-grid wk-feature-grid home-buyer-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
                     <a class="wk-card wk-feature-card" href="seg-light-box-manufacturer.html" style="text-decoration:none; color:inherit;">
                         <div class="wk-feature-icon"><i class="fas fa-lightbulb"></i></div>
                         <h3 data-translate="home_br_1_title"></h3>
@@ -353,49 +542,22 @@
                     </a>
                 </div>
 
-                <div style="margin-top: 14px; display:flex; gap:10px; flex-wrap:wrap;">
-                    <a class="btn btn-primary" href="index.html#contact" data-translate="home_cta_primary"></a>
-                    <a class="btn btn-secondary" href="faq-moq.html" data-translate="home_buyer_btn_moq"></a>
+                <div class="home-secondary__cta-row">
+                    <a class="btn btn-primary" href="index.html#contact" data-translate="cta_primary"></a>
+                    <a class="btn btn-secondary" href="product-center.html" data-translate="cta_secondary"></a>
+                    <a class="btn btn-outline btn--resource" href="faq-moq.html" data-translate="home_buyer_btn_moq"></a>
                 </div>
 
-                <!-- 相关产品 / Related Products (SEO internal links) -->
-                <div class="related-products-links" style="margin-top: 28px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,.06);">
-                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; color: var(--wk-gray-900);" data-translate="btn_explore"></h3>
-                    <div class="home-buyer-seo-links" style="display: flex; flex-wrap: wrap; gap: 10px 20px;" data-translate="home_buyer_seo_links_html"></div>
+                <div class="related-products-links home-buyer-related">
+                    <h3 class="related-products-links__title" data-translate="btn_explore"></h3>
+                    <div class="home-buyer-seo-links" data-translate="home_buyer_seo_links_html"></div>
                 </div>
             </div>
         </section>
 
-        <!-- Social Proof -->
-        <section class="wk-section" id="social-proof">
+        <section class="wk-section wk-news-home wk-section--secondary" id="latest-news">
             <div class="container">
-                <div class="section-header">
-                    <h2 data-translate="home_trusted_by_title"></h2>
-                    <p data-translate="home_trusted_by_subtitle"></p>
-                </div>
-
-                <div class="wk-grid wk-feature-grid" aria-label="Social proof highlights">
-                    <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-earth-asia"></i></div>
-                        <h3 data-translate="home_social_export_title"></h3>
-                        <p data-translate="home_social_export_desc"></p>
-                    </div>
-                    <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-briefcase"></i></div>
-                        <h3 data-translate="home_social_clients_title"></h3>
-                        <p data-translate="home_social_clients_desc"></p>
-                    </div>
-                </div>
-
-                <div id="trustedByGrid" class="wk-grid wk-logo-grid" aria-hidden="true"></div>
-                <p class="wk-disclaimer" data-translate="third_party_trademarks_disclaimer"></p>
-            </div>
-        </section>
-
-        <!-- Latest News -->
-        <section class="wk-section wk-news-home" id="latest-news">
-            <div class="container">
-                <div class="section-header">
+                <div class="section-header home-secondary__header">
                     <h2>
                         <span class="zh" data-translate="home_news_title"></span>
                         <span class="en" data-translate="home_news_title"></span>
@@ -405,7 +567,7 @@
                         <span class="en" data-translate="home_news_intro"></span>
                     </p>
                 </div>
-                <div class="news-grid news-grid--split" style="max-width: 980px; margin: 0 auto;">
+                <div class="news-grid news-grid--split home-news-grid" style="max-width: 980px; margin: 0 auto;">
                     <article class="news-card news-card--featured">
                         <a class="news-card__media" href="news/apppexpo-2026-shanghai.html" aria-hidden="true" tabindex="-1">
                             <img src="news/images/APPPEXPO2026/apppexpo-2026-shanghai-05.jpg" alt="" loading="lazy" width="800" height="500" data-translate-alt="news_apppexpo_feature_alt">
@@ -441,10 +603,9 @@
             </div>
         </section>
 
-        <!-- 公司介绍 / About Us (restored) -->
-        <section id="about" class="about">
+        <section id="about" class="about about--home-secondary">
             <div class="container">
-                <div class="section-header">
+                <div class="section-header home-secondary__header">
                     <h2 data-translate="about_title">关于伟群</h2>
                     <p data-translate="about_subtitle">帐篷、沙滩旗与展示系统的专业源头制造工厂</p>
                 </div>
@@ -519,164 +680,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- 联系我们 -->
-        <section id="contact" class="contact contact-page">
-            <div class="contact-hero">
-                <h2 data-translate="contact_title">联系我们</h2>
-                <p data-translate="contact_subtitle">我们期待与您的合作</p>
-                <p class="contact-seo-text" style="margin-top: 16px; font-size: 1.1em; color: #555; max-width: 800px; margin-left: auto; margin-right: auto;" data-translate="contact_seo_text">Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.</p>
-            </div>
-            <div class="contact-grid">
-                <!-- Left: info -->
-                <aside class="contact-card soft-panel contact-info">
-                    <h3 data-translate="contact_info_title">联系方式</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_address_title">Address</div>
-                            <div class="contact-value" data-i18n="contact_address_value">
-                                Changtangao, Daping Team, Luyin Village, Gucheng Town, Luchuan County, Yulin City, Guangxi, China
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_whatsapp_title">WhatsApp</div>
-                            <a
-                                href="https://wa.me/8613824540280"
-                                target="_blank"
-                                class="contact-link"
-                            >
-                                +86 138 2454 0280
-                            </a>
-                            <div class="qr-wrapper">
-                                <img
-                                    src="images/boss_whatsapp.jpg"
-                                    alt="WhatsApp QR Code"
-                                    class="qr-img"
-                                >
-                            </div>
-                            <div class="contact-note" data-i18n="contact_whatsapp_note">
-                                Scan to chat on WhatsApp
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <div class="label" data-translate="contact_email_label">Email</div>
-                            <div class="value">
-                                <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-weixin"></i>
-                        <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_wechat_title">WeChat</div>
-                            <div class="contact-value">massifmyth</div>
-                            <div class="qr-wrapper">
-                                <img src="images/boss_wechat.jpg" alt="WeChat QR Code" class="qr-img">
-                            </div>
-                            <div class="contact-note" data-i18n="contact_wechat_note">
-                                Scan to add on WeChat
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-                <!-- Right: inquiry funnel (trust + form). Keep IDs for replaceable submit hook. -->
-                <div class="contact-right" style="display:flex; flex-direction:column; gap:22px;">
-                    <!-- What happens next (trust section) -->
-                    <div class="contact-card soft-panel">
-                        <h3 data-translate="contact_next_title"></h3>
-                        <div class="wk-grid wk-feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-                            <div class="wk-card wk-feature-card">
-                                <div class="wk-feature-icon"><i class="fas fa-list-check"></i></div>
-                                <h3 data-translate="contact_next_step1_title"></h3>
-                                <p data-translate="contact_next_step1_desc"></p>
-                            </div>
-                            <div class="wk-card wk-feature-card">
-                                <div class="wk-feature-icon"><i class="fas fa-clock"></i></div>
-                                <h3 data-translate="contact_next_step2_title"></h3>
-                                <p data-translate="contact_next_step2_desc"></p>
-                            </div>
-                            <div class="wk-card wk-feature-card">
-                                <div class="wk-feature-icon"><i class="fas fa-truck-ramp-box"></i></div>
-                                <h3 data-translate="contact_next_step3_title"></h3>
-                                <p data-translate="contact_next_step3_desc"></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Inquiry form (standardized fields) -->
-                    <div class="contact-card soft-panel contact-form inquiry-form">
-                        <h3 data-translate="contact_form_title">Request a Quote</h3>
-
-                        <p class="wk-disclaimer" data-translate="contact_promise_24h"></p>
-
-                        <ul class="contact-trust-bullets" role="list">
-                            <li data-translate="trust_factory_direct"></li>
-                            <li data-translate="trust_no_middleman"></li>
-                            <li data-translate="trust_oem_odm"></li>
-                            <li data-translate="trust_export_experience"></li>
-                        </ul>
-
-                        <div id="contactSuccess" style="display:none; padding:12px; background:#e6ffed; border-radius:6px; margin-bottom:12px;" data-translate="contact_reply_24h_success"></div>
-                        <div id="formMessage" style="display:none; margin-bottom:12px;"></div>
-
-                        <form id="getQuoteForm" class="quote-form" action="javascript:void(0);" novalidate>
-                            <label>
-                                <span data-translate="inquiry_form_name">Your Name *</span>
-                                <input type="text" name="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_form_email">Your Email *</span>
-                                <input type="email" name="email" required data-translate-placeholder="inquiry_form_email" />
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_product_label"></span>
-                                <input id="product" type="text" name="product" required data-translate-placeholder="inquiry_field_product_placeholder" />
-                                <div class="form-helper" data-translate="inquiry_helper_size_example"></div>
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_quantity_label"></span>
-                                <input type="text" name="quantity" required inputmode="numeric" data-translate-placeholder="inquiry_field_quantity_placeholder" />
-                                <div class="form-helper" data-translate="inquiry_helper_quantity_example"></div>
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_market_label"></span>
-                                <input type="text" name="target_market" required data-translate-placeholder="inquiry_field_market_placeholder" />
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_message_label"></span>
-                                <textarea name="message" rows="5" data-translate-placeholder="inquiry_field_message_placeholder"></textarea>
-                            </label>
-
-                            <!-- Honeypot 防垃圾 -->
-                            <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off" />
-
-                            <div style="display:flex; gap:8px; margin-top:10px;">
-                                <button id="contactSubmitBtn" class="btn btn-primary" type="submit" data-translate="inquiry_form_submit">Send Inquiry</button>
-                                <button type="reset" class="btn btn-secondary" data-translate="inquiry_form_reset"></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- SEO + 转化文案 -->
-            <div class="contact-seo-footer" style="text-align: center; margin-top: 48px; padding: 32px; background: #f8f9fa; border-radius: 16px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                <p style="font-size: 1.1em; color: #333; line-height: 1.6;" data-translate="contact_seo_footer">
-                    Looking for a reliable manufacturer of custom tents, flags or display systems? Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your project.
-                </p>
-            </div>
-        </section>
+        </div>
 
         <!-- ===================== Contact Bottom (Signazon-style) ===================== -->
         <section class="contact-bottom">
@@ -732,12 +736,11 @@
                             Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
                         </div>
                         <div class="contact-bottom__askActions">
-                            <a href="index.html#contact" class="contact-bottom__btn" data-i18n="footer_ask_btn">
-                                Get a Quote
-                            </a>
-                            <a href="https://wa.me/8613824540280" target="_blank" class="contact-bottom__btn contact-bottom__btn--ghost" data-i18n="footer_ask_btn2">
-                                WhatsApp Now
-                            </a>
+                            <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
+                            <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
+                        </div>
+                        <div class="contact-bottom__askSupport">
+                            <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
                         </div>
                     </div>
                 </div>
@@ -770,7 +773,7 @@
     </button>
 
     <!-- Mobile sticky CTA -->
-    <a class="wk-sticky-quote" href="#contact" data-translate="home_sticky_quote"></a>
+    <a class="wk-sticky-quote" href="#contact" data-translate="cta_primary"></a>
 
     <!-- PDF下载模态框 -->
     <div id="pdfModal" class="modal">
@@ -778,7 +781,7 @@
             <span class="close">&times;</span>
             <h3 id="pdfModalTitle" data-translate="pdf_download_title">下载产品资料</h3>
             <p id="pdfModalDesc" data-translate="pdf_download_desc">点击下方按钮下载完整的产品目录和公司介绍。</p>
-            <a id="pdfDownloadLink" href="广西伟群帐篷制造有限公司2025改.pdf" target="_blank" rel="noopener" class="btn btn-primary" data-translate="btn_download_pdf">下载PDF</a>
+            <a id="pdfDownloadLink" href="广西伟群帐篷制造有限公司2025改.pdf" target="_blank" rel="noopener" class="btn btn-secondary" data-translate="btn_download_pdf">下载PDF</a>
         </div>
     </div>
 

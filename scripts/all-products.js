@@ -247,6 +247,30 @@
         if (crumbEl) crumbEl.textContent = label;
     }
 
+    function updateApContextBanner(cat) {
+        const hint = document.getElementById('apContextHint');
+        const banner = document.getElementById('apContextBanner');
+        const badge = document.getElementById('apContextBadge');
+        const hub = document.getElementById('apContextHub');
+        const t = (key) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(key) : key);
+        if (!banner || !badge || !hub) return;
+        if (!cat || cat === 'all') {
+            banner.hidden = true;
+            if (hint) hint.hidden = false;
+            document.body.removeAttribute('data-ap-active-cat');
+            return;
+        }
+        banner.hidden = false;
+        if (hint) hint.hidden = true;
+        document.body.setAttribute('data-ap-active-cat', String(cat));
+        const key = getCategoryLabelKey(cat);
+        badge.textContent = key ? t(key) : cat;
+        hub.href = `product-center.html?cat=${encodeURIComponent(cat)}`;
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    }
+
     function ensureInvalidCatNotice() {
         if (invalidCatNoticeEl) return invalidCatNoticeEl;
         // Inline notice (shown only when URL cat is invalid)
@@ -333,8 +357,6 @@
         const legacy = product ? (product.name || '') : '';
         if (lang === 'zh') return product.nameZh || (hasCjk(legacy) ? legacy : '') || '产品';
         if (lang === 'en') return product.nameEn || (!hasCjk(legacy) ? legacy : '') || 'Product';
-        if (lang === 'ja') return product.nameJa || '';
-        if (lang === 'ko') return product.nameKo || '';
         return product.nameEn || product.nameZh || legacy || 'Product';
     }
 
@@ -546,13 +568,17 @@
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
             const quoteUrl = `./index.html?product=${productParam}#contact`;
-            // DETAIL ROUTING
-            // Flow B (Browse Products / all-products.html cards) generates the “View details / 查看详情” link here.
-            // Route to the ONE unified product detail page.
+            // Primary browse: type hub (*-type.html) when available; otherwise unified PDP.
             const preferredSku = getPreferredSku(p);
+            const typeUrl = (typeof window.WK_getProductTypePageUrl === 'function')
+                ? window.WK_getProductTypePageUrl(p)
+                : '';
             const detailUrl = preferredSku
                 ? buildUnifiedDetailUrlFromSku(preferredSku)
                 : `all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
+            const browseUrl = typeUrl || detailUrl;
+            const browseTranslate = typeUrl ? 'view_type_button' : 'view_details';
+            const browseClass = typeUrl ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
             
             // 提取规格信息（从 tags 或 category 推断）
             const specs = [];
@@ -624,7 +650,7 @@
                         </div>
                         <div class="ap-actions">
                             <a class="btn btn-primary product-btn" href="${quoteUrl}" data-translate="btn_get_quote"></a>
-                            <a class="btn btn-secondary product-details-btn" href="${detailUrl}" data-sku="${safeText(preferredSku)}" data-translate="view_details"></a>
+                            <a class="${browseClass}" href="${browseUrl}" data-sku="${safeText(preferredSku)}" data-translate="${browseTranslate}"></a>
                         </div>
                     </div>
                 </article>
@@ -826,6 +852,13 @@
 
         updateHeadingAndBreadcrumb(cat);
         updateCategorySeo(cat);
+        updateApContextBanner(cat);
+
+        try {
+            sessionStorage.setItem('wk_last_listing', window.location.pathname + window.location.search);
+        } catch (e) {
+            // ignore
+        }
 
         const typeNotice = ensureTentTypeNotice();
         typeNotice.style.display = 'none';

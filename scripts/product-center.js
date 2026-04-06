@@ -132,7 +132,39 @@
     }
   }
 
+  function updatePcContextBanner(cat) {
+    const el = document.getElementById('productCenterContext');
+    if (!el) return;
+    const badge = document.getElementById('pcContextBadge');
+    const catalog = document.getElementById('pcContextCatalog');
+    const t = (k) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(k) : k);
+    const keyMap = {
+      tents: 'home_cat_tents_title',
+      flags: 'menu_beach_flags',
+      displays: 'menu_popup_displays',
+      lightbox: 'category_lightbox',
+      accessories: 'menu_accessories',
+      racegate: 'home_cat_racegate_title',
+      'advertising-arch': 'category_advertising_arch',
+      'water-filled-a-poster-stand': 'category_water_filled_a_poster_stand'
+    };
+    if (!cat) {
+      el.hidden = true;
+      document.body.removeAttribute('data-pc-active-cat');
+      return;
+    }
+    el.hidden = false;
+    document.body.setAttribute('data-pc-active-cat', String(cat));
+    const k = keyMap[cat];
+    if (badge) badge.textContent = k ? t(k) : cat;
+    if (catalog) catalog.href = `all-products.html?cat=${encodeURIComponent(cat)}`;
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
+  }
+
   function applyCategoryFilter(cat) {
+    try {
     const cards = Array.from(document.querySelectorAll('.category-card'));
     const backWrap = document.getElementById('productCenterBackWrap');
     const noticeEl = document.getElementById('productCenterNotice');
@@ -225,6 +257,14 @@
       if (backWrap) backWrap.style.display = notice ? '' : 'none';
       if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
       return;
+    }
+    } finally {
+      updatePcContextBanner(cat);
+      try {
+        sessionStorage.setItem('wk_last_listing', window.location.pathname + window.location.search);
+      } catch (e) {
+        // ignore
+      }
     }
   }
 

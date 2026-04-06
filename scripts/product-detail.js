@@ -88,21 +88,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const base = product[field] || '';
         const zhKey = `${field}Zh`;
         const enKey = `${field}En`;
-        const jaKey = `${field}Ja`;
-        const koKey = `${field}Ko`;
         // Match productManager.getLocalizedName / getLocalizedDescription: zh uses *Zh, not plain `name`
         if (lang === 'zh') return product[zhKey] || base || '';
         if (lang === 'en') return product[enKey] || base || '';
-        if (lang === 'ja') return product[jaKey] || product[enKey] || base || '';
-        if (lang === 'ko') return product[koKey] || product[enKey] || base || '';
         return product[enKey] || product[zhKey] || base || '';
     };
 
     const getLocalizedSpecs = (product) => {
         const lang = getCurrentLang();
         if (lang === 'en') return product.specsEn || product.specs || [];
-        if (lang === 'ja') return product.specsJa || product.specs || [];
-        if (lang === 'ko') return product.specsKo || product.specs || [];
         return product.specs || [];
     };
 
@@ -301,8 +295,19 @@ document.addEventListener('DOMContentLoaded', () => {
             aProducts.textContent = '';
 
             const aCat = document.createElement('a');
-            aCat.href = `all-products.html?cat=${encodeURIComponent(product.category || '')}`;
+            aCat.href = `product-center.html?cat=${encodeURIComponent(product.category || '')}`;
             aCat.textContent = getCategoryLabel(product.category || '');
+
+            let aType = null;
+            if (typeof window.WK_getProductTypePageUrl === 'function') {
+                const th = window.WK_getProductTypePageUrl(product);
+                if (th) {
+                    aType = document.createElement('a');
+                    aType.href = th.startsWith('/') ? th.slice(1) : th;
+                    aType.setAttribute('data-translate', 'view_type_button');
+                    aType.textContent = '';
+                }
+            }
 
             const cur = document.createElement('span');
             cur.id = 'breadcrumbProduct';
@@ -315,11 +320,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 bcNav.appendChild(makeSep());
                 bcNav.appendChild(aCat);
             }
+            if (aType) {
+                bcNav.appendChild(makeSep());
+                bcNav.appendChild(aType);
+            }
             bcNav.appendChild(makeSep());
             bcNav.appendChild(cur);
         } else {
             const bc = document.getElementById('breadcrumbProduct');
             if (bc) bc.textContent = name;
+        }
+
+        const pdpRet = document.getElementById('pdpReturnRow');
+        const pdpBack = document.getElementById('pdpBackListing');
+        if (pdpRet && pdpBack) {
+            let listingHref = '';
+            try {
+                listingHref = (sessionStorage.getItem('wk_last_listing') || '').trim();
+            } catch (e) {
+                listingHref = '';
+            }
+            const fromListing = listingHref
+                && !/product-detail/i.test(listingHref)
+                && (/all-products/i.test(listingHref) || /product-center/i.test(listingHref));
+            if (fromListing) {
+                pdpBack.href = listingHref.startsWith('/') ? listingHref.slice(1) : listingHref;
+            } else if (product.category) {
+                pdpBack.href = `all-products.html?cat=${encodeURIComponent(product.category)}`;
+            } else {
+                pdpBack.href = 'all-products.html';
+            }
+            pdpRet.hidden = false;
         }
 
         // If page contains any legacy back links, normalize them

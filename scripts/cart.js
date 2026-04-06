@@ -40,8 +40,6 @@ class ShoppingCart {
                 id: product.id,
                 name: product.name,
                 nameEn: product.nameEn,
-                nameJa: product.nameJa,
-                nameKo: product.nameKo,
                 price: product.price,
                 category: product.category,
                 image: product.image,
@@ -112,12 +110,10 @@ class ShoppingCart {
         const currentLang = window.multiLang ? window.multiLang.getCurrentLanguage() : 'zh';
         const messages = {
             zh: `已将 ${product.name} 添加到购物车`,
-            en: `${product.nameEn || product.name} added to cart`,
-            ja: `${product.nameJa || product.name} がカートに追加されました`,
-            ko: `${product.nameKo || product.name} 장바구니에 추가되었습니다`
+            en: `${product.nameEn || product.name} added to cart`
         };
         
-        const message = messages[currentLang] || messages.zh;
+        const message = messages[currentLang] || messages.en;
         
         // 创建通知元素
         const notification = document.createElement('div');
@@ -242,11 +238,9 @@ class ShoppingCart {
             const currentLang = window.multiLang ? window.multiLang.getCurrentLanguage() : 'zh';
             const messages = {
                 zh: `${total} 件商品`,
-                en: `${total} items`,
-                ja: `${total} 点`,
-                ko: `${total} 개 상품`
+                en: `${total} items`
             };
-            totalPriceEl.textContent = messages[currentLang] || messages.zh;
+            totalPriceEl.textContent = messages[currentLang] || messages.en;
         }
     }
     
@@ -254,11 +248,9 @@ class ShoppingCart {
     getLocalizedName(item, lang) {
         const nameMap = {
             zh: item.name,
-            en: item.nameEn || item.name,
-            ja: item.nameJa || item.name,
-            ko: item.nameKo || item.name
+            en: item.nameEn || item.name
         };
-        return nameMap[lang] || item.name;
+        return nameMap[lang] || item.nameEn || item.name;
     }
     
     // 获取产品图标
@@ -297,11 +289,9 @@ class ShoppingCart {
                     const productNames = this.items.map(item => this.getLocalizedName(item, currentLang)).join('、');
                     const messages = {
                         zh: `我想了解以下产品的详细报价：${productNames}`,
-                        en: `I would like to get quotes for the following products: ${productNames}`,
-                        ja: `以下の製品の詳細見積もりをお願いします：${productNames}`,
-                        ko: `다음 제품에 대한 자세한 견적을 원합니다: ${productNames}`
+                        en: `I would like to get quotes for the following products: ${productNames}`
                     };
-                    messageField.value = messages[currentLang] || messages.zh;
+                    messageField.value = messages[currentLang] || messages.en;
                 }
             }, 500);
         }

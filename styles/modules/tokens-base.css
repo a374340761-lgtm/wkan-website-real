@@ -1,0 +1,313 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===============================
+   Design tokens (single :root — merged from legacy dual blocks)
+================================ */
+:root {
+    /* Brand Red (Primary) */
+    --wk-red-900: #7a0f16;
+    --wk-red-700: #a4161a;
+    --wk-red-600: #c81e1e;
+    --wk-red-500: #e53935;
+
+    /* Neutral (Base) */
+    --wk-black: #0f172a;
+    --wk-gray-900: #1f2937;
+    --wk-gray-700: #374151;
+    --wk-gray-500: #6b7280;
+    --wk-gray-300: #d1d5db;
+
+    /* Background */
+    --wk-bg-main: #f8fafc;
+    --wk-bg-card: #ffffff;
+    --wk-bg-soft: #f1f5f9;
+
+    --wk-border-light: rgba(15, 23, 42, 0.08);
+    --wk-accent-soft-red: rgba(200, 30, 30, 0.08);
+
+    /* Legacy aliases (kept for existing rules) */
+    --primary-color: #a4161a;
+    --primary-dark: #7a0f16;
+    --primary-light: #c81e1e;
+    --secondary-color: #faf9f8;
+    --accent-color: #a4161a;
+    --text-dark: #2c3e50;
+    --text-light: #6c757d;
+    --text-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e9ecef;
+
+    --font-primary: 'Plus Jakarta Sans', 'Noto Sans SC', 'Inter', sans-serif;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+
+    --transition-fast: 0.15s ease-in-out;
+    --transition-base: 0.3s ease-in-out;
+    --transition-slow: 0.5s ease-in-out;
+
+    --container-max: 1240px;
+    --container-pad: clamp(16px, 3vw, 28px);
+
+    --radius-2xl: 1.25rem;
+    /* Surfaces: restrained elevation (industrial B2B — avoid “floating marketplace” depth) */
+    --shadow-soft: 0 1px 0 rgba(15, 23, 42, 0.06), 0 8px 28px rgba(15, 23, 42, 0.07);
+    --shadow-card: 0 1px 0 rgba(15, 23, 42, 0.06), 0 12px 32px rgba(15, 23, 42, 0.09);
+    --wk-border-hairline: 1px solid rgba(15, 23, 42, 0.08);
+
+    --text-muted: rgba(31,45,61,.72);
+    --text-faint: rgba(31,45,61,.55);
+
+    --section-py: clamp(44px, 6vw, 84px);
+    --h1: clamp(30px, 3.2vw, 46px);
+    --h2: clamp(22px, 2.3vw, 32px);
+    --h3: clamp(18px, 1.6vw, 22px);
+    --p:  clamp(15px, 1.1vw, 17px);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-white);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+}
+
+/* ===== Typography polish ===== */
+h1 { font-size: var(--h1); line-height: 1.12; letter-spacing: -0.02em; color: var(--wk-black); }
+h2 { font-size: var(--h2); line-height: 1.2;  letter-spacing: -0.015em; color: var(--wk-black); }
+h3 { font-size: var(--h3); line-height: 1.25; color: var(--wk-black); }
+p  { font-size: var(--p);  color: var(--text-muted); }
+
+a {
+    color: var(--wk-red-700);
+}
+a:hover {
+    color: var(--wk-red-600);
+}
+
+/* Better tap/keyboard UX */
+a, button { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid rgba(164,22,26,.35); outline-offset: 2px; border-radius: 10px; }
+
+/* ===== Sections spacing (global) ===== */
+section { scroll-margin-top: 110px; }
+.section-header { margin-bottom: clamp(18px, 2.5vw, 30px); }
+.section-header p { max-width: 72ch; margin-inline: auto; }
+
+/* ===== Buttons (consistent) =====
+   Hierarchy sitewide: primary = inquiry (Get Quote), secondary = catalog (View Products),
+   tertiary = supporting contact (WhatsApp / email) — not equal visual weight to primary. */
+.btn {
+    border-radius: 999px;
+    padding: 12px 18px;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+}
+.btn.btn-primary {
+    border: 1px solid transparent;
+    box-shadow: 0 4px 18px rgba(164, 22, 26, 0.2);
+}
+.btn.btn-secondary {
+    background: rgba(164, 22, 26, 0.06);
+    border: 1px solid rgba(164, 22, 26, 0.18);
+    color: var(--wk-gray-900);
+    box-shadow: none;
+}
+/* Low-emphasis actions (chat, email) — inline link feel, not a second primary button */
+.btn.btn-tertiary {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 8px 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--wk-gray-700);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.btn.btn-tertiary:hover {
+    color: var(--wk-red-700);
+}
+.btn i { margin-left: 6px; }
+
+/* ===== Cards (unified) ===== */
+.wk-card,
+.product-item,
+.ap-card {
+    background: var(--wk-bg-card);
+    border: var(--wk-border-hairline);
+    border-radius: var(--radius-2xl);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+.wk-card:hover,
+.product-item:hover,
+.ap-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+    border-color: rgba(15, 23, 42, 0.1);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+/* ===== All Products (ap-*) styles (remove inline styles from JS) ===== */
+.ap-card { display: flex; flex-direction: column; }
+.ap-img { aspect-ratio: 4 / 3; background: rgba(15,23,42,.04); overflow: hidden; }
+/* contain: full product visible inside card; avoids portrait heroes blowing up card height */
+.ap-img img { width: 100%; height: 100%; object-fit: contain; object-position: var(--wk-hero-object-position, center); display: block; }
+.ap-img .sprite-thumb { width: 100%; height: 100%; border-radius: 0; background-repeat: no-repeat; background-position: center; }
+.ap-body { padding: 16px 16px 18px; }
+.ap-body h3 { margin: 0 0 8px; color: var(--text-dark); }
+.ap-meta { margin: 0 0 10px; font-size: 13px; color: var(--text-faint); }
+.ap-specs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+.ap-actions { display: flex; gap: 10px; margin-top: 10px; }
+.ap-actions .btn { flex: 1; text-align: center; justify-content: center; }
+
+/* ===== Unified hero media (cards) =====
+   Ensures consistent card image height across grids and dynamic templates.
+   Default aspect ratio: 4 / 3
+*/
+.ap-img,
+.product-row-image,
+.product-image,
+.tent-type-card__imgWrap,
+.home .wk-product-media {
+    --wk-hero-object-position: center;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(15,23,42,0.05), rgba(15,23,42,0.02));
+}
+
+/* Back-compat fallback (older browsers): keep a reasonable fixed height */
+@supports not (aspect-ratio: 1 / 1) {
+    .ap-img,
+    .product-row-image,
+    .product-image,
+    .tent-type-card__imgWrap,
+    .home .wk-product-media {
+        height: 200px;
+    }
+}
+
+.product-image img,
+.product-row-image img,
+.tent-type-card__img,
+.home .wk-product-media img,
+.home .wk-product-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: var(--wk-hero-object-position, center);
+}
+
+/* Optional crop focus overrides (use on the image container) */
+.hero-top,
+[data-object-position="top"] { --wk-hero-object-position: top; }
+.hero-bottom,
+[data-object-position="bottom"] { --wk-hero-object-position: bottom; }
+.hero-left,
+[data-object-position="left"] { --wk-hero-object-position: left; }
+.hero-right,
+[data-object-position="right"] { --wk-hero-object-position: right; }
+.hero-top-left,
+[data-object-position="top left"] { --wk-hero-object-position: top left; }
+.hero-top-right,
+[data-object-position="top right"] { --wk-hero-object-position: top right; }
+.hero-bottom-left,
+[data-object-position="bottom left"] { --wk-hero-object-position: bottom left; }
+.hero-bottom-right,
+[data-object-position="bottom right"] { --wk-hero-object-position: bottom right; }
+
+/* .spec-tag / listing chips — unified in modules/product-cards.css */
+
+/* ===== Navbar mobile polish ===== */
+@media (max-width: 980px) {
+    .nav-container { padding: 12px 14px; min-height: 72px; }
+    .nav-actions { min-width: auto; gap: 10px; }
+    .nav-logo { margin-right: 16px; }
+}
+
+@media (max-width: 768px) {
+    .top-bar { font-size: 12px; height: auto; padding: 6px 0; }
+    .navbar { top: 28px; }
+    section { scroll-margin-top: 96px; }
+    .btn { padding: 12px 16px; }
+    .ap-actions { flex-direction: column; }
+}
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}
+
+/* 语言切换器 */
+.language-switcher {
+    position: fixed;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    /* Ensure the switcher is above the top bar and navbar */
+    z-index: 1002;
+    display: flex;
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+} 
+
+.lang-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: none;
+    background: transparent;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+}
+
+.lang-btn:hover {
+    background: var(--secondary-color);
+    color: var(--text-dark);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: var(--text-white);
+}

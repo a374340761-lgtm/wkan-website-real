@@ -51,8 +51,14 @@
 
       const actions = document.createElement('div');
       actions.className = 'tent-actions';
+      const typeUrl = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(p) : '';
+      const sku = (p && p.sku) ? p.sku : p.id;
+      const pdpUrl = `product-detail.html?sku=${encodeURIComponent(sku)}`;
+      const primaryHref = typeUrl || pdpUrl;
+      const primaryKey = typeUrl ? 'view_type_button' : 'view_details';
+      const btnClass = typeUrl ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
       actions.innerHTML = `
-        <a class="btn btn-secondary product-details-btn" href="product-detail.html?sku=${encodeURIComponent((p && p.sku) ? p.sku : p.id)}" data-translate="view_details"></a>
+        <a class="${btnClass}" href="${primaryHref}" data-translate="${primaryKey}"></a>
         <button class="btn" data-quote="${p.id}" data-translate="btn_get_quote"></button>
         <button class="btn" data-addcart="${p.id}" data-translate="btn_add_to_cart"></button>
       `;

@@ -249,3 +249,50 @@
     }
 }
 
+/* B2B RFQ modal (above mobile nav backdrop ~1395) */
+.modal.rfq-cart-modal,
+.rfq-cart-modal {
+    z-index: 2000;
+}
+
+.cart-item-meta {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.cart-item-link {
+    margin: 6px 0 0;
+    font-size: 12px;
+}
+
+.cart-item-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.cart-item-link a:hover {
+    text-decoration: underline;
+}
+
+.cart-item-image--photo {
+    overflow: hidden;
+}
+
+.cart-item-image--photo img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+}
+
+.rfq-cart-total {
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.rfq-cart-total #rfqCartCount {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+

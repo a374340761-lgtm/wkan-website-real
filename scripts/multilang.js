@@ -620,7 +620,7 @@ class MultiLanguageSystem {
 
                 // ARIA labels
                 aria_search: '搜索',
-                aria_cart: '购物车',
+                aria_cart: '询价清单',
                 aria_language: '语言',
                 aria_select_language: '选择语言',
                 aria_breadcrumb: '面包屑导航',
@@ -821,8 +821,8 @@ class MultiLanguageSystem {
                 ui_copy: '复制',
                 ui_copied: '已复制！',
                 ui_items_unit: '个',
-                ui_tip_cart_items: '提示：这些条目来自您的购物车，您可以在此修改数量。',
-                ui_tip_cart_empty: '提示：您的购物车为空。已展示筛选后的热门产品。为获取更精准报价，请先将产品加入购物车。',
+                ui_tip_cart_items: '提示：以下条目来自您的询价清单，可在此修改数量。',
+                ui_tip_cart_empty: '提示：询价清单为空。已展示筛选后的热门产品。为获取更精准报价，请先将产品加入询价清单。',
                 ui_copy_wechat_id: '复制微信号',
                 ui_overview: '概览',
 
@@ -850,14 +850,21 @@ class MultiLanguageSystem {
                 btn_download_pdf: '下载PDF',
                 btn_get_quote: '获取报价',
                 btn_download: '下载',
-                btn_add_to_cart: '加入购物车',
+                btn_add_to_cart: '加入询价清单',
                 
-                // 购物车
-                cart_title: '购物车',
-                cart_total: '总计:',
-                cart_clear: '清空购物车',
-                cart_checkout: '联系询价',
-                cart_empty: '购物车是空的',
+                // 询价清单（RFQ，非零售购物车）
+                cart_title: '询价清单（RFQ）',
+                cart_total: '件数：',
+                cart_clear: '清空清单',
+                cart_checkout: '填写询价',
+                cart_empty: '询价清单为空',
+                rfq_cart_title: '询价清单（RFQ）',
+                rfq_cart_empty: '询价清单为空',
+                rfq_cart_clear: '清空清单',
+                rfq_cart_request_quote: '填写询价',
+                rfq_cart_item_count_label: '件数',
+                rfq_cart_added_toast: '已加入询价清单：{name}',
+                rfq_cart_view_product: '查看产品',
                 
                 // Contact Bottom (Signazon-style)
                 footer_company_line_cn: '广西伟群帐篷制造有限公司',
@@ -1475,7 +1482,7 @@ class MultiLanguageSystem {
 
                 // ARIA labels
                 aria_search: 'Search',
-                aria_cart: 'Cart',
+                aria_cart: 'RFQ list',
                 aria_language: 'Language',
                 aria_select_language: 'Select language',
                 aria_breadcrumb: 'Breadcrumb',
@@ -1676,8 +1683,8 @@ class MultiLanguageSystem {
                 ui_copy: 'Copy',
                 ui_copied: 'Copied!',
                 ui_items_unit: 'items',
-                ui_tip_cart_items: 'Tip: These items come from your cart. You can change quantity here.',
-                ui_tip_cart_empty: 'Tip: Your cart is empty. Showing top filtered products. For precise RFQ, please add products to cart first.',
+                ui_tip_cart_items: 'Tip: These lines come from your RFQ list. You can change quantity here.',
+                ui_tip_cart_empty: 'Tip: Your RFQ list is empty. Showing top filtered products. For a precise quote, add products to your RFQ list first.',
                 ui_copy_wechat_id: 'Copy WeChat ID',
                 ui_overview: 'Overview',
 
@@ -1705,14 +1712,21 @@ class MultiLanguageSystem {
                 btn_download_pdf: 'Download PDF',
                 btn_get_quote: 'Get Quote',
                 btn_download: 'Download',
-                btn_add_to_cart: 'Add to Cart',
+                btn_add_to_cart: 'Add to RFQ list',
                 
-                // Shopping Cart
-                cart_title: 'Shopping Cart',
-                cart_total: 'Total:',
-                cart_clear: 'Clear Cart',
-                cart_checkout: 'Request Quote',
-                cart_empty: 'Your cart is empty',
+                // RFQ list (B2B inquiry, not retail checkout)
+                cart_title: 'RFQ list',
+                cart_total: 'Items:',
+                cart_clear: 'Clear list',
+                cart_checkout: 'Request quote',
+                cart_empty: 'Your RFQ list is empty',
+                rfq_cart_title: 'RFQ list',
+                rfq_cart_empty: 'Your RFQ list is empty',
+                rfq_cart_clear: 'Clear list',
+                rfq_cart_request_quote: 'Request quote',
+                rfq_cart_item_count_label: 'Items',
+                rfq_cart_added_toast: 'Added to RFQ list: {name}',
+                rfq_cart_view_product: 'View product',
                 
                 // Contact Bottom (Signazon-style)
                 footer_company_line_cn: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',

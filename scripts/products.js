@@ -3632,12 +3632,15 @@ getProductIcon(category) {
     }
 
     addToCart(product) {
-        // 调用全局的 addToCart 函数（如果存在）
+        if (!product) return;
+        if (typeof window.addProductToRfqCart === 'function') {
+            window.addProductToRfqCart(product, 1);
+            return;
+        }
         if (typeof window.addToCart === 'function') {
             window.addToCart(product.id);
         } else {
-            // 备用方案：显示提示
-            alert(`已将 ${this.getLocalizedName(product)} 添加到购物车`);
+            alert(`已将 ${this.getLocalizedName(product)} 加入询价清单`);
         }
     }
 
@@ -3846,17 +3849,20 @@ getProductIcon(category) {
         URL.revokeObjectURL(url);
     }
 
-    // 读购物车（兼容你已有 cart.js，不存在就返回空）
+    // 读询价清单（统一 wk_rfq_cart_v1，由 scripts/cart.js 管理）
     getCartItemsSafe() {
         try {
-            const raw = localStorage.getItem('cart');
+            if (window.wkRfqCart && typeof window.wkRfqCart.getIdQtyPairs === 'function') {
+                return window.wkRfqCart.getIdQtyPairs();
+            }
+            const raw = localStorage.getItem('wk_rfq_cart_v1');
             if (!raw) return [];
-            const arr = JSON.parse(raw);
-            // 兼容两种结构：[{id,qty}] 或 [{productId,quantity}]
-            return (arr || []).map(x => ({
-                id: x.id ?? x.productId,
+            const data = JSON.parse(raw);
+            const items = (data && data.items) || (Array.isArray(data) ? data : []);
+            return (items || []).map((x) => ({
+                id: x.id,
                 qty: x.qty ?? x.quantity ?? 1
-            })).filter(x => x.id);
+            })).filter((x) => x.id != null);
         } catch {
             return [];
         }

@@ -129,12 +129,23 @@
             </div>
             ${model ? `<div style="color: var(--text-muted); font-size: 0.95rem;"><span data-translate="spec_col_model"></span>: ${safeHtml(model)}</div>` : ''}
           </div>
-          <div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
             <a class="btn btn-secondary" href="${href}" data-translate="view_details"></a>
+            <button type="button" class="btn btn-primary" data-wk-rfq-dome="${safeHtml(String(p.id))}" data-translate="btn_add_to_cart"></button>
           </div>
         </div>
       `;
     }).join('');
+
+    wrap.querySelectorAll('[data-wk-rfq-dome]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-wk-rfq-dome');
+        const p = items.find((x) => x && String(x.id) === String(id));
+        if (p && typeof window.addProductToRfqCart === 'function') {
+          window.addProductToRfqCart(p, 1);
+        }
+      });
+    });
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();

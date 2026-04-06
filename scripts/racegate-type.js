@@ -91,9 +91,10 @@
           <div class="ap-body">
             <h3 style="margin:0 0 0.5rem 0;">${escapeHtml(name)}</h3>
             ${desc ? `<p class="ap-meta" style="margin:0 0 0.75rem 0;">${escapeHtml(desc)}</p>` : ''}
-            <div class="product-actions" style="display:flex;gap:10px;">
+            <div class="product-actions" style="display:flex;gap:10px;flex-wrap:wrap;">
               <a class="btn btn-secondary product-details-btn" href="${detailUrl}" data-translate="view_details"></a>
-              <a class="btn btn-primary" href="all-products.html?cat=racegate">${escapeHtml(t('在全部产品中查看', 'View in Browse Products'))}</a>
+              <button type="button" class="btn btn-primary" data-wk-rfq-racegate="${escapeHtml(String(p.id))}" data-translate="btn_add_to_cart"></button>
+              <a class="btn btn-secondary" href="all-products.html?cat=racegate">${escapeHtml(t('在全部产品中查看', 'View in Browse Products'))}</a>
             </div>
           </div>
         </article>

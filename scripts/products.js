@@ -1728,6 +1728,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t01',
                 name: '半围横杆 (AD-t01)',
+                nameZh: '半围横杆 (AD-t01)',
                 nameEn: 'Half Wall Support Pole (AD-t01)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 1, col: 1 },
@@ -1740,6 +1741,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T02',
                 name: '压重水桶（方） (WK-T02)',
+                nameZh: '压重水桶（方） (WK-T02)',
                 nameEn: 'Water Weight (Square) (WK-T02)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 1, col: 2 },
@@ -1752,6 +1754,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T01A',
                 name: '帐篷配件（WK-T01A）',
+                nameZh: '帐篷配件（WK-T01A）',
                 nameEn: 'Tent Accessory (WK-T01A)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 1, col: 3 },
@@ -1764,6 +1767,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T02A',
                 name: '压重水桶（圆） (WK-T02A)',
+                nameZh: '压重水桶（圆） (WK-T02A)',
                 nameEn: 'Water Weight (Round) (WK-T02A)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 1, col: 4 },
@@ -1776,6 +1780,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t03',
                 name: '帐篷配件（AD-t03）',
+                nameZh: '帐篷配件（AD-t03）',
                 nameEn: 'Tent Accessory (AD-t03)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 2, col: 1 },
@@ -1788,6 +1793,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t04',
                 name: '沙袋 (AD-t04)',
+                nameZh: '沙袋 (AD-t04)',
                 nameEn: 'Sand Bag (AD-t04)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 2, col: 2 },
@@ -1800,6 +1806,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T03A',
                 name: '帐篷配件（WK-T03A）',
+                nameZh: '帐篷配件（WK-T03A）',
                 nameEn: 'Tent Accessory (WK-T03A)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 2, col: 3 },
@@ -1812,6 +1819,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T03D',
                 name: '帐篷配件（WK-T03D）',
+                nameZh: '帐篷配件（WK-T03D）',
                 nameEn: 'Tent Accessory (WK-T03D)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 2, col: 4 },
@@ -1824,6 +1832,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t05',
                 name: '帐篷配件（AD-t05）',
+                nameZh: '帐篷配件（AD-t05）',
                 nameEn: 'Tent Accessory (AD-t05)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 3, col: 1 },
@@ -1836,6 +1845,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t06',
                 name: '帐篷配件（AD-t06）',
+                nameZh: '帐篷配件（AD-t06）',
                 nameEn: 'Tent Accessory (AD-t06)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 3, col: 2 },
@@ -1848,6 +1858,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T12-B',
                 name: '帐篷配件（WK-T12-B）',
+                nameZh: '帐篷配件（WK-T12-B）',
                 nameEn: 'Tent Accessory (WK-T12-B)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 3, col: 3 },
@@ -1860,6 +1871,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T06-2',
                 name: '帐篷手提袋 (WK-T06-2)',
+                nameZh: '帐篷手提袋 (WK-T06-2)',
                 nameEn: 'Tent Carry Bag (WK-T06-2)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 3, col: 4 },
@@ -1872,6 +1884,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t07',
                 name: '帐篷配件（AD-t07）',
+                nameZh: '帐篷配件（AD-t07）',
                 nameEn: 'Tent Accessory (AD-t07)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 4, col: 1 },
@@ -1884,6 +1897,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t08',
                 name: '帐篷配件（AD-t08）',
+                nameZh: '帐篷配件（AD-t08）',
                 nameEn: 'Tent Accessory (AD-t08)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 4, col: 2 },
@@ -1896,6 +1910,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T11',
                 name: '固定绳 (WK-T11)',
+                nameZh: '固定绳 (WK-T11)',
                 nameEn: 'Tie Down Rope (WK-T11)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 4, col: 3 },
@@ -1908,6 +1923,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T11-A',
                 name: '固定绳 (WK-T11-A)',
+                nameZh: '固定绳 (WK-T11-A)',
                 nameEn: 'Tie Down Rope (WK-T11-A)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 4, col: 4 },
@@ -1920,6 +1936,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t09',
                 name: '帐篷配件（AD-t09）',
+                nameZh: '帐篷配件（AD-t09）',
                 nameEn: 'Tent Accessory (AD-t09)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 5, col: 1 },
@@ -1932,6 +1949,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'AD-t10',
                 name: '帐篷配件（AD-t10）',
+                nameZh: '帐篷配件（AD-t10）',
                 nameEn: 'Tent Accessory (AD-t10)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 5, col: 2 },
@@ -1944,6 +1962,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T05-1',
                 name: '帐篷配件（WK-T05-1）',
+                nameZh: '帐篷配件（WK-T05-1）',
                 nameEn: 'Tent Accessory (WK-T05-1)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 5, col: 3 },
@@ -1956,6 +1975,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T12',
                 name: '帐篷配件（WK-T12）',
+                nameZh: '帐篷配件（WK-T12）',
                 nameEn: 'Tent Accessory (WK-T12)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 5, col: 4 },
@@ -1968,6 +1988,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T13',
                 name: '帐篷配件（WK-T13）',
+                nameZh: '帐篷配件（WK-T13）',
                 nameEn: 'Tent Accessory (WK-T13)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 6, col: 1 },
@@ -1980,6 +2001,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T14',
                 name: '帐篷配件（WK-T14）',
+                nameZh: '帐篷配件（WK-T14）',
                 nameEn: 'Tent Accessory (WK-T14)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 6, col: 2 },
@@ -1992,6 +2014,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T15',
                 name: '帐篷配件（WK-T15）',
+                nameZh: '帐篷配件（WK-T15）',
                 nameEn: 'Tent Accessory (WK-T15)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 6, col: 3 },
@@ -2004,6 +2027,7 @@ class ProductManager {
                 category: 'accessories',
                 model: 'WK-T16',
                 name: '帐篷配件（WK-T16）',
+                nameZh: '帐篷配件（WK-T16）',
                 nameEn: 'Tent Accessory (WK-T16)',
                 image: 'images/products/accessories/tent-accessories.png',
                 grid: { row: 6, col: 4 },
@@ -2015,6 +2039,7 @@ class ProductManager {
                 id: 4,
                 category: 'furniture',
                 name: '可折叠户外桌椅套装',
+                nameZh: '可折叠户外桌椅套装',
                 nameEn: 'Foldable Outdoor Table and Chair Set',
                 description: '高品质可折叠户外桌椅套装，便携易用，适合各种户外活动',
                 descriptionEn: 'High-quality foldable outdoor table and chair set, portable and easy to use, suitable for various outdoor activities',
@@ -2938,11 +2963,12 @@ getProductIcon(category) {
     
     getLocalizedName(product) {
         const lang = this.currentLanguage || 'en';
+        if (typeof window.WK_productDisplayName === 'function') {
+            return window.WK_productDisplayName(product, lang);
+        }
         const legacy = product ? (product.name || '') : '';
-
         if (lang === 'zh') return product.nameZh || (this._hasCjk(legacy) ? legacy : '') || '产品';
         if (lang === 'en') return product.nameEn || (!this._hasCjk(legacy) ? legacy : '') || 'Product';
-
         return product.nameEn || product.nameZh || legacy || 'Product';
     }
     
@@ -2954,6 +2980,14 @@ getProductIcon(category) {
         if (lang === 'en') return product.shortEn || product.descriptionEn || (!this._hasCjk(legacy) ? legacy : '') || '';
 
         return product.descriptionEn || product.descriptionZh || legacy || '';
+    }
+
+    getLocalizedShort(product) {
+        const lang = this.currentLanguage || 'en';
+        const legacy = product ? (product.short || '') : '';
+        if (lang === 'zh') return product.shortZh || (this._hasCjk(legacy) ? legacy : '') || '';
+        if (lang === 'en') return product.shortEn || (!this._hasCjk(legacy) ? legacy : '') || '';
+        return product.shortEn || product.shortZh || legacy || '';
     }
     
     getLocalizedSpecs(product) {
@@ -4155,6 +4189,69 @@ function mapStockTentToFoldingType(p) {
     if (m.includes('T50')) return 'folding50';
     return '';
 }
+
+(function () {
+    function hasCjk(text) {
+        return /[\u3400-\u9FFF\uF900-\uFAFF]/.test(String(text || ''));
+    }
+    window.WK_hasCjk = hasCjk;
+
+    function firstCjkLine(text) {
+        const s = String(text || '').trim();
+        if (!s) return '';
+        const line = s.split(/[\n\r]+/)[0].trim();
+        return hasCjk(line) ? line : '';
+    }
+
+    /**
+     * Single source of truth for product titles in listings, cards, PDP, and recommendations.
+     * zh: nameZh → CJK legacy name → first CJK line of shortZh → model/sku → legacy English → 产品
+     * en: nameEn → non-CJK legacy name → nameZh → legacy → model/sku → Product
+     */
+    window.WK_productDisplayName = function (product, lang) {
+        const p = product || {};
+        const L = String(lang || 'en').toLowerCase();
+        const legacy = p.name != null ? String(p.name).trim() : '';
+        const shortZh = p.shortZh != null ? String(p.shortZh).trim() : '';
+        const shortZLine = firstCjkLine(shortZh);
+        const shortZTitle = shortZLine && shortZLine.length > 100 ? shortZLine.slice(0, 97) + '…' : shortZLine;
+
+        if (L === 'zh') {
+            if (p.nameZh != null && String(p.nameZh).trim()) return String(p.nameZh).trim();
+            if (hasCjk(legacy)) return legacy;
+            if (shortZTitle) return shortZTitle;
+            const code = (p.model != null && String(p.model).trim()) ? String(p.model).trim()
+                : (p.sku != null && String(p.sku).trim()) ? String(p.sku).trim() : '';
+            if (code) return code;
+            if (legacy) return legacy;
+            return '产品';
+        }
+        if (L === 'en') {
+            if (p.nameEn != null && String(p.nameEn).trim()) return String(p.nameEn).trim();
+            if (legacy && !hasCjk(legacy)) return legacy;
+            if (p.nameZh != null && String(p.nameZh).trim()) return String(p.nameZh).trim();
+            if (legacy) return legacy;
+            const code = (p.model != null && String(p.model).trim()) ? String(p.model).trim()
+                : (p.sku != null && String(p.sku).trim()) ? String(p.sku).trim() : '';
+            if (code) return code;
+            return 'Product';
+        }
+        return p.nameEn || p.nameZh || legacy || 'Product';
+    };
+
+    window.WK_productLocalizedDescription = function (product, lang) {
+        const p = product || {};
+        const L = String(lang || 'en').toLowerCase();
+        const legacy = (p.description || p.short || '').toString();
+        if (L === 'zh') {
+            return (p.shortZh || p.descriptionZh || (hasCjk(legacy) ? legacy : '') || '').trim();
+        }
+        if (L === 'en') {
+            return (p.shortEn || p.descriptionEn || (!hasCjk(legacy) ? legacy : '') || '').trim();
+        }
+        return (p.descriptionEn || p.descriptionZh || legacy || '').trim();
+    };
+})();
 
 /**
  * Primary browse URL for a product: dedicated *-type.html hub when one exists, else empty (caller uses PDP).

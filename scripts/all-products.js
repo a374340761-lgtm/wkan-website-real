@@ -354,6 +354,9 @@
     // 获取产品名称（根据当前语言）
     function getProductName(product) {
         const lang = getCurrentLang();
+        if (typeof window.WK_productDisplayName === 'function') {
+            return window.WK_productDisplayName(product, lang);
+        }
         const legacy = product ? (product.name || '') : '';
         if (lang === 'zh') return product.nameZh || (hasCjk(legacy) ? legacy : '') || '产品';
         if (lang === 'en') return product.nameEn || (!hasCjk(legacy) ? legacy : '') || 'Product';
@@ -789,7 +792,18 @@
             : inflatableAll;
 
         const lang = getCurrentLang();
-        const getTitle = (item) => (lang === 'zh' ? (item.nameZh || item.nameEn || '') : (item.nameEn || item.nameZh || ''));
+        const getTitle = (item) => {
+            if (typeof window.WK_productDisplayName === 'function') {
+                return window.WK_productDisplayName({
+                    name: '',
+                    nameZh: item.nameZh,
+                    nameEn: item.nameEn,
+                    shortZh: item.descriptionZh,
+                    model: item.model
+                }, lang);
+            }
+            return lang === 'zh' ? (item.nameZh || item.nameEn || '') : (item.nameEn || item.nameZh || '');
+        };
         const getDesc = (item) => (lang === 'zh' ? (item.descriptionZh || '') : (item.descriptionEn || ''));
 
         const renderCards = (items) => (items || []).map((item) => {

@@ -83,23 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return String(cat || '');
     };
 
-    const getLocalized = (product, field) => {
-        const lang = getCurrentLang();
-        const base = product[field] || '';
-        const zhKey = `${field}Zh`;
-        const enKey = `${field}En`;
-        // Match productManager.getLocalizedName / getLocalizedDescription: zh uses *Zh, not plain `name`
-        if (lang === 'zh') return product[zhKey] || base || '';
-        if (lang === 'en') return product[enKey] || base || '';
-        return product[enKey] || product[zhKey] || base || '';
-    };
-
-    const getLocalizedSpecs = (product) => {
-        const lang = getCurrentLang();
-        if (lang === 'en') return product.specsEn || product.specs || [];
-        return product.specs || [];
-    };
-
     const setVisible = (el, isVisible) => {
         if (!el) return;
         el.style.display = isVisible ? '' : 'none';
@@ -168,10 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
         setVisible(tabs, true);
         setVisible(relatedSection, true);
 
-        const name = getLocalized(product, 'name');
-        const description = getLocalized(product, 'description');
-        const shortText = getLocalized(product, 'short');
-        const specs = getLocalizedSpecs(product);
+        const name = pm.getLocalizedName(product);
+        const description = pm.getLocalizedDescription(product);
+        const shortText = pm.getLocalizedShort ? pm.getLocalizedShort(product) : '';
+        const specs = pm.getLocalizedSpecs(product);
 
         const detailContent = (pm && typeof pm.getProductDetailContent === 'function')
             ? pm.getProductDetailContent(product)

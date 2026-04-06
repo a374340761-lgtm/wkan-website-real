@@ -29,25 +29,32 @@
       const card = document.createElement('div');
       card.className = 'tent-card';
 
+      const L = (lang && String(lang).toLowerCase().startsWith('zh')) ? 'zh' : 'en';
       const legacyName = p ? (p.name || '') : '';
       const zhName = (p && (p.nameZh || (hasCjk(legacyName) ? legacyName : ''))) || '';
       const enName = (p && (p.nameEn || (!hasCjk(legacyName) ? legacyName : ''))) || '';
+      const displayName = (typeof window.WK_productDisplayName === 'function')
+        ? window.WK_productDisplayName(p, L)
+        : ((L === 'zh') ? (zhName || '产品') : (enName || 'Product'));
+      const displayDesc = (typeof window.WK_productLocalizedDescription === 'function')
+        ? window.WK_productLocalizedDescription(p, L)
+        : ((L === 'zh') ? (p.shortZh || '') : (p.shortEn || ''));
 
       const hero = document.createElement('div');
       hero.className = 'ap-img';
 
       const img = document.createElement('img');
       img.src = p.image;
-      img.alt = (lang && lang.startsWith('zh')) ? (zhName || '产品') : (enName || 'Product');
+      img.alt = displayName;
       img.loading = 'lazy';
       img.onerror = function(){ this.src='images/placeholder.png'; };
       hero.appendChild(img);
 
       const h3 = document.createElement('h3');
-      h3.textContent = (lang && lang.startsWith('zh')) ? (zhName || '产品') : (enName || 'Product');
+      h3.textContent = displayName;
 
       const desc = document.createElement('p');
-      desc.textContent = (lang && lang.startsWith('zh')) ? (p.shortZh || '') : (p.shortEn || '');
+      desc.textContent = displayDesc;
 
       const actions = document.createElement('div');
       actions.className = 'tent-actions';

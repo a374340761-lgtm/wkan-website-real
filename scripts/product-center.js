@@ -2,6 +2,20 @@
 (function () {
   'use strict';
 
+  /** Hub cards (tents/flags) may omit nameZh; use same title fallback as product listings. */
+  function hubItemTitle(item, lang) {
+    if (typeof window.WK_productDisplayName === 'function') {
+      return window.WK_productDisplayName({
+        name: '',
+        nameZh: item.nameZh,
+        nameEn: item.nameEn,
+        shortZh: item.storyZh || item.descriptionZh || item.hubDescZh,
+        model: item.model
+      }, lang);
+    }
+    return lang === 'zh' ? String(item.nameZh || item.nameEn || '') : String(item.nameEn || item.nameZh || '');
+  }
+
   // DETAIL ROUTING (deep-link support)
   // Canonical detail experience is opened from product-center via modal.
   // Usage: product-center.html?open=<key> (optionally with &cat=...)
@@ -344,29 +358,33 @@
         .replace(/'/g, '&#39;');
     };
 
-    const getSubLabelHtml = (category, subValue) => {
-      const c = String(category || '').toLowerCase();
+    /**
+     * Subcategory slug → multilang key.
+     * Display Systems hub (?cat=displays) merges `displays` + `lightbox` products, so lookups must not be scoped by URL category
+     * (otherwise lightbox slugs incorrectly fall back to raw English slugs in zh mode).
+     */
+    const SUBCATEGORY_LABEL_KEYS = {
+      'a-frame': 'menu_displays_aframe',
+      'a-frame-backdrop': 'menu_displays_aframe_backdrop',
+      'popup': 'menu_popup_backdrop',
+      'counter': 'menu_popup_counter',
+      'fabric-banner-stands': 'menu_popup_fabric_banner_stands',
+      'tension-fabric': 'menu_displays_tension_fabric',
+      'tfd-straight-line': 'menu_popup_tfd_straight_line_series',
+      'tfd-c-shaped': 'menu_popup_tfd_c_shaped_series',
+      'tfd-accessories': 'menu_popup_tfd_accessories',
+      'round-tube-light-box': 'menu_lightbox_round_tube',
+      'aluminum-profile-seg-light-box': 'menu_lightbox_aluminum_profile',
+      'seg-net-light-box': 'menu_lightbox_seg_net',
+      'base-style-variant': 'menu_lightbox_base_style_variant',
+      'roll-up-stand': 'menu_displays_roll_up_stand',
+      'promotion-counter': 'menu_displays_promotion_counter'
+    };
+
+    const getSubLabelHtml = (subValue) => {
       const vRaw = String(subValue || '').trim();
       const v = vRaw.toLowerCase();
-      const mapByCat = {
-        displays: {
-          'a-frame': 'menu_displays_aframe',
-          'a-frame-backdrop': 'menu_displays_aframe_backdrop',
-          'popup': 'menu_popup_backdrop',
-          'counter': 'menu_popup_counter',
-          'fabric-banner-stands': 'menu_popup_fabric_banner_stands',
-            'tension-fabric': 'menu_displays_tension_fabric',
-            'tfd-straight-line': 'menu_popup_tfd_straight_line_series',
-            'tfd-c-shaped': 'menu_popup_tfd_c_shaped_series',
-            'tfd-accessories': 'menu_popup_tfd_accessories'
-          },
-          lightbox: {
-            'round-tube-light-box': 'menu_lightbox_round_tube',
-            'aluminum-profile-seg-light-box': 'menu_lightbox_aluminum_profile',
-            'seg-net-light-box': 'menu_lightbox_seg_net'
-        }
-      };
-      const key = mapByCat[c] && mapByCat[c][v];
+      const key = SUBCATEGORY_LABEL_KEYS[v];
       if (key) {
         return `<span class="zh" data-translate="${key}"></span><span class="en" data-translate="${key}"></span>`;
       }
@@ -393,7 +411,7 @@
         <a class="wk-card" href="${href}" style="display:block;padding:16px 16px;text-decoration:none;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
             <div>
-              <div style="font-weight:800;color:rgba(31,45,61,.92);margin-bottom:6px;">${getSubLabelHtml(cat, s.name)}</div>
+              <div style="font-weight:800;color:rgba(31,45,61,.92);margin-bottom:6px;">${getSubLabelHtml(s.name)}</div>
               <div style="font-size:12px;color:rgba(31,45,61,.55);">${countText}</div>
             </div>
             <div style="font-weight:800;color:rgba(44,90,160,.85);">→</div>
@@ -483,7 +501,7 @@
         <h2 class="tents-hub__title" data-translate="${titleKey}">${titleFallback}</h2>
         <div class="tent-types__grid">
           ${(items || []).map((item) => {
-            const title = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+            const title = safe(hubItemTitle(item, lang));
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.storyZh) : safe(item.storyEn);
             const desc = shortText(hubDesc || (rawDesc || '').split(/\n/)[0] || '');
@@ -542,7 +560,7 @@
 
     const lang = getCurrentLang();
     const safe = (s) => (s || '').toString();
-    const title = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+    const title = safe(hubItemTitle(item, lang));
     const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
     const shortText = (s, max = 110) => {
       const t = safe(s).replace(/\s+/g, ' ').trim();
@@ -595,7 +613,7 @@
         <h2 class="tents-hub__title" data-translate="${titleKey}">${titleFallback}</h2>
         <div class="tent-types__grid">
           ${(items || []).map((item) => {
-            const title = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+            const title = safe(hubItemTitle(item, lang));
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.descriptionZh) : safe(item.descriptionEn);
             const desc = shortText(hubDesc || rawDesc.split(/\n/)[0] || '');

@@ -247,11 +247,13 @@ class ProductManager {
                     description: '快幕秀布拉网（Fabric Pop-up Display）是最典型、最正统的快幕秀产品。采用折叠式铝合金框架与拉网结构，用作背景墙/展会背板，快速展开、无需工具。常见尺寸：3m / 4m / 5m 宽。可更换画面，便携收纳包装。',
                     descriptionEn: 'Fabric Pop-up Display is the most standard and authentic pop-up backdrop product. Features folding aluminum frame with tension fabric structure, used as backdrop wall for exhibitions. Tool-free quick setup. Common widths: 3m / 4m / 5m. Replaceable graphics with portable carrying case.',
                     descriptionZh: '快幕秀布拉网（Fabric Pop-up Display）是最典型、最正统的快幕秀产品。采用折叠式铝合金框架与拉网结构，用作背景墙/展会背板，快速展开、无需工具。常见尺寸：3m / 4m / 5m 宽。可更换画面，便携收纳包装。',
-                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    image: 'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
                     images: [
+                        'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
                         encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
                     ],
                     gallery: [
+                        'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
                         encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
                     ],
                     variantTables: [
@@ -285,8 +287,8 @@ class ProductManager {
                     keywords: ['快幕秀', '布拉网', 'pop up display', 'popup display', 'fabric display', 'backdrop', 'exhibition backdrop', 'WK-PO-01', 'trade show', 'portable display'],
                     tags: 'Fabric Pop Up Display, 快幕秀, 布拉网, WK-PO-01, backdrop, exhibition',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
-                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    referenceImage: 'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
+                    referenceImageLabel: '产品主图 / Product Hero',
                     price: '询价'
                 },
                 {
@@ -366,8 +368,8 @@ class ProductManager {
                     keywords: ['张拉布', '前台', 'tension fabric', 'fabric counter', 'reception counter', 'display counter', 'WK-PO-01-A', 'WK-PO-02-B', 'WK-PO-03-C', 'illuminated', 'booth furniture'],
                     tags: 'Tension Fabric Counter, 张拉布前台, Fabric Counter, counter, reception desk, exhibition counter',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
-                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    referenceImage: encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+                    referenceImageLabel: '产品主图 / Product Hero',
                     price: '询价'
                 },
 
@@ -1277,15 +1279,22 @@ class ProductManager {
                 subcategory: 'base-style-variant',
                 model: 'WK-IS003',
                 sku: 'WK-IS003',
-                nameEn: 'Light Box Stand (Base Variant) - WK-IS003',
-                nameZh: '灯箱展示架（底座款）- WK-IS003',
-                shortEn: 'Picture size: 60×80 CM. Weighted base style for better wind resistance.',
-                shortZh: '画面尺寸：60×80 CM。配重底座款，更适合抗风与人流区域。',
-                descriptionEn: 'A portable light box stand with a weighted-base style option. Quick-change fabric/SEG graphic; optional LED backlit.',
-                descriptionZh: '配重底座款灯箱展示架，支持布画/SEG 画面快速更换，可选 LED 背光。',
-                image: 'images/products/light-box-series/hero.png',
-                images: ['images/products/light-box-series/hero.png'],
-                gallery: ['images/products/light-box-series/hero.png'],
+                name: '灯箱展示架（配重底座款）· WK-IS003',
+                nameEn: 'Light Box Display Stand — Weighted Base · WK-IS003',
+                nameZh: '灯箱展示架（配重底座款）· WK-IS003',
+                shortEn: 'SEG light box display stand (weighted base). Picture 60×80 CM. Optional LED backlit; quick-change fabric graphic.',
+                shortZh: '灯箱展示架（底座方案：配重）。画面 60×80 CM，可选 LED 背光，布画/卡布画面可快换。',
+                descriptionEn: 'Portable SEG light box display stand in the weighted-base style — part of the base-style variant series for indoor retail and events. Quick-change fabric/SEG graphic; optional LED backlighting for brand visuals.',
+                descriptionZh: '灯箱展示架 · 底座款式之变体系列中的配重底座方案，适用于门店与活动室内陈列。便携式结构，布画/SEG 卡布画面可快速更换，可选 LED 背光，突出品牌画面。',
+                image: 'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
+                images: [
+                    'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
+                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                ],
+                gallery: [
+                    'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
+                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                ],
                 specsZh: {
                     '画面尺寸': '60 × 80 CM',
                     '画面': '布画 / SEG（卡布）画面（按方案）',
@@ -1312,8 +1321,10 @@ class ProductManager {
                 ],
                 applicationsEn: ['Retail stores', 'Brand activation', 'Indoor displays'],
                 applicationsZh: ['零售门店', '品牌推广', '室内展示'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
-                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                keywords: ['light box display stand', 'SEG light box', '灯箱展示架', '配重底座', 'WK-IS003', 'base-style-variant', '卡布灯箱'],
+                tags: 'Light box display stand, 灯箱展示架, WK-IS003, weighted base, SEG',
+                referenceImage: 'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
+                referenceImageLabel: '产品主图 / Product Hero',
                 price: '询价'
             },
             {
@@ -1322,15 +1333,22 @@ class ProductManager {
                 subcategory: 'base-style-variant',
                 model: 'WK-IS004',
                 sku: 'WK-IS004',
-                nameEn: 'Light Box Stand (Base Variant) - WK-IS004',
-                nameZh: '灯箱展示架（落地款）- WK-IS004',
-                shortEn: 'Picture size: 100×200 CM. Floor-standing base for large-format graphics.',
-                shortZh: '画面尺寸：100×200 CM。落地底座款，适合大画面展示。',
-                descriptionEn: 'A floor-standing light box stand variant for large-format graphics. Quick-change fabric/SEG graphic; optional LED backlit.',
-                descriptionZh: '适合大尺寸画面的落地款灯箱展示架，支持布画/SEG 画面快速更换，可选 LED 背光。',
-                image: 'images/products/light-box-series/hero.png',
-                images: ['images/products/light-box-series/hero.png'],
-                gallery: ['images/products/light-box-series/hero.png'],
+                name: '灯箱展示架（落地大画款）· WK-IS004',
+                nameEn: 'Light Box Display Stand — Floor-Standing · WK-IS004',
+                nameZh: '灯箱展示架（落地大画款）· WK-IS004',
+                shortEn: 'SEG light box display stand (floor-standing). Large picture 100×200 CM. Optional LED backlit; quick-change fabric graphic.',
+                shortZh: '灯箱展示架（底座方案：落地）。大画面 100×200 CM，可选 LED 背光，布画/卡布画面可快换。',
+                descriptionEn: 'Floor-standing SEG light box display stand for large-format graphics — part of the base-style variant series. Quick-change fabric/SEG graphic; optional LED backlighting for exhibitions, retail and showrooms.',
+                descriptionZh: '灯箱展示架 · 落地款大画面方案，同属底座款式变体系列。适合展厅、旗舰店与大画面品牌墙。布画/SEG 画面可快速更换，可选 LED 背光。',
+                image: 'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
+                images: [
+                    'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
+                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                ],
+                gallery: [
+                    'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
+                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                ],
                 specsZh: {
                     '画面尺寸': '100 × 200 CM',
                     '画面': '布画 / SEG（卡布）画面（按方案）',
@@ -1357,8 +1375,10 @@ class ProductManager {
                 ],
                 applicationsEn: ['Retail flagship stores', 'Showrooms', 'Indoor advertising'],
                 applicationsZh: ['旗舰店陈列', '展厅展示', '室内广告'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
-                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                keywords: ['light box display stand', 'SEG light box', '灯箱展示架', '落地', '落地款', 'WK-IS004', 'base-style-variant', '卡布灯箱'],
+                tags: 'Light box display stand, 灯箱展示架, WK-IS004, floor-standing, large format, SEG',
+                referenceImage: 'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
+                referenceImageLabel: '产品主图 / Product Hero',
                 price: '询价'
             },
 

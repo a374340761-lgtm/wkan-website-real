@@ -849,6 +849,7 @@ class MultiLanguageSystem {
                 social_facebook: 'Facebook',
                 social_linkedin: 'LinkedIn',
                 social_instagram: 'Instagram',
+                social_tiktok: 'TikTok',
                 
                 // PDF下载
                 pdf_download_title: '下载产品资料',
@@ -1727,6 +1728,7 @@ class MultiLanguageSystem {
                 social_facebook: 'Facebook',
                 social_linkedin: 'LinkedIn',
                 social_instagram: 'Instagram',
+                social_tiktok: 'TikTok',
                 
                 // PDF Download
                 pdf_download_title: 'Download Product Information',

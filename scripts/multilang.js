@@ -60,6 +60,7 @@ class MultiLanguageSystem {
                 nav_sol_beach_flags: '沙滩旗供应',
                 nav_sol_portable_display: '便携式展示系统',
                 nav_news_resources: '资讯与资源',
+                nav_follow_us: '关注我们',
                 nav_site_map: '网站地图',
 
                 // Language gate
@@ -844,6 +845,10 @@ class MultiLanguageSystem {
                 footer_links_title: '快速链接',
                 footer_contact_title: '联系方式',
                 footer_rights: '保留所有权利。',
+                footer_follow_us: '关注我们',
+                social_facebook: 'Facebook',
+                social_linkedin: 'LinkedIn',
+                social_instagram: 'Instagram',
                 
                 // PDF下载
                 pdf_download_title: '下载产品资料',
@@ -937,6 +942,7 @@ class MultiLanguageSystem {
                 nav_sol_beach_flags: 'Beach Flag Supplier',
                 nav_sol_portable_display: 'Portable Display Systems',
                 nav_news_resources: 'News & Resources',
+                nav_follow_us: 'Follow Us',
                 nav_site_map: 'Site Map',
 
                 // Language gate
@@ -1717,6 +1723,10 @@ class MultiLanguageSystem {
                 footer_links_title: 'Quick Links',
                 footer_contact_title: 'Contact Information',
                 footer_rights: 'All rights reserved.',
+                footer_follow_us: 'Follow Us',
+                social_facebook: 'Facebook',
+                social_linkedin: 'LinkedIn',
+                social_instagram: 'Instagram',
                 
                 // PDF Download
                 pdf_download_title: 'Download Product Information',

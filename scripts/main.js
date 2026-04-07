@@ -264,7 +264,16 @@ function getCurrentLangSafe() {
             return window.multiLang.getCurrentLanguage() || 'en';
         }
     } catch (e) {}
-    return document.documentElement.lang || 'en';
+    // multilang.js may not have constructed window.multiLang yet on DOMContentLoaded (main runs first),
+    // but getLang() reads site_language synchronously — use it for product title/description rendering.
+    try {
+        if (typeof getLang === 'function') {
+            const g = getLang();
+            return g === 'zh' ? 'zh' : 'en';
+        }
+    } catch (e2) {}
+    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+    return htmlLang.startsWith('zh') ? 'zh' : 'en';
 }
 
 function waitForProductManager(cb, tries = 0) {
@@ -651,6 +660,12 @@ function renderHomeBestSellers() {
         }
     });
 }
+
+// Re-render dynamic product text when language switches (titles/descriptions are not data-translate).
+document.addEventListener('languageChanged', () => {
+    if (!document.getElementById('bestSellersGrid')) return;
+    renderHomeBestSellers();
+});
 
 // ------------------------------
 // Resources (homepage)
@@ -1211,14 +1226,16 @@ function enhanceFlagsDropdown() {
         { type: 'alu_pole_square', nameEn: 'Aluminium Pole (Square)', nameZh: '铝合金旗杆（方形）' },
         { type: 'alu_pole_new_feather', nameEn: 'Aluminium Pole (New Feather)', nameZh: '铝合金旗杆（新羽毛）' },
         { type: 'alu_pole_feather', nameEn: 'Aluminium Pole (Feather/Teardrop)', nameZh: '铝合金旗杆（羽毛/泪滴）' },
+        { type: 'backpack_street_flags', nameEn: 'Backpack Flags & Street/Display Flags', nameZh: '背包旗 & 街旗 / 展示旗' },
         { type: 'flag_bases_accessories', nameEn: 'Bases & Accessories', nameZh: '底座与配件' }
     ];
 
     const getTypes = () => {
         const data = window.FLAG_TYPES;
         const poles = data && Array.isArray(data.poles) ? data.poles : [];
+        const special = data && Array.isArray(data.special) ? data.special : [];
         const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
-        const list = poles.concat(accessories);
+        const list = poles.concat(special, accessories);
         if (!list.length) return fallback;
         return list.map((x) => ({
             type: x.type,

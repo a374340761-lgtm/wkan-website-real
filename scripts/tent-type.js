@@ -31,6 +31,100 @@
     return (s || '').toString();
   }
 
+  const STOCK_TENT_ID_BY_TYPE = {
+    folding30: 2001,
+    folding40: 2002,
+    folding50: 2003
+  };
+
+  function rawRowField(row, keys) {
+    if (!row) return '';
+    const ks = Array.isArray(keys) ? keys : [keys];
+    for (let i = 0; i < ks.length; i++) {
+      const k = ks[i];
+      if (row[k] != null && String(row[k]).trim() !== '') return String(row[k]).trim();
+    }
+    return '';
+  }
+
+  function tentTypeRfqButtonHtml(item, row, selectedVariantKey) {
+    if (!item || !row) {
+      return '<td class="variant-rfq-cell"></td>';
+    }
+    const model = rawRowField(row, ['model', 'Model']);
+    const size = rawRowField(row, ['size', 'Size', 'dimension', 'Dimension']);
+    const weight = rawRowField(row, ['weight', 'Weight']);
+    const stockId = STOCK_TENT_ID_BY_TYPE[item.type];
+    const vkey = [String(item.type || ''), String(selectedVariantKey || ''), model, size, weight].join('\u241e');
+    const payload = {
+      vkey,
+      model,
+      size,
+      weight,
+      stockId: stockId || null,
+      findModel: stockId ? null : (model || null)
+    };
+    const enc = encodeURIComponent(JSON.stringify(payload));
+    return `<td class="variant-rfq-cell"><button type="button" class="variant-rfq-btn" data-wk-tent-rfq="1" data-wk-payload="${enc}"><i class="fas fa-cart-plus" aria-hidden="true"></i></button></td>`;
+  }
+
+  function bindTentTypeRfq(root) {
+    const btns = root.querySelectorAll('button[data-wk-tent-rfq]');
+    if (!btns.length) return;
+
+    const tryPm = (cb) => {
+      if (window.productManager && Array.isArray(window.productManager.products)) {
+        cb(window.productManager);
+        return;
+      }
+      let n = 0;
+      const id = setInterval(() => {
+        n += 1;
+        if (window.productManager && Array.isArray(window.productManager.products)) {
+          clearInterval(id);
+          cb(window.productManager);
+        } else if (n > 120) {
+          clearInterval(id);
+        }
+      }, 50);
+    };
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let payload = null;
+        try {
+          payload = JSON.parse(decodeURIComponent(btn.getAttribute('data-wk-payload') || '{}'));
+        } catch (err) {
+          return;
+        }
+        tryPm((pm) => {
+          let product = null;
+          if (payload.stockId != null) {
+            product = pm.products.find((p) => String(p.id) === String(payload.stockId));
+          }
+          if (!product && payload.findModel) {
+            product = pm.products.find((p) => String(p.model || '').trim() === String(payload.findModel).trim());
+          }
+          if (!product) return;
+          const vd = {
+            variantKey: payload.vkey || '',
+            variantModel: payload.model || '',
+            variantSize: payload.size || '',
+            variantWeight: payload.weight || ''
+          };
+          if (typeof window.addVariantToRfqCart === 'function') {
+            window.addVariantToRfqCart(product, vd);
+          }
+        });
+      });
+      if (window.wkI18n && typeof window.wkI18n.t === 'function') {
+        const al = window.wkI18n.t('add_to_rfq');
+        if (al) btn.setAttribute('aria-label', al);
+      }
+    });
+  }
+
   function renderRichText(text) {
     const lines = safe(text).split(/\n/);
     const parts = [];
@@ -217,7 +311,7 @@
     const headerHtml = cols.map((c) => {
       if (lang === 'zh' && c.labelZh && c.labelEn) return `<th>${renderBilingual(c.labelZh, c.labelEn)}</th>`;
       return `<th>${safe(c.labelEn || c.labelZh || '')}</th>`;
-    }).join('');
+    }).join('') + '<th class="variant-rfq-cell variant-rfq-th" data-translate="rfq_variant_col"></th>';
 
     const cellValue = (row, key) => {
       const zh = row[`${key}Zh`];
@@ -231,6 +325,7 @@
       return `
         <tr>
           ${cols.map((c) => `<td>${cellValue(row, c.key)}</td>`).join('')}
+          ${tentTypeRfqButtonHtml(item, row, selectedVariantKey)}
         </tr>
       `;
     }).join('');
@@ -457,6 +552,8 @@
       </div>
       ${renderTableFromSpec(item, variant)}
     `;
+
+    bindTentTypeRfq(root);
 
     // Bind variant buttons (inflatable tents)
     root.querySelectorAll('[data-variant]').forEach((btn) => {

@@ -78,6 +78,118 @@
     return (s || '').toString();
   }
 
+  function flagRawRow(row) {
+    const r = row || {};
+    return {
+      model: String(r.model != null ? r.model : '').trim(),
+      style: String(r.style != null ? r.style : '').trim(),
+      poleSize: String(r.poleSize != null ? r.poleSize : '').trim(),
+      flagSize: String(r.flagSize != null ? r.flagSize : '').trim(),
+      weight: String(r.weight != null ? r.weight : '').trim(),
+      carton: String(r.carton != null ? r.carton : '').trim(),
+      packing: String(r.packing != null ? r.packing : '').trim(),
+      description: String(r.description != null ? r.description : '').trim()
+    };
+  }
+
+  function flagTypeRfqButtonHtml(item, row, selectedVariantKey) {
+    if (!item || !row) {
+      return '<td class="variant-rfq-cell"></td>';
+    }
+    const fr = flagRawRow(row);
+    const vkey = [
+      String(item.type || ''),
+      String(selectedVariantKey || ''),
+      fr.model,
+      fr.style,
+      fr.description,
+      fr.poleSize,
+      fr.flagSize,
+      fr.weight,
+      fr.carton,
+      fr.packing
+    ].join('\u241e');
+    const metaBits = [fr.model, fr.style, fr.flagSize || fr.poleSize, fr.weight].filter(Boolean);
+    const payload = {
+      flagPageType: item.type || '',
+      vkey,
+      variantModel: fr.model || fr.style,
+      variantSize: fr.flagSize || fr.poleSize,
+      variantWeight: fr.weight,
+      variantCarton: fr.carton,
+      variantGraphic: '',
+      variantMetaLabel: metaBits.join(' · '),
+      findModel: (() => {
+        const m = String(fr.model || '').trim();
+        if (!m || m === '—' || m === '-' || m === '–') return null;
+        return m;
+      })()
+    };
+    const enc = encodeURIComponent(JSON.stringify(payload));
+    return `<td class="variant-rfq-cell"><button type="button" class="variant-rfq-btn" data-wk-flag-rfq="1" data-wk-payload="${enc}"><i class="fas fa-cart-plus" aria-hidden="true"></i></button></td>`;
+  }
+
+  function bindFlagTypeRfq(root) {
+    const btns = root.querySelectorAll('button[data-wk-flag-rfq]');
+    if (!btns.length) return;
+
+    const tryPm = (cb) => {
+      if (window.productManager && Array.isArray(window.productManager.products)) {
+        cb(window.productManager);
+        return;
+      }
+      let n = 0;
+      const id = setInterval(() => {
+        n += 1;
+        if (window.productManager && Array.isArray(window.productManager.products)) {
+          clearInterval(id);
+          cb(window.productManager);
+        } else if (n > 120) {
+          clearInterval(id);
+        }
+      }, 50);
+    };
+
+    btns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let payload = null;
+        try {
+          payload = JSON.parse(decodeURIComponent(btn.getAttribute('data-wk-payload') || '{}'));
+        } catch (err) {
+          return;
+        }
+        tryPm((pm) => {
+          let product = null;
+          if (payload.flagPageType === 'backpack_street_flags') {
+            product = pm.products.find((p) => String(p.id) === '95001');
+          }
+          if (!product && payload.findModel) {
+            const m = String(payload.findModel).trim();
+            product = pm.products.find((p) => String(p.category) === 'flags' && String(p.model || '').trim() === m)
+              || pm.products.find((p) => String(p.model || '').trim() === m);
+          }
+          if (!product) return;
+          const vd = {
+            variantKey: payload.vkey || '',
+            variantModel: payload.variantModel || '',
+            variantSize: payload.variantSize || '',
+            variantWeight: payload.variantWeight || '',
+            variantCarton: payload.variantCarton || '',
+            variantMetaLabel: payload.variantMetaLabel || ''
+          };
+          if (typeof window.addVariantToRfqCart === 'function') {
+            window.addVariantToRfqCart(product, vd);
+          }
+        });
+      });
+      if (window.wkI18n && typeof window.wkI18n.t === 'function') {
+        const al = window.wkI18n.t('add_to_rfq');
+        if (al) btn.setAttribute('aria-label', al);
+      }
+    });
+  }
+
   function renderRichText(text) {
     const lines = safe(text).split(/\n/);
     const parts = [];
@@ -281,9 +393,8 @@
     `;
   }
 
-  function renderSpecTable(item, selectedVariantKey) {
+  function renderOneSpecTable(item, table, selectedVariantKey, blockTitle) {
     const lang = getCurrentLang();
-    const table = resolveSpecTable(item, selectedVariantKey);
     if (!table || !Array.isArray(table.columns) || !Array.isArray(table.rows)) return '';
 
     const cols = table.columns;
@@ -292,26 +403,49 @@
         if (lang === 'zh' && c.labelZh && c.labelEn) return `<th>${safe(c.labelZh)} / ${safe(c.labelEn)}</th>`;
         return `<th>${safe(c.labelEn || c.labelZh || '')}</th>`;
       })
-      .join('');
+      .join('') + '<th class="variant-rfq-cell variant-rfq-th" data-translate="rfq_variant_col"></th>';
 
     const bodyHtml = table.rows
       .map((row) => {
-        return `<tr>${cols.map((c) => `<td>${safe(row[c.key])}</td>`).join('')}</tr>`;
+        return `<tr>${cols.map((c) => `<td>${safe(row[c.key])}</td>`).join('')}${flagTypeRfqButtonHtml(item, row, selectedVariantKey)}</tr>`;
       })
       .join('');
 
+    const titleKey = table.titleKey;
+    const h = titleKey
+      ? `<div class="tent-type-detail__blockTitle" data-translate="${safe(titleKey)}"></div>`
+      : `<div class="tent-type-detail__blockTitle">${safe(blockTitle || (lang === 'zh' ? '型号参数' : 'Models & Specs'))}</div>`;
+
     return `
       <div class="tent-type-detail__block">
-        <div class="tent-type-detail__blockTitle">${lang === 'zh' ? '型号参数' : 'Models & Specs'}</div>
+        ${h}
         <div class="tent-type-detail__tableWrap">
           <table class="tent-type-detail__table">
             <thead><tr>${headerHtml}</tr></thead>
             <tbody>${bodyHtml}</tbody>
           </table>
         </div>
-        ${renderVariantSelector(item, selectedVariantKey)}
       </div>
     `;
+  }
+
+  function renderSpecTablesBlock(item, selectedVariantKey) {
+    const lang = getCurrentLang();
+    if (Array.isArray(item.specTables) && item.specTables.length) {
+      const parts = item.specTables.map((tbl) => {
+        const bt = lang === 'zh' ? (tbl.titleZh || tbl.titleEn || '') : (tbl.titleEn || tbl.titleZh || '');
+        return renderOneSpecTable(item, tbl, selectedVariantKey, bt);
+      }).join('');
+      return `${parts}${renderVariantSelector(item, selectedVariantKey)}`;
+    }
+    const table = resolveSpecTable(item, selectedVariantKey);
+    if (!table) return '';
+    const bt = lang === 'zh' ? '型号参数' : 'Models & Specs';
+    return `${renderOneSpecTable(item, table, selectedVariantKey, bt)}${renderVariantSelector(item, selectedVariantKey)}`;
+  }
+
+  function renderSpecTable(item, selectedVariantKey) {
+    return renderSpecTablesBlock(item, selectedVariantKey);
   }
 
   function renderPage(item, selectedVariantKey) {
@@ -357,6 +491,8 @@
 
     const renderWithVariant = (selectedKey) => {
       root.innerHTML = renderPage(item, selectedKey);
+
+      bindFlagTypeRfq(root);
 
       // Image popups: hero + brochure guide open in a modal (uses the same PNG as the thumbnail).
       root.querySelectorAll('button[data-wk-image]').forEach((btn) => {

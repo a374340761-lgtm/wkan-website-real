@@ -296,3 +296,59 @@
     color: var(--primary-color);
 }
 
+/* Variant row — add to RFQ (PDP + type pages) */
+.variant-rfq-th {
+    width: 52px;
+    white-space: nowrap;
+}
+
+.variant-rfq-cell {
+    width: 52px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.variant-rfq-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 10px;
+    background: var(--bg-white, #fff);
+    color: var(--primary-color, #a4161a);
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.variant-rfq-btn:hover {
+    border-color: var(--primary-color, #a4161a);
+    background: rgba(164, 22, 26, 0.06);
+}
+
+.variant-rfq-btn:focus-visible {
+    outline: 2px solid var(--primary-color, #a4161a);
+    outline-offset: 2px;
+}
+
+.variant-rfq-btn i {
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.variants-table .variant-rfq-cell {
+    white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+    .variant-rfq-th {
+        width: 48px;
+    }
+    .variant-rfq-btn {
+        width: 36px;
+        height: 36px;
+    }
+}
+

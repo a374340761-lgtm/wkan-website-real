@@ -413,8 +413,91 @@ document.addEventListener('DOMContentLoaded', () => {
         const variantsEl = document.getElementById('productVariants');
         if (variantsEl) variantsEl.innerHTML = '';
 
-        const renderVariantTable = (tableDef) => {
-            if (!tableDef) return null;
+        const pickRowField = (row, keys) => {
+            if (!row) return '';
+            const list = Array.isArray(keys) ? keys : [keys];
+            for (let i = 0; i < list.length; i++) {
+                const k = list[i];
+                if (k == null) continue;
+                if (row[k] != null && String(row[k]).trim() !== '') return String(row[k]).trim();
+                const low = String(k).toLowerCase();
+                if (row[low] != null && String(row[low]).trim() !== '') return String(row[low]).trim();
+            }
+            return '';
+        };
+
+        const normalizeVariantRowForRfq = (tableDef, row) => {
+            const r = row || {};
+            const variantModel = pickRowField(r, ['model', 'Model', 'MODEL']);
+            const variantSize = pickRowField(r, ['size', 'Size', 'dimension', 'Dimension', 'dimensionZh', 'dimensionEn']);
+            const variantWeight = pickRowField(r, ['weight', 'Weight']);
+            const variantGraphic = pickRowField(r, ['graphic', 'Graphic', 'flagSize', 'Flag Size']);
+            const variantCarton = pickRowField(r, ['carton', 'Carton', 'cartonSize', 'Carton Size', 'packing', 'Packing']);
+            const bits = [variantModel, variantSize, variantWeight, variantGraphic, variantCarton].filter(Boolean);
+            return {
+                variantModel,
+                variantSize,
+                variantWeight,
+                variantGraphic,
+                variantCarton,
+                variantMetaLabel: bits.join(' · ')
+            };
+        };
+
+        const deterministicVariantKey = (prod, tableDef, row) => {
+            const cols = tableDef && Array.isArray(tableDef.columns) ? tableDef.columns.map((c) => c.key).filter(Boolean) : [];
+            const r = row || {};
+            const payload = cols.length
+                ? cols.map((k) => String(r[k] != null ? r[k] : '')).join('|')
+                : JSON.stringify(r);
+            return `p${prod.id}|tbl|${payload.length > 400 ? String(payload).slice(0, 400) : payload}`;
+        };
+
+        const appendRfqHeaderTh = (trh) => {
+            const th = document.createElement('th');
+            th.className = 'variant-rfq-cell variant-rfq-th';
+            th.setAttribute('data-translate', 'rfq_variant_col');
+            th.style.textAlign = 'left';
+            th.style.padding = '8px';
+            th.style.borderBottom = '1px solid #eaeaea';
+            th.textContent = '';
+            trh.appendChild(th);
+        };
+
+        const appendRfqButtonTd = (tr, prod, tableDef, row) => {
+            const norm = normalizeVariantRowForRfq(tableDef, row);
+            const vk = deterministicVariantKey(prod, tableDef, row);
+            const td = document.createElement('td');
+            td.className = 'variant-rfq-cell';
+            td.style.padding = '8px';
+            td.style.borderBottom = '1px solid #f3f3f3';
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'variant-rfq-btn';
+            if (window.wkI18n && typeof window.wkI18n.t === 'function') {
+                const al = window.wkI18n.t('add_to_rfq');
+                if (al) btn.setAttribute('aria-label', al);
+            }
+            btn.innerHTML = '<i class="fas fa-cart-plus" aria-hidden="true"></i>';
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const payload = Object.assign({ variantKey: vk }, norm);
+                if (typeof window.addVariantToRfqCart === 'function') {
+                    window.addVariantToRfqCart(prod, payload);
+                }
+            });
+            btn.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    btn.click();
+                }
+            });
+            td.appendChild(btn);
+            tr.appendChild(td);
+        };
+
+        const renderVariantTable = (prod, tableDef) => {
+            if (!tableDef || !prod) return null;
             const lang = getCurrentLang();
 
             const title = (lang === 'zh')
@@ -470,6 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     trh.appendChild(th);
                 });
             }
+            appendRfqHeaderTh(trh);
 
             thead.appendChild(trh);
             tbl.appendChild(thead);
@@ -499,6 +583,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         tr.appendChild(td);
                     });
                 }
+                appendRfqButtonTd(tr, prod, tableDef, r);
                 tbody.appendChild(tr);
             });
             tbl.appendChild(tbody);
@@ -510,11 +595,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Custom variants/spec table(s)
         if (variantsEl && Array.isArray(product.variantTables) && product.variantTables.length > 0) {
             product.variantTables.forEach((t) => {
-                const node = renderVariantTable(t);
+                const node = renderVariantTable(product, t);
                 if (node) variantsEl.appendChild(node);
             });
         } else if (variantsEl && product.variantTable && Array.isArray(product.variantTable.headers) && Array.isArray(product.variantTable.rows)) {
-            const node = renderVariantTable({
+            const node = renderVariantTable(product, {
                 titleKey: 'models_and_specs',
                 headers: product.variantTable.headers,
                 rows: product.variantTable.rows
@@ -545,11 +630,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 th.textContent = '';
                 trh.appendChild(th);
             });
+            appendRfqHeaderTh(trh);
             thead.appendChild(trh);
             tbl.appendChild(thead);
 
             const tbody = document.createElement('tbody');
-            product.variants.forEach(v => {
+            const variantSimpleDef = {
+                columns: [
+                    { key: 'model' },
+                    { key: 'size' },
+                    { key: 'weight' }
+                ]
+            };
+            product.variants.forEach((v) => {
                 const tr = document.createElement('tr');
                 const tdModel = document.createElement('td');
                 tdModel.style.padding = '8px';
@@ -566,6 +659,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.appendChild(tdModel);
                 tr.appendChild(tdSize);
                 tr.appendChild(tdWeight);
+                appendRfqButtonTd(tr, product, variantSimpleDef, v);
                 tbody.appendChild(tr);
             });
             tbl.appendChild(tbody);
@@ -580,6 +674,8 @@ document.addEventListener('DOMContentLoaded', () => {
             && String(product.subcategory) === 'table-chair-stool-toilet';
         const brochureSrc = (product.referenceImage && String(product.referenceImage).trim())
             || (isFurnitureTableChairCat ? FURNITURE_CATALOG_BROCHURE : '');
+        const brochureSourceKey = (product.referenceSourceKey && String(product.referenceSourceKey).trim())
+            || 'view_type_brochure_source_17';
 
         if (variantsEl && brochureSrc) {
             const block = document.createElement('div');
@@ -597,10 +693,10 @@ document.addEventListener('DOMContentLoaded', () => {
             caption.style.fontSize = '13px';
             const capZh = document.createElement('span');
             capZh.className = 'zh';
-            capZh.setAttribute('data-translate', 'view_type_brochure_source_17');
+            capZh.setAttribute('data-translate', brochureSourceKey);
             const capEn = document.createElement('span');
             capEn.className = 'en';
-            capEn.setAttribute('data-translate', 'view_type_brochure_source_17');
+            capEn.setAttribute('data-translate', brochureSourceKey);
             caption.appendChild(capZh);
             caption.appendChild(capEn);
             block.appendChild(caption);

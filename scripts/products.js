@@ -889,9 +889,9 @@ class ProductManager {
                     shortZh: '展示系统可选照明套件：提升画面亮度与展位吸引力。',
                     descriptionEn: 'Shared lighting accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes LED spotlight, clamp-on light arm and power cable (final configuration depends on project).',
                     descriptionZh: '展示系统通用照明配件（立牌/直型/C型通用）：包含 LED 射灯、夹装式灯臂与电源线（具体配置按项目确定）。',
-                    image: 'images/products/displays/tension-fabric-displays/21.png',
-                    images: ['images/products/displays/tension-fabric-displays/21.png'],
-                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    images: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
+                    gallery: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
                     specsZh: {
                         '包含': 'LED 射灯 / 夹装式灯臂 / 电源线',
                         '适用': '立牌系列 / 直型系列 / C型系列（快幕秀）',
@@ -917,7 +917,8 @@ class ProductManager {
                     searchableKeywords: ['WK-TFD-LIGHT', 'tension fabric light', 'spotlight', 'lighting system', 'SEG light', '照明系统', '照明', '快幕秀 配件'],
                     keywords: ['WK-TFD-LIGHT', 'lighting system', 'tension fabric', 'spotlight', '照明系统', '快幕秀配件'],
                     tags: 'WK-TFD-LIGHT, Lighting System, tension fabric displays, accessories',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceSourceKey: 'view_type_brochure_source_20',
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -933,9 +934,9 @@ class ProductManager {
                     shortZh: '展示系统通用收纳运输方案（软包/硬箱/带轮箱）。',
                     descriptionEn: 'Shared transport & storage accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes soft carry bag, hard case and wheeled trolley case options (matched by model/size).',
                     descriptionZh: '展示系统通用收纳运输配件（立牌/直型/C型通用）：软包、硬箱、带轮拉杆箱等可选（按型号/尺寸匹配）。',
-                    image: 'images/products/displays/tension-fabric-displays/21.png',
-                    images: ['images/products/displays/tension-fabric-displays/21.png'],
-                    gallery: ['images/products/displays/tension-fabric-displays/21.png'],
+                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    images: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
+                    gallery: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
                     specsZh: {
                         '包含': '软包 / 硬箱 / 带轮拉杆箱',
                         '优势': '便于运输与保护框架、画面与配件',
@@ -961,7 +962,8 @@ class ProductManager {
                     searchableKeywords: ['WK-TFD-CASE', 'transport case', 'wheeled case', 'hard case', 'soft bag', '收纳运输', '收纳箱', '运输箱', '拉杆箱', '快幕秀 配件'],
                     keywords: ['WK-TFD-CASE', 'transport', 'storage', 'wheeled case', 'carry bag', '收纳运输', '快幕秀配件'],
                     tags: 'WK-TFD-CASE, Transport & Storage, tension fabric displays, accessories',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceSourceKey: 'view_type_brochure_source_20',
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -1035,6 +1037,29 @@ class ProductManager {
                 },
                 keywords: ['race gate', 'racegate', 'fpv', 'drone', '拱门', '竞速拱门', 'AD-R40A', 'AD-R40B', 'AD-R40C', 'AD-R40D', 'fiberglass', '玻璃钢'],
                 tags: 'RaceGate, Fiberglass',
+                price: '询价'
+            },
+
+            // Hub SKU for flag-type backpack/street view (variant-level RFQ lines share this parent)
+            {
+                id: 95001,
+                category: 'flags',
+                subcategory: 'flag-type-hub',
+                model: 'BP-Street-Display-Hub',
+                sku: 'FLG-BP-ST-HUB',
+                name: '背包旗与街旗/展示旗',
+                nameEn: 'Backpack & Street / Display Flags',
+                nameZh: '背包旗与街旗/展示旗',
+                shortEn: 'Portable backpack flags, street flags and display flag systems — see flag type page for full model tables.',
+                shortZh: '背包旗、街旗与展示旗系统（完整型号表见沙滩旗类型页）。',
+                descriptionEn: 'Hub entry for RFQ lines from the Backpack & Street / Display Flags catalog page. Each line item stores the exact model row you select.',
+                descriptionZh: '用于“背包旗与街旗/展示旗”类型页询价：每条记录对应您在参数表中选择的具体型号行。',
+                image: encodeURI('images/products/flags/hero/Backpack Flagshero.png'),
+                images: [encodeURI('images/products/flags/hero/Backpack Flagshero.png')],
+                gallery: [encodeURI('images/products/flags/hero/Backpack Flagshero.png')],
+                customRfqUrl: 'flag-type.html?type=backpack_street_flags',
+                keywords: ['backpack flag', 'street flag', 'display flag', 'WK-C16', 'AD-22', '背包旗', '街旗'],
+                tags: 'Flags, Backpack, Street, Display',
                 price: '询价'
             },
 
@@ -2784,6 +2809,9 @@ class ProductManager {
         const searchRevealsSteel = q && (q.includes('steel') || q.includes('iron') || q.includes('steel') || q.includes('aluminium') || q.includes('铝') || q.includes('铁') || q.includes('钢') || q.includes('铁架') || q.includes('钢架'));
 
         let filtered = this.products.filter(product => {
+            if (product.subcategory === 'flag-type-hub') {
+                return false;
+            }
             /* ===== 原有分类按钮逻辑 ===== */
             if (this.currentCategory !== 'all' && product.category !== this.currentCategory) {
                 return false;
@@ -3709,7 +3737,8 @@ getProductIcon(category) {
         if (cartItems.length) {
             items = cartItems.map(ci => ({
                 product: this.products.find(p => p.id == ci.id),
-                qty: ci.qty || 1
+                qty: ci.qty || 1,
+                line: ci
             })).filter(x => x.product);
             const hintEl = document.getElementById('rfqHint');
             if (hintEl) hintEl.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('ui_tip_cart_items') : '';
@@ -3740,9 +3769,14 @@ getProductIcon(category) {
             const row = document.createElement('div');
             row.className = 'rfq-item';
 
+            const ln = x.line || {};
+            const variantLine = (ln.variantModel || ln.variantSize || ln.variantWeight)
+                ? `<div class="rfq-item-variant">${this._escapeHtml([ln.variantModel, ln.variantSize, ln.variantWeight].filter(Boolean).join(' · '))}</div>`
+                : '';
             row.innerHTML = `
                 <div class="rfq-item-left">
                     <div class="rfq-item-name">${name || ''}</div>
+                    ${variantLine}
                     <div class="rfq-item-meta">Category: ${p.category || ''} · ID: ${p.id || ''}</div>
                 </div>
                 <div class="rfq-item-right">
@@ -3789,7 +3823,11 @@ getProductIcon(category) {
         (this.rfqItems || []).forEach(x => {
             const p = x.product;
             const productName = this.getLocalizedName(p);
-            lines.push(`- ${productName} (ID: ${p.id}, Category: ${p.category})  Qty: ${x.qty || 1}`);
+            const ln = x.line || {};
+            const vExtra = (ln.variantModel || ln.variantSize || ln.variantWeight)
+                ? ` · ${[ln.variantModel, ln.variantSize, ln.variantWeight].filter(Boolean).join(' / ')}`
+                : '';
+            lines.push(`- ${productName}${vExtra} (ID: ${p.id}, Category: ${p.category})  Qty: ${x.qty || 1}`);
         });
         lines.push('');
         lines.push('Filter context (from products page):');
@@ -3828,13 +3866,15 @@ getProductIcon(category) {
 
     downloadRFQCSV() {
         const rows = [];
-        rows.push(['Product Name', 'Product ID', 'Category', 'Quantity'].join(','));
+        rows.push(['Product Name', 'Product ID', 'Category', 'Variant', 'Quantity'].join(','));
 
         (this.rfqItems || []).forEach(x => {
             const p = x.product;
             const safe = (s) => `"${String(s ?? '').replaceAll('"', '""')}"`;
             const productName = this.getLocalizedName(p);
-            rows.push([safe(productName), safe(p.id), safe(p.category), safe(x.qty || 1)].join(','));
+            const ln = x.line || {};
+            const variantStr = [ln.variantModel, ln.variantSize, ln.variantWeight].filter(Boolean).join(' / ');
+            rows.push([safe(productName), safe(p.id), safe(p.category), safe(variantStr), safe(x.qty || 1)].join(','));
         });
 
         const csv = rows.join('\n');
@@ -3852,8 +3892,18 @@ getProductIcon(category) {
     // 读询价清单（统一 wk_rfq_cart_v1，由 scripts/cart.js 管理）
     getCartItemsSafe() {
         try {
-            if (window.wkRfqCart && typeof window.wkRfqCart.getIdQtyPairs === 'function') {
-                return window.wkRfqCart.getIdQtyPairs();
+            if (window.wkRfqCart && typeof window.wkRfqCart.getItems === 'function') {
+                return window.wkRfqCart.getItems().map((x) => ({
+                    id: x.id,
+                    qty: parseInt(x.quantity, 10) || 1,
+                    variantKey: x.variantKey || '',
+                    variantModel: x.variantModel || '',
+                    variantSize: x.variantSize || '',
+                    variantWeight: x.variantWeight || '',
+                    variantGraphic: x.variantGraphic || '',
+                    variantCarton: x.variantCarton || '',
+                    variantMetaLabel: x.variantMetaLabel || ''
+                }));
             }
             const raw = localStorage.getItem('wk_rfq_cart_v1');
             if (!raw) return [];
@@ -3861,7 +3911,14 @@ getProductIcon(category) {
             const items = (data && data.items) || (Array.isArray(data) ? data : []);
             return (items || []).map((x) => ({
                 id: x.id,
-                qty: x.qty ?? x.quantity ?? 1
+                qty: x.qty ?? x.quantity ?? 1,
+                variantKey: x.variantKey || '',
+                variantModel: x.variantModel || '',
+                variantSize: x.variantSize || '',
+                variantWeight: x.variantWeight || '',
+                variantGraphic: x.variantGraphic || '',
+                variantCarton: x.variantCarton || '',
+                variantMetaLabel: x.variantMetaLabel || ''
             })).filter((x) => x.id != null);
         } catch {
             return [];
@@ -3874,6 +3931,7 @@ getProductIcon(category) {
         const q = (this.searchQuery || '').toLowerCase();
 
         return this.products.filter(product => {
+            if (product.subcategory === 'flag-type-hub') return false;
             if (this.currentCategory !== 'all' && product.category !== this.currentCategory) return false;
 
             if (this.activeFilters?.category?.size > 0 &&

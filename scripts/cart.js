@@ -23,6 +23,15 @@
     }
 
     function buildDetailUrl(product) {
+        if (product && String(product.customRfqUrl || '').trim()) {
+            try {
+                const raw = String(product.customRfqUrl).trim();
+                const u = new URL(raw, window.location.href);
+                return u.pathname + u.search + (u.hash || '');
+            } catch {
+                return String(product.customRfqUrl).trim();
+            }
+        }
         const sku = String(product && (product.sku != null ? product.sku : product.id) || '').trim();
         if (!sku) return '';
         try {
@@ -62,8 +71,96 @@
             image,
             category,
             url,
-            quantity: Math.max(1, parseInt(quantity, 10) || 1)
+            quantity: Math.max(1, parseInt(quantity, 10) || 1),
+            variantKey: '',
+            variantModel: '',
+            variantSize: '',
+            variantWeight: '',
+            variantGraphic: '',
+            variantCarton: '',
+            variantMetaLabel: ''
         };
+    }
+
+    function matchVariantKey(a, b) {
+        return String(a || '') === String(b || '');
+    }
+
+    function normalizeLineItem(raw) {
+        if (!raw || raw.id == null) return null;
+        const qty = Math.max(1, parseInt(raw.quantity, 10) || 1);
+        const base = {
+            id: raw.id,
+            sku: String(raw.sku != null && raw.sku !== '' ? raw.sku : raw.id).trim(),
+            model: String(raw.model || '').trim(),
+            nameZh: String(raw.nameZh || '').trim(),
+            nameEn: String(raw.nameEn || '').trim(),
+            image: String(raw.image || '').trim(),
+            category: String(raw.category || '').trim(),
+            url: String(raw.url || '').trim(),
+            quantity: qty,
+            variantKey: raw.variantKey != null ? String(raw.variantKey) : '',
+            variantModel: String(raw.variantModel || '').trim(),
+            variantSize: String(raw.variantSize || '').trim(),
+            variantWeight: String(raw.variantWeight || '').trim(),
+            variantGraphic: String(raw.variantGraphic || '').trim(),
+            variantCarton: String(raw.variantCarton || '').trim(),
+            variantMetaLabel: String(raw.variantMetaLabel || '').trim()
+        };
+        const legacyName = String(raw.name || '').trim();
+        if (!base.nameZh && hasCjk(legacyName)) base.nameZh = legacyName;
+        if (!base.nameEn && legacyName && !hasCjk(legacyName)) base.nameEn = legacyName;
+        if (!base.nameZh) base.nameZh = base.nameEn || '产品';
+        if (!base.nameEn) base.nameEn = base.nameZh || 'Product';
+        return base;
+    }
+
+    function buildDefaultVariantKey(product, vd) {
+        const m = vd || {};
+        const parts = [
+            String(product && product.id != null ? product.id : ''),
+            m.variantModel || m.model || '',
+            m.variantSize || m.size || m.dimension || '',
+            m.variantWeight || m.weight || '',
+            m.variantGraphic || m.graphic || '',
+            m.variantCarton || m.carton || m.cartonSize || ''
+        ];
+        return parts.join('\u241e');
+    }
+
+    function lineItemFromVariant(product, variantData, quantity) {
+        const base = lineItemFromProduct(product, quantity != null ? quantity : 1);
+        if (!base) return null;
+        const vd = variantData || {};
+        let vk = vd.variantKey != null && String(vd.variantKey).trim() !== ''
+            ? String(vd.variantKey).trim()
+            : '';
+        if (!vk) vk = buildDefaultVariantKey(product, vd);
+
+        const variantModel = String(vd.variantModel != null ? vd.variantModel : (vd.model !== undefined ? vd.model : '')).trim();
+        const variantSize = String(
+            vd.variantSize != null ? vd.variantSize : (vd.size !== undefined ? vd.size : (vd.dimension !== undefined ? vd.dimension : ''))
+        ).trim();
+        const variantWeight = String(vd.variantWeight != null ? vd.variantWeight : (vd.weight !== undefined ? vd.weight : '')).trim();
+        const variantGraphic = String(vd.variantGraphic != null ? vd.variantGraphic : (vd.graphic !== undefined ? vd.graphic : '')).trim();
+        const variantCarton = String(
+            vd.variantCarton != null ? vd.variantCarton : (vd.carton !== undefined ? vd.carton : (vd.packing !== undefined ? vd.packing : ''))
+        ).trim();
+        let variantMetaLabel = String(vd.variantMetaLabel || '').trim();
+        if (!variantMetaLabel) {
+            const bits = [variantModel, variantSize, variantWeight, variantGraphic, variantCarton].filter(Boolean);
+            variantMetaLabel = bits.join(' · ');
+        }
+
+        return Object.assign(base, {
+            variantKey: vk,
+            variantModel,
+            variantSize,
+            variantWeight,
+            variantGraphic,
+            variantCarton,
+            variantMetaLabel
+        });
     }
 
     function migrateLegacy() {
@@ -97,7 +194,14 @@
                 image: String(obj.image || '').trim(),
                 category: String(obj.category || '').trim(),
                 url: String(obj.url || '').trim(),
-                quantity: mergedQty
+                quantity: mergedQty,
+                variantKey: '',
+                variantModel: '',
+                variantSize: '',
+                variantWeight: '',
+                variantGraphic: '',
+                variantCarton: '',
+                variantMetaLabel: ''
             });
         }
 
@@ -163,13 +267,16 @@
                     return;
                 }
                 const data = JSON.parse(raw);
-                if (data && data.v === SCHEMA_VERSION && Array.isArray(data.items)) {
-                    this.items = data.items.filter((x) => x && x.id != null);
+                let arr = [];
+                if (data && Array.isArray(data.items)) {
+                    arr = data.items;
                 } else if (Array.isArray(data)) {
-                    this.items = data.filter((x) => x && x.id != null);
+                    arr = data;
                 } else {
                     this.items = [];
+                    return;
                 }
+                this.items = arr.map(normalizeLineItem).filter(Boolean);
             } catch {
                 this.items = [];
             }
@@ -189,11 +296,18 @@
             return this.items.reduce((t, i) => t + (parseInt(i.quantity, 10) || 1), 0);
         }
 
-        /** For ProductManager.openRFQModal — [{ id, qty }] */
+        /** For ProductManager.openRFQModal — one row per cart line (variants = multiple rows same id possible) */
         getIdQtyPairs() {
             return this.items.map((i) => ({
                 id: i.id,
-                qty: parseInt(i.quantity, 10) || 1
+                qty: parseInt(i.quantity, 10) || 1,
+                variantKey: i.variantKey || '',
+                variantModel: i.variantModel || '',
+                variantSize: i.variantSize || '',
+                variantWeight: i.variantWeight || '',
+                variantGraphic: i.variantGraphic || '',
+                variantCarton: i.variantCarton || '',
+                variantMetaLabel: i.variantMetaLabel || ''
             }));
         }
 
@@ -228,28 +342,54 @@
         addProduct(product, quantity) {
             const line = lineItemFromProduct(product, quantity || 1);
             if (!line) return false;
-            const existing = this.items.find((x) => String(x.id) === String(line.id));
+            const existing = this.items.find((x) =>
+                String(x.id) === String(line.id) && matchVariantKey(x.variantKey, line.variantKey));
             if (existing) {
                 existing.quantity = (parseInt(existing.quantity, 10) || 1) + line.quantity;
             } else {
                 this.items.push(line);
             }
             this.save();
-            this.showAddedToast(line);
+            this.showAddedToast(line, false);
             return true;
         }
 
-        removeItem(productId) {
-            this.items = this.items.filter((x) => String(x.id) !== String(productId));
+        addVariantLine(product, variantData) {
+            const vd = variantData || {};
+            const q = vd.quantity != null ? vd.quantity : 1;
+            const line = lineItemFromVariant(product, vd, q);
+            if (!line) return false;
+            const existing = this.items.find((x) =>
+                String(x.id) === String(line.id) && matchVariantKey(x.variantKey, line.variantKey));
+            if (existing) {
+                existing.quantity = (parseInt(existing.quantity, 10) || 1) + (parseInt(line.quantity, 10) || 1);
+            } else {
+                this.items.push(line);
+            }
+            this.save();
+            this.showAddedToast(line, true);
+            return true;
+        }
+
+        removeItem(productId, variantKey) {
+            if (variantKey === undefined) {
+                this.items = this.items.filter((x) => String(x.id) !== String(productId));
+            } else {
+                const vk = String(variantKey);
+                this.items = this.items.filter((x) =>
+                    !(String(x.id) === String(productId) && matchVariantKey(x.variantKey, vk)));
+            }
             this.save();
             this.updateCartDisplay();
         }
 
-        updateQuantity(productId, quantity) {
-            const item = this.items.find((x) => String(x.id) === String(productId));
+        updateQuantity(productId, variantKey, quantity) {
+            const vk = variantKey !== undefined ? String(variantKey) : '';
+            const item = this.items.find((x) =>
+                String(x.id) === String(productId) && matchVariantKey(x.variantKey, vk));
             if (!item) return;
             if (quantity <= 0) {
-                this.removeItem(productId);
+                this.removeItem(productId, vk);
                 return;
             }
             item.quantity = quantity;
@@ -263,15 +403,25 @@
             this.updateCartDisplay();
         }
 
-        showAddedToast(line) {
+        showAddedToast(line, isVariant) {
             const lang = this.getLang();
             const name = this.displayName(line);
-            let message;
+            let message = '';
             if (window.wkI18n && typeof window.wkI18n.t === 'function') {
-                const tpl = window.wkI18n.t('rfq_cart_added_toast');
-                message = tpl && tpl.indexOf('{name}') !== -1 ? tpl.split('{name}').join(name) : (lang === 'zh' ? `已加入询价清单：${name}` : `Added to RFQ list: ${name}`);
-            } else {
-                message = lang === 'zh' ? `已加入询价清单：${name}` : `Added to RFQ list: ${name}`;
+                if (isVariant) {
+                    message = window.wkI18n.t('rfq_cart_added_variant_toast') || window.wkI18n.t('rfq_cart_added_short') || '';
+                }
+                if (!message) {
+                    const tpl = window.wkI18n.t('rfq_cart_added_toast');
+                    message = tpl && tpl.indexOf('{name}') !== -1 ? tpl.split('{name}').join(name) : '';
+                }
+            }
+            if (!message) {
+                if (isVariant) {
+                    message = lang === 'zh' ? '已加入询价清单' : 'Added to RFQ list';
+                } else {
+                    message = lang === 'zh' ? `已加入询价清单：${name}` : `Added to RFQ list: ${name}`;
+                }
             }
 
             const notification = document.createElement('div');
@@ -393,14 +543,28 @@
             }
 
             const lang = this.getLang();
+            const lbl = (key, z, e) => {
+                if (window.wkI18n && typeof window.wkI18n.t === 'function') {
+                    const s = window.wkI18n.t(key);
+                    if (s) return s;
+                }
+                return lang === 'zh' ? z : e;
+            };
             let html = '';
             this.items.forEach((item) => {
                 const title = escapeHtml(this.displayName(item));
                 const sku = escapeHtml(item.sku || '');
                 const model = escapeHtml(item.model || '');
+                const hasVariant = !!(item.variantKey && String(item.variantKey).trim());
                 const metaParts = [];
-                if (sku) metaParts.push(`${lang === 'zh' ? 'SKU' : 'SKU'}: ${sku}`);
-                if (model) metaParts.push(`${lang === 'zh' ? '型号' : 'Model'}: ${model}`);
+                if (sku) metaParts.push(`SKU: ${sku}`);
+                if (hasVariant) {
+                    if (item.variantModel) metaParts.push(`${lbl('rfq_line_model', '型号', 'Model')}: ${escapeHtml(item.variantModel)}`);
+                    if (item.variantSize) metaParts.push(`${lbl('rfq_variant_size', '尺寸', 'Size')}: ${escapeHtml(item.variantSize)}`);
+                    if (item.variantWeight) metaParts.push(`${lbl('rfq_variant_weight', '重量', 'Weight')}: ${escapeHtml(item.variantWeight)}`);
+                } else if (model) {
+                    metaParts.push(`${lbl('rfq_line_model', '型号', 'Model')}: ${model}`);
+                }
                 const meta = metaParts.join(' · ');
                 const imgHtml = item.image
                     ? `<div class="cart-item-image cart-item-image--photo"><img src="${escapeHtml(item.image)}" alt="" loading="lazy" onerror="this.parentNode.innerHTML='<i class=\\'fas fa-box\\'></i>'"/></div>`
@@ -408,11 +572,12 @@
 
                 const qty = parseInt(item.quantity, 10) || 1;
                 const pid = Number(item.id);
+                const encVk = encodeURIComponent(item.variantKey || '');
                 const viewLabel = (window.wkI18n && typeof window.wkI18n.t === 'function')
                     ? window.wkI18n.t('rfq_cart_view_product')
                     : (lang === 'zh' ? '查看产品' : 'View product');
                 html += `
-                <div class="cart-item" data-product-id="${pid}">
+                <div class="cart-item" data-product-id="${pid}" data-variant-key="${encVk}">
                     ${imgHtml}
                     <div class="cart-item-info">
                         <h4>${title}</h4>
@@ -420,11 +585,11 @@
                         ${item.url ? `<p class="cart-item-link"><a href="${escapeHtml(item.url)}">${escapeHtml(viewLabel)}</a></p>` : ''}
                     </div>
                     <div class="cart-item-quantity">
-                        <button type="button" class="quantity-btn" data-rfq-qty="-1" data-rfq-id="${pid}">-</button>
+                        <button type="button" class="quantity-btn" data-rfq-qty="-1" data-rfq-id="${pid}" data-rfq-vkey="${encVk}">-</button>
                         <span>${qty}</span>
-                        <button type="button" class="quantity-btn" data-rfq-qty="1" data-rfq-id="${pid}">+</button>
+                        <button type="button" class="quantity-btn" data-rfq-qty="1" data-rfq-id="${pid}" data-rfq-vkey="${encVk}">+</button>
                     </div>
-                    <button type="button" class="cart-item-remove" data-rfq-remove="${pid}" title="Remove"><i class="fas fa-times"></i></button>
+                    <button type="button" class="cart-item-remove" data-rfq-remove="${pid}" data-rfq-vkey="${encVk}" title="Remove"><i class="fas fa-times"></i></button>
                 </div>`;
             });
 
@@ -433,15 +598,25 @@
             cartItemsContainer.querySelectorAll('[data-rfq-qty]').forEach((btn) => {
                 btn.addEventListener('click', () => {
                     const id = btn.getAttribute('data-rfq-id');
+                    const enc = btn.getAttribute('data-rfq-vkey') || '';
+                    let vk = '';
+                    try {
+                        vk = decodeURIComponent(enc);
+                    } catch { /* ignore */ }
                     const delta = parseInt(btn.getAttribute('data-rfq-qty'), 10);
-                    const cur = this.items.find((x) => String(x.id) === String(id));
+                    const cur = this.items.find((x) => String(x.id) === String(id) && matchVariantKey(x.variantKey, vk));
                     if (!cur) return;
-                    this.updateQuantity(id, (parseInt(cur.quantity, 10) || 1) + delta);
+                    this.updateQuantity(id, vk, (parseInt(cur.quantity, 10) || 1) + delta);
                 });
             });
             cartItemsContainer.querySelectorAll('[data-rfq-remove]').forEach((btn) => {
                 btn.addEventListener('click', () => {
-                    this.removeItem(btn.getAttribute('data-rfq-remove'));
+                    const id = btn.getAttribute('data-rfq-remove');
+                    let vk = '';
+                    try {
+                        vk = decodeURIComponent(btn.getAttribute('data-rfq-vkey') || '');
+                    } catch { /* ignore */ }
+                    this.removeItem(id, vk);
                 });
             });
 
@@ -466,6 +641,13 @@
         }
 
         buildInquiryMessage(lang) {
+            const lbl = (key, z, e) => {
+                if (window.wkI18n && typeof window.wkI18n.t === 'function') {
+                    const s = window.wkI18n.t(key);
+                    if (s) return s;
+                }
+                return lang === 'zh' ? z : e;
+            };
             const lines = [];
             if (lang === 'zh') {
                 lines.push('询价清单（RFQ）：');
@@ -478,15 +660,22 @@
             this.items.forEach((item, idx) => {
                 const name = lang === 'zh' ? (item.nameZh || item.nameEn) : (item.nameEn || item.nameZh);
                 const sku = item.sku || item.id;
-                const model = item.model || '—';
                 const q = parseInt(item.quantity, 10) || 1;
-                if (lang === 'zh') {
-                    lines.push(`${idx + 1}. ${name}`);
-                    lines.push(`   SKU: ${sku} · 型号: ${model} · 数量: ${q}`);
-                } else {
-                    lines.push(`${idx + 1}. ${name}`);
-                    lines.push(`   SKU: ${sku} · Model: ${model} · Qty: ${q}`);
+                const hasVariant = !!(item.variantKey && String(item.variantKey).trim());
+                const parts = [];
+                parts.push(`${lbl('rfq_line_sku', 'SKU', 'SKU')}: ${sku}`);
+                if (hasVariant) {
+                    if (item.variantModel) parts.push(`${lbl('rfq_line_model', '型号', 'Model')}: ${item.variantModel}`);
+                    if (item.variantSize) parts.push(`${lbl('rfq_variant_size', '尺寸', 'Size')}: ${item.variantSize}`);
+                    if (item.variantWeight) parts.push(`${lbl('rfq_variant_weight', '重量', 'Weight')}: ${item.variantWeight}`);
+                    if (item.variantGraphic) parts.push(`${lbl('rfq_variant_graphic', '画面', 'Graphic')}: ${item.variantGraphic}`);
+                    if (item.variantCarton) parts.push(`${lbl('rfq_variant_carton', '装箱', 'Carton')}: ${item.variantCarton}`);
+                } else if (item.model) {
+                    parts.push(`${lbl('rfq_line_model', '型号', 'Model')}: ${item.model}`);
                 }
+                parts.push(`${lang === 'zh' ? '数量' : 'Qty'}: ${q}`);
+                lines.push(`${idx + 1}. ${name}`);
+                lines.push(`   ${parts.join(' · ')}`);
                 lines.push('');
             });
             return lines.join('\n').trim();
@@ -577,5 +766,10 @@
     window.addProductToRfqCart = function (product, quantity) {
         if (!product || !window.wkRfqCart) return;
         window.wkRfqCart.addProduct(product, quantity != null ? quantity : 1);
+    };
+
+    window.addVariantToRfqCart = function (product, variantData) {
+        if (!product || !window.wkRfqCart) return;
+        window.wkRfqCart.addVariantLine(product, variantData || {});
     };
 })();

@@ -31,11 +31,37 @@
       .replace(/'/g, '&#039;');
   }
 
-  function renderTable(spec) {
+  function renderTable(spec, product) {
     if (!spec || !Array.isArray(spec.headers) || !Array.isArray(spec.rows)) return '';
 
     const headers = spec.headers;
     const rows = spec.rows;
+    const pid = product && product.id != null ? String(product.id) : '';
+
+    const rowCells = (r) => headers.map((h) => {
+      const v = (r && (r[h] ?? r[h.replace(/\s+/g, '')] ?? r[h.toLowerCase()])) ?? '';
+      return `<td style="padding:12px 14px; border-bottom:1px solid rgba(0,0,0,0.06); white-space:nowrap;">${escapeHtml(String(v))}</td>`;
+    }).join('');
+
+    const rowRfq = (r) => {
+      if (!pid || !product) {
+        return '<td class="variant-rfq-cell"></td>';
+      }
+      const model = String((r && (r.Model ?? r.model)) || '').trim();
+      const size = String((r && (r.Size ?? r.size)) || '').trim();
+      const pack = String((r && (r['Pack Size'] ?? r.PackSize)) || '').trim();
+      const vkey = [pid, model, size, pack, headers.map((h) => String((r && r[h]) ?? '')).join('|')].join('\u241e');
+      const payload = {
+        pid,
+        vkey,
+        variantModel: model,
+        variantSize: size,
+        variantWeight: '',
+        variantCarton: pack
+      };
+      const enc = encodeURIComponent(JSON.stringify(payload));
+      return `<td class="variant-rfq-cell"><button type="button" class="variant-rfq-btn" data-wk-race-row-rfq="1" data-wk-payload="${enc}"><i class="fas fa-cart-plus" aria-hidden="true"></i></button></td>`;
+    };
 
     return `
       <div class="rg-table">
@@ -45,15 +71,14 @@
             <thead>
               <tr>
                 ${headers.map(h => `<th style="text-align:left; padding:12px 14px; border-bottom:1px solid var(--border-color); font-weight:600; white-space:nowrap;">${escapeHtml(h)}</th>`).join('')}
+                <th class="variant-rfq-cell variant-rfq-th" data-translate="rfq_variant_col" style="text-align:left; padding:12px 14px; border-bottom:1px solid var(--border-color); font-weight:600; white-space:nowrap;"></th>
               </tr>
             </thead>
             <tbody>
-              ${rows.map(r => `
+              ${rows.map((r) => `
                 <tr>
-                  ${headers.map(h => {
-                    const v = (r && (r[h] ?? r[h.replace(/\s+/g, '')] ?? r[h.toLowerCase()])) ?? '';
-                    return `<td style="padding:12px 14px; border-bottom:1px solid rgba(0,0,0,0.06); white-space:nowrap;">${escapeHtml(String(v))}</td>`;
-                  }).join('')}
+                  ${rowCells(r)}
+                  ${rowRfq(r)}
                 </tr>
               `).join('')}
             </tbody>
@@ -118,9 +143,45 @@
           ${cards}
         </div>
 
-        ${first && first.variantTable ? renderTable(first.variantTable) : ''}
+        ${first && first.variantTable ? renderTable(first.variantTable, first) : ''}
       </div>
     `;
+
+    root.querySelectorAll('[data-wk-race-row-rfq]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let payload = null;
+        try {
+          payload = JSON.parse(decodeURIComponent(btn.getAttribute('data-wk-payload') || '{}'));
+        } catch (err) {
+          return;
+        }
+        const p = pm.products.find((x) => String(x.id) === String(payload.pid));
+        if (!p || typeof window.addVariantToRfqCart !== 'function') return;
+        window.addVariantToRfqCart(p, {
+          variantKey: payload.vkey,
+          variantModel: payload.variantModel,
+          variantSize: payload.variantSize,
+          variantWeight: payload.variantWeight,
+          variantCarton: payload.variantCarton
+        });
+      });
+      if (window.wkI18n && typeof window.wkI18n.t === 'function') {
+        const al = window.wkI18n.t('add_to_rfq');
+        if (al) btn.setAttribute('aria-label', al);
+      }
+    });
+
+    root.querySelectorAll('[data-wk-rfq-racegate]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = btn.getAttribute('data-wk-rfq-racegate');
+        const p = pm.products.find((x) => String(x.id) === String(id));
+        if (p && typeof window.addProductToRfqCart === 'function') {
+          window.addProductToRfqCart(p, 1);
+        }
+      });
+    });
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();

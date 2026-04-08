@@ -453,7 +453,7 @@
       {
         type: 'flag_bases_accessories',
         nameEn: 'Beach Flag Bases & Accessories',
-        nameZh: '沙滩旗底座 & 配件',
+        nameZh: '沙滩旗底座与配件',
         hubDescEn: 'Cross bases, water bases, ground spikes, rotors and carrying bags.',
         hubDescZh: '十字底座、注水底座、地插、转动轴与收纳袋。',
         storyEn: 'A full range of bases and accessories for beach flags.',

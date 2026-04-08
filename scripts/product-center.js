@@ -171,7 +171,9 @@
     document.body.setAttribute('data-pc-active-cat', String(cat));
     const k = keyMap[cat];
     if (badge) badge.textContent = k ? t(k) : cat;
-    if (catalog) catalog.href = `all-products.html?cat=${encodeURIComponent(cat)}`;
+    if (catalog) {
+      catalog.href = cat === 'accessories' ? 'all-products.html' : `all-products.html?cat=${encodeURIComponent(cat)}`;
+    }
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();
     }
@@ -226,6 +228,20 @@
       return;
     }
 
+    // Accessories hub: beach flag accessories + tent accessories (two grips)
+    if (cat === 'accessories') {
+      const showcase = document.querySelector('.product-categories-showcase');
+      if (showcase) showcase.style.display = 'none';
+      cards.forEach((card) => {
+        card.style.display = 'none';
+      });
+      if (backWrap) backWrap.style.display = '';
+      if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
+
+      renderAccessoriesHub();
+      return;
+    }
+
     // Generic secondary overview: show subcategories for the selected category (when valid)
     if (cat) {
       const hasCard = cards.some((card) => (card.dataset.category || '').trim() === cat);
@@ -241,6 +257,7 @@
         if (showcase) showcase.style.display = '';
         removeTentsHub();
         removeFlagsHub();
+        removeAccessoriesHub();
         removeSubcategoryHub();
         if (backWrap) backWrap.style.display = '';
         if (noticeEl) noticeEl.style.display = '';
@@ -267,6 +284,7 @@
       if (showcase) showcase.style.display = '';
       removeTentsHub();
       removeFlagsHub();
+      removeAccessoriesHub();
       removeSubcategoryHub();
       if (backWrap) backWrap.style.display = notice ? '' : 'none';
       if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
@@ -485,6 +503,47 @@
     if (el && el.parentElement) el.parentElement.removeChild(el);
   }
 
+  function ensureAccessoriesHubContainer() {
+    let el = document.getElementById('accessoriesHub');
+    if (el) return el;
+
+    const anchor = document.querySelector('.section-header');
+    if (!anchor || !anchor.parentElement) return null;
+
+    el = document.createElement('section');
+    el.id = 'accessoriesHub';
+    el.className = 'tents-hub';
+    anchor.parentElement.insertBefore(el, anchor.nextSibling);
+    return el;
+  }
+
+  function removeAccessoriesHub() {
+    const el = document.getElementById('accessoriesHub');
+    if (el && el.parentElement) el.parentElement.removeChild(el);
+  }
+
+  /** Beach flag accessories (e.g. bases) + tent accessories — two grip blocks. */
+  function renderAccessoriesHub() {
+    const container = ensureAccessoriesHubContainer();
+    if (!container) return;
+
+    removeTentsHub();
+    removeFlagsHub();
+    removeSubcategoryHub();
+
+    const data = window.FLAG_TYPES;
+    const flagAccessories = data && Array.isArray(data.accessories) ? data.accessories : [];
+
+    container.innerHTML = [
+      renderFlagsHubSection('flags_hub_accessories_title', 'Beach Flag Bases & Accessories', flagAccessories),
+      renderTentAccessoriesHubCard()
+    ].join('');
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
+  }
+
   function renderFlagsHubSection(titleKey, titleFallback, items) {
     const lang = getCurrentLang();
     const safe = (s) => (s || '').toString();
@@ -532,6 +591,9 @@
   }
 
   function renderFlagsHub() {
+    removeTentsHub();
+    removeAccessoriesHub();
+
     const container = ensureFlagsHubContainer();
     if (!container) return;
 
@@ -543,7 +605,7 @@
     container.innerHTML = [
       renderFlagsHubSection('flags_hub_poles_title', 'Beach Flags & Poles', poles),
       renderFlagsHubSection('flags_hub_special_title', 'Backpack & Street Flags', special),
-      renderFlagsHubSection('flags_hub_accessories_title', 'Bases & Accessories', accessories),
+      renderFlagsHubSection('flags_hub_accessories_title', 'Beach Flag Bases & Accessories', accessories),
     ].join('');
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
@@ -644,6 +706,9 @@
   }
 
   function renderTentsHub() {
+    removeFlagsHub();
+    removeAccessoriesHub();
+
     const container = ensureTentsHubContainer();
     if (!container) return;
 
@@ -676,11 +741,15 @@
     maybeOpenProductFromQuery();
 
     document.addEventListener('languageChanged', () => {
-      if (getQueryCat() === 'tents') {
+      const c = getQueryCat();
+      if (c === 'tents') {
         renderTentsHub();
       }
-      if (getQueryCat() === 'flags') {
+      if (c === 'flags') {
         renderFlagsHub();
+      }
+      if (c === 'accessories') {
+        renderAccessoriesHub();
       }
     });
   }

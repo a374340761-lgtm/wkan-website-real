@@ -1085,8 +1085,8 @@ function enhanceTentsDropdown() {
         const folding = data && Array.isArray(data.folding) ? data.folding : [];
         const event = data && Array.isArray(data.event) ? data.event : [];
         const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
-        const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
-        const list = folding.concat(event, inflatable, accessories);
+        // Omit TENT_TYPES.accessories here: tent_accessories is appended once below (tents_hub_accessories_title).
+        const list = folding.concat(event, inflatable);
         if (!list.length) return fallback;
         return list
             .filter((x) => x && x.type)
@@ -1186,7 +1186,7 @@ function enhanceTentsDropdown() {
         // Accessories (配件) - tent accessories hub (same UX as flag bases & accessories)
         const accessoriesLink = document.createElement('a');
         accessoriesLink.href = 'tent-type.html?type=tent_accessories';
-        accessoriesLink.setAttribute('data-translate', 'menu_accessories');
+        accessoriesLink.setAttribute('data-translate', 'tents_hub_accessories_title');
         accessoriesLink.textContent = '';
         sub.appendChild(accessoriesLink);
 
@@ -1227,7 +1227,7 @@ function enhanceFlagsDropdown() {
         { type: 'alu_pole_new_feather', nameEn: 'Aluminium Pole (New Feather)', nameZh: '铝合金旗杆（新羽毛）' },
         { type: 'alu_pole_feather', nameEn: 'Aluminium Pole (Feather/Teardrop)', nameZh: '铝合金旗杆（羽毛/泪滴）' },
         { type: 'backpack_street_flags', nameEn: 'Backpack Flags & Street/Display Flags', nameZh: '背包旗 & 街旗 / 展示旗' },
-        { type: 'flag_bases_accessories', nameEn: 'Bases & Accessories', nameZh: '底座与配件' }
+        { type: 'flag_bases_accessories', nameEn: 'Beach Flag Bases & Accessories', nameZh: '沙滩旗底座与配件' }
     ];
 
     const getTypes = () => {

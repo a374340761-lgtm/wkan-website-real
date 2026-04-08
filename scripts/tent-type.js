@@ -330,8 +330,9 @@
       `;
     }).join('');
 
-    return `
-      <div class="tent-type-detail">
+    const isTentAccessoriesHub = item && item.type === 'tent_accessories';
+
+    const headHtmlBlock = `
         <div class="tent-type-detail__head">
           <h2 class="tent-type-detail__title">
             ${lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn)}
@@ -347,8 +348,11 @@
               : ''
             }
           </h2>
-        </div>
+        </div>`;
 
+    const gripsAfterTitle = isTentAccessoriesHub ? renderTentAccessoriesGripsBlock(item) : '';
+
+    const specTableBlock = `
         <div class="tent-type-detail__block">
           <div class="tent-type-detail__blockTitle">${lang === 'zh' ? '型号参数' : 'Models & Specs'}</div>
           ${materialNoteHtml}
@@ -359,7 +363,13 @@
             </table>
           </div>
           ${renderVariantSelector(item, selectedVariantKey)}
-        </div>
+        </div>`;
+
+    return `
+      <div class="tent-type-detail">
+        ${headHtmlBlock}
+        ${gripsAfterTitle}
+        ${specTableBlock}
 
         ${renderStory(item)}
         ${renderExampleImages(item)}
@@ -368,6 +378,20 @@
         ${item && item.skipAccessoriesBlock ? '' : renderAccessories(item)}
         ${renderPdfGuide(item)}
         ${renderRelatedLinks(item)}
+      </div>
+    `;
+  }
+
+  /** Same 24-grip sprite grid as products-accessories.html — directly under the hub title, before 型号参数. */
+  function renderTentAccessoriesGripsBlock(item) {
+    const lang = getCurrentLang();
+    const intro = lang === 'zh'
+      ? '以下为画册 24 格配件缩略图，可点击图片或标题查看详情，或加入询价清单。'
+      : '24-grip catalog grid — click image or title for details, or add to the RFQ list.';
+    return `
+      <div class="tent-type-detail__block tent-type-detail__block--accessories-grips">
+        <p class="tent-type-detail__text" style="margin-bottom: 14px;">${intro}</p>
+        <div id="tentTypeAccessoriesGrid" class="ap-grid" aria-label="${lang === 'zh' ? '帐篷配件可选列表' : 'Tent accessories picker'}"></div>
       </div>
     `;
   }
@@ -497,17 +521,10 @@
   function renderRelatedLinks(item) {
     const lang = getCurrentLang();
     if (item && item.type === 'tent_accessories') {
-      const title = lang === 'zh' ? '帐篷配件产品一览' : 'Tent accessories catalog';
-      const intro = lang === 'zh'
-        ? '以下为与配件画册一致的 24 格目录（与「全部产品 → 配件」顺序一致）。可查看详情或将单品加入询价清单。'
-        : 'The same 24-grip grid as the accessories overview (order matches All products → Accessories). Open details or add lines to the RFQ list.';
       return `
-      <div class="tent-type-detail__block tent-type-detail__block--accessories-catalog">
-        <div class="tent-type-detail__blockTitle">${title}</div>
-        <div class="tent-type-detail__text" style="margin-bottom: 12px;">${intro}</div>
-        <div id="tentTypeAccessoriesGrid" class="ap-grid" aria-label="${lang === 'zh' ? '帐篷配件网格' : 'Tent accessories grid'}"></div>
-        <div style="display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
-          <a class="btn btn-secondary" href="products-accessories.html">${lang === 'zh' ? '在独立页面浏览配件' : 'Browse on full accessories page'}</a>
+      <div class="tent-type-detail__block tent-type-detail__block--accessories-footer-links">
+        <div style="display:flex; gap: 10px; flex-wrap: wrap;">
+          <a class="btn btn-secondary" href="products-accessories.html">${lang === 'zh' ? '配件专题页（大图）' : 'Accessories page (large view)'}</a>
           <a class="btn btn-outline" href="all-products.html">${lang === 'zh' ? '全部产品目录' : 'Full product catalog'}</a>
         </div>
       </div>

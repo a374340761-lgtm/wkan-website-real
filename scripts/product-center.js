@@ -569,7 +569,7 @@
       return t.slice(0, max - 1) + '…';
     };
     const desc = shortText(hubDesc);
-    const href = 'all-products.html?cat=accessories';
+    const href = 'all-products.html';
     const viewTypeHref = 'tent-type.html?type=tent_accessories';
 
     return `

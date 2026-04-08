@@ -607,9 +607,7 @@
                     skipCommonDetails: true,
                     skipAccessoriesBlock: true,
                     guideImages: [],
-                    links: [
-                        { href: 'all-products.html?cat=accessories', labelZh: '帐篷配件产品一览（Browse Products）', labelEn: 'Browse all tent accessory products' }
-                    ],
+                    links: [],
                     specTable: {
                         columns: [
                             { key: 'model', labelZh: '编码', labelEn: 'Code' },

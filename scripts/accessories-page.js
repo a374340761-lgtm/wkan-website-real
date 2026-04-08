@@ -1,5 +1,6 @@
 /* scripts/accessories-page.js
      Stable render for EXACT 24 accessories (IDs 9001-9024) using sprite crop.
+     Also mounts into #tentTypeAccessoriesGrid on tent-type.html?type=tent_accessories.
 */
 (function () {
     if (window.__accessoriesPageInited) return;
@@ -29,23 +30,35 @@
     function injectStylesOnce() {
         if (document.getElementById('__accessories_page_css')) return;
         const css = `
-            #accessoriesGrid.ap-grid{
+            #accessoriesGrid.ap-grid, #tentTypeAccessoriesGrid.ap-grid, #allProductsAccessoriesGrid.ap-grid{
                 display:grid;
                 grid-template-columns:repeat(4,minmax(0,1fr));
                 gap:16px;
                 padding: 1rem 0;
             }
             @media (max-width: 900px){
-                #accessoriesGrid.ap-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+                #accessoriesGrid.ap-grid, #tentTypeAccessoriesGrid.ap-grid, #allProductsAccessoriesGrid.ap-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); }
             }
             @media (max-width: 520px){
-                #accessoriesGrid.ap-grid{ grid-template-columns:repeat(1,minmax(0,1fr)); }
+                #accessoriesGrid.ap-grid, #tentTypeAccessoriesGrid.ap-grid, #allProductsAccessoriesGrid.ap-grid{ grid-template-columns:repeat(1,minmax(0,1fr)); }
+            }
+            #accessoriesGrid .ap-desc, #tentTypeAccessoriesGrid .ap-desc, #allProductsAccessoriesGrid .ap-desc{
+                font-size:0.88rem;
+                color:#64748b;
+                line-height:1.45;
+                margin:0 0 10px 0;
+            }
+            #accessoriesGrid .ap-actions, #tentTypeAccessoriesGrid .ap-actions, #allProductsAccessoriesGrid .ap-actions{
+                display:flex;
+                flex-wrap:wrap;
+                gap:8px;
+                align-items:center;
             }
 
             /* Accessories uses the global .ap-card/.ap-img styles from main.css.
                We only set the sprite image source here.
             */
-            #accessoriesGrid .ap-img .sprite-thumb{
+            #accessoriesGrid .ap-img .sprite-thumb, #tentTypeAccessoriesGrid .ap-img .sprite-thumb, #allProductsAccessoriesGrid .ap-img .sprite-thumb{
                 background-image:url("${SPRITE}");
                 background-size:400% 600%;
                 background-color:#fff;
@@ -110,9 +123,18 @@
             (p.model || ''),
             (p.nameZh || p.name || ''),
             (p.nameEn || ''),
+            (p.descriptionZh || ''),
+            (p.descriptionEn || ''),
             ...(Array.isArray(p.keywords) ? p.keywords : [])
         ].join(' ').toLowerCase();
         return hay.includes(s);
+    }
+
+    function getDescription(p, lang) {
+        if (lang.startsWith('zh')) {
+            return (p.descriptionZh || p.remarksZh || '').toString().trim();
+        }
+        return (p.descriptionEn || p.remarksEn || '').toString().trim();
     }
 
     function buildCard(p) {
@@ -141,6 +163,12 @@
         model.className = 'ap-meta';
         model.textContent = p.model || '';
 
+        const desc = document.createElement('p');
+        desc.className = 'ap-desc';
+        const descText = getDescription(p, lang);
+        desc.textContent = descText;
+        if (!descText) desc.style.display = 'none';
+
         const actions = document.createElement('div');
         actions.className = 'ap-actions';
 
@@ -150,6 +178,19 @@
         detailsLink.setAttribute('data-translate', 'view_details');
         detailsLink.textContent = '';
 
+        const cartBtn = document.createElement('button');
+        cartBtn.type = 'button';
+        cartBtn.className = 'btn btn-primary';
+        cartBtn.setAttribute('data-translate', 'btn_add_to_cart');
+        cartBtn.setAttribute('data-product-id', String(id));
+        cartBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (typeof window.addToCart === 'function') {
+                window.addToCart(id);
+            }
+        });
+
         const go = () => {
             location.href = `product-detail.html?sku=${encodeURIComponent(id)}`;
         };
@@ -158,8 +199,10 @@
         title.addEventListener('click', go);
 
         actions.appendChild(detailsLink);
+        actions.appendChild(cartBtn);
         body.appendChild(title);
         body.appendChild(model);
+        body.appendChild(desc);
         body.appendChild(actions);
 
         card.appendChild(hero);
@@ -167,41 +210,79 @@
         return card;
     }
 
+    function renderIntoGrid(gridEl, list) {
+        if (!gridEl) return;
+        gridEl.classList.add('ap-grid');
+        gridEl.innerHTML = '';
+        const frag = document.createDocumentFragment();
+        list.forEach((p) => frag.appendChild(buildCard(p)));
+        gridEl.appendChild(frag);
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    }
+
     function render(list) {
         const grid = document.getElementById('accessoriesGrid');
         const empty = document.getElementById('accessoriesEmpty');
         if (!grid) return;
 
-        grid.classList.add('ap-grid');
-        grid.innerHTML = '';
-
-        const frag = document.createDocumentFragment();
-        list.forEach(p => frag.appendChild(buildCard(p)));
-        grid.appendChild(frag);
-
-        // Apply translations for injected nodes
-        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
-            window.multiLang.translatePage();
-        }
+        renderIntoGrid(grid, list);
 
         if (empty) empty.style.display = (list.length ? 'none' : 'block');
     }
 
+    /** Mount 24-cell grid into #gridId when catalog is ready (productManager). */
+    function mountAccessoriesGrid(gridId, opts) {
+        const options = opts || {};
+        const gid = gridId || 'accessoriesGrid';
+        let base24 = null;
+
+        const run = () => {
+            const all = getAllProducts();
+            if (!all || !all.length) return false;
+            base24 = pick24Accessories(all);
+            const el = document.getElementById(gid);
+            if (!el) return false;
+            let rows = base24;
+            const fq = options.filterQuery != null ? String(options.filterQuery).trim() : '';
+            if (fq) {
+                rows = base24.filter((p) => matches(p, fq));
+            }
+            renderIntoGrid(el, rows);
+            const empty = document.getElementById('accessoriesEmpty');
+            if (empty) empty.style.display = rows.length ? 'none' : 'block';
+
+            if (options.search && gid === 'accessoriesGrid') {
+                const search = document.getElementById('accessoriesSearch');
+                if (search && !search.dataset.wkBound) {
+                    search.dataset.wkBound = '1';
+                    const lang = getLang();
+                    search.placeholder = lang.startsWith('zh') ? '搜索配件' : 'Search accessories';
+                    search.addEventListener('input', () => {
+                        const q = search.value || '';
+                        renderIntoGrid(el, base24.filter((p) => matches(p, q)));
+                    }, { passive: true });
+                }
+            }
+            return true;
+        };
+
+        injectStylesOnce();
+        if (run()) return;
+        let n = 0;
+        const timer = setInterval(() => {
+            n += 1;
+            if (run() || n > 120) clearInterval(timer);
+        }, 50);
+    }
+
+    window.WK_mountAccessoriesGrid = mountAccessoriesGrid;
+
     function init() {
         injectStylesOnce();
-
-        const all = getAllProducts();
-        const base24 = pick24Accessories(all);
-        render(base24);
-
-        const search = document.getElementById('accessoriesSearch');
-        if (search) {
-            const lang = getLang();
-            search.placeholder = lang.startsWith('zh') ? '搜索配件' : 'Search accessories';
-            search.addEventListener('input', () => {
-                const q = search.value || '';
-                render(base24.filter(p => matches(p, q)));
-            }, { passive: true });
+        if (document.getElementById('accessoriesGrid')) {
+            mountAccessoriesGrid('accessoriesGrid', { search: true });
         }
     }
 

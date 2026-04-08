@@ -496,6 +496,23 @@
 
   function renderRelatedLinks(item) {
     const lang = getCurrentLang();
+    if (item && item.type === 'tent_accessories') {
+      const title = lang === 'zh' ? '帐篷配件产品一览' : 'Tent accessories catalog';
+      const intro = lang === 'zh'
+        ? '以下为与配件画册一致的 24 格目录（与「全部产品 → 配件」顺序一致）。可查看详情或将单品加入询价清单。'
+        : 'The same 24-grip grid as the accessories overview (order matches All products → Accessories). Open details or add lines to the RFQ list.';
+      return `
+      <div class="tent-type-detail__block tent-type-detail__block--accessories-catalog">
+        <div class="tent-type-detail__blockTitle">${title}</div>
+        <div class="tent-type-detail__text" style="margin-bottom: 12px;">${intro}</div>
+        <div id="tentTypeAccessoriesGrid" class="ap-grid" aria-label="${lang === 'zh' ? '帐篷配件网格' : 'Tent accessories grid'}"></div>
+        <div style="display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px;">
+          <a class="btn btn-secondary" href="products-accessories.html">${lang === 'zh' ? '在独立页面浏览配件' : 'Browse on full accessories page'}</a>
+          <a class="btn btn-outline" href="all-products.html">${lang === 'zh' ? '全部产品目录' : 'Full product catalog'}</a>
+        </div>
+      </div>
+    `;
+    }
     if (!item || !item.links || !item.links.length) return '';
     const linksHtml = item.links.map((l) => {
       return `<a class="btn btn-secondary" href="${safe(l.href)}">${lang === 'zh' ? safe(l.labelZh) : safe(l.labelEn)}</a>`;
@@ -554,6 +571,10 @@
     `;
 
     bindTentTypeRfq(root);
+
+    if (item.type === 'tent_accessories' && typeof window.WK_mountAccessoriesGrid === 'function') {
+      window.WK_mountAccessoriesGrid('tentTypeAccessoriesGrid', { search: false });
+    }
 
     // Bind variant buttons (inflatable tents)
     root.querySelectorAll('[data-variant]').forEach((btn) => {

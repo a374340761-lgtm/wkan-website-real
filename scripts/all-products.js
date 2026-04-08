@@ -533,6 +533,13 @@
 
       return Array.from(terms).filter(Boolean);
     }
+    /** Tent accessory sprite SKUs (9001–9024): shown only in the embedded grid (same as products-accessories.html), not as separate ap-cards. */
+    function isSpriteTentAccessory(p) {
+        if (!p) return false;
+        const id = Number(p.id);
+        return Number.isFinite(id) && id >= 9001 && id <= 9024;
+    }
+
     // 判断一个产品是否命中（任意一个 term 出现在任意字段里）
     function productMatches(product, rawQuery) {
       const terms = expandQueryTerms(rawQuery);
@@ -545,12 +552,49 @@
 
       return terms.some(t => t && haystack.includes(normalizeText(t)));
     }
+    let allProductsAccessoriesSectionEl = null;
+
+    function ensureAllProductsAccessoriesSection() {
+        if (allProductsAccessoriesSectionEl) return allProductsAccessoriesSectionEl;
+        const section = document.createElement('section');
+        section.id = 'allProductsAccessoriesSection';
+        section.className = 'ap-accessories-embed';
+        section.setAttribute('aria-label', 'Tent accessories catalog');
+        section.innerHTML = `
+            <h2 class="ap-accessories-embed__title" data-translate="tents_hub_accessories_title">Tent Accessories</h2>
+            <p class="wk-disclaimer ap-accessories-embed__intro" style="margin: 0 0 0.75rem; font-size: 0.95rem;">
+                <span class="zh">以下帐篷配件与「配件专题页」相同：24 格画册裁切、查看详情与加入询价清单。</span>
+                <span class="en">Same 24-grip tent accessories as the dedicated page — sprite crops, details, and RFQ cart.</span>
+            </p>
+            <div id="allProductsAccessoriesGrid"></div>
+            <p style="margin-top: 12px;">
+                <a class="btn btn-secondary" href="products-accessories.html" data-translate="accessories_open_full_page">Open full accessories page</a>
+            </p>
+        `;
+        if (grid && grid.parentNode && emptyState) {
+            grid.parentNode.insertBefore(section, emptyState);
+        }
+        allProductsAccessoriesSectionEl = section;
+        return section;
+    }
+
+    function updateAllProductsAccessoriesEmbed(show, filterQuery) {
+        const section = ensureAllProductsAccessoriesSection();
+        section.style.display = show ? 'block' : 'none';
+        if (!show) return;
+        if (typeof window.WK_mountAccessoriesGrid === 'function') {
+            window.WK_mountAccessoriesGrid('allProductsAccessoriesGrid', { search: false, filterQuery: filterQuery || '' });
+        }
+    }
+
     // 渲染产品列表
-    function render(list) {
+    function render(list, embedOpts) {
+        embedOpts = embedOpts || {};
+        const showAccEmbed = !!embedOpts.showAccessoriesEmbed;
         const hasItems = !!(list && list.length);
 
         grid.style.display = hasItems ? 'grid' : 'none';
-        emptyState.style.display = hasItems ? 'none' : 'block';
+        emptyState.style.display = (!hasItems && !showAccEmbed) ? 'block' : 'none';
 
         if (!hasItems) {
             grid.innerHTML = '';
@@ -665,6 +709,8 @@
                 window.multiLang.translatePage();
             }
         }
+
+        updateAllProductsAccessoriesEmbed(showAccEmbed, embedOpts.accessoryFilterQuery || '');
 
         // Tent Types section (tents category only)
         updateTentSubcategoriesSection();
@@ -923,11 +969,46 @@
             typeNotice.style.display = 'block';
         }
 
-        render(filteredWithType);
+        const spriteAcc = filteredWithType.filter(isSpriteTentAccessory);
+        const listForGrid = filteredWithType.filter((p) => !isSpriteTentAccessory(p));
+
+        render(listForGrid, {
+            showAccessoriesEmbed: spriteAcc.length > 0,
+            accessoryFilterQuery: q
+        });
+    }
+
+    /** Legacy ?cat=accessories is merged into the full catalog (tent accessory SKUs stay category accessories but list with "all"). */
+    function stripAccessoriesCatFromUrl() {
+        try {
+            const url = new URL(window.location.href);
+            let changed = false;
+            if (url.searchParams.get('cat') === 'accessories') {
+                url.searchParams.delete('cat');
+                changed = true;
+            }
+            if (url.searchParams.get('category') === 'accessories') {
+                url.searchParams.delete('category');
+                changed = true;
+            }
+            if (changed) {
+                const next = url.pathname + (url.searchParams.toString() ? `?${url.searchParams.toString()}` : '') + url.hash;
+                window.history.replaceState({}, '', next);
+            }
+        } catch (e) {
+            // ignore
+        }
     }
 
     // 初始化
     function initAllProducts() {
+        stripAccessoriesCatFromUrl();
+
+        if (catSelect) {
+            const accOpt = catSelect.querySelector('option[value="accessories"]');
+            if (accOpt) accOpt.remove();
+        }
+
         products = enrichProductsForSearch(getProducts());
         
         if (products.length === 0) {
@@ -962,7 +1043,7 @@
             const existing = new Set(Array.from(catSelect.options).map(o => o.value));
 
             validCats.forEach((cat) => {
-                if (!cat || existing.has(cat)) return;
+                if (!cat || existing.has(cat) || cat === 'accessories') return;
                 const opt = document.createElement('option');
                 opt.value = cat;
                 const mapped = labelMap[cat];

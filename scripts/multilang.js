@@ -615,6 +615,7 @@ class MultiLanguageSystem {
                 accessories_page_intro: '向下浏览配件并点击查看参数。',
                 accessories_coming_soon: '正在整理',
                 accessories_overview_alt: '配件概览',
+                accessories_open_full_page: '打开配件专题页',
 
                 // Buttons
                 btn_back: '返回',
@@ -1494,6 +1495,7 @@ class MultiLanguageSystem {
                 accessories_page_intro: 'Browse our accessories below and click any item to view specifications.',
                 accessories_coming_soon: 'Coming soon',
                 accessories_overview_alt: 'Accessories overview',
+                accessories_open_full_page: 'Open full accessories page',
 
                 // Buttons
                 btn_back: 'Back',

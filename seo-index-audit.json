@@ -7,13 +7,13 @@
     "sitemapUrlEntries": 144,
     "preferredDomainInRepo": "https://www.waikwantent.com",
     "apexDomainInHtmlCanonicals": false,
-    "notes": "All static canonical hrefs in HTML use https://www.waikwantent.com. No https://waikwantent.com/ (non-www) in rel=canonical across .html files. product-detail.js may set canonical to window.location.origin (apex or www) at runtime; scripts/seo.js uses fixed www and re-runs on DOMContentLoaded + 800ms delay, which can conflict with PDP JS on apex hosts."
+    "notes": "All static canonical hrefs in HTML use https://www.waikwantent.com. No https://waikwantent.com/ (non-www) in rel=canonical across .html files. product-detail.js sets canonical/og:url/JSON-LD from WK_PREFERRED_ORIGIN (fixed https://www.waikwantent.com). scripts/seo.js normalizes apex/http waikwantent URLs to www https; skips repeat run on product-detail.html so PDP tags are not overwritten."
   },
   "preferredDomainInconsistencies": [
     {
       "type": "runtime_vs_static",
       "detail": "scripts/seo.js uses BASE_URL = https://www.waikwantent.com for canonical normalization and Organization JSON-LD.",
-      "detail2": "scripts/product-detail.js sets canonical from window.location.origin when available, aligning with crawled host (mitigates GSC 'different canonical' for apex)."
+      "detail2": "scripts/product-detail.js sets canonical from WK_PREFERRED_ORIGIN (https://www.waikwantent.com), matching static HTML and sitemap."
     },
     {
       "type": "potential_pdp_race",
@@ -108,7 +108,7 @@
   "pagesRiskDuplicateCanonicalUserVsGoogle": [
     {
       "path": "product-detail.html (dynamic)",
-      "reason": "Host mismatch if GSC property is apex (https://waikwantent.com) while static assets assume www; mitigated by product-detail.js using location.origin for canonical when set."
+      "reason": "If users reach apex without 301 to www, tags still emit www via WK_PREFERRED_ORIGIN; server should 301 apex → www for consistency with GSC."
     },
     {
       "path": "scripts/seo.js",

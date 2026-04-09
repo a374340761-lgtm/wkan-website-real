@@ -411,7 +411,15 @@
       // ===== Generic / Industry keywords =====
       "广告展示用品": ["advertising display", "display products", "promo display", "promotional display", "marketing display", "branding products", "event display"],
       "展会器材厂家": ["trade show supplier", "exhibition supplier", "manufacturer", "factory", "direct factory", "oem", "odm", "custom manufacturer"],
-      "厂家": ["manufacturer", "factory", "direct factory", "oem", "odm"]
+      "厂家": ["manufacturer", "factory", "direct factory", "oem", "odm"],
+
+      // ===== Tent / pole hardware (grip, clamp, diameter) =====
+      "夹具": ["grip", "clamp", "holder", "tent clamp", "pole clamp", "clamp-on"],
+      "帐篷夹": ["grip", "clamp", "tent clamp", "pole clamp"],
+      "管夹": ["grip", "clamp", "pole clamp", "tube clamp"],
+      "内径": ["inner diameter", "id", "bore", "inside diameter"],
+      "直径": ["diameter", "od", "outer diameter", "size mm"],
+      "适配": ["fit", "compatibility", "fits", "suitable for"]
     };
 
     // ===================== Reverse map: EN -> CN (for smarter search) =====================
@@ -430,25 +438,134 @@
 
     const REVERSE_MAP = buildReverseMap(SEARCH_SYNONYMS);
 
+    function joinRowValues(row) {
+      if (!row || typeof row !== 'object') return '';
+      return Object.keys(row)
+        .map((k) => row[k])
+        .filter((v) => v != null && String(v).trim() !== '')
+        .map((v) => String(v))
+        .join(' ');
+    }
+
+    /** Flatten variantTable / variantTables / sizeTable rows (diameter, mm, etc.) for search. */
+    function flattenVariantTableLike(vt) {
+      if (!vt || typeof vt !== 'object') return '';
+      if (!Array.isArray(vt.rows)) return '';
+      return vt.rows.map((row) => joinRowValues(row)).filter(Boolean).join(' ');
+    }
+
+    /** Flatten specs / multilingual fields that were easy to miss in the haystack (subCategory vs subcategory, specs objects, etc.). */
+    function flattenSpecsForSearch(product) {
+      if (!product) return '';
+      const parts = [];
+      if (Array.isArray(product.specs)) parts.push(product.specs.join(' '));
+      if (Array.isArray(product.specsEn)) parts.push(product.specsEn.join(' '));
+      if (Array.isArray(product.specsJa)) parts.push(product.specsJa.join(' '));
+      if (Array.isArray(product.specsKo)) parts.push(product.specsKo.join(' '));
+      if (product.specsZh && typeof product.specsZh === 'object' && !Array.isArray(product.specsZh)) {
+        parts.push(...Object.values(product.specsZh).map((v) => (v == null ? '' : String(v))));
+      }
+      if (product.specsEn && typeof product.specsEn === 'object' && !Array.isArray(product.specsEn)) {
+        parts.push(...Object.values(product.specsEn).map((v) => (v == null ? '' : String(v))));
+      }
+      if (product.variantTable && typeof product.variantTable === 'object') {
+        parts.push(flattenVariantTableLike(product.variantTable));
+      }
+      if (Array.isArray(product.variantTables)) {
+        product.variantTables.forEach((vt) => parts.push(flattenVariantTableLike(vt)));
+      }
+      if (Array.isArray(product.sizeTable)) {
+        product.sizeTable.forEach((row) => parts.push(joinRowValues(row)));
+      }
+      if (Array.isArray(product.variants)) {
+        product.variants.forEach((v) => {
+          if (v && typeof v === 'object') parts.push(joinRowValues(v));
+        });
+      }
+      if (product.remarksZh) parts.push(String(product.remarksZh));
+      if (product.remarksEn) parts.push(String(product.remarksEn));
+      return parts.filter(Boolean).join(' ');
+    }
+
+    /**
+     * Derived, search-only text for grip / pole / clamp / diameter queries.
+     * Does not mutate the product; only adds cross-language tokens when the product already looks hardware-related.
+     */
+    function getGripSearchText(product) {
+      if (!product) return '';
+      const pid = Number(product.id);
+      const isSpriteTentAccessoryRow = Number.isFinite(pid) && pid >= 9001 && pid <= 9024;
+
+      const explicit = [
+        product.grip, product.grips, product.accessoryGrip, product.poleDiameter,
+        product.innerDiameter, product.tubeDiameter, product.outerDiameter,
+        product.compatibility, product.fit, product.holder, product.slot
+      ].filter((v) => v != null && String(v).trim() !== '').map((v) => String(v));
+
+      const tagStr = Array.isArray(product.tags) ? product.tags.join(' ') : (product.tags || '');
+      const kwStr = Array.isArray(product.keywords) ? product.keywords.join(' ') : (product.keywords || '');
+      const skStr = Array.isArray(product.searchableKeywords)
+        ? product.searchableKeywords.join(' ')
+        : (product.searchableKeywords ? String(product.searchableKeywords) : '');
+
+      const core = [
+        product.name, product.nameZh, product.nameEn,
+        product.description, product.descriptionZh, product.descriptionEn,
+        product.short, product.shortZh, product.shortEn,
+        tagStr, kwStr, skStr,
+        flattenSpecsForSearch(product)
+      ].filter(Boolean).join(' ');
+
+      const GRIP_SYNONYM_EN = 'grip pole grip clamp holder diameter inner diameter pole diameter tube fit compatibility connector';
+      const GRIP_SYNONYM_ZH = '夹具 夹 直径 内径 管径 适配 卡扣 卡箍 管 连接件 帐篷配件';
+
+      if (isSpriteTentAccessoryRow) {
+        return explicit.concat([
+          GRIP_SYNONYM_EN,
+          '24-grip tent accessories catalog sprite embedded accessories',
+          GRIP_SYNONYM_ZH
+        ]).join(' ');
+      }
+
+      const hasGripContext = explicit.length > 0
+        || /\b(grip|grips|clamp|holder|diameter|inner|outer|tube|pole|fit|mm|compatible|connector|hex)\b/i.test(core)
+        || /夹|直径|管径|内径|适配|卡扣|卡箍|夹具|六棱|六角|棱角|管|连接/.test(core);
+
+      if (!hasGripContext) return '';
+
+      return explicit.concat([GRIP_SYNONYM_EN, GRIP_SYNONYM_ZH]).join(' ');
+    }
+
     // 统一把产品对象变成可搜索的“大文本”
     // 兼容不同字段命名（name/title/category/tags/desc 等）
     function buildProductHaystack(product) {
       const parts = [];
 
-      // 常见字段
+      // 常见字段（含多语言与 subcategory 别名）
       const candidates = [
         product.name,
         product.title,
+        product.nameZh,
+        product.nameEn,
         product.model,
         product.sku,
         product.category,
+        product.subcategory,
         product.subCategory,
+        product.sub_category,
         product.type,
         product.material,
         product.size,
         product.description,
+        product.descriptionZh,
+        product.descriptionEn,
         product.shortDesc,
+        product.short,
+        product.shortZh,
+        product.shortEn,
         product.detail,
+        product.remarksZh,
+        product.remarksEn,
       ];
 
       candidates.forEach(v => {
@@ -459,9 +576,15 @@
       if (Array.isArray(product.tags)) parts.push(product.tags.join(" "));
       else if (product.tags) parts.push(product.tags);
 
-      // 有些项目用 keywords
+      // 有些项目用 keywords / searchableKeywords
       if (Array.isArray(product.keywords)) parts.push(product.keywords.join(" "));
       else if (product.keywords) parts.push(product.keywords);
+
+      if (Array.isArray(product.searchableKeywords)) parts.push(product.searchableKeywords.join(' '));
+      else if (product.searchableKeywords) parts.push(String(product.searchableKeywords));
+
+      const specsFlat = flattenSpecsForSearch(product);
+      if (specsFlat) parts.push(specsFlat);
 
       // 把整个对象（兜底）也序列化一点点（避免漏字段）
       // 注意：不会太大，一般产品对象很小
@@ -469,7 +592,13 @@
         parts.push(JSON.stringify(product));
       } catch (e) {}
 
-      return normalizeText(parts.filter(Boolean).join(" | "));
+      const gripDerived = getGripSearchText(product);
+      if (gripDerived) parts.push(gripDerived);
+
+      return {
+        haystack: normalizeText(parts.filter(Boolean).join(" | ")),
+        gripSearchText: gripDerived
+      };
     }
 
     // 根据产品英文内容，自动“补充”可能相关的中文关键词（虚拟CN tags）
@@ -486,15 +615,17 @@
       return Array.from(cnSet);
     }
 
-    // 给产品加上增强字段：_haystack / _cnTags
+    // 给产品加上增强字段：_haystack / _gripSearchText / _cnTags
     function enrichProductsForSearch(products) {
       return (products || []).map(p => {
-        const haystack = buildProductHaystack(p);
+        const built = buildProductHaystack(p);
+        const haystack = built.haystack;
         const cnTags = inferChineseTagsFromEnglish(haystack);
 
         return {
           ...p,
           _haystack: haystack,
+          _gripSearchText: built.gripSearchText || '',
           _cnTags: cnTags,                 // ✅ 虚拟中文标签（用于搜索/展示）
           _cnTagsText: normalizeText(cnTags.join(" ")),
         };

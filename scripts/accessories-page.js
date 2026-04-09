@@ -118,16 +118,26 @@
 
     function matches(p, q) {
         if (!q) return true;
-        const s = q.trim().toLowerCase();
+        const raw = q.trim().toLowerCase();
+        if (!raw) return true;
+        const tagStr = typeof p.tags === 'string'
+            ? p.tags
+            : (Array.isArray(p.tags) ? p.tags.join(' ') : '');
         const hay = [
             (p.model || ''),
             (p.nameZh || p.name || ''),
             (p.nameEn || ''),
             (p.descriptionZh || ''),
             (p.descriptionEn || ''),
-            ...(Array.isArray(p.keywords) ? p.keywords : [])
+            tagStr,
+            ...(Array.isArray(p.keywords) ? p.keywords : []),
+            ...(Array.isArray(p.searchableKeywords) ? p.searchableKeywords : [])
         ].join(' ').toLowerCase();
-        return hay.includes(s);
+        // Align with all-products.js: any whitespace-separated token may match (not the full phrase only).
+        if (hay.includes(raw)) return true;
+        const tokens = raw.split(/\s+/).filter(Boolean);
+        if (tokens.length <= 1) return false;
+        return tokens.some((t) => t && hay.includes(t));
     }
 
     function getDescription(p, lang) {

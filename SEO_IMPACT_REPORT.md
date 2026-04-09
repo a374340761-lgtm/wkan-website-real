@@ -108,7 +108,7 @@ Recent work (roughly commits `6d49b8c` → `7752c56` → `5273534` → `53412b7`
 - **Product schema completeness:** `Offer` uses **placeholder-style** `priceCurrency` / `availability` without a real **price**; this can **limit** rich result eligibility or create **policy** risk if interpreted as misleading.
 - **`all-products.html?cat=…`:** Title/meta change **without** a distinct canonical is a **deliberate** trade-off (good for avoiding parameter explosion). Google may still **ignore** some meta variations if it treats the URL as one cluster.
 - **Navigation parameter inconsistency:** Some links use `?cat=` and others `?category=` for product center (handled in JS in places, but **multiple URL shapes** still exist for humans and bots).
-- **Internal doc drift:** `.cursor/rules/seo-engineer.mdc` still mentions **`https://waikwantent.com`** as base URL while production code standardizes on **www**—team confusion risk, not a live site bug if redirects work.
+- **Authoring docs:** `.cursor/rules/seo-engineer.mdc` and `docs/CURSOR-SEO-PROMPTS.md` now specify **`https://www.waikwantent.com`** as the base URL (aligned with `scripts/seo.js` and HTML canonicals).
 - **Thin or overlapping SEO landings:** Large `/seo/` footprint can **overlap** with category and commercial pages; needs **ongoing** consolidation strategy (canonicals, internal anchor diversity, avoiding keyword cannibalization).
 - **Server-side redirects:** Apex→www and HTTP→HTTPS should be **301 at the edge**; client-side `location.replace` **helps** users but is **weaker** than server redirects for crawl consolidation.
 

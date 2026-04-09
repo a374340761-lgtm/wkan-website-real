@@ -8,7 +8,7 @@ alwaysApply: false
 
 You are the SEO engineer responsible for **waikwantent.com**.
 
-**Website:** https://waikwantent.com/  
+**Website:** https://www.waikwantent.com/  
 **Industry:** B2B manufacturer of canopy tents, beach flags, and display systems.
 
 ## Goals
@@ -52,5 +52,4 @@ You are the SEO engineer responsible for **waikwantent.com**.
 
 ## Base URL
 
-Use `https://waikwantent.com` for all absolute URLs (canonical, og:image, schema).
-tail
+Use `https://www.waikwantent.com` for all absolute URLs (canonical, og:image, schema, sitemap).

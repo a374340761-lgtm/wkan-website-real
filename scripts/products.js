@@ -1122,13 +1122,13 @@ class ProductManager {
                 descriptionEn: 'Professional SEG light box series using aluminum profiles, LED backlit modules and silicone edge fabric graphics. Seamless appearance, modular build and quick graphic replacement. Custom sizes available.',
                 descriptionZh: '专业卡布灯箱系列：铝型材框架 + LED 背光模块 + SEG 硅胶边条布画。外观无缝平整，模块化结构，画面更换便捷，支持定制尺寸。',
                 // Plain path — WK_getProductCardImage / detail page apply encodeURI once (double encode breaks listing cards)
-                image: 'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+                image: 'images/products/light-box-series/铝型材卡布灯箱系列hero.jpg',
                 images: [
-                    'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+                    'images/products/light-box-series/铝型材卡布灯箱系列hero.jpg',
                     'images/products/displays/tension-fabric-displays/23.png'
                 ],
                 gallery: [
-                    'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+                    'images/products/light-box-series/铝型材卡布灯箱系列hero.jpg',
                     'images/products/displays/tension-fabric-displays/23.png'
                 ],
                 specsZh: {
@@ -1220,9 +1220,9 @@ class ProductManager {
                 shortZh: '画面尺寸：60×80 CM。不同底座设计适配不同场地。',
                 descriptionEn: 'A portable light box stand variant with quick-change fabric graphic. Designed as a base-style option for different ground conditions.',
                 descriptionZh: '便携式灯箱展示架底座款，支持快速更换布画面，适配不同场地的底座方案之一。',
-                image: 'images/products/light-box-series/hero.png',
-                images: ['images/products/light-box-series/hero.png'],
-                gallery: ['images/products/light-box-series/hero.png'],
+                image: 'images/products/displays/tension-fabric-displays/wk-is001hero.jpg',
+                images: ['images/products/displays/tension-fabric-displays/wk-is001hero.jpg'],
+                gallery: ['images/products/displays/tension-fabric-displays/wk-is001hero.jpg'],
                 specsZh: {
                     '画面尺寸': '60 × 80 CM',
                     '画面': '布画 / SEG（卡布）画面（按方案）',
@@ -1348,8 +1348,9 @@ class ProductManager {
                 applicationsZh: ['零售门店', '品牌推广', '室内展示'],
                 keywords: ['light box display stand', 'SEG light box', '灯箱展示架', '配重底座', 'WK-IS003', 'base-style-variant', '卡布灯箱'],
                 tags: 'Light box display stand, 灯箱展示架, WK-IS003, weighted base, SEG',
-                referenceImage: 'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
-                referenceImageLabel: '产品主图 / Product Hero',
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                referenceSourceKey: 'view_type_brochure_source_25',
                 price: '询价'
             },
             {
@@ -1402,8 +1403,9 @@ class ProductManager {
                 applicationsZh: ['旗舰店陈列', '展厅展示', '室内广告'],
                 keywords: ['light box display stand', 'SEG light box', '灯箱展示架', '落地', '落地款', 'WK-IS004', 'base-style-variant', '卡布灯箱'],
                 tags: 'Light box display stand, 灯箱展示架, WK-IS004, floor-standing, large format, SEG',
-                referenceImage: 'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
-                referenceImageLabel: '产品主图 / Product Hero',
+                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                referenceSourceKey: 'view_type_brochure_source_25',
                 price: '询价'
             },
 
@@ -1511,9 +1513,9 @@ class ProductManager {
                 shortZh: '铝合金底座易拉宝，收放式卷轴结构，无需工具快速安装，含收纳袋。参数以目录型号表为准。',
                 descriptionEn: 'Roll up banner stand for promotions and exhibitions. Designed for quick setup and easy transport.',
                 descriptionZh: '易拉宝展示架，适用于促销与展会展示，安装快捷，便于携带。',
-                image: 'images/products/display-systems/roll-up-stand/hero.png',
-                images: ['images/products/display-systems/roll-up-stand/hero.png'],
-                gallery: ['images/products/display-systems/roll-up-stand/hero.png'],
+                image: 'images/products/display-systems/roll-up-stand/rollupstandhero.jpg',
+                images: ['images/products/display-systems/roll-up-stand/rollupstandhero.jpg'],
+                gallery: ['images/products/display-systems/roll-up-stand/rollupstandhero.jpg'],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -1877,7 +1879,7 @@ class ProductManager {
                 nameEn: 'Tent blade flag connector',
                 descriptionZh: '颜色:铁镀铬+尼龙黑 重量:0.7KG 尺寸:14.5/16/16.5MM 箱规:40×30×30CM 箱规数量:24PCS 毛重:17.7KG',
                 descriptionEn: 'Color: Chrome-plated iron + black nylon, Weight: 0.7KG, Size: 14.5/16/16.5MM, Carton: 40×30×30CM, Qty: 24PCS, G.W.: 17.7KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/tent-accessories1/帐篷刀旗连接件ADt05.jpg',
                 grid: { row: 3, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2042,7 +2044,7 @@ class ProductManager {
                 nameEn: 'Blade flag connector',
                 descriptionZh: '重量:0.5KG',
                 descriptionEn: 'Weight: 0.5KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/tent-accessories1/刀旗连接件WKT12hero.jpg',
                 grid: { row: 5, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },

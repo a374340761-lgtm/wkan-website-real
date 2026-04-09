@@ -9,6 +9,20 @@
   /** Single production origin — must match sitemap and HTML rel=canonical. */
   var BASE_URL = 'https://www.waikwantent.com';
 
+  /**
+   * Normalize this site's absolute URLs to https://www.waikwantent.com (apex/http → www https).
+   * Does not alter mailto: or external hosts.
+   */
+  function normalizeWaikwanSiteUrl(str) {
+    if (!str || typeof str !== 'string') return '';
+    var s = String(str).trim();
+    if (!s) return '';
+    if (!/^https?:\/\/([^/]*\.)?waikwantent\.com/i.test(s)) return s;
+    if (/^http:\/\//i.test(s)) s = 'https://' + s.substring('http://'.length);
+    s = s.replace(/^https:\/\/waikwantent\.com(?=\/|$)/i, 'https://www.waikwantent.com');
+    return s;
+  }
+
   function upsertMeta(attrName, attrValue, content) {
     try {
       var selector = 'meta[' + attrName + '="' + String(attrValue) + '"]';
@@ -39,7 +53,7 @@
     if (!trimmed) return '';
     try {
       if (/^https?:\/\//i.test(trimmed)) {
-        return trimmed.replace(/^https:\/\/waikwantent\.com/i, 'https://www.waikwantent.com');
+        return normalizeWaikwanSiteUrl(trimmed);
       }
       var base = BASE_URL.replace(/\/$/, '');
       return (base + (trimmed.charAt(0) === '/' ? '' : '/') + trimmed);
@@ -115,6 +129,8 @@
       var finalUrl = url.toString();
       if (finalUrl.indexOf('127.0.0.1') !== -1 || finalUrl.indexOf('localhost') !== -1) {
         finalUrl = BASE_URL.replace(/\/$/, '') + (url.pathname || '/') + url.search;
+      } else {
+        finalUrl = normalizeWaikwanSiteUrl(finalUrl) || finalUrl;
       }
       ensureCanonical(finalUrl);
       return finalUrl;
@@ -133,7 +149,7 @@
 
     var absUrl = canonicalAbs || (function () { try { return new URL(window.location.href).toString(); } catch (e) { return ''; } })();
     if (absUrl && /^https?:\/\//i.test(absUrl)) {
-      absUrl = absUrl.replace(/^https:\/\/waikwantent\.com\//i, 'https://www.waikwantent.com/');
+      absUrl = normalizeWaikwanSiteUrl(absUrl);
     }
     if (absUrl && (absUrl.indexOf('127.0.0.1') !== -1 || absUrl.indexOf('localhost') !== -1)) {
       try {
@@ -141,7 +157,7 @@
         absUrl = BASE_URL.replace(/\/$/, '') + (u.pathname || '/') + u.search;
       } catch (e) {}
     }
-    var absImg = toAbsoluteUrl(imgContent || defaultImg);
+    var absImg = normalizeWaikwanSiteUrl(toAbsoluteUrl(imgContent || defaultImg));
 
     upsertMeta('property', 'og:site_name', 'WaiKwan');
     upsertMeta('property', 'og:type', 'website');

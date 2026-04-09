@@ -2,7 +2,7 @@
 
 复制以下 Prompt 到 Cursor Chat 使用。可配合 `@repo` 引用整个仓库。
 
-**Base URL:** `https://waikwantent.com`（无 www）
+**Base URL:** `https://www.waikwantent.com`（统一优选域名 www + HTTPS）
 
 ---
 
@@ -17,7 +17,7 @@ You are editing the waikwantent.com repository.
 
 Task: SEO 补全 index.html、product-detail.html、faq.html 三个页面。
 
-Base URL: https://waikwantent.com
+Base URL: https://www.waikwantent.com
 
 ---
 
@@ -57,7 +57,7 @@ Output: 列出修改的文件和具体改动。
 
 Fix og:url, og:image, meta description and canonical tags for all important HTML pages in this repository.
 
-Base URL: https://waikwantent.com
+Base URL: https://www.waikwantent.com
 
 Pages: index.html, custom-canopy-tent-manufacturer.html, beach-flag-supplier.html, portable-display-systems.html, faq.html, faq-moq.html, faq-lead-time.html, faq-artwork-files.html, faq-color-matching.html, faq-shipping.html, faq-samples.html, product-detail.html, product-center.html, all-products.html, tent-type.html, flag-type.html, dome-type.html, furniture-type.html, racegate-type.html, six-sided-booth.html.
 
@@ -75,7 +75,7 @@ Requirements:
 
 Add structured data (JSON-LD) for SEO.
 
-Base URL: https://waikwantent.com
+Base URL: https://www.waikwantent.com
 
 A. Homepage: Organization schema (name, url, logo, description, contactPoint, address)
 B. Product pages: Product schema (name, image, description, brand, sku, url) — inject via JS if dynamic
@@ -110,7 +110,7 @@ You are a senior SEO engineer and front-end developer.
 You are responsible for fully optimizing the website inside this repository for Google search visibility and B2B lead generation.
 
 Repository: wkan-website-real
-Website: https://waikwantent.com/
+Website: https://www.waikwantent.com/
 Industry: B2B manufacturer of canopy tents, beach flags, and display systems.
 
 Your responsibilities:
@@ -266,7 +266,7 @@ index.html, custom-canopy-tent-manufacturer.html, beach-flag-supplier.html, port
 
 Requirements:
 1. Every page: unique title, meta description, canonical, og:title, og:description, og:url, og:image
-2. Base URL: https://waikwantent.com
+2. Base URL: https://www.waikwantent.com
 3. og:url = real public URL for that page
 4. og:image = most relevant existing image, absolute URL
 5. Important pages = tailored meta description, not reused

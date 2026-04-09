@@ -15,7 +15,7 @@ Audit scope: static HTML, `scripts/seo.js`, `scripts/product-detail.js`, `sitema
 | Home URL: **`/` vs `index.html`** in internal links | **Low** | Canonical/OG for home is `https://www.waikwantent.com/`; most nav links use relative `index.html` — usually merged by Google but not identical strings. |
 | **`product-detail.html` static shell** (no `?sku=`) | **Low** | HTML `rel="canonical"` / `og:url` are `.../product-detail.html` without a SKU until JS runs; runtime sets SKU-specific canonical. Invalid/no-SKU visits redirect away in `product-detail.js`. |
 | **Legacy HTML** (`product.html`, `tent-detail.html`) | **Low** | Documented in `seo.js`; not in sitemap. |
-| **Docs / Cursor rules** mentioning non-`www` base | **Info** | `.cursor/rules`, `docs/` reference `https://waikwantent.com` — does not affect production HTML; can confuse authors. |
+| **Docs / Cursor rules** | **Aligned** | `.cursor/rules/seo-engineer.mdc` and `docs/CURSOR-SEO-PROMPTS.md` use `https://www.waikwantent.com` as base URL. |
 | **Apex host** `https://waikwantent.com` | **Server** | Not testable from static files. `seo.js` rewrites some apex URLs to `www` when building absolute tags. **301 apex → www** should still be configured at host. |
 
 ---

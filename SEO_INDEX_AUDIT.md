@@ -11,7 +11,7 @@
 ## Executive summary
 
 - **Preferred domain in repo:** **`https://www.waikwantent.com`** — used consistently in static HTML `rel="canonical"`, **`sitemap.xml` `<loc>` entries**, **`robots.txt` Sitemap directive**, and Open Graph/Twitter absolute image URLs. **No** `https://waikwantent.com/` (non-www) appears in HTML canonical tags in the scan.
-- **Risk:** Visitors or Googlebot on the **apex** host (`https://waikwantent.com`) can hit **runtime canonical** logic (`product-detail.js` uses `window.location.origin`) while **`scripts/seo.js`** still normalizes many cases to **`www`** (`BASE_URL`) and **re-runs after 800ms**, which can **reintroduce a host mismatch** for product detail pages unless execution order is guaranteed.
+- **Risk:** Visitors on the **apex** host should be **301-redirected** to **`www`**; `product-detail.js` emits canonicals via **`WK_PREFERRED_ORIGIN`** (`https://www.waikwantent.com`), and **`scripts/seo.js`** skips the delayed second `run()` on PDP so tags are not overwritten.
 - **Strengths:** `/seo/*.html` pillar pages have **one absolute canonical each**, unique titles and meta descriptions, and are **included in `sitemap.xml`**. **No** sitewide `noindex` on primary content pages.
 - **Gaps:** Several pages use **empty `<title>` until JS/i18n** (`data-translate` only). **`tent-detail.html` is in the sitemap but has `noindex`** — policy conflict. **Test/wireframe** pages use **relative** canonicals (`index.html`). **~70+ product-detail URLs** in the sitemap share one HTML template — **soft duplicate / thin** risk for marginal SKUs.
 

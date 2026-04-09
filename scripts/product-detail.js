@@ -213,7 +213,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const twUrl = document.querySelector('meta[name="twitter:url"]');
         if (twUrl) twUrl.setAttribute('content', canonicalProductUrl);
 
-        const toAbs = (p) => (p && !/^https?:\/\//i.test(p)) ? (BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p) : (p || '');
+        const normalizeSiteAbs = (u) => {
+            const s = String(u || '').trim();
+            if (!s || !/^https?:\/\/([^/]*\.)?waikwantent\.com/i.test(s)) return s;
+            let out = /^http:\/\//i.test(s) ? 'https://' + s.substring('http://'.length) : s;
+            out = out.replace(/^https:\/\/waikwantent\.com(?=\/|$)/i, 'https://www.waikwantent.com');
+            return out;
+        };
+        const toAbs = (p) => {
+            if (!p) return '';
+            if (!/^https?:\/\//i.test(p)) return BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p;
+            return normalizeSiteAbs(p);
+        };
         const imgsList = Array.isArray(product.images) && product.images.length
             ? product.images.filter(Boolean)
             : (product.image ? [product.image] : []);

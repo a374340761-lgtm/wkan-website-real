@@ -564,17 +564,16 @@
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.storyZh) : safe(item.storyEn);
             const desc = shortText(hubDesc || (rawDesc || '').split(/\n/)[0] || '');
-            const href = `all-products.html?cat=flags&type=${encodeURIComponent(item.type)}`;
             const viewTypeHref = `flag-type.html?type=${encodeURIComponent(item.type)}`;
             return `
               <div class="tent-type-card">
-                <a class="tent-type-card__link" href="${href}" aria-label="${safe(title)}">
+                <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
                   <div class="tent-type-card__imgWrap">
                     <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
                   </div>
                 </a>
                 <div class="tent-type-card__body">
-                  <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+                  <a class="tent-type-card__link" href="${viewTypeHref}" style="text-decoration:none;color:inherit;">
                     <div class="tent-type-card__title">${title}</div>
                     ${desc ? `<div class=\"tent-type-card__desc\">${safe(desc)}</div>` : ''}
                   </a>
@@ -631,7 +630,6 @@
       return t.slice(0, max - 1) + '…';
     };
     const desc = shortText(hubDesc);
-    const href = 'all-products.html';
     const viewTypeHref = 'tent-type.html?type=tent_accessories';
 
     return `
@@ -639,13 +637,13 @@
         <h2 class="tents-hub__title" data-translate="tents_hub_accessories_title">Tent Accessories</h2>
         <div class="tent-types__grid">
           <div class="tent-type-card">
-            <a class="tent-type-card__link" href="${href}" aria-label="${safe(title)}">
+            <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
               <div class="tent-type-card__imgWrap">
                 <img class="tent-type-card__img" src="${safe(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
               </div>
             </a>
             <div class="tent-type-card__body">
-              <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+              <a class="tent-type-card__link" href="${viewTypeHref}" style="text-decoration:none;color:inherit;">
                 <div class="tent-type-card__title">${title}</div>
                 ${desc ? `<div class="tent-type-card__desc">${safe(desc)}</div>` : ''}
               </a>
@@ -679,17 +677,16 @@
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.descriptionZh) : safe(item.descriptionEn);
             const desc = shortText(hubDesc || rawDesc.split(/\n/)[0] || '');
-            const href = `all-products.html?cat=tents&type=${encodeURIComponent(item.type)}`;
             const viewTypeHref = `tent-type.html?type=${encodeURIComponent(item.type)}`;
             return `
               <div class="tent-type-card">
-                <a class="tent-type-card__link" href="${href}" aria-label="${safe(title)}">
+                <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
                   <div class="tent-type-card__imgWrap">
                     <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
                   </div>
                 </a>
                 <div class="tent-type-card__body">
-                  <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+                  <a class="tent-type-card__link" href="${viewTypeHref}" style="text-decoration:none;color:inherit;">
                     <div class="tent-type-card__title">${title}</div>
                     ${desc ? `<div class=\"tent-type-card__desc\">${safe(desc)}</div>` : ''}
                   </a>

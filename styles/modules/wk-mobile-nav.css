@@ -1,0 +1,206 @@
+/**
+ * Mobile navigation — separate interaction model from desktop dropdowns.
+ * Desktop: .nav-menu hover/flyout (min-width: 769px only, header-layout.css).
+ * Mobile: this drawer only; desktop <ul.nav-menu> is display:none (see below).
+ */
+
+@media (max-width: 768px) {
+    /* Never show the desktop flyout tree on small screens — avoids narrow strip / Safari bugs */
+    .nav-container > ul.nav-menu {
+        display: none !important;
+    }
+
+    .nav-brand {
+        max-width: min(46vw, 200px) !important;
+        min-width: 0 !important;
+    }
+
+    .nav-logo-img {
+        max-height: 36px;
+        width: auto;
+    }
+}
+
+/* Drawer root: portal-like layer (direct child of body) */
+.wk-mobile-nav {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1600;
+    pointer-events: none;
+}
+
+.wk-mobile-nav.is-open {
+    display: block;
+    pointer-events: auto;
+}
+
+/* Dim area below fixed header (top bar + navbar); matches --wk mobile header stack ~98px */
+.wk-mobile-nav__backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 98px;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.45);
+    -webkit-tap-highlight-color: transparent;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.wk-mobile-nav.is-open .wk-mobile-nav__backdrop {
+    opacity: 1;
+}
+
+/* Full-width sheet — NOT a narrow column; independent of .nav-container max-width */
+.wk-mobile-nav__sheet {
+    position: fixed;
+    left: 0 !important;
+    right: 0 !important;
+    top: 98px;
+    bottom: 0;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding-left: env(safe-area-inset-left, 0);
+    padding-right: env(safe-area-inset-right, 0);
+    background: #fff;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.15);
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+    -webkit-overflow-scrolling: touch;
+}
+
+.wk-mobile-nav__scroll {
+    flex: 1;
+    overflow: auto;
+    padding: 8px 0 calc(16px + env(safe-area-inset-bottom, 0));
+}
+
+/* Top-level accordion sections */
+.wk-mobile-nav__section {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.wk-mobile-nav__trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 52px;
+    padding: 14px 16px;
+    border: none;
+    background: #fff;
+    font: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    color: #0f172a;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wk-mobile-nav__trigger-label {
+    flex: 1;
+    min-width: 0;
+}
+
+.wk-mobile-nav__chev {
+    flex-shrink: 0;
+    font-size: 12px;
+    opacity: 0.55;
+    transition: transform 0.2s ease;
+}
+
+.wk-mobile-nav__section.is-open > .wk-mobile-nav__trigger .wk-mobile-nav__chev {
+    transform: rotate(180deg);
+}
+
+/* First-level expandable panel — always in-flow */
+.wk-mobile-nav__panel {
+    padding: 0 0 8px;
+    background: rgba(248, 250, 252, 0.95);
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.wk-mobile-nav__panel[hidden] {
+    display: none !important;
+}
+
+/* Leaf links */
+a.wk-mobile-nav__leaf {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 16px 12px 22px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #1e293b;
+    text-decoration: none;
+    border-top: 1px solid rgba(15, 23, 42, 0.05);
+    -webkit-tap-highlight-color: transparent;
+}
+
+a.wk-mobile-nav__leaf:active {
+    background: rgba(15, 23, 42, 0.04);
+}
+
+a.wk-mobile-nav__top-link {
+    padding-left: 16px;
+    font-weight: 600;
+    border-top: none;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+/* Nested (tents / flags / displays / furniture) — second accordion */
+.wk-mobile-nav__nest {
+    border-top: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.wk-mobile-nav__nest-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px 16px 12px 22px;
+    border: none;
+    background: transparent;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f172a;
+    text-align: left;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.wk-mobile-nav__nest.is-open > .wk-mobile-nav__nest-trigger .wk-mobile-nav__chev {
+    transform: rotate(180deg);
+}
+
+.wk-mobile-nav__nest-body {
+    padding: 0 0 6px 8px;
+    background: #fff;
+}
+
+.wk-mobile-nav__nest-body[hidden] {
+    display: none !important;
+}
+
+.wk-mobile-nav__nest-body a.wk-mobile-nav__leaf {
+    padding-left: 28px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+@media (min-width: 769px) {
+    .wk-mobile-nav {
+        display: none !important;
+    }
+}

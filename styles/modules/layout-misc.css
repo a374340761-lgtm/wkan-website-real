@@ -1002,7 +1002,7 @@ html[lang="zh-CN"] .top3-note .en {
 /* ===== Center main nav menu — desktop only =====
    Unscoped absolute + translateX was leaking onto mobile: Safari treats fixed
    descendants oddly when mixed with centered ancestors; mobile drawer must be
-   full-viewport (see pages-catalog.css .nav-menu.active). */
+   full-viewport (mobile drawer is #wkMobileNav in wk-mobile-nav.css). */
 @media (min-width: 769px) {
     .nav-container {
         position: relative;

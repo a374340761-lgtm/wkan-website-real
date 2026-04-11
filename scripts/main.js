@@ -799,14 +799,322 @@ function wkCloseNestedSubmenuPeers(dropdownMenuEl, exceptWrapper) {
  * (Previously inverted max-width check broke nested toggles entirely below 768px.)
  */
 function wkShouldToggleNestedSubmenuOnClick() {
-    if (typeof window.matchMedia !== 'function') return false;
-    const navMenu = document.querySelector('.nav-menu');
-    const drawerOpen = !!(navMenu && navMenu.classList.contains('active'));
-    if (drawerOpen) return true;
+    /* Mobile uses #wkMobileNav drawer, not .nav-menu — desktop flyout uses hover; touch laptops use (hover:none). */
     try {
         if (window.matchMedia('(hover: none)').matches) return true;
     } catch (e) { /* ignore */ }
     return false;
+}
+
+function wkMobileNavResetNestedInSection(sectionEl) {
+    if (!sectionEl) return;
+    sectionEl.querySelectorAll('.wk-mobile-nav__nest.is-open').forEach((nest) => {
+        nest.classList.remove('is-open');
+        const b = nest.querySelector('.wk-mobile-nav__nest-trigger');
+        const bd = nest.querySelector('.wk-mobile-nav__nest-body');
+        if (b) b.setAttribute('aria-expanded', 'false');
+        if (bd) bd.hidden = true;
+    });
+}
+
+function wkMobileNavResetSections(rootEl) {
+    if (!rootEl) return;
+    rootEl.querySelectorAll('.wk-mobile-nav__section.is-open').forEach((sec) => {
+        wkMobileNavResetNestedInSection(sec);
+        sec.classList.remove('is-open');
+        const tr = sec.querySelector(':scope > .wk-mobile-nav__trigger');
+        const pan = sec.querySelector(':scope > .wk-mobile-nav__panel');
+        if (tr) tr.setAttribute('aria-expanded', 'false');
+        if (pan) pan.hidden = true;
+    });
+}
+
+function wkRebuildMobileNavFromDesktop() {
+    const root = document.getElementById('wkMobileNavRoot');
+    const source = document.querySelector('#wk-primary-nav') || document.querySelector('.nav-menu');
+    if (!root || !source) return;
+
+    root.innerHTML = '';
+
+    source.querySelectorAll(':scope > li').forEach((li) => {
+        if (li.classList.contains('nav-item-dropdown')) {
+            const section = document.createElement('div');
+            section.className = 'wk-mobile-nav__section';
+            const srcTrigger = li.querySelector(':scope > a');
+            const panel = li.querySelector(':scope > .dropdown-menu');
+
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'wk-mobile-nav__trigger';
+            btn.setAttribute('aria-expanded', 'false');
+            const lbl = document.createElement('span');
+            lbl.className = 'wk-mobile-nav__trigger-label';
+            if (srcTrigger) {
+                const clone = srcTrigger.cloneNode(true);
+                clone.querySelectorAll('i').forEach((i) => i.remove());
+                lbl.innerHTML = clone.innerHTML;
+            }
+            const chev = document.createElement('i');
+            chev.className = 'fas fa-chevron-down wk-mobile-nav__chev';
+            chev.setAttribute('aria-hidden', 'true');
+            btn.appendChild(lbl);
+            btn.appendChild(chev);
+
+            const sub = document.createElement('div');
+            sub.className = 'wk-mobile-nav__panel';
+            sub.hidden = true;
+
+            if (panel) {
+                Array.from(panel.children).forEach((child) => {
+                    if (child.matches && child.matches('a[href]')) {
+                        const a = child.cloneNode(true);
+                        a.classList.add('wk-mobile-nav__leaf');
+                        sub.appendChild(a);
+                    } else if (child.matches && child.matches('.dropdown-item-with-submenu')) {
+                        const ra = child.querySelector(':scope > a[href]');
+                        const rsub = child.querySelector(':scope > .dropdown-submenu');
+                        if (!ra || !rsub) return;
+
+                        const nest = document.createElement('div');
+                        nest.className = 'wk-mobile-nav__nest';
+
+                        const nbtn = document.createElement('button');
+                        nbtn.type = 'button';
+                        nbtn.className = 'wk-mobile-nav__nest-trigger';
+                        nbtn.setAttribute('aria-expanded', 'false');
+                        const nl = document.createElement('span');
+                        nl.className = 'wk-mobile-nav__nest-label';
+                        const rclone = ra.cloneNode(true);
+                        rclone.querySelectorAll('i, .wk-submenu-caret').forEach((x) => {
+                            if (x.classList && x.classList.contains('wk-submenu-caret')) x.remove();
+                            else if (x.tagName === 'I') x.remove();
+                        });
+                        nl.innerHTML = rclone.innerHTML;
+                        const nchev = document.createElement('i');
+                        nchev.className = 'fas fa-chevron-down wk-mobile-nav__chev';
+                        nchev.setAttribute('aria-hidden', 'true');
+                        nbtn.appendChild(nl);
+                        nbtn.appendChild(nchev);
+
+                        const nbody = document.createElement('div');
+                        nbody.className = 'wk-mobile-nav__nest-body';
+                        nbody.hidden = true;
+                        rsub.querySelectorAll('a[href]').forEach((la) => {
+                            const cl = la.cloneNode(true);
+                            cl.classList.add('wk-mobile-nav__leaf');
+                            nbody.appendChild(cl);
+                        });
+
+                        nbtn.addEventListener('click', (ev) => {
+                            ev.preventDefault();
+                            ev.stopPropagation();
+                            const will = !nest.classList.contains('is-open');
+                            sub.querySelectorAll(':scope > .wk-mobile-nav__nest.is-open').forEach((nx) => {
+                                if (nx !== nest) {
+                                    nx.classList.remove('is-open');
+                                    const nb = nx.querySelector('.wk-mobile-nav__nest-trigger');
+                                    const nbd = nx.querySelector('.wk-mobile-nav__nest-body');
+                                    if (nb) nb.setAttribute('aria-expanded', 'false');
+                                    if (nbd) nbd.hidden = true;
+                                }
+                            });
+                            nest.classList.toggle('is-open', will);
+                            nbtn.setAttribute('aria-expanded', will ? 'true' : 'false');
+                            nbody.hidden = !will;
+                        });
+
+                        nest.appendChild(nbtn);
+                        nest.appendChild(nbody);
+                        sub.appendChild(nest);
+                    }
+                });
+            }
+
+            btn.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                ev.stopPropagation();
+                const willOpen = !section.classList.contains('is-open');
+                root.querySelectorAll(':scope > .wk-mobile-nav__section.is-open').forEach((s) => {
+                    if (s !== section) {
+                        wkMobileNavResetNestedInSection(s);
+                        s.classList.remove('is-open');
+                        const t = s.querySelector('.wk-mobile-nav__trigger');
+                        const p = s.querySelector('.wk-mobile-nav__panel');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                        if (p) p.hidden = true;
+                    }
+                });
+                section.classList.toggle('is-open', willOpen);
+                btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+                sub.hidden = !willOpen;
+            });
+
+            section.appendChild(btn);
+            section.appendChild(sub);
+            root.appendChild(section);
+        } else {
+            const a = li.querySelector(':scope > a[href]');
+            if (!a) return;
+            const link = a.cloneNode(true);
+            link.classList.add('wk-mobile-nav__leaf', 'wk-mobile-nav__top-link');
+            link.querySelectorAll('i').forEach((i) => i.remove());
+            root.appendChild(link);
+        }
+    });
+}
+
+function wkEnsureMobileNavShell() {
+    let el = document.getElementById('wkMobileNav');
+    if (el) return el;
+    el = document.createElement('div');
+    el.id = 'wkMobileNav';
+    el.className = 'wk-mobile-nav';
+    el.setAttribute('aria-hidden', 'true');
+    el.hidden = true;
+    el.innerHTML =
+        '<div class="wk-mobile-nav__backdrop" data-wk-mobile-nav-backdrop="1" aria-hidden="true"></div>' +
+        '<div class="wk-mobile-nav__sheet" role="dialog" aria-label="Main navigation">' +
+        '<div class="wk-mobile-nav__scroll" id="wkMobileNavRoot"></div>' +
+        '</div>';
+    document.body.appendChild(el);
+    return el;
+}
+
+/**
+ * Separate mobile drawer (body > #wkMobileNav) — not a restyled .nav-menu dropdown.
+ * Call after enhanceTentsDropdown / enhanceFlagsDropdown / … so clones include injected submenus.
+ */
+function WK_bindMobileNavSystem(hamburger) {
+    const shell = wkEnsureMobileNavShell();
+    const root = document.getElementById('wkMobileNavRoot');
+
+    function lockScroll(locked) {
+        document.body.style.overflow = locked ? 'hidden' : '';
+        document.body.style.height = locked ? '100%' : '';
+        document.documentElement.style.overflow = locked ? 'hidden' : '';
+        if (locked) document.body.classList.add('no-scroll');
+        else document.body.classList.remove('no-scroll');
+    }
+
+    function close() {
+        shell.classList.remove('is-open');
+        shell.hidden = true;
+        shell.setAttribute('aria-hidden', 'true');
+        wkMobileNavResetSections(root);
+        if (hamburger) {
+            hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
+        }
+        document.body.classList.remove('wk-nav-mobile-open');
+        lockScroll(false);
+        document.querySelectorAll('.nav-item-dropdown.is-expanded').forEach((el) => {
+            el.classList.remove('is-expanded');
+            const tr = el.querySelector(':scope > a');
+            if (tr) tr.setAttribute('aria-expanded', 'false');
+        });
+        document.querySelectorAll('.dropdown-item-with-submenu.is-open').forEach((el) => {
+            el.classList.remove('is-open');
+            const ax = el.querySelector('a[aria-expanded]');
+            if (ax) ax.setAttribute('aria-expanded', 'false');
+        });
+        const legacyBackdrop = document.getElementById('wkNavMobileBackdrop');
+        if (legacyBackdrop) legacyBackdrop.classList.remove('is-visible');
+    }
+
+    function openDrawer() {
+        wkRebuildMobileNavFromDesktop();
+        shell.classList.add('is-open');
+        shell.hidden = false;
+        shell.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('wk-nav-mobile-open');
+        lockScroll(true);
+        if (hamburger) {
+            hamburger.classList.add('active');
+            hamburger.setAttribute('aria-expanded', 'true');
+        }
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+    }
+
+    function toggle() {
+        if (shell.classList.contains('is-open')) close();
+        else openDrawer();
+    }
+
+    window.wkCloseMobileNav = close;
+    window.wkRebuildMobileNavFromDesktop = wkRebuildMobileNavFromDesktop;
+
+    if (hamburger) {
+        hamburger.setAttribute('aria-controls', 'wkMobileNav');
+        hamburger.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggle();
+        });
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggle();
+            }
+        });
+    }
+
+    const bd = shell.querySelector('[data-wk-mobile-nav-backdrop]');
+    if (bd) bd.addEventListener('click', close);
+
+    root.addEventListener('click', (e) => {
+        const a = e.target.closest('a.wk-mobile-nav__leaf[href]');
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('#') && href.length > 1) {
+            e.preventDefault();
+            const id = href.slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                const top = target.getBoundingClientRect().top + window.scrollY - 72;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+            close();
+            return;
+        }
+        close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') close();
+    });
+
+    try {
+        const mqDesktop = window.matchMedia(`(min-width: ${WK_NAV_MOBILE_MAX + 1}px)`);
+        const onVp = () => {
+            if (mqDesktop.matches) close();
+        };
+        if (typeof mqDesktop.addEventListener === 'function') mqDesktop.addEventListener('change', onVp);
+        else mqDesktop.addListener(onVp);
+    } catch (e) {
+        /* ignore */
+    }
+
+    try {
+        window.addEventListener('orientationchange', () => {
+            window.setTimeout(() => {
+                if (!wkIsMobileNavViewport()) close();
+            }, 100);
+        });
+    } catch (e2) {
+        /* ignore */
+    }
+
+    document.addEventListener('languageChanged', () => {
+        if (shell.classList.contains('is-open')) {
+            wkRebuildMobileNavFromDesktop();
+            if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                window.multiLang.translatePage();
+            }
+        }
+    });
+
+    return { close, openDrawer, toggle, shell };
 }
 
 // 导航功能
@@ -853,64 +1161,15 @@ function initNavigation() {
         });
     });
     
-    // ===================== 统一滚动锁定管理 =====================
-    function lockScroll(locked) {
-        document.body.style.overflow = locked ? 'hidden' : '';
-        document.body.style.height = locked ? '100%' : '';
-        document.documentElement.style.overflow = locked ? 'hidden' : '';
-        if (locked) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
+    function closeMobileNavIfOpen() {
+        if (typeof window.wkCloseMobileNav === 'function') {
+            window.wkCloseMobileNav();
         }
     }
-    
-    let navMobileBackdrop = null;
-    function ensureNavMobileBackdrop() {
-        if (navMobileBackdrop) return navMobileBackdrop;
-        let el = document.getElementById('wkNavMobileBackdrop');
-        if (!el) {
-            el = document.createElement('div');
-            el.id = 'wkNavMobileBackdrop';
-            el.className = 'wk-nav-mobile-backdrop';
-            el.setAttribute('aria-hidden', 'true');
-            el.tabIndex = -1;
-            document.body.appendChild(el);
-        }
-        navMobileBackdrop = el;
-        return el;
-    }
 
-    function setMobileBackdropVisible(visible) {
-        const el = ensureNavMobileBackdrop();
-        el.classList.toggle('is-visible', !!visible);
-        el.setAttribute('aria-hidden', visible ? 'false' : 'true');
-        document.body.classList.toggle('wk-nav-mobile-open', !!visible);
-    }
-
-    function closeMobileMenu() {
-        if (navMenu) navMenu.classList.remove('active');
-        if (hamburger) {
-            hamburger.classList.remove('active');
-            hamburger.setAttribute('aria-expanded', 'false');
-        }
-        document.querySelectorAll('.nav-item-dropdown.is-expanded').forEach((el) => {
-            el.classList.remove('is-expanded');
-            const tr = el.querySelector(':scope > a');
-            if (tr) tr.setAttribute('aria-expanded', 'false');
-        });
-        // Clear any open 2nd-level submenus (tap-to-open behavior)
-        document.querySelectorAll('.dropdown-item-with-submenu.is-open').forEach((el) => {
-            el.classList.remove('is-open');
-            const a = el.querySelector('a[aria-expanded]');
-            if (a) a.setAttribute('aria-expanded', 'false');
-        });
-        setMobileBackdropVisible(false);
-        lockScroll(false);
-    }
-
-    const backdrop = ensureNavMobileBackdrop();
-    backdrop.addEventListener('click', () => closeMobileMenu());
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.category-card a')) closeMobileNavIfOpen();
+    });
 
     if (navMenu && !navMenu.id) {
         navMenu.id = 'wk-primary-nav';
@@ -919,153 +1178,19 @@ function initNavigation() {
         hamburger.setAttribute('role', 'button');
         hamburger.setAttribute('tabindex', '0');
         hamburger.setAttribute('aria-expanded', 'false');
-        if (navMenu && navMenu.id) {
-            hamburger.setAttribute('aria-controls', navMenu.id);
-        }
     }
 
-    /** Mobile-only: top-level dropdowns collapse until user taps the row (clearer than a long flat list). */
-    function initMobileNavAccordion() {
-        const menu = document.querySelector('.nav-menu');
-        if (!menu) return;
-        const mq = wkMatchMobileNavMedia();
-
-        menu.querySelectorAll(':scope > li.nav-item-dropdown > a').forEach((a) => {
-            if (!a.hasAttribute('aria-expanded')) a.setAttribute('aria-expanded', 'false');
-        });
-
-        menu.addEventListener('click', (e) => {
-            const narrow = mq ? mq.matches : wkIsMobileNavViewport();
-            if (!narrow || !menu.classList.contains('active')) return;
-            const li = e.target.closest('li.nav-item-dropdown');
-            if (!li) return;
-            if (e.target.closest('.dropdown-menu')) return;
-            const trigger = li.querySelector(':scope > a');
-            if (!trigger || !trigger.contains(e.target)) return;
-            const panel = li.querySelector(':scope > .dropdown-menu');
-            if (!panel) return;
-            e.preventDefault();
-            e.stopPropagation();
-            const willOpen = !li.classList.contains('is-expanded');
-            menu.querySelectorAll(':scope > li.nav-item-dropdown.is-expanded').forEach((x) => {
-                if (x !== li) {
-                    x.classList.remove('is-expanded');
-                    const ta = x.querySelector(':scope > a');
-                    if (ta) ta.setAttribute('aria-expanded', 'false');
-                }
-            });
-            li.classList.toggle('is-expanded', willOpen);
-            trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-        });
-    }
-    initMobileNavAccordion();
-    
-    // 移动端菜单切换
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            const isOpen = navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active', isOpen);
-            hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            if (!isOpen) {
-                navMenu.querySelectorAll('.nav-item-dropdown.is-expanded').forEach((el) => {
-                    el.classList.remove('is-expanded');
-                    const ta = el.querySelector(':scope > a');
-                    if (ta) ta.setAttribute('aria-expanded', 'false');
-                });
-                document.querySelectorAll('.dropdown-item-with-submenu.is-open').forEach((el) => {
-                    el.classList.remove('is-open');
-                    const a = el.querySelector('a[aria-expanded]');
-                    if (a) a.setAttribute('aria-expanded', 'false');
-                });
-            }
-            setMobileBackdropVisible(isOpen);
-            lockScroll(isOpen);
-
-            // On mobile, the nav can include dynamically enhanced dropdown nodes.
-            // Re-apply translations when opening to keep language switching consistent.
-            if (isOpen && window.multiLang && typeof window.multiLang.translatePage === 'function') {
-                window.multiLang.translatePage();
-            }
-        });
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                hamburger.click();
-            }
-        });
-    }
-    
-    // 点击导航链接后：关闭菜单+恢复滚动（排除移动端折叠面板的父级触发器）
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('.category-card a')) {
-            closeMobileMenu();
-            return;
-        }
-        const activeMenu = document.querySelector('.nav-menu.active');
-        if (!activeMenu || !e.target.closest('.nav-menu.active')) return;
-        if (e.target.closest('.dropdown-menu a')) {
-            closeMobileMenu();
-            return;
-        }
-        if (e.target.closest('li.nav-item:not(.nav-item-dropdown) > a')) {
-            closeMobileMenu();
-        }
-    });
-    
-    // ESC 键关闭菜单
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeMobileMenu();
-        }
-    });
-
-    // Crossing desktop breakpoint or orientation: close drawer + reset accordions (scroll lock, nested state)
-    try {
-        const mqDesktop = window.matchMedia(`(min-width: ${WK_NAV_MOBILE_MAX + 1}px)`);
-        const onViewportChange = () => {
-            if (mqDesktop.matches) closeMobileMenu();
-        };
-        if (typeof mqDesktop.addEventListener === 'function') {
-            mqDesktop.addEventListener('change', onViewportChange);
-        } else {
-            mqDesktop.addListener(onViewportChange);
-        }
-    } catch (e) {
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > WK_NAV_MOBILE_MAX) closeMobileMenu();
-        });
-    }
-
-    try {
-        window.addEventListener('orientationchange', () => {
-            window.setTimeout(() => {
-                if (!wkIsMobileNavViewport()) closeMobileMenu();
-            }, 0);
-        });
-    } catch (e2) {
-        /* ignore */
-    }
-    
-    // 页面加载时确保滚动解锁
-    lockScroll(false);
-
-    // Ensure new series appear in the Products hover dropdown (fast, no heavy render)
+    /* Desktop-only dropdown tree (hover/flyout). Mobile uses body > #wkMobileNav (WK_bindMobileNavSystem). */
     enhanceProductsDropdownExtras();
-
-    // Enhance Products dropdown: add flags subtype submenu
     enhanceFlagsDropdown();
-
-    // Enhance Products dropdown: add tents subtype submenu
     enhanceTentsDropdown();
-
-    // Enhance Products dropdown: add displays subtype submenu
     enhanceDisplaysDropdown();
-
-    // Table / Chair / Stool / Toilet: hover submenu with product links
     enhanceFurnitureDropdown();
-
-    // Ensure Products dropdown includes new Light Box Series entry
     ensureProductCenterDropdownHasLightbox();
+
+    WK_bindMobileNavSystem(hamburger);
+
+    document.body.classList.remove('no-scroll');
     
     // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页链接如 index.html#contact 不拦截）
     navLinks.forEach(link => {
@@ -1085,8 +1210,8 @@ function initNavigation() {
                     behavior: 'smooth'
                 });
                 
-                if (navMenu && navMenu.classList.contains('active')) {
-                    closeMobileMenu();
+                if (typeof window.wkCloseMobileNav === 'function') {
+                    window.wkCloseMobileNav();
                 }
             }
         });

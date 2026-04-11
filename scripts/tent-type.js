@@ -3,11 +3,18 @@
   'use strict';
 
   function getCurrentLang() {
+    try {
+      if (typeof window.wkResolvePageLanguage === 'function') {
+        return window.wkResolvePageLanguage();
+      }
+    } catch (e) {}
+    try {
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e2) {}
     if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
       return window.multiLang.getCurrentLanguage();
     }
-    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-    if (htmlLang) return htmlLang;
     return 'en';
   }
 
@@ -29,6 +36,21 @@
 
   function safe(s) {
     return (s || '').toString();
+  }
+
+  function wkAssetUrl(u) {
+    if (u == null || u === '') return '';
+    const s = String(u).trim();
+    if (/^(https?:|data:|\/\/)/i.test(s)) return s;
+    if (typeof window.wkRootAssetUrl === 'function') {
+      try {
+        return window.wkRootAssetUrl(s);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    const x = s.replace(/^\.\//, '');
+    return x.startsWith('/') ? x : '/' + x;
   }
 
   const STOCK_TENT_ID_BY_TYPE = {
@@ -199,7 +221,7 @@
         <div class="tent-type-detail__visuals" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
           ${imgs
             .map((src) => {
-              const s = safe(src);
+              const s = wkAssetUrl(safe(src));
               return `<a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" /></a>`;
             })
             .join('')}
@@ -488,7 +510,7 @@
         <div class="tent-type-detail__blockTitle">${lang === 'zh' ? '配件' : 'Accessories'}</div>
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
           ${imgs.map((src) => {
-            const s = safe(src);
+            const s = wkAssetUrl(safe(src));
             const isStarAccessories = /startentaccessories\.png$/i.test(s) || s.includes('startentaccessories.png');
             const cls = isStarAccessories ? 'tent-type-detail__visual tent-type-detail__visual--small' : 'tent-type-detail__visual';
             return `<img class=\"${cls}\" src=\"${s}\" alt=\"\" loading=\"lazy\" />`;
@@ -512,7 +534,7 @@
       <div class="tent-type-detail__block">
         <div class="tent-type-detail__blockTitle">${title}</div>
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
-          ${imgs.map((src) => `<img class=\"tent-type-detail__visual\" src=\"${safe(src)}\" alt=\"\" loading=\"lazy\" />`).join('')}
+          ${imgs.map((src) => `<img class=\"tent-type-detail__visual\" src=\"${wkAssetUrl(safe(src))}\" alt=\"\" loading=\"lazy\" />`).join('')}
         </div>
       </div>
     `;
@@ -581,7 +603,7 @@
     root.innerHTML = `
       <div style="margin-bottom: var(--spacing-md);">
         <div class="tent-type-card__imgWrap" style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--wk-border-light);">
-          <img class="tent-type-card__img" src="${safe(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+          <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
         </div>
       </div>
       ${renderTableFromSpec(item, variant)}

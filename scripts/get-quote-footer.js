@@ -81,6 +81,7 @@
               <div class="contact-bottom__h" data-i18n="footer_companyinfo">Company Info</div>
               <a class="contact-bottom__link" href="index.html#about" data-i18n="footer_about">About Us</a>
               <a class="contact-bottom__link" href="product-center.html" data-i18n="footer_products">Products</a>
+              <a class="contact-bottom__link" href="news/index.html" data-i18n="footer_news">News</a>
               <a class="contact-bottom__link" href="index.html#contact" data-i18n="footer_contactus">Contact Us</a>
             </div>
           </div>
@@ -98,6 +99,41 @@
               <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
             </div>
           </div>
+        </div>
+        <div id="footer-social" class="contact-bottom__social" tabindex="-1">
+          <h3 class="contact-bottom__socialTitle" data-i18n="footer_follow_us">Follow Us</h3>
+          <ul class="contact-bottom__socialLinks">
+            <li>
+              <a class="contact-bottom__socialLink" href="https://www.facebook.com/share/18UhWtGUB8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                <span class="contact-bottom__socialLinkLabel" data-i18n="social_facebook">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-bottom__socialLink" href="https://www.linkedin.com/in/yishulai-waikwantent/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_linkedin">
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                <span class="contact-bottom__socialLinkLabel" data-i18n="social_linkedin">LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-bottom__socialLink" href="https://www.instagram.com/waikwantent?igsh=ZjcxOWJtMjd0ZTh6&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="contact-bottom__socialLinkLabel" data-i18n="social_instagram">Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-bottom__socialLink" href="https://www.tiktok.com/@yishu.lai?_r=1&amp;_t=ZT-95KvmDSrUyM" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_tiktok">
+                <i class="fab fa-tiktok" aria-hidden="true"></i>
+                <span class="contact-bottom__socialLinkLabel" data-i18n="social_tiktok">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-bottom__socialLink" href="https://xhslink.com/m/10kreAeKi3v" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_xiaohongshu">
+                <span class="wk-social-xhs-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" focusable="false"><path d="M7 3h11a2 2 0 0 1 2 2v15a1 1 0 0 1-1 1H8.5A3.5 3.5 0 0 1 5 17.5V5a2 2 0 0 1 2-2zm0 2v12.5c0 .83.67 1.5 1.5 1.5H18V5a1 1 0 0 0-1-1H7zm2 2h8v2H9V7zm0 4h8v2H9v-2zm0 4h5v2H9v-2z"/></svg></span>
+                <span class="contact-bottom__socialLinkLabel" data-i18n="social_xiaohongshu">Xiaohongshu</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <!-- 最底行：版权 + links -->
         <div class="contact-bottom__legal">
@@ -131,6 +167,11 @@
     const footer = buildFooterElement();
     document.body.appendChild(footer);
     normalizeFooterLinks(footer);
+    try {
+      if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+      }
+    } catch (e) { /* ignore */ }
   }
 
   if (document.readyState === 'loading') {

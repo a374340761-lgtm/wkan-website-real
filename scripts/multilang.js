@@ -13,14 +13,17 @@ const COMPANY_NAME = {
     zh: '广西伟群帐篷制造有限公司',
 };
 
-// ✅ 获取语言：优先从 localStorage 读取；未知语言回退到英文
+// ✅ 获取语言：URL 为唯一依据（/zh/ => zh，根路径英文页 => en）；不使用 localStorage 覆盖 URL
 function getLang() {
+    try {
+        if (typeof window.wkResolvePageLanguage === 'function') {
+            return window.wkResolvePageLanguage();
+        }
+    } catch (e) {}
     try {
         const p = window.location.pathname.replace(/\\/g, '/');
         if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
-    } catch (e) {}
-    const saved = localStorage.getItem(LANG_KEY);
-    if (saved && ENABLED_LANGS.includes(saved)) return saved;
+    } catch (e2) {}
     return DEFAULT_LANG;
 }
 
@@ -33,6 +36,49 @@ function setLang(lang) {
         window.multiLang.switchLanguage(lang);
     }
 }
+
+/**
+ * Pages that reuse a slim navbar (FAQ, policy, etc.) may omit the globe dropdown.
+ * Inject the same control as index.html so EN ↔ /zh/ navigation always works.
+ */
+function injectLangSwitcherIfMissing() {
+    try {
+        if (document.getElementById('langDropdown')) return;
+        const nav = document.querySelector('.navbar .nav-container');
+        if (!nav) return;
+        const wrap = document.createElement('div');
+        wrap.className = 'nav-actions';
+        wrap.innerHTML = `
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
+                        <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
+                        <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
+                    </div>
+                </div>`;
+        const ham = nav.querySelector('.hamburger');
+        if (ham) {
+            nav.insertBefore(wrap, ham);
+        } else {
+            nav.appendChild(wrap);
+        }
+    } catch (e) {
+        /* ignore */
+    }
+}
+
+(function scheduleLangSwitcherInject() {
+    function go() {
+        injectLangSwitcherIfMissing();
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', go);
+    } else {
+        go();
+    }
+})();
 
 class MultiLanguageSystem {
     constructor() {
@@ -347,6 +393,148 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_q: '需要哪些设计稿？',
                 landing_canopy_faq_art_d: 'AI/PDF 规范、出血、字体与色彩配置。',
                 landing_canopy_faq_view_all: '查看全部常见问题',
+
+                page_title_canopy_b2b: '定制广告帐篷制造商｜OEM 全彩印刷折叠帐篷｜伟群帐篷',
+                landing_canopy_b2b_h1: '面向 B2B 采购商的定制广告帐篷制造商',
+                landing_canopy_b2b_lead_html:
+                    '工厂直供<strong>定制广告帐篷</strong>与<strong>全彩印刷帐篷</strong>，服务分销商、活动公司与品牌方。欢迎查看常见商用尺寸的'
+                    + '<a href="/zh/product-center.html?cat=tents">折叠与快开广告帐篷</a>，支持 OEM 画面与出口导向包装。',
+                landing_canopy_b2b_p1_html:
+                    '<p>伟群生产用于专业场景的<strong>折叠广告帐篷</strong>与<strong>活动印刷帐篷</strong>——适用于展会、促销、赛事与户外推广。作为<strong>OEM 广告帐篷制造商</strong>，我们按项目匹配框架系列（铝材或钢材）、篷布画面与配件；无论是紧凑型 3×3 单元，还是需要高曝光品牌展示的<strong>3×6 定制广告帐篷</strong>。</p>',
+                landing_canopy_b2b_p2_html:
+                    '<p>我们协助确认尺寸、材料、印刷与围布、配重等增配，使您的<a href="/zh/all-products.html?cat=tents">定制广告帐篷</a>订单贴合实际使用场景。项目层面的问题请参阅<a href="/zh/faq.html">常见问题</a>、<a href="/zh/faq-moq.html">起订量指引</a>、<a href="/zh/faq-lead-time.html">交期说明</a>与<a href="/zh/faq-artwork-files.html">设计稿文件要求</a>，或在<a href="/zh/index.html#contact">询价</a>中提供目标尺寸与印刷范围。</p>',
+                landing_canopy_gallery_h2: '3×6 定制广告帐篷 — 实景图集',
+                landing_canopy_gallery_intro_html:
+                    '以下为带<strong>铝制框架</strong>的<strong>3×6 定制广告帐篷</strong>实景示例，可作为活动品牌、零售推广与 OEM 出货的参考。目录扩充后可继续补充预留位图片。',
+                landing_canopy_gallery_cap_main: '精选：3×6 铝架定制广告帐篷 — 户外品牌展示实景。',
+                landing_canopy_gallery_cap_aluminum: '铝架细节 — 适用于 OEM 广告帐篷规格书。',
+                landing_canopy_gallery_cap_second: '第二组实景 — 活动用全彩印刷帐篷。',
+                landing_canopy_gallery_slot1_caption_html: '预留位 — 添加新图时仅替换 <code>src</code> 即可。',
+                landing_canopy_gallery_slot2_caption: '预留位 — 可选：活动印刷帐篷或围布场景。',
+                landing_canopy_gallery_slot3_caption: '预留位 — 分销商或贴牌项目展示图。',
+                landing_canopy_types_h2: '常见定制广告帐篷类型',
+                landing_canopy_types_intro_html:
+                    '以下为 B2B 项目常见规格。请前往<a href="/zh/product-center.html?cat=tents">帐篷分类总览</a>或<a href="/zh/all-products.html?cat=tents">全部帐篷 SKU</a>查看型号与变体。',
+                landing_canopy_type_1_h3: '3×3 定制广告帐篷',
+                landing_canopy_type_1_html:
+                    '紧凑型快开帐篷，适合地推与小岛展位，运输便捷、搭建迅速。<a href="/zh/tent-type.html?type=folding40">查看折叠帐篷类型</a>以匹配框架偏好。',
+                landing_canopy_type_2_h3: '3×4.5 定制广告帐篷',
+                landing_canopy_type_2_html:
+                    '中等宽度覆盖，适合试饮台与签到区；可搭配品牌围布增强防护。详见<a href="/zh/all-products.html?cat=tents">印刷帐篷列表</a>。',
+                landing_canopy_type_3_h3: '3×6 定制广告帐篷',
+                landing_canopy_type_3_html:
+                    '高曝光单框大画面，适合赞助通道与户外零售。实景见上文图集，并在<a href="/zh/product-center.html?cat=tents">产品中心</a>规划布局。',
+                landing_canopy_type_4_h3: '铝架定制广告帐篷',
+                landing_canopy_type_4_html:
+                    '轻质耐腐蚀框架，适合频繁巡展；常见于高端<strong>快开广告帐篷</strong>项目。请在<a href="/zh/product-center.html?cat=tents">产品中心</a>对比系列。',
+                landing_canopy_type_5_h3: '钢架快开帐篷',
+                landing_canopy_type_5_html:
+                    '性价比钢制方案，适合季节性活动与租赁车队；<a href="/zh/index.html#contact">询价</a>时请说明框架材质以便匹配预算与使用强度。',
+                landing_canopy_type_6_h3: '带围布的印刷帐篷',
+                landing_canopy_type_6_html:
+                    '全周品牌展示，可选半高或全高围布，兼容常规配件线。印前请对照<a href="/zh/faq-artwork-files.html">印刷文件指南</a>。',
+                landing_canopy_why_h2: '采购商为何选择我们的定制广告帐篷',
+                landing_canopy_why_p1_html:
+                    '<p><strong>OEM / ODM 体系：</strong>作为品牌与分销商的制造伙伴，我们固化框架系列、面料与工艺文件，保障跨区域翻单一致。</p>',
+                landing_canopy_why_p2_html:
+                    '<p><strong>LOGO 与品牌画面：</strong>顶篷与檐口可全彩呈现<strong>全彩印刷帐篷</strong>；生产前可协助安全区与拼缝位置说明。印前详见<a href="/zh/faq-artwork-files.html">设计稿要求</a>。</p>',
+                landing_canopy_why_p3_html:
+                    '<p><strong>铝架与钢架可选：</strong>按重量、使用频率与预算匹配材料——铝材利于巡回，钢材适合成本敏感型<strong>快开广告帐篷</strong>项目。</p>',
+                landing_canopy_why_p4_html:
+                    '<p><strong>围布与配件兼容：</strong>可增配围布、配重与拉索，使<strong>活动印刷帐篷</strong>符合场地规定；可与框架打包询价。</p>',
+                landing_canopy_why_p5_html:
+                    '<p><strong>出口包装：</strong>工厂直供式装箱，面向国际货运；报价阶段可提供外箱尺寸与搬运说明。</p>',
+                landing_canopy_why_p6_html:
+                    '<p><strong>报价与生产协同：</strong>交期与<a href="/zh/faq-moq.html">起订量</a>视范围而定；排期见<a href="/zh/faq-lead-time.html">交期常见问题</a>或通过<a href="/zh/index.html#contact">询价表</a>联系。</p>',
+                landing_canopy_specs_h2: '定制广告帐篷规格与选项',
+                landing_canopy_specs_intro: '供采购团队快速参考；最终以具体 SKU 与报价单为准。',
+                landing_canopy_specs_1_h3: '框架材料',
+                landing_canopy_specs_1_html:
+                    '铝合金或钢管框架与工程连接件——按重量、耐久与预算为<strong>定制广告帐篷</strong>项目选型。',
+                landing_canopy_specs_2_h3: '常见尺寸',
+                landing_canopy_specs_2_html:
+                    '商用常见 3×3 m、3×4.5 m、3×6 m 等；具体覆盖请见<a href="/zh/all-products.html?cat=tents">全部产品 — 帐篷</a>。',
+                landing_canopy_specs_3_h3: '篷布印刷',
+                landing_canopy_specs_3_html:
+                    '热升华或其它适配工艺，呈现鲜艳 LOGO；矢量稿优先，详见<a href="/zh/faq-artwork-files.html">文件格式</a>。',
+                landing_canopy_specs_4_h3: '围布与配件',
+                landing_canopy_specs_4_html:
+                    '可选围布、半墙、裙边及兼容配重等——请在询价单中列明以便合并物料清单。',
+                landing_canopy_specs_5_h3: '起订量与交期',
+                landing_canopy_specs_5_html:
+                    '随印刷复杂度与季节变化；请参阅<a href="/zh/faq-moq.html">起订量</a>与<a href="/zh/faq-lead-time.html">交期</a>或在订单中索取项目时间表。',
+                landing_canopy_specs_6_h3: '出口支持',
+                landing_canopy_specs_6_html:
+                    '文件与装箱适配自中国出口；询价时请提供目的港与贸易条款偏好，见<a href="/zh/index.html#contact">销售联系</a>。',
+                landing_canopy_buyers_faq_h2: '定制广告帐篷 — 常见问题',
+                landing_canopy_buyers_faq_intro_html:
+                    '买家速览；完整内容见<a href="/zh/faq.html">常见问题库</a>。',
+                landing_canopy_buyers_faq_1_q: '定制广告帐篷有哪些常见尺寸？',
+                landing_canopy_buyers_faq_1_a_html:
+                    '我们提供 3×3 m、3×4.5 m、3×6 m 等常见商用尺寸，具体以框架系列为准。请使用<a href="/zh/all-products.html?cat=tents">帐篷分类列表</a>或在报价阶段索取对照表。',
+                landing_canopy_buyers_faq_2_q: '所有篷面都可以印 LOGO 吗？',
+                landing_canopy_buyers_faq_2_a_html:
+                    '顶篷与檐口印刷在多数<strong>全彩印刷帐篷</strong>中为常规配置；围布印刷可能因面料与拼缝而异。请尽早提供排版，我们在<a href="/zh/faq-artwork-files.html">印前 FAQ</a>中说明出血与安全区。',
+                landing_canopy_buyers_faq_3_q: '是否同时提供铝架与钢架？',
+                landing_canopy_buyers_faq_3_a_html:
+                    '是。铝材适合频繁运输；钢材可降低单套成本。联系时请说明使用场景，以便推荐合适的<strong>快开广告帐篷</strong>框架。',
+                landing_canopy_buyers_faq_4_q: '定制广告帐篷的起订量是多少？',
+                landing_canopy_buyers_faq_4_a_html:
+                    '起订量取决于印刷范围、面料与配件。详见<a href="/zh/faq-moq.html">起订量指引</a>，并在询价中写明数量以便分项报价。',
+                landing_canopy_buyers_faq_5_q: '是否支持分销商 OEM？',
+                landing_canopy_buyers_faq_5_a_html:
+                    '我们作为面向 B2B 的<strong>OEM 广告帐篷制造商</strong>，可讨论贴牌包装与翻单一致性，请通过<a href="/zh/index.html#contact">联系</a>沟通。',
+                landing_canopy_buyers_faq_6_q: '围布与配件能否一并采购？',
+                landing_canopy_buyers_faq_6_a_html:
+                    '可以——围布、配重及相关五金可与框架一并报价。若场地对阻燃等有要求，请在采购<strong>活动印刷帐篷</strong>套装时一并说明。',
+
+                page_title_beach: '沙滩旗供应商｜羽毛旗刀旗矩形旗杆底座｜伟群帐篷',
+                landing_top_bar_beach: '工厂直供 · 旗面 + 旗杆 + 底座 · 24 小时内回复',
+                landing_beach_h1: '沙滩旗供应商',
+                landing_beach_lead:
+                    '定制羽毛旗、水滴旗，配套旗杆、底座与收纳包 — 工厂直供，适用于活动、零售与户外推广。',
+                landing_beach_card_1_h3: '产品线',
+                landing_beach_card_1_p: '羽毛旗、水滴旗、矩形旗、旗杆套装、底座（十字、注水/注沙、地钉）。',
+                landing_beach_card_2_h3: '起订量（MOQ）',
+                landing_beach_card_2_p: '新设计可低起订；批量订单支持稳定色差控制。',
+                landing_beach_card_3_h3: '交期',
+                landing_beach_card_3_p: '设计确认后通常生产 7–12 天；部分旗杆/底座可现货。',
+                landing_beach_card_4_h3: '出口支持',
+                landing_beach_card_4_p: '出口包装、条码/标签协助，发往欧美澳及东南亚等市场。',
+                landing_beach_contact_line_html:
+                    '联系：<a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp：'
+                    + '<a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · 微信：massifmyth',
+                landing_beach_guides_row_html:
+                    '长篇指南：'
+                    + '<a href="/zh/seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html">批发羽毛旗与水滴旗</a>'
+                    + ' · '
+                    + '<a href="/zh/seo/custom-printed-feather-flag-supplier-bulk-order-oem.html">大批量 OEM 羽毛旗印刷</a>'
+                    + ' · '
+                    + '<a href="/zh/site-map.html#seo-guides">全部旗帜与帐篷指南</a>',
+                landing_beach_buyers_h2: '常见买家需求',
+                landing_beach_buyers_lead: '我们协助您选择面料、印刷与底座，使旗帜在户外稳定展示。',
+                landing_beach_buyer_1_h3: '面料选项',
+                landing_beach_buyer_1_p: '涤纶旗面，印刷鲜艳；可按用途选择单面或双面方案。',
+                landing_beach_buyer_2_h3: '后道工艺',
+                landing_beach_buyer_2_p: '加强袋口、卷边缝制，发货前核对与旗杆匹配。',
+                landing_beach_buyer_3_h3: '底座',
+                landing_beach_buyer_3_p: '室内十字底座；户外注水/注沙底座；草地/泥地用地钉。',
+                landing_beach_buyer_4_h3: '包装',
+                landing_beach_buyer_4_p: '含收纳包（可选）；支持连锁零售装与条码。',
+                landing_beach_faq_articles_h2: '常见问题文章',
+                landing_beach_faq_articles_lead: '印前与物流要点速览 — 帮助团队更快下单。',
+                landing_beach_faq_card_1_h3: '设计稿（AI/PDF）',
+                landing_beach_faq_card_1_p: '如何发送印刷文件、出血、字体与色彩设置。',
+                landing_beach_faq_card_2_h3: '颜色匹配',
+                landing_beach_faq_card_2_p: '色差原因与批次间控制方法。',
+                landing_beach_faq_card_3_h3: '运输方式',
+                landing_beach_faq_card_3_p: '快递、空运与海运的成本/时效取舍，以及需要您提供的信息。',
+
+                footer_legal_link_faq: '常见问题',
+                footer_legal_link_canopy: '定制广告帐篷制造商',
+                footer_legal_link_beach: '沙滩旗供应商',
+                footer_legal_link_display: '展示系统制造商',
+                footer_legal_link_guides: 'B2B 指南',
                 
                 // 公司介绍
                 about_title: '关于伟群',
@@ -854,9 +1042,10 @@ class MultiLanguageSystem {
                 footer_rights: '保留所有权利。',
                 footer_follow_us: '关注我们',
                 social_facebook: 'Facebook',
-                social_linkedin: 'LinkedIn',
+                social_linkedin: '领英',
                 social_instagram: 'Instagram',
                 social_tiktok: 'TikTok',
+                social_xiaohongshu: '小红书',
                 
                 // PDF下载
                 pdf_download_title: '下载产品资料',
@@ -1240,6 +1429,147 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_q: 'What artwork files do you need?',
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
+
+                page_title_canopy_b2b: 'Custom Canopy Tents Manufacturer | OEM Printed Pop Up Tents | WaiKwan',
+                landing_canopy_b2b_h1: 'Custom Canopy Tents Manufacturer for B2B Buyers',
+                landing_canopy_b2b_lead_html:
+                    'Factory-direct <strong>custom canopy tents</strong> and <strong>custom printed canopy tents</strong> for distributors, agencies, and event brands. Explore '
+                    + '<a href="/product-center.html?cat=tents">folding and pop up canopy tents</a> in common commercial sizes, with OEM artwork support and export-oriented packing.',
+                landing_canopy_b2b_p1_html:
+                    '<p>WaiKwan manufactures <strong>pop up canopy tents</strong> and <strong>printed event tents</strong> for professional use—trade shows, promotions, sports, and outdoor activations. As an <strong>OEM canopy tent manufacturer</strong>, we align frame series (aluminum or steel), canopy graphics, and accessories to your program, whether you need a compact 3×3 unit or a larger <strong>3×6 custom canopy tent</strong> footprint for high-visibility branding.</p>',
+                landing_canopy_b2b_p2_html:
+                    '<p>Our team supports sizing, material choices, printing methods, and add-ons such as sidewalls and weight kits so your <a href="/all-products.html?cat=tents">custom canopy tent</a> order matches real deployment conditions. For program-level questions, see our <a href="/faq.html">FAQ</a>, <a href="/faq-moq.html">MOQ guidance</a>, <a href="/faq-lead-time.html">lead time</a>, and <a href="/faq-artwork-files.html">artwork file requirements</a>, or <a href="/index.html#contact">request a quote</a> with your target sizes and print scope.</p>',
+                landing_canopy_gallery_h2: '3×6 Custom Canopy Tents — Real-Scene Gallery',
+                landing_canopy_gallery_intro_html:
+                    'Below are real-scene examples of <strong>3×6 custom canopy tents</strong> with <strong>aluminum frame</strong> systems—ideal references for event branding, retail activations, and OEM rollouts. Additional product photography can be added to the reserved slots as your catalog grows.',
+                landing_canopy_gallery_cap_main: 'Featured: 3×6 aluminum-frame custom canopy tent — real deployment (outdoor branding).',
+                landing_canopy_gallery_cap_aluminum: 'Aluminum frame detail — suitable for OEM canopy tent manufacturer specifications.',
+                landing_canopy_gallery_cap_second: 'Second real-scene view — custom printed canopy tents for events.',
+                landing_canopy_gallery_slot1_caption_html: 'Reserved slot — add a new custom canopy tent image (replace <code>src</code> only).',
+                landing_canopy_gallery_slot2_caption: 'Reserved slot — optional printed event tents or sidewall setup shot.',
+                landing_canopy_gallery_slot3_caption: 'Reserved slot — distributor or private-label project imagery.',
+                landing_canopy_types_h2: 'Popular Custom Canopy Tent Types',
+                landing_canopy_types_intro_html:
+                    'Representative formats we supply for B2B programs. Browse the <a href="/product-center.html?cat=tents">tents hub</a> or <a href="/all-products.html?cat=tents">full tent catalog</a> for SKUs and variants.',
+                landing_canopy_type_1_h3: '3×3 custom canopy tents',
+                landing_canopy_type_1_html:
+                    'Compact pop up canopy tents for street teams and booth islands—easy to transport and quick to deploy. <a href="/tent-type.html?type=folding40">View folding tent types</a> aligned to your frame preference.',
+                landing_canopy_type_2_h3: '3×4.5 custom canopy tents',
+                landing_canopy_type_2_html:
+                    'Mid-width coverage for sampling bars and registration areas; pair with branded sidewalls for weather protection. Explore options via our <a href="/all-products.html?cat=tents">printed canopy tent listings</a>.',
+                landing_canopy_type_3_h3: '3×6 custom canopy tents',
+                landing_canopy_type_3_html:
+                    'High-visibility footprints for sponsor lanes and outdoor retail—ideal when you need maximum graphic area on a single frame. See real-scene examples in the gallery above and <a href="/product-center.html?cat=tents">plan your layout</a>.',
+                landing_canopy_type_4_h3: 'Aluminum frame custom canopy tents',
+                landing_canopy_type_4_html:
+                    'Lightweight, corrosion-resistant frames for frequent touring; common on premium <strong>pop up canopy tents</strong> for agencies. Compare series in the <a href="/product-center.html?cat=tents">product center</a>.',
+                landing_canopy_type_5_h3: 'Steel frame pop up tents',
+                landing_canopy_type_5_html:
+                    'Cost-effective steel options for seasonal campaigns and rental fleets—specify frame material when you <a href="/index.html#contact">request a quote</a> so we can match budget and duty cycle.',
+                landing_canopy_type_6_h3: 'Printed canopy tents with sidewalls',
+                landing_canopy_type_6_html:
+                    'Full perimeter branding with optional half or full sidewalls, compatible with standard accessory lines. Confirm artwork readiness using our <a href="/faq-artwork-files.html">print file guide</a>.',
+                landing_canopy_why_h2: 'Why Buyers Choose Our Custom Canopy Tents',
+                landing_canopy_why_p1_html:
+                    '<p><strong>OEM / ODM structure:</strong> We work as a manufacturing partner for brands and distributors—documenting frame series, fabric specs, and print methods so repeat orders stay consistent across regions.</p>',
+                landing_canopy_why_p2_html:
+                    '<p><strong>Logo printing and brand graphics:</strong> Canopy tops and valances can carry full-color graphics for <strong>custom printed canopy tents</strong>; we can advise safe zones and seam placement before production. For file prep, see <a href="/faq-artwork-files.html">artwork requirements</a>.</p>',
+                landing_canopy_why_p3_html:
+                    '<p><strong>Aluminum and steel frame options:</strong> Match frame material to weight, frequency of use, and budget—aluminum for portability on tour, steel where upfront cost matters most on <strong>pop up canopy tents</strong>.</p>',
+                landing_canopy_why_p4_html:
+                    '<p><strong>Sidewalls and accessory compatibility:</strong> Add sidewalls, weight bags, and tie-downs so <strong>printed event tents</strong> meet venue rules; bundle options can be quoted with your frame package.</p>',
+                landing_canopy_why_p5_html:
+                    '<p><strong>Export packaging:</strong> Factory-direct packing oriented to international freight—carton dimensions and handling notes available during quoting.</p>',
+                landing_canopy_why_p6_html:
+                    '<p><strong>Quote and production support:</strong> Timeline and <a href="/faq-moq.html">MOQ</a> depend on scope; for schedules, read <a href="/faq-lead-time.html">lead time FAQs</a> or contact us via <a href="/index.html#contact">the inquiry form</a>.</p>',
+                landing_canopy_specs_h2: 'Custom Canopy Tent Specifications & Options',
+                landing_canopy_specs_intro: 'Summary reference for procurement teams. Final specs are confirmed per SKU and quote.',
+                landing_canopy_specs_1_h3: 'Frame materials',
+                landing_canopy_specs_1_html:
+                    'Aluminum alloy or steel tube frames with engineered connectors—select based on weight, durability, and budget for your <strong>custom canopy tents</strong> program.',
+                landing_canopy_specs_2_h3: 'Common sizes',
+                landing_canopy_specs_2_html:
+                    'Commercial footprints such as 3×3 m, 3×4.5 m, and 3×6 m are widely used; confirm exact SKU coverage in <a href="/all-products.html?cat=tents">all products — tents</a>.',
+                landing_canopy_specs_3_h3: 'Canopy printing',
+                landing_canopy_specs_3_html:
+                    'Dye-sublimation or suitable fabric printing for vibrant logos on <strong>custom printed canopy tents</strong>; vector artwork preferred—see <a href="/faq-artwork-files.html">file formats</a>.',
+                landing_canopy_specs_4_h3: 'Sidewalls & accessories',
+                landing_canopy_specs_4_html:
+                    'Optional sidewalls, half walls, rail skirts, and hardware-compatible weights—list add-ons in your RFQ for a single BOM.',
+                landing_canopy_specs_5_h3: 'MOQ & lead time',
+                landing_canopy_specs_5_html:
+                    'Varies by print complexity and season; review <a href="/faq-moq.html">MOQ</a> and <a href="/faq-lead-time.html">lead time</a> or ask for a project timeline with your order.',
+                landing_canopy_specs_6_h3: 'Export support',
+                landing_canopy_specs_6_html:
+                    'Documentation and packing suited to export lanes from China; share destination and incoterms preference when you <a href="/index.html#contact">contact sales</a>.',
+                landing_canopy_buyers_faq_h2: 'Custom Canopy Tents — Frequently Asked Questions',
+                landing_canopy_buyers_faq_intro_html:
+                    'Quick answers for buyers; full detail in our <a href="/faq.html">FAQ library</a>.',
+                landing_canopy_buyers_faq_1_q: 'What sizes are available for custom canopy tents?',
+                landing_canopy_buyers_faq_1_a_html:
+                    'We supply common commercial footprints including 3×3 m, 3×4.5 m, and 3×6 m styles among others. Exact availability depends on frame series—use <a href="/all-products.html?cat=tents">tent category listings</a> or ask for a matrix during quoting.',
+                landing_canopy_buyers_faq_2_q: 'Can you print logos on all canopy panels?',
+                landing_canopy_buyers_faq_2_a_html:
+                    'Roof and valance branding is standard for many <strong>custom printed canopy tents</strong>; sidewall printing may vary by fabric and seam layout. Share your layout early—we outline bleed and safe zones in our <a href="/faq-artwork-files.html">artwork FAQ</a>.',
+                landing_canopy_buyers_faq_3_q: 'Do you offer aluminum and steel frames?',
+                landing_canopy_buyers_faq_3_a_html:
+                    'Yes. Aluminum suits frequent transport; steel can reduce unit cost for budget-led programs. Specify intended use when contacting us so we recommend the right <strong>pop up canopy tents</strong> frame.',
+                landing_canopy_buyers_faq_4_q: 'What is the MOQ for custom canopy tents?',
+                landing_canopy_buyers_faq_4_a_html:
+                    'MOQ depends on print scope, fabric, and accessories. See <a href="/faq-moq.html">MOQ guidance</a> and include quantity targets in your inquiry for an accurate line item.',
+                landing_canopy_buyers_faq_5_q: 'Do you support OEM orders for distributors?',
+                landing_canopy_buyers_faq_5_a_html:
+                    'We operate as an <strong>OEM canopy tent manufacturer</strong> for B2B partners—private-label packaging and repeat-order consistency can be discussed with our team via <a href="/index.html#contact">contact</a>.',
+                landing_canopy_buyers_faq_6_q: 'Can sidewalls and accessories be included?',
+                landing_canopy_buyers_faq_6_a_html:
+                    'Yes—sidewalls, weights, and related hardware can be quoted with your frame. Mention venue requirements (e.g., fire retardancy) when requesting <strong>printed event tents</strong> packages.',
+
+                page_title_beach: 'Beach Flag Supplier | Custom Feather & Teardrop Flags | WaiKwan',
+                landing_top_bar_beach: 'Factory direct · Flags + poles + bases · Reply within 24 hours',
+                landing_beach_h1: 'Beach Flags Supplier',
+                landing_beach_lead:
+                    'Custom feather flags and teardrop flags with poles, bases and carry bags — factory-direct for events, retail and outdoor promotions.',
+                landing_beach_card_1_h3: 'Product Range',
+                landing_beach_card_1_p: 'Feather flags, teardrop flags, rectangular flags, pole sets, bases (cross, water/sand, ground spike).',
+                landing_beach_card_2_h3: 'MOQ',
+                landing_beach_card_2_p: 'Low MOQ available for new designs. Bulk orders supported with stable color consistency.',
+                landing_beach_card_3_h3: 'Lead Time',
+                landing_beach_card_3_p: 'Typical production 7–12 days after artwork approval. Pole/base stock options available.',
+                landing_beach_card_4_h3: 'Export Support',
+                landing_beach_card_4_p: 'Export packing, barcode/label support, and shipping to US/EU/AU/SEA markets.',
+                landing_beach_contact_line_html:
+                    'Contact: <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp: <a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · WeChat: massifmyth',
+                landing_beach_guides_row_html:
+                    'Long-form guides: '
+                    + '<a href="/seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html">wholesale feather & teardrop flags</a>'
+                    + ' · '
+                    + '<a href="/seo/custom-printed-feather-flag-supplier-bulk-order-oem.html">bulk OEM feather flag printing</a>'
+                    + ' · '
+                    + '<a href="/site-map.html#seo-guides">all flag & tent guides</a>',
+                landing_beach_buyers_h2: 'Common Buyer Requests',
+                landing_beach_buyers_lead: 'We help you choose the right fabric, printing and base so your flags stand well outdoors.',
+                landing_beach_buyer_1_h3: 'Fabric Options',
+                landing_beach_buyer_1_p: 'Polyester flags for vivid printing. Single or double-sided solutions depending on usage.',
+                landing_beach_buyer_2_h3: 'Finishing',
+                landing_beach_buyer_2_p: 'Reinforced pockets, hem stitching, and pole compatibility checked before shipping.',
+                landing_beach_buyer_3_h3: 'Bases',
+                landing_beach_buyer_3_p: 'Cross base for indoor, water/sand base for outdoor, ground spike for grass/soil.',
+                landing_beach_buyer_4_h3: 'Packing',
+                landing_beach_buyer_4_p: 'Carry bag included (optional). Retail packing and barcodes supported for chains.',
+                landing_beach_faq_articles_h2: 'FAQ Articles',
+                landing_beach_faq_articles_lead: 'Quick answers for artwork and shipping — helps your team place orders faster.',
+                landing_beach_faq_card_1_h3: 'Artwork Files (AI/PDF)',
+                landing_beach_faq_card_1_p: 'How to send printing files, bleed, fonts, and color settings.',
+                landing_beach_faq_card_2_h3: 'Color Matching',
+                landing_beach_faq_card_2_p: 'Why colors vary and how to control deviations across batches.',
+                landing_beach_faq_card_3_h3: 'Shipping Methods',
+                landing_beach_faq_card_3_p: 'Express vs air vs sea, cost/time trade-offs and what we need from you.',
+
+                footer_legal_link_faq: 'FAQ',
+                footer_legal_link_canopy: 'Canopy Tent Manufacturer',
+                footer_legal_link_beach: 'Beach Flag Supplier',
+                footer_legal_link_display: 'Display Systems Manufacturer',
+                footer_legal_link_guides: 'B2B Guides',
                 
                 // About
                 about_title: 'About Guangxi WaiKwan Tent Manufacturing Co., Ltd',
@@ -1739,6 +2069,7 @@ class MultiLanguageSystem {
                 social_linkedin: 'LinkedIn',
                 social_instagram: 'Instagram',
                 social_tiktok: 'TikTok',
+                social_xiaohongshu: 'Xiaohongshu',
                 
                 // PDF Download
                 pdf_download_title: 'Download Product Information',
@@ -2017,9 +2348,8 @@ class MultiLanguageSystem {
     }
     
     saveLanguage(lang) {
-        // 统一使用 site_language 作为唯一 key
+        // UX memory only — must not override URL-based language on the next load (getLang() ignores this for resolution)
         localStorage.setItem('site_language', lang);
-        // 兼容旧 key（逐步迁移）
         localStorage.setItem('siteLanguage', lang);
         localStorage.setItem('preferredLanguage', lang);
     }
@@ -2069,28 +2399,18 @@ document.addEventListener('DOMContentLoaded', () => {
             : getLang(),
         setLang,
     };
-});
 
-// ===== Language Gate - 不再自动弹出 =====
-// ✅ 统一方案：默认英文，不弹窗，用户通过右上角图标切换
-document.addEventListener('DOMContentLoaded', () => {
-    // 使用统一的 getLang() 函数
-    const savedLang = getLang();
-    
-    // 统一保存到 site_language
-    if (!localStorage.getItem(LANG_KEY)) {
-        localStorage.setItem(LANG_KEY, savedLang);
-    }
-    
-    // 应用语言（兼容现有 multiLang 实现）
-    if (window.multiLang && typeof window.multiLang.switchLanguage === 'function') {
-        window.multiLang.switchLanguage(savedLang);
-    }
-    
+    // Sync storage to current URL language (does not drive getLang(); avoids stale zh on EN URLs)
+    try {
+        const urlLang = getLang();
+        localStorage.setItem(LANG_KEY, urlLang);
+        localStorage.setItem('siteLanguage', urlLang);
+    } catch (e) {}
+
     // ❌ 不再自动显示语言选择弹窗
     const gate = document.getElementById('languageGate');
     if (gate) {
-        gate.remove(); // 直接移除，不再显示
+        gate.remove();
     }
 });
 

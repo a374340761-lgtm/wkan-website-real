@@ -6,17 +6,31 @@
     if (window.__accessoriesPageInited) return;
     window.__accessoriesPageInited = true;
 
-    const SPRITE = './images/products/accessories/tent-accessories.png';
+    function spriteSheetUrl() {
+        const rel = 'images/products/accessories/tent-accessories.png';
+        if (typeof window.wkRootAssetUrl === 'function') {
+            try {
+                return window.wkRootAssetUrl(rel);
+            } catch (e) {
+                /* ignore */
+            }
+        }
+        return '/' + rel;
+    }
     const ID_MIN = 9001;
     const ID_MAX = 9024;
 
     function getLang() {
-        const htmlLang = (document.documentElement.lang || '').toLowerCase();
-        const bodyLang = (document.body && (document.body.dataset.lang || document.body.getAttribute('data-lang') || '')) || '';
-        const ml = (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function')
-            ? (window.multiLang.getCurrentLanguage() || '')
-            : '';
-        return (ml || bodyLang || htmlLang || 'en').toLowerCase();
+        try {
+            if (typeof window.wkResolvePageLanguage === 'function') {
+                return window.wkResolvePageLanguage();
+            }
+        } catch (e) {}
+        try {
+            const p = window.location.pathname.replace(/\\/g, '/');
+            if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+        } catch (e2) {}
+        return 'en';
     }
 
     function getAllProducts() {
@@ -59,7 +73,7 @@
                We only set the sprite image source here.
             */
             #accessoriesGrid .ap-img .sprite-thumb, #tentTypeAccessoriesGrid .ap-img .sprite-thumb, #allProductsAccessoriesGrid .ap-img .sprite-thumb{
-                background-image:url("${SPRITE}");
+                background-image:url("${spriteSheetUrl()}");
                 background-size:400% 600%;
                 background-color:#fff;
             }

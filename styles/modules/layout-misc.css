@@ -242,9 +242,23 @@
     transform: translateY(-1px);
 }
 
-.contact-bottom__socialLink i {
+.contact-bottom__socialLink i,
+.contact-bottom__socialLink .wk-social-xhs-icon {
     font-size: 14px;
     opacity: 0.9;
+}
+
+.contact-bottom__socialLink .wk-social-xhs-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+}
+
+.contact-bottom__socialLink .wk-social-xhs-icon svg {
+    width: 14px;
+    height: 14px;
+    display: block;
 }
 
 .contact-bottom__socialLinkLabel {

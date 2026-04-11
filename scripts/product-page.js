@@ -13,11 +13,20 @@
 
 	const getLang = () => {
 		try {
+			if (typeof window.wkResolvePageLanguage === 'function') {
+				return window.wkResolvePageLanguage();
+			}
+		} catch (e) {}
+		try {
+			const p = window.location.pathname.replace(/\\/g, '/');
+			if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+		} catch (e2) {}
+		try {
 			const l = window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function'
 				? window.multiLang.getCurrentLanguage()
 				: (document.documentElement.getAttribute('lang') || 'en');
 			return String(l || 'en').toLowerCase().startsWith('zh') ? 'zh' : 'en';
-		} catch (e) {
+		} catch (e3) {
 			return 'en';
 		}
 	};

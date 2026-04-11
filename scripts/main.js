@@ -258,20 +258,75 @@ const WK_PLACEHOLDER_IMG =
         + '</svg>'
     );
 
+/** Root-relative asset paths -> site-root URLs (works from /zh/... pages). */
+function wkPublicAssetUrl(u) {
+    if (u == null || u === '') return u;
+    const s = String(u).trim();
+    if (/^(https?:|data:|\/\/)/i.test(s)) return s;
+    let suffix = '';
+    let base = s;
+    const q = s.indexOf('?');
+    const h = s.indexOf('#');
+    let cut = s.length;
+    if (q >= 0) cut = Math.min(cut, q);
+    if (h >= 0) cut = Math.min(cut, h);
+    if (cut < s.length) {
+        base = s.slice(0, cut);
+        suffix = s.slice(cut);
+    }
+    let resolved;
+    if (typeof window.wkRootAssetUrl === 'function') {
+        try {
+            resolved = window.wkRootAssetUrl(base);
+        } catch (e) {
+            resolved = null;
+        }
+    }
+    if (resolved == null) {
+        const x = base.replace(/^\.\//, '');
+        resolved = x.startsWith('/') ? x : '/' + x;
+    }
+    return resolved + suffix;
+}
+
+/** EN path + query -> /zh/... when on Chinese mirror (see products.js / bilingual-routing.js). */
+function wkLocalizedInternalLinkSafe(href) {
+    if (href == null || href === '') return href;
+    const s = String(href).trim();
+    if (/^(https?:|mailto:|tel:|#)/i.test(s)) return s;
+    const normalized = s.startsWith('/') ? s : '/' + s.replace(/^\.\//, '');
+    if (typeof window.wkLocalizedInternalLink === 'function') {
+        try {
+            return window.wkLocalizedInternalLink(normalized);
+        } catch (e) {
+            /* ignore */
+        }
+    }
+    return normalized;
+}
+
 function getCurrentLangSafe() {
+    // URL is authoritative: /zh/ => zh, root English pages => en (see bilingual-routing.js wkResolvePageLanguage).
+    try {
+        if (typeof window.wkResolvePageLanguage === 'function') {
+            return window.wkResolvePageLanguage();
+        }
+    } catch (e) {}
+    try {
+        const p = String(window.location.pathname || '').replace(/\\/g, '/');
+        if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e2) {}
     try {
         if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
             return window.multiLang.getCurrentLanguage() || 'en';
         }
-    } catch (e) {}
-    // multilang.js may not have constructed window.multiLang yet on DOMContentLoaded (main runs first),
-    // but getLang() reads site_language synchronously — use it for product title/description rendering.
+    } catch (e3) {}
     try {
         if (typeof getLang === 'function') {
             const g = getLang();
             return g === 'zh' ? 'zh' : 'en';
         }
-    } catch (e2) {}
+    } catch (e4) {}
     const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
     return htmlLang.startsWith('zh') ? 'zh' : 'en';
 }
@@ -355,8 +410,8 @@ function renderHomeHeroSlider() {
         const slide = document.createElement('article');
         slide.className = 'wk-hero-slide' + (i === 0 ? ' is-active' : '');
         slide.setAttribute('data-index', String(i));
-        // Use encodeURI so non-ASCII filenames (e.g. Chinese) work reliably in CSS url().
-        const bgUrl = encodeURI(String(s.image || ''));
+        // Root-absolute URL + encodeURI so non-ASCII filenames work in CSS url() from /zh/... too.
+        const bgUrl = wkPublicAssetUrl(String(s.image || ''));
         if (String(s.variant || '').toLowerCase() === 'light') {
             slide.classList.add('wk-hero-slide--light');
         }
@@ -365,7 +420,8 @@ function renderHomeHeroSlider() {
         const titleKey = `${s.keyPrefix}_title`;
         const subtitleKey = `${s.keyPrefix}_subtitle`;
         const kickerKey = `${s.keyPrefix}_kicker`;
-        const secondaryHref = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
+        const rawSecondary = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
+        const secondaryHref = wkLocalizedInternalLinkSafe(rawSecondary);
 
         slide.innerHTML = `
             <div class="wk-hero-bg" aria-hidden="true"></div>
@@ -468,7 +524,7 @@ function renderHomeCategoryGrid() {
     const categories = [
         { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
         { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-        { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
+        { id: 'displays', img: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
         { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
         { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
@@ -478,10 +534,10 @@ function renderHomeCategoryGrid() {
         const wrap = document.createElement('div');
         wrap.className = c.id === 'lightbox' ? 'wk-cat-card-wrap wk-cat-card-wrap--lightbox' : 'wk-cat-card-wrap';
 
-        const hubHref = `./product-center.html?cat=${encodeURIComponent(c.id)}`;
-        const catalogHref = `./all-products.html?cat=${encodeURIComponent(c.id)}`;
+        const hubHref = wkLocalizedInternalLinkSafe(`/product-center.html?cat=${encodeURIComponent(c.id)}`);
+        const catalogHref = wkLocalizedInternalLinkSafe(`/all-products.html?cat=${encodeURIComponent(c.id)}`);
 
-        const imgSrc = c.img;
+        const imgSrc = wkPublicAssetUrl(c.img);
         const mediaHtml = imgSrc
             ? `<img class="wk-card-img" src="${imgSrc}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />`
             : `<div class="wk-card-placeholder" aria-hidden="true"><i class="fas fa-layer-group"></i></div>`;
@@ -518,7 +574,7 @@ function renderTrustedByWall() {
         logos.slice(0, 12).forEach((src) => {
             const item = document.createElement('div');
             item.className = 'wk-logo-badge';
-            item.innerHTML = `<img class="wk-logo-img" src="${String(src)}" alt="" loading="lazy" onerror="this.style.display='none'" />`;
+            item.innerHTML = `<img class="wk-logo-img" src="${wkPublicAssetUrl(String(src))}" alt="" loading="lazy" onerror="this.style.display='none'" />`;
             grid.appendChild(item);
         });
         return;
@@ -614,18 +670,20 @@ function renderHomeBestSellers() {
             const resolved = (window.WK_getProductCardImage && typeof window.WK_getProductCardImage === 'function')
                 ? window.WK_getProductCardImage(safeProduct)
                 : '';
-            const img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
+            let img = resolved || safeProduct.image || (Array.isArray(safeProduct.images) ? safeProduct.images[0] : '') || WK_PLACEHOLDER_IMG;
+            if (img && !String(img).startsWith('data:')) img = wkPublicAssetUrl(img);
             const catKey = getCategoryTranslateKey(safeProduct.category);
 
             const preferredSku = (safeProduct && safeProduct.sku != null && String(safeProduct.sku).trim() !== '')
                 ? String(safeProduct.sku).trim()
                 : (safeProduct && safeProduct.id != null ? String(safeProduct.id).trim() : '');
-            const typeHref = (typeof window.WK_getProductTypePageUrl === 'function')
+            const typeHrefRaw = (typeof window.WK_getProductTypePageUrl === 'function')
                 ? window.WK_getProductTypePageUrl(safeProduct)
                 : '';
+            const typeHref = typeHrefRaw ? wkLocalizedInternalLinkSafe(typeHrefRaw) : '';
             const detailHref = preferredSku
-                ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}`
-                : `./all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`;
+                ? wkLocalizedInternalLinkSafe(`/product-detail.html?sku=${encodeURIComponent(preferredSku)}`)
+                : wkLocalizedInternalLinkSafe(`/all-products.html?cat=${encodeURIComponent(safeProduct.category || 'all')}`);
             const primaryHref = typeHref || detailHref;
             const primaryTranslate = typeHref ? 'view_type_button' : 'view_details';
             const btnClass = typeHref ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
@@ -1059,15 +1117,7 @@ function enhanceTentsDropdown() {
     const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
     if (!menus.length) return;
 
-    const getCurrentLang = () => {
-        try {
-            if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
-                return (window.multiLang.getCurrentLanguage() || 'en').toLowerCase();
-            }
-        } catch (e) {}
-        const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-        return htmlLang || 'en';
-    };
+    const getCurrentLang = () => getCurrentLangSafe();
 
     const fallback = [
         { type: 'folding30', nameEn: '30 Square Tube Frame Iron', nameZh: '30 方管铁架' },
@@ -1215,17 +1265,18 @@ function enhanceFlagsDropdown() {
     const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
     if (!menus.length) return;
 
+    // Must stay in sync with scripts/flag-types.js (poles + special + accessories order).
     const fallback = [
-        { type: 'fiberglass_pole', nameEn: 'Fiberglass Pole', nameZh: '玻璃纤维旗杆' },
-        { type: 'alu_fiberglass_pole', nameEn: 'Aluminium + Fiberglass', nameZh: '铝合金 + 玻璃纤维' },
-        { type: 'fully_fiberglass_teardrop', nameEn: 'Fully Fiberglass (Teardrop)', nameZh: '全玻璃纤维（泪滴）' },
-        { type: 'fully_fiberglass_feather', nameEn: 'Fully Fiberglass (Feather)', nameZh: '全玻璃纤维（羽毛）' },
-        { type: 'outdoor_giant_flag', nameEn: 'Outdoor Giant Flag', nameZh: '户外巨型旗' },
-        { type: 'square_flag_pole_fiberglass', nameEn: 'Square Flag Pole (Fiberglass)', nameZh: '方形旗杆（玻璃纤维）' },
-        { type: 'alu_pole_semicircle', nameEn: 'Aluminium Pole (Semicircle)', nameZh: '铝合金旗杆（半圆）' },
-        { type: 'alu_pole_square', nameEn: 'Aluminium Pole (Square)', nameZh: '铝合金旗杆（方形）' },
-        { type: 'alu_pole_new_feather', nameEn: 'Aluminium Pole (New Feather)', nameZh: '铝合金旗杆（新羽毛）' },
-        { type: 'alu_pole_feather', nameEn: 'Aluminium Pole (Feather/Teardrop)', nameZh: '铝合金旗杆（羽毛/泪滴）' },
+        { type: 'fiberglass_pole', nameEn: 'Beach Flag Poles (Fiberglass Pole)', nameZh: '沙滩旗杆（玻纤杆）' },
+        { type: 'alu_fiberglass_pole', nameEn: 'Beach Flag Poles (Aluminium + Fiberglass)', nameZh: '沙滩旗杆（铝管 + 玻纤）' },
+        { type: 'fully_fiberglass_teardrop', nameEn: 'Teardrop Beach Flag Poles (Fully Fiberglass)', nameZh: '水滴型沙滩旗杆（全玻纤）' },
+        { type: 'fully_fiberglass_feather', nameEn: 'Feather Beach Flag Poles (Fully Fiberglass)', nameZh: '刀型沙滩旗杆（全玻纤）' },
+        { type: 'outdoor_giant_flag', nameEn: 'Outdoor Giant Flag (Water Base)', nameZh: '户外注水旗杆（Giant Flag）' },
+        { type: 'square_flag_pole_fiberglass', nameEn: 'Square Flag Pole (Fiberglass)', nameZh: '方型沙滩旗杆（玻纤）' },
+        { type: 'alu_pole_semicircle', nameEn: 'Aluminium Beach Flag Pole — Semicircle', nameZh: '铝合金沙滩旗杆（半圆）' },
+        { type: 'alu_pole_square', nameEn: 'Aluminium Beach Flag Pole — Square', nameZh: '铝合金沙滩旗杆（方型）' },
+        { type: 'alu_pole_new_feather', nameEn: 'Aluminium Beach Flag Pole — New Feather', nameZh: '铝合金沙滩旗杆（新型刀旗）' },
+        { type: 'alu_pole_feather', nameEn: 'Aluminium Beach Flag Pole — Feather/Teardrop', nameZh: '铝合金沙滩旗杆（刀旗/水滴）' },
         { type: 'backpack_street_flags', nameEn: 'Backpack Flags & Street/Display Flags', nameZh: '背包旗 & 街旗 / 展示旗' },
         { type: 'flag_bases_accessories', nameEn: 'Beach Flag Bases & Accessories', nameZh: '沙滩旗底座与配件' }
     ];
@@ -1336,15 +1387,7 @@ function enhanceDisplaysDropdown() {
     const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
     if (!menus.length) return;
 
-    const getCurrentLang = () => {
-        try {
-            if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
-                return (window.multiLang.getCurrentLanguage() || 'en').toLowerCase();
-            }
-        } catch (e) {}
-        const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-        return htmlLang || 'en';
-    };
+    const getCurrentLang = () => getCurrentLangSafe();
 
     const shouldTapToOpen = () => {
         if (!wkNavAllowNestedAccordionTap()) return false;
@@ -1926,6 +1969,15 @@ function renderHeroSlides() {
         article.className = 'hero-sz-slide' + (i === 0 ? ' is-active' : '');
         article.setAttribute('data-slide', i);
 
+        const imgSrc =
+            typeof window.wkRootAssetUrl === 'function'
+                ? window.wkRootAssetUrl(s.image)
+                : s.image;
+        const ctaHrefResolved =
+            typeof window.wkLocalizedPageHref === 'function'
+                ? window.wkLocalizedPageHref(s.ctaHref)
+                : s.ctaHref;
+
         let highlightsHtml = '';
         (s.highlights || []).forEach(h => {
             highlightsHtml += `<div class="h-item"><div class="h-label">${h.label}</div><div class="h-value"><span class="zh">${h.valueZh}</span><span class="en">${h.valueEn}</span></div></div>`;
@@ -1942,7 +1994,7 @@ function renderHeroSlides() {
                     <div class="hero-highlights">${highlightsHtml}</div>
 
                     <div class="hero-ctas">
-                        <a class="btn btn-primary" href="${s.ctaHref}">
+                        <a class="btn btn-primary" href="${ctaHrefResolved}">
                             <span class="zh">${s.ctaTextZh}</span>
                             <span class="en">${s.ctaTextEn}</span>
                         </a>
@@ -1952,7 +2004,7 @@ function renderHeroSlides() {
             </div>
             <div class="hero-sz-right">
                 <div class="hero-sz-image-wrap hero-image">
-                    <img src="${s.image}" alt="${s.alt || ''}" loading="lazy">
+                    <img src="${imgSrc}" alt="${s.alt || ''}" loading="lazy">
                 </div>
             </div>
         `;
@@ -1976,6 +2028,7 @@ function initHeroCarouselSz() {
     // insert a safe default slide and hide navigation controls.
     if (slides.length === 0) {
         // create a simple fallback slide using an existing image
+        const fallbackImg = wkPublicAssetUrl('images/快幕秀图片.jpg');
         const fallback = document.createElement('article');
         fallback.className = 'hero-sz-slide is-active';
         fallback.setAttribute('data-slide', 0);
@@ -1987,7 +2040,7 @@ function initHeroCarouselSz() {
             </div>
             <div class="hero-sz-right">
                 <div class="hero-sz-image-wrap">
-                    <img src="images/快幕秀图片.jpg" alt="Portable display backdrop — Wai Kwan Tent product range" loading="lazy">
+                    <img src="${fallbackImg}" alt="Portable display backdrop — Wai Kwan Tent product range" loading="lazy">
                 </div>
             </div>
         `;

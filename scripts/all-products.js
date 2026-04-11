@@ -2,6 +2,19 @@
 (function() {
     'use strict';
 
+    function apLocalizedPageHref(href) {
+        if (!href) return href;
+        if (typeof window.wkLocalizedInternalLink === 'function') {
+            const s = href.startsWith('/') ? href : '/' + String(href).replace(/^\.\//, '');
+            return window.wkLocalizedInternalLink(s);
+        }
+        if (typeof window.wkLocalizedPageHref === 'function') {
+            const s = href.startsWith('/') ? href : '/' + String(href).replace(/^\.\//, '');
+            return window.wkLocalizedPageHref(s);
+        }
+        return href.startsWith('/') ? href : '/' + String(href).replace(/^\.\//, '');
+    }
+
     // 获取产品数据（多来源兼容）
     let products = [];
     
@@ -186,7 +199,7 @@
     function buildUnifiedDetailUrlFromSku(sku) {
         const s = (sku == null ? '' : String(sku)).trim();
         if (!s) return '';
-        return `product-detail.html?sku=${encodeURIComponent(s)}`;
+        return apLocalizedPageHref(`/product-detail.html?sku=${encodeURIComponent(s)}`);
     }
 
     function extractSkuFromHref(href) {
@@ -339,12 +352,21 @@
         return url.searchParams.get('q') || url.searchParams.get('search') || '';
     }
 
-    // 获取当前语言
+    // 获取当前语言（URL 优先：/zh/ => zh）
     function getCurrentLang() {
+        try {
+            if (typeof window.wkResolvePageLanguage === 'function') {
+                return window.wkResolvePageLanguage();
+            }
+        } catch (e) {}
+        try {
+            const p = window.location.pathname.replace(/\\/g, '/');
+            if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+        } catch (e2) {}
         if (window.multiLang && window.multiLang.getCurrentLanguage) {
             return window.multiLang.getCurrentLanguage();
         }
-        return document.documentElement.lang || 'en';
+        return 'en';
     }
 
     function hasCjk(text) {
@@ -699,7 +721,7 @@
             </p>
             <div id="allProductsAccessoriesGrid"></div>
             <p style="margin-top: 12px;">
-                <a class="btn btn-secondary" href="products-accessories.html" data-translate="accessories_open_full_page">Open full accessories page</a>
+                <a class="btn btn-secondary" href="${apLocalizedPageHref('/products-accessories.html')}" data-translate="accessories_open_full_page">Open full accessories page</a>
             </p>
         `;
         if (grid && grid.parentNode && emptyState) {
@@ -738,22 +760,25 @@
 
             let imgSrc = resolved || p.image || 'images/placeholder.png';
             if (imgSrc && !imgSrc.startsWith('images/') && !imgSrc.startsWith('/') && !imgSrc.startsWith('./')) imgSrc = 'images/' + imgSrc;
+            if (typeof window.wkRootAssetUrl === 'function') imgSrc = window.wkRootAssetUrl(imgSrc);
 
             let spriteSrc = p.image || '';
             if (spriteSrc && !spriteSrc.startsWith('images/') && !spriteSrc.startsWith('/') && !spriteSrc.startsWith('./')) spriteSrc = 'images/' + spriteSrc;
+            if (typeof window.wkRootAssetUrl === 'function') spriteSrc = window.wkRootAssetUrl(spriteSrc);
             const model = p.model || '';
             const tags = p.tags || '';
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
-            const quoteUrl = `./index.html?product=${productParam}#contact`;
+            const quoteUrl = apLocalizedPageHref(`/index.html?product=${productParam}`) + '#contact';
             // Primary browse: type hub (*-type.html) when available; otherwise unified PDP.
             const preferredSku = getPreferredSku(p);
-            const typeUrl = (typeof window.WK_getProductTypePageUrl === 'function')
+            const typeUrlRaw = (typeof window.WK_getProductTypePageUrl === 'function')
                 ? window.WK_getProductTypePageUrl(p)
                 : '';
+            const typeUrl = typeUrlRaw ? apLocalizedPageHref(typeUrlRaw) : '';
             const detailUrl = preferredSku
                 ? buildUnifiedDetailUrlFromSku(preferredSku)
-                : `all-products.html?cat=${encodeURIComponent(p.category || 'all')}`;
+                : apLocalizedPageHref(`/all-products.html?cat=${encodeURIComponent(p.category || 'all')}`);
             const browseUrl = typeUrl || detailUrl;
             const browseTranslate = typeUrl ? 'view_type_button' : 'view_details';
             const browseClass = typeUrl ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
@@ -814,7 +839,7 @@
                 const y = (r - 1) * 20;
                 imgHtml = `<div class="ap-img"><div class="sprite-thumb" style="background-image:url('${imgSrc}');background-position:${x}% ${y}%;background-size:400% 600%;"></div></div>`;
             } else {
-                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='images/placeholder.png'"></div>`;
+                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='/images/placeholder.png'"></div>`;
             }
 
             return `
@@ -985,15 +1010,19 @@
 
         const renderCards = (items) => (items || []).map((item) => {
             const urlType = item.type;
-            const href = `all-products.html?cat=tents&type=${encodeURIComponent(urlType)}`;
+            const href = apLocalizedPageHref(`/all-products.html?cat=tents&type=${encodeURIComponent(urlType)}`);
             const title = getTitle(item);
             const desc = getDesc(item);
             const active = type && type === urlType;
+            const heroImg =
+                item.heroImage && typeof window.wkRootAssetUrl === 'function'
+                    ? window.wkRootAssetUrl(item.heroImage)
+                    : item.heroImage;
 
             return `
                 <a class="tent-type-card${active ? ' is-active' : ''}" href="${href}">
                     <div class="tent-type-card__imgWrap">
-                        <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                        <img class="tent-type-card__img" src="${heroImg}" alt="" loading="lazy" onerror="this.style.display='none'" />
                     </div>
                     <div class="tent-type-card__body">
                         <div class="tent-type-card__title">${title}</div>

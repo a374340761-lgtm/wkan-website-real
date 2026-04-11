@@ -1,10 +1,45 @@
 // 产品管理系统
 
-// Hero slides data (centralized)
+/** Root-absolute URL for images/CSS/static files (works from /zh/... pages). */
+function wkRootAssetUrl(path) {
+    if (path == null || path === '') return path;
+    const s = String(path).trim();
+    if (/^(https?:|data:|\/\/)/i.test(s)) return s;
+    let p = s.replace(/^\.\//, '');
+    if (!p.startsWith('/')) p = '/' + p;
+    if (!/[^\u0000-\u007f]/.test(p)) return p;
+    const parts = p.split('/');
+    for (let i = 1; i < parts.length; i++) {
+        if (parts[i] !== '' && /[^\u0000-\u007f]/.test(parts[i])) {
+            parts[i] = encodeURIComponent(parts[i]);
+        }
+    }
+    return parts.join('/');
+}
+window.wkRootAssetUrl = wkRootAssetUrl;
+
+/** EN root-relative path + query -> /zh/... when on Chinese URLs and a mirror exists (see bilingual-routing.js). */
+function wkLocalizedInternalLink(href) {
+    if (href == null || href === '') return href;
+    const s = String(href).trim();
+    if (/^(https?:|mailto:|tel:|javascript:)/i.test(s)) return s;
+    const normalized = s.startsWith('/') ? s : '/' + s.replace(/^\.\//, '');
+    if (typeof window.wkLocalizedPageHref === 'function') {
+        try {
+            return window.wkLocalizedPageHref(normalized);
+        } catch (e) {
+            /* ignore */
+        }
+    }
+    return normalized;
+}
+window.wkLocalizedInternalLink = wkLocalizedInternalLink;
+
+// Hero slides data (centralized) — use root-absolute /images/ and /product-center.html for /zh/ compatibility
 window.HERO_SLIDES = [
     {
         id: 'displays',
-        image: 'images/hero/伟群快幕秀照片.jpeg',
+        image: '/images/hero/伟群快幕秀照片.jpeg',
         alt: 'Display Systems',
         kickerZh: '畅销产品 · 展示系统',
         kickerEn: 'Top Seller · Display Systems',
@@ -17,13 +52,13 @@ window.HERO_SLIDES = [
             { label: 'Material', valueZh: '铝合金框架 + 布喷画面', valueEn: 'Aluminum frame + Fabric graphic' },
             { label: 'Lead Time', valueZh: '样品 7–15 天｜大货 15–25 天', valueEn: '7–15 days (sample) · 15–25 days (bulk)' }
         ],
-        ctaHref: './product-center.html?cat=displays',
+        ctaHref: '/product-center.html?cat=displays',
     ctaTextZh: '浏览该分类',
     ctaTextEn: 'Browse Category'
   },
   {
     id: 'flags',
-    image: 'images/hero/hero-flag.jpg',
+    image: '/images/hero/hero-flag.jpg',
     alt: 'Beach Flags',
     kickerZh: '畅销产品 · 户外广告',
     kickerEn: 'Top Seller · Outdoor Advertising',
@@ -36,13 +71,13 @@ window.HERO_SLIDES = [
       { label: 'Size', valueZh: '2m / 3m / 4m / 5m（可定制）', valueEn: '2m / 3m / 4m / 5m (custom available)' },
       { label: 'Application', valueZh: '展会 · 商业推广 · 户外活动', valueEn: 'Events · Promotions · Outdoor use' }
     ],
-    ctaHref: './product-center.html?cat=flags',
+    ctaHref: '/product-center.html?cat=flags',
     ctaTextZh: '浏览该分类',
     ctaTextEn: 'Browse Category'
   },
   {
     id: 'tents',
-    image: 'images/hero/hero-tent.jpg',
+    image: '/images/hero/hero-tent.jpg',
     alt: 'Custom Canopy Tent',
     kickerZh: '畅销产品 · 户外帐篷',
     kickerEn: 'Top Seller · Event Tent',
@@ -55,11 +90,23 @@ window.HERO_SLIDES = [
       { label: 'Frame', valueZh: '铝合金 / 加厚钢架', valueEn: 'Aluminum / Heavy-duty steel' },
       { label: 'Customization', valueZh: 'LOGO 印刷 · 颜色定制 · 配件可选', valueEn: 'Logo printing · Color options · Accessories' }
     ],
-    ctaHref: './product-center.html?cat=tents',
+    ctaHref: '/product-center.html?cat=tents',
     ctaTextZh: '浏览该分类',
     ctaTextEn: 'Browse Category'
   }
 ];
+
+/** URL path is authoritative for listing language (/zh/ vs root). Not localStorage. */
+function wkProductManagerLangFromUrl() {
+    if (typeof window.wkResolvePageLanguage === 'function') {
+        return window.wkResolvePageLanguage();
+    }
+    try {
+        const p = window.location.pathname.replace(/\\/g, '/');
+        if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e) {}
+    return 'en';
+}
 
 class ProductManager {
     constructor() {
@@ -1173,9 +1220,9 @@ class ProductManager {
                 shortZh: '适用于大面积发光背景墙的卡布拉网灯箱系统。',
                 descriptionEn: 'SEG net light box series designed for large backlit walls. Aluminum structure with LED backlighting and silicone edge fabric graphics. Seamless look, modular assembly and custom sizes available.',
                 descriptionZh: '卡布拉网灯箱系列，适合大面积发光背景墙：铝合金结构 + LED 背光 + SEG 硅胶边条布画。外观无缝平整，模块化安装，支持定制尺寸。',
-                image: 'images/products/displays/tension-fabric-displays/23.png',
-                images: ['images/products/displays/tension-fabric-displays/23.png'],
-                gallery: ['images/products/displays/tension-fabric-displays/23.png'],
+                image: 'images/hero/伟群快幕秀照片.jpeg',
+                images: ['images/hero/伟群快幕秀照片.jpeg'],
+                gallery: ['images/hero/伟群快幕秀照片.jpeg'],
                 specsZh: {
                     '尺寸': '支持定制（大尺寸可拼接）',
                     '光源': 'LED 背光',
@@ -2044,7 +2091,7 @@ class ProductManager {
                 nameEn: 'Blade flag connector',
                 descriptionZh: '重量:0.5KG',
                 descriptionEn: 'Weight: 0.5KG',
-                image: 'images/products/accessories/tent-accessories1/刀旗连接件WKT12hero.jpg',
+                image: 'images/products/accessories/tent-accessories1/WKT12-hero.jpg',
                 grid: { row: 5, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2446,7 +2493,7 @@ class ProductManager {
             p.pdf = DEFAULT_PDF_BY_CATEGORY[cat] || DEFAULT_PDF_BY_CATEGORY.default;
         });
         this.currentCategory = 'all';
-        this.currentLanguage = 'zh';
+        this.currentLanguage = wkProductManagerLangFromUrl();
         this.searchQuery = '';
         this.selectedTags = new Set();
         this.sortBy = 'popular';
@@ -2616,7 +2663,7 @@ class ProductManager {
 
         const cells = paths
             .map((raw) => {
-                const src = encodeURI(raw);
+                const src = wkRootAssetUrl(encodeURI(raw));
                 return `<a href="${src}" target="_blank" rel="noopener" class="pdp-catalog-examples__link"><img class="pdp-catalog-examples__img" src="${src}" alt="" loading="lazy" /></a>`;
             })
             .join('');
@@ -2798,10 +2845,8 @@ class ProductManager {
         this.currentSubcategory = null;
     }
 
-    // 读取全局多语言系统的当前语言（如果存在）以便初始渲染正确
-    if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
-        this.currentLanguage = window.multiLang.getCurrentLanguage();
-    }
+    // Listing language follows URL (/zh/ vs root), not localStorage (see wkResolvePageLanguage).
+    this.currentLanguage = wkProductManagerLangFromUrl();
 
     // C：更新 SEO 和标题
     this.updateSEO();
@@ -2985,8 +3030,11 @@ class ProductManager {
         const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
             ? String(product.sku).trim()
             : (product && product.id != null ? String(product.id).trim() : '');
-        const typeHref = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
-        const detailHref = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html';
+        const typeHrefRaw = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
+        const typeHref = typeHrefRaw ? wkLocalizedInternalLink(typeHrefRaw) : '';
+        const detailHref = preferredSku
+            ? wkLocalizedInternalLink(`/product-detail.html?sku=${encodeURIComponent(preferredSku)}`)
+            : wkLocalizedInternalLink('/all-products.html');
         const primaryHref = typeHref || detailHref;
         const primaryTranslate = typeHref ? 'view_type_button' : 'view_details';
         const primaryClass = typeHref ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
@@ -3558,8 +3606,11 @@ getProductIcon(category) {
                 const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
                     ? String(product.sku).trim()
                     : (product && product.id != null ? String(product.id).trim() : '');
-                const typeHref = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
-                const detailHref = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html';
+                const typeHrefRaw = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
+                const typeHref = typeHrefRaw ? wkLocalizedInternalLink(typeHrefRaw) : '';
+                const detailHref = preferredSku
+                    ? wkLocalizedInternalLink(`/product-detail.html?sku=${encodeURIComponent(preferredSku)}`)
+                    : wkLocalizedInternalLink('/all-products.html');
                 const titleHref = typeHref || detailHref;
         const description = this.getLocalizedDescription(product);
         const specs = this.getLocalizedSpecs(product);
@@ -3570,6 +3621,7 @@ getProductIcon(category) {
         if (imageUrl && !imageUrl.startsWith('images/') && !imageUrl.startsWith('/') && !imageUrl.startsWith('./')) {
             imageUrl = 'images/' + imageUrl;
         }
+        imageUrl = wkRootAssetUrl(imageUrl);
 
         let imageHtml = '';
         if (product && product.grid && product.grid.row && product.grid.col && imageUrl) {
@@ -3580,7 +3632,7 @@ getProductIcon(category) {
             imageHtml = `<div class="product-row-image"><div class="sprite-thumb" style="background-image:url('${imageUrl}');background-position:${x}% ${y}%;"></div></div>`;
         } else if (imageUrl) {
             const altText = `${product.nameEn || name} / ${product.name || ''}`;
-            imageHtml = `<div class="product-row-image"><img src="${imageUrl}" alt="${altText}" onerror="this.src='images/placeholder.png'" /></div>`;
+            imageHtml = `<div class="product-row-image"><img src="${imageUrl}" alt="${altText}" onerror="this.src='/images/placeholder.png'" /></div>`;
         } else {
             imageHtml = `<div class="product-row-image"><i class=\"fas fa-${imageIcon}\" style=\"font-size:4rem;color:var(--primary-color);display:flex;align-items:center;justify-content:center;height:100%;\"></i></div>`;
         }
@@ -4421,7 +4473,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             const folder = folderMap[t];
             if (folder) {
-                return encodeURI(`images/products/racegate/${folder}/hero.png`);
+                return wkRootAssetUrl(encodeURI(`images/products/racegate/${folder}/hero.png`));
             }
         }
 
@@ -4431,12 +4483,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const col = Number(p.grid.col);
             if (Number.isFinite(row) && Number.isFinite(col) && row >= 1 && col >= 1) {
                 const idx = (row - 1) * 4 + col;
-                // These files exist under images/products/accessories/tent-accessories1/
-                return `images/products/accessories/tent-accessories1/page_4_img_${idx}.png`;
+                return wkRootAssetUrl(`images/products/accessories/tent-accessories1/page_4_img_${idx}.png`);
             }
         }
 
         const raw = p.image || (Array.isArray(p.images) ? p.images[0] : '') || '';
-        return raw ? encodeURI(String(raw)) : '';
+        // wkRootAssetUrl 已处理站点根路径与非 ASCII 段；外层不要再 encodeURI（易与 % 编码冲突导致列表图 404）
+        return raw ? wkRootAssetUrl(String(raw).trim()) : '';
     };
 });

@@ -326,6 +326,15 @@
 
         getLang() {
             try {
+                if (typeof window.wkResolvePageLanguage === 'function') {
+                    return window.wkResolvePageLanguage();
+                }
+            } catch { /* ignore */ }
+            try {
+                const p = window.location.pathname.replace(/\\/g, '/');
+                if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+            } catch { /* ignore */ }
+            try {
                 if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
                     return window.multiLang.getCurrentLanguage() || 'en';
                 }

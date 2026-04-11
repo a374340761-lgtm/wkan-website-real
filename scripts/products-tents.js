@@ -10,7 +10,14 @@
   }
 
   function getLang(){
-    try{ return window.multiLang ? window.multiLang.getCurrentLanguage() : (navigator.language||'en'); }catch(e){return 'en';}
+    try{
+      if (typeof window.wkResolvePageLanguage === 'function') return window.wkResolvePageLanguage();
+    }catch(e){}
+    try{
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    }catch(e2){}
+    try{ return window.multiLang ? window.multiLang.getCurrentLanguage() : 'en'; }catch(e3){return 'en';}
   }
 
   function renderCards(pm, filterType){

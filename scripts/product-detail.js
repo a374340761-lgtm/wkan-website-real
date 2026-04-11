@@ -57,10 +57,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getCurrentLang = () => {
         try {
+            if (typeof window.wkResolvePageLanguage === 'function') {
+                return window.wkResolvePageLanguage();
+            }
+        } catch (e) {}
+        try {
+            const p = window.location.pathname.replace(/\\/g, '/');
+            if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+        } catch (e2) {}
+        try {
             return window.multiLang ? window.multiLang.getCurrentLanguage() : 'en';
-        } catch (e) {
+        } catch (e3) {
             return 'en';
         }
+    };
+
+    /** Relative catalog paths like `images/...` resolve under `/zh/` → `/zh/images/...` (404). Force site-root (+ Unicode segment encoding via products.js). */
+    const toSiteRootAssetUrl = (p) => {
+        if (typeof window.wkRootAssetUrl === 'function') return window.wkRootAssetUrl(p);
+        const s = String(p == null ? '' : p).trim();
+        if (!s) return s;
+        if (/^https?:\/\//i.test(s)) return s;
+        if (s.charAt(0) === '/') return s;
+        return `/${s.replace(/^\/+/, '')}`;
     };
 
     const getCategoryLabel = (cat) => {
@@ -167,9 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Page title and SEO (EN: short brand; ZH: full company name from i18n)
         const companyName = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('company_name') : '';
-        const lang = (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function')
-            ? window.multiLang.getCurrentLanguage()
-            : 'en';
+        const lang = getCurrentLang();
         const brandSuffix = lang === 'zh' ? (companyName || '伟群帐篷') : 'Tent & Display Manufacturer | WaiKwan';
         document.title = `${name} | ${brandSuffix}`;
         const metaDesc = document.querySelector('meta[name="description"]');
@@ -376,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const imgs = Array.isArray(product.images) && product.images.length
             ? product.images.filter(Boolean)
             : (product.image ? [product.image] : []);
-        const primaryImage = imgs[0] || product.image || 'images/placeholder.png';
+        const primaryImage = toSiteRootAssetUrl(imgs[0] || product.image || 'images/placeholder.png');
         if (imageEl) {
             imageEl.src = primaryImage;
             imageEl.alt = name;
@@ -394,8 +411,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (activeEl) activeEl.classList.add('is-active');
             };
             thumbList.forEach((src) => {
+                const normalized = toSiteRootAssetUrl(src);
                 const imgEl = document.createElement('img');
-                imgEl.src = src;
+                imgEl.src = normalized;
                 imgEl.alt = name;
                 imgEl.loading = 'lazy';
                 imgEl.setAttribute('role', 'button');
@@ -403,7 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 imgEl.onerror = function() { this.style.display = 'none'; };
                 imgEl.addEventListener('click', () => {
                     if (imageEl) {
-                        imageEl.src = src;
+                        imageEl.src = normalized;
                         imageEl.alt = name;
                     }
                     setActiveThumb(imgEl);
@@ -715,7 +733,8 @@ document.addEventListener('DOMContentLoaded', () => {
             block.appendChild(caption);
 
             const img = document.createElement('img');
-            img.src = brochureSrc;
+            const brochureUrl = toSiteRootAssetUrl(brochureSrc);
+            img.src = brochureUrl;
             img.setAttribute('data-translate-alt', 'view_type_brochure_ref');
             img.loading = 'lazy';
             img.style.display = 'block';
@@ -728,7 +747,7 @@ document.addEventListener('DOMContentLoaded', () => {
             img.onerror = function() { this.style.display = 'none'; };
             img.addEventListener('click', () => {
                 try {
-                    window.open(brochureSrc, '_blank', 'noopener');
+                    window.open(brochureUrl, '_blank', 'noopener');
                 } catch (e) {
                     // ignore
                 }

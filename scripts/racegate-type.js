@@ -11,8 +11,17 @@
 
   function getLang() {
     try {
+      if (typeof window.wkResolvePageLanguage === 'function') {
+        return window.wkResolvePageLanguage();
+      }
+    } catch (e) {}
+    try {
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e2) {}
+    try {
       return window.multiLang ? window.multiLang.getCurrentLanguage() : 'en';
-    } catch (e) {
+    } catch (e3) {
       return 'en';
     }
   }

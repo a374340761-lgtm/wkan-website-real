@@ -2,6 +2,22 @@
 (function () {
   'use strict';
 
+  /** Image/static paths from data → root-absolute URL (works on /zh/... pages). */
+  function wkAssetUrl(u) {
+    if (u == null || u === '') return u;
+    const s = String(u).trim();
+    if (/^(https?:|data:|\/\/)/i.test(s)) return s;
+    if (typeof window.wkRootAssetUrl === 'function') {
+      try {
+        return window.wkRootAssetUrl(s);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    const x = s.replace(/^\.\//, '');
+    return x.startsWith('/') ? x : '/' + x;
+  }
+
   /** Hub cards (tents/flags) may omit nameZh; use same title fallback as product listings. */
   function hubItemTitle(item, lang) {
     if (typeof window.WK_productDisplayName === 'function') {
@@ -118,14 +134,17 @@
   }
 
   function getCurrentLang() {
-    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-    if (htmlLang === 'zh' || htmlLang === 'en') return htmlLang;
     try {
-      const saved = (localStorage.getItem('site_language') || '').toLowerCase();
-      if (saved === 'zh' || saved === 'en') return saved;
-    } catch (e) {
-      // ignore
-    }
+      if (typeof window.wkResolvePageLanguage === 'function') {
+        return window.wkResolvePageLanguage();
+      }
+    } catch (e) {}
+    try {
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e2) {}
+    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+    if (htmlLang === 'zh' || htmlLang === 'zh-cn') return 'zh';
     return 'en';
   }
 
@@ -569,7 +588,7 @@
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
                   <div class="tent-type-card__imgWrap">
-                    <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                    <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
                   </div>
                 </a>
                 <div class="tent-type-card__body">
@@ -639,7 +658,7 @@
           <div class="tent-type-card">
             <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
               <div class="tent-type-card__imgWrap">
-                <img class="tent-type-card__img" src="${safe(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
               </div>
             </a>
             <div class="tent-type-card__body">
@@ -682,7 +701,7 @@
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
                   <div class="tent-type-card__imgWrap">
-                    <img class="tent-type-card__img" src="${item.heroImage}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                    <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
                   </div>
                 </a>
                 <div class="tent-type-card__body">

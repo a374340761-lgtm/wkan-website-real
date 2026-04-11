@@ -13,14 +13,17 @@
   ];
 
   function getCurrentLang() {
-    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-    if (htmlLang === 'zh' || htmlLang === 'en') return htmlLang;
     try {
-      const saved = (localStorage.getItem('site_language') || '').toLowerCase();
-      if (saved === 'zh' || saved === 'en') return saved;
-    } catch (e) {
-      // ignore
-    }
+      if (typeof window.wkResolvePageLanguage === 'function') {
+        return window.wkResolvePageLanguage();
+      }
+    } catch (e) {}
+    try {
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e2) {}
+    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+    if (htmlLang === 'zh' || htmlLang === 'zh-cn') return 'zh';
     return 'en';
   }
 

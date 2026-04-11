@@ -38,7 +38,7 @@
   }
 
   function openImageModal(src, title) {
-    const s = (src || '').toString();
+    const s = wkAssetUrl((src || '').toString());
     if (!s) return;
 
     const modal = ensureImageModal();
@@ -50,11 +50,18 @@
   }
 
   function getCurrentLang() {
+    try {
+      if (typeof window.wkResolvePageLanguage === 'function') {
+        return window.wkResolvePageLanguage();
+      }
+    } catch (e) {}
+    try {
+      const p = window.location.pathname.replace(/\\/g, '/');
+      if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e2) {}
     if (window.multiLang && typeof window.multiLang.getCurrentLanguage === 'function') {
       return window.multiLang.getCurrentLanguage();
     }
-    const htmlLang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-    if (htmlLang) return htmlLang;
     return 'en';
   }
 
@@ -76,6 +83,21 @@
 
   function safe(s) {
     return (s || '').toString();
+  }
+
+  function wkAssetUrl(u) {
+    if (u == null || u === '') return '';
+    const s = String(u).trim();
+    if (/^(https?:|data:|\/\/)/i.test(s)) return s;
+    if (typeof window.wkRootAssetUrl === 'function') {
+      try {
+        return window.wkRootAssetUrl(s);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    const x = s.replace(/^\.\//, '');
+    return x.startsWith('/') ? x : '/' + x;
   }
 
   function flagRawRow(row) {
@@ -340,7 +362,7 @@
         <div class="tent-type-detail__visuals" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
           ${imgs
             .map((src) => {
-              const s = safe(src);
+              const s = wkAssetUrl(safe(src));
               return `<a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" /></a>`;
             })
             .join('')}
@@ -351,7 +373,7 @@
 
   function renderHero(item) {
     if (!item) return '';
-    const src = safe(item.heroImage || item.guideImage || (Array.isArray(item.guideImages) ? item.guideImages[0] : ''));
+    const src = wkAssetUrl(safe(item.heroImage || item.guideImage || (Array.isArray(item.guideImages) ? item.guideImages[0] : '')));
     if (!src) return '';
     return `
       <div class="tent-type-detail__block tent-type-detail__block--hero">
@@ -380,7 +402,7 @@
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
           ${imgs
             .map((src) => {
-              const s = safe(src);
+              const s = wkAssetUrl(safe(src));
               return `
                 <button type="button" data-wk-image="${s}" data-wk-title="${safe(title)}" aria-label="Open brochure image" style="border:none;background:transparent;padding:0;display:block;width:100%;cursor:zoom-in;">
                   <img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" onerror="this.style.display='none'" />

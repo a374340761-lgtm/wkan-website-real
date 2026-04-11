@@ -15,6 +15,10 @@ const COMPANY_NAME = {
 
 // ✅ 获取语言：优先从 localStorage 读取；未知语言回退到英文
 function getLang() {
+    try {
+        const p = window.location.pathname.replace(/\\/g, '/');
+        if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+    } catch (e) {}
     const saved = localStorage.getItem(LANG_KEY);
     if (saved && ENABLED_LANGS.includes(saved)) return saved;
     return DEFAULT_LANG;
@@ -1989,8 +1993,8 @@ class MultiLanguageSystem {
     }
     
     updateDocumentLanguage(lang) {
-        document.documentElement.lang = lang;
-        
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+
         // 更新字体方向（如果需要）
         const rtlLanguages = ['ar', 'he', 'fa'];
         document.documentElement.dir = rtlLanguages.includes(lang) ? 'rtl' : 'ltr';

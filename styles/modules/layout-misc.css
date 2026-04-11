@@ -658,7 +658,8 @@ html[lang="en"] .top3-title .zh {
     display: none;
 }
 
-html[lang="zh"] .top3-title .en {
+html[lang="zh"] .top3-title .en,
+html[lang="zh-CN"] .top3-title .en {
     display: block;
 }
 
@@ -711,7 +712,8 @@ html[lang="en"] .top3-card-title .zh {
     display: none;
 }
 
-html[lang="zh"] .top3-card-title .en {
+html[lang="zh"] .top3-card-title .en,
+html[lang="zh-CN"] .top3-card-title .en {
     display: block;
 }
 
@@ -728,7 +730,8 @@ html[lang="en"] .top3-subtitle .zh {
     display: none;
 }
 
-html[lang="zh"] .top3-subtitle .en {
+html[lang="zh"] .top3-subtitle .en,
+html[lang="zh-CN"] .top3-subtitle .en {
     display: block;
 }
 
@@ -787,7 +790,9 @@ html[lang="en"] .top3-actions .btn-secondary .zh {
 }
 
 html[lang="zh"] .top3-actions .btn-primary .en,
-html[lang="zh"] .top3-actions .btn-secondary .en {
+html[lang="zh-CN"] .top3-actions .btn-primary .en,
+html[lang="zh"] .top3-actions .btn-secondary .en,
+html[lang="zh-CN"] .top3-actions .btn-secondary .en {
     display: none;
 }
 
@@ -832,7 +837,8 @@ html[lang="en"] .top3-note .zh {
     display: none;
 }
 
-html[lang="zh"] .top3-note .en {
+html[lang="zh"] .top3-note .en,
+html[lang="zh-CN"] .top3-note .en {
     display: block;
 }
 

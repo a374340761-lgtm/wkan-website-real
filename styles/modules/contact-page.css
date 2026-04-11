@@ -975,7 +975,8 @@ html[lang="en"] .brand-sub {
 }
 
 /* 中文模式：显示中英对照 */
-html[lang="zh"] .brand-name { 
+html[lang="zh"] .brand-name,
+html[lang="zh-CN"] .brand-name { 
     display: block; 
     font-weight: 800;
     font-size: 1.5rem;
@@ -984,11 +985,13 @@ html[lang="zh"] .brand-name {
     letter-spacing: -0.5px;
 }
 
-html[lang="zh"] .brand-name-en { 
+html[lang="zh"] .brand-name-en,
+html[lang="zh-CN"] .brand-name-en { 
     display: block; 
 }
 
-html[lang="zh"] .brand-sub {
+html[lang="zh"] .brand-sub,
+html[lang="zh-CN"] .brand-sub {
     display: block;
     font-size: 0.8rem;
     color: #6b7a90;
@@ -1008,7 +1011,8 @@ html[lang="zh"] .brand-sub {
         font-size: 1.2rem;
     }
     
-    html[lang="zh"] .brand-name {
+    html[lang="zh"] .brand-name,
+    html[lang="zh-CN"] .brand-name {
         font-size: 1.2rem;
     }
 }

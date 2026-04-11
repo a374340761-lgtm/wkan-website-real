@@ -177,7 +177,12 @@
     if (document.getElementById('wk-org-jsonld')) return;
     try {
       var path = (window.location.pathname || '/').replace(/\\/g, '/');
-      var isHome = path === '/' || /\/index\.html$/i.test(path);
+      var isHome =
+        path === '/' ||
+        /\/index\.html$/i.test(path) ||
+        path === '/zh' ||
+        /^\/zh\/?$/i.test(path) ||
+        /\/zh\/index\.html$/i.test(path);
       if (!isHome) return;
     } catch (e) {
       return;
@@ -231,6 +236,9 @@
       var canonicalAbs = normalizeCanonical();
       applySocialTags(canonicalAbs);
       injectOrganizationJsonLd();
+      if (typeof window.wkBilingualInjectHreflang === 'function') {
+        window.wkBilingualInjectHreflang();
+      }
     } catch (e) {}
   }
 

@@ -189,7 +189,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Align canonical + og:url + JSON-LD + Twitter with final www URL (single preferred origin).
         const BASE_URL = WK_PREFERRED_ORIGIN;
-        const canonicalProductUrl = `${BASE_URL}/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
+        const pathForCanon = String(window.location.pathname || '').replace(/\\/g, '/');
+        const pdpLocalePrefix = pathForCanon.indexOf('/zh/') >= 0 ? '/zh' : '';
+        const canonicalProductUrl = `${BASE_URL}${pdpLocalePrefix}/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
         const linkCanonical = document.querySelector('link[rel="canonical"]');
         if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
         const ogUrlMeta = document.querySelector('meta[property="og:url"]');

@@ -334,8 +334,9 @@ class ProductManager {
                     keywords: ['快幕秀', '布拉网', 'pop up display', 'popup display', 'fabric display', 'backdrop', 'exhibition backdrop', 'WK-PO-01', 'trade show', 'portable display'],
                     tags: 'Fabric Pop Up Display, 快幕秀, 布拉网, WK-PO-01, backdrop, exhibition',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
-                    referenceImage: 'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
-                    referenceImageLabel: '产品主图 / Product Hero',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    referenceSourceKey: 'view_type_brochure_source_19',
                     price: '询价'
                 },
                 {
@@ -415,8 +416,9 @@ class ProductManager {
                     keywords: ['张拉布', '前台', 'tension fabric', 'fabric counter', 'reception counter', 'display counter', 'WK-PO-01-A', 'WK-PO-02-B', 'WK-PO-03-C', 'illuminated', 'booth furniture'],
                     tags: 'Tension Fabric Counter, 张拉布前台, Fabric Counter, counter, reception desk, exhibition counter',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
-                    referenceImage: encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
-                    referenceImageLabel: '产品主图 / Product Hero',
+                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
+                    referenceSourceKey: 'view_type_brochure_source_19',
                     price: '询价'
                 },
 

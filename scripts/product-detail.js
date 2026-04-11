@@ -82,6 +82,17 @@ document.addEventListener('DOMContentLoaded', () => {
         return `/${s.replace(/^\/+/, '')}`;
     };
 
+    /** Exported PDF catalog scans live under `...2025allpagepng/` — must not be replaced by product hero images. */
+    const isCatalogScanPath = (p) => {
+        const s = String(p || '').trim();
+        if (!s) return false;
+        if (/2025allpagepng/i.test(s)) return true;
+        try {
+            if (decodeURIComponent(s).includes('2025allpagepng')) return true;
+        } catch (e) { /* ignore */ }
+        return false;
+    };
+
     const getCategoryLabel = (cat) => {
         const map = {
             tents: 'home_cat_tents_title',
@@ -698,13 +709,26 @@ document.addEventListener('DOMContentLoaded', () => {
             variantsEl.appendChild(tbl);
         }
 
-        // Catalog reference image (产品画册参考) — catalog p.17.png; all 桌/椅/凳/厕所 PDPs use same source
+        // Catalog reference image (产品画册参考) — must use pages under 2025allpagepng; never substitute product.image / hero.
         const FURNITURE_CATALOG_BROCHURE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/17.png');
         const isFurnitureTableChairCat = product
             && String(product.category) === 'furniture'
             && String(product.subcategory) === 'table-chair-stool-toilet';
-        const brochureSrc = (product.referenceImage && String(product.referenceImage).trim())
-            || (isFurnitureTableChairCat ? FURNITURE_CATALOG_BROCHURE : '');
+        const rawRefImg = (product.referenceImage && String(product.referenceImage).trim()) || '';
+        const refLabel = String(product.referenceImageLabel || '');
+        const heroMisusedAsCatalog = /产品主图|Product Hero/i.test(refLabel) && !isCatalogScanPath(rawRefImg);
+        const claimsBrochurePage = /画册参考|Product Catalog Reference/i.test(refLabel);
+        const brochurePageButNotScan = claimsBrochurePage && rawRefImg && !isCatalogScanPath(rawRefImg);
+        let brochureSrc = '';
+        if (heroMisusedAsCatalog || brochurePageButNotScan) {
+            brochureSrc = '';
+        } else if (isCatalogScanPath(rawRefImg)) {
+            brochureSrc = rawRefImg;
+        } else if (isFurnitureTableChairCat) {
+            brochureSrc = FURNITURE_CATALOG_BROCHURE;
+        } else if (rawRefImg) {
+            brochureSrc = rawRefImg;
+        }
         const brochureSourceKey = (product.referenceSourceKey && String(product.referenceSourceKey).trim())
             || 'view_type_brochure_source_17';
 

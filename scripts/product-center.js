@@ -18,6 +18,20 @@
     return x.startsWith('/') ? x : '/' + x;
   }
 
+  /** EN path → `/zh/...` when on Chinese mirror (see products.js). */
+  function localizedInternal(href) {
+    const raw = String(href || '').trim();
+    const normalized = raw.startsWith('/') ? raw : '/' + raw.replace(/^\.\//, '');
+    if (typeof window.wkLocalizedInternalLink === 'function') {
+      try {
+        return window.wkLocalizedInternalLink(normalized);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    return normalized;
+  }
+
   /** Hub cards (tents/flags) may omit nameZh; use same title fallback as product listings. */
   function hubItemTitle(item, lang) {
     if (typeof window.WK_productDisplayName === 'function') {
@@ -441,7 +455,24 @@
       return;
     }
 
-    const cardsHtml = subs.map((s) => {
+    const domeDisplaysLead =
+      String(cat || '').toLowerCase() === 'displays'
+        ? `
+        <a class="wk-card" href="${escapeHtml(localizedInternal('/dome-type.html'))}" style="display:block;padding:16px 16px;text-decoration:none;grid-column:1 / -1;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <div style="font-weight:800;color:rgba(31,45,61,.92);">
+              <span class="zh" data-translate="menu_dome_3_folders"></span>
+              <span class="en" data-translate="menu_dome_3_folders"></span>
+            </div>
+            <div style="font-weight:800;color:rgba(44,90,160,.85);">→</div>
+          </div>
+        </a>
+      `
+        : '';
+
+    const cardsHtml =
+      domeDisplaysLead +
+      subs.map((s) => {
       const href = `all-products.html?cat=${encodeURIComponent(cat)}&sub=${encodeURIComponent(s.name)}`;
       const countText = (lang === 'zh') ? `${s.count} 个产品` : `${s.count} items`;
       return `

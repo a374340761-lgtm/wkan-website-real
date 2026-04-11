@@ -1,7 +1,19 @@
 (function () {
   'use strict';
 
-  const BROCHURE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/17.png');
+  /** Root-absolute URL so brochure loads on `/zh/...` (relative `images/` would hit `/zh/images/...`). */
+  function brochureAssetUrl() {
+    const rel = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+    if (typeof window.wkRootAssetUrl === 'function') {
+      try {
+        return window.wkRootAssetUrl(rel);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    const x = rel.replace(/^\.\//, '');
+    return x.startsWith('/') ? x : '/' + x;
+  }
 
   // Render immediately (no waiting), then optionally upgrade with productManager data.
   const STATIC_ITEMS = [
@@ -158,15 +170,16 @@
   function init() {
     const img = document.getElementById('domeBrochureImg');
     const btn = document.getElementById('domeBrochureBtn');
+    const brochure = brochureAssetUrl();
 
-    if (img) img.src = BROCHURE;
+    if (img) img.src = brochure;
 
     if (btn) {
       btn.addEventListener('click', () => {
         const title = (window.wkI18n && typeof window.wkI18n.t === 'function')
           ? window.wkI18n.t('view_type_brochure_ref')
           : '';
-        openImageModal(BROCHURE, title);
+        openImageModal(brochure, title);
       });
     }
 

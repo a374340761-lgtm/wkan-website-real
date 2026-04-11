@@ -6,6 +6,12 @@
 (function () {
     'use strict';
 
+    /** Full PDF page exports (filename = page number). Replaces missing `images/products/tents/_reference/pdf_p*.png` placeholders. */
+    const CAT2025 = 'images/广西伟群帐篷制造有限公司2025allpagepng';
+    const CATALOG_PAGE = function (n) {
+        return `${CAT2025}/${String(n).padStart(2, '0')}.png`;
+    };
+
     // NOTE:
     // - Page 5 has extractable text for sizes/weights and WK-T30/40/50 model series.
     // - Page 6 appears image-based in this PDF build; OCR is blocked on this Windows environment.
@@ -91,7 +97,7 @@
                     'images/products/accessories/tent-accessories.png'
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p5.png'
+                    CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/folding30/hero.png',
                 pdfPage: 5
@@ -138,7 +144,7 @@
                     'images/products/accessories/tent-accessories.png'
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p5.png'
+                    CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/folding40/hero.png',
                 pdfPage: 5
@@ -184,7 +190,7 @@
                     'images/products/accessories/tent-accessories.png'
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p5.png'
+                    CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/folding50/hero.png',
                 pdfPage: 5
@@ -235,7 +241,7 @@
                     'images/products/accessories/tent-accessories.png'
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p6.png'
+                    CATALOG_PAGE(5)
                 ],
                 pdfPage: 6
             },
@@ -283,7 +289,7 @@
                     'images/products/accessories/tent-accessories.png'
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p6.png'
+                    CATALOG_PAGE(5)
                 ],
                 pdfPage: 6
             },
@@ -326,7 +332,7 @@
                     'images/products/accessories/tent-accessories.png'
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p6.png'
+                    CATALOG_PAGE(5)
                 ],
                 pdfPage: 6
             },
@@ -366,7 +372,7 @@
                     { href: 'six-sided-booth.html', labelZh: '查看详情页', labelEn: 'View product page' }
                 ],
                 guideImages: [
-                    'images/products/tents/_reference/pdf_p6.png'
+                    CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/six-sided/hero.png',
                 pdfPage: 6

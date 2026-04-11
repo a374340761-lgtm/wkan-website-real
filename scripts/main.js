@@ -769,10 +769,20 @@ function wkCloseNestedSubmenuPeers(dropdownMenuEl, exceptWrapper) {
     });
 }
 
-/** Nested tents/flags/displays submenus: use tap-to-expand on tablet/desktop; flat list on mobile panel. */
-function wkNavAllowNestedAccordionTap() {
-    if (typeof window.matchMedia !== 'function') return true;
-    return !window.matchMedia('(max-width: 768px)').matches;
+/**
+ * When true, first tap on Tents/Flags/Displays/Furniture parent rows toggles nested accordion (mobile drawer or touch devices).
+ * When false, rely on CSS :hover for desktop pointer users — do not intercept click.
+ * (Previously inverted max-width check broke nested toggles entirely below 768px.)
+ */
+function wkShouldToggleNestedSubmenuOnClick() {
+    if (typeof window.matchMedia !== 'function') return false;
+    const navMenu = document.querySelector('.nav-menu');
+    const drawerOpen = !!(navMenu && navMenu.classList.contains('active'));
+    if (drawerOpen) return true;
+    try {
+        if (window.matchMedia('(hover: none)').matches) return true;
+    } catch (e) { /* ignore */ }
+    return false;
 }
 
 // 导航功能
@@ -1164,13 +1174,7 @@ function enhanceTentsDropdown() {
         return `tent-type.html?type=${encodeURIComponent(key)}`;
     };
 
-    const shouldTapToOpen = () => {
-        if (!wkNavAllowNestedAccordionTap()) return false;
-        const navMenu = document.querySelector('.nav-menu');
-        const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
-        const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
-        return isMobileMenuOpen || noHover;
-    };
+    const shouldTapToOpen = () => wkShouldToggleNestedSubmenuOnClick();
 
     menus.forEach((menu) => {
         // Prevent double-inject.
@@ -1358,13 +1362,7 @@ function enhanceFlagsDropdown() {
             window.multiLang.translatePage();
         }
 
-        const shouldTapToOpenFlags = () => {
-            if (!wkNavAllowNestedAccordionTap()) return false;
-            const navMenuEl = document.querySelector('.nav-menu');
-            const isMobileMenuOpen = !!(navMenuEl && navMenuEl.classList.contains('active'));
-            const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
-            return isMobileMenuOpen || noHover;
-        };
+        const shouldTapToOpenFlags = () => wkShouldToggleNestedSubmenuOnClick();
 
         flagsLink.setAttribute('aria-haspopup', 'true');
         flagsLink.setAttribute('aria-expanded', 'false');
@@ -1389,15 +1387,12 @@ function enhanceDisplaysDropdown() {
 
     const getCurrentLang = () => getCurrentLangSafe();
 
-    const shouldTapToOpen = () => {
-        if (!wkNavAllowNestedAccordionTap()) return false;
-        const navMenu = document.querySelector('.nav-menu');
-        const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
-        const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
-        return isMobileMenuOpen || noHover;
-    };
+    const shouldTapToOpen = () => wkShouldToggleNestedSubmenuOnClick();
 
     const items = [
+        // DOME 3 folding series (catalog p.17) — same landing as dome-type.html
+        { href: '/dome-type.html', translateKey: 'menu_dome_3_folders' },
+
         // Displays subcategories (match Product Center subcategory overview)
         { href: 'all-products.html?cat=displays&sub=popup', translateKey: 'menu_popup_backdrop' },
         { href: 'all-products.html?cat=displays&sub=counter', translateKey: 'menu_popup_counter' },
@@ -1464,7 +1459,9 @@ function enhanceDisplaysDropdown() {
 
         items.forEach((it) => {
             const a = document.createElement('a');
-            a.href = it.href;
+            const raw = String(it.href || '').trim();
+            const normalized = raw.startsWith('/') ? raw : '/' + raw.replace(/^\.\//, '');
+            a.href = wkLocalizedInternalLinkSafe(normalized);
             if (it.translateKey) {
                 a.setAttribute('data-translate', it.translateKey);
                 a.textContent = '';
@@ -1513,13 +1510,7 @@ function enhanceFurnitureDropdown() {
     const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
     if (!menus.length) return;
 
-    const shouldTapToOpen = () => {
-        if (!wkNavAllowNestedAccordionTap()) return false;
-        const navMenu = document.querySelector('.nav-menu');
-        const isMobileMenuOpen = !!(navMenu && navMenu.classList.contains('active'));
-        const noHover = !!(window.matchMedia && window.matchMedia('(hover: none)').matches);
-        return isMobileMenuOpen || noHover;
-    };
+    const shouldTapToOpen = () => wkShouldToggleNestedSubmenuOnClick();
 
     const waitForProductManager = (cb, tries = 0) => {
         if (window.productManager && Array.isArray(window.productManager.products)) {

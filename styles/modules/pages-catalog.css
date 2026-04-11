@@ -931,6 +931,16 @@
     }
 }
 
+/* Brochure / product-type pages used a minimal header without .nav-container + hamburger; unified header must stay above grids & modal layers on mobile. */
+@media (max-width: 768px) {
+    body:not(.home) > .top-bar {
+        z-index: 1501;
+    }
+    body:not(.home) > .navbar {
+        z-index: 1500;
+    }
+}
+
 @media (max-width: 768px) {
     .top-bar {
         font-size: 0.75rem;

@@ -1,7 +1,18 @@
 (function () {
   'use strict';
 
-  const BROCHURE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/17.png');
+  function brochureAssetUrl() {
+    const rel = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+    if (typeof window.wkRootAssetUrl === 'function') {
+      try {
+        return window.wkRootAssetUrl(rel);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    const x = rel.replace(/^\.\//, '');
+    return x.startsWith('/') ? x : '/' + x;
+  }
 
   function getCurrentLang() {
     try {
@@ -132,13 +143,14 @@
   function init() {
     const img = document.getElementById('furnitureBrochureImg');
     const btn = document.getElementById('furnitureBrochureBtn');
+    const brochure = brochureAssetUrl();
 
-    if (img) img.src = BROCHURE;
+    if (img) img.src = brochure;
 
     if (btn) {
       btn.addEventListener('click', () => {
         const title = getCurrentLang() === 'zh' ? '产品画册参考' : 'Brochure PDF Guide';
-        openImageModal(BROCHURE, title);
+        openImageModal(brochure, title);
       });
     }
 

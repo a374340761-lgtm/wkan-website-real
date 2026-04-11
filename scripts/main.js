@@ -755,6 +755,30 @@ function renderHomeResources() {
     });
 }
 
+/** Breakpoint: mobile drawer + accordion (must match CSS min-width 769px / max-width 768px). */
+const WK_NAV_MOBILE_MAX = 768;
+
+function wkMatchMobileNavMedia() {
+    if (typeof window.matchMedia !== 'function') return null;
+    try {
+        return window.matchMedia(`(max-width: ${WK_NAV_MOBILE_MAX}px)`);
+    } catch (e) {
+        return null;
+    }
+}
+
+function wkIsMobileNavViewport() {
+    const mq = wkMatchMobileNavMedia();
+    if (mq) {
+        try {
+            return mq.matches;
+        } catch (e2) {
+            /* ignore */
+        }
+    }
+    return window.innerWidth <= WK_NAV_MOBILE_MAX;
+}
+
 /**
  * Mobile nav: close other open 2nd-level accordions inside the same Products dropdown panel.
  * (Desktop hover is unchanged; this only affects touch / mobile menu open state.)
@@ -904,14 +928,15 @@ function initNavigation() {
     function initMobileNavAccordion() {
         const menu = document.querySelector('.nav-menu');
         if (!menu) return;
-        const mq = window.matchMedia('(max-width: 768px)');
+        const mq = wkMatchMobileNavMedia();
 
         menu.querySelectorAll(':scope > li.nav-item-dropdown > a').forEach((a) => {
             if (!a.hasAttribute('aria-expanded')) a.setAttribute('aria-expanded', 'false');
         });
 
         menu.addEventListener('click', (e) => {
-            if (!mq.matches || !menu.classList.contains('active')) return;
+            const narrow = mq ? mq.matches : wkIsMobileNavViewport();
+            if (!narrow || !menu.classList.contains('active')) return;
             const li = e.target.closest('li.nav-item-dropdown');
             if (!li) return;
             if (e.target.closest('.dropdown-menu')) return;
@@ -994,9 +1019,9 @@ function initNavigation() {
         }
     });
 
-    // 回到桌面宽度时收起移动菜单，避免残留叠加层与滚动锁
+    // Crossing desktop breakpoint or orientation: close drawer + reset accordions (scroll lock, nested state)
     try {
-        const mqDesktop = window.matchMedia('(min-width: 769px)');
+        const mqDesktop = window.matchMedia(`(min-width: ${WK_NAV_MOBILE_MAX + 1}px)`);
         const onViewportChange = () => {
             if (mqDesktop.matches) closeMobileMenu();
         };
@@ -1007,8 +1032,18 @@ function initNavigation() {
         }
     } catch (e) {
         window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) closeMobileMenu();
+            if (window.innerWidth > WK_NAV_MOBILE_MAX) closeMobileMenu();
         });
+    }
+
+    try {
+        window.addEventListener('orientationchange', () => {
+            window.setTimeout(() => {
+                if (!wkIsMobileNavViewport()) closeMobileMenu();
+            }, 0);
+        });
+    } catch (e2) {
+        /* ignore */
     }
     
     // 页面加载时确保滚动解锁

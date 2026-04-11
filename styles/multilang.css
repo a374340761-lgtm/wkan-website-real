@@ -126,9 +126,11 @@
     transform: translateY(0);
 }
 
-/* 语言特定的导航栏调整 */
-[lang="en"] .nav-menu {
-    gap: 2rem;
+/* 语言特定的导航栏调整 — desktop row only */
+@media (min-width: 769px) {
+    [lang="en"] .nav-menu {
+        gap: 2rem;
+    }
 }
 
 /* 语言特定的按钮宽度调整 */

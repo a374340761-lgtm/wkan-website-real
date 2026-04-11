@@ -999,17 +999,22 @@ html[lang="zh-CN"] .top3-note .en {
     max-width: 100%;
 }
 
-/* ===== Center main nav menu (do not affect logo & icons) ===== */
-.nav-container {
-    position: relative; /* 给中间菜单提供定位参照 */
-}
+/* ===== Center main nav menu — desktop only =====
+   Unscoped absolute + translateX was leaking onto mobile: Safari treats fixed
+   descendants oddly when mixed with centered ancestors; mobile drawer must be
+   full-viewport (see pages-catalog.css .nav-menu.active). */
+@media (min-width: 769px) {
+    .nav-container {
+        position: relative;
+    }
 
-.nav-menu {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    justify-content: center;
-    margin-left: 0 !important;
+    .nav-menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+        margin-left: 0 !important;
+    }
 }
 
 /* ===== Hero Slide Left Info Panel ===== */

@@ -199,7 +199,7 @@
           name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
           alternateName: 'WaiKwan',
           url: BASE_URL + '/',
-          logo: toAbsoluteUrl('images/waikwancompanylogo.png'),
+          logo: toAbsoluteUrl('images/google-search-logo.png'),
           description: 'Factory-direct manufacturer of custom canopy tents, beach flags and portable display systems. OEM/ODM support, fast quotes, global export.',
           foundingDate: '2010',
           contactPoint: {

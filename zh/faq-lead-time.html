@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/multilang.css">
+    <link rel="stylesheet" href="/styles/cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="/scripts/bilingual-routing.js" defer></script>
@@ -112,6 +113,27 @@
                     </div>
                 </li>
             </ul>
+            <div class="nav-actions">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="" data-translate-aria-label="aria_search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
+                        <i class="fas fa-globe"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
+                        <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
+                        <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
+                    </div>
+                </div>
+                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+                <button class="nav-icon-btn" id="catalogDownloadBtn" aria-label="Download catalog">
+                    <i class="fas fa-book"></i>
+                </button>
+            </div>
             <div class="hamburger"><span></span><span></span><span></span></div>
         </div>
     </nav>
@@ -288,6 +310,7 @@
 
     <script src="/scripts/main.js"></script>
     <script src="/scripts/multilang.js"></script>
+    <script src="/scripts/cart.js"></script>
     <script src="/scripts/get-quote-footer.js"></script>
 </body>
 </html>

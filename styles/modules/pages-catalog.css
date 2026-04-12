@@ -949,8 +949,9 @@
     
     .navbar {
         top: 28px;
-        height: 70px;
-        overflow: visible;            /* ✅ 移动端也保持下拉可见 */
+        height: auto;
+        min-height: 0;
+        overflow: visible;            /* ✅ 移动端也保持下拉可见；高度由两排 header 内容决定 */
     }
     
     .nav-logo-img {
@@ -988,11 +989,6 @@
     
     /* Desktop nav UL hidden on small screens; mobile UI is #wkMobileNav (scripts/main.js + wk-mobile-nav.css). */
     .nav-menu {
-        display: none !important;
-    }
-
-    /* B2B mobile header: catalog download → desktop only */
-    #catalogDownloadBtn {
         display: none !important;
     }
 

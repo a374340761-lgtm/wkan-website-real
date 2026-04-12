@@ -787,7 +787,7 @@
 }
 
 @media (max-width: 640px){
-    .home .wk-hero{ padding-top: 98px; }
+    .home .wk-hero{ padding-top: var(--wk-mobile-header-offset, 128px); }
     .home .wk-hero-slider{ height: 520px; }
     .home .wk-cat-grid,
     .home .wk-product-grid,

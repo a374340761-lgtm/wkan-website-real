@@ -1912,33 +1912,56 @@ function initBackToTop() {
     }
 }
 
-// 模态框功能
+// 模态框功能 — PDF 目录弹窗（#catalogDownloadBtn）；无静态 markup 时注入最小结构
+function ensurePdfCatalogModal() {
+    let modal = document.getElementById('pdfModal');
+    if (modal) return modal;
+    modal = document.createElement('div');
+    modal.id = 'pdfModal';
+    modal.className = 'modal';
+    modal.innerHTML =
+        '<div class="modal-content">' +
+        '<span class="close">&times;</span>' +
+        '<h3 id="pdfModalTitle" data-translate="pdf_download_title">下载产品资料</h3>' +
+        '<p id="pdfModalDesc" data-translate="pdf_download_desc">点击下方按钮下载完整的产品目录和公司介绍。</p>' +
+        '<a id="pdfDownloadLink" href="/广西伟群帐篷制造有限公司2025改.pdf" target="_blank" rel="noopener" class="btn btn-secondary" data-translate="btn_download_pdf">下载PDF</a>' +
+        '</div>';
+    document.body.appendChild(modal);
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+    }
+    return modal;
+}
+
 function initModals() {
-    const modal = document.getElementById('pdfModal');
-    const closeBtn = document.querySelector('.close');
-    
+    const modal = ensurePdfCatalogModal();
+    const closeBtn = modal ? modal.querySelector('.close') : null;
+
     if (modal && closeBtn) {
-        // 关闭模态框
         closeBtn.addEventListener('click', () => {
             modal.style.display = 'none';
         });
-        
-        // 点击模态框外部关闭
+
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
                 modal.style.display = 'none';
             }
         });
-        
-        // ESC键关闭
+
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && modal.style.display === 'block') {
                 modal.style.display = 'none';
             }
         });
     }
-    
-    // 添加PDF下载按钮到产品卡片
+
+    const catalogBtn = document.getElementById('catalogDownloadBtn');
+    if (catalogBtn && modal) {
+        catalogBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+    }
+
     addPDFDownloadButtons();
 }
 
@@ -2333,26 +2356,30 @@ function initSearch() {
         const keyword = (q || '').trim();
         const tentType = matchTentType(keyword);
         if (tentType) {
-            window.location.href = `tent-type.html?type=${encodeURIComponent(tentType)}`;
+            window.location.href = wkLocalizedInternalLinkSafe(
+                `/tent-type.html?type=${encodeURIComponent(tentType)}`
+            );
             return;
         }
 
         const cat = matchCategory(keyword);
         if (cat === 'racegate') {
-            window.location.href = 'racegate-type.html';
+            window.location.href = wkLocalizedInternalLinkSafe('/racegate-type.html');
             return;
         }
         if (cat) {
-            window.location.href = keyword
-                ? `all-products.html?cat=${encodeURIComponent(cat)}&q=${encodeURIComponent(keyword)}`
-                : `all-products.html?cat=${encodeURIComponent(cat)}`;
+            window.location.href = wkLocalizedInternalLinkSafe(
+                keyword
+                    ? `/all-products.html?cat=${encodeURIComponent(cat)}&q=${encodeURIComponent(keyword)}`
+                    : `/all-products.html?cat=${encodeURIComponent(cat)}`
+            );
             return;
         }
 
         const url = keyword
-            ? `all-products.html?q=${encodeURIComponent(keyword)}`
-            : `all-products.html`;
-        window.location.href = url;
+            ? `/all-products.html?q=${encodeURIComponent(keyword)}`
+            : `/all-products.html`;
+        window.location.href = wkLocalizedInternalLinkSafe(url);
     }
 
     // 创建搜索弹层（只创建一次）

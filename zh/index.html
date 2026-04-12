@@ -116,11 +116,6 @@
                 <button class="nav-icon-btn" id="searchBtn" aria-label="" data-translate-aria-label="aria_search">
                     <i class="fas fa-search"></i>
                 </button>
-                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="cart-badge">0</span>
-                </button>
-                <!-- Language icon dropdown (next to cart) -->
                 <div class="lang-dropdown" id="langDropdown">
                     <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
                         <i class="fas fa-globe"></i>
@@ -130,7 +125,10 @@
                         <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
                     </div>
                 </div>
-                <!-- 画册下载图标：放在语言图标右侧 -->
+                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </button>
                 <button class="nav-icon-btn" id="catalogDownloadBtn" aria-label="Download catalog">
                     <i class="fas fa-book"></i>
                 </button>
@@ -831,32 +829,6 @@
     <script src="/scripts/contact.js"></script>
     <script src="/scripts/inquiry-hook.js"></script>
     <script src="/scripts/get-quote-footer.js"></script>
-    <script>
-        // 顶部栏画册下载图标 -> 打开 PDF 下载模态框
-        document.addEventListener('DOMContentLoaded', function () {
-            const catalogBtn = document.getElementById('catalogDownloadBtn');
-            const modal = document.getElementById('pdfModal');
-            const closeBtn = modal ? modal.querySelector('.close') : null;
-
-            if (catalogBtn && modal) {
-                catalogBtn.addEventListener('click', function () {
-                    modal.style.display = 'block';
-                });
-            }
-
-            if (closeBtn && modal) {
-                closeBtn.addEventListener('click', function () {
-                    modal.style.display = 'none';
-                });
-            }
-
-            window.addEventListener('click', function (event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-        });
-    </script>
     <script>
         // 自动填充产品信息（从 URL 参数）
         (function() {

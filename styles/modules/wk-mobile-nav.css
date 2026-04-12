@@ -204,3 +204,81 @@ a.wk-mobile-nav__top-link {
         display: none !important;
     }
 }
+
+/* -------------------------------------------------------------------------
+   Mobile header: two rows (<=768px) — actions row, then brand + hamburger.
+   Desktop (>=769px) unchanged. Offset must match drawer backdrop/sheet top.
+   ------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    :root {
+        --wk-mobile-header-offset: 128px;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+        align-content: flex-start;
+        align-items: center;
+        row-gap: 4px;
+        column-gap: 10px;
+        min-height: 0;
+        padding-top: 8px;
+        padding-bottom: 10px;
+    }
+
+    .nav-container > .nav-actions {
+        order: -1;
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 4px;
+        margin-left: 0;
+        margin-bottom: 2px;
+        flex-wrap: nowrap;
+    }
+
+    .nav-container > .nav-actions .nav-icon-btn,
+    .nav-container > .nav-actions .lang-dropdown > .lang-btn {
+        flex: 0 0 auto;
+    }
+
+    .nav-container > .nav-logo {
+        order: 1;
+        flex: 1 1 0;
+        min-width: 0;
+        margin-right: 0;
+    }
+
+    .nav-container > .hamburger {
+        order: 2;
+        flex: 0 0 auto;
+    }
+
+    .nav-logo .nav-brand {
+        max-width: min(72vw, 280px);
+    }
+
+    main {
+        padding-top: var(--wk-mobile-header-offset) !important;
+    }
+
+    .wk-mobile-nav__backdrop,
+    .wk-mobile-nav__sheet {
+        top: var(--wk-mobile-header-offset) !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-container > .nav-logo,
+    .nav-container > .nav-actions,
+    .nav-container > .hamburger {
+        order: unset;
+    }
+
+    .nav-container > .nav-actions {
+        width: auto;
+        flex: 0 0 auto;
+        margin-bottom: 0;
+    }
+}

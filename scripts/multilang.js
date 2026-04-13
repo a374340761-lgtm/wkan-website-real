@@ -279,7 +279,11 @@ class MultiLanguageSystem {
                     '快速开始：将尺寸、数量、设计稿发给我们即可获取报价；或查阅指南：'
                     + '<a href="faq-moq.html">起订量（MOQ）</a>、'
                     + '<a href="faq-artwork-files.html">设计稿文件</a>、'
-                    + '<a href="faq-shipping.html">物流方式</a>。',
+                    + '<a href="faq-shipping.html">物流方式</a>。'
+                    + ' 帐篷专题：'
+                    + '<a href="custom-canopy-tent-manufacturer.html">定制广告帐篷</a>、'
+                    + '<a href="aluminum-folding-tent.html">快开广告帐篷（铝架）</a>、'
+                    + '<a href="10x10-pop-up-canopy-tent.html">10×10 快开广告帐篷</a>。',
                 home_guides_title: '采购指南',
                 home_guides_subtitle:
                     '面向经销商与采购团队的 OEM/ODM、出口包装与产品规格等简短说明。',
@@ -394,8 +398,8 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF 规范、出血、字体与色彩配置。',
                 landing_canopy_faq_view_all: '查看全部常见问题',
 
-                page_title_canopy_b2b: '定制广告帐篷制造商｜OEM 全彩印刷折叠帐篷｜伟群帐篷',
-                landing_canopy_b2b_h1: '面向 B2B 采购商的定制广告帐篷制造商',
+                page_title_canopy_b2b: '定制广告帐篷制造商｜快开广告帐篷与 LOGO 篷房｜伟群帐篷',
+                landing_canopy_b2b_h1: '定制广告帐篷与快开广告帐篷制造商（B2B OEM/ODM）',
                 landing_canopy_b2b_lead_html:
                     '工厂直供<strong>定制广告帐篷</strong>与<strong>全彩印刷帐篷</strong>，服务分销商、活动公司与品牌方。欢迎查看常见商用尺寸的'
                     + '<a href="/zh/product-center.html?cat=tents">折叠与快开广告帐篷</a>，支持 OEM 画面与出口导向包装。',
@@ -487,6 +491,75 @@ class MultiLanguageSystem {
                 landing_canopy_buyers_faq_6_q: '围布与配件能否一并采购？',
                 landing_canopy_buyers_faq_6_a_html:
                     '可以——围布、配重及相关五金可与框架一并报价。若场地对阻燃等有要求，请在采购<strong>活动印刷帐篷</strong>套装时一并说明。',
+
+                landing_canopy_b2b_audience_html:
+                    '<p>我们服务<strong>经销商与渠道分销商</strong>、<strong>活动搭建与租赁供应商</strong>、<strong>品牌与广告代理</strong>，以及需要稳定翻单与出口文件的 OEM/ODM 项目。若您管理多市场投放，我们可协同框架系列、面料与印前规范，便于长期补货。</p>',
+                landing_canopy_section_logo_h2: '带 LOGO 的定制广告帐篷',
+                landing_canopy_section_logo_html:
+                    '<p>从<strong>定制帐篷印字</strong>到整顶<strong>全彩印刷帐篷</strong>，顶篷与檐口可呈现品牌主视觉；也可制作<strong>品牌篷房</strong>式一体化展示。矢量稿与潘通对齐请在询价时一并提供，详见<a href="/zh/faq-artwork-files.html">印前说明</a>。</p>',
+                landing_canopy_section_popup_h2: '快开广告帐篷选项',
+                landing_canopy_section_popup_html:
+                    '<p><strong>快开广告帐篷</strong>适合巡回路演、促销岛与户外赛事——快速展开与收纳，便于车队调拨。可按项目匹配铝架（轻量耐腐蚀）或钢架（成本导向），并与围布、配重打包询价。更多框架侧重点见<a href="/zh/aluminum-folding-tent.html">铝合金折叠帐篷</a>。</p>',
+                landing_canopy_section_sizes_h2: '常见尺寸：10×10、10×15、10×20（及公制对照）',
+                landing_canopy_section_sizes_html:
+                    '<p>北美常用英制表述为 10×10 ft、10×15 ft、10×20 ft；公制约对应 3×3 m、3×4.5 m、3×6 m 等。采购时请确认目标市场标注习惯；我们可在报价单中并列对照，便于经销商终端沟通。需要标准展位常见规格可参考<a href="/zh/10x10-pop-up-canopy-tent.html">10×10 快开广告帐篷</a>专题页。</p>',
+                landing_canopy_section_frames_h2: '铝架与钢架怎么选',
+                landing_canopy_section_frames_html:
+                    '<p><strong>铝制型材</strong>利于频繁拆装与海运抛重控制；<strong>钢制管材</strong>适合预算敏感或固定季节投放。<strong>重型快开帐篷</strong>需求请说明风载、地锚与使用周期，以便推荐连接件等级与配重方案。</p>',
+                landing_canopy_section_walls_h2: '全围布 / 侧墙定制',
+                landing_canopy_section_walls_html:
+                    '<p>可选全高围布、半墙、实墙或窗墙组合，用于防风、隐私或陈列。围布可单独翻单；颜色与画面可与顶篷同一套印前文件管理。若需阻燃或耐候声明，请在订单中列明目标市场法规。</p>',
+                landing_canopy_1010_teaser_html:
+                    '<div class="wk-card wk-feature-card" style="max-width: 920px; margin: 0 auto; text-align: left;">'
+                    + '<h3 style="margin-top: 0;">10×10 快开广告帐篷（3×3 m）专题</h3>'
+                    + '<p>北美与全球活动中最常见的起步尺寸之一。阅读<a href="/zh/10x10-pop-up-canopy-tent.html">10×10 快开广告帐篷</a>：框架等级、定制帐篷印字、围布与出口包装要点，便于与采购同事对齐规格。</p></div>',
+                landing_canopy_buyers_faq_7_q: '什么是快开广告帐篷（pop up canopy tent）？',
+                landing_canopy_buyers_faq_7_a_html:
+                    '一种可折叠框架配张力篷布的户外展示结构，展开后形成遮蔽空间，收纳后体积紧凑，适合频繁搭建。我们提供铝/钢框架与 OEM 画面，适用于促销、展会与赛事。',
+                landing_canopy_buyers_faq_8_q: '能否做带品牌 LOGO 的定制帐篷？',
+                landing_canopy_buyers_faq_8_a_html:
+                    '可以。顶篷、檐口与围布均可按设计做<strong>定制帐篷印字</strong>或全幅面<strong>定制印刷篷布</strong>。请提交矢量稿并注明潘通或专色要求，我们在<a href="/zh/faq-color-matching.html">色彩</a>与<a href="/zh/faq-artwork-files.html">文件</a>页面列出规范。',
+                landing_canopy_buyers_faq_9_q: '是否提供 10×10（3×3 m）定制广告帐篷出口？',
+                landing_canopy_buyers_faq_9_a_html:
+                    '是，10×10 ft 与 3×3 m 为常见库存/翻单规格之一。MOQ、交期与装箱因印刷与配件而异，详见<a href="/zh/10x10-pop-up-canopy-tent.html">10×10 专题</a>与<a href="/zh/faq-moq.html">起订量</a>。',
+                landing_canopy_buyers_faq_10_q: '围布能否单独定制尺寸与画面？',
+                landing_canopy_buyers_faq_10_a_html:
+                    '可以。围布可与顶篷分开翻单；尺寸按框架系列与挂钩位置开版。若与顶篷同一campaign，建议统一印前出口与色差控制策略，参阅<a href="/zh/faq-artwork-files.html">设计稿要求</a>。',
+
+                page_title_1010_canopy: '10×10 快开广告帐篷｜3×3 m 定制篷房与出口｜伟群帐篷',
+                landing_1010_h1: '10×10 快开广告帐篷（3×3 m）B2B 定制与出口',
+                landing_1010_lead_html:
+                    '面向经销商与活动供应商的<strong>10×10 快开广告帐篷</strong>（约 3×3 m）采购指南：框架选型、<strong>定制帐篷印字</strong>、围布与配件、MOQ 及出口协同。',
+                landing_1010_use_cases_h2: '典型使用场景',
+                landing_1010_use_cases_html:
+                    '<p>试饮台、注册签到、赛事后勤、户外零售岛与品牌路演——<strong>10×10 规格</strong>在单箱运输与搭建人力之间取得平衡，适合作为渠道客户的入门主推 SKU。</p>',
+                landing_1010_frame_h2: '框架与耐用性',
+                landing_1010_frame_html:
+                    '<p>铝型材适合高频次拆装与沿海高湿环境；钢架适合成本敏感项目。请说明是否需要<strong>重型快开帐篷</strong>级加固、地钉/沙袋配重与连接件规格，以便工厂匹配管材壁厚与连接器等级。</p>',
+                landing_1010_print_h2: '定制印刷与品牌篷房',
+                landing_1010_print_html:
+                    '<p>顶篷与檐口可做全彩<strong>定制印刷篷布</strong>；也可与围布统一视觉形成<strong>品牌篷房</strong>式封闭展示。印前请按矢量流程提交，详见<a href="/zh/faq-artwork-files.html">文件规范</a>。</p>',
+                landing_1010_sidewalls_h2: '围布与配件',
+                landing_1010_sidewalls_html:
+                    '<p>可选窗墙、实墙、半墙与拉链门；配重袋、地钉与收纳轮包可与框架同箱出口。若终端场地对阻燃有要求，请在询价单注明目标国法规。</p>',
+                landing_1010_shipping_h2: 'OEM、MOQ 与出口',
+                landing_1010_shipping_html:
+                    '<p>我们支持 OEM/ODM 标签与装箱清单；MOQ 与交期随印刷与季节变化，参阅<a href="/zh/faq-moq.html">起订量</a>、<a href="/zh/faq-lead-time.html">交期</a>与<a href="/zh/faq-shipping.html">物流</a>。需要全系列对比请返回<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷总览</a>或浏览<a href="/zh/all-products.html?cat=tents">全部帐篷 SKU</a>。</p>',
+                landing_1010_faq_1_q: '10×10 与 3×3 m 是同一规格吗？',
+                landing_1010_faq_1_a_html:
+                    '在大多数商用折叠帐篷中，10×10 ft 与 3×3 m 为同一档位的常见标称，具体外轮廓以框架系列为准；报价时可索取尺寸表。',
+                landing_1010_faq_2_q: '能否只做围布翻单？',
+                landing_1010_faq_2_a_html:
+                    '可以，前提是框架系列一致以便挂钩与拉链位匹配。建议提供原订单或框架型号。',
+                landing_1010_faq_3_q: '适合海运还是空运？',
+                landing_1010_faq_3_a_html:
+                    '取决于交期与目的港成本；工厂可提供外箱尺寸与毛重供您选择港到港或门到门方案。',
+                landing_1010_faq_4_q: '与铝合金折叠帐篷页面有何区别？',
+                landing_1010_faq_4_a_html:
+                    '本页聚焦 10×10/3×3 尺寸意图与配件组合；<a href="/zh/aluminum-folding-tent.html">铝合金折叠帐篷</a>侧重材料与结构选型。总览级 OEM 信息见<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a>。',
+                landing_1010_faq_section_h2: '10×10 快开广告帐篷 — 常见问题',
+                landing_1010_faq_section_intro_html:
+                    '更多买家主题：<a href="/zh/faq.html">常见问题库</a> · <a href="/zh/faq-moq.html">起订量</a> · <a href="/zh/faq-shipping.html">物流</a>',
 
                 page_title_beach: '沙滩旗供应商｜羽毛旗刀旗矩形旗杆底座｜伟群帐篷',
                 landing_top_bar_beach: '工厂直供 · 旗面 + 旗杆 + 底座 · 24 小时内回复',
@@ -1316,7 +1389,11 @@ class MultiLanguageSystem {
                     'Fast start: send your size/quantity/artwork to get a quote, or use our guides: '
                     + '<a href="faq-moq.html">MOQ</a>, '
                     + '<a href="faq-artwork-files.html">artwork files</a>, '
-                    + '<a href="faq-shipping.html">shipping options</a>.',
+                    + '<a href="faq-shipping.html">shipping options</a>. '
+                    + 'Canopy hubs: '
+                    + '<a href="custom-canopy-tent-manufacturer.html">custom canopy tents</a>, '
+                    + '<a href="aluminum-folding-tent.html">pop up canopy tents</a>, '
+                    + '<a href="10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a>.',
                 home_guides_title: 'Guides',
                 home_guides_subtitle:
                     'Short B2B sourcing guides on OEM/ODM programs, export packing, and product specs — written for distributors and procurement teams.',
@@ -1431,8 +1508,8 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
 
-                page_title_canopy_b2b: 'Custom Canopy Tents Manufacturer | OEM Printed Pop Up Tents | WaiKwan',
-                landing_canopy_b2b_h1: 'Custom Canopy Tents Manufacturer for B2B Buyers',
+                page_title_canopy_b2b: 'Custom Canopy Tents Manufacturer | Pop Up Canopy Tents With Logo | WaiKwan',
+                landing_canopy_b2b_h1: 'Custom Canopy Tents & Pop Up Canopy Tents — OEM/ODM Manufacturer',
                 landing_canopy_b2b_lead_html:
                     'Factory-direct <strong>custom canopy tents</strong> and <strong>custom printed canopy tents</strong> for distributors, agencies, and event brands. Explore '
                     + '<a href="/product-center.html?cat=tents">folding and pop up canopy tents</a> in common commercial sizes, with OEM artwork support and export-oriented packing.',
@@ -1524,6 +1601,75 @@ class MultiLanguageSystem {
                 landing_canopy_buyers_faq_6_q: 'Can sidewalls and accessories be included?',
                 landing_canopy_buyers_faq_6_a_html:
                     'Yes—sidewalls, weights, and related hardware can be quoted with your frame. Mention venue requirements (e.g., fire retardancy) when requesting <strong>printed event tents</strong> packages.',
+
+                landing_canopy_b2b_audience_html:
+                    '<p>We support <strong>distributors and resellers</strong>, <strong>event suppliers and rental fleets</strong>, <strong>branding and creative agencies</strong>, and OEM/ODM programs that need repeatable specs and export documentation. If you manage multi-market rollouts, we align frame families, fabric specs, and prepress rules to keep reorders consistent.</p>',
+                landing_canopy_section_logo_h2: 'Custom Canopy Tents With Logo',
+                landing_canopy_section_logo_html:
+                    '<p>From a focused <strong>custom tent with logo</strong> treatment to full <strong>custom printed canopy tent</strong> coverage, roof and valance panels can carry your campaign creative. Pantone alignment and vector artwork help match brand systems—see our <a href="/faq-artwork-files.html">artwork FAQ</a> for file setup.</p>',
+                landing_canopy_section_popup_h2: 'Pop Up Canopy Tent Options',
+                landing_canopy_section_popup_html:
+                    '<p><strong>Pop up canopy tents</strong> are built for fast deployment on tours, promo islands, and outdoor sports—quick setup and pack-down keeps crews efficient. Choose aluminum for lighter handling or steel for budget-led programs, then bundle sidewalls and weights in one RFQ. For frame engineering emphasis, see <a href="/aluminum-folding-tent.html">aluminum folding tent</a>.</p>',
+                landing_canopy_section_sizes_h2: 'Popular Sizes: 10×10, 10×15, 10×20 (and metric equivalents)',
+                landing_canopy_section_sizes_html:
+                    '<p>North American buyers often specify <strong>10×10</strong>, <strong>10×15</strong>, and <strong>10×20</strong> footprints; metric teams frequently reference 3×3 m, 3×4.5 m, and 3×6 m. Tell us which labeling your end customers expect—we can mirror both in quotes. For the most common starter footprint, start with our <a href="/10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> guide.</p>',
+                landing_canopy_section_frames_h2: 'Aluminum vs Steel Frame Options',
+                landing_canopy_section_frames_html:
+                    '<p><strong>Aluminum</strong> profiles reduce carry weight and resist corrosion for repeat tours; <strong>steel</strong> tubes can lower unit cost for seasonal or rental-heavy fleets. If you need <strong>heavy duty pop up tent</strong> performance, share expected wind conditions, anchoring method, and duty cycle so we can recommend connector grades and ballast plans.</p>',
+                landing_canopy_section_walls_h2: 'Custom Canopy Tents With Full Walls / Sidewalls',
+                landing_canopy_section_walls_html:
+                    '<p>Add full-height walls, half walls, solid panels, or window walls for weather protection, privacy, or interior merchandising. Sidewalls can be ordered on separate replenishment cycles while keeping the same frame family. Mention fire-retardancy or outdoor durability requirements for your destination markets.</p>',
+                landing_canopy_1010_teaser_html:
+                    '<div class="wk-card wk-feature-card" style="max-width: 920px; margin: 0 auto; text-align: left;">'
+                    + '<h3 style="margin-top: 0;">10×10 pop up canopy tent spotlight</h3>'
+                    + '<p>Need the most requested starter size? Read the <a href="/10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> page for frame choices, logo printing, sidewalls, and export notes tailored to distributor programs.</p></div>',
+                landing_canopy_buyers_faq_7_q: 'What is a pop up canopy tent?',
+                landing_canopy_buyers_faq_7_a_html:
+                    'A collapsible frame system with a tensioned fabric roof (and optional walls) that deploys quickly for outdoor branding. We manufacture OEM/ODM frames with custom graphics for promotions, trade events, and sports programs.',
+                landing_canopy_buyers_faq_8_q: 'Can you produce a custom tent with logo and full-color artwork?',
+                landing_canopy_buyers_faq_8_a_html:
+                    'Yes—roof, valance, and sidewall panels can carry <strong>custom printed canopy tent</strong> graphics or a focused <strong>custom tent with logo</strong> layout. Submit vector files and color references; review <a href="/faq-color-matching.html">color matching</a> and <a href="/faq-artwork-files.html">artwork files</a> for production-ready output.',
+                landing_canopy_buyers_faq_9_q: 'Do you offer 10×10 custom canopy tents for export?',
+                landing_canopy_buyers_faq_9_a_html:
+                    'Yes—<strong>10×10</strong> (commonly paired with 3×3 m) is a high-volume format for channel partners. MOQ and lead time depend on printing and accessories; see the dedicated <a href="/10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> page and <a href="/faq-moq.html">MOQ FAQ</a>.',
+                landing_canopy_buyers_faq_10_q: 'Can sidewalls be customized separately from the canopy?',
+                landing_canopy_buyers_faq_10_a_html:
+                    'Yes—sidewalls can be sized and printed to match your frame series and campaign. Separate replenishment is common; keep hook placements and zipper lines consistent by referencing the original BOM. Use <a href="/faq-artwork-files.html">artwork guidelines</a> for panel seams and safe zones.',
+
+                page_title_1010_canopy: '10×10 Pop Up Canopy Tent | Custom Canopy Tent 10×10 | WaiKwan',
+                landing_1010_h1: '10×10 Pop Up Canopy Tent (3×3 m) for B2B Programs',
+                landing_1010_lead_html:
+                    'Source <strong>10×10 pop up canopy tent</strong> and <strong>custom canopy tent 10×10</strong> programs with factory-direct OEM/ODM support—frame grades, <strong>custom tent with logo</strong> printing, sidewalls, accessories, and export packing for distributors.',
+                landing_1010_use_cases_h2: 'Where teams deploy 10×10 first',
+                landing_1010_use_cases_html:
+                    '<p>Sampling lanes, registration desks, outdoor retail pods, and mobile roadshows—<strong>10×10</strong> balances shipping volume with usable coverage, making it a strong default SKU for reseller catalogs and event suppliers.</p>',
+                landing_1010_frame_h2: 'Frame options for repeated setup',
+                landing_1010_frame_html:
+                    '<p>Aluminum extrusions save weight for touring crews; steel can win on upfront unit cost. Tell us if you need <strong>heavy duty pop up tent</strong> upgrades—leg diameter, truss thickness, and footplate style all affect wind performance.</p>',
+                landing_1010_print_h2: 'Custom logo printing & branded canopy programs',
+                landing_1010_print_html:
+                    '<p>Roofs and valances accept vibrant <strong>custom printed canopy tent</strong> graphics; matching sidewalls turn the space into a cohesive <strong>branded canopy tent</strong> experience. Vector artwork and Pantone references reduce rework—see <a href="/faq-artwork-files.html">file prep</a>.</p>',
+                landing_1010_sidewalls_h2: 'Sidewalls, accessories & full enclosure',
+                landing_1010_sidewalls_html:
+                    '<p>Choose solid, window, or door panels; add weight bags, stakes, stakes plates, and wheeled bags for field teams. Bundle accessories in the same export carton when possible to simplify landed cost planning.</p>',
+                landing_1010_shipping_h2: 'Shipping, OEM labels & MOQ',
+                landing_1010_shipping_html:
+                    '<p>We pack for ocean and air lanes with carton marks for warehouse intake; OEM labeling and packing lists are available for distributor systems. MOQ and schedule vary by print scope—read <a href="/faq-moq.html">MOQ</a>, <a href="/faq-lead-time.html">lead time</a>, and <a href="/faq-shipping.html">shipping</a>, or compare the broader OEM scope on <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a> and browse SKUs via <a href="/all-products.html?cat=tents">all products — tents</a>.</p>',
+                landing_1010_faq_1_q: 'Is 10×10 the same as 3×3 m?',
+                landing_1010_faq_1_a_html:
+                    'They are commonly paired equivalents in folding tent lines, but exact outside dimensions depend on the frame series—request the spec sheet for the SKU you intend to stock.',
+                landing_1010_faq_2_q: 'Can I reorder sidewalls without frames?',
+                landing_1010_faq_2_a_html:
+                    'Yes, when the frame family stays the same. Share prior order references so panel hooks and zippers stay compatible.',
+                landing_1010_faq_3_q: 'Do you support sea and air export?',
+                landing_1010_faq_3_a_html:
+                    'Yes—factory packing lists include weight and cube for freight forwarders; share incoterms and destination preferences in your RFQ.',
+                landing_1010_faq_4_q: 'How is this different from the aluminum folding tent page?',
+                landing_1010_faq_4_a_html:
+                    'This page focuses on the <strong>10×10 pop up canopy tent</strong> size intent and kit composition. Material deep dives live on <a href="/aluminum-folding-tent.html">aluminum folding tent</a>, while umbrella OEM positioning sits on <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a>.',
+                landing_1010_faq_section_h2: '10×10 Pop Up Canopy Tent — FAQs',
+                landing_1010_faq_section_intro_html:
+                    'More buyer topics: <a href="/faq.html">FAQ hub</a> · <a href="/faq-moq.html">MOQ</a> · <a href="/faq-shipping.html">Shipping</a>',
 
                 page_title_beach: 'Beach Flag Supplier | Custom Feather & Teardrop Flags | WaiKwan',
                 landing_top_bar_beach: 'Factory direct · Flags + poles + bases · Reply within 24 hours',

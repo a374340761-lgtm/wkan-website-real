@@ -30,6 +30,7 @@
 
   var MIRRORED_EN = {
     '/all-products.html': true,
+    '/10x10-pop-up-canopy-tent.html': true,
     '/aluminum-folding-tent.html': true,
     '/beach-flag-supplier.html': true,
     '/custom-canopy-tent-manufacturer.html': true,

@@ -561,6 +561,87 @@ class MultiLanguageSystem {
                 landing_1010_faq_section_intro_html:
                     '更多买家主题：<a href="/zh/faq.html">常见问题库</a> · <a href="/zh/faq-moq.html">起订量</a> · <a href="/zh/faq-shipping.html">物流</a>',
 
+                page_title_aluminum_fold: '铝合金快开广告帐篷｜重型折叠帐篷框架｜伟群帐篷',
+                landing_aluminum_h1: '铝合金快开广告帐篷框架',
+                landing_aluminum_p1_html:
+                    '<p><strong>铝合金折叠帐篷</strong>采用挤出型材腿与桁架，在强度与自重之间取得平衡——适合采购团队为频繁拆装的施工队指定<strong>铝合金快开广告帐篷</strong>。相较钢材，铝材装车更轻、利于海运抛重，并在潮湿户外环境中耐腐蚀；钢架则在季节性租赁或成本敏感项目中更具单价优势。伟群可同时提供两种框架路线及品牌篷布、围布与配件；<strong>本页聚焦材料与框架行为</strong>；整体 OEM/ODM 定位请参阅<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a>总览。</p>',
+                landing_aluminum_p2_html:
+                    '<p>典型场景：巡回路演、体育与节庆通道、商业激活及代理商项目——需要可靠遮蔽且控制框架重量。</p>',
+                landing_aluminum_card_1_h3: '铝架与钢架',
+                landing_aluminum_card_1_p:
+                    '铝材：更轻、耐腐蚀；钢架：成本导向、短期或抗风需求——按排期与预算选型。',
+                landing_aluminum_card_2_h3: '篷布与印刷',
+                landing_aluminum_card_2_p:
+                    '防水面料与全彩印刷，适用于<strong>重型广告篷房</strong>与渠道项目。',
+                landing_aluminum_card_3_h3: '商业与活动',
+                landing_aluminum_card_3_p:
+                    '从 3×3 m 到更大占地：试饮、签到、展示与后勤区。',
+                landing_aluminum_card_4_h3: 'OEM / ODM',
+                landing_aluminum_card_4_p:
+                    '贴牌框架、潘通对齐篷布与工厂出口包装。',
+                landing_aluminum_disclaimer_html:
+                    '<p style="margin-bottom: 10px;">浏览全部帐篷 SKU：<a href="/zh/all-products.html?cat=tents">折叠与广告帐篷（完整目录）</a>。尺寸意向：<a href="/zh/10x10-pop-up-canopy-tent.html">10×10 快开广告帐篷</a>（约 3×3 m）。</p>'
+                    + '<p style="margin-bottom: 10px;">整体 OEM 方案：<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷 — B2B 总览</a>。</p>'
+                    + '<p style="margin-bottom: 10px;">延伸阅读：<a href="/zh/seo/aluminum-frame-pop-up-tent-factory-direct-export.html">铝合金框架快开帐篷（工厂出口）</a> · <a href="/zh/seo/commercial-grade-pop-up-canopy-wholesale-supplier.html">商用级篷房批发</a> · <a href="/zh/site-map.html#seo-guides">全部指南</a>。</p>'
+                    + '联系：<a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp：<a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a>',
+                landing_aluminum_repeat_h2: '为何铝架快开帐篷适合反复搭建',
+                landing_aluminum_repeat_p_html:
+                    '<p style="max-width: 900px; margin-left: auto; margin-right: auto;">巡回团队在意每一公斤——更轻的腿管降低搬运疲劳，耐腐蚀则延长沿海与高湿环境下的使用寿命。配合张紧良好的篷布，<strong>铝合金快开广告帐篷</strong>可在赞助现场呈现<strong>重型快开帐篷</strong>应有的稳固感，又避免每次装车都背负过度加重的钢材。</p>',
+                landing_aluminum_program_h2: '规划完整篷房方案（不止框架）',
+                landing_aluminum_program_p_html:
+                    '<p style="max-width: 900px; margin-left: auto; margin-right: auto;">请从<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a>总览了解 OEM/ODM、LOGO 印刷与围布套装。若目录以最常见的便携占地为主，请阅读<a href="/zh/10x10-pop-up-canopy-tent.html">10×10 快开广告帐篷</a>规格，再与终端客户的配重、地锚方案对齐框架等级。</p>',
+                landing_aluminum_related_h2: '相关资源',
+                landing_aluminum_related_sub: '帐篷、旗帜与买家常见问题。',
+                landing_aluminum_rel_canopy_h3: '定制广告帐篷（总览 OEM）',
+                landing_aluminum_rel_canopy_p: '快开定位、印刷、MOQ 与出口——非金属材料专论。',
+                landing_aluminum_rel_1010_h3: '10×10 快开广告帐篷',
+                landing_aluminum_rel_1010_p: '3×3 m 尺寸、配件与渠道备注。',
+                landing_aluminum_rel_types_h3: '帐篷类型',
+                landing_aluminum_rel_types_p: '框架与尺寸选型参考。',
+                landing_aluminum_rel_moq_h3: '起订量（MOQ）',
+                landing_aluminum_rel_moq_p: '按型号与印刷说明最小订购。',
+
+                page_title_portable_display: '便携式展示系统｜快幕秀与展架背景墙｜伟群帐篷',
+                landing_top_bar_portable: '源头工厂 · 便携展示 · 24 小时内回复',
+                landing_portable_h1: '便携式展示系统制造商',
+                landing_portable_lead:
+                    '面向展会与品牌路演：带印刷画面的布艺展架、易拉宝、促销台及定制组合——快装快收、画面可更换。',
+                landing_portable_card_1_h3: '产品线',
+                landing_portable_card_1_p:
+                    '快展系统、布艺/弹力布展架、促销接待台、易拉宝及配件。',
+                landing_portable_card_2_h3: '起订量（MOQ）',
+                landing_portable_card_2_p:
+                    '按型号与印刷范围而定，支持小批量试单；大货可稳定控制色差。',
+                landing_portable_card_3_h3: '交期',
+                landing_portable_card_3_p:
+                    '稿件确认后一般 7–15 天；型材与五金有备货可更快出货。',
+                landing_portable_card_4_h3: '出口支持',
+                landing_portable_card_4_p:
+                    '平板包装、质检照片、箱唛标注及全球发运方案协助。',
+                landing_portable_contact_line_html:
+                    '联系：<a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp：<a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · 微信：massifmyth',
+                landing_portable_b2b_links_html:
+                    '<span>B2B 专题页：</span><a href="/zh/seg-light-box-manufacturer.html">SEG 灯箱制造商</a> · <a href="/zh/tension-fabric-backwall.html">弹力布背景墙</a> · <a href="/zh/aluminum-folding-tent.html">铝合金折叠帐篷</a>。<span>延伸指南：</span><a href="/zh/seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html">弹力布展墙（OEM）</a> · <a href="/zh/seo/portable-backdrop-display-system-supplier-wholesale.html">便携背景批发</a> · <a href="/zh/site-map.html#seo-guides">全部指南索引</a>。',
+                landing_portable_supply_h2: '我们提供什么',
+                landing_portable_supply_sub: '可选标准套装，也可按展位面积与品牌视觉组合整包方案。',
+                landing_portable_supply_1_h3: '布艺展架',
+                landing_portable_supply_1_p: '轻质铝框 + 弹力布画面，适合展会主视觉与背景墙。',
+                landing_portable_supply_2_h3: '促销接待台',
+                landing_portable_supply_2_p: '可围包画面的便携展台，适用于试饮、路演与零售激活。',
+                landing_portable_supply_3_h3: '易拉宝',
+                landing_portable_supply_3_p: '经典伸缩画面，搭建快、携带方便。',
+                landing_portable_supply_4_h3: '整包方案',
+                landing_portable_supply_4_p: '可将广告帐篷、旗帜与展台组合为活动套装（按项目配置）。',
+                landing_portable_faq_h2: '常见问题文章',
+                landing_portable_faq_sub: '印前、色彩与物流——展示类项目的实用说明。',
+                landing_portable_faq_card_1_h3: '印前文件',
+                landing_portable_faq_card_1_p: '推荐格式、出血、字体与避免拖稿的要点。',
+                landing_portable_faq_card_2_h3: '交期',
+                landing_portable_faq_card_2_p: '如何结合展会排期与运输预留时间。',
+                landing_portable_faq_card_3_h3: '运输方式',
+                landing_portable_faq_card_3_p: '快递、空运与海运的选择思路。',
+                landing_portable_faq_view_all: '查看全部常见问题',
+
                 page_title_beach: '沙滩旗供应商｜羽毛旗刀旗矩形旗杆底座｜伟群帐篷',
                 landing_top_bar_beach: '工厂直供 · 旗面 + 旗杆 + 底座 · 24 小时内回复',
                 landing_beach_h1: '沙滩旗供应商',
@@ -1670,6 +1751,88 @@ class MultiLanguageSystem {
                 landing_1010_faq_section_h2: '10×10 Pop Up Canopy Tent — FAQs',
                 landing_1010_faq_section_intro_html:
                     'More buyer topics: <a href="/faq.html">FAQ hub</a> · <a href="/faq-moq.html">MOQ</a> · <a href="/faq-shipping.html">Shipping</a>',
+
+                page_title_aluminum_fold: 'Aluminum Pop Up Canopy Tent | Heavy Duty Pop Up Tent Frames | WaiKwan',
+                landing_aluminum_h1: 'Aluminum Pop Up Canopy Tent Frames',
+                landing_aluminum_p1_html:
+                    '<p>An <strong>aluminum folding tent</strong> uses extruded legs and trusses for strength-to-weight balance—ideal when procurement teams spec an <strong>aluminum pop up canopy tent</strong> for crews that strike and rebuild often. Compared with steel, aluminum stays lighter for truck pack-outs and resists corrosion in humid outdoor circuits; steel can win on unit cost for seasonal rental pools. WaiKwan supplies both frame routes with branded canopies, sidewalls, and accessories—this page focuses on <strong>material and frame behavior</strong>; for umbrella OEM positioning see <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a>.</p>',
+                landing_aluminum_p2_html:
+                    '<p>Typical deployments include roadshow tours, sports venues, festival lanes, and agency programs that need reliable weather cover without excessive frame weight.</p>',
+                landing_aluminum_card_1_h3: 'Aluminum vs steel',
+                landing_aluminum_card_1_p:
+                    'Aluminum: lighter handling, corrosion resistance. Steel: cost-focused strength for short-term or high-wind setups—pick based on schedule and budget.',
+                landing_aluminum_card_2_h3: 'Canopy & printing',
+                landing_aluminum_card_2_p:
+                    'Water-resistant fabrics and full-color printing for <strong>heavy duty canopy tent</strong> programs.',
+                landing_aluminum_card_3_h3: 'Events & commercial',
+                landing_aluminum_card_3_p:
+                    '3×3 m to larger footprints for hospitality, sampling and registration zones.',
+                landing_aluminum_card_4_h3: 'OEM / ODM',
+                landing_aluminum_card_4_p:
+                    'Private-label frames, pantone-aligned canopies and export packing from factory.',
+                landing_aluminum_disclaimer_html:
+                    '<p style="margin-bottom: 10px;">Browse all tent SKUs: <a href="/all-products.html?cat=tents">folding and canopy tents (full listing)</a>. Size-intent buyers: <a href="/10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> (3×3 m).</p>'
+                    + '<p style="margin-bottom: 10px;">Broad OEM programs: <a href="/custom-canopy-tent-manufacturer.html">custom canopy tents — full B2B overview</a>.</p>'
+                    + '<p style="margin-bottom: 10px;">Guides: <a href="/seo/aluminum-frame-pop-up-tent-factory-direct-export.html">aluminum frame pop up tent (factory export)</a> · <a href="/seo/commercial-grade-pop-up-canopy-wholesale-supplier.html">commercial-grade canopy wholesale</a> · <a href="/site-map.html#seo-guides">full list</a>.</p>'
+                    + 'Contact: <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp: <a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a>',
+                landing_aluminum_repeat_h2: 'Why aluminum pop up canopy tents win on repeat setup',
+                landing_aluminum_repeat_p_html:
+                    '<p style="max-width: 900px; margin-left: auto; margin-right: auto;">Touring teams choose aluminum when every kilogram matters—lighter legs reduce crew fatigue, and corrosion resistance extends service life in coastal or humid circuits. Paired with a properly tensioned canopy, an <strong>aluminum pop up canopy tent</strong> can deliver the <strong>heavy duty pop up tent</strong> feel buyers expect for sponsor activations without the penalty weight of overbuilt steel on every load-in.</p>',
+                landing_aluminum_program_h2: 'Plan the full canopy program (not only the frame)',
+                landing_aluminum_program_p_html:
+                    '<p style="max-width: 900px; margin-left: auto; margin-right: auto;">Start with the <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a> hub for OEM/ODM, logo printing, and sidewall bundles. If your catalog centers on the most common portable footprint, review <a href="/10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> specs—then align frame grade with the ballast and anchoring plan your end customers use on site.</p>',
+                landing_aluminum_related_h2: 'Related resources',
+                landing_aluminum_related_sub: 'Tents, flags and buyer FAQs.',
+                landing_aluminum_rel_canopy_h3: 'Custom canopy tent manufacturer (broad OEM)',
+                landing_aluminum_rel_canopy_p: 'Pop up positioning, printing, MOQ and export—not frame metallurgy.',
+                landing_aluminum_rel_1010_h3: '10×10 pop up canopy tent',
+                landing_aluminum_rel_1010_p: '3×3 m sizing, accessories, and distributor notes.',
+                landing_aluminum_rel_types_h3: 'Tent types',
+                landing_aluminum_rel_types_p: 'Frame and size orientation for buyers.',
+                landing_aluminum_rel_moq_h3: 'MOQ',
+                landing_aluminum_rel_moq_p: 'How minimums work by model and printing.',
+
+                page_title_portable_display: 'Portable Display Systems Manufacturer | Event & Trade Show Displays | WaiKwan',
+                landing_top_bar_portable: 'Factory direct · Portable displays · Reply within 24 hours',
+                landing_portable_h1: 'Portable Display Systems Manufacturer',
+                landing_portable_lead:
+                    'Event & trade show display systems with printing — counters, roll-up stands, fabric displays and custom setups.',
+                landing_portable_card_1_h3: 'Product Range',
+                landing_portable_card_1_p:
+                    'Pop-up display systems, fabric displays, promotion counters, roll-up stands, accessories.',
+                landing_portable_card_2_h3: 'MOQ',
+                landing_portable_card_2_p:
+                    'Low MOQ depending on the item. Bulk orders supported with stable printing quality.',
+                landing_portable_card_3_h3: 'Lead Time',
+                landing_portable_card_3_p:
+                    'Typical 7–15 days after artwork approval. Faster for stocked hardware components.',
+                landing_portable_card_4_h3: 'Export Support',
+                landing_portable_card_4_p:
+                    'Flat-pack packing, QC photos, carton marks, and worldwide shipping options.',
+                landing_portable_contact_line_html:
+                    'Contact: <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a> · WhatsApp: <a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · WeChat: massifmyth',
+                landing_portable_b2b_links_html:
+                    '<span>B2B supplier pages:</span> <a href="/seg-light-box-manufacturer.html">SEG light box manufacturer</a> · <a href="/tension-fabric-backwall.html">tension fabric backwall</a> · <a href="/aluminum-folding-tent.html">aluminum folding tent</a>. '
+                    + '<span>Deeper guides:</span> <a href="/seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html">tension fabric walls (OEM)</a> · <a href="/seo/portable-backdrop-display-system-supplier-wholesale.html">portable backdrop wholesale</a> · <a href="/site-map.html#seo-guides">full index</a>.',
+                landing_portable_supply_h2: 'What We Supply',
+                landing_portable_supply_sub: 'Choose a ready system or ask for a complete kit for your booth size and branding.',
+                landing_portable_supply_1_h3: 'Fabric Displays',
+                landing_portable_supply_1_p: 'Lightweight aluminum frames + stretch fabric graphics for exhibitions.',
+                landing_portable_supply_2_h3: 'Promotion Counters',
+                landing_portable_supply_2_p: 'Portable counters with wrap-around graphics for sampling and retail.',
+                landing_portable_supply_3_h3: 'Roll-up Stands',
+                landing_portable_supply_3_p: 'Classic retractable banners for quick setup and easy transport.',
+                landing_portable_supply_4_h3: 'Complete Kits',
+                landing_portable_supply_4_p: 'We can bundle canopy + flags + counters for event activation sets.',
+                landing_portable_faq_h2: 'FAQ Articles',
+                landing_portable_faq_sub: 'Artwork, color and shipping guidance for display projects.',
+                landing_portable_faq_card_1_h3: 'Artwork Files',
+                landing_portable_faq_card_1_p: 'Preferred formats, bleed, fonts and how to avoid delays.',
+                landing_portable_faq_card_2_h3: 'Lead Time',
+                landing_portable_faq_card_2_p: 'How to plan for exhibitions and shipping.',
+                landing_portable_faq_card_3_h3: 'Shipping Options',
+                landing_portable_faq_card_3_p: 'Express vs air vs sea and how to choose.',
+                landing_portable_faq_view_all: 'View all FAQs',
 
                 page_title_beach: 'Beach Flag Supplier | Custom Feather & Teardrop Flags | WaiKwan',
                 landing_top_bar_beach: 'Factory direct · Flags + poles + bases · Reply within 24 hours',

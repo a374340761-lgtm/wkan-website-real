@@ -3041,9 +3041,26 @@ class ProductManager {
         const primaryTranslate = typeHref ? 'view_type_button' : 'view_details';
         const primaryClass = typeHref ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
 
+        const iconClass = this.getProductIcon(product.category);
+        let cardImg = '';
+        if (typeof window.WK_getProductCardImage === 'function') {
+            cardImg = window.WK_getProductCardImage(product) || '';
+        }
+        if (!cardImg) {
+            let raw = product.image || (Array.isArray(product.images) ? product.images[0] : '') || '';
+            if (raw && !raw.startsWith('images/') && !raw.startsWith('/') && !raw.startsWith('./')) {
+                raw = 'images/' + raw;
+            }
+            cardImg = raw ? wkRootAssetUrl(String(raw).trim()) : '';
+        }
+        const altText = `${product.nameEn || name} / ${product.name || ''}`;
+        const productImageInner = cardImg
+            ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.png';" />`
+            : `<i class="fas fa-${iconClass}"></i>`;
+
         productDiv.innerHTML = `
             <div class="product-image">
-                <i class="fas fa-${this.getProductIcon(product.category)}"></i>
+                ${productImageInner}
             </div>
             <div class="product-info">
                 <h3>${name}</h3>

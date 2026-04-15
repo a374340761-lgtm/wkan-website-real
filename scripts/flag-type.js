@@ -168,6 +168,7 @@
           cb(window.productManager);
         } else if (n > 120) {
           clearInterval(id);
+          console.warn('[FLAG-TYPE RFQ] ProductManager timeout after 6s');
         }
       }, 50);
     };
@@ -179,6 +180,7 @@
         try {
           payload = JSON.parse(decodeURIComponent(btn.getAttribute('data-wk-payload') || '{}'));
         } catch (err) {
+          console.warn('[FLAG-TYPE RFQ] Failed to parse button payload', err);
           return;
         }
         tryPm((pm) => {
@@ -191,7 +193,16 @@
             product = pm.products.find((p) => String(p.category) === 'flags' && String(p.model || '').trim() === m)
               || pm.products.find((p) => String(p.model || '').trim() === m);
           }
-          if (!product) return;
+          if (!product) {
+            console.warn('[FLAG-TYPE RFQ] Could not find matching product', {
+              flagPageType: payload.flagPageType,
+              findModel: payload.findModel,
+              variantModel: payload.variantModel,
+              variantSize: payload.variantSize,
+              availableModels: pm.products.filter((p) => String(p.category) === 'flags').map((p) => String(p.model || '') + ' (id:' + p.id + ')').slice(0, 10)
+            });
+            return;
+          }
           const vd = {
             variantKey: payload.vkey || '',
             variantModel: payload.variantModel || '',
@@ -202,6 +213,8 @@
           };
           if (typeof window.addVariantToRfqCart === 'function') {
             window.addVariantToRfqCart(product, vd);
+          } else {
+            console.warn('[FLAG-TYPE RFQ] addVariantToRfqCart function not available');
           }
         });
       });

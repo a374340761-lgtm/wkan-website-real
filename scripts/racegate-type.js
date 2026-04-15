@@ -163,10 +163,21 @@
         try {
           payload = JSON.parse(decodeURIComponent(btn.getAttribute('data-wk-payload') || '{}'));
         } catch (err) {
+          console.warn('[RACEGATE-TYPE RFQ] Failed to parse button payload', err);
           return;
         }
         const p = pm.products.find((x) => String(x.id) === String(payload.pid));
-        if (!p || typeof window.addVariantToRfqCart !== 'function') return;
+        if (!p) {
+          console.warn('[RACEGATE-TYPE RFQ] Could not find product by id', {
+            pid: payload.pid,
+            availableIds: pm.products.map((x) => x.id).slice(0, 10)
+          });
+          return;
+        }
+        if (typeof window.addVariantToRfqCart !== 'function') {
+          console.warn('[RACEGATE-TYPE RFQ] addVariantToRfqCart function not available');
+          return;
+        }
         window.addVariantToRfqCart(p, {
           variantKey: payload.vkey,
           variantModel: payload.variantModel,
@@ -186,9 +197,18 @@
         e.preventDefault();
         const id = btn.getAttribute('data-wk-rfq-racegate');
         const p = pm.products.find((x) => String(x.id) === String(id));
-        if (p && typeof window.addProductToRfqCart === 'function') {
-          window.addProductToRfqCart(p, 1);
+        if (!p) {
+          console.warn('[RACEGATE-TYPE RFQ] Could not find product by id', {
+            id,
+            availableIds: pm.products.map((x) => x.id).slice(0, 10)
+          });
+          return;
         }
+        if (typeof window.addProductToRfqCart !== 'function') {
+          console.warn('[RACEGATE-TYPE RFQ] addProductToRfqCart function not available');
+          return;
+        }
+        window.addProductToRfqCart(p, 1);
       });
     });
 

@@ -1570,8 +1570,8 @@ function enhanceDisplaysDropdown() {
         { href: 'all-products.html?cat=displays&sub=promotion-counter', translateKey: 'menu_displays_promotion_counter' },
 
         // Direct product entries
-        { href: `product-detail.html?sku=${encodeURIComponent('42001')}`, translateKey: 'menu_displays_aframe' },
-        { href: `product-detail.html?sku=${encodeURIComponent('42002')}`, translateKey: 'menu_displays_aframe_backdrop' }
+        { href: `product-detail.html?sku=${encodeURIComponent('42002')}`, translateKey: 'menu_displays_aframe_backdrop' },
+        { href: `product-detail.html?sku=${encodeURIComponent('42001')}`, translateKey: 'menu_displays_aframe' }
     ];
 
     menus.forEach((menu) => {

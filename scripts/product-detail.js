@@ -195,16 +195,25 @@ document.addEventListener('DOMContentLoaded', () => {
             : String(product.id || requested).trim();
         const catLabel = getCategoryLabel(product.category);
 
-        // Page title and SEO (EN: short brand; ZH: full company name from i18n)
+        // Page title and SEO (EN: short brand; ZH: full company name from i18n).
+        // Optional per-product full titles: seoTitleZh / seoTitleEn; meta: seoDescriptionZh / seoDescriptionEn.
         const companyName = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('company_name') : '';
         const lang = getCurrentLang();
         const brandSuffix = lang === 'zh' ? (companyName || '伟群帐篷') : 'Tent & Display Manufacturer | WaiKwan';
-        document.title = `${name} | ${brandSuffix}`;
+        const seoTitleFull = (lang === 'zh')
+            ? String(product.seoTitleZh || '').trim()
+            : String(product.seoTitleEn || '').trim();
+        document.title = seoTitleFull || `${name} | ${brandSuffix}`;
         const metaDesc = document.querySelector('meta[name="description"]');
-        const descForSeo = (shortText || description || `${name}`).trim();
+        const seoDescCustom = (lang === 'zh')
+            ? String(product.seoDescriptionZh || '').trim()
+            : String(product.seoDescriptionEn || '').trim();
+        const descForSeo = seoDescCustom || (shortText || description || `${name}`).trim();
         if (metaDesc) {
             if (lang === 'zh') {
                 metaDesc.content = descForSeo;
+            } else if (seoDescCustom) {
+                metaDesc.content = seoDescCustom;
             } else {
                 const skuPart = skuForCanonical ? `SKU ${skuForCanonical}. ` : '';
                 const catPart = (catLabel && String(catLabel).trim()) ? `${catLabel}. ` : '';

@@ -934,8 +934,8 @@ class MultiLanguageSystem {
                 menu_displays_promotion_counter: '促销台',
 
                 pdp_optional_accessories: '可选配件',
-                menu_displays_aframe: 'A字架（A-Frame）',
-                menu_displays_aframe_backdrop: 'A字架背板系统（Backdrop）',
+                menu_displays_aframe: 'A字架展示架',
+                menu_displays_aframe_backdrop: '万能架背景系统',
                 menu_accessories: '配件',
                 menu_racegate: '竞速拱门',
                 menu_replacement_parts: '替换零件',
@@ -2114,8 +2114,8 @@ class MultiLanguageSystem {
                 menu_displays_promotion_counter: 'Promotion Counter',
 
                 pdp_optional_accessories: 'Optional Accessories',
-                menu_displays_aframe: 'A-Frame',
-                menu_displays_aframe_backdrop: 'A-Frame Backdrop System',
+                menu_displays_aframe: 'A-Frame Display System',
+                menu_displays_aframe_backdrop: 'Backdrop System',
                 menu_accessories: 'Accessories',
                 menu_racegate: 'Race Gate',
                 menu_replacement_parts: 'Replacement Parts',

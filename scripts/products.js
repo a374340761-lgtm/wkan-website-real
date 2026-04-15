@@ -171,57 +171,35 @@ class ProductManager {
                 tags: 'WK-T30, WK-T30I, WK-T30H, WK-T30A, WK-T30B, WK-T30C, WK-T30D, WK-T30E, 30, iron, folding tent, stock',
                 price: '询价'
             },
-                // ===== Displays: A-Frame / Backdrop =====
+                // ===== Displays: A-Frame Display System (42001) & Backdrop / Universal Stand (42002) =====
                 {
                     id: 42001,
                     category: 'displays',
                     subcategory: 'a-frame',
                     model: 'AD-H18 Series',
-                    name: 'A字架（A-Frame）',
-                    nameEn: 'A-Frame',
-                    nameZh: 'A字架（A-Frame）',
-                    short: 'A字架展示系统，可用于活动背板与品牌画面展示。',
-                    shortEn: 'A-frame display system for event branding and backdrop graphics.',
-                    shortZh: 'A字架展示系统，可用于活动背板与品牌画面展示。',
-                    description: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
-                    descriptionEn: 'A-frame display system (AD-H18 series). Multiple model sizes plus multiple graphic shape/size options for events, exhibitions and outdoor displays.',
-                    descriptionZh: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
+                    name: 'A字架展示架',
+                    nameEn: 'A-Frame Display System',
+                    nameZh: 'A字架展示架',
+                    shortEn: 'A-Frame Display System for double-sided promotional graphics, suitable for indoor and outdoor event signage.',
+                    shortZh: 'A字架展示架适用于双面广告画面展示，适合室内外活动导视与宣传使用。',
+                    descriptionEn: 'A-Frame Display System for double-sided promotional graphics, suitable for indoor and outdoor event signage. Models AD-H18A/B/C.',
+                    descriptionZh: 'A字架展示架适用于双面广告画面展示，适合室内外活动导视与宣传使用。型号含 AD-H18A/B/C。',
+                    detailDescEn: ['A-Frame Display System for double-sided promotional graphics, suitable for indoor and outdoor event signage.'],
+                    detailDescZh: ['A字架展示架适用于双面广告画面展示，适合室内外活动导视与宣传使用。'],
+                    applicationsEn: ['Event signage', 'Entrance promotion', 'Double-sided advertising'],
+                    applicationsZh: ['活动导视', '门店入口宣传', '双面广告展示'],
+                    seoTitleEn: 'A-Frame Display System Manufacturer | Double-Sided Event Sign Stand | WaiKwan',
+                    seoTitleZh: 'A字架展示架 | 双面活动广告屏 | 广西伟群帐篷制造有限公司',
+                    seoDescriptionEn: 'A-frame display system for double-sided advertising, event signage, and entrance promotion. Factory direct from WaiKwan.',
+                    seoDescriptionZh: 'A字架展示架适用于双面广告与活动导视，室内外宣传展示。广西伟群帐篷制造 OEM/ODM。',
                     // Plain paths only — WK_getProductCardImage() applies encodeURI once (double-encoding breaks Browse Products cards).
-                    image: 'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
-                    images: [
-                        'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
-                        'images/products/displays/A Frame/A Frame 注释图.jpg'
-                    ],
-                    gallery: [
-                        'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
-                        'images/products/displays/A Frame/A Frame 注释图.jpg'
-                    ],
-                    referenceImage: 'images/products/displays/A Frame/A Frame 注释图.jpg',
-                    referenceImageLabel: 'A字架规格注释图 / A-Frame Specification Diagram',
+                    image: 'images/products/displays/A Frame/A frame display hero.png',
+                    images: ['images/products/displays/A Frame/A frame display hero.png'],
+                    gallery: ['images/products/displays/A Frame/A frame display hero.png'],
                     variantTables: [
                         {
-                            titleZh: '形状与尺寸（S / M / L）',
-                            titleEn: 'Shape Types & Sizes (S / M / L)',
-                            columns: [
-                                { key: 'type', labelZh: '类型', labelEn: 'Type' },
-                                { key: 's', labelZh: 'S', labelEn: 'S' },
-                                { key: 'm', labelZh: 'M', labelEn: 'M' },
-                                { key: 'l', labelZh: 'L', labelEn: 'L' }
-                            ],
-                            rows: [
-                                { type: 'A', s: '70 × 120 cm', m: '100 × 200 cm', l: '110 × 260 cm' },
-                                { type: 'B', s: '62 × 126 cm', m: '100 × 200 cm', l: '110 × 260 cm' },
-                                { type: 'C', s: '100 × 100 cm', m: '120 × 120 cm', l: '150 × 150 cm' },
-                                { type: 'D', s: '100 × 100 cm', m: '120 × 120 cm', l: '150 × 150 cm' },
-                                { type: 'E', s: '', m: '80 × 120 cm', l: '110 × 220 cm' },
-                                { type: 'F', s: '80 × 100 cm', m: '80 × 120 cm', l: '110 × 220 cm' },
-                                { type: 'G', s: '80 × 100 cm', m: '80 × 120 cm', l: '110 × 220 cm' },
-                                { type: 'H', s: '80 × 150 cm', m: '100 × 200 cm', l: '100 × 250 cm' }
-                            ]
-                        },
-                        {
-                            titleZh: 'A字架型号参数',
-                            titleEn: 'A-Frame Models',
+                            titleZh: 'A字架展示架参数',
+                            titleEn: 'A-Frame Display System Specs',
                             columns: [
                                 { key: 'model', labelZh: '型号', labelEn: 'Model' },
                                 { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
@@ -230,14 +208,14 @@ class ProductManager {
                                 { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
                             ],
                             rows: [
-                                { model: 'AD-H18A', size: '100 × 200 cm', carton: '125 × 14 × 11 cm', qty: '1', weight: '5.5 kg' },
-                                { model: 'AD-H18B', size: '100 × 250 cm', carton: '125 × 14 × 11 cm', qty: '1', weight: '6.2 kg' },
-                                { model: 'AD-H18C', size: '100 × 300 cm', carton: '100 × 24 × 11 cm', qty: '1', weight: '7.0 kg' }
+                                { model: 'AD-H18A', size: '100 × 200 cm', carton: '100 × 24 × 11 cm', qty: '1 set', weight: '5.5 kg' },
+                                { model: 'AD-H18B', size: '100 × 250 cm', carton: '125 × 24 × 11 cm', qty: '1 set', weight: '6.2 kg' },
+                                { model: 'AD-H18C', size: '100 × 300 cm', carton: '100 × 24 × 11 cm', qty: '1 set', weight: '7.0 kg' }
                             ]
                         }
                     ],
-                    keywords: ['A-Frame', 'A frame', 'AD-H18', 'backdrop', 'display', 'A字架', '背板', '活动展示'],
-                    tags: 'A-Frame, AD-H18A, AD-H18B, AD-H18C, backdrop, display',
+                    keywords: ['A-Frame Display System', 'A-Frame', 'A屏', 'AD-H18A', 'AD-H18B', 'AD-H18C', 'A字架', 'event signage', 'display', '双面展示'],
+                    tags: 'A-Frame Display System, AD-H18A, AD-H18B, AD-H18C, event signage',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                     price: '询价'
                 },
@@ -246,18 +224,24 @@ class ProductManager {
                     category: 'displays',
                     subcategory: 'a-frame-backdrop',
                     model: 'AD-H1',
-                    name: 'A字架背板系统（Backdrop）',
-                    nameEn: 'A-Frame Backdrop System',
-                    nameZh: 'A字架背板系统（Backdrop）',
-                    short: 'A字架背板系统，适合活动主视觉与背景展示。',
-                    shortEn: 'A-frame backdrop system for key visuals and event backdrops.',
-                    shortZh: 'A字架背板系统，适合活动主视觉与背景展示。',
-                    description: 'Backdrop System（AD-H1）。提供 150 × 90 cm / 180 × 90 cm 两种尺寸，装箱信息见型号参数表。',
-                    descriptionEn: 'Backdrop System (AD-H1). Two size options: 150 × 90 cm / 180 × 90 cm. Packing details are listed in the model table.',
-                    descriptionZh: 'Backdrop System（AD-H1）。提供 150 × 90 cm / 180 × 90 cm 两种尺寸，装箱信息见型号参数表。',
-                    image: 'images/placeholder.svg',
-                    images: ['images/placeholder.svg'],
-                    gallery: ['images/placeholder.svg'],
+                    name: '万能架背景系统',
+                    nameEn: 'Backdrop System',
+                    nameZh: '万能架背景系统',
+                    shortEn: 'Backdrop System with adjustable width and height, suitable for event visuals, promotional backdrops, and flexible background display.',
+                    shortZh: '万能架背景系统，宽高可调，适合活动主视觉、品牌宣传背景和灵活背景搭建。',
+                    descriptionEn: 'Universal Stand / Backdrop System (AD-H1). Adjustable graphic area 153–309(W) × 107–247(H) cm. Carton 105 × 11 × 26 cm, 8.2 kg per set.',
+                    descriptionZh: '万能架 / Backdrop System（AD-H1），画面区域宽高可调：153–309(宽) × 107–247(高) cm。外箱 105 × 11 × 26 cm，单套约 8.2 kg。',
+                    detailDescEn: ['Backdrop System with adjustable width and height, suitable for event visuals, promotional backdrops, and flexible background display.'],
+                    detailDescZh: ['万能架背景系统，宽高可调，适合活动主视觉、品牌宣传背景和灵活背景搭建。'],
+                    applicationsEn: ['Event backdrop', 'Brand promotion', 'Flexible background display'],
+                    applicationsZh: ['活动背景', '品牌宣传', '灵活背景展示'],
+                    seoTitleEn: 'Backdrop System Manufacturer | Adjustable Promotional Background Stand | WaiKwan',
+                    seoTitleZh: '万能架背景系统 | 可调伸缩背景架 | 广西伟群帐篷制造有限公司',
+                    seoDescriptionEn: 'Adjustable backdrop system for event branding, promotional backgrounds, and flexible display setup. Factory direct from WaiKwan.',
+                    seoDescriptionZh: '万能架背景系统，宽高可调，适合活动主视觉与品牌宣传背景。广西伟群帐篷制造 OEM/ODM。',
+                    image: 'images/products/displays/A Frame/backdropsystemhero.png',
+                    images: ['images/products/displays/A Frame/backdropsystemhero.png'],
+                    gallery: ['images/products/displays/A Frame/backdropsystemhero.png'],
                     variantTables: [
                         {
                             titleZh: 'Backdrop System 参数',
@@ -270,13 +254,12 @@ class ProductManager {
                                 { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
                             ],
                             rows: [
-                                { model: 'AD-H1', size: '150 × 90 cm', carton: '105 × 11 × 26 cm', qty: '1 set', weight: '8.2 kg' },
-                                { model: 'AD-H1', size: '180 × 90 cm', carton: '105 × 11 × 26 cm', qty: '1 set', weight: '8.2 kg' }
+                                { model: 'AD-H1', size: '153–309(W) × 107–247(H) cm', carton: '105 × 11 × 26 cm', qty: '1 set', weight: '8.2 kg' }
                             ]
                         }
                     ],
-                    keywords: ['Backdrop', 'Backdrop System', 'AD-H1', 'A-Frame', 'display', '背板', '背景板'],
-                    tags: 'Backdrop System, AD-H1, A-Frame backdrop, display',
+                    keywords: ['Backdrop System', 'Universal Stand', '万能架', 'AD-H1', 'adjustable backdrop', '背景系统', 'display'],
+                    tags: 'Backdrop System, Universal Stand, AD-H1, adjustable backdrop',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                     price: '询价'
                 },
@@ -2650,8 +2633,8 @@ class ProductManager {
 
         if (id === 42001 || id === 42002) {
             paths = ['images/广西伟群帐篷制造有限公司2025allpagepng/18.png'];
-            subZh = '以下为画册页示例，用于快速对照 A 字架与背板系统款式（可点击放大）。';
-            subEn = 'Example catalog pages for quick reference (click to open).';
+            subZh = '以下为画册页示例，用于对照 A 字架展示架与万能架背景系统（可点击放大）。';
+            subEn = 'Catalog reference: A-Frame Display System and Backdrop System (click to enlarge).';
         } else if (id === 42009 || String(p.sku || '').toUpperCase() === 'WK-HZ-STRAIGHT') {
             paths = [
                 'images/products/displays/tension-fabric-displays/tesionfacbricdisplacestraightlinehero.png',

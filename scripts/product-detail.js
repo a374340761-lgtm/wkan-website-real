@@ -146,7 +146,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // Merged SKUs → single PDP (rect bi-fold Z-series; round YZ-series)
         const legacyMergedSku = {
             '31002': '31001', '31003': '31001', '31004': '31001',
-            '31011': '31010', '31012': '31010'
+            '31011': '31010', '31012': '31010',
+            '42006': '42005'
         };
         if (legacyMergedSku[requested]) {
             window.location.replace(`product-detail.html?sku=${encodeURIComponent(legacyMergedSku[requested])}`);

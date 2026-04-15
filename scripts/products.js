@@ -410,39 +410,42 @@ class ProductManager {
                     id: 42005,
                     category: 'displays',
                     subcategory: 'fabric-banner-stands',
-                    model: 'WK-H-01',
-                    sku: 'WK-H-01',
-                    nameEn: 'Fabric Banner Stand (WK-H-01)',
-                    nameZh: '立牌系列（WK-H-01）',
-                    shortEn: 'Tension fabric banner stand for exhibitions and retail promotions.',
-                    shortZh: '张力布立牌，适用于展会背景、门店陈列与活动展示。',
-                    descriptionEn: 'Portable tension fabric banner stand with aluminum frame and push-fit SEG graphic. Clean look, quick setup, easy graphic change.',
-                    descriptionZh: '便携式张力布立牌，铝合金框架 + 卡槽式（SEG）画面安装。外观干净利落，安装快捷，画面易更换。',
-                    image: 'images/products/displays/tension-fabric-displays/20.png',
-                    images: ['images/products/displays/tension-fabric-displays/20.png'],
-                    gallery: ['images/products/displays/tension-fabric-displays/20.png'],
+                    model: 'WK-H-01 / WK-H-02',
+                    sku: '42005',
+                    name: '立牌系列（WK-H-01 / WK-H-02）',
+                    nameEn: 'Fabric Banner Stand Series (WK-H-01 / WK-H-02)',
+                    nameZh: '立牌系列（WK-H-01 / WK-H-02）',
+                    shortEn: 'Tension fabric banner stands (WK-H-01 & WK-H-02) for exhibitions, retail and events — choose model by weight preference.',
+                    shortZh: '立牌系列张力布展示架（WK-H-01 / WK-H-02），适用于展会、门店与活动；两型号同规格画面，重量不同。',
+                    descriptionEn: 'Portable tension fabric banner stands with aluminum frame and push-fit SEG graphic. WK-H-01 and WK-H-02 share the same display size and graphic size; weight differs (see model table). Clean look, quick setup, easy graphic change.',
+                    descriptionZh: '便携式张力布立牌，铝合金框架 + 卡槽式（SEG）画面安装。WK-H-01 与 WK-H-02 画面规格一致，重量不同（见型号表）。外观利落，安装快捷，画面易更换。',
+                    image: 'images/products/displays/tension-fabric-displays/立牌系列hero.png',
+                    images: ['images/products/displays/tension-fabric-displays/立牌系列hero.png'],
+                    gallery: ['images/products/displays/tension-fabric-displays/立牌系列hero.png'],
                     specsZh: {
                         Size: '80 × 200 CM',
                         'Graphic Size': '83 × 205 CM',
                         Carton: '30 × 19 × 100 CM',
                         Quantity: '1',
-                        Weight: '9 KG'
+                        Weight: 'WK-H-01：9 KG；WK-H-02：3.5 KG'
                     },
                     specsEn: {
                         Size: '80 × 200 CM',
                         'Graphic Size': '83 × 205 CM',
                         Carton: '30 × 19 × 100 CM',
                         Quantity: '1',
-                        Weight: '9 KG'
+                        Weight: 'WK-H-01: 9 KG; WK-H-02: 3.5 KG'
                     },
                     detailDescEn: [
+                        'Two models in one series: WK-H-01 and WK-H-02 share the same footprint and SEG graphic size; pick the model that matches your handling weight preference.',
                         'Aluminum frame system with tension fabric graphic; clean modern look.',
                         'Silicone edge / push-fit (SEG) graphic: silicone strip pressed into the frame channel for a drum-tight, wrinkle-reduced finish.',
                         'Dye-sublimation printing on stretch fabric; vibrant colors; easy graphic change.',
                         'Tool-free or minimal-tool setup; portable for trade shows; compatible with optional lighting and wheeled cases.'
                     ],
                     detailDescZh: [
-                        '铝合金框架 + 张力布画面，整体更轻便、外观更高级。',
+                        '同一立牌系列包含 WK-H-01 与 WK-H-02：外观尺寸与画面规格一致，重量不同，可按搬运与使用偏好选型。',
+                        '铝合金框架 + 张力布画面，整体轻便、外观高级。',
                         '硅胶边条/卡槽式（Push-fit/SEG）安装：布边硅胶条压入框架槽口，画面更平整、减皱、边缘更干净。',
                         '热升华印刷，色彩饱和；画面可更换，维护成本低。',
                         '免工具/少工具快速安装，适用于展会、活动背景、店铺陈列；可搭配照明与收纳运输箱。'
@@ -462,79 +465,7 @@ class ProductManager {
                                 { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
                             ],
                             rows: [
-                                { model: 'WK-H-01', size: '80 × 200 CM', graphic: '83 × 205 CM', carton: '30 × 19 × 100 CM', qty: '1', weight: '9 KG' }
-                            ]
-                        },
-                        {
-                            titleZh: '可选配件',
-                            titleEn: 'Optional Accessories',
-                            items: ['照明灯套装 / Lighting kit', '收纳运输箱 / Transport cases']
-                        }
-                    ],
-                    optionalAccessoryIds: [42007, 42008],
-                    searchableKeywords: ['WK-H-01', 'WK H 01', 'fabric banner stand', 'tension fabric', 'seg', 'push-fit', '立牌', '立牌', '张力布', '快幕秀'],
-                    keywords: ['WK-H-01', 'fabric banner stand', 'tension fabric', 'SEG', 'push-fit', '立牌', '张力布', '快幕秀'],
-                    tags: 'WK-H-01, Fabric Banner Stand, tension fabric, SEG, push-fit, display',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
-                    referenceImageLabel: '产品画册参考 / Product Catalog Reference',
-                    price: '询价'
-                },
-                {
-                    id: 42006,
-                    category: 'displays',
-                    subcategory: 'fabric-banner-stands',
-                    model: 'WK-H-02',
-                    sku: 'WK-H-02',
-                    nameEn: 'Fabric Banner Stand (WK-H-02)',
-                    nameZh: '立牌系列（WK-H-02）',
-                    shortEn: 'Lightweight tension fabric banner stand for events and brand displays.',
-                    shortZh: '轻量化张力布立牌，适用于活动与品牌展示。',
-                    descriptionEn: 'Portable tension fabric banner stand with aluminum frame and push-fit SEG graphic. Quick setup and easy graphic replacement.',
-                    descriptionZh: '便携式张力布立牌，铝合金框架 + 卡槽式（SEG）画面安装。快速搭建，画面更换便捷。',
-                    image: 'images/products/displays/tension-fabric-displays/20.png',
-                    images: ['images/products/displays/tension-fabric-displays/20.png'],
-                    gallery: ['images/products/displays/tension-fabric-displays/20.png'],
-                    specsZh: {
-                        Size: '80 × 200 CM',
-                        'Graphic Size': '83 × 205 CM',
-                        Carton: '30 × 19 × 100 CM',
-                        Quantity: '1',
-                        Weight: '3.5 KG'
-                    },
-                    specsEn: {
-                        Size: '80 × 200 CM',
-                        'Graphic Size': '83 × 205 CM',
-                        Carton: '30 × 19 × 100 CM',
-                        Quantity: '1',
-                        Weight: '3.5 KG'
-                    },
-                    detailDescEn: [
-                        'Aluminum frame system with tension fabric graphic; clean modern look.',
-                        'Silicone edge / push-fit (SEG) graphic: silicone strip pressed into the frame channel for a drum-tight, wrinkle-reduced finish.',
-                        'Dye-sublimation printing on stretch fabric; vibrant colors; easy graphic change.',
-                        'Tool-free or minimal-tool setup; portable for trade shows; compatible with optional lighting and wheeled cases.'
-                    ],
-                    detailDescZh: [
-                        '铝合金框架 + 张力布画面，整体更轻便、外观更高级。',
-                        '硅胶边条/卡槽式（Push-fit/SEG）安装：布边硅胶条压入框架槽口，画面更平整、减皱、边缘更干净。',
-                        '热升华印刷，色彩饱和；画面可更换，维护成本低。',
-                        '免工具/少工具快速安装，适用于展会、活动背景、店铺陈列；可搭配照明与收纳运输箱。'
-                    ],
-                    applicationsEn: ['Trade shows & exhibitions', 'Retail promotions & storefront display', 'Event branding & photo area'],
-                    applicationsZh: ['展会与展览展示', '门店促销与陈列', '活动品牌展示与拍照区'],
-                    variantTables: [
-                        {
-                            titleZh: '规格参数',
-                            titleEn: 'Specifications',
-                            columns: [
-                                { key: 'model', labelZh: '型号', labelEn: 'Model' },
-                                { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
-                                { key: 'graphic', labelZh: '画面尺寸', labelEn: 'Graphic Size' },
-                                { key: 'carton', labelZh: '外箱尺寸', labelEn: 'Carton Size' },
-                                { key: 'qty', labelZh: '数量', labelEn: 'Quantity' },
-                                { key: 'weight', labelZh: '重量', labelEn: 'Weight' }
-                            ],
-                            rows: [
+                                { model: 'WK-H-01', size: '80 × 200 CM', graphic: '83 × 205 CM', carton: '30 × 19 × 100 CM', qty: '1', weight: '9 KG' },
                                 { model: 'WK-H-02', size: '80 × 200 CM', graphic: '83 × 205 CM', carton: '30 × 19 × 100 CM', qty: '1', weight: '3.5 KG' }
                             ]
                         },
@@ -545,9 +476,9 @@ class ProductManager {
                         }
                     ],
                     optionalAccessoryIds: [42007, 42008],
-                    searchableKeywords: ['WK-H-02', 'WK H 02', 'fabric banner stand', 'tension fabric', 'seg', 'push-fit', '立牌', '立牌', '张力布', '快幕秀'],
-                    keywords: ['WK-H-02', 'fabric banner stand', 'tension fabric', 'SEG', 'push-fit', '立牌', '张力布', '快幕秀'],
-                    tags: 'WK-H-02, Fabric Banner Stand, tension fabric, SEG, push-fit, display',
+                    searchableKeywords: ['WK-H-01', 'WK-H-02', 'WK H 01', 'WK H 02', 'fabric banner stand', 'tension fabric', 'seg', 'push-fit', '立牌', '张力布', '快幕秀'],
+                    keywords: ['WK-H-01', 'WK-H-02', 'fabric banner stand', 'tension fabric', 'SEG', 'push-fit', '立牌', '张力布', '快幕秀'],
+                    tags: 'WK-H-01, WK-H-02, Fabric Banner Stand, tension fabric, SEG, push-fit, display',
                     referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'

@@ -140,9 +140,31 @@
             'water-filled-a-poster-stand': 'category_water_filled_a_poster_stand',
             accessories: 'menu_accessories',
             racegate: 'home_cat_racegate_title',
-            custom: 'category_custom'
+            custom: 'category_custom',
+            furniture: 'category_furniture'
         };
         return map[cat] || null;
+    }
+
+    /** When ?sub= matches a curated group, use type-page title keys and hub links. */
+    function getSubGroupMeta(cat, sub) {
+        const s = String(sub || '').trim().toLowerCase();
+        if (!s) return null;
+        if (s === 'table-chair-stool-toilet' && String(cat || '').toLowerCase() === 'furniture') {
+            return {
+                titleKey: 'view_type_page_title_furniture',
+                hubPath: '/furniture-type.html?type=table-chair-stool-toilet',
+                noteKey: 'ap_listing_group_furniture_note'
+            };
+        }
+        if (s === 'dome-3-folders') {
+            return {
+                titleKey: 'view_type_page_title_dome',
+                hubPath: '/dome-type.html',
+                noteKey: 'ap_listing_group_dome_note'
+            };
+        }
+        return null;
     }
 
     /** Differentiate title/meta when ?cat= is set (canonical stays all-products.html). */
@@ -156,6 +178,29 @@
         const twDesc = document.querySelector('meta[name="twitter:description"]');
 
         if (!cat || cat === 'all') {
+            const subAll = getQuerySub('all');
+            const gSeo = getSubGroupMeta('all', subAll);
+            if (gSeo && subAll) {
+                const label = t(gSeo.titleKey);
+                if (lang === 'zh') {
+                    document.title = `${label} · 产品目录 | 伟群帐篷`;
+                    const zhDesc = `在伟群工厂目录中浏览「${label}」：OEM/ODM 定制、规格与报价。`;
+                    if (metaDesc) metaDesc.setAttribute('content', zhDesc);
+                    if (ogTitle) ogTitle.setAttribute('content', `${label} · 产品目录 | 伟群帐篷`);
+                    if (ogDesc) ogDesc.setAttribute('content', zhDesc);
+                    if (twTitle) twTitle.setAttribute('content', `${label} · 产品目录 | 伟群帐篷`);
+                    if (twDesc) twDesc.setAttribute('content', zhDesc);
+                    return;
+                }
+                document.title = `${label} | OEM Catalog | WaiKwan`;
+                const enDesc = `Browse ${label} in the WaiKwan factory catalog — OEM/ODM, specifications, and B2B quotes.`;
+                if (metaDesc) metaDesc.setAttribute('content', enDesc);
+                if (ogTitle) ogTitle.setAttribute('content', `${label} | Browse OEM | WaiKwan`);
+                if (ogDesc) ogDesc.setAttribute('content', enDesc);
+                if (twTitle) twTitle.setAttribute('content', `${label} | OEM Catalog | WaiKwan`);
+                if (twDesc) twDesc.setAttribute('content', enDesc);
+                return;
+            }
             document.title = DEFAULT_PAGE_TITLE;
             if (metaDesc) metaDesc.setAttribute('content', DEFAULT_META_DESC);
             if (ogTitle) ogTitle.setAttribute('content', DEFAULT_OG_TITLE);
@@ -165,7 +210,9 @@
             return;
         }
 
-        const key = getCategoryLabelKey(cat);
+        const sub = getQuerySub(cat);
+        const gMeta = getSubGroupMeta(cat, sub);
+        const key = gMeta && gMeta.titleKey ? gMeta.titleKey : getCategoryLabelKey(cat);
         const label = key ? t(key) : cat;
 
         if (lang === 'zh') {
@@ -249,12 +296,22 @@
         if (!headingEl && !crumbEl) return;
 
         if (!cat || cat === 'all') {
+            const sub = getQuerySub('all');
+            const gAll = getSubGroupMeta('all', sub);
+            if (gAll && gAll.titleKey) {
+                const lab = t(gAll.titleKey);
+                if (headingEl) headingEl.textContent = lab;
+                if (crumbEl) crumbEl.textContent = lab;
+                return;
+            }
             if (headingEl) headingEl.textContent = t('nav_all_products');
             if (crumbEl) crumbEl.textContent = t('nav_all_products');
             return;
         }
 
-        const key = getCategoryLabelKey(cat);
+        const sub = getQuerySub(cat);
+        const gMeta = getSubGroupMeta(cat, sub);
+        const key = gMeta && gMeta.titleKey ? gMeta.titleKey : getCategoryLabelKey(cat);
         const label = key ? t(key) : cat;
         if (headingEl) headingEl.textContent = label;
         if (crumbEl) crumbEl.textContent = label;
@@ -268,6 +325,21 @@
         const t = (key) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(key) : key);
         if (!banner || !badge || !hub) return;
         if (!cat || cat === 'all') {
+            const subAll = getQuerySub('all');
+            const gAllBanner = getSubGroupMeta('all', subAll);
+            if (gAllBanner && subAll) {
+                banner.hidden = false;
+                if (hint) hint.hidden = true;
+                document.body.setAttribute('data-ap-active-cat', 'all');
+                badge.textContent = t(gAllBanner.titleKey);
+                hub.href = apLocalizedPageHref(gAllBanner.hubPath);
+                hub.setAttribute('data-translate', 'ap_open_type_hub');
+                hub.textContent = '';
+                if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                    window.multiLang.translatePage();
+                }
+                return;
+            }
             banner.hidden = true;
             if (hint) hint.hidden = false;
             document.body.removeAttribute('data-ap-active-cat');
@@ -276,9 +348,23 @@
         banner.hidden = false;
         if (hint) hint.hidden = true;
         document.body.setAttribute('data-ap-active-cat', String(cat));
+        const sub = getQuerySub(cat);
+        const gMeta = getSubGroupMeta(cat, sub);
+        if (gMeta && gMeta.titleKey) {
+            badge.textContent = t(gMeta.titleKey);
+            hub.href = apLocalizedPageHref(gMeta.hubPath);
+            hub.setAttribute('data-translate', 'ap_open_type_hub');
+            hub.textContent = '';
+            if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+                window.multiLang.translatePage();
+            }
+            return;
+        }
         const key = getCategoryLabelKey(cat);
         badge.textContent = key ? t(key) : cat;
-        hub.href = `product-center.html?cat=${encodeURIComponent(cat)}`;
+        hub.href = apLocalizedPageHref(`/product-center.html?cat=${encodeURIComponent(cat)}`);
+        hub.setAttribute('data-translate', 'ap_open_category_hub');
+        hub.textContent = '';
         if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
             window.multiLang.translatePage();
         }
@@ -1070,13 +1156,20 @@
         const sub = getQuerySub(cat);
 
         // Keep URL in sync with current interactive state
+        let subForUrl = null;
+        if (cat && cat !== 'all') {
+            if (cat === 'tents') {
+                if (sub && String(sub).toLowerCase() === 'dome-3-folders') subForUrl = 'dome-3-folders';
+            } else {
+                subForUrl = sub || null;
+            }
+        }
         setQueryParams({
             cat: cat,
             q: q,
             // type only makes sense under tents
             type: (cat === 'tents') ? (tentType || null) : null,
-            // sub only for non-tents
-            sub: (cat && cat !== 'tents') ? (sub || null) : null
+            sub: subForUrl
         });
 
         updateHeadingAndBreadcrumb(cat);
@@ -1123,11 +1216,16 @@
             // 搜索关键词筛选（支持中文→英文扩展）
             const hitQ = !q || productMatches(p, q);
 
-            // 通用子类目筛选（用于非 tents）
+            // 子类目筛选（非 tents：任意 sub；tents：仅支持 dome-3-folders 作为特例）
             let hitSub = true;
-            if (sub && cat !== 'tents') {
-                const raw = (p.subCategory || p.subcategory || p.sub_category || p.series || p.type || p.subType || p.line || p.collection || '');
-                hitSub = String(raw).toLowerCase() === String(sub).toLowerCase();
+            if (sub) {
+                const raw = String(p.subCategory || p.subcategory || p.sub_category || p.series || p.type || p.subType || p.line || p.collection || '').toLowerCase();
+                const subL = String(sub).toLowerCase();
+                if (cat === 'tents') {
+                    if (subL === 'dome-3-folders') hitSub = raw === 'dome-3-folders';
+                } else {
+                    hitSub = raw === subL;
+                }
             }
 
             return hitCat && hitType && hitTag && hitQ && hitSub;
@@ -1205,7 +1303,8 @@
                 'water-filled-a-poster-stand': { en: 'Water Filled A Poster Stand', zh: '注水A字海报架' },
                 accessories: { en: 'Accessories', zh: '配件' },
                 custom: { en: 'Custom', zh: '定制' },
-                racegate: { en: 'Race Gate', zh: '竞速拱门' }
+                racegate: { en: 'Race Gate', zh: '竞速拱门' },
+                furniture: { en: 'Outdoor Furniture', zh: '户外家具' }
             };
 
             const lang = getCurrentLang();

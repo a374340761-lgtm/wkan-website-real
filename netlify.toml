@@ -1,0 +1,7 @@
+# Netlify: 301 from apex host to canonical www. Path and query string are preserved.
+[[redirects]]
+  from = "/*"
+  to = "https://www.waikwantent.com/:splat"
+  status = 301
+  force = true
+  conditions = { Host = ["waikwantent.com"] }

@@ -429,7 +429,9 @@
       'seg-net-light-box': 'menu_lightbox_seg_net',
       'base-style-variant': 'menu_lightbox_base_style_variant',
       'roll-up-stand': 'menu_displays_roll_up_stand',
-      'promotion-counter': 'menu_displays_promotion_counter'
+      'promotion-counter': 'menu_displays_promotion_counter',
+      'dome-3-folders': 'menu_dome_3_folders',
+      'table-chair-stool-toilet': 'menu_table_chair_stool_toilet'
     };
 
     const getSubLabelHtml = (subValue) => {
@@ -458,6 +460,15 @@
     const domeDisplaysLead =
       String(cat || '').toLowerCase() === 'displays'
         ? `
+        <a class="wk-card" href="${escapeHtml(localizedInternal('/furniture-type.html?type=table-chair-stool-toilet'))}" style="display:block;padding:16px 16px;text-decoration:none;grid-column:1 / -1;">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+            <div style="font-weight:800;color:rgba(31,45,61,.92);">
+              <span class="zh" data-translate="menu_table_chair_stool_toilet"></span>
+              <span class="en" data-translate="menu_table_chair_stool_toilet"></span>
+            </div>
+            <div style="font-weight:800;color:rgba(44,90,160,.85);">→</div>
+          </div>
+        </a>
         <a class="wk-card" href="${escapeHtml(localizedInternal('/dome-type.html'))}" style="display:block;padding:16px 16px;text-decoration:none;grid-column:1 / -1;">
           <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
             <div style="font-weight:800;color:rgba(31,45,61,.92);">

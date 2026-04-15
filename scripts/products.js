@@ -1351,9 +1351,9 @@ class ProductManager {
                 shortZh: '画面尺寸：60×80 CM。弧形底座设计，摆放更稳。',
                 descriptionEn: 'A portable light box stand variant with curved base design. Quick-change fabric/SEG graphic; optional LED backlit.',
                 descriptionZh: '弧形底座款灯箱展示架，支持布画/SEG 画面快速更换，可选 LED 背光。',
-                image: 'images/products/light-box-series/hero.png',
-                images: ['images/products/light-box-series/hero.png'],
-                gallery: ['images/products/light-box-series/hero.png'],
+                image: 'images/products/displays/tension-fabric-displays/WK-IS002hero.png',
+                images: ['images/products/displays/tension-fabric-displays/WK-IS002hero.png'],
+                gallery: ['images/products/displays/tension-fabric-displays/WK-IS002hero.png'],
                 specsZh: {
                     '画面尺寸': '60 × 80 CM',
                     '画面': '布画 / SEG（卡布）画面（按方案）',
@@ -1508,9 +1508,9 @@ class ProductManager {
                 shortZh: '适用于赛事与活动的广告拱门结构，参数以目录型号表为准。',
                 descriptionEn: 'Advertising arch for event entrances and brand activation. Refer to the model/spec table for available sizes and packing information.',
                 descriptionZh: '广告拱门适用于活动入口、赛事拱门与品牌展示。可选多种尺寸，装箱信息见型号参数表。',
-                image: 'images/products/advertising-arch/hero.png',
-                images: ['images/products/advertising-arch/hero.png'],
-                gallery: ['images/products/advertising-arch/hero.png'],
+                image: 'images/products/advertising-arch/广告拱门hero.png',
+                images: ['images/products/advertising-arch/广告拱门hero.png'],
+                gallery: ['images/products/advertising-arch/广告拱门hero.png'],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -1548,9 +1548,9 @@ class ProductManager {
                 shortZh: '可注水/注沙底座提升稳定性，适合户外人行道广告。参数以目录型号表为准。',
                 descriptionEn: 'A water-filled A poster stand designed for outdoor advertising. Portable and easy to change graphics. Double-sided poster options depending on configuration.',
                 descriptionZh: '注水 A 字海报架，面向户外广告场景。便携易安装，画面更换快捷，支持双面展示（按配置）。',
-                image: 'images/products/water-filled-a-poster-stand/hero.png',
-                images: ['images/products/water-filled-a-poster-stand/hero.png'],
-                gallery: ['images/products/water-filled-a-poster-stand/hero.png'],
+                image: 'images/products/water-filled-a-poster-stand/注水A字海报架hero.png',
+                images: ['images/products/water-filled-a-poster-stand/注水A字海报架hero.png'],
+                gallery: ['images/products/water-filled-a-poster-stand/注水A字海报架hero.png'],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -1649,8 +1649,14 @@ class ProductManager {
                 descriptionEn: 'Promotion counter for sampling, demo and reception use. Portable structure with branding header and internal storage.',
                 descriptionZh: '促销台适用于试吃试用、产品演示与接待。便携结构，顶部头牌展示品牌信息，内部带收纳。',
                 image: 'images/products/display-systems/promotion-counter/hero.png',
-                images: ['images/products/display-systems/promotion-counter/hero.png'],
-                gallery: ['images/products/display-systems/promotion-counter/hero.png'],
+                images: [
+                    'images/products/display-systems/promotion-counter/hero.png',
+                    'images/products/display-systems/promotion-counter/detail-internal-storage.png'
+                ],
+                gallery: [
+                    'images/products/display-systems/promotion-counter/hero.png',
+                    'images/products/display-systems/promotion-counter/detail-internal-storage.png'
+                ],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -2195,19 +2201,6 @@ class ProductManager {
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
                 keywords: ['accessory','accessories','tent accessories','配件','帐篷配件','WK-T16']
-            },
-            {
-                id: 4,
-                category: 'furniture',
-                name: '可折叠户外桌椅套装',
-                nameZh: '可折叠户外桌椅套装',
-                nameEn: 'Foldable Outdoor Table and Chair Set',
-                description: '高品质可折叠户外桌椅套装，便携易用，适合各种户外活动',
-                descriptionEn: 'High-quality foldable outdoor table and chair set, portable and easy to use, suitable for various outdoor activities',
-                image: 'outdoor-furniture.jpg',
-                specs: ['铝合金材质', '防水面料', '快速折叠', '便携收纳'],
-                specsEn: ['Aluminum Material', 'Waterproof Fabric', 'Quick Fold', 'Portable Storage'],
-                price: '起价 ¥599/套'
             },
 
             // ===== Furniture series: Table / Chair / Stool / Toilet (hero/image pending) =====

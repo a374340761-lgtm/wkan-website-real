@@ -409,13 +409,10 @@ class MultiLanguageSystem {
                     '<p>我们协助确认尺寸、材料、印刷与围布、配重等增配，使您的<a href="/zh/all-products.html?cat=tents">定制广告帐篷</a>订单贴合实际使用场景。项目层面的问题请参阅<a href="/zh/faq.html">常见问题</a>、<a href="/zh/faq-moq.html">起订量指引</a>、<a href="/zh/faq-lead-time.html">交期说明</a>与<a href="/zh/faq-artwork-files.html">设计稿文件要求</a>，或在<a href="/zh/index.html#contact">询价</a>中提供目标尺寸与印刷范围。</p>',
                 landing_canopy_gallery_h2: '3×6 定制广告帐篷 — 实景图集',
                 landing_canopy_gallery_intro_html:
-                    '以下为带<strong>铝制框架</strong>的<strong>3×6 定制广告帐篷</strong>实景示例，可作为活动品牌、零售推广与 OEM 出货的参考。目录扩充后可继续补充预留位图片。',
+                    '以下为带<strong>铝制框架</strong>的<strong>3×6 定制广告帐篷</strong>实景示例，可作为活动品牌、零售推广与 OEM 出货的参考。',
                 landing_canopy_gallery_cap_main: '精选：3×6 铝架定制广告帐篷 — 户外品牌展示实景。',
                 landing_canopy_gallery_cap_aluminum: '铝架细节 — 适用于 OEM 广告帐篷规格书。',
                 landing_canopy_gallery_cap_second: '第二组实景 — 活动用全彩印刷帐篷。',
-                landing_canopy_gallery_slot1_caption_html: '预留位 — 添加新图时仅替换 <code>src</code> 即可。',
-                landing_canopy_gallery_slot2_caption: '预留位 — 可选：活动印刷帐篷或围布场景。',
-                landing_canopy_gallery_slot3_caption: '预留位 — 分销商或贴牌项目展示图。',
                 landing_canopy_types_h2: '常见定制广告帐篷类型',
                 landing_canopy_types_intro_html:
                     '以下为 B2B 项目常见规格。请前往<a href="/zh/product-center.html?cat=tents">帐篷分类总览</a>或<a href="/zh/all-products.html?cat=tents">全部帐篷 SKU</a>查看型号与变体。',
@@ -915,6 +912,7 @@ class MultiLanguageSystem {
                 pc_context_all_categories: '全部分类',
                 ap_page_role_hint: '可搜索、筛选的完整产品目录。需要按子系列浏览请前往「产品中心」。',
                 ap_open_category_hub: '打开该分类总览（产品中心）',
+                ap_open_type_hub: '打开系列专题页',
                 pdp_back_to_listing: '返回上一页列表',
                 category_not_available: '该分类暂未开放，已为你显示全部分类。',
                 // Products 下拉菜单
@@ -1021,6 +1019,15 @@ class MultiLanguageSystem {
                 // Products dropdown extras
                 menu_table_chair_stool_toilet: '桌 / 椅 / 凳 / 厕所',
                 menu_dome_3_folders: 'DOME 3 折叠系列',
+                btn_add_to_inquiry: '加入询价清单',
+                type_page_loading_catalog: '正在加载型号…',
+                view_type_intro_furniture:
+                    '折叠桌、椅、凳与便携厕所等户外家具，适用于展会、路演、露营与临时活动；支持 OEM/ODM、批量包装与出口验货。下方型号均可加入询价清单。',
+                view_type_intro_dome:
+                    'DOME 3 折叠系列涵盖车顶帐篷、更衣帐篷及折叠收纳篮等，便于运输与快速部署；支持按项目确认规格与装箱。下方型号均可加入询价清单。',
+                ap_listing_group_furniture_note: '当前为「桌 / 椅 / 凳 / 厕所」聚合列表。',
+                ap_listing_group_dome_note: '当前为「DOME 3 折叠系列」聚合列表（含帐篷与收纳家具类目下的同系列 SKU）。',
+                view_type_link_all_dome_skus: '查看本系列全部 SKU（全部产品）',
 
                 // View-type pages
                 view_type_models: '型号清单',
@@ -1600,13 +1607,10 @@ class MultiLanguageSystem {
                     '<p>Our team supports sizing, material choices, printing methods, and add-ons such as sidewalls and weight kits so your <a href="/all-products.html?cat=tents">custom canopy tent</a> order matches real deployment conditions. For program-level questions, see our <a href="/faq.html">FAQ</a>, <a href="/faq-moq.html">MOQ guidance</a>, <a href="/faq-lead-time.html">lead time</a>, and <a href="/faq-artwork-files.html">artwork file requirements</a>, or <a href="/index.html#contact">request a quote</a> with your target sizes and print scope.</p>',
                 landing_canopy_gallery_h2: '3×6 Custom Canopy Tents — Real-Scene Gallery',
                 landing_canopy_gallery_intro_html:
-                    'Below are real-scene examples of <strong>3×6 custom canopy tents</strong> with <strong>aluminum frame</strong> systems—ideal references for event branding, retail activations, and OEM rollouts. Additional product photography can be added to the reserved slots as your catalog grows.',
+                    'Below are real-scene examples of <strong>3×6 custom canopy tents</strong> with <strong>aluminum frame</strong> systems—ideal references for event branding, retail activations, and OEM rollouts.',
                 landing_canopy_gallery_cap_main: 'Featured: 3×6 aluminum-frame custom canopy tent — real deployment (outdoor branding).',
                 landing_canopy_gallery_cap_aluminum: 'Aluminum frame detail — suitable for OEM canopy tent manufacturer specifications.',
                 landing_canopy_gallery_cap_second: 'Second real-scene view — custom printed canopy tents for events.',
-                landing_canopy_gallery_slot1_caption_html: 'Reserved slot — add a new custom canopy tent image (replace <code>src</code> only).',
-                landing_canopy_gallery_slot2_caption: 'Reserved slot — optional printed event tents or sidewall setup shot.',
-                landing_canopy_gallery_slot3_caption: 'Reserved slot — distributor or private-label project imagery.',
                 landing_canopy_types_h2: 'Popular Custom Canopy Tent Types',
                 landing_canopy_types_intro_html:
                     'Representative formats we supply for B2B programs. Browse the <a href="/product-center.html?cat=tents">tents hub</a> or <a href="/all-products.html?cat=tents">full tent catalog</a> for SKUs and variants.',
@@ -2095,6 +2099,7 @@ class MultiLanguageSystem {
                 pc_context_all_categories: 'All categories',
                 ap_page_role_hint: 'Searchable catalog of every SKU. To browse by sub-series, use Product Center.',
                 ap_open_category_hub: 'Open category overview (Product Center)',
+                ap_open_type_hub: 'Open series landing page',
                 pdp_back_to_listing: 'Back to previous list',
                 category_not_available: 'Category not available yet. Showing all categories.',
                 // Products Dropdown Menu
@@ -2200,8 +2205,17 @@ class MultiLanguageSystem {
                 form_submit_success: 'Thank you — your message was sent. We will respond as soon as possible.',
 
                 // Products dropdown extras
-                menu_table_chair_stool_toilet: 'Table / Chair / Stool / Toilet',
-                menu_dome_3_folders: 'DOME 3 FOLDERS',
+                menu_table_chair_stool_toilet: 'Tables / Chairs / Stools / Sanitation',
+                menu_dome_3_folders: 'DOME 3 Folding Series',
+                btn_add_to_inquiry: 'Add to Inquiry',
+                type_page_loading_catalog: 'Loading models…',
+                view_type_intro_furniture:
+                    'Portable folding tables, chairs, stools and sanitation units for exhibitions, roadshows, camping and temporary events. OEM/ODM, bulk packing and export inspection supported. Add any model below to your inquiry list.',
+                view_type_intro_dome:
+                    'The DOME 3 folding series includes car-top tents, privacy/dressing tents and folding storage baskets—compact to ship and quick to deploy. Specifications and packing are confirmed per project. Add any SKU below to your inquiry list.',
+                ap_listing_group_furniture_note: 'Filtered list: Tables / Chairs / Stools / Sanitation group.',
+                ap_listing_group_dome_note: 'Filtered list: DOME 3 Folding Series (tents + related folding SKUs).',
+                view_type_link_all_dome_skus: 'Browse all SKUs in this series (full catalog)',
 
                 // View-type pages
                 view_type_models: 'Models',
@@ -2210,8 +2224,8 @@ class MultiLanguageSystem {
                 view_type_brochure_source_19: 'Source: catalog page 19.png',
                 view_type_brochure_source_20: 'Source: catalog page 20.png',
                 view_type_brochure_source_25: 'Source: catalog page 25.png',
-                view_type_page_title_furniture: 'Table / Chair / Stool / Toilet',
-                view_type_page_title_dome: 'DOME 3 FOLDERS',
+                view_type_page_title_furniture: 'Tables / Chairs / Stools / Sanitation',
+                view_type_page_title_dome: 'DOME 3 Folding Series',
                 view_type_subtitle: 'Model list and catalog reference (click the image to zoom).',
                 view_type_browse_all_tents: 'Browse all tents',
                 view_type_browse_all_furniture: 'Browse all furniture',

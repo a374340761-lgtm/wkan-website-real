@@ -1553,6 +1553,9 @@ function enhanceDisplaysDropdown() {
         // DOME 3 folding series (catalog p.17) — same landing as dome-type.html
         { href: '/dome-type.html', translateKey: 'menu_dome_3_folders' },
 
+        // Tables / chairs / stools / sanitation — furniture-type.html (Display Systems menu)
+        { href: '/furniture-type.html?type=table-chair-stool-toilet', translateKey: 'menu_table_chair_stool_toilet' },
+
         // Displays subcategories (match Product Center subcategory overview)
         { href: 'all-products.html?cat=displays&sub=popup', translateKey: 'menu_popup_backdrop' },
         { href: 'all-products.html?cat=displays&sub=counter', translateKey: 'menu_popup_counter' },

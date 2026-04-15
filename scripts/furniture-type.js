@@ -101,8 +101,8 @@
 
     const lang = getCurrentLang();
 
-    const all = pm && Array.isArray(pm.products) ? pm.products : [];
-    const items = all.filter((p) => String(p.category || '') === 'furniture' && String(p.subcategory || '') === 'table-chair-stool-toilet');
+    const catalog = pm && Array.isArray(pm.products) ? pm.products : [];
+    const items = catalog.filter((p) => String(p.category || '') === 'furniture' && String(p.subcategory || '') === 'table-chair-stool-toilet');
 
     if (!items.length) {
       wrap.innerHTML = '<div class="wk-empty" data-translate="view_type_no_items_yet"></div>';
@@ -118,22 +118,34 @@
       const name = lang === 'zh' ? (p.name || p.nameEn || p.model) : (p.nameEn || p.name || p.model);
       const model = p.model || '';
       const preferredSku = (p && p.sku != null && String(p.sku).trim() !== '') ? String(p.sku).trim() : (p && p.id != null ? String(p.id).trim() : '');
-      const href = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html?cat=furniture';
+      const href = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html?cat=furniture&sub=table-chair-stool-toilet';
+      const pid = p && p.id != null ? String(p.id) : '';
       return `
-        <div style="display:flex; gap:10px; align-items:flex-start; padding: 12px; border:1px solid var(--border-color); border-radius: 12px; background: var(--bg-white);">
+        <div style="display:flex; gap:10px; align-items:flex-start; padding: 12px; border:1px solid var(--border-color); border-radius: 12px; background: var(--bg-white); flex-wrap:wrap;">
           <div style="width:38px; height:38px; border-radius: 10px; display:flex; align-items:center; justify-content:center; background: rgba(15,23,42,0.06); color:#0f172a;">
             <i class="fa-solid fa-chair"></i>
           </div>
-          <div style="flex:1;">
+          <div style="flex:1; min-width: 180px;">
             <div style="font-weight:800;">${safe(name)}</div>
             ${model ? `<div style="color: var(--text-muted); font-size: 0.95rem;"><span data-translate="label_model"></span>: ${safe(model)}</div>` : ''}
           </div>
-          <div>
+          <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
             <a class="btn btn-secondary" href="${href}" data-translate="view_details"></a>
+            <button type="button" class="btn btn-accent" data-wk-rfq-furniture="${safe(pid)}" data-translate="btn_add_to_inquiry"></button>
           </div>
         </div>
       `;
     }).join('');
+
+    wrap.querySelectorAll('[data-wk-rfq-furniture]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-wk-rfq-furniture');
+        const prod = catalog.find((x) => x && String(x.id) === String(id));
+        if (prod && typeof window.addProductToRfqCart === 'function') {
+          window.addProductToRfqCart(prod, 1);
+        }
+      });
+    });
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();
@@ -141,10 +153,12 @@
   }
 
   function init() {
+    const hero = document.getElementById('furnitureHeroImg');
     const img = document.getElementById('furnitureBrochureImg');
     const btn = document.getElementById('furnitureBrochureBtn');
     const brochure = brochureAssetUrl();
 
+    if (hero) hero.src = brochure;
     if (img) img.src = brochure;
 
     if (btn) {

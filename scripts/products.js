@@ -35,6 +35,129 @@ function wkLocalizedInternalLink(href) {
 }
 window.wkLocalizedInternalLink = wkLocalizedInternalLink;
 
+/**
+ * Short spec chips for product cards (all-products grid, products list rows).
+ * Built from real product fields — never uses the old generic "3m/4m/5m" display placeholders.
+ * @param {object} product
+ * @param {string} lang 'zh' | 'en'
+ * @returns {string[]}
+ */
+window.WK_getProductCardSpecs = function (product, lang) {
+    const p = product || {};
+    const L = String(lang || 'en').toLowerCase() === 'zh' ? 'zh' : 'en';
+    const cat = String(p.category || '').toLowerCase();
+    if (cat !== 'displays') return [];
+
+    const sub = String(p.subcategory || '').toLowerCase();
+    const chips = [];
+    const uniq = (arr) => Array.from(new Set((arr || []).filter(Boolean).map((x) => String(x).trim()))).filter(Boolean);
+
+    const sizes = [];
+    const weights = [];
+    const models = [];
+    const graphics = [];
+
+    const pushRow = (r) => {
+        if (!r || typeof r !== 'object') return;
+        if (r.model != null && String(r.model).trim()) models.push(String(r.model).trim());
+        if (r.size != null && String(r.size).trim()) sizes.push(String(r.size).trim());
+        if (r.weight != null && String(r.weight).trim()) weights.push(String(r.weight).trim());
+        if (r.graphic != null && String(r.graphic).trim()) graphics.push(String(r.graphic).trim());
+    };
+
+    (Array.isArray(p.variants) ? p.variants : []).forEach(pushRow);
+    (Array.isArray(p.sizeTable) ? p.sizeTable : []).forEach(pushRow);
+
+    (Array.isArray(p.variantTables) ? p.variantTables : []).forEach((t) => {
+        if (!t || !Array.isArray(t.rows)) return;
+        const cols = Array.isArray(t.columns) ? t.columns : [];
+        if (!cols.length && t.items) return;
+        t.rows.forEach(pushRow);
+    });
+
+    const hasShapeTable = (Array.isArray(p.variantTables) ? p.variantTables : []).some(
+        (t) => t && Array.isArray(t.rows) && t.rows.some((r) => r && r.type && (r.s != null || r.m != null || r.l != null))
+    );
+
+    const pf = {
+        models: L === 'zh' ? '型号' : 'Models',
+        sizes: L === 'zh' ? '尺寸' : 'Sizes',
+        weight: L === 'zh' ? '重量' : 'Weight',
+        graphic: L === 'zh' ? '画面' : 'Graphic',
+        shapes: L === 'zh' ? '形状选项 A–H' : 'Shapes A–H',
+        seg: 'SEG / Push-fit'
+    };
+
+    if (sub === 'a-frame' && hasShapeTable) {
+        chips.push(pf.shapes);
+    }
+
+    const uMod = uniq(models);
+    const uSize = uniq(sizes);
+    const uWt = uniq(weights);
+    const uGfx = uniq(graphics);
+
+    if (uMod.length) {
+        const line = uMod.slice(0, 4).join(L === 'zh' ? '、' : ' · ');
+        chips.push(`${pf.models}: ${line}`);
+    }
+    if (uSize.length) {
+        chips.push(`${pf.sizes}: ${uSize.slice(0, 3).join(' / ')}${uSize.length > 3 ? ' …' : ''}`);
+    }
+    if (!uSize.length && uGfx.length && (sub === 'fabric-banner-stands' || sub === 'popup')) {
+        chips.push(`${pf.graphic}: ${uGfx.slice(0, 2).join(' / ')}`);
+    }
+    if (uWt.length === 1) {
+        chips.push(`${pf.weight}: ${uWt[0]}`);
+    } else if (uWt.length > 1) {
+        chips.push(`${pf.weight}: ${uWt.slice(0, 3).join(' / ')}${uWt.length > 3 ? ' …' : ''}`);
+    }
+
+    const subBadge = {
+        'a-frame': { zh: 'A字架', en: 'A-Frame' },
+        'a-frame-backdrop': { zh: '可调背景', en: 'Backdrop' },
+        'popup': { zh: '快幕秀', en: 'Pop-up' },
+        'counter': { zh: '张拉布前台', en: 'TF counter' },
+        'fabric-banner-stands': { zh: '立牌', en: 'Banner stand' },
+        'tfd-straight-line': { zh: '直型系列', en: 'Straight line' },
+        'tfd-c-shaped': { zh: 'C型系列', en: 'C-shaped' },
+        'tension-fabric': { zh: '张力布', en: 'Tension fabric' },
+        'tfd-accessories': { zh: '展示配件', en: 'TFD accessories' },
+        'roll-up-stand': { zh: '易拉宝', en: 'Roll-up' },
+        'promotion-counter': { zh: '促销台', en: 'Promo counter' }
+    };
+    const seriesKey = String(p.seriesKey || '').toLowerCase();
+    const seriesLineBadge = {
+        tension_curved_line: { zh: '弧型系列', en: 'Curved line' },
+        tension_s_shaped: { zh: 'S型系列', en: 'S-shaped' },
+        tension_hanging_banner: { zh: '吊挂横幅', en: 'Hanging banner' }
+    };
+    let lineBadge = null;
+    if (sub === 'tension-fabric' && seriesLineBadge[seriesKey]) {
+        lineBadge = seriesLineBadge[seriesKey];
+    } else if (subBadge[sub]) {
+        lineBadge = subBadge[sub];
+    }
+    if (lineBadge && chips.length < 4) {
+        chips.push(L === 'zh' ? lineBadge.zh : lineBadge.en);
+    }
+
+    if (['popup', 'fabric-banner-stands', 'tfd-straight-line', 'tfd-c-shaped', 'tension-fabric'].includes(sub) && chips.length < 4) {
+        chips.push(pf.seg);
+    }
+
+    if (!chips.length && p.model) {
+        chips.push((L === 'zh' ? '型号' : 'Model') + ': ' + String(p.model));
+    }
+    const short = L === 'zh' ? (p.shortZh || '') : (p.shortEn || '');
+    if (chips.length < 2 && short) {
+        const clip = short.length > 48 ? short.slice(0, 45).trim() + '…' : short;
+        chips.push(clip);
+    }
+
+    return chips.filter(Boolean).slice(0, 4);
+};
+
 // Hero slides data (centralized) — use root-absolute /images/ and /product-center.html for /zh/ compatibility
 window.HERO_SLIDES = [
     {
@@ -2941,7 +3064,7 @@ class ProductManager {
         
         const name = this.getLocalizedName(product);
         const description = this.getLocalizedDescription(product);
-        const specs = this.getLocalizedSpecs(product);
+        const specs = this.resolveCardSpecList(product);
         
         const preferredSku = (product && product.sku != null && String(product.sku).trim() !== '')
             ? String(product.sku).trim()
@@ -2980,7 +3103,7 @@ class ProductManager {
                 <h3>${name}</h3>
                 <p>${description}</p>
                 <div class="product-specs">
-                    ${specs.map(spec => `<span class="spec-tag">${spec}</span>`).join('')}
+                    ${specs.map((spec) => `<span class="spec-tag">${this._escapeHtml(String(spec))}</span>`).join('')}
                 </div>
                 <div class="product-price">${product.price}</div>
                 <div class="product-actions">
@@ -3054,6 +3177,22 @@ getProductIcon(category) {
         if (lang === 'zh') return product.specsZh || product.specs || [];
         if (lang === 'en') return product.specsEn || product.specs || [];
         return product.specs || [];
+    }
+
+    /** Card / row spec chips: data-driven for displays; otherwise legacy specs array or key:value object. */
+    resolveCardSpecList(product) {
+        const lang = this.currentLanguage || 'en';
+        const cat = String(product && product.category || '').toLowerCase();
+        if (cat === 'displays' && typeof window.WK_getProductCardSpecs === 'function') {
+            const fromData = window.WK_getProductCardSpecs(product, lang);
+            if (Array.isArray(fromData) && fromData.length) return fromData;
+        }
+        const raw = this.getLocalizedSpecs(product);
+        if (Array.isArray(raw)) return raw;
+        if (raw && typeof raw === 'object') {
+            return Object.entries(raw).map(([k, v]) => `${k}: ${v}`);
+        }
+        return [];
     }
     
     setupLanguageListener() {
@@ -3546,7 +3685,7 @@ getProductIcon(category) {
                     : wkLocalizedInternalLink('/all-products.html');
                 const titleHref = typeHref || detailHref;
         const description = this.getLocalizedDescription(product);
-        const specs = this.getLocalizedSpecs(product);
+        const specs = this.resolveCardSpecList(product);
 
         // image area: if product.grid present, use sprite background; otherwise keep <img>
         const imageIcon = this.getProductIcon(product.category);
@@ -4072,7 +4211,7 @@ WeChat: massifmyth
         
         const name = this.getLocalizedName(product);
         const description = this.getLocalizedDescription(product);
-        const specs = this.getLocalizedSpecs(product);
+        const specs = this.resolveCardSpecList(product);
         
         // 创建产品详情模态框
         const modal = document.createElement('div');
@@ -4092,7 +4231,7 @@ WeChat: massifmyth
                         <p>${description}</p>
                         <h4>技术规格</h4>
                         <div class="product-specs">
-                            ${specs.map(spec => `<span class="spec-tag">${spec}</span>`).join('')}
+                            ${specs.map(spec => `<span class="spec-tag">${this._escapeHtml(String(spec))}</span>`).join('')}
                         </div>
                         <h4>应用场景</h4>
                         <ul class="application-list">

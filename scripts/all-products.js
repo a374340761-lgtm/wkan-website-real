@@ -822,9 +822,18 @@
                 // Surface-level defaults for the rest
                 specs.push('<span class="spec-tag" data-translate="spec_custom_print"></span>');
             } else if (p.category === 'displays') {
-                specs.push('<span class="spec-tag" data-translate="spec_display_width"></span>');
-                specs.push('<span class="spec-tag" data-translate="spec_display_height"></span>');
-                specs.push('<span class="spec-tag" data-translate="spec_display_shapes"></span>');
+                const lang = getCurrentLang();
+                const lines = (typeof window.WK_getProductCardSpecs === 'function')
+                    ? window.WK_getProductCardSpecs(p, lang)
+                    : [];
+                if (lines.length) {
+                    lines.forEach((line) => {
+                        specs.push(`<span class="spec-tag">${safeText(line)}</span>`);
+                    });
+                }
+                if (!specs.length) {
+                    specs.push('<span class="spec-tag" data-translate="spec_customizable"></span>');
+                }
             } else {
                 specs.push('<span class="spec-tag" data-translate="spec_customizable"></span>');
             }

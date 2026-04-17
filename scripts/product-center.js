@@ -275,6 +275,20 @@
       return;
     }
 
+    // RaceGate: exactly three shape groups → unified PDP (?sku=9401/9402/9403), no racegate-type hub.
+    if (cat === 'racegate') {
+      const showcase = document.querySelector('.product-categories-showcase');
+      if (showcase) showcase.style.display = 'none';
+      cards.forEach((card) => {
+        card.style.display = 'none';
+      });
+      if (backWrap) backWrap.style.display = '';
+      if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
+
+      renderRacegateHub();
+      return;
+    }
+
     // Generic secondary overview: show subcategories for the selected category (when valid)
     if (cat) {
       const hasCard = cards.some((card) => (card.dataset.category || '').trim() === cat);
@@ -291,6 +305,7 @@
         removeTentsHub();
         removeFlagsHub();
         removeAccessoriesHub();
+        removeRacegateHub();
         removeSubcategoryHub();
         if (backWrap) backWrap.style.display = '';
         if (noticeEl) noticeEl.style.display = '';
@@ -318,6 +333,7 @@
       removeTentsHub();
       removeFlagsHub();
       removeAccessoriesHub();
+      removeRacegateHub();
       removeSubcategoryHub();
       if (backWrap) backWrap.style.display = notice ? '' : 'none';
       if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
@@ -378,6 +394,7 @@
   }
 
   function renderSubcategoryHub(cat) {
+    removeRacegateHub();
     const container = ensureSubcategoryHubContainer();
     if (!container) return;
 
@@ -583,6 +600,120 @@
     if (el && el.parentElement) el.parentElement.removeChild(el);
   }
 
+  function ensureRacegateHubContainer() {
+    let el = document.getElementById('racegateHub');
+    if (el) return el;
+
+    const anchor = document.querySelector('.section-header');
+    if (!anchor || !anchor.parentElement) return null;
+
+    el = document.createElement('section');
+    el.id = 'racegateHub';
+    el.className = 'tents-hub';
+    anchor.parentElement.insertBefore(el, anchor.nextSibling);
+    return el;
+  }
+
+  function removeRacegateHub() {
+    const el = document.getElementById('racegateHub');
+    if (el && el.parentElement) el.parentElement.removeChild(el);
+  }
+
+  /** RaceGate shapes (V / O / semi) + Advertising Arch card — same tent-type-card grip, PDP only. */
+  function renderRacegateHub() {
+    removeTentsHub();
+    removeFlagsHub();
+    removeAccessoriesHub();
+    removeSubcategoryHub();
+
+    const container = ensureRacegateHubContainer();
+    if (!container) return;
+
+    const pm = window.productManager;
+    const list = pm && Array.isArray(pm.products) ? pm.products : [];
+    const ids = [9401, 9402, 9403];
+    const racegateOnly = ids
+      .map((id) => list.find((p) => p && Number(p.id) === id))
+      .filter(Boolean);
+    const adArch =
+      list.find((p) => p && String(p.sku || '').trim().toUpperCase() === 'WK-AD')
+      || list.find((p) => p && Number(p.id) === 44001);
+    const products = adArch ? racegateOnly.concat([adArch]) : racegateOnly;
+
+    const lang = getCurrentLang();
+    const safe = (s) => (s || '').toString();
+    const shortText = (s, max = 160) => {
+      const t = safe(s).replace(/\s+/g, ' ').trim();
+      if (!t) return '';
+      if (t.length <= max) return t;
+      return t.slice(0, max - 1) + '…';
+    };
+
+    const escapeHtml = (s) => {
+      return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    };
+
+    const cardsHtml = products.map((p) => {
+      const title = pm && typeof pm.getLocalizedName === 'function'
+        ? safe(pm.getLocalizedName(p))
+        : (lang === 'zh' ? safe(p.nameZh || p.name || p.nameEn) : safe(p.nameEn || p.name || p.nameZh));
+      const rawShort = pm && typeof pm.getLocalizedShort === 'function'
+        ? safe(pm.getLocalizedShort(p))
+        : (lang === 'zh' ? safe(p.shortZh || '') : safe(p.shortEn || ''));
+      const desc = shortText(rawShort);
+      const preferredSku = (p.sku != null && String(p.sku).trim() !== '')
+        ? String(p.sku).trim()
+        : String(p.id);
+      const detailHref = localizedInternal(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
+      let img = '';
+      if (typeof window.WK_getProductCardImage === 'function') {
+        img = window.WK_getProductCardImage(p) || '';
+      }
+      if (!img) img = wkAssetUrl(p.image);
+      return `
+        <div class="tent-type-card">
+          <a class="tent-type-card__link" href="${escapeHtml(detailHref)}" aria-label="${escapeHtml(title)}">
+            <div class="tent-type-card__imgWrap">
+              <img class="tent-type-card__img" src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </a>
+          <div class="tent-type-card__body">
+            <a class="tent-type-card__link" href="${escapeHtml(detailHref)}" style="text-decoration:none;color:inherit;">
+              <div class="tent-type-card__title">${escapeHtml(title)}</div>
+              ${desc ? `<div class="tent-type-card__desc">${escapeHtml(desc)}</div>` : ''}
+            </a>
+            <div class="tent-type-card__cta">
+              <a class="btn btn-secondary product-details-btn" href="${escapeHtml(detailHref)}" data-translate="view_details">View Details</a>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    const emptyMsg = lang === 'zh'
+      ? '竞速拱门产品数据未加载，请刷新重试。'
+      : 'Race gate products are not loaded. Please refresh.';
+
+    container.innerHTML = `
+      <div class="tents-hub__section">
+        <h2 class="tents-hub__title" data-translate="home_cat_racegate_title">RaceGate</h2>
+        <p style="text-align:center;max-width:860px;margin:10px auto 0;color:rgba(31,45,61,.65);" data-translate="home_cat_racegate_desc"></p>
+        <div class="tent-types__grid">
+          ${products.length ? cardsHtml : `<p style="grid-column:1/-1;text-align:center;">${escapeHtml(emptyMsg)}</p>`}
+        </div>
+      </div>
+    `;
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
+  }
+
   /** Beach flag accessories (e.g. bases) + tent accessories — two grip blocks. */
   function renderAccessoriesHub() {
     const container = ensureAccessoriesHubContainer();
@@ -590,6 +721,7 @@
 
     removeTentsHub();
     removeFlagsHub();
+    removeRacegateHub();
     removeSubcategoryHub();
 
     const data = window.FLAG_TYPES;
@@ -653,6 +785,7 @@
   function renderFlagsHub() {
     removeTentsHub();
     removeAccessoriesHub();
+    removeRacegateHub();
 
     const container = ensureFlagsHubContainer();
     if (!container) return;
@@ -766,6 +899,7 @@
   function renderTentsHub() {
     removeFlagsHub();
     removeAccessoriesHub();
+    removeRacegateHub();
 
     const container = ensureTentsHubContainer();
     if (!container) return;
@@ -808,6 +942,9 @@
       }
       if (c === 'accessories') {
         renderAccessoriesHub();
+      }
+      if (c === 'racegate') {
+        renderRacegateHub();
       }
     });
   }

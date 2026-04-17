@@ -1303,7 +1303,7 @@
                 'water-filled-a-poster-stand': { en: 'Water Filled A Poster Stand', zh: '注水A字海报架' },
                 accessories: { en: 'Accessories', zh: '配件' },
                 custom: { en: 'Custom', zh: '定制' },
-                racegate: { en: 'Race Gate', zh: '竞速拱门' },
+                racegate: { en: 'RaceGate', zh: '竞速拱门' },
                 furniture: { en: 'Outdoor Furniture', zh: '户外家具' }
             };
 

@@ -1185,6 +1185,7 @@ function initNavigation() {
     enhanceFlagsDropdown();
     enhanceTentsDropdown();
     enhanceDisplaysDropdown();
+    enhanceRacegateDropdown();
     enhanceFurnitureDropdown();
     ensureProductCenterDropdownHasLightbox();
 
@@ -1253,7 +1254,10 @@ function enhanceProductsDropdownExtras() {
         if (!isProductsMenu(menu)) return;
 
         const existing = Array.from(menu.querySelectorAll('a[href]')).map((a) => a.getAttribute('href') || '');
-        const raceGateLink = Array.from(menu.querySelectorAll('a[href]')).find((a) => (a.getAttribute('href') || '') === 'racegate-type.html');
+        const raceGateLink = Array.from(menu.querySelectorAll('a[href]')).find((a) => {
+            const h = (a.getAttribute('href') || '').trim();
+            return h === 'racegate-type.html' || /cat=racegate/i.test(h);
+        });
 
         extras.forEach((x) => {
             if (existing.includes(x.href)) return;
@@ -1657,6 +1661,101 @@ function enhanceDisplaysDropdown() {
             wrapper.classList.toggle('is-open');
             const nowOpen = wrapper.classList.contains('is-open');
             displaysLink.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+        });
+    });
+}
+
+/**
+ * Products dropdown: RaceGate row with flyout (V / O / Semi-circle → PDP; Advertising Arch → existing WK-AD SKU).
+ * Mobile drawer clones from desktop via wkRebuildMobileNavFromDesktop().
+ */
+function enhanceRacegateDropdown() {
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const shouldTapToOpen = () => wkShouldToggleNestedSubmenuOnClick();
+
+    menus.forEach((menu) => {
+        if (menu.querySelector('.dropdown-item-with-submenu[data-racegate-submenu="1"]')) return;
+
+        const isProductsMenu = (() => {
+            const links = Array.from(menu.querySelectorAll('a[href]'));
+            const hasTents = links.some((a) => (a.getAttribute('href') || '').toLowerCase().includes('cat=tents'));
+            const hasFlags = links.some((a) => (a.getAttribute('href') || '').toLowerCase().includes('cat=flags'));
+            return hasTents && hasFlags;
+        })();
+        if (!isProductsMenu) return;
+
+        const lightboxA = Array.from(menu.querySelectorAll(':scope > a[href]')).find((a) => {
+            const h = (a.getAttribute('href') || '').toLowerCase();
+            return h.includes('products-lightbox.html') || h.includes('cat=lightbox') || h.includes('category=lightbox');
+        });
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dropdown-item-with-submenu';
+        wrapper.setAttribute('data-racegate-submenu', '1');
+
+        const parentLink = document.createElement('a');
+        parentLink.href = 'product-center.html?cat=racegate';
+        parentLink.setAttribute('aria-haspopup', 'true');
+        parentLink.setAttribute('aria-expanded', 'false');
+        parentLink.innerHTML = '<span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span>';
+
+        const caret = document.createElement('span');
+        caret.className = 'wk-submenu-caret';
+        caret.textContent = '›';
+        parentLink.appendChild(caret);
+
+        const sub = document.createElement('div');
+        sub.className = 'dropdown-submenu';
+
+        const overview = document.createElement('a');
+        overview.href = 'product-center.html?cat=racegate';
+        overview.setAttribute('data-translate', 'ui_overview');
+        overview.textContent = '';
+        sub.appendChild(overview);
+
+        const rows = [
+            { href: `/product-detail.html?sku=${encodeURIComponent('9401')}`, translateKey: 'nav_racegate_sub_v' },
+            { href: `/product-detail.html?sku=${encodeURIComponent('9402')}`, translateKey: 'nav_racegate_sub_o' },
+            { href: `/product-detail.html?sku=${encodeURIComponent('9403')}`, translateKey: 'nav_racegate_sub_semi' },
+            { href: `/product-detail.html?sku=${encodeURIComponent('WK-AD')}`, translateKey: 'category_advertising_arch' }
+        ];
+        rows.forEach((r) => {
+            const a = document.createElement('a');
+            a.href = wkLocalizedInternalLinkSafe(r.href);
+            a.setAttribute('data-translate', r.translateKey);
+            a.textContent = '';
+            sub.appendChild(a);
+        });
+
+        wrapper.appendChild(parentLink);
+        wrapper.appendChild(sub);
+
+        if (lightboxA && lightboxA.parentElement === menu) {
+            menu.insertBefore(wrapper, lightboxA);
+        } else {
+            const displaysWrap = menu.querySelector(':scope > .dropdown-item-with-submenu[data-displays-submenu="1"]');
+            if (displaysWrap && displaysWrap.parentElement === menu) {
+                displaysWrap.insertAdjacentElement('afterend', wrapper);
+            } else {
+                menu.appendChild(wrapper);
+            }
+        }
+
+        if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+            window.multiLang.translatePage();
+        }
+
+        parentLink.addEventListener('click', (e) => {
+            if (!shouldTapToOpen()) return;
+            e.preventDefault();
+            const menuEl = parentLink.closest('.dropdown-menu');
+            const wasOpen = wrapper.classList.contains('is-open');
+            if (!wasOpen) wkCloseNestedSubmenuPeers(menuEl, wrapper);
+            wrapper.classList.toggle('is-open');
+            const nowOpen = wrapper.classList.contains('is-open');
+            parentLink.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
         });
     });
 }
@@ -2367,7 +2466,7 @@ function initSearch() {
 
         const cat = matchCategory(keyword);
         if (cat === 'racegate') {
-            window.location.href = wkLocalizedInternalLinkSafe('/racegate-type.html');
+            window.location.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=racegate');
             return;
         }
         if (cat) {

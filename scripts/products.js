@@ -1057,6 +1057,7 @@ class ProductManager {
             // ===== RaceGate (fiberglass) =====
             {
                 id: 9401,
+                sku: '9401',
                 category: 'racegate',
                 type: 'v',
                 model: 'RaceGate-V',
@@ -1092,6 +1093,7 @@ class ProductManager {
             },
             {
                 id: 9402,
+                sku: '9402',
                 category: 'racegate',
                 type: 'o',
                 model: 'RaceGate-O',
@@ -1691,6 +1693,7 @@ class ProductManager {
             },
             {
                 id: 9403,
+                sku: '9403',
                 category: 'racegate',
                 type: 'semi',
                 model: 'RaceGate-SemiCircle',
@@ -3129,6 +3132,7 @@ getProductIcon(category) {
         'water-filled-a-poster-stand': 'sign-hanging',
     inflatable: 'balloon',
     accessories: 'screwdriver-wrench',
+    racegate: 'flag-checkered',
     popup: 'cube',
     frames: 'border-all'
   };
@@ -4499,9 +4503,6 @@ window.WK_getProductTypePageUrl = function (product) {
     }
     if (cat === 'furniture' && sub === 'table-chair-stool-toilet') {
         return 'furniture-type.html';
-    }
-    if (cat === 'racegate') {
-        return 'racegate-type.html';
     }
     if (cat === 'flags' && type) {
         return `flag-type.html?type=${encodeURIComponent(type)}`;

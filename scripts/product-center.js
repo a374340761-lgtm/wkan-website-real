@@ -162,6 +162,21 @@
     return 'en';
   }
 
+  /** Legacy ?category= shares semantics with ?cat=; normalize URL for stable internal linking. */
+  function normalizeLegacyCategoryQueryParam() {
+    try {
+      const url = new URL(window.location.href);
+      const legacy = (url.searchParams.get('category') || '').trim();
+      if (!legacy) return;
+      const cur = (url.searchParams.get('cat') || '').trim();
+      if (!cur) url.searchParams.set('cat', legacy);
+      url.searchParams.delete('category');
+      const qs = url.searchParams.toString();
+      const next = url.pathname + (qs ? `?${qs}` : '') + url.hash;
+      window.history.replaceState({}, '', next);
+    } catch (e) {}
+  }
+
   function getQueryCat() {
     try {
       const p = new URL(window.location.href).searchParams;
@@ -946,6 +961,7 @@
   }
 
   function init() {
+    normalizeLegacyCategoryQueryParam();
     const cat = getQueryCat();
     applyCategoryFilter(cat);
 

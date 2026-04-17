@@ -395,7 +395,7 @@ function getHomeHeroSlides() {
             image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123',
             keyPrefix: 'home_hero_3',
             variant: 'light',
-            secondaryHref: 'product-center.html?category=displays'
+            secondaryHref: 'product-center.html?cat=displays'
         }
     ];
 }

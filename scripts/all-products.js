@@ -1248,6 +1248,23 @@
         });
     }
 
+    /** Map legacy ?category=foo to ?cat=foo (then stripAccessoriesCatFromUrl can run on final shape). */
+    function normalizeLegacyCategoryQueryParam() {
+        try {
+            const url = new URL(window.location.href);
+            const legacy = (url.searchParams.get('category') || '').trim();
+            if (!legacy) return;
+            const cur = (url.searchParams.get('cat') || '').trim();
+            if (!cur) url.searchParams.set('cat', legacy);
+            url.searchParams.delete('category');
+            const qs = url.searchParams.toString();
+            const next = url.pathname + (qs ? `?${qs}` : '') + url.hash;
+            window.history.replaceState({}, '', next);
+        } catch (e) {
+            // ignore
+        }
+    }
+
     /** Legacy ?cat=accessories is merged into the full catalog (tent accessory SKUs stay category accessories but list with "all"). */
     function stripAccessoriesCatFromUrl() {
         try {
@@ -1272,6 +1289,7 @@
 
     // 初始化
     function initAllProducts() {
+        normalizeLegacyCategoryQueryParam();
         stripAccessoriesCatFromUrl();
 
         if (catSelect) {

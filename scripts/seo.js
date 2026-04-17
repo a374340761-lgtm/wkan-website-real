@@ -114,12 +114,33 @@
 
       // Legacy entry points should not be canonical.
       if (/\b(product\.html|tent-detail\.html)\b/i.test(url.pathname)) {
-        var target = new URL('product-detail.html', url);
         var maybeSku = (url.searchParams.get('sku') || url.searchParams.get('id') || '').trim();
-        if (maybeSku) target.searchParams.set('sku', maybeSku);
-        var absLegacy = new URL(target.pathname + target.search, BASE_URL + '/');
-        ensureCanonical(absLegacy.toString());
-        return absLegacy.toString();
+        if (maybeSku) {
+          var target = new URL('product-detail.html', url);
+          target.searchParams.set('sku', maybeSku);
+          var absLegacy = new URL(target.pathname + target.search, BASE_URL + '/');
+          ensureCanonical(absLegacy.toString());
+          return absLegacy.toString();
+        }
+        if (/\btent-detail\.html$/i.test(url.pathname)) {
+          var pcRel = new URL('product-center.html', url);
+          var absTentHub = BASE_URL.replace(/\/$/, '') + pcRel.pathname;
+          ensureCanonical(absTentHub);
+          return absTentHub;
+        }
+        if (/\bproduct\.html$/i.test(url.pathname)) {
+          var apRel = new URL('all-products.html', url);
+          var absAllProducts = BASE_URL.replace(/\/$/, '') + apRel.pathname;
+          ensureCanonical(absAllProducts);
+          return absAllProducts;
+        }
+      }
+
+      // Product center hub: indexable URL is always the bare page (filters stay client-side).
+      if (/\bproduct-center\.html$/i.test(url.pathname)) {
+        var pcCanon = BASE_URL.replace(/\/$/, '') + url.pathname;
+        ensureCanonical(pcCanon);
+        return pcCanon;
       }
 
       // If the HTML already declared a canonical, keep it (but make it absolute).

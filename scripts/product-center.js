@@ -400,9 +400,15 @@
 
     const items = getCategoryProducts(cat);
     const map = new Map();
+    const catLower = String(cat || '').toLowerCase();
     items.forEach((p) => {
-      const s = getSubcategoryValue(p);
+      let s = getSubcategoryValue(p);
       if (!s) return;
+      s = String(s).trim();
+      // Product Center only: Straight Line (tfd-straight-line) is a TFD sub-series — one card under tension-fabric.
+      if (catLower === 'displays' && s.toLowerCase() === 'tfd-straight-line') {
+        s = 'tension-fabric';
+      }
       map.set(s, (map.get(s) || 0) + 1);
     });
 
@@ -914,10 +920,24 @@
       : inflatable;
 
     container.innerHTML = [
-      renderTentAccessoriesHubCard(),
+      `<div class="tents-hub__buyer-intro wk-card" style="max-width:980px;margin:0 auto 20px;padding:16px 18px;border-radius:14px;">
+        <div style="font-weight:900;margin-bottom:8px;">
+          <span class="zh" data-translate="tents_hub_buyer_intro_title"></span>
+          <span class="en" data-translate="tents_hub_buyer_intro_title"></span>
+        </div>
+        <p style="margin:0;color:rgba(31,45,61,.78);line-height:1.55;font-size:0.95rem;">
+          <span class="zh" data-translate="tents_hub_buyer_intro_p"></span>
+          <span class="en" data-translate="tents_hub_buyer_intro_p"></span>
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
+          <a class="btn btn-secondary" href="${localizedInternal('/custom-canopy-tent-manufacturer.html')}"><span class="zh" data-translate="nav_sol_canopy"></span><span class="en" data-translate="nav_sol_canopy"></span></a>
+          <a class="btn btn-tertiary" href="${localizedInternal('/all-products.html?cat=tents')}"><span class="zh" data-translate="home_canopy_pri_all_skus"></span><span class="en" data-translate="home_canopy_pri_all_skus"></span></a>
+        </div>
+      </div>`,
       renderHubSection('tents_hub_folding_title', 'Folding Tents', folding),
       renderHubSection('tents_hub_event_title', 'Event Tents', event),
-      renderHubSection('tents_hub_inflatable_title', 'Inflatable Tents', inflatableSummary)
+      renderHubSection('tents_hub_inflatable_title', 'Inflatable Tents', inflatableSummary),
+      renderTentAccessoriesHubCard()
     ].join('');
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {

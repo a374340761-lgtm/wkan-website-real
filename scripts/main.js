@@ -232,6 +232,7 @@ function initHomeRedesign() {
     initHomeHeroSlider();
 
     renderHomeCategoryGrid();
+    renderCanopyPriorityStrip();
     renderTrustedByWall();
     renderHomeResources();
     renderHomeBestSellers();
@@ -532,7 +533,9 @@ function renderHomeCategoryGrid() {
     grid.innerHTML = '';
     categories.forEach((c) => {
         const wrap = document.createElement('div');
-        wrap.className = c.id === 'lightbox' ? 'wk-cat-card-wrap wk-cat-card-wrap--lightbox' : 'wk-cat-card-wrap';
+        let wrapClass = c.id === 'lightbox' ? 'wk-cat-card-wrap wk-cat-card-wrap--lightbox' : 'wk-cat-card-wrap';
+        if (c.id === 'tents') wrapClass += ' wk-cat-card-wrap--featured';
+        wrap.className = wrapClass;
 
         const hubHref = wkLocalizedInternalLinkSafe(`/product-center.html?cat=${encodeURIComponent(c.id)}`);
         const catalogHref = wkLocalizedInternalLinkSafe(`/all-products.html?cat=${encodeURIComponent(c.id)}`);
@@ -555,6 +558,44 @@ function renderHomeCategoryGrid() {
         `;
         grid.appendChild(wrap);
     });
+}
+
+function renderCanopyPriorityStrip() {
+    const root = document.getElementById('wkCanopyPriority');
+    if (!root) return;
+
+    const links = [
+        { href: '/product-center.html?cat=tents', key: 'nav_cat_tents' },
+        { href: '/custom-canopy-tent-manufacturer.html', key: 'nav_sol_canopy' },
+        { href: '/pop-up-canopy-tent-manufacturer.html', key: 'nav_sub_canopy_pop_mfg' },
+        { href: '/all-products.html?cat=tents', key: 'home_canopy_pri_all_skus' }
+    ];
+
+    const chips = links
+        .map((x) => {
+            const h = wkLocalizedInternalLinkSafe(x.href);
+            return (
+                `<a class="wk-canopy-priority__chip btn btn-secondary" href="${h}">`
+                + `<span class="zh" data-translate="${x.key}"></span>`
+                + `<span class="en" data-translate="${x.key}"></span>`
+                + `</a>`
+            );
+        })
+        .join('');
+
+    root.innerHTML = `
+        <div class="wk-canopy-priority__inner">
+            <div class="wk-canopy-priority__head">
+                <div class="wk-canopy-priority__title" data-translate="home_canopy_priority_title"></div>
+                <p class="wk-canopy-priority__hint" data-translate="home_canopy_priority_hint"></p>
+            </div>
+            <div class="wk-canopy-priority__chips">${chips}</div>
+        </div>
+    `;
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+    }
 }
 
 // ------------------------------
@@ -1188,6 +1229,7 @@ function initNavigation() {
     enhanceRacegateDropdown();
     enhanceFurnitureDropdown();
     ensureProductCenterDropdownHasLightbox();
+    ensureProductCenterDropdownHasAccessories();
 
     WK_bindMobileNavSystem(hamburger);
 
@@ -1382,6 +1424,22 @@ function enhanceTentsDropdown() {
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);
+
+        [
+            { href: '/custom-canopy-tent-manufacturer.html', key: 'nav_sol_canopy' }
+        ].forEach((row) => {
+            const a = document.createElement('a');
+            a.href = wkLocalizedInternalLinkSafe(row.href);
+            const zh = document.createElement('span');
+            zh.className = 'zh';
+            zh.setAttribute('data-translate', row.key);
+            const en = document.createElement('span');
+            en.className = 'en';
+            en.setAttribute('data-translate', row.key);
+            a.appendChild(zh);
+            a.appendChild(en);
+            sub.appendChild(a);
+        });
 
         const types = getTypes();
 
@@ -1927,6 +1985,41 @@ function ensureProductCenterDropdownHasLightbox() {
             return href.includes('cat=lightbox') || href.includes('category=lightbox');
         });
         if (lightboxLink) lightboxLink.remove();
+    });
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+    }
+}
+
+function ensureProductCenterDropdownHasAccessories() {
+    const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
+    if (!menus.length) return;
+
+    const isProductsMenu = (menu) => {
+        const links = Array.from(menu.querySelectorAll('a[href]'));
+        const hasTents = links.some((a) => {
+            const h = (a.getAttribute('href') || '').toLowerCase();
+            return h.includes('cat=tents') || h.includes('category=tents');
+        });
+        const hasFlags = links.some((a) => {
+            const h = (a.getAttribute('href') || '').toLowerCase();
+            return h.includes('cat=flags') || h.includes('category=flags');
+        });
+        return hasTents && hasFlags;
+    };
+
+    menus.forEach((menu) => {
+        if (!isProductsMenu(menu)) return;
+        const hasAcc = Array.from(menu.querySelectorAll('a[href]')).some((a) => {
+            const h = (a.getAttribute('href') || '').toLowerCase();
+            return h.includes('cat=accessories') || h.includes('category=accessories');
+        });
+        if (hasAcc) return;
+        const a = document.createElement('a');
+        a.href = 'product-center.html?cat=accessories';
+        a.innerHTML = '<span class="zh" data-translate="nav_cat_accessories"></span><span class="en" data-translate="nav_cat_accessories"></span>';
+        menu.appendChild(a);
     });
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {

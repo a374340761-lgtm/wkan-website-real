@@ -101,7 +101,7 @@ class MultiLanguageSystem {
                 nav_section_products: '产品',
                 nav_section_solutions: '解决方案',
                 nav_section_customer_service: '客户服务',
-                nav_cat_tents: '帐篷',
+                nav_cat_tents: '广告帐篷（折叠篷）',
                 nav_cat_flags_poles: '沙滩旗与旗杆',
                 nav_cat_displays: '展示系统',
                 nav_light_boxes_nav: '灯箱',
@@ -149,9 +149,9 @@ class MultiLanguageSystem {
                 home_hero_primary_cta: '获取报价',
                 home_hero_secondary_cta: '查看产品',
 
-                home_hero_1_kicker: '源头工厂 · OEM/ODM',
-                home_hero_1_title: '定制广告帐篷，快速交付',
-                home_hero_1_subtitle: '适用于展会、赛事与推广活动的折叠帐篷。源头工厂直供，支持 LOGO 全印、尺寸与配件定制。',
+                home_hero_1_kicker: '广告帐篷制造商 · OEM/ODM',
+                home_hero_1_title: '定制广告帐篷与快开篷',
+                home_hero_1_subtitle: '工厂直供定制印刷篷房与活动用折叠篷，覆盖展会、市集与户外推广；铝架 / 铁架、围布与出口包装可一并规划。',
 
                 home_hero_2_kicker: '沙滩旗 · 户外引流',
                 home_hero_2_title: '高辨识度广告旗帜系统',
@@ -162,7 +162,7 @@ class MultiLanguageSystem {
                 home_hero_3_subtitle: '轻便结构，画面可更换，适用于展会背景、舞台与品牌形象展示。',
 
                 home_popular_categories_title: '核心产品分类',
-                home_popular_categories_subtitle: '快速进入五大核心品类：先进入分类总览，或直接打开可搜索的产品目录。',
+                home_popular_categories_subtitle: '工厂定制广告帐篷与快开篷是核心业务；以下从帐篷入口优先，再到旗帜、展示系统与配套。',
                 discover_hub_title: '产品中心',
                 discover_hub_desc: '按大类查看子系列与入口',
                 discover_catalog_title: '全部产品',
@@ -170,18 +170,42 @@ class MultiLanguageSystem {
                 home_cat_cta: '浏览该分类',
                 home_cat_cta_hub: '进入分类总览',
                 home_cat_browse_catalog: '查看该分类全部 SKU',
-                home_cat_tents_title: '帐篷',
-                home_cat_tents_desc: '折叠帐篷与活动帐篷，支持品牌定制与配件选配。',
+                home_cat_tents_title: '广告帐篷 / 折叠篷',
+                home_cat_tents_desc: '定制印刷、快开铝架 / 铁架系列，适用于展会、市集与户外活动；工厂 OEM/ODM。',
                 home_cat_flags_title: '旗帜与旗杆',
                 home_cat_flags_desc: '羽毛旗/刀旗/矩形旗 + 旗杆与多种底座系统。',
                 home_cat_displays_title: '展示系统',
                 home_cat_displays_desc: '背景墙、张拉布、灯箱等展示方案，适用于展会与品牌展示。',
                 home_cat_lightbox_title: '灯箱',
                 home_cat_lightbox_desc: '便携式灯箱与发光展示，支持画面更换与定制。',
-                home_cat_racegate_title: '竞速拱门',
+                home_cat_racegate_title: '竞速拱门 / 广告拱门',
                 home_cat_racegate_desc: '赛事与活动用拱门结构，便携耐用，支持不同规格。',
                 home_cat_accessories_title: '配件',
                 home_cat_accessories_desc: '侧墙、配重、收纳袋、连接件等一站式配套。',
+
+                home_canopy_priority_title: '定制广告帐篷 · 工厂直供',
+                home_canopy_priority_hint: 'B2B 采购入口：按需求选择分类总览、制造商说明或具体系列。',
+                home_canopy_pri_all_skus: '全部帐篷 SKU',
+                tents_hub_buyer_intro_title: '选购提示',
+                tents_hub_buyer_intro_p: '先选框架系列（铝架 / 铁架等）与印刷需求；完整 OEM 说明见制造商页面，现货与 SKU 见全部产品。',
+                nav_sub_canopy_custom_printed: '定制印刷广告篷',
+                nav_sub_canopy_pop_mfg: '快开广告帐篷制造商',
+                nav_sub_canopy_event_tents: '活动用广告帐篷',
+                nav_sub_canopy_aluminum_frames: '铝合金折叠篷（框架）',
+                pdp_tent_b2b_title: '活动展示一站式配套（询盘时可一并说明）',
+                pdp_tent_b2b_lead: '同一工厂可搭配沙滩旗、快幕秀背景墙、桌套与灯箱，便于统一画面与出货包装。',
+                page_title_pop_up_mfg: '快开广告帐篷制造商｜伟群帐篷',
+                landing_pop_up_mfg_h1: '快开广告帐篷制造商',
+                page_title_custom_printed_canopy: '定制印刷广告帐篷｜伟群帐篷',
+                landing_custom_printed_canopy_h1: '定制印刷广告帐篷',
+                page_title_event_canopy: '活动用广告帐篷（展会、市集与户外推广）｜伟群帐篷',
+                landing_event_canopy_h1: '活动用广告帐篷：展会、市集与户外推广',
+                landing_pop_up_mfg_p1_html: '<p>WaiKwan（伟群帐篷）为 B2B 客户提供快开广告帐篷框架与篷面生产：支持定制印刷、围布与配件选配，适合渠道商、活动公司与品牌方。</p>',
+                landing_pop_up_mfg_p2_html: '<p>需要完整活动物料时，可搭配<a href="/zh/product-center.html?cat=flags">沙滩旗</a>、<a href="/zh/all-products.html?cat=displays&amp;sub=tension-fabric">快幕秀背景墙</a>与<a href="/zh/product-center.html?cat=lightbox">灯箱</a>统一出货包装。更广的 OEM 范围见<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a>页面。</p>',
+                landing_custom_printed_p1_html: '<p>定制印刷广告帐篷将品牌画面覆盖顶篷、檐口与围布（具体可印区域因型号与缝位而异）。我们按项目确认色稿、材料和配件。</p>',
+                landing_custom_printed_p2_html: '<p>技术细节与 OEM 出口说明也可参阅<a href="/zh/seo/custom-printed-canopy-tent-manufacturer-oem-china.html">定制印刷广告帐篷制造商（OEM）</a>专题；现货与型号请在<a href="/zh/all-products.html?cat=tents">全部帐篷 SKU</a>中筛选。</p>',
+                landing_event_canopy_p1_html: '<p>展会、市集与户外推广需要快速搭建、易运输的展示空间。折叠广告帐篷配合印刷围布与配重，是常见的现场品牌触点。</p>',
+                landing_event_canopy_p2_html: '<p>批发 MOQ 与交期视印刷与季节而定，可参考<a href="/zh/seo/folding-event-tent-supplier-wholesale-moq.html">折叠活动帐篷批发 MOQ</a>专题，或通过<a href="/zh/index.html#contact">询价</a>说明数量与时间表。系列入口：<a href="/zh/product-center.html?cat=tents">帐篷分类总览</a>。</p>',
 
                 home_trusted_by_title: '合作客户',
                 home_trusted_by_subtitle: '服务全球品牌、经销商与项目客户（示意）。',
@@ -399,7 +423,7 @@ class MultiLanguageSystem {
                 landing_canopy_faq_view_all: '查看全部常见问题',
 
                 page_title_canopy_b2b: '定制广告帐篷制造商｜快开广告帐篷与 LOGO 篷房｜伟群帐篷',
-                landing_canopy_b2b_h1: '定制广告帐篷与快开广告帐篷制造商（B2B OEM/ODM）',
+                landing_canopy_b2b_h1: '定制广告帐篷制造商',
                 landing_canopy_b2b_lead_html:
                     '工厂直供<strong>定制广告帐篷</strong>与<strong>全彩印刷帐篷</strong>，服务分销商、活动公司与品牌方。欢迎查看常见商用尺寸的'
                     + '<a href="/zh/product-center.html?cat=tents">折叠与快开广告帐篷</a>，支持 OEM 画面与出口导向包装。',
@@ -407,6 +431,9 @@ class MultiLanguageSystem {
                     '<p>伟群生产用于专业场景的<strong>折叠广告帐篷</strong>与<strong>活动印刷帐篷</strong>——适用于展会、促销、赛事与户外推广。作为<strong>OEM 广告帐篷制造商</strong>，我们按项目匹配框架系列（铝材或钢材）、篷布画面与配件；无论是紧凑型 3×3 单元，还是需要高曝光品牌展示的<strong>3×6 定制广告帐篷</strong>。</p>',
                 landing_canopy_b2b_p2_html:
                     '<p>我们协助确认尺寸、材料、印刷与围布、配重等增配，使您的<a href="/zh/all-products.html?cat=tents">定制广告帐篷</a>订单贴合实际使用场景。项目层面的问题请参阅<a href="/zh/faq.html">常见问题</a>、<a href="/zh/faq-moq.html">起订量指引</a>、<a href="/zh/faq-lead-time.html">交期说明</a>与<a href="/zh/faq-artwork-files.html">设计稿文件要求</a>，或在<a href="/zh/index.html#contact">询价</a>中提供目标尺寸与印刷范围。</p>',
+                landing_canopy_related_h2: '相关主题页',
+                landing_canopy_related_intro_html:
+                    '以下页面与本文互补，便于按印刷、快开生产、活动场景与铝架折篷等角度继续了解（站内固定 URL，利于内链与检索）。',
                 landing_canopy_gallery_h2: '3×6 定制广告帐篷 — 实景图集',
                 landing_canopy_gallery_intro_html:
                     '以下为带<strong>铝制框架</strong>的<strong>3×6 定制广告帐篷</strong>实景示例，可作为活动品牌、零售推广与 OEM 出货的参考。',
@@ -558,8 +585,8 @@ class MultiLanguageSystem {
                 landing_1010_faq_section_intro_html:
                     '更多买家主题：<a href="/zh/faq.html">常见问题库</a> · <a href="/zh/faq-moq.html">起订量</a> · <a href="/zh/faq-shipping.html">物流</a>',
 
-                page_title_aluminum_fold: '铝合金快开广告帐篷｜重型折叠帐篷框架｜伟群帐篷',
-                landing_aluminum_h1: '铝合金快开广告帐篷框架',
+                page_title_aluminum_fold: '铝合金折叠广告帐篷｜重型快开篷框架｜伟群帐篷',
+                landing_aluminum_h1: '铝合金折叠广告帐篷',
                 landing_aluminum_p1_html:
                     '<p><strong>铝合金折叠帐篷</strong>采用挤出型材腿与桁架，在强度与自重之间取得平衡——适合采购团队为频繁拆装的施工队指定<strong>铝合金快开广告帐篷</strong>。相较钢材，铝材装车更轻、利于海运抛重，并在潮湿户外环境中耐腐蚀；钢架则在季节性租赁或成本敏感项目中更具单价优势。伟群可同时提供两种框架路线及品牌篷布、围布与配件；<strong>本页聚焦材料与框架行为</strong>；整体 OEM/ODM 定位请参阅<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a>总览。</p>',
                 landing_aluminum_p2_html:
@@ -1295,7 +1322,7 @@ class MultiLanguageSystem {
                 nav_section_products: 'Products',
                 nav_section_solutions: 'Solutions',
                 nav_section_customer_service: 'Customer Service',
-                nav_cat_tents: 'Tents',
+                nav_cat_tents: 'Canopy Tents',
                 nav_cat_flags_poles: 'Flags & Poles',
                 nav_cat_displays: 'Display Systems',
                 nav_light_boxes_nav: 'Light Boxes',
@@ -1343,9 +1370,9 @@ class MultiLanguageSystem {
                 home_hero_primary_cta: 'Get Quote',
                 home_hero_secondary_cta: 'View Products',
 
-                home_hero_1_kicker: 'Factory Direct · OEM/ODM',
-                home_hero_1_title: 'Factory-Direct Custom Canopy Tents',
-                home_hero_1_subtitle: 'Fast setup folding tents for exhibitions, promotions and outdoor events. Full branding, sizes and accessories available with dependable lead times.',
+                home_hero_1_kicker: 'Canopy Tent Manufacturer · OEM/ODM',
+                home_hero_1_title: 'Custom Canopy Tents & Pop Up Canopy Tents',
+                home_hero_1_subtitle: 'Factory-direct custom printed canopies and event tents for trade shows, markets and outdoor promos—aluminum or steel frames, sidewalls and export-ready packing.',
 
                 home_hero_2_kicker: 'Beach Flags · High Visibility',
                 home_hero_2_title: 'Advertising Flag Systems That Convert',
@@ -1364,7 +1391,7 @@ class MultiLanguageSystem {
                 cat_water_filled_a_poster_stand_desc: 'Fillable base for stability, great for outdoor sidewalk and storefront promotions.',
 
                 home_popular_categories_title: 'Core Product Categories',
-                home_popular_categories_subtitle: 'Jump into five core ranges: open the category overview first, or go straight to the searchable catalog.',
+                home_popular_categories_subtitle: 'Custom canopy tents and pop-up canopies are our core commercial line—then beach flags, display systems, and event add-ons.',
                 discover_hub_title: 'Product Center',
                 discover_hub_desc: 'Browse ranges & sub-series by group',
                 discover_catalog_title: 'All Products',
@@ -1372,18 +1399,42 @@ class MultiLanguageSystem {
                 home_cat_cta: 'Browse Category',
                 home_cat_cta_hub: 'Open category overview',
                 home_cat_browse_catalog: 'Browse all SKUs in this category',
-                home_cat_tents_title: 'Tents',
-                home_cat_tents_desc: 'Folding event tents with branding and accessory options.',
+                home_cat_tents_title: 'Canopy Tents',
+                home_cat_tents_desc: 'Custom printed canopies, pop-up frames (aluminum / steel) and event-use tents—OEM/ODM from factory.',
                 home_cat_flags_title: 'Flags & Poles',
                 home_cat_flags_desc: 'Feather/teardrop/rectangle flags with pole and base systems.',
                 home_cat_displays_title: 'Display Systems',
                 home_cat_displays_desc: 'Portable backdrops and display solutions for exhibitions and events.',
                 home_cat_lightbox_title: 'Light Boxes',
                 home_cat_lightbox_desc: 'Portable light box displays with replaceable graphics and customization options.',
-                home_cat_racegate_title: 'RaceGate',
+                home_cat_racegate_title: 'RaceGate / Advertising Arch',
                 home_cat_racegate_desc: 'Portable event gates for races and promotions in multiple sizes.',
                 home_cat_accessories_title: 'Accessories',
                 home_cat_accessories_desc: 'Sidewalls, weights, bags, connectors and add-ons.',
+
+                home_canopy_priority_title: 'Canopy tents — factory programs',
+                home_canopy_priority_hint: 'B2B entry points: ranges, manufacturer pages, or jump straight to SKUs.',
+                home_canopy_pri_all_skus: 'All canopy tent SKUs',
+                tents_hub_buyer_intro_title: 'How to choose',
+                tents_hub_buyer_intro_p: 'Start with frame family and printing needs; read the manufacturer page for OEM scope, then open SKUs or series pages for specifics.',
+                nav_sub_canopy_custom_printed: 'Custom printed canopy tents',
+                nav_sub_canopy_pop_mfg: 'Pop up canopy tent manufacturer',
+                nav_sub_canopy_event_tents: 'Event canopy tents',
+                nav_sub_canopy_aluminum_frames: 'Aluminum folding canopy tents',
+                pdp_tent_b2b_title: 'Complete your event setup (tell us in one RFQ)',
+                pdp_tent_b2b_lead: 'Pair tents with beach flags, tension-fabric backwalls, table covers and light boxes from the same factory for aligned graphics and export packing.',
+                page_title_pop_up_mfg: 'Pop Up Canopy Tent Manufacturer | WaiKwan',
+                landing_pop_up_mfg_h1: 'Pop Up Canopy Tent Manufacturer',
+                page_title_custom_printed_canopy: 'Custom Printed Canopy Tents | WaiKwan',
+                landing_custom_printed_canopy_h1: 'Custom Printed Canopy Tents',
+                page_title_event_canopy: 'Event Canopy Tents for Trade Shows, Markets & Outdoor Promotions | WaiKwan',
+                landing_event_canopy_h1: 'Event Canopy Tents for Trade Shows, Markets and Outdoor Promotions',
+                landing_pop_up_mfg_p1_html: '<p>WaiKwan supplies pop up canopy tent frames and printed canopies for distributors, agencies and brands—OEM/ODM, sidewalls and accessories as needed.</p>',
+                landing_pop_up_mfg_p2_html: '<p>Bundle with <a href="/product-center.html?cat=flags">beach flags</a>, <a href="/all-products.html?cat=displays&amp;sub=tension-fabric">tension-fabric backwalls</a> and <a href="/product-center.html?cat=lightbox">light boxes</a> for a consistent event kit. For broader OEM scope, start at <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a>.</p>',
+                landing_custom_printed_p1_html: '<p>Custom printed canopy tents carry branding on the roof, valance and sidewalls where the fabric layout allows. We confirm artwork, materials and add-ons per project.</p>',
+                landing_custom_printed_p2_html: '<p>For a deeper OEM read, see <a href="/seo/custom-printed-canopy-tent-manufacturer-oem-china.html">custom printed canopy tent manufacturer (OEM China)</a>; browse SKUs under <a href="/all-products.html?cat=tents">all products — tents</a>.</p>',
+                landing_event_canopy_p1_html: '<p>Trade shows, markets and outdoor promotions need fast setup and portable branding. Folding canopy tents with printed tops and optional walls are a standard field solution.</p>',
+                landing_event_canopy_p2_html: '<p>MOQ and lead time depend on print scope—see <a href="/seo/folding-event-tent-supplier-wholesale-moq.html">folding event tent wholesale MOQ</a> or <a href="/index.html#contact">request a quote</a> with quantities and dates. Enter ranges via <a href="/product-center.html?cat=tents">tent category hub</a>.</p>',
 
                 home_trusted_by_title: 'Trusted by',
                 home_trusted_by_subtitle: 'Serving global brands, distributors and project clients (placeholder).',
@@ -1599,8 +1650,8 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
 
-                page_title_canopy_b2b: 'Custom Canopy Tents Manufacturer | Pop Up Canopy Tents With Logo | WaiKwan',
-                landing_canopy_b2b_h1: 'Custom Canopy Tents & Pop Up Canopy Tents — OEM/ODM Manufacturer',
+                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | Pop Up & Event Canopies | WaiKwan',
+                landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer',
                 landing_canopy_b2b_lead_html:
                     'Factory-direct <strong>custom canopy tents</strong> and <strong>custom printed canopy tents</strong> for distributors, agencies, and event brands. Explore '
                     + '<a href="/product-center.html?cat=tents">folding and pop up canopy tents</a> in common commercial sizes, with OEM artwork support and export-oriented packing.',
@@ -1608,6 +1659,9 @@ class MultiLanguageSystem {
                     '<p>WaiKwan manufactures <strong>pop up canopy tents</strong> and <strong>printed event tents</strong> for professional use—trade shows, promotions, sports, and outdoor activations. As an <strong>OEM canopy tent manufacturer</strong>, we align frame series (aluminum or steel), canopy graphics, and accessories to your program, whether you need a compact 3×3 unit or a larger <strong>3×6 custom canopy tent</strong> footprint for high-visibility branding.</p>',
                 landing_canopy_b2b_p2_html:
                     '<p>Our team supports sizing, material choices, printing methods, and add-ons such as sidewalls and weight kits so your <a href="/all-products.html?cat=tents">custom canopy tent</a> order matches real deployment conditions. For program-level questions, see our <a href="/faq.html">FAQ</a>, <a href="/faq-moq.html">MOQ guidance</a>, <a href="/faq-lead-time.html">lead time</a>, and <a href="/faq-artwork-files.html">artwork file requirements</a>, or <a href="/index.html#contact">request a quote</a> with your target sizes and print scope.</p>',
+                landing_canopy_related_h2: 'Related canopy topics',
+                landing_canopy_related_intro_html:
+                    'Short guides that pair with this page—printing programs, pop-up manufacturing notes, event deployments, and aluminum folding frame lines.',
                 landing_canopy_gallery_h2: '3×6 Custom Canopy Tents — Real-Scene Gallery',
                 landing_canopy_gallery_intro_html:
                     'Below are real-scene examples of <strong>3×6 custom canopy tents</strong> with <strong>aluminum frame</strong> systems—ideal references for event branding, retail activations, and OEM rollouts.',
@@ -1759,8 +1813,8 @@ class MultiLanguageSystem {
                 landing_1010_faq_section_intro_html:
                     'More buyer topics: <a href="/faq.html">FAQ hub</a> · <a href="/faq-moq.html">MOQ</a> · <a href="/faq-shipping.html">Shipping</a>',
 
-                page_title_aluminum_fold: 'Aluminum Pop Up Canopy Tent | Heavy Duty Pop Up Tent Frames | WaiKwan',
-                landing_aluminum_h1: 'Aluminum Pop Up Canopy Tent Frames',
+                page_title_aluminum_fold: 'Aluminum Folding Canopy Tents | Heavy Duty Pop Up Frames | WaiKwan',
+                landing_aluminum_h1: 'Aluminum Folding Canopy Tents',
                 landing_aluminum_p1_html:
                     '<p>An <strong>aluminum folding tent</strong> uses extruded legs and trusses for strength-to-weight balance—ideal when procurement teams spec an <strong>aluminum pop up canopy tent</strong> for crews that strike and rebuild often. Compared with steel, aluminum stays lighter for truck pack-outs and resists corrosion in humid outdoor circuits; steel can win on unit cost for seasonal rental pools. WaiKwan supplies both frame routes with branded canopies, sidewalls, and accessories—this page focuses on <strong>material and frame behavior</strong>; for umbrella OEM positioning see <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a>.</p>',
                 landing_aluminum_p2_html:

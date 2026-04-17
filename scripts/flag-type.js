@@ -102,15 +102,30 @@
 
   function flagRawRow(row) {
     const r = row || {};
+    const wDirect = String(r.weight != null ? r.weight : '').trim();
+    const gross = String(r.gross != null ? r.gross : '').trim();
+    const nw = String(r.nw != null ? r.nw : '').trim();
+    const gw = String(r.gw != null ? r.gw : '').trim();
+    let weight = wDirect || gross;
+    if (!weight && (nw || gw)) {
+      weight = [nw ? `N.W ${nw}` : '', gw ? `G.W ${gw}` : ''].filter(Boolean).join(' · ');
+    }
     return {
       model: String(r.model != null ? r.model : '').trim(),
-      style: String(r.style != null ? r.style : '').trim(),
+      style: String(
+        r.style != null ? r.style : (r.frameSize != null ? r.frameSize : (r.height != null ? r.height : ''))
+      ).trim(),
       poleSize: String(r.poleSize != null ? r.poleSize : '').trim(),
-      flagSize: String(r.flagSize != null ? r.flagSize : '').trim(),
-      weight: String(r.weight != null ? r.weight : '').trim(),
+      flagSize: String(
+        r.flagSize != null ? r.flagSize : (r.graphicSize != null ? r.graphicSize : (r.length != null ? r.length : ''))
+      ).trim(),
+      size: String(r.size != null ? r.size : '').trim(),
+      weight,
       carton: String(r.carton != null ? r.carton : '').trim(),
-      packing: String(r.packing != null ? r.packing : '').trim(),
-      description: String(r.description != null ? r.description : '').trim()
+      packing: String(r.packing != null ? r.packing : (r.pcs != null ? r.pcs : '')).trim(),
+      description: String(
+        r.description != null ? r.description : (r.name != null ? r.name : (r.material != null ? r.material : ''))
+      ).trim()
     };
   }
 
@@ -127,16 +142,19 @@
       fr.description,
       fr.poleSize,
       fr.flagSize,
+      fr.size,
       fr.weight,
       fr.carton,
       fr.packing
     ].join('\u241e');
-    const metaBits = [fr.model, fr.style, fr.flagSize || fr.poleSize, fr.weight].filter(Boolean);
+    const sizeBits = fr.flagSize || fr.poleSize || fr.size;
+    const metaBits = [fr.model, fr.style, sizeBits, fr.weight].filter(Boolean);
     const payload = {
+      rfqProductId: item.rfqProductId != null ? item.rfqProductId : null,
       flagPageType: item.type || '',
       vkey,
       variantModel: fr.model || fr.style,
-      variantSize: fr.flagSize || fr.poleSize,
+      variantSize: sizeBits,
       variantWeight: fr.weight,
       variantCarton: fr.carton,
       variantGraphic: '',
@@ -185,7 +203,11 @@
         }
         tryPm((pm) => {
           let product = null;
-          if (payload.flagPageType === 'backpack_street_flags') {
+          const pid = payload.rfqProductId;
+          if (pid != null && String(pid).trim() !== '') {
+            product = pm.products.find((p) => String(p.id) === String(pid));
+          }
+          if (!product && payload.flagPageType === 'backpack_street_flags') {
             product = pm.products.find((p) => String(p.id) === '95001');
           }
           if (!product && payload.findModel) {
@@ -195,6 +217,7 @@
           }
           if (!product) {
             console.warn('[FLAG-TYPE RFQ] Could not find matching product', {
+              rfqProductId: payload.rfqProductId,
               flagPageType: payload.flagPageType,
               findModel: payload.findModel,
               variantModel: payload.variantModel,

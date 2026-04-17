@@ -59,6 +59,112 @@
     folding50: 2003
   };
 
+  function normalizeAssetKey(u) {
+    if (u == null || u === '') return '';
+    try {
+      return decodeURIComponent(String(u).trim()).replace(/\\/g, '/').toLowerCase();
+    } catch (e) {
+      return String(u).trim().replace(/\\/g, '/').toLowerCase();
+    }
+  }
+
+  function galleryPathsFromProduct(product) {
+    if (!product) return [];
+    let list = [];
+    if (Array.isArray(product.gallery) && product.gallery.length) {
+      list = product.gallery.filter(Boolean);
+    } else if (Array.isArray(product.images) && product.images.length) {
+      list = product.images.filter(Boolean);
+    } else if (product.image) {
+      list = [product.image];
+    }
+    const seen = new Set();
+    const out = [];
+    for (let i = 0; i < list.length; i++) {
+      const p = list[i];
+      const k = normalizeAssetKey(p);
+      if (!k || seen.has(k)) continue;
+      seen.add(k);
+      out.push(p);
+    }
+    return out;
+  }
+
+  /** Same ordered gallery as stock tent PDP (products.js id 2001–2003). Null if not a folding stock type page. */
+  function resolveFoldingStockGalleryPaths(item) {
+    if (!item || !STOCK_TENT_ID_BY_TYPE[item.type]) return null;
+    const stockId = STOCK_TENT_ID_BY_TYPE[item.type];
+    const pm = window.productManager;
+    if (!pm || !Array.isArray(pm.products)) {
+      return item.heroImage ? [item.heroImage] : [];
+    }
+    const product = pm.products.find((p) => String(p.id) === String(stockId));
+    const paths = galleryPathsFromProduct(product);
+    if (paths.length) return paths;
+    return item.heroImage ? [item.heroImage] : [];
+  }
+
+  function renderDefaultHeroHtml(item) {
+    return `
+      <div style="margin-bottom: var(--spacing-md);">
+        <div class="tent-type-card__imgWrap" style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--wk-border-light);">
+          <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+      </div>`;
+  }
+
+  function renderFoldingStockHeroHtml(item, paths) {
+    const imgs = (paths || []).filter(Boolean);
+    if (!imgs.length) return '';
+
+    const mainSrc = wkAssetUrl(imgs[0]);
+    const thumbs = imgs
+      .map((raw, i) => {
+        const full = wkAssetUrl(raw);
+        const active = i === 0 ? ' is-active' : '';
+        return `<button type="button" class="tent-type-folding-gallery__thumb${active}" data-wk-folding-gallery-thumb="1" aria-pressed="${i === 0 ? 'true' : 'false'}"><img src="${full}" alt="" loading="${i === 0 ? 'eager' : 'lazy'}" /></button>`;
+      })
+      .join('');
+
+    return `
+      <div class="tent-type-folding-gallery" style="margin-bottom: var(--spacing-md);">
+        <div class="tent-type-card__imgWrap tent-type-folding-gallery__heroWrap" style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--wk-border-light);">
+          <img class="tent-type-card__img tent-type-folding-gallery__main" src="${mainSrc}" alt="" loading="eager" onerror="this.style.display='none'" />
+        </div>
+        <div class="tent-type-folding-gallery__thumbs">${thumbs}</div>
+      </div>`;
+  }
+
+  function renderTopHero(item) {
+    const paths = resolveFoldingStockGalleryPaths(item);
+    if (paths === null) return renderDefaultHeroHtml(item);
+    const html = renderFoldingStockHeroHtml(item, paths);
+    return html || renderDefaultHeroHtml(item);
+  }
+
+  function bindFoldingStockGallery(root) {
+    const wrap = root.querySelector('.tent-type-folding-gallery');
+    if (!wrap) return;
+    const main = wrap.querySelector('.tent-type-folding-gallery__main');
+    const thumbs = wrap.querySelectorAll('[data-wk-folding-gallery-thumb]');
+    if (!main || !thumbs.length) return;
+
+    thumbs.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const im = btn.querySelector('img');
+        if (!im || !im.src) return;
+        main.src = im.src;
+        thumbs.forEach((b) => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('is-active');
+        btn.setAttribute('aria-pressed', 'true');
+      });
+    });
+  }
+
   function rawRowField(row, keys) {
     if (!row) return '';
     const ks = Array.isArray(keys) ? keys : [keys];
@@ -614,14 +720,11 @@
     if (!root) return;
 
     root.innerHTML = `
-      <div style="margin-bottom: var(--spacing-md);">
-        <div class="tent-type-card__imgWrap" style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--wk-border-light);">
-          <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
-        </div>
-      </div>
+      ${renderTopHero(item)}
       ${renderTableFromSpec(item, variant)}
     `;
 
+    bindFoldingStockGallery(root);
     bindTentTypeRfq(root);
 
     if (item.type === 'tent_accessories' && typeof window.WK_mountAccessoriesGrid === 'function') {

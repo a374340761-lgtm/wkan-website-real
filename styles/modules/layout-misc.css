@@ -1537,3 +1537,48 @@ body[data-page-category="flag-type"] .tent-type-detail__visuals--hero img,
     display: block;
 }
 
+/* Folding stock tent View Type (tent-type.html): PDP gallery + thumbnail strip */
+.tent-type-folding-gallery__thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+    justify-content: flex-start;
+}
+.tent-type-folding-gallery__thumb {
+    padding: 0;
+    margin: 0;
+    border: 2px solid var(--wk-border-light);
+    border-radius: var(--radius-md);
+    background: var(--wk-bg-card);
+    cursor: pointer;
+    overflow: hidden;
+    width: 76px;
+    height: 76px;
+    flex: 0 0 auto;
+    opacity: 0.88;
+    transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+.tent-type-folding-gallery__thumb:hover {
+    opacity: 1;
+}
+.tent-type-folding-gallery__thumb.is-active {
+    border-color: var(--wk-red-700, #a4161a);
+    opacity: 1;
+    box-shadow: 0 0 0 1px rgba(164, 22, 26, 0.2);
+}
+.tent-type-folding-gallery__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    vertical-align: middle;
+}
+.tent-type-folding-gallery__heroWrap .tent-type-folding-gallery__main {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    background: var(--wk-bg-card);
+}
+

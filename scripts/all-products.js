@@ -1186,6 +1186,7 @@
         typeNotice.style.display = 'none';
 
         const filteredWithType = products.filter(p => {
+            if (p.subcategory === 'flag-type-hub') return false;
             // 分类筛选
             const pCat = String(p.category || '').toLowerCase();
             const requestedCat = String(cat || '').toLowerCase();
@@ -1223,6 +1224,8 @@
                 const subL = String(sub).toLowerCase();
                 if (cat === 'tents') {
                     if (subL === 'dome-3-folders') hitSub = raw === 'dome-3-folders';
+                } else if (cat === 'displays' && subL === 'tension-fabric') {
+                    hitSub = raw === 'tension-fabric' || raw === 'tfd-straight-line';
                 } else {
                     hitSub = raw === subL;
                 }

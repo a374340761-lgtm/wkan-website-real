@@ -232,6 +232,36 @@
     vertical-align: middle;
 }
 
+/* Tent PDP: event-setup cross-links */
+.pdp-tent-b2b {
+    margin-top: 36px;
+    padding: 22px 20px 26px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    background: rgba(248, 250, 252, 0.95);
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pdp-tent-b2b__title {
+    margin: 0 0 10px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+.pdp-tent-b2b__lead {
+    margin: 0 0 16px;
+    line-height: 1.6;
+    color: rgba(31, 45, 61, 0.85);
+    font-size: 0.96rem;
+}
+.pdp-tent-b2b__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
 /* related */
 .related-products {
     margin-top: 50px;

@@ -951,6 +951,62 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+        const existingB2b = document.getElementById('pdpTentB2bBlock');
+        if (existingB2b && existingB2b.parentNode) existingB2b.parentNode.removeChild(existingB2b);
+
+        if (String(product.category || '').toLowerCase() === 'tents') {
+            const L = (p) => {
+                if (typeof wkLocalizedInternalLinkSafe === 'function') {
+                    return wkLocalizedInternalLinkSafe(p);
+                }
+                const s = String(p || '').trim();
+                return s.startsWith('/') ? s.slice(1) : s;
+            };
+            const relAnchor = document.getElementById('relatedSection');
+            const tentB2b = document.createElement('section');
+            tentB2b.id = 'pdpTentB2bBlock';
+            tentB2b.className = 'pdp-tent-b2b';
+            tentB2b.innerHTML = `
+                <h2 class="pdp-tent-b2b__title">
+                    <span class="zh" data-translate="pdp_tent_b2b_title"></span>
+                    <span class="en" data-translate="pdp_tent_b2b_title"></span>
+                </h2>
+                <p class="pdp-tent-b2b__lead">
+                    <span class="zh" data-translate="pdp_tent_b2b_lead"></span>
+                    <span class="en" data-translate="pdp_tent_b2b_lead"></span>
+                </p>
+                <div class="pdp-tent-b2b__actions">
+                    <a class="btn btn-secondary" href="${escapeHtml(L('/product-center.html?cat=flags'))}">
+                        <span class="zh" data-translate="nav_cat_flags_poles"></span>
+                        <span class="en" data-translate="nav_cat_flags_poles"></span>
+                    </a>
+                    <a class="btn btn-secondary" href="${escapeHtml(L('/all-products.html?cat=displays&sub=tension-fabric'))}">
+                        <span class="zh" data-translate="menu_displays_tension_fabric"></span>
+                        <span class="en" data-translate="menu_displays_tension_fabric"></span>
+                    </a>
+                    <a class="btn btn-secondary" href="${escapeHtml(L('/all-products.html?cat=displays&sub=promotion-counter'))}">
+                        <span class="zh" data-translate="menu_displays_promotion_counter"></span>
+                        <span class="en" data-translate="menu_displays_promotion_counter"></span>
+                    </a>
+                    <a class="btn btn-secondary" href="${escapeHtml(L('/product-center.html?cat=lightbox'))}">
+                        <span class="zh" data-translate="menu_light_box_series"></span>
+                        <span class="en" data-translate="menu_light_box_series"></span>
+                    </a>
+                    <a class="btn btn-tertiary" href="${escapeHtml(L('/faq-moq.html'))}">
+                        <span class="zh" data-translate="home_buyer_btn_moq"></span>
+                        <span class="en" data-translate="home_buyer_btn_moq"></span>
+                    </a>
+                    <a class="btn btn-tertiary" href="${escapeHtml(L('/faq-lead-time.html'))}">
+                        <span class="zh" data-translate="landing_canopy_card_lead_t"></span>
+                        <span class="en" data-translate="landing_canopy_card_lead_t"></span>
+                    </a>
+                </div>
+            `;
+            if (relAnchor && relAnchor.parentNode) {
+                relAnchor.parentNode.insertBefore(tentB2b, relAnchor);
+            }
+        }
+
         // Related products (min 4: same category first, then fill from other categories)
         const sameCat = pm.products.filter((p) => p.category === product.category && String(p.id) !== String(product.id));
         const pool = pm.products.filter((p) => String(p.id) !== String(product.id));

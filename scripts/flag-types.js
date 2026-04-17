@@ -16,6 +16,7 @@
     poles: [
       {
         type: 'fiberglass_pole',
+        rfqProductId: 95002,
         nameEn: 'Beach Flag Poles (Fiberglass Pole)',
         nameZh: '沙滩旗杆（玻纤杆）',
         hubDescEn: 'Modular fiberglass poles with multiple heights for teardrop/feather flags.',
@@ -61,6 +62,7 @@
       },
       {
         type: 'alu_fiberglass_pole',
+        rfqProductId: 95003,
         nameEn: 'Beach Flag Poles (Aluminium + Fiberglass)',
         nameZh: '沙滩旗杆（铝管 + 玻纤）',
         hubDescEn: 'Aluminium sections + fiberglass sections. Two versions available.',
@@ -120,6 +122,7 @@
       },
       {
         type: 'fully_fiberglass_teardrop',
+        rfqProductId: 95004,
         nameEn: 'Teardrop Beach Flag Poles (Fully Fiberglass)',
         nameZh: '水滴型沙滩旗杆（全玻纤）',
         hubDescEn: 'Fully fiberglass teardrop poles for outdoor use.',
@@ -148,6 +151,7 @@
       },
       {
         type: 'fully_fiberglass_feather',
+        rfqProductId: 95005,
         nameEn: 'Feather Beach Flag Poles (Fully Fiberglass)',
         nameZh: '刀型沙滩旗杆（全玻纤）',
         hubDescEn: 'Fully fiberglass feather poles for outdoor use.',
@@ -176,6 +180,7 @@
       },
       {
         type: 'outdoor_giant_flag',
+        rfqProductId: 95006,
         nameEn: 'Outdoor Giant Flag (Water Base)',
         nameZh: '户外注水旗杆（Giant Flag）',
         hubDescEn: 'Telescopic aluminium pole with water-filled base for stability.',
@@ -219,6 +224,7 @@
       },
       {
         type: 'square_flag_pole_fiberglass',
+        rfqProductId: 95007,
         nameEn: 'Square Flag Pole (Fiberglass)',
         nameZh: '方型沙滩旗杆（玻纤）',
         hubDescEn: 'Square fiberglass poles for rectangle/square flags.',
@@ -246,6 +252,7 @@
       },
       {
         type: 'alu_pole_semicircle',
+        rfqProductId: 95008,
         nameEn: 'Aluminium Beach Flag Pole — Semicircle',
         nameZh: '铝合金沙滩旗杆（半圆）',
         hubDescEn: 'American aluminium pole (semicircle).',
@@ -281,6 +288,7 @@
       },
       {
         type: 'alu_pole_square',
+        rfqProductId: 95009,
         nameEn: 'Aluminium Beach Flag Pole — Square',
         nameZh: '铝合金沙滩旗杆（方型）',
         hubDescEn: 'American aluminium pole (square).',
@@ -316,6 +324,7 @@
       },
       {
         type: 'alu_pole_new_feather',
+        rfqProductId: 95010,
         nameEn: 'Aluminium Beach Flag Pole — New Feather',
         nameZh: '铝合金沙滩旗杆（新型刀旗）',
         hubDescEn: 'New feather aluminium poles in 3m/4m/5m.',
@@ -343,6 +352,7 @@
       },
       {
         type: 'alu_pole_feather',
+        rfqProductId: 95011,
         nameEn: 'Aluminium Beach Flag Pole — Feather/Teardrop',
         nameZh: '铝合金沙滩旗杆（刀旗/水滴）',
         hubDescEn: 'American aluminium poles for feather/teardrop styles.',
@@ -381,6 +391,7 @@
     special: [
       {
         type: 'backpack_street_flags',
+        rfqProductId: 95001,
         nameEn: 'Backpack Flags & Street/Display Flags',
         nameZh: '背包旗 & 街旗 / 展示旗',
         hubDescEn: 'Portable backpack flags, street flags and compact display flag systems for outdoor promotion.',
@@ -452,6 +463,7 @@
     accessories: [
       {
         type: 'flag_bases_accessories',
+        rfqProductId: 95012,
         nameEn: 'Beach Flag Bases & Accessories',
         nameZh: '沙滩旗底座与配件',
         hubDescEn: 'Cross bases, water bases, ground spikes, rotors and carrying bags.',

@@ -60,6 +60,94 @@
     font-weight: 600;
 }
 
+/* Location map (full width below contact grid) */
+.contact-location {
+    margin-top: 22px;
+}
+
+.contact-location__title {
+    margin: 0 0 18px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text-dark);
+}
+
+.contact-location__intro {
+    margin-bottom: 22px;
+    max-width: 720px;
+}
+
+.contact-location__address {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-location__hours {
+    margin-top: 22px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.contact-location__hours-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.contact-location__hours-line {
+    margin: 0 0 8px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--text-light);
+}
+
+.contact-location__hours-line:last-child {
+    margin-bottom: 0;
+}
+
+.contact-location__intro .contact-location__actions {
+    margin-top: 20px;
+    padding-top: 4px;
+}
+
+.contact-location__map {
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    border: var(--wk-border-hairline);
+    background: rgba(0, 0, 0, 0.04);
+    width: 100%;
+}
+
+.contact-map-embed {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.contact-location__maps-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+    .contact-map-embed {
+        height: min(450px, 56vh);
+        min-height: 280px;
+    }
+}
+
 /* Contact form helpers & trust bullets */
 .contact-trust-bullets{
     list-style: none;

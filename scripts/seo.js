@@ -233,9 +233,9 @@
           },
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Changtangao, Daping Team, Luyin Village, Gucheng Town',
-            addressLocality: 'Luchuan County',
-            addressRegion: 'Yulin',
+            streetAddress: '500 meters southeast of the intersection of County Road 400 and Provincial Road 313',
+            addressLocality: 'Bobai County',
+            addressRegion: 'Yulin, Guangxi Zhuang Autonomous Region',
             addressCountry: 'CN'
           }
         },

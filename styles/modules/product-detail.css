@@ -54,6 +54,16 @@
     border-radius: 12px;
 }
 
+/* Tent accessories 9001–9024: same sprite crop as the 24-grip catalog grid */
+.pdp-image .pdp-accessory-sprite {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
 /* Thumbnail strip under main image */
 .pdp-image .image-carousel:empty {
     display: none;

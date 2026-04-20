@@ -186,6 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const description = pm.getLocalizedDescription(product);
         const shortText = pm.getLocalizedShort ? pm.getLocalizedShort(product) : '';
         const specs = pm.getLocalizedSpecs(product);
+        const accessorySpriteBg = (typeof window.WK_getAccessorySpriteBackground === 'function')
+            ? window.WK_getAccessorySpriteBackground(product)
+            : null;
 
         const detailContent = (pm && typeof pm.getProductDetailContent === 'function')
             ? pm.getProductDetailContent(product)
@@ -265,9 +268,15 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!/^https?:\/\//i.test(p)) return BASE_URL + (p.charAt(0) === '/' ? '' : '/') + p;
             return normalizeSiteAbs(p);
         };
-        const imgsList = Array.isArray(product.images) && product.images.length
+        let imgsList = Array.isArray(product.images) && product.images.length
             ? product.images.filter(Boolean)
             : (product.image ? [product.image] : []);
+        if (accessorySpriteBg) {
+            const rel = (typeof window.WK_ACCESSORY_SPRITE_SHEET_REL === 'string' && window.WK_ACCESSORY_SPRITE_SHEET_REL)
+                ? window.WK_ACCESSORY_SPRITE_SHEET_REL
+                : 'images/products/accessories/tent-accessories.png';
+            imgsList = [rel];
+        }
         const primaryImagePath = imgsList[0] || product.image || '';
         const productImageAbs = primaryImagePath ? toAbs(primaryImagePath) : '';
         if (productImageAbs) {
@@ -408,14 +417,38 @@ document.addEventListener('DOMContentLoaded', () => {
             descEl.textContent = heroDesc;
         }
 
-        // Images
+        // Images (tent accessories 9001–9024: same sprite crop as 24-grip grid; 9009 & 9020 keep file heroes)
         const imageEl = document.getElementById('productImage');
         const carouselEl = document.querySelector('.image-carousel');
-        const imgs = Array.isArray(product.images) && product.images.length
-            ? product.images.filter(Boolean)
-            : (product.image ? [product.image] : []);
-        const primaryImage = toSiteRootAssetUrl(imgs[0] || product.image || 'images/placeholder.png');
-        if (imageEl) {
+        const pdpImageWrap = imageEl ? imageEl.closest('.pdp-image') : null;
+
+        if (pdpImageWrap) {
+            pdpImageWrap.querySelectorAll('.pdp-accessory-sprite').forEach((n) => n.remove());
+        }
+
+        if (accessorySpriteBg && imageEl && pdpImageWrap) {
+            imageEl.style.display = 'none';
+            imageEl.onerror = null;
+            const sprite = document.createElement('div');
+            sprite.className = 'sprite-thumb pdp-accessory-sprite';
+            sprite.setAttribute('role', 'img');
+            sprite.setAttribute('aria-label', name);
+            sprite.style.backgroundImage = `url("${String(accessorySpriteBg.url).replace(/"/g, '\\"')}")`;
+            sprite.style.backgroundSize = accessorySpriteBg.size;
+            sprite.style.backgroundPosition = accessorySpriteBg.position;
+            sprite.style.backgroundRepeat = 'no-repeat';
+            if (carouselEl && pdpImageWrap.contains(carouselEl)) {
+                pdpImageWrap.insertBefore(sprite, carouselEl);
+            } else {
+                imageEl.insertAdjacentElement('afterend', sprite);
+            }
+            if (carouselEl) carouselEl.innerHTML = '';
+        } else if (imageEl) {
+            imageEl.style.display = '';
+            const imgs = Array.isArray(product.images) && product.images.length
+                ? product.images.filter(Boolean)
+                : (product.image ? [product.image] : []);
+            const primaryImage = toSiteRootAssetUrl(imgs[0] || product.image || 'images/placeholder.png');
             imageEl.src = primaryImage;
             imageEl.alt = name;
             imageEl.onerror = function() {
@@ -423,40 +456,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.style.display = 'none';
                 this.parentElement.innerHTML = `<i class="fas fa-${icon}" style="font-size:6rem;color:var(--primary-color);"></i>`;
             };
-        }
-        if (carouselEl) {
-            carouselEl.innerHTML = '';
-            const thumbList = imgs.length > 1 ? imgs.slice(0, 12) : [];
-            const setActiveThumb = (activeEl) => {
-                carouselEl.querySelectorAll('img').forEach((n) => n.classList.remove('is-active'));
-                if (activeEl) activeEl.classList.add('is-active');
-            };
-            thumbList.forEach((src) => {
-                const normalized = toSiteRootAssetUrl(src);
-                const imgEl = document.createElement('img');
-                imgEl.src = normalized;
-                imgEl.alt = name;
-                imgEl.loading = 'lazy';
-                imgEl.setAttribute('role', 'button');
-                imgEl.tabIndex = 0;
-                imgEl.onerror = function() { this.style.display = 'none'; };
-                imgEl.addEventListener('click', () => {
-                    if (imageEl) {
-                        imageEl.src = normalized;
-                        imageEl.alt = name;
-                    }
-                    setActiveThumb(imgEl);
+            if (carouselEl) {
+                carouselEl.innerHTML = '';
+                const thumbList = imgs.length > 1 ? imgs.slice(0, 12) : [];
+                const setActiveThumb = (activeEl) => {
+                    carouselEl.querySelectorAll('img').forEach((n) => n.classList.remove('is-active'));
+                    if (activeEl) activeEl.classList.add('is-active');
+                };
+                thumbList.forEach((src) => {
+                    const normalized = toSiteRootAssetUrl(src);
+                    const imgEl = document.createElement('img');
+                    imgEl.src = normalized;
+                    imgEl.alt = name;
+                    imgEl.loading = 'lazy';
+                    imgEl.setAttribute('role', 'button');
+                    imgEl.tabIndex = 0;
+                    imgEl.onerror = function() { this.style.display = 'none'; };
+                    imgEl.addEventListener('click', () => {
+                        if (imageEl) {
+                            imageEl.src = normalized;
+                            imageEl.alt = name;
+                        }
+                        setActiveThumb(imgEl);
+                    });
+                    imgEl.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            imgEl.click();
+                        }
+                    });
+                    carouselEl.appendChild(imgEl);
                 });
-                imgEl.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        imgEl.click();
-                    }
-                });
-                carouselEl.appendChild(imgEl);
-            });
-            const firstThumb = carouselEl.querySelector('img');
-            if (firstThumb) setActiveThumb(firstThumb);
+                const firstThumb = carouselEl.querySelector('img');
+                if (firstThumb) setActiveThumb(firstThumb);
+            }
         }
 
         // Specs + variants

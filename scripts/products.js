@@ -3344,21 +3344,34 @@ class ProductManager {
         const primaryClass = typeHref ? 'btn btn-secondary product-type-btn' : 'btn btn-secondary product-details-btn';
 
         const iconClass = this.getProductIcon(product.category);
-        let cardImg = '';
-        if (typeof window.WK_getProductCardImage === 'function') {
-            cardImg = window.WK_getProductCardImage(product) || '';
-        }
-        if (!cardImg) {
-            let raw = product.image || (Array.isArray(product.images) ? product.images[0] : '') || '';
-            if (raw && !raw.startsWith('images/') && !raw.startsWith('/') && !raw.startsWith('./')) {
-                raw = 'images/' + raw;
-            }
-            cardImg = raw ? wkRootAssetUrl(String(raw).trim()) : '';
-        }
         const altText = `${product.nameEn || name} / ${product.name || ''}`;
-        const productImageInner = cardImg
-            ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.png';" />`
-            : `<i class="fas fa-${iconClass}"></i>`;
+        const accBg = (typeof window.WK_getAccessorySpriteBackground === 'function')
+            ? window.WK_getAccessorySpriteBackground(product)
+            : null;
+        let productImageInner;
+        if (accBg) {
+            const u = String(accBg.url).replace(/'/g, '\\\'');
+            productImageInner = `<div class="sprite-thumb" style="background-image:url('${u}');background-size:${accBg.size};background-position:${accBg.position};" role="img" aria-label="${this._escapeHtml(altText)}"></div>`;
+        } else {
+            let cardImg = '';
+            if (typeof window.WK_getProductCardImage === 'function') {
+                cardImg = window.WK_getProductCardImage(product) || '';
+            }
+            if (!cardImg) {
+                let raw = product.image || (Array.isArray(product.images) ? product.images[0] : '') || '';
+                if (raw && !raw.startsWith('images/') && !raw.startsWith('/') && !raw.startsWith('./')) {
+                    raw = 'images/' + raw;
+                }
+                cardImg = raw ? wkRootAssetUrl(String(raw).trim()) : '';
+            }
+            productImageInner = cardImg
+                ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.png';" />`
+                : `<i class="fas fa-${iconClass}"></i>`;
+        }
+
+        const priceHtml = (product.price != null && String(product.price).trim() !== '')
+            ? `<div class="product-price">${this._escapeHtml(String(product.price))}</div>`
+            : '';
 
         productDiv.innerHTML = `
             <div class="product-image">
@@ -3370,7 +3383,7 @@ class ProductManager {
                 <div class="product-specs">
                     ${specs.map((spec) => `<span class="spec-tag">${this._escapeHtml(String(spec))}</span>`).join('')}
                 </div>
-                <div class="product-price">${product.price}</div>
+                ${priceHtml}
                 <div class="product-actions">
                     <a class="${primaryClass}" href="${primaryHref}" data-sku="${preferredSku.replace(/"/g, '&quot;')}" data-translate="${primaryTranslate}"></a>
                     <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
@@ -4872,9 +4885,36 @@ window.WK_getProductTypePageUrl = function (product) {
 document.addEventListener('DOMContentLoaded', () => {
     window.productManager = new ProductManager();
 
+    // Shared with tent-type / accessories-page 24-grip grid: one PNG sprite, CSS background-position per cell.
+    window.WK_ACCESSORY_SPRITE_SHEET_REL = 'images/products/accessories/tent-accessories.png';
+    /** Keep dedicated photos: 9009 Tent blade flag connector, 9020 Blade flag connector (WK-T12). */
+    window.WK_ACCESSORY_SPRITE_EXCLUDE_IDS = new Set([9009, 9020]);
+
+    window.WK_isAccessorySpriteGridProduct = function (p) {
+        const o = p || {};
+        if (String(o.category || '') !== 'accessories') return false;
+        if (!o.grid || !o.grid.row || !o.grid.col) return false;
+        const id = Number(o.id);
+        if (!Number.isFinite(id) || id < 9001 || id > 9024) return false;
+        if (window.WK_ACCESSORY_SPRITE_EXCLUDE_IDS && window.WK_ACCESSORY_SPRITE_EXCLUDE_IDS.has(id)) return false;
+        return true;
+    };
+
+    window.WK_getAccessorySpriteBackground = function (p) {
+        if (!window.WK_isAccessorySpriteGridProduct(p)) return null;
+        const row = Number(p.grid.row);
+        const col = Number(p.grid.col);
+        if (!Number.isFinite(row) || !Number.isFinite(col) || row < 1 || col < 1) return null;
+        const x = (col - 1) * 33.333333;
+        const y = (row - 1) * 20;
+        const rel = window.WK_ACCESSORY_SPRITE_SHEET_REL || 'images/products/accessories/tent-accessories.png';
+        const url = typeof window.wkRootAssetUrl === 'function' ? window.wkRootAssetUrl(rel) : ('/' + rel.replace(/^\/+/, ''));
+        return { url, size: '400% 600%', position: `${x}% ${y}%` };
+    };
+
     // Global helper: pick the best image for cards/listings.
     // - Racegate: use the uploaded hero.png in its named folder.
-    // - Accessories: if it is a sprite-mapped item, use the extracted per-item image (page_4_img_N.png).
+    // - Accessories (9001–9024 grip SKUs except 9009/9020): sprite sheet URL — UI must crop via WK_getAccessorySpriteBackground (matches 24-grip grid).
     // - Fallback: product.image or first of product.images.
     window.WK_getProductCardImage = function(product) {
         const p = product || {};
@@ -4893,14 +4933,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // Accessories: convert sprite grid position -> extracted single image file
-        if (String(p.category || '') === 'accessories' && p.grid && p.grid.row && p.grid.col) {
-            const row = Number(p.grid.row);
-            const col = Number(p.grid.col);
-            if (Number.isFinite(row) && Number.isFinite(col) && row >= 1 && col >= 1) {
-                const idx = (row - 1) * 4 + col;
-                return wkRootAssetUrl(`images/products/accessories/tent-accessories1/page_4_img_${idx}.png`);
-            }
+        if (window.WK_isAccessorySpriteGridProduct && window.WK_isAccessorySpriteGridProduct(p)) {
+            const rel = window.WK_ACCESSORY_SPRITE_SHEET_REL || 'images/products/accessories/tent-accessories.png';
+            return wkRootAssetUrl(rel);
         }
 
         const raw = p.image || (Array.isArray(p.images) ? p.images[0] : '') || '';

@@ -1182,7 +1182,7 @@ function initNavigation() {
         displays: 'products-displays.html',
         accessories: 'products-accessories.html',
         furniture: 'furniture-type.html?type=table-chair-stool-toilet',
-        custom: 'products-custom.html',
+        custom: 'product-center.html?cat=custom',
     };
 
     categoryCards.forEach((card) => {

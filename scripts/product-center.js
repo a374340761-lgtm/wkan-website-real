@@ -778,7 +778,9 @@
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.storyZh) : safe(item.storyEn);
             const desc = shortText(hubDesc || (rawDesc || '').split(/\n/)[0] || '');
-            const viewTypeHref = `flag-type.html?type=${encodeURIComponent(item.type)}`;
+            const viewTypeHref = item.hubHref
+              ? item.hubHref
+              : `flag-type.html?type=${encodeURIComponent(item.type)}`;
             return `
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
@@ -816,8 +818,19 @@
     const special = data && Array.isArray(data.special) ? data.special : [];
     const accessories = data && Array.isArray(data.accessories) ? data.accessories : [];
 
+    const tentTypes = window.TENT_TYPES;
+    const tentAccList = tentTypes && Array.isArray(tentTypes.accessories) ? tentTypes.accessories : [];
+    const tentAccHub = tentAccList.find((x) => x && x.type === 'tent_accessories');
+    const polesWithGrips = tentAccHub
+      ? poles.concat([
+          Object.assign({}, tentAccHub, {
+            hubHref: localizedInternal('/tent-type.html?type=tent_accessories')
+          })
+        ])
+      : poles;
+
     container.innerHTML = [
-      renderFlagsHubSection('flags_hub_poles_title', 'Beach Flags & Poles', poles),
+      renderFlagsHubSection('flags_hub_poles_title', 'Beach Flags & Poles', polesWithGrips),
       renderFlagsHubSection('flags_hub_special_title', 'Backpack & Street Flags', special),
       renderFlagsHubSection('flags_hub_accessories_title', 'Beach Flag Bases & Accessories', accessories),
     ].join('');

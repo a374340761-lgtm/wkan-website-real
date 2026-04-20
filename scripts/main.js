@@ -1562,6 +1562,12 @@ function enhanceFlagsDropdown() {
         overview.textContent = '';
         sub.appendChild(overview);
 
+        const polesCatalog = document.createElement('a');
+        polesCatalog.href = wkLocalizedInternalLinkSafe('/all-products.html?cat=flags&tag=beach-flag-poles');
+        polesCatalog.setAttribute('data-translate', 'nav_beach_flag_poles');
+        polesCatalog.textContent = '';
+        sub.appendChild(polesCatalog);
+
         types.forEach((t) => {
             const a = document.createElement('a');
             a.href = `flag-type.html?type=${encodeURIComponent(t.type)}`;

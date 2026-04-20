@@ -403,6 +403,21 @@
         return tentTypeNoticeEl;
     }
 
+    /** Reserved URL tag: beach flag pole hub SKUs only (excludes backpack/street + bases). See scripts/flag-types.js `poles`. */
+    const BEACH_FLAG_POLES_TAG = 'beach-flag-poles';
+    const BEACH_FLAG_POLE_TYPES = new Set([
+        'fiberglass_pole',
+        'alu_fiberglass_pole',
+        'fully_fiberglass_teardrop',
+        'fully_fiberglass_feather',
+        'outdoor_giant_flag',
+        'square_flag_pole_fiberglass',
+        'alu_pole_semicircle',
+        'alu_pole_square',
+        'alu_pole_new_feather',
+        'alu_pole_feather'
+    ]);
+
     // 获取 URL 参数中的标签
     function getQueryTag() {
         const url = new URL(window.location.href);
@@ -1210,13 +1225,18 @@
             let hitTag = true;
             if (tag) {
                 const t = String(tag || '').toLowerCase();
-                const productTags = Array.isArray(p.tags) ? p.tags.join(' ') : (p.tags || '');
-                const productName = getProductName(p) || '';
-                const productModel = (p.model || '') || '';
-                const productType = (p.type || '') || '';
-                const productSub = (p.subcategory || p.subCategory || '') || '';
-                const searchText = `${productTags} ${productName} ${productModel} ${productType} ${productSub}`.toLowerCase();
-                hitTag = searchText.includes(t);
+                if (t === BEACH_FLAG_POLES_TAG) {
+                    const pCat = String(p.category || '').toLowerCase();
+                    hitTag = pCat === 'flags' && BEACH_FLAG_POLE_TYPES.has(String(p.type || '').trim());
+                } else {
+                    const productTags = Array.isArray(p.tags) ? p.tags.join(' ') : (p.tags || '');
+                    const productName = getProductName(p) || '';
+                    const productModel = (p.model || '') || '';
+                    const productType = (p.type || '') || '';
+                    const productSub = (p.subcategory || p.subCategory || '') || '';
+                    const searchText = `${productTags} ${productName} ${productModel} ${productType} ${productSub}`.toLowerCase();
+                    hitTag = searchText.includes(t);
+                }
             }
 
             // 搜索关键词筛选（支持中文→英文扩展）
@@ -1372,7 +1392,7 @@
         const tag = getQueryTag();
         if (searchInput) {
             if (q) searchInput.value = q;
-            else if (tag) searchInput.value = tag;
+            else if (tag && String(tag).toLowerCase() !== BEACH_FLAG_POLES_TAG) searchInput.value = tag;
         }
 
         // 3) 首次渲染

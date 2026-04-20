@@ -3183,7 +3183,22 @@ class ProductManager {
 
         let filtered = this.products.filter(product => {
             if (product.subcategory === 'flag-type-hub') {
-                return false;
+                if (this.currentCategory === 'flags') {
+                    // keep: hub SKUs are the catalog entries for beach flags / poles
+                } else if (this.currentCategory === 'all' && q) {
+                    const hubHay = [
+                        product.name, product.description,
+                        product.nameEn, product.descriptionEn,
+                        ...(product.specs || []),
+                        ...(product.specsEn || []),
+                        ...(product.keywords || []),
+                        ...((product.variants && product.variants.map(v => v.model)) || []),
+                        ...(product.searchableKeywords || [])
+                    ].filter(Boolean).join(' ').toLowerCase();
+                    if (!hubHay.includes(q)) return false;
+                } else {
+                    return false;
+                }
             }
             /* ===== 原有分类按钮逻辑 ===== */
             if (this.currentCategory !== 'all' && product.category !== this.currentCategory) {
@@ -4345,7 +4360,24 @@ getProductIcon(category) {
         const q = (this.searchQuery || '').toLowerCase();
 
         return this.products.filter(product => {
-            if (product.subcategory === 'flag-type-hub') return false;
+            if (product.subcategory === 'flag-type-hub') {
+                if (this.currentCategory === 'flags') {
+                    // keep
+                } else if (this.currentCategory === 'all' && q) {
+                    const hubHay = [
+                        product.name, product.description,
+                        product.nameEn, product.descriptionEn,
+                        ...(product.specs || []),
+                        ...(product.specsEn || []),
+                        ...(product.keywords || []),
+                        ...((product.variants && product.variants.map(v => v.model)) || []),
+                        ...(product.searchableKeywords || [])
+                    ].filter(Boolean).join(' ').toLowerCase();
+                    if (!hubHay.includes(q)) return false;
+                } else {
+                    return false;
+                }
+            }
             if (this.currentCategory !== 'all' && product.category !== this.currentCategory) return false;
 
             if (this.activeFilters?.category?.size > 0 &&

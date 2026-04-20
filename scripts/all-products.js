@@ -1186,7 +1186,12 @@
         typeNotice.style.display = 'none';
 
         const filteredWithType = products.filter(p => {
-            if (p.subcategory === 'flag-type-hub') return false;
+            // Flag "type hub" parent SKUs are the only rows in category `flags`; keep them for flags listing
+            // and when the user searches from cat=all (otherwise the flags catalog would be empty).
+            if (p.subcategory === 'flag-type-hub') {
+                const c = String(cat || '').toLowerCase();
+                if (c !== 'flags' && !(c === 'all' && q && productMatches(p, q))) return false;
+            }
             // 分类筛选
             const pCat = String(p.category || '').toLowerCase();
             const requestedCat = String(cat || '').toLowerCase();

@@ -3183,9 +3183,9 @@ class ProductManager {
 
         let filtered = this.products.filter(product => {
             if (product.subcategory === 'flag-type-hub') {
-                if (this.currentCategory === 'flags') {
-                    // keep: hub SKUs are the catalog entries for beach flags / poles
-                } else if (this.currentCategory === 'all' && q) {
+                if (this.currentCategory === 'flags' || this.currentCategory === 'all') {
+                    // keep — same rule as scripts/all-products.js
+                } else if (q) {
                     const hubHay = [
                         product.name, product.description,
                         product.nameEn, product.descriptionEn,
@@ -4361,9 +4361,9 @@ getProductIcon(category) {
 
         return this.products.filter(product => {
             if (product.subcategory === 'flag-type-hub') {
-                if (this.currentCategory === 'flags') {
+                if (this.currentCategory === 'flags' || this.currentCategory === 'all') {
                     // keep
-                } else if (this.currentCategory === 'all' && q) {
+                } else if (q) {
                     const hubHay = [
                         product.name, product.description,
                         product.nameEn, product.descriptionEn,

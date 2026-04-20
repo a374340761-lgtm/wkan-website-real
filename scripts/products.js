@@ -2642,48 +2642,6 @@ class ProductManager {
                     'WK-Z122', 'WK-Z153', 'WK-Z183', 'WK-Z244', 'WK-TC-BiFold'
                 ]
             },
-            {
-                id: 31105,
-                category: 'custom',
-                subcategory: 'covers',
-                model: '3D-Cover-RoundFoldingTable',
-                name: '立体圆形对折桌布',
-                nameEn: '3D Round Folding In Half Table Fabric',
-                description: '适配圆形对折桌的立体布套，支持定制印刷。',
-                descriptionEn: '3D fabric cover for round folding-in-half tables, customizable printing.',
-                image: 'images/products/custom/table-covers/tablecover3.jpg',
-                specs: ['立体版型', '适配圆形对折桌', '可定制印刷'],
-                specsEn: ['3D fit', 'For round folding tables', 'Custom printing'],
-                keywords: ['custom', 'cover', '3d', 'round table', 'table fabric', '圆形对折桌布']
-            },
-            {
-                id: 31106,
-                category: 'custom',
-                subcategory: 'covers',
-                model: '3D-Cover-FoldingChair',
-                name: '立体折叠椅套',
-                nameEn: '3D Folding Chair Fabric',
-                description: '适配折叠椅的立体布套，可定制印刷与颜色。',
-                descriptionEn: '3D fabric cover for folding chairs. Custom printing and colors available.',
-                image: 'images/products/custom/table-covers/tablecover3.jpg',
-                specs: ['立体版型', '适配折叠椅', '可定制印刷'],
-                specsEn: ['3D fit', 'For folding chairs', 'Custom printing'],
-                keywords: ['custom', 'cover', 'chair cover', '3d', 'folding chair', '折叠椅套']
-            },
-            {
-                id: 31107,
-                category: 'custom',
-                subcategory: 'covers',
-                model: '3D-Cover-CocktailTable',
-                name: '立体鸡尾酒桌布',
-                nameEn: '3D Cocktail Table Fabric',
-                description: '适配鸡尾酒桌的立体桌布，支持多色与定制印刷。',
-                descriptionEn: '3D fabric cover for cocktail tables, multiple colors and custom printing.',
-                image: 'images/products/custom/table-covers/tablecover3.jpg',
-                specs: ['立体版型', '适配鸡尾酒桌', '多色可选'],
-                specsEn: ['3D fit', 'For cocktail tables', 'Multiple colors'],
-                keywords: ['custom', 'cover', 'cocktail table', 'bar table', '3d', '鸡尾酒桌布']
-            },
 
             // ===== DOME 3 FOLDERS (hero/image pending) =====
             {
@@ -3166,6 +3124,54 @@ class ProductManager {
             btn.classList.add('active');
         }
     }
+
+    /** Sub slug for catalog grouping (matches all-products.js). */
+    _pmCatalogGroupSubSlug(product) {
+        if (!product || product._isPmGroupedHub) return '';
+        return String(product.subcategory || product.subCategory || product.sub_category || '').trim().toLowerCase();
+    }
+
+    /**
+     * Replace many `table-chair-stool-toilet` / `dome-3-folders` SKUs with two type-hub rows
+     * (brochure p.17 hero — same relative path as furniture-type / dome-type pages).
+     */
+    _collapsePmCatalogGroupHubs(items) {
+        const FURN = 'table-chair-stool-toilet';
+        const DOME = 'dome-3-folders';
+        const furn = [];
+        const dome = [];
+        const rest = [];
+        (items || []).forEach((p) => {
+            const sub = this._pmCatalogGroupSubSlug(p);
+            if (sub === FURN) furn.push(p);
+            else if (sub === DOME) dome.push(p);
+            else rest.push(p);
+        });
+        const out = [...rest];
+        if (furn.length) {
+            out.push({
+                _isPmGroupedHub: true,
+                _hubKind: 'furniture',
+                id: 'wk-pm-hub-furniture',
+                category: 'furniture',
+                nameEn: 'Tables / Chairs / Stools / Sanitation',
+                nameZh: '桌 / 椅 / 凳 / 厕所',
+                pdf: '广西伟群帐篷制造有限公司2025改.pdf'
+            });
+        }
+        if (dome.length) {
+            out.push({
+                _isPmGroupedHub: true,
+                _hubKind: 'dome',
+                id: 'wk-pm-hub-dome',
+                category: 'tents',
+                nameEn: 'DOME 3 Folding Series',
+                nameZh: 'DOME 3 折叠系列',
+                pdf: '广西伟群帐篷制造有限公司2025改.pdf'
+            });
+        }
+        return out;
+    }
     
     renderProducts() {
         const list = document.querySelector('.products-list');
@@ -3268,18 +3274,23 @@ class ProductManager {
             return true;
         });
 
-        // 2) sort
+        filtered = this._collapsePmCatalogGroupHubs(filtered);
+
+        // 2) sort — grouped hub rows stay last; sort the remainder only
+        const hubRows = filtered.filter((p) => p && p._isPmGroupedHub);
+        let restRows = filtered.filter((p) => !p || !p._isPmGroupedHub);
         if (this.sortBy === 'name') {
-            filtered.sort((a, b) => {
+            restRows.sort((a, b) => {
                 const nameA = this.getLocalizedName(a) || '';
                 const nameB = this.getLocalizedName(b) || '';
                 return nameA.localeCompare(nameB);
             });
         }
         if (this.sortBy === 'new') {
-            filtered.sort((a, b) => (b.id || 0) - (a.id || 0));
+            restRows.sort((a, b) => (b.id || 0) - (a.id || 0));
         }
-        // popular = default 顺序，不动
+        filtered = restRows.concat(hubRows);
+        // popular = default 顺序，不动（仅非 hub 段重排；两个聚合卡片固定在最后）
 
         // 3) pagination
         const total = filtered.length;
@@ -3399,6 +3410,11 @@ getProductIcon(category) {
 
     
     getLocalizedName(product) {
+        if (product && product._isPmGroupedHub) {
+            const lang = this.currentLanguage || 'en';
+            if (lang === 'zh') return product.nameZh || '';
+            return product.nameEn || '';
+        }
         const lang = this.currentLanguage || 'en';
         if (typeof window.WK_productDisplayName === 'function') {
             return window.WK_productDisplayName(product, lang);
@@ -3410,6 +3426,12 @@ getProductIcon(category) {
     }
     
     getLocalizedDescription(product) {
+        if (product && product._isPmGroupedHub) {
+            const key = product._hubKind === 'furniture' ? 'view_type_intro_furniture' : 'view_type_intro_dome';
+            if (window.multiLang && typeof window.multiLang.t === 'function') return window.multiLang.t(key);
+            if (window.wkI18n && typeof window.wkI18n.t === 'function') return window.wkI18n.t(key);
+            return '';
+        }
         const lang = this.currentLanguage || 'en';
         const legacy = product ? (product.description || product.short || '') : '';
 
@@ -3925,7 +3947,58 @@ getProductIcon(category) {
         });
     }
 
+    createGroupedHubProductRow(product) {
+        const row = document.createElement('div');
+        row.className = 'product-row product-row--grouped-hub';
+        const rel = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+        let imageUrl = wkRootAssetUrl(rel);
+        const isFurniture = product && product._hubKind === 'furniture';
+        const path = isFurniture ? '/furniture-type.html?type=table-chair-stool-toilet' : '/dome-type.html';
+        const typeHref = wkLocalizedInternalLink(path);
+        const titleKey = isFurniture ? 'menu_table_chair_stool_toilet' : 'menu_dome_3_folders';
+        const introKey = isFurniture ? 'view_type_intro_furniture' : 'view_type_intro_dome';
+        const synthetic = {
+            id: isFurniture ? 'hub-furniture' : 'hub-dome',
+            nameEn: product.nameEn,
+            nameZh: product.nameZh,
+            pdf: product.pdf || '广西伟群帐篷制造有限公司2025改.pdf'
+        };
+
+        row.innerHTML = `
+            <div class="product-row-image"><img src="${this._escapeHtml(imageUrl)}" alt="" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.png';" /></div>
+            <div class="product-row-info">
+                <h3>
+                    <a href="${this._escapeHtml(typeHref)}" style="text-decoration:none;color:inherit;">
+                        <span class="zh" data-translate="${titleKey}"></span><span class="en" data-translate="${titleKey}"></span>
+                    </a>
+                </h3>
+                <p style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;">
+                    <span class="zh" data-translate="${introKey}"></span><span class="en" data-translate="${introKey}"></span>
+                </p>
+                <div class="product-specs">
+                    <span class="spec-tag" data-translate="spec_customizable"></span>
+                </div>
+            </div>
+            <div class="product-row-actions">
+                <a class="btn btn-primary" href="${this._escapeHtml(typeHref)}" data-translate="view_type_button"></a>
+                <button class="btn btn-secondary" type="button" data-action="quote" data-translate="btn_get_quote"></button>
+                <button class="btn btn-accent" type="button" data-action="download" data-translate="btn_download"></button>
+            </div>
+        `;
+
+        row.querySelector('[data-action="quote"]').addEventListener('click', () => {
+            this.openInquiryModal(synthetic);
+        });
+        row.querySelector('[data-action="download"]').addEventListener('click', () => {
+            this.openPdfModal(synthetic);
+        });
+        return row;
+    }
+
     createProductRow(product) {
+        if (product && product._isPmGroupedHub) {
+            return this.createGroupedHubProductRow(product);
+        }
         const row = document.createElement('div');
         row.className = 'product-row';
 
@@ -4359,7 +4432,7 @@ getProductIcon(category) {
         // 这里复用你现有的过滤逻辑（category + activeFilters + searchQuery）
         const q = (this.searchQuery || '').toLowerCase();
 
-        return this.products.filter(product => {
+        return this._collapsePmCatalogGroupHubs(this.products.filter(product => {
             if (product.subcategory === 'flag-type-hub') {
                 if (this.currentCategory === 'flags' || this.currentCategory === 'all') {
                     // keep
@@ -4401,13 +4474,15 @@ getProductIcon(category) {
                     product.name, product.description,
                     product.nameEn, product.descriptionEn,
                     ...(product.specs || []),
-                    ...(product.specsEn || [])
+                    ...(product.specsEn || []),
+                    ...(product.keywords || []),
+                    ...(product.searchableKeywords || [])
                 ].filter(Boolean).join(' ').toLowerCase();
                 if (!hay.includes(q)) return false;
             }
 
             return true;
-        });
+        }));
     }
 
     setupWhatsApp() {

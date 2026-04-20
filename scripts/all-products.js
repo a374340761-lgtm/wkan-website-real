@@ -794,6 +794,79 @@
         return Number.isFinite(id) && id >= 9001 && id <= 9024;
     }
 
+    /** Collapse table/chair/stool/sanitation + DOME 3 SKUs into two type-hub cards (same brochure hero as type pages). */
+    const AP_CATALOG_GROUP_SUB_FURNITURE = 'table-chair-stool-toilet';
+    const AP_CATALOG_GROUP_SUB_DOME = 'dome-3-folders';
+    const AP_CATALOG_GROUP_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+
+    function getApProductSubSlug(p) {
+        if (!p || p._isApGroupedHub) return '';
+        return String(p.subcategory || p.subCategory || p.sub_category || '').trim().toLowerCase();
+    }
+
+    function collapseApCatalogGroupHubs(items) {
+        const furnitureHits = [];
+        const domeHits = [];
+        const rest = [];
+        (items || []).forEach((p) => {
+            const sub = getApProductSubSlug(p);
+            if (sub === AP_CATALOG_GROUP_SUB_FURNITURE) furnitureHits.push(p);
+            else if (sub === AP_CATALOG_GROUP_SUB_DOME) domeHits.push(p);
+            else rest.push(p);
+        });
+        const out = [...rest];
+        if (furnitureHits.length) {
+            out.push({
+                _isApGroupedHub: true,
+                _hubKind: 'furniture',
+                id: 'wk-ap-hub-furniture',
+                category: 'furniture'
+            });
+        }
+        if (domeHits.length) {
+            out.push({
+                _isApGroupedHub: true,
+                _hubKind: 'dome',
+                id: 'wk-ap-hub-dome',
+                category: 'tents'
+            });
+        }
+        return out;
+    }
+
+    function buildApGroupedHubCardHtml(p) {
+        const isFurniture = p && p._hubKind === 'furniture';
+        const path = isFurniture ? '/furniture-type.html?type=table-chair-stool-toilet' : '/dome-type.html';
+        const browseUrl = apLocalizedPageHref(path);
+        const titleKey = isFurniture ? 'menu_table_chair_stool_toilet' : 'menu_dome_3_folders';
+        const introKey = isFurniture ? 'view_type_intro_furniture' : 'view_type_intro_dome';
+        const dataCat = isFurniture ? 'furniture' : 'tents';
+        const quoteParam = encodeURIComponent(isFurniture ? 'Tables-Chairs-Stools-Sanitation' : 'DOME-3-Folding-Series');
+        const quoteUrl = apLocalizedPageHref(`/index.html?product=${quoteParam}#contact`);
+
+        let imgSrc = AP_CATALOG_GROUP_HERO_REL;
+        if (typeof window.wkRootAssetUrl === 'function') imgSrc = window.wkRootAssetUrl(imgSrc);
+
+        return `
+                <article class="ap-card ap-card--grouped-hub" data-cat="${dataCat}" data-ap-hub="${p._hubKind}">
+                    <div class="ap-img"><img src="${safeText(imgSrc)}" alt="" loading="lazy" onerror="this.src='/images/placeholder.png'"></div>
+                    <div class="ap-body">
+                        <h3><span class="zh" data-translate="${titleKey}"></span><span class="en" data-translate="${titleKey}"></span></h3>
+                        <p class="ap-meta ap-meta--hub-desc" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;">
+                            <span class="zh" data-translate="${introKey}"></span><span class="en" data-translate="${introKey}"></span>
+                        </p>
+                        <div class="ap-specs">
+                            <span class="spec-tag" data-translate="spec_customizable"></span>
+                        </div>
+                        <div class="ap-actions">
+                            <a class="btn btn-primary product-btn" href="${safeText(quoteUrl)}" data-translate="btn_get_quote"></a>
+                            <a class="btn btn-secondary product-type-btn" href="${safeText(browseUrl)}" data-translate="view_type_button"></a>
+                        </div>
+                    </div>
+                </article>
+            `;
+    }
+
     // 判断一个产品是否命中（任意一个 term 出现在任意字段里）
     function productMatches(product, rawQuery) {
       const terms = expandQueryTerms(rawQuery);
@@ -854,6 +927,9 @@
             grid.innerHTML = '';
         } else {
             grid.innerHTML = list.map(p => {
+            if (p && p._isApGroupedHub) {
+                return buildApGroupedHubCardHtml(p);
+            }
             const name = getProductName(p);
             const resolved = (window.WK_getProductCardImage && typeof window.WK_getProductCardImage === 'function')
                 ? window.WK_getProductCardImage(p)
@@ -1267,7 +1343,9 @@
         }
 
         const spriteAcc = filteredWithType.filter(isSpriteTentAccessory);
-        const listForGrid = filteredWithType.filter((p) => !isSpriteTentAccessory(p));
+        const listForGrid = collapseApCatalogGroupHubs(
+            filteredWithType.filter((p) => !isSpriteTentAccessory(p))
+        );
 
         render(listForGrid, {
             showAccessoriesEmbed: spriteAcc.length > 0,

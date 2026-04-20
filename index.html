@@ -33,19 +33,6 @@
     <script src="scripts/seo.js" defer></script>
 </head>
 <body class="home">
-    <!-- Language Gate - 不再自动显示，用户通过右上角图标切换 -->
-    <div id="languageGate" class="language-gate" style="display: none;">
-        <div class="language-gate-box">
-            <h2>Welcome</h2>
-            <p>Please select your language</p>
-
-            <div class="language-options">
-                <button data-lang="en">English</button>
-                <button data-lang="zh">中文</button>
-            </div>
-        </div>
-    </div>
-
     <!-- 顶部提示栏 -->
     <div class="top-bar">
         <div class="container">
@@ -73,41 +60,41 @@
             <ul class="nav-menu" id="wk-primary-nav">
                 <li class="nav-item-dropdown">
                     <a href="product-center.html" class="nav-link">
-                        <span class="zh" data-translate="nav_section_products"></span><span class="en" data-translate="nav_section_products"></span>
+                        <span data-translate="nav_section_products"></span>
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="product-center.html" data-nav="product-center"><span class="zh" data-translate="nav_product_center"></span><span class="en" data-translate="nav_product_center"></span></a>
-                        <a href="all-products.html" data-nav="all-products"><span class="zh" data-translate="nav_all_products"></span><span class="en" data-translate="nav_all_products"></span></a>
-                        <a href="product-center.html?cat=tents"><span class="zh" data-translate="nav_cat_tents"></span><span class="en" data-translate="nav_cat_tents"></span></a>
-                        <a href="product-center.html?cat=flags"><span class="zh" data-translate="nav_cat_flags_poles"></span><span class="en" data-translate="nav_cat_flags_poles"></span></a>
-                        <a href="product-center.html?cat=displays"><span class="zh" data-translate="nav_cat_displays"></span><span class="en" data-translate="nav_cat_displays"></span></a>
-                        <a href="products-lightbox.html"><span class="zh" data-translate="nav_light_boxes_nav"></span><span class="en" data-translate="nav_light_boxes_nav"></span></a>
+                        <a href="product-center.html" data-nav="product-center"><span data-translate="nav_product_center"></span></a>
+                        <a href="all-products.html" data-nav="all-products"><span data-translate="nav_all_products"></span></a>
+                        <a href="product-center.html?cat=tents"><span data-translate="nav_cat_tents"></span></a>
+                        <a href="product-center.html?cat=flags"><span data-translate="nav_cat_flags_poles"></span></a>
+                        <a href="product-center.html?cat=displays"><span data-translate="nav_cat_displays"></span></a>
+                        <a href="products-lightbox.html"><span data-translate="nav_light_boxes_nav"></span></a>
                     </div>
                 </li>
                 <li class="nav-item-dropdown">
                     <a href="#factory-strength" class="nav-link">
-                        <span class="zh" data-translate="nav_section_solutions"></span><span class="en" data-translate="nav_section_solutions"></span>
+                        <span data-translate="nav_section_solutions"></span>
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="#factory-strength"><span class="zh" data-translate="nav_oem_odm"></span><span class="en" data-translate="nav_oem_odm"></span></a>
-                        <a href="custom-canopy-tent-manufacturer.html"><span class="zh" data-translate="nav_sol_canopy"></span><span class="en" data-translate="nav_sol_canopy"></span></a>
-                        <a href="beach-flag-supplier.html"><span class="zh" data-translate="nav_sol_beach_flags"></span><span class="en" data-translate="nav_sol_beach_flags"></span></a>
-                        <a href="portable-display-systems.html"><span class="zh" data-translate="nav_sol_portable_display"></span><span class="en" data-translate="nav_sol_portable_display"></span></a>
+                        <a href="#factory-strength"><span data-translate="nav_oem_odm"></span></a>
+                        <a href="custom-canopy-tent-manufacturer.html"><span data-translate="nav_sol_canopy"></span></a>
+                        <a href="beach-flag-supplier.html"><span data-translate="nav_sol_beach_flags"></span></a>
+                        <a href="portable-display-systems.html"><span data-translate="nav_sol_portable_display"></span></a>
                     </div>
                 </li>
                 <li class="nav-item-dropdown">
                     <a href="faq.html" class="nav-link">
-                        <span class="zh" data-translate="nav_section_customer_service"></span><span class="en" data-translate="nav_section_customer_service"></span>
+                        <span data-translate="nav_section_customer_service"></span>
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </a>
                     <div class="dropdown-menu">
-                        <a href="faq.html"><span class="zh" data-translate="nav_faq"></span><span class="en" data-translate="nav_faq"></span></a>
-                        <a href="#about"><span class="zh" data-translate="nav_about_us"></span><span class="en" data-translate="nav_about_us"></span></a>
-                        <a href="#contact"><span class="zh" data-translate="nav_contact"></span><span class="en" data-translate="nav_contact"></span></a>
-                        <a href="news/index.html"><span class="zh" data-translate="nav_news_resources"></span><span class="en" data-translate="nav_news_resources"></span></a>
-                        <a href="#footer-social"><span class="zh" data-translate="nav_follow_us"></span><span class="en" data-translate="nav_follow_us"></span></a>
+                        <a href="faq.html"><span data-translate="nav_faq"></span></a>
+                        <a href="#about"><span data-translate="nav_about_us"></span></a>
+                        <a href="#contact"><span data-translate="nav_contact"></span></a>
+                        <a href="news/index.html"><span data-translate="nav_news_resources"></span></a>
+                        <a href="#footer-social"><span data-translate="nav_follow_us"></span></a>
                     </div>
                 </li>
             </ul>
@@ -293,31 +280,29 @@
         <!-- 联系我们 -->
         <section id="contact" class="contact contact-page">
             <div class="contact-hero">
-                <h2 data-translate="contact_title">联系我们</h2>
-                <p data-translate="contact_subtitle">我们期待与您的合作</p>
-                <p class="contact-hero__seo contact-seo-text" data-translate="contact_seo_text">Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.</p>
+                <h2 data-translate="contact_title"></h2>
+                <p data-translate="contact_subtitle"></p>
+                <p class="contact-hero__seo contact-seo-text" data-translate="contact_seo_text"></p>
             </div>
             <div class="contact-mobile-quick" role="navigation" aria-label="Quick contact">
-                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--wa" href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" data-translate="contact_whatsapp_title">WhatsApp</a>
-                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--mail" href="mailto:yishu@waikwantent.com" data-translate="contact_email_label">Email</a>
+                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--wa" href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" data-translate="contact_whatsapp_title"></a>
+                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--mail" href="mailto:yishu@waikwantent.com" data-translate="contact_email_label"></a>
             </div>
             <div class="contact-grid">
                 <!-- Left: info -->
                 <aside class="contact-card soft-panel contact-info">
-                    <h3 data-translate="contact_info_title">联系方式</h3>
+                    <h3 data-translate="contact_info_title"></h3>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_address_title">Address</div>
-                            <div class="contact-value" data-i18n="contact_address_value">
-                                500 meters southeast of the intersection of County Road 400 and Provincial Road 313, Bobai County, Yulin City, Guangxi Zhuang Autonomous Region, China
-                            </div>
+                            <div class="contact-title" data-i18n="contact_address_title"></div>
+                            <div class="contact-value" data-i18n="contact_address_value"></div>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-whatsapp"></i>
                         <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_whatsapp_title">WhatsApp</div>
+                            <div class="contact-title" data-i18n="contact_whatsapp_title"></div>
                             <a
                                 href="https://wa.me/8613824540280"
                                 target="_blank"
@@ -332,15 +317,13 @@
                                     class="qr-img"
                                 >
                             </div>
-                            <div class="contact-note" data-i18n="contact_whatsapp_note">
-                                Scan to chat on WhatsApp
-                            </div>
+                            <div class="contact-note" data-i18n="contact_whatsapp_note"></div>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <div class="label" data-translate="contact_email_label">Email</div>
+                            <div class="label" data-translate="contact_email_label"></div>
                             <div class="value">
                                 <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a>
                             </div>
@@ -349,14 +332,12 @@
                     <div class="contact-item">
                         <i class="fab fa-weixin"></i>
                         <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_wechat_title">WeChat</div>
+                            <div class="contact-title" data-i18n="contact_wechat_title"></div>
                             <div class="contact-value">massifmyth</div>
                             <div class="qr-wrapper">
                                 <img src="images/boss_wechat.jpg" alt="WeChat QR Code" class="qr-img">
                             </div>
-                            <div class="contact-note" data-i18n="contact_wechat_note">
-                                Scan to add on WeChat
-                            </div>
+                            <div class="contact-note" data-i18n="contact_wechat_note"></div>
                         </div>
                     </div>
                 </aside>
@@ -364,7 +345,7 @@
                 <div class="contact-right">
                     <!-- Inquiry form (standardized fields) -->
                     <div class="contact-card soft-panel contact-form inquiry-form">
-                        <h3 data-translate="contact_form_title">Request a Quote</h3>
+                        <h3 data-translate="contact_form_title"></h3>
 
                         <p class="wk-disclaimer" data-translate="contact_promise_24h"></p>
 
@@ -380,12 +361,12 @@
 
                         <form id="getQuoteForm" class="quote-form" action="javascript:void(0);" novalidate>
                             <label>
-                                <span data-translate="inquiry_form_name">Your Name *</span>
+                                <span data-translate="inquiry_form_name"></span>
                                 <input type="text" name="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
                             </label>
 
                             <label>
-                                <span data-translate="inquiry_form_email">Your Email *</span>
+                                <span data-translate="inquiry_form_email"></span>
                                 <input type="email" name="email" required data-translate-placeholder="inquiry_form_email" />
                             </label>
 
@@ -415,7 +396,7 @@
                             <input type="text" name="website" class="contact-honeypot" tabindex="-1" autocomplete="off" />
 
                             <div class="contact-form__actions">
-                                <button id="contactSubmitBtn" class="btn btn-primary contact-form__submit" type="submit" data-translate="inquiry_form_submit">Send Inquiry</button>
+                                <button id="contactSubmitBtn" class="btn btn-primary contact-form__submit" type="submit" data-translate="inquiry_form_submit"></button>
                                 <button type="reset" class="btn btn-secondary contact-form__reset" data-translate="inquiry_form_reset"></button>
                             </div>
                         </form>
@@ -423,13 +404,13 @@
                 </div>
             </div>
             <div class="contact-location contact-card soft-panel" aria-labelledby="contact-location-heading">
-                <h3 id="contact-location-heading" class="contact-location__title" data-translate="contact_location_title">Our Location</h3>
+                <h3 id="contact-location-heading" class="contact-location__title" data-translate="contact_location_title"></h3>
                 <div class="contact-location__intro">
-                    <p class="contact-location__address" data-translate="contact_address_en">500 meters southeast of the intersection of County Road 400 and Provincial Road 313, Bobai County, Yulin City, Guangxi Zhuang Autonomous Region, China</p>
+                    <p class="contact-location__address" data-translate="contact_address_en"></p>
                     <div class="contact-location__hours">
-                        <div class="contact-location__hours-title" data-translate="contact_opening_hours_title">Opening Hours</div>
-                        <p class="contact-location__hours-line" data-translate="contact_opening_hours_line1">Monday to Friday: 8:00–18:00</p>
-                        <p class="contact-location__hours-line" data-translate="contact_opening_hours_line2">Saturday &amp; Sunday: By appointment</p>
+                        <div class="contact-location__hours-title" data-translate="contact_opening_hours_title"></div>
+                        <p class="contact-location__hours-line" data-translate="contact_opening_hours_line1"></p>
+                        <p class="contact-location__hours-line" data-translate="contact_opening_hours_line2"></p>
                     </div>
                     <div class="contact-location__actions">
                         <a
@@ -438,7 +419,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             data-translate="contact_open_in_maps"
-                        >Open in Google Maps</a>
+                        ></a>
                     </div>
                 </div>
                 <div class="contact-location__map">
@@ -458,9 +439,7 @@
             </div>
             <!-- SEO + 转化文案（桌面端为主；移动端隐藏以减少滚动） -->
             <div class="contact-seo-footer">
-                <p data-translate="contact_seo_footer">
-                    Looking for a reliable manufacturer of custom tents, flags or display systems? Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your project.
-                </p>
+                <p data-translate="contact_seo_footer"></p>
             </div>
         </section>
 
@@ -592,14 +571,8 @@
         <section class="wk-section wk-news-home wk-section--secondary" id="latest-news">
             <div class="container">
                 <div class="section-header home-secondary__header">
-                    <h2>
-                        <span class="zh" data-translate="home_news_title"></span>
-                        <span class="en" data-translate="home_news_title"></span>
-                    </h2>
-                    <p>
-                        <span class="zh" data-translate="home_news_intro"></span>
-                        <span class="en" data-translate="home_news_intro"></span>
-                    </p>
+                    <h2 data-translate="home_news_title"></h2>
+                    <p data-translate="home_news_intro"></p>
                 </div>
                 <div class="news-grid news-grid--split home-news-grid" style="max-width: 980px; margin: 0 auto;">
                     <article class="news-card news-card--featured">
@@ -607,29 +580,14 @@
                             <img src="/news/images/APPPEXPO2026/apppexpo-2026-shanghai-05.jpg" alt="" loading="lazy" width="800" height="500" data-translate-alt="news_apppexpo_feature_alt">
                         </a>
                         <div class="news-card__body">
-                            <div class="news-card__meta">
-                                <span class="zh">展会 · 2026年3月 · 上海</span>
-                                <span class="en">Exhibition · Mar 2026 · Shanghai</span>
-                            </div>
+                            <div class="news-card__meta" data-translate="home_news_feature_meta"></div>
                             <h3 class="news-card__title">
-                                <a href="news/apppexpo-2026-shanghai.html">
-                                    <span class="zh" data-translate="home_news_feature_title"></span>
-                                    <span class="en" data-translate="home_news_feature_title"></span>
-                                </a>
+                                <a href="news/apppexpo-2026-shanghai.html" data-translate="home_news_feature_title"></a>
                             </h3>
-                            <p class="news-card__excerpt">
-                                <span class="zh" data-translate="home_news_feature_summary"></span>
-                                <span class="en" data-translate="home_news_feature_summary"></span>
-                            </p>
+                            <p class="news-card__excerpt" data-translate="home_news_feature_summary"></p>
                             <div class="news-card__actions">
-                                <a class="btn btn-primary" href="news/apppexpo-2026-shanghai.html">
-                                    <span class="zh" data-translate="home_news_btn_read"></span>
-                                    <span class="en" data-translate="home_news_btn_read"></span>
-                                </a>
-                                <a class="btn btn-secondary" href="news/index.html">
-                                    <span class="zh" data-translate="home_news_btn_all"></span>
-                                    <span class="en" data-translate="home_news_btn_all"></span>
-                                </a>
+                                <a class="btn btn-primary" href="news/apppexpo-2026-shanghai.html" data-translate="home_news_btn_read"></a>
+                                <a class="btn btn-secondary" href="news/index.html" data-translate="home_news_btn_all"></a>
                             </div>
                         </div>
                     </article>
@@ -640,68 +598,65 @@
         <section id="about" class="about about--home-secondary">
             <div class="container">
                 <div class="section-header home-secondary__header">
-                    <h2 data-translate="about_title">关于伟群</h2>
-                    <p data-translate="about_subtitle">帐篷、沙滩旗与展示系统的专业源头制造工厂</p>
+                    <h2 data-translate="about_title"></h2>
+                    <p data-translate="about_subtitle"></p>
                 </div>
                 <div class="about-content about-grid">
                     <div class="about-text">
-                        <p class="about-intro">
-                            <strong>Guangxi WaiKwan Tent Manufacturing Co., Ltd</strong> is a professional manufacturer of tents, beach flags and display systems, established in 2010.
-                            <span data-translate="about_intro_rest">公司深耕便携式户外展示行业<strong>25年以上</strong>，为全球客户提供稳定、高效、可定制的展示解决方案。</span>
-                        </p>
+                        <p class="about-intro" data-translate="about_intro"></p>
 
-                        <h3 data-translate="about_mission">我们的使命</h3>
-                        <p data-translate="about_mission_text">专注于帐篷、沙滩旗及便携式展示系统的研发与制造，为全球客户提供<strong>高品质、易安装、可定制</strong>的展示产品，帮助品牌在各类活动、展会与商业场景中实现更高效的曝光与传播。</p>
+                        <h3 data-translate="about_mission"></h3>
+                        <p data-translate="about_mission_text"></p>
 
-                        <h3 data-translate="about_vision">我们的愿景</h3>
-                        <p data-translate="about_vision_text">成为帐篷与展示系统领域<strong>值得信赖的全球制造合作伙伴</strong>，持续提升制造工艺与产品品质，为客户创造长期、稳定、可持续的商业价值。</p>
+                        <h3 data-translate="about_vision"></h3>
+                        <p data-translate="about_vision_text"></p>
 
                         <div class="about-products">
-                            <h4 data-translate="about_products_title">产品与能力范围</h4>
+                            <h4 data-translate="about_products_title"></h4>
                             <div class="about-products-content">
                                 <div class="about-products-list">
-                                    <h5 data-translate="about_products_main">主要产品系列：</h5>
+                                    <h5 data-translate="about_products_main"></h5>
                                     <ul>
-                                        <li data-translate="about_product_1">帐篷系列（Pop-up Tent / Marquee / Event Tent）</li>
-                                        <li data-translate="about_product_2">沙滩旗及旗杆系列（Feather Flag / Teardrop Flag）</li>
-                                        <li data-translate="about_product_3">展示系统（Display Systems）</li>
-                                        <li data-translate="about_product_4">桌布、布艺展示及品牌配件</li>
-                                        <li data-translate="about_product_5">定制化品牌展示解决方案</li>
+                                        <li data-translate="about_product_1"></li>
+                                        <li data-translate="about_product_2"></li>
+                                        <li data-translate="about_product_3"></li>
+                                        <li data-translate="about_product_4"></li>
+                                        <li data-translate="about_product_5"></li>
                                     </ul>
                                 </div>
                                 <div class="about-printing-list">
-                                    <h5 data-translate="about_printing_title">印刷与工艺：</h5>
+                                    <h5 data-translate="about_printing_title"></h5>
                                     <ul>
-                                        <li data-translate="about_printing_1">数码印刷 / 丝网印刷 / 热转印</li>
-                                        <li data-translate="about_printing_2">多种布料与结构可选</li>
-                                        <li data-translate="about_printing_3">严格的品质检测与一致性控制</li>
+                                        <li data-translate="about_printing_1"></li>
+                                        <li data-translate="about_printing_2"></li>
+                                        <li data-translate="about_printing_3"></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
                         <div class="about-philosophy">
-                            <h4 data-translate="about_philosophy_title">我们的理念</h4>
+                            <h4 data-translate="about_philosophy_title"></h4>
                             <ul class="philosophy-list">
-                                <li><strong data-translate="about_philosophy_mission_label">企业使命</strong>：<span data-translate="about_philosophy_mission">弘扬品牌展示文化，助力客户商业成功</span></li>
-                                <li><strong data-translate="about_philosophy_values_label">经营理念</strong>：<span data-translate="about_philosophy_values">诚信经营、持续创新、合作共赢</span></li>
-                                <li><strong data-translate="about_philosophy_quality_label">质量方针</strong>：<span data-translate="about_philosophy_quality">品质稳定、交付准时、服务可靠</span></li>
-                                <li><strong data-translate="about_philosophy_commitment_label">质量承诺</strong>：<span data-translate="about_philosophy_commitment">产品严格符合国际标准与客户要求，确保一致性与可靠性</span></li>
+                                <li><strong data-translate="about_philosophy_mission_label"></strong>：<span data-translate="about_philosophy_mission"></span></li>
+                                <li><strong data-translate="about_philosophy_values_label"></strong>：<span data-translate="about_philosophy_values"></span></li>
+                                <li><strong data-translate="about_philosophy_quality_label"></strong>：<span data-translate="about_philosophy_quality"></span></li>
+                                <li><strong data-translate="about_philosophy_commitment_label"></strong>：<span data-translate="about_philosophy_commitment"></span></li>
                             </ul>
                         </div>
 
                         <div class="stats">
                             <div class="stat-item">
                                 <h4>25+</h4>
-                                <p data-translate="stat_years">年制造经验</p>
+                                <p data-translate="stat_years"></p>
                             </div>
                             <div class="stat-item">
                                 <h4>1000+</h4>
-                                <p data-translate="stat_clients">全球合作客户</p>
+                                <p data-translate="stat_clients"></p>
                             </div>
                             <div class="stat-item">
                                 <h4>50+</h4>
-                                <p data-translate="stat_products">产品型号与解决方案</p>
+                                <p data-translate="stat_products"></p>
                             </div>
                         </div>
                     </div>
@@ -723,22 +678,16 @@
                 <!-- 左：快速信息 -->
                 <div class="contact-bottom__grid">
                     <div class="contact-bottom__brand">
-                        <div class="contact-bottom__brandTitle" data-i18n="footer_company_line_cn">
-                            广西伟群帐篷制造有限公司
-                        </div>
-                        <div class="contact-bottom__brandSub" data-i18n="footer_company_line_en">
-                            Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010
-                        </div>
+                        <div class="contact-bottom__brandTitle" data-i18n="footer_contact_brand_primary"></div>
+                        <div class="contact-bottom__brandSub" data-i18n="footer_contact_brand_secondary"></div>
                     </div>
                     <div class="contact-bottom__cols">
                         <div class="contact-bottom__col">
-                            <div class="contact-bottom__h" data-i18n="footer_findus">Find Us</div>
-                            <div class="contact-bottom__p" data-i18n="footer_address">
-                                500 meters southeast of the intersection of County Road 400 and Provincial Road 313, Bobai County, Yulin City, Guangxi Zhuang Autonomous Region, China
-                            </div>
+                            <div class="contact-bottom__h" data-i18n="footer_findus"></div>
+                            <div class="contact-bottom__p" data-i18n="footer_address"></div>
                         </div>
                         <div class="contact-bottom__col">
-                            <div class="contact-bottom__h" data-i18n="footer_contact">Contact</div>
+                            <div class="contact-bottom__h" data-i18n="footer_contact"></div>
                             <a class="contact-bottom__link" href="mailto:yishu@waikwantent.com">
                                 yishu@waikwantent.com
                             </a>
@@ -750,81 +699,75 @@
                             </div>
                         </div>
                         <div class="contact-bottom__col">
-                            <div class="contact-bottom__h" data-i18n="footer_companyinfo">Company Info</div>
-                            <a class="contact-bottom__link" href="index.html#about" data-i18n="footer_about">About Us</a>
-                            <a class="contact-bottom__link" href="product-center.html" data-i18n="footer_products">Products</a>
-                            <a class="contact-bottom__link" href="news/index.html" data-i18n="footer_news">News</a>
-                            <a class="contact-bottom__link" href="index.html#contact" data-i18n="footer_contactus">Contact Us</a>
+                            <div class="contact-bottom__h" data-i18n="footer_companyinfo"></div>
+                            <a class="contact-bottom__link" href="index.html#about" data-i18n="footer_about"></a>
+                            <a class="contact-bottom__link" href="product-center.html" data-i18n="footer_products"></a>
+                            <a class="contact-bottom__link" href="news/index.html" data-i18n="footer_news"></a>
+                            <a class="contact-bottom__link" href="index.html#contact" data-i18n="footer_contactus"></a>
                         </div>
                     </div>
                 </div>
                 <!-- 右：询问/CTA 盒子 -->
                 <div class="contact-bottom__ask">
-                    <div class="contact-bottom__askTitle" data-i18n="footer_ask_title">
-                        Ask anything about products or designs…
-                    </div>
+                    <div class="contact-bottom__askTitle" data-i18n="footer_ask_title"></div>
                     <div class="contact-bottom__askBox">
-                        <div class="contact-bottom__askText" data-i18n="footer_ask_text">
-                            Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.
-                        </div>
+                        <div class="contact-bottom__askText" data-i18n="footer_ask_text"></div>
                         <div class="contact-bottom__askActions">
-                            <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
-                            <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
+                            <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary"></a>
+                            <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary"></a>
                         </div>
                         <div class="contact-bottom__askSupport">
-                            <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support">WhatsApp</a>
+                            <a href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" class="contact-bottom__whatsapp" data-i18n="footer_whatsapp_support"></a>
                         </div>
                     </div>
                 </div>
                 <!-- 最底行：版权 + links -->
                 <div id="footer-social" class="contact-bottom__social" tabindex="-1">
-                    <h3 class="contact-bottom__socialTitle" data-i18n="footer_follow_us">Follow Us</h3>
+                    <h3 class="contact-bottom__socialTitle" data-i18n="footer_follow_us"></h3>
                     <ul class="contact-bottom__socialLinks">
                         <li>
                             <a class="contact-bottom__socialLink" href="https://www.facebook.com/share/18UhWtGUB8/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_facebook">
                                 <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_facebook">Facebook</span>
+                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_facebook"></span>
                             </a>
                         </li>
                         <li>
                             <a class="contact-bottom__socialLink" href="https://www.linkedin.com/in/yishulai-waikwantent/" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_linkedin">
                                 <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_linkedin">LinkedIn</span>
+                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_linkedin"></span>
                             </a>
                         </li>
                         <li>
                             <a class="contact-bottom__socialLink" href="https://www.instagram.com/waikwantent?igsh=ZjcxOWJtMjd0ZTh6&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_instagram">
                                 <i class="fab fa-instagram" aria-hidden="true"></i>
-                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_instagram">Instagram</span>
+                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_instagram"></span>
                             </a>
                         </li>
                         <li>
                             <a class="contact-bottom__socialLink" href="https://www.tiktok.com/@yishu.lai?_r=1&amp;_t=ZT-95KvmDSrUyM" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_tiktok">
                                 <i class="fab fa-tiktok" aria-hidden="true"></i>
-                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_tiktok">TikTok</span>
+                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_tiktok"></span>
                             </a>
                         </li>
                         <li>
                             <a class="contact-bottom__socialLink" href="https://xhslink.com/m/10kreAeKi3v" target="_blank" rel="noopener noreferrer" data-i18n-aria-label="social_xiaohongshu">
                                 <span class="wk-social-xhs-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" focusable="false"><path d="M7 3h11a2 2 0 0 1 2 2v15a1 1 0 0 1-1 1H8.5A3.5 3.5 0 0 1 5 17.5V5a2 2 0 0 1 2-2zm0 2v12.5c0 .83.67 1.5 1.5 1.5H18V5a1 1 0 0 0-1-1H7zm2 2h8v2H9V7zm0 4h8v2H9v-2zm0 4h5v2H9v-2z"/></svg></span>
-                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_xiaohongshu">Xiaohongshu</span>
+                                <span class="contact-bottom__socialLinkLabel" data-i18n="social_xiaohongshu"></span>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <div class="contact-bottom__legal">
-                    <div class="contact-bottom__copy" data-i18n="footer_copyright">
-                        © 2025 Guangxi WaiKwan Tent Manufacturing Co., Ltd. All Rights Reserved.
-                    </div>
+                    <div class="contact-bottom__copy" data-i18n="footer_copyright"></div>
                     <div class="contact-bottom__links">
-                        <a href="faq.html" class="contact-bottom__link2">FAQ</a>
-                        <a href="custom-canopy-tent-manufacturer.html" class="contact-bottom__link2">Canopy Tent Manufacturer</a>
-                        <a href="beach-flag-supplier.html" class="contact-bottom__link2">Beach Flag Supplier</a>
-                        <a href="portable-display-systems.html" class="contact-bottom__link2">Display Systems Manufacturer</a>
-                        <a href="site-map.html#seo-guides" class="contact-bottom__link2">B2B Guides</a>
-                        <a href="terms.html" class="contact-bottom__link2" data-i18n="footer_terms">Terms</a>
-                        <a href="privacy.html" class="contact-bottom__link2" data-i18n="footer_privacy">Privacy Policy</a>
-                        <a href="site-map.html" class="contact-bottom__link2" data-i18n="footer_sitemap">Site Map</a>
+                        <a href="faq.html" class="contact-bottom__link2" data-i18n="footer_legal_link_faq"></a>
+                        <a href="custom-canopy-tent-manufacturer.html" class="contact-bottom__link2" data-i18n="footer_legal_link_canopy"></a>
+                        <a href="beach-flag-supplier.html" class="contact-bottom__link2" data-i18n="footer_legal_link_beach"></a>
+                        <a href="portable-display-systems.html" class="contact-bottom__link2" data-i18n="footer_legal_link_display"></a>
+                        <a href="site-map.html#seo-guides" class="contact-bottom__link2" data-i18n="footer_legal_link_guides"></a>
+                        <a href="terms.html" class="contact-bottom__link2" data-i18n="footer_terms"></a>
+                        <a href="privacy.html" class="contact-bottom__link2" data-i18n="footer_privacy"></a>
+                        <a href="site-map.html" class="contact-bottom__link2" data-i18n="footer_sitemap"></a>
                     </div>
                 </div>
             </div>
@@ -847,9 +790,9 @@
     <div id="pdfModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h3 id="pdfModalTitle" data-translate="pdf_download_title">下载产品资料</h3>
-            <p id="pdfModalDesc" data-translate="pdf_download_desc">点击下方按钮下载完整的产品目录和公司介绍。</p>
-            <a id="pdfDownloadLink" href="广西伟群帐篷制造有限公司2025改.pdf" target="_blank" rel="noopener" class="btn btn-secondary" data-translate="btn_download_pdf">下载PDF</a>
+            <h3 id="pdfModalTitle" data-translate="pdf_download_title"></h3>
+            <p id="pdfModalDesc" data-translate="pdf_download_desc"></p>
+            <a id="pdfDownloadLink" href="/广西伟群帐篷制造有限公司2025改.pdf" target="_blank" rel="noopener" class="btn btn-secondary" data-translate="btn_download_pdf"></a>
         </div>
     </div>
 

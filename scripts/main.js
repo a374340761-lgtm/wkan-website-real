@@ -576,8 +576,7 @@ function renderCanopyPriorityStrip() {
             const h = wkLocalizedInternalLinkSafe(x.href);
             return (
                 `<a class="wk-canopy-priority__chip btn btn-secondary" href="${h}">`
-                + `<span class="zh" data-translate="${x.key}"></span>`
-                + `<span class="en" data-translate="${x.key}"></span>`
+                + `<span data-translate="${x.key}"></span>`
                 + `</a>`
             );
         })

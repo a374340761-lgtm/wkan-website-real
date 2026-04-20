@@ -718,7 +718,6 @@ class MultiLanguageSystem {
                 about_title: '关于伟群',
                 about_subtitle: '帐篷、沙滩旗与展示系统的专业源头制造工厂',
                 about_intro: '广西伟群帐篷制造有限公司是一家专注于帐篷、沙滩旗、快幕秀等展示系统及户外品牌展示产品研发与制造的源头工厂。公司深耕便携式户外展示行业25年以上，为全球客户提供稳定、高效、可定制的展示解决方案。',
-                about_intro_rest: '公司深耕便携式户外展示行业<strong>25年以上</strong>，为全球客户提供稳定、高效、可定制的展示解决方案。',
                 about_mission_title: '我们的使命',
                 about_mission: '我们的使命', // 兼容旧key
                 about_mission_text: '专注于帐篷、沙滩旗及便携式展示系统的研发与制造，为全球客户提供高品质、易安装、可定制的展示产品，帮助品牌在各类活动、展会与商业场景中实现更高效的曝光与传播。',
@@ -921,6 +920,7 @@ class MultiLanguageSystem {
                 home_news_feature_summary: '伟群帐篷参展上海 APPPEXPO 2026，现场展示沙滩旗、展示器材与定制品牌宣传方案，并与海内外客户面对面交流。',
                 home_news_btn_all: '查看全部动态',
                 home_news_btn_read: '阅读更多',
+                home_news_feature_meta: '展会 · 2026年3月 · 上海',
                 news_meta_label: '展会',
                 news_placeholder_1_title: '太阳伞、沙滩旗杆与旗杆底座',
                 news_placeholder_1_desc: '展会现场展示太阳伞、沙滩旗、旗杆及加重底座等户外展示与品牌陈列方案，适用于活动推广与商业陈列。',
@@ -1115,6 +1115,7 @@ class MultiLanguageSystem {
                 // 联系我们
                 contact_title: '联系我们',
                 contact_subtitle: '我们期待与您的合作',
+                contact_info_title: '联系方式',
                 contact_seo_text: '欢迎联系广西伟群帐篷制造有限公司，洽谈定制帐篷、旗帜与展示项目需求。',
                 contact_address_label: '公司地址',
                 contact_address_title: '地址',
@@ -1282,6 +1283,8 @@ class MultiLanguageSystem {
                 // Contact Bottom (Signazon-style)
                 footer_company_line_cn: '广西伟群帐篷制造有限公司',
                 footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
+                footer_contact_brand_primary: '广西伟群帐篷制造有限公司',
+                footer_contact_brand_secondary: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
                 footer_findus: '地址',
                 footer_address: '广西壮族自治区玉林市博白县400县道与313省道交叉口东南500米<br>中国',
                 footer_contact: '联系',
@@ -1951,10 +1954,9 @@ class MultiLanguageSystem {
                 footer_legal_link_guides: 'B2B Guides',
                 
                 // About
-                about_title: 'About Guangxi WaiKwan Tent Manufacturing Co., Ltd',
-                about_subtitle: 'Professional Source Manufacturer of Tents, Flags & Portable Display Systems',
-                about_intro: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd is a professional source manufacturer specializing in tents, beach flags, display systems and portable outdoor branding systems. With over 25 years of manufacturing experience, we focus on delivering reliable, easy-to-install and fully customizable display solutions for global brands, distributors and project clients. From product design and material selection to printing and final assembly, all processes are completed in-house to ensure consistent quality, stable lead time and competitive pricing.',
-                about_intro_rest: 'With over <strong>25 years</strong> in portable outdoor display solutions, we deliver stable, efficient and customizable systems for customers worldwide.',
+                about_title: 'About WaiKwan',
+                about_subtitle: 'OEM/ODM factory — custom canopy tents, beach flags & portable display systems',
+                about_intro: 'WaiKwan is a China-based OEM/ODM manufacturer of custom printed canopy tents, beach flags and portable display systems. Since 2010 we have delivered exhibit and outdoor programs worldwide with in-house frames, fabric printing and QC—built for distributors, agencies and brands that need dependable export execution.',
                 about_mission_title: 'Our Mission',
                 about_mission: 'Our Mission',
                 about_mission_text: 'Our mission is to support brand visibility and marketing success by providing high-quality, customizable and easy-to-use tent and display solutions for events, exhibitions and outdoor promotions worldwide.',
@@ -2146,6 +2148,7 @@ class MultiLanguageSystem {
                 home_news_feature_summary: 'At APPPEXPO 2026 in Shanghai we presented beach flags, display hardware, and custom branding solutions, and met buyers on the show floor.',
                 home_news_btn_all: 'View All News',
                 home_news_btn_read: 'Read More',
+                home_news_feature_meta: 'Exhibition · Mar 2026 · Shanghai',
                 news_meta_label: 'Exhibition',
                 news_placeholder_1_title: 'Parasols, Beach Flag Poles & Bases',
                 news_placeholder_1_desc: 'Sun parasols, beach flags, poles, and weighted bases for outdoor branding and event display—shown on site at APPPEXPO Shanghai.',
@@ -2341,6 +2344,7 @@ class MultiLanguageSystem {
                 // Contact
                 contact_title: 'Contact Us',
                 contact_subtitle: 'We look forward to working with you',
+                contact_info_title: 'How to reach us',
                 contact_seo_text: 'Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.',
                 contact_address_label: 'Address',
                 contact_address_title: 'Address',
@@ -2507,6 +2511,8 @@ class MultiLanguageSystem {
                 // Contact Bottom (Signazon-style)
                 footer_company_line_cn: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
                 footer_company_line_en: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
+                footer_contact_brand_primary: 'WaiKwan — Custom canopy tents, beach flags & display systems',
+                footer_contact_brand_secondary: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd · Since 2010',
                 footer_findus: 'Find Us',
                 footer_address: '500 meters southeast of the intersection of County Road 400 and Provincial Road 313, Bobai County, Yulin City, Guangxi Zhuang Autonomous Region, China',
                 footer_contact: 'Contact',
@@ -2808,11 +2814,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('siteLanguage', urlLang);
     } catch (e) {}
 
-    // ❌ 不再自动显示语言选择弹窗
     const gate = document.getElementById('languageGate');
-    if (gate) {
-        gate.remove();
-    }
+    if (gate) gate.remove();
 });
 
 // ===== Top nav language dropdown =====

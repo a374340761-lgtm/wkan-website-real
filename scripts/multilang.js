@@ -378,6 +378,58 @@ class MultiLanguageSystem {
                     + '<a href="seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html" style="color: var(--wk-red-700); font-weight: 600;">OEM 张拉布展示</a>'
                     + '<a href="site-map.html#seo-guides" style="color: var(--wk-red-700); font-weight: 600;">更多 B2B 采购指南</a>',
 
+                home_shop_by_size_title: '按帐篷尺寸选购',
+                home_shop_by_size_items_html:
+                    '<a href="10x10-pop-up-canopy-tent.html">10×10 快开广告帐篷</a> · <a href="custom-printed-canopy-tents.html">定制印刷尺寸方案</a> · '
+                    + '<a href="products-tents.html">现货帐篷尺寸表</a> · <a href="tent-type.html?type=folding40">3×3 / 3×4.5 / 3×6 m 框架</a>',
+                home_shop_by_material_title: '按框架与面料选购',
+                home_shop_by_material_items_html:
+                    '<a href="aluminum-folding-tent.html">铝合金折叠帐篷</a> · <a href="custom-canopy-tent-manufacturer.html">铁架 / 加强框架等级</a> · '
+                    + '<a href="faq-color-matching.html">面料克重与配色</a>',
+                home_shop_by_use_title: '按使用场景选购',
+                home_shop_by_use_items_html:
+                    '<a href="event-canopy-tents.html">活动篷房 / 赛事帐篷</a> · <a href="custom-canopy-tent-manufacturer.html">展会与零售品牌篷</a> · '
+                    + '<a href="products-accessories.html">围布、配重与收纳包</a>',
+                home_flag_shapes_title: '沙滩旗形状与画面',
+                home_flag_shapes_items_html:
+                    '<a href="beach-flag-supplier.html">羽毛旗 / 水滴旗</a> · <a href="flag-type.html?type=fiberglass_pole">方形广告旗方案</a> · '
+                    + '<a href="product-center.html?cat=flags">旗帜类目总览</a>',
+                home_flag_hardware_title: '旗杆、底座与配件',
+                home_flag_hardware_items_html:
+                    '<a href="flag-type.html?type=fiberglass_pole">玻纤杆系统</a> · <a href="flag-type.html?type=alu_fiberglass_pole">铝杆 + 玻纤组合</a> · <a href="flag-type.html?type=flag_bases_accessories">十字座、地插与注水底座</a> · '
+                    + '<a href="products-accessories.html">替换件与收纳</a>',
+                home_display_modules_title: '展示系统模块',
+                home_display_modules_items_html:
+                    '<a href="pop-up-display-stands.html">快幕秀 / 拉网展架</a> · <a href="tension-fabric-backwall.html">张拉布背景墙</a> · '
+                    + '<a href="seg-light-box-manufacturer.html">SEG 卡布灯箱</a> · <a href="portable-display-systems.html">前台与易拉宝</a>',
+                home_buyer_faq_links_html:
+                    '常见采购问题：<a href="faq-moq.html">起订量 MOQ</a> · <a href="faq-lead-time.html">交期</a> · <a href="faq-artwork-files.html">设计稿</a> · '
+                    + '<a href="faq-shipping.html">物流</a> · <a href="faq-color-matching.html">配色</a>',
+                home_pillar_keywords_html:
+                    '重点落地页：<a href="custom-canopy-tent-manufacturer.html">定制广告帐篷制造商</a> · <a href="10x10-pop-up-canopy-tent.html">10×10 快开帐篷</a> · '
+                    + '<a href="aluminum-folding-tent.html">铝合金折叠帐篷</a> · <a href="beach-flag-supplier.html">沙滩旗供应商</a> · '
+                    + '<a href="portable-display-systems.html">便携展示系统</a> · <a href="pop-up-display-stands.html">快幕秀展架</a> · '
+                    + '<a href="tension-fabric-backwall.html">张拉布背景墙</a> · <a href="seg-light-box-manufacturer.html">SEG 灯箱制造商</a>',
+                pc_intro_tents: '从现货 30/40/50 方管与铝架系列到全定制印刷，服务展会、活动与渠道批发。',
+                pc_intro_flags: '羽毛旗、水滴旗与广告旗杆系统，配套底座、收纳与出口包装。',
+                pc_intro_displays: '快幕秀、张拉布、SEG 灯箱与促销前台，覆盖展会与品牌推广搭建。',
+                pc_seo_links_tents_html:
+                    '<a href="custom-canopy-tent-manufacturer.html">定制帐篷制造商</a> · <a href="10x10-pop-up-canopy-tent.html">10×10 帐篷</a> · '
+                    + '<a href="aluminum-folding-tent.html">铝架帐篷</a> · <a href="event-canopy-tents.html">活动篷房</a> · '
+                    + '<a href="seo/trade-show-canopy-tent-manufacturer-for-distributors.html">展会帐篷</a> · <a href="products-accessories.html">帐篷配件</a>',
+                pc_seo_links_flags_html:
+                    '<a href="flag-type.html?type=fiberglass_pole">羽毛 / 水滴旗杆</a> · <a href="flag-type.html?type=alu_fiberglass_pole">铝杆套装</a> · '
+                    + '<a href="flag-type.html?type=flag_bases_accessories">替换底座</a> · <a href="beach-flag-supplier.html">沙滩旗专题</a>',
+                pc_seo_links_displays_html:
+                    '<a href="pop-up-display-stands.html">快幕秀展架</a> · <a href="tension-fabric-backwall.html">张拉布背景墙</a> · '
+                    + '<a href="seg-light-box-manufacturer.html">SEG 灯箱</a> · <a href="portable-display-systems.html">便携展示系统</a> · '
+                    + '<a href="product-center.html?cat=displays">展示类目</a> · <a href="seo/portable-trade-show-booth-backdrop-manufacturer-export.html">展会背景墙</a>',
+                pc_card_stock_title: '现货帐篷',
+                pc_card_stock_desc: '常见尺寸与标准配置的快速发货选项。',
+                pc_tent_accessories_desc: '围布、配重、拖轮包、连接件与帐篷配套五金。',
+                pc_tent_replacement_desc: '顶篷、框架件、备件与现场维修替换方案。',
+                breadcrumb_product_center: '产品中心',
+
                 // Landing: custom-canopy-tent-manufacturer.html
                 landing_top_bar_canopy: '源头工厂 · OEM/ODM · 24 小时内回复',
                 landing_canopy_h1: '定制广告帐篷制造商',
@@ -1617,6 +1669,58 @@ class MultiLanguageSystem {
                     + '<a href="seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html" style="color: var(--wk-red-700); font-weight: 600;">Wholesale beach flag manufacturing</a>'
                     + '<a href="seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html" style="color: var(--wk-red-700); font-weight: 600;">OEM tension fabric displays</a>'
                     + '<a href="site-map.html#seo-guides" style="color: var(--wk-red-700); font-weight: 600;">More B2B sourcing guides</a>',
+
+                home_shop_by_size_title: 'Shop canopy tents by size',
+                home_shop_by_size_items_html:
+                    '<a href="10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> · <a href="custom-printed-canopy-tents.html">custom printed canopy sizes</a> · '
+                    + '<a href="products-tents.html">stock folding tent sizes</a> · <a href="tent-type.html?type=folding40">3×3 / 3×4.5 / 3×6 m frames</a>',
+                home_shop_by_material_title: 'Shop by frame grade &amp; fabric',
+                home_shop_by_material_items_html:
+                    '<a href="aluminum-folding-tent.html">aluminum folding canopy tents</a> · <a href="custom-canopy-tent-manufacturer.html">steel &amp; iron frame grades</a> · '
+                    + '<a href="faq-color-matching.html">fabric weights &amp; printing</a>',
+                home_shop_by_use_title: 'Shop by use case',
+                home_shop_by_use_items_html:
+                    '<a href="event-canopy-tents.html">event canopy tents</a> · <a href="custom-canopy-tent-manufacturer.html">trade show &amp; retail branding</a> · '
+                    + '<a href="products-accessories.html">sidewalls, weights &amp; roller bags</a>',
+                home_flag_shapes_title: 'Beach flags — shapes &amp; graphics',
+                home_flag_shapes_items_html:
+                    '<a href="beach-flag-supplier.html">feather &amp; teardrop beach flags</a> · <a href="flag-type.html?type=fiberglass_pole">rectangular promo flags</a> · '
+                    + '<a href="product-center.html?cat=flags">browse all flag kits</a>',
+                home_flag_hardware_title: 'Poles, bases &amp; hardware',
+                home_flag_hardware_items_html:
+                    '<a href="flag-type.html?type=fiberglass_pole">fiberglass poles</a> · <a href="flag-type.html?type=alu_fiberglass_pole">aluminum + fiberglass poles</a> · <a href="flag-type.html?type=flag_bases_accessories">cross, spike &amp; water bases</a> · '
+                    + '<a href="products-accessories.html">replacement parts &amp; bags</a>',
+                home_display_modules_title: 'Display systems — booths to backlit kits',
+                home_display_modules_items_html:
+                    '<a href="pop-up-display-stands.html">pop up display stands</a> · <a href="tension-fabric-backwall.html">tension fabric backwalls</a> · '
+                    + '<a href="seg-light-box-manufacturer.html">SEG light boxes</a> · <a href="portable-display-systems.html">counters &amp; roll-up stands</a>',
+                home_buyer_faq_links_html:
+                    'Buyer FAQ: <a href="faq-moq.html">MOQ</a> · <a href="faq-lead-time.html">lead time</a> · <a href="faq-artwork-files.html">artwork files</a> · '
+                    + '<a href="faq-shipping.html">shipping</a> · <a href="faq-color-matching.html">color matching</a>',
+                home_pillar_keywords_html:
+                    'Featured hubs: <a href="custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a> · <a href="10x10-pop-up-canopy-tent.html">10×10 pop up canopy tent</a> · '
+                    + '<a href="aluminum-folding-tent.html">aluminum folding tent</a> · <a href="beach-flag-supplier.html">beach flag supplier</a> · '
+                    + '<a href="portable-display-systems.html">portable display systems</a> · <a href="pop-up-display-stands.html">pop up display stands</a> · '
+                    + '<a href="tension-fabric-backwall.html">tension fabric backwall</a> · <a href="seg-light-box-manufacturer.html">SEG light box manufacturer</a>',
+                pc_intro_tents: 'OEM folding canopy tents—from stock 30/40/50 frames to fully custom printed programs for events, trade shows and retail.',
+                pc_intro_flags: 'Feather, teardrop and promo flagpole systems with bases, carry bags and export-friendly packing for agencies.',
+                pc_intro_displays: 'Pop-up backwalls, tension-fabric lines, SEG light boxes and promotion counters for trade show programs.',
+                pc_seo_links_tents_html:
+                    '<a href="custom-canopy-tent-manufacturer.html">custom canopy manufacturer</a> · <a href="10x10-pop-up-canopy-tent.html">10×10 canopy</a> · '
+                    + '<a href="aluminum-folding-tent.html">aluminum tent</a> · <a href="event-canopy-tents.html">event tents</a> · '
+                    + '<a href="seo/trade-show-canopy-tent-manufacturer-for-distributors.html">trade show tents</a> · <a href="products-accessories.html">tent accessories</a>',
+                pc_seo_links_flags_html:
+                    '<a href="flag-type.html?type=fiberglass_pole">feather &amp; teardrop poles</a> · <a href="flag-type.html?type=alu_fiberglass_pole">custom pole kits</a> · '
+                    + '<a href="flag-type.html?type=flag_bases_accessories">replacement bases</a> · <a href="beach-flag-supplier.html">beach flag supplier hub</a>',
+                pc_seo_links_displays_html:
+                    '<a href="pop-up-display-stands.html">pop-up display stands</a> · <a href="tension-fabric-backwall.html">tension fabric backwall</a> · '
+                    + '<a href="seg-light-box-manufacturer.html">SEG light box</a> · <a href="portable-display-systems.html">portable display systems</a> · '
+                    + '<a href="product-center.html?cat=displays">display catalog</a> · <a href="seo/portable-trade-show-booth-backdrop-manufacturer-export.html">trade show booth backdrops</a>',
+                pc_card_stock_title: 'Stock tents',
+                pc_card_stock_desc: 'Fast-ship options for common sizes and standard configurations.',
+                pc_tent_accessories_desc: 'Sidewalls, weights, roller bags, connectors and tent hardware.',
+                pc_tent_replacement_desc: 'Canopies, frames, spare parts and field repair solutions.',
+                breadcrumb_product_center: 'Product Center',
 
                 landing_top_bar_canopy: 'Factory direct · OEM/ODM · Reply within 24 hours',
                 landing_canopy_h1: 'Custom Canopy Tents Manufacturer',

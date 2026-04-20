@@ -25,7 +25,8 @@
     <meta name="twitter:image" content="https://www.waikwantent.com/images/hero/Waikwantentshero.png" />
     <meta name="twitter:url" content="https://www.waikwantent.com/product-detail.html" />
 
-    <!-- Early PDP SEO: when ?sku= is present, align canonical / social URLs and interim title+meta before deferred scripts and product data load (scripts/product-detail.js replaces with product-specific values). -->
+    <script src="scripts/product-seo-map.js"></script>
+    <!-- Early PDP SEO from WK_PRODUCT_SEO_MAP (build: node scripts/build-product-sitemap.mjs or py scripts/build-product-sitemap.py). scripts/product-detail.js refines after data load. -->
     <script>
     (function () {
       try {
@@ -34,7 +35,16 @@
         var sku = (u.searchParams.get('sku') || '').trim();
         if (!sku) return;
         var origin = 'https://www.waikwantent.com';
-        var canonical = origin + '/product-detail.html?sku=' + encodeURIComponent(sku);
+        var pathPrefix = /^\/zh\//.test(u.pathname) ? '/zh' : '';
+        var canonical = origin + pathPrefix + '/product-detail.html?sku=' + encodeURIComponent(sku);
+        var map = (window.WK_PRODUCT_SEO_MAP && window.WK_PRODUCT_SEO_MAP[sku]) || null;
+        var isZh = pathPrefix === '/zh';
+        var title = map
+          ? (isZh ? map.titleZh : map.titleEn)
+          : ('SKU ' + sku + ' | Tent & Display Manufacturer | WaiKwan');
+        var desc = map
+          ? (isZh ? map.descriptionZh : map.descriptionEn)
+          : ('OEM/ODM product SKU ' + sku + ' — specifications, printing options and factory quotes from WaiKwan.');
         function attr(sel, name, val) {
           var el = document.querySelector(sel);
           if (el) el.setAttribute(name, val);
@@ -43,14 +53,43 @@
         attr('meta[property="og:url"]', 'content', canonical);
         attr('meta[name="twitter:url"]', 'content', canonical);
         attr('meta[property="og:type"]', 'content', 'product');
-        var interimTitle = 'SKU ' + sku + ' | Tent & Display Manufacturer | WaiKwan';
-        document.title = interimTitle;
-        attr('meta[property="og:title"]', 'content', interimTitle);
-        attr('meta[name="twitter:title"]', 'content', interimTitle);
-        var interimDesc = 'OEM/ODM product SKU ' + sku + ' — specifications, printing options and factory quotes from WaiKwan.';
-        attr('meta[name="description"]', 'content', interimDesc);
-        attr('meta[property="og:description"]', 'content', interimDesc);
-        attr('meta[name="twitter:description"]', 'content', interimDesc);
+        document.title = title;
+        attr('meta[property="og:title"]', 'content', title);
+        attr('meta[name="twitter:title"]', 'content', title);
+        attr('meta[name="description"]', 'content', desc);
+        attr('meta[property="og:description"]', 'content', desc);
+        attr('meta[name="twitter:description"]', 'content', desc);
+        if (map && map.image) {
+          attr('meta[property="og:image"]', 'content', map.image);
+          attr('meta[name="twitter:image"]', 'content', map.image);
+        }
+        var pName = map
+          ? (isZh ? String(map.titleZh || '').split('｜')[0].trim() : String(map.titleEn || '').split('|')[0].trim())
+          : ('Product ' + sku);
+        var img = (map && map.image) ? map.image : (origin + '/images/hero/Waikwantentshero.png');
+        var ld = {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          '@id': canonical + '#product',
+          name: pName || ('SKU ' + sku),
+          url: canonical,
+          description: String(desc).substring(0, 500),
+          image: img,
+          sku: String((map && map.sku) || sku),
+          brand: { '@type': 'Brand', name: 'WaiKwan' },
+          manufacturer: {
+            '@type': 'Organization',
+            name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
+            url: origin + '/'
+          },
+          offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: canonical }
+        };
+        if (map && map.category) ld.category = map.category;
+        var s = document.createElement('script');
+        s.id = 'wk-product-jsonld';
+        s.type = 'application/ld+json';
+        s.textContent = JSON.stringify(ld);
+        document.head.appendChild(s);
       } catch (e) {}
     })();
     </script>
@@ -79,7 +118,7 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
-                <span data-translate="top_bar_text">服务企业超过15年！值得信赖的客户服务！</span>
+                <span data-translate="top_bar_text">25+ years of trusted manufacturing experience</span>
             </div>
         </div>
     </div>

@@ -205,6 +205,8 @@
       flags: 'menu_beach_flags',
       displays: 'menu_popup_displays',
       lightbox: 'category_lightbox',
+      furniture: 'category_furniture',
+      custom: 'category_custom',
       accessories: 'menu_accessories',
       racegate: 'home_cat_racegate_title',
       'advertising-arch': 'category_advertising_arch',
@@ -408,6 +410,71 @@
     return '';
   }
 
+  const PC_GROUPED_HUB_SUBS = new Set(['dome-3-folders', 'table-chair-stool-toilet']);
+  const PC_GROUPED_TYPE_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+
+  function normalizePcSubSlug(catLower, rawSub) {
+    const s = String(rawSub || '').trim();
+    if (!s) return '';
+    if (String(catLower).toLowerCase() === 'displays' && s.toLowerCase() === 'tfd-straight-line') {
+      return 'tension-fabric';
+    }
+    return s;
+  }
+
+  function pickRepProductForPcSub(items, catLower, subName) {
+    const want = String(subName || '').toLowerCase();
+    const matches = [];
+    (items || []).forEach((p) => {
+      const slug = normalizePcSubSlug(catLower, getSubcategoryValue(p));
+      if (!slug) return;
+      if (String(slug).toLowerCase() === want) matches.push(p);
+    });
+    if (!matches.length) return null;
+    const scored = matches.map((p) => {
+      let has = false;
+      if (typeof window.WK_getProductCardImage === 'function' && window.WK_getProductCardImage(p)) has = true;
+      else if (p && p.image && String(p.image).trim()) has = true;
+      return { p, has };
+    });
+    scored.sort((a, b) => (b.has ? 1 : 0) - (a.has ? 1 : 0));
+    return scored[0].p;
+  }
+
+  function resolvePcSubHeroUrl(rep, catLower) {
+    if (rep && typeof window.WK_getProductCardImage === 'function') {
+      const u = window.WK_getProductCardImage(rep);
+      if (u) return u;
+    }
+    if (rep && rep.image) return wkAssetUrl(rep.image);
+    const slides = window.HERO_SLIDES || [];
+    if (catLower === 'displays' || catLower === 'lightbox') {
+      const d = slides.find((s) => s && s.id === 'displays');
+      if (d && d.image) return wkAssetUrl(String(d.image).replace(/^\//, ''));
+    }
+    const slide = slides.find((s) => s && s.id === catLower);
+    if (slide && slide.image) return wkAssetUrl(String(slide.image).replace(/^\//, ''));
+    return wkAssetUrl('images/placeholder.png');
+  }
+
+  function blurbFromRepForPc(rep, lang, escapeHtmlFn) {
+    if (!rep) return '';
+    const max = 118;
+    const pm = window.productManager;
+    let raw = '';
+    if (pm && typeof pm.getLocalizedShort === 'function') {
+      raw = pm.getLocalizedShort(rep) || '';
+    } else if (lang === 'zh') {
+      raw = rep.shortZh || rep.descriptionZh || rep.short || rep.description || '';
+    } else {
+      raw = rep.shortEn || rep.descriptionEn || rep.short || rep.description || '';
+    }
+    const t = String(raw || '').replace(/\s+/g, ' ').trim();
+    if (!t) return '';
+    if (t.length <= max) return escapeHtmlFn(t);
+    return escapeHtmlFn(t.slice(0, max - 1) + '…');
+  }
+
   function renderSubcategoryHub(cat) {
     removeRacegateHub();
     const container = ensureSubcategoryHubContainer();
@@ -417,26 +484,32 @@
     const map = new Map();
     const catLower = String(cat || '').toLowerCase();
     items.forEach((p) => {
-      let s = getSubcategoryValue(p);
+      const s = normalizePcSubSlug(catLower, getSubcategoryValue(p));
       if (!s) return;
-      s = String(s).trim();
-      // Product Center only: Straight Line (tfd-straight-line) is a TFD sub-series — one card under tension-fabric.
-      if (catLower === 'displays' && s.toLowerCase() === 'tfd-straight-line') {
-        s = 'tension-fabric';
-      }
       map.set(s, (map.get(s) || 0) + 1);
     });
 
-    const subs = Array.from(map.entries())
+    const subsAll = Array.from(map.entries())
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
 
-    const lang = getCurrentLang();
-    const title = (lang === 'zh') ? '请选择小类目' : 'Choose a Subcategory';
-    const desc = (lang === 'zh') ? '只显示该大类下的全部小类目入口。' : 'Showing subcategories under this category.';
-    const viewAllText = (lang === 'zh') ? '查看该大类全部产品' : 'View all in this category';
+    const useGroupedTypeHubCards = catLower === 'displays' || catLower === 'furniture';
+    const subs = useGroupedTypeHubCards
+      ? subsAll.filter((x) => !PC_GROUPED_HUB_SUBS.has(String(x.name).toLowerCase()))
+      : subsAll;
 
-    const viewAllHref = `all-products.html?cat=${encodeURIComponent(cat)}`;
+    const hasFurnitureSub = items.some((p) => {
+      const sl = normalizePcSubSlug(catLower, getSubcategoryValue(p));
+      return sl && sl.toLowerCase() === 'table-chair-stool-toilet';
+    });
+    const hasDomeSub = items.some((p) => {
+      const sl = normalizePcSubSlug(catLower, getSubcategoryValue(p));
+      return sl && sl.toLowerCase() === 'dome-3-folders';
+    });
+    const hasGroupedHeroCards = useGroupedTypeHubCards && (hasFurnitureSub || hasDomeSub);
+
+    const lang = getCurrentLang();
+    const viewAllText = (lang === 'zh') ? '查看该大类全部产品' : 'View all in this category';
 
     const escapeHtml = (s) => {
       return String(s == null ? '' : s)
@@ -446,6 +519,9 @@
         .replace(/"/g, '&quot;')
         .replace(/'/g, '&#39;');
     };
+
+    const viewAllPath = `/all-products.html?cat=${encodeURIComponent(cat)}`;
+    const viewAllHref = escapeHtml(localizedInternal(viewAllPath));
 
     /**
      * Subcategory slug → multilang key.
@@ -472,92 +548,144 @@
       'table-chair-stool-toilet': 'menu_table_chair_stool_toilet'
     };
 
-    const getSubLabelHtml = (subValue) => {
-      const vRaw = String(subValue || '').trim();
-      const v = vRaw.toLowerCase();
-      const key = SUBCATEGORY_LABEL_KEYS[v];
-      if (key) {
-        return `<span class="zh" data-translate="${key}"></span><span class="en" data-translate="${key}"></span>`;
-      }
-      return escapeHtml(vRaw);
+    const groupedTypeHubAria = {
+      menu_table_chair_stool_toilet: { zh: '桌 / 椅 / 凳 / 厕所', en: 'Tables / Chairs / Stools / Sanitation' },
+      menu_dome_3_folders: { zh: 'DOME 3 折叠系列', en: 'DOME 3 Folding Series' }
     };
 
-    if (!subs.length) {
+    if (!subsAll.length && !hasGroupedHeroCards) {
+      const title = (lang === 'zh') ? '请选择小类目' : 'Choose a Subcategory';
+      const desc = (lang === 'zh') ? '只显示该大类下的全部小类目入口。' : 'Showing subcategories under this category.';
       container.innerHTML = `
         <div class="tents-hub__section">
-          <h2 class="tents-hub__title">${title}</h2>
-          <p style="text-align:center;max-width:860px;margin:10px auto 0;color:rgba(31,45,61,.65);">${desc}</p>
+          <h2 class="tents-hub__title">${escapeHtml(title)}</h2>
+          <p style="text-align:center;max-width:860px;margin:10px auto 0;color:rgba(31,45,61,.65);">${escapeHtml(desc)}</p>
           <div style="text-align:center;margin:18px 0 0;">
-            <a class="btn btn-secondary" href="${viewAllHref}">${viewAllText}</a>
+            <a class="btn btn-secondary" href="${viewAllHref}">${escapeHtml(viewAllText)}</a>
           </div>
         </div>
       `;
+      if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+      }
       return;
     }
 
-    const domeDisplaysLead =
-      String(cat || '').toLowerCase() === 'displays'
-        ? `
-        <a class="wk-card" href="${escapeHtml(localizedInternal('/furniture-type.html?type=table-chair-stool-toilet'))}" style="display:block;padding:16px 16px;text-decoration:none;grid-column:1 / -1;">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <div style="font-weight:800;color:rgba(31,45,61,.92);">
-              <span class="zh" data-translate="menu_table_chair_stool_toilet"></span>
-              <span class="en" data-translate="menu_table_chair_stool_toilet"></span>
-            </div>
-            <div style="font-weight:800;color:rgba(44,90,160,.85);">→</div>
-          </div>
-        </a>
-        <a class="wk-card" href="${escapeHtml(localizedInternal('/dome-type.html'))}" style="display:block;padding:16px 16px;text-decoration:none;grid-column:1 / -1;">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <div style="font-weight:800;color:rgba(31,45,61,.92);">
-              <span class="zh" data-translate="menu_dome_3_folders"></span>
-              <span class="en" data-translate="menu_dome_3_folders"></span>
-            </div>
-            <div style="font-weight:800;color:rgba(44,90,160,.85);">→</div>
-          </div>
-        </a>
-      `
-        : '';
-
-    const cardsHtml =
-      domeDisplaysLead +
-      subs.map((s) => {
-      const href = `all-products.html?cat=${encodeURIComponent(cat)}&sub=${encodeURIComponent(s.name)}`;
+    const subCardsHtml = subs.map((s) => {
+      const rep = pickRepProductForPcSub(items, catLower, s.name);
+      const imgUrl = escapeHtml(resolvePcSubHeroUrl(rep, catLower));
+      const listPath = `/all-products.html?cat=${encodeURIComponent(cat)}&sub=${encodeURIComponent(s.name)}`;
+      const listHref = escapeHtml(localizedInternal(listPath));
       const countText = (lang === 'zh') ? `${s.count} 个产品` : `${s.count} items`;
+      const blurb = blurbFromRepForPc(rep, lang, escapeHtml);
+      const v = String(s.name || '').trim().toLowerCase();
+      const titleKey = SUBCATEGORY_LABEL_KEYS[v];
+      let titleHtml;
+      if (titleKey) {
+        titleHtml = `<div class="tent-type-card__title"><span class="zh" data-translate="${titleKey}"></span><span class="en" data-translate="${titleKey}"></span></div>`;
+      } else {
+        const fb = rep
+          ? (lang === 'zh' ? (rep.nameZh || rep.name || rep.nameEn || s.name) : (rep.nameEn || rep.name || rep.nameZh || s.name))
+          : s.name;
+        titleHtml = `<div class="tent-type-card__title">${escapeHtml(fb)}</div>`;
+      }
+      const descBlock = blurb
+        ? `<div class="tent-type-card__desc">${blurb}</div><div class="pc-subhub-count" style="font-size:12px;color:rgba(31,45,61,.5);margin-top:6px;">${escapeHtml(countText)}</div>`
+        : `<div class="tent-type-card__desc" style="opacity:.85;">${escapeHtml(countText)}</div>`;
       return `
-        <a class="wk-card" href="${href}" style="display:block;padding:16px 16px;text-decoration:none;">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-            <div>
-              <div style="font-weight:800;color:rgba(31,45,61,.92);margin-bottom:6px;">${getSubLabelHtml(s.name)}</div>
-              <div style="font-size:12px;color:rgba(31,45,61,.55);">${countText}</div>
+        <div class="tent-type-card tent-type-card--pc-subhub">
+          <a class="tent-type-card__link" href="${listHref}">
+            <div class="tent-type-card__imgWrap">
+              <img class="tent-type-card__img" src="${imgUrl}" alt="" loading="lazy" onerror="this.style.display='none'" />
             </div>
-            <div style="font-weight:800;color:rgba(44,90,160,.85);">→</div>
+          </a>
+          <div class="tent-type-card__body">
+            <a class="tent-type-card__link" href="${listHref}" style="text-decoration:none;color:inherit;">
+              ${titleHtml}
+              ${descBlock}
+            </a>
+            <div class="tent-type-card__cta">
+              <a class="btn btn-secondary" href="${listHref}" data-translate="pc_context_browse_skus">Browse SKUs</a>
+            </div>
           </div>
-        </a>
-      `;
+        </div>`;
     }).join('');
+
+    const groupedHeroSrc = escapeHtml(wkAssetUrl(PC_GROUPED_TYPE_HERO_REL));
+    let groupedHtml = '';
+    if (hasFurnitureSub) {
+      const href = escapeHtml(localizedInternal('/furniture-type.html?type=table-chair-stool-toilet'));
+      const aria = escapeHtml(groupedTypeHubAria.menu_table_chair_stool_toilet[lang === 'zh' ? 'zh' : 'en']);
+      groupedHtml += `
+        <div class="tent-type-card tent-type-card--pc-grouped">
+          <a class="tent-type-card__link" href="${href}" aria-label="${aria}">
+            <div class="tent-type-card__imgWrap">
+              <img class="tent-type-card__img" src="${groupedHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </a>
+          <div class="tent-type-card__body">
+            <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+              <div class="tent-type-card__title">
+                <span class="zh" data-translate="menu_table_chair_stool_toilet"></span>
+                <span class="en" data-translate="menu_table_chair_stool_toilet"></span>
+              </div>
+              <div class="tent-type-card__desc">
+                <span class="zh" data-translate="view_type_intro_furniture"></span>
+                <span class="en" data-translate="view_type_intro_furniture"></span>
+              </div>
+            </a>
+            <div class="tent-type-card__cta">
+              <a class="btn btn-secondary" href="${href}" data-translate="view_type_button">View Type</a>
+            </div>
+          </div>
+        </div>`;
+    }
+    if (hasDomeSub) {
+      const href = escapeHtml(localizedInternal('/dome-type.html'));
+      const aria = escapeHtml(groupedTypeHubAria.menu_dome_3_folders[lang === 'zh' ? 'zh' : 'en']);
+      groupedHtml += `
+        <div class="tent-type-card tent-type-card--pc-grouped">
+          <a class="tent-type-card__link" href="${href}" aria-label="${aria}">
+            <div class="tent-type-card__imgWrap">
+              <img class="tent-type-card__img" src="${groupedHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
+            </div>
+          </a>
+          <div class="tent-type-card__body">
+            <a class="tent-type-card__link" href="${href}" style="text-decoration:none;color:inherit;">
+              <div class="tent-type-card__title">
+                <span class="zh" data-translate="menu_dome_3_folders"></span>
+                <span class="en" data-translate="menu_dome_3_folders"></span>
+              </div>
+              <div class="tent-type-card__desc">
+                <span class="zh" data-translate="view_type_intro_dome"></span>
+                <span class="en" data-translate="view_type_intro_dome"></span>
+              </div>
+            </a>
+            <div class="tent-type-card__cta">
+              <a class="btn btn-secondary" href="${href}" data-translate="view_type_button">View Type</a>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    const cardsCombined = subCardsHtml + groupedHtml;
 
     container.innerHTML = `
       <div class="tents-hub__section">
-        <h2 class="tents-hub__title" style="text-align:center;">${title}</h2>
-        <p style="text-align:center;max-width:860px;margin:10px auto 0;color:rgba(31,45,61,.65);">${desc}</p>
-        <div id="wkSubcatGrid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:980px;margin:18px auto 0;">${cardsHtml}</div>
+        <h2 class="tents-hub__title" style="text-align:center;">
+          <span class="zh" data-translate="pc_subhub_visual_title"></span>
+          <span class="en" data-translate="pc_subhub_visual_title"></span>
+        </h2>
+        <p style="text-align:center;max-width:860px;margin:10px auto 0;color:rgba(31,45,61,.65);">
+          <span class="zh" data-translate="pc_context_overview_hint"></span>
+          <span class="en" data-translate="pc_context_overview_hint"></span>
+        </p>
+        <div class="tent-types__grid" style="max-width:1180px;margin:18px auto 0;">${cardsCombined}</div>
         <div style="text-align:center;margin:18px 0 0;">
-          <a class="btn btn-secondary" href="${viewAllHref}">${viewAllText}</a>
+          <a class="btn btn-secondary" href="${viewAllHref}">${escapeHtml(viewAllText)}</a>
         </div>
       </div>
     `;
-
-    const grid = container.querySelector('#wkSubcatGrid');
-    const resize = () => {
-      const w = window.innerWidth || 1200;
-      if (!grid) return;
-      if (w <= 640) grid.style.gridTemplateColumns = 'repeat(1, minmax(0, 1fr))';
-      else if (w <= 980) grid.style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
-      else grid.style.gridTemplateColumns = 'repeat(3, minmax(0, 1fr))';
-    };
-    resize();
-    window.addEventListener('resize', resize);
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();
@@ -778,7 +906,7 @@
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.storyZh) : safe(item.storyEn);
             const desc = shortText(hubDesc || (rawDesc || '').split(/\n/)[0] || '');
-            const viewTypeHref = `flag-type.html?type=${encodeURIComponent(item.type)}`;
+            const viewTypeHref = localizedInternal(`/flag-type.html?type=${encodeURIComponent(item.type)}`);
             return `
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
@@ -845,7 +973,7 @@
       return t.slice(0, max - 1) + '…';
     };
     const desc = shortText(hubDesc);
-    const viewTypeHref = 'tent-type.html?type=tent_accessories';
+    const viewTypeHref = localizedInternal('/tent-type.html?type=tent_accessories');
 
     return `
       <div class="tents-hub__section">
@@ -892,7 +1020,7 @@
             const hubDesc = lang === 'zh' ? safe(item.hubDescZh) : safe(item.hubDescEn);
             const rawDesc = lang === 'zh' ? safe(item.descriptionZh) : safe(item.descriptionEn);
             const desc = shortText(hubDesc || rawDesc.split(/\n/)[0] || '');
-            const viewTypeHref = `tent-type.html?type=${encodeURIComponent(item.type)}`;
+            const viewTypeHref = localizedInternal(`/tent-type.html?type=${encodeURIComponent(item.type)}`);
             return `
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
@@ -981,6 +1109,9 @@
       }
       if (c === 'racegate') {
         renderRacegateHub();
+      }
+      if (c && c !== 'tents' && c !== 'flags' && c !== 'accessories' && c !== 'racegate') {
+        renderSubcategoryHub(c);
       }
     });
   }

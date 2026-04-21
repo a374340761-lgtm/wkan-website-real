@@ -32,7 +32,6 @@ products-flags.html
 products-furniture.html
 products-inflatable.html
 products-lightbox.html
-products-tents.html
 racegate-type.html
 seg-light-box-manufacturer.html
 seo/advertising-flag-pole-and-base-wholesale-supplier-b2b.html

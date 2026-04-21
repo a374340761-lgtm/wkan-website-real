@@ -14,7 +14,7 @@ $RootPages = @(
     'index.html', 'product-center.html', 'all-products.html', 'product-detail.html',
     'custom-canopy-tent-manufacturer.html', 'beach-flag-supplier.html', 'portable-display-systems.html',
     'seg-light-box-manufacturer.html', 'aluminum-folding-tent.html', 'tension-fabric-backwall.html',
-    'products.html', 'products-tents.html', 'products-flags.html', 'products-displays.html', 'products-lightbox.html',
+    'products.html', 'products-flags.html', 'products-displays.html', 'products-lightbox.html',
     'products-furniture.html', 'products-inflatable.html', 'products-custom.html', 'products-accessories.html',
     'pop-up-display-stands.html', 'tent-type.html', 'flag-type.html', 'dome-type.html', 'furniture-type.html',
     'racegate-type.html', 'six-sided-booth.html',

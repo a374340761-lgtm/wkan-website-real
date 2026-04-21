@@ -3073,7 +3073,7 @@ class ProductManager {
         this.updateBreadcrumb(presetCategory);
     }
 
-    // 如果页面指定了子分类（例如 products-tents.html 可指定数据属性 data-page-subcategory="stock"）
+    // 如果页面指定了子分类（例如帐篷类目页可指定数据属性 data-page-subcategory="stock"）
     const presetSub = document.body?.dataset?.pageSubcategory;
     if (presetSub) {
         this.currentSubcategory = presetSub;
@@ -3515,7 +3515,7 @@ getProductIcon(category) {
             });
         });
 
-        // 首次同步 presetCategory（支持 products-tents.html 这种 body data-page-category）
+        // 首次同步 presetCategory（支持 body data-page-category，如 tents）
         const preset = document.body?.dataset?.pageCategory || 'all';
         const presetRadio = document.querySelector(`input[name="category"][value="${preset}"]`);
         if (presetRadio) presetRadio.checked = true;

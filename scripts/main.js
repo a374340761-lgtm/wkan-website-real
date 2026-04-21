@@ -577,6 +577,8 @@ function renderCanopyPriorityStrip() {
     if (!root) return;
 
     const links = [
+        { href: '/canopy-tents.html', key: 'home_canopy_pri_hub' },
+        { href: '/pop-up-canopy-tents.html', key: 'home_canopy_pri_pop_generic' },
         { href: '/product-center.html?cat=tents', key: 'nav_cat_tents' },
         { href: '/custom-canopy-tent-manufacturer.html', key: 'nav_sol_canopy' },
         { href: '/pop-up-canopy-tent-manufacturer.html', key: 'nav_sub_canopy_pop_mfg' },

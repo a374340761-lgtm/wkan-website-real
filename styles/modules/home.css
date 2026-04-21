@@ -175,27 +175,67 @@
     color: var(--wk-red-700);
 }
 
-/* Hero */
+/* Hero — full-viewport immersive (header fixed above; pulls up under main offset) */
 .home .wk-hero{
-    padding-top: 110px;
-    padding-bottom: 18px;
+    --wk-home-hero-pull: 112px;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    max-width: none;
+    margin-top: calc(-1 * var(--wk-home-hero-pull));
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .home .wk-hero-shell{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    max-width: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     position: relative;
+    min-height: min(100vh, 100dvh);
 }
 
 .home .wk-hero-slider{
     position: relative;
-    border-radius: var(--radius-2xl);
     overflow: hidden;
-    height: clamp(420px, 52vw, 560px);
+    width: 100%;
+    min-height: min(100vh, 100dvh);
+    height: min(100vh, 100dvh);
     background: #0b1220;
-    box-shadow: var(--shadow-card);
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+}
+
+/* Tablet: slightly shorter so the next section hints on some viewports */
+@media (max-width: 1024px) and (min-width: 769px){
+    .home .wk-hero-shell{
+        min-height: 92vh;
+    }
+    .home .wk-hero-slider{
+        min-height: 92vh;
+        height: 92vh;
+    }
+}
+
+@media (max-width: 768px){
+    .home .wk-hero{
+        --wk-home-hero-pull: 98px;
+    }
+}
+
+/* Mobile: keep hero commanding but not towering */
+@media (max-width: 640px){
+    .home .wk-hero-shell{
+        min-height: 78vh;
+    }
+    .home .wk-hero-slider{
+        min-height: 78vh;
+        height: 78vh;
+    }
 }
 
 /* Light hero variant (for white/bright background images) */
@@ -222,7 +262,19 @@
     background-image: var(--wk-hero-bg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     transform: scale(1.03);
+}
+
+/* Invitation / full-bleed graphic: no zoom crop, no dark wash */
+.home .wk-hero-slide--invite .wk-hero-bg{
+    transform: none;
+}
+
+.home .wk-hero-slide--invite .wk-hero-overlay{
+    background: transparent;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .home .wk-hero-overlay{
@@ -246,7 +298,8 @@
     display: flex;
     /* Place copy at bottom-left instead of vertically centered */
     align-items: flex-end;
-    padding-bottom: 88px;
+    padding-bottom: clamp(72px, 12vh, 110px);
+    padding-top: calc(var(--wk-home-hero-pull, 112px) + 12px);
 }
 
 .home .wk-hero-content{
@@ -338,12 +391,14 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 12px;
+    bottom: max(16px, env(safe-area-inset-bottom, 0px));
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 14px;
     pointer-events: none;
+    z-index: 2;
+    padding: 0 clamp(12px, 3vw, 24px);
 }
 
 .home .wk-hero-nav{
@@ -787,8 +842,6 @@
 }
 
 @media (max-width: 640px){
-    .home .wk-hero{ padding-top: var(--wk-mobile-header-offset, 128px); }
-    .home .wk-hero-slider{ height: 520px; }
     .home .wk-cat-grid,
     .home .wk-product-grid,
     .home .wk-resource-grid{ grid-template-columns: 1fr; }

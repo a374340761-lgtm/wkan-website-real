@@ -381,6 +381,10 @@ function getHomeHeroSlides() {
     // Use real filenames from /images/hero (verified in repo)
     return [
         {
+            image: 'images/hero/广交会宣传图hero.png',
+            inviteGraphic: true
+        },
+        {
             image: 'images/hero/Waikwantentshero.png',
             keyPrefix: 'home_hero_1',
             secondaryHref: 'product-center.html?cat=tents'
@@ -418,13 +422,20 @@ function renderHomeHeroSlider() {
         }
         slide.style.setProperty('--wk-hero-bg', `url("${bgUrl}")`);
 
-        const titleKey = `${s.keyPrefix}_title`;
-        const subtitleKey = `${s.keyPrefix}_subtitle`;
-        const kickerKey = `${s.keyPrefix}_kicker`;
-        const rawSecondary = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
-        const secondaryHref = wkLocalizedInternalLinkSafe(rawSecondary);
+        if (s.inviteGraphic) {
+            slide.classList.add('wk-hero-slide--invite');
+            slide.innerHTML = `
+            <div class="wk-hero-bg" aria-hidden="true"></div>
+            <div class="wk-hero-overlay" aria-hidden="true"></div>
+        `;
+        } else {
+            const titleKey = `${s.keyPrefix}_title`;
+            const subtitleKey = `${s.keyPrefix}_subtitle`;
+            const kickerKey = `${s.keyPrefix}_kicker`;
+            const rawSecondary = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
+            const secondaryHref = wkLocalizedInternalLinkSafe(rawSecondary);
 
-        slide.innerHTML = `
+            slide.innerHTML = `
             <div class="wk-hero-bg" aria-hidden="true"></div>
             <div class="wk-hero-overlay" aria-hidden="true"></div>
             <div class="wk-hero-inner container">
@@ -439,6 +450,7 @@ function renderHomeHeroSlider() {
                 </div>
             </div>
         `;
+        }
 
         // Also set the bg inline for maximum compatibility (avoids CSS var parsing issues).
         const bgEl = slide.querySelector('.wk-hero-bg');

@@ -200,18 +200,17 @@ function writeProductOutputs(pm) {
     return a.localeCompare(b);
   });
 
-  const urlBlocks = skus.map(
-    (sku) => `  <url>
-    <loc>${ORIGIN}/product-detail.html?sku=${encodeURIComponent(sku)}</loc>
+  // Single static PDP URL: per-SKU ?sku= pages set canonical/SEO via JS; non-executing
+  // crawlers would otherwise see a mismatch (base HTML vs sitemap). Discovery remains
+  // via page-sitemap, product-center, and internal links to product-detail.html?sku=…
+  const productXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${ORIGIN}/product-detail.html</loc>
     <lastmod>${LASTMOD}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
-  </url>`
-  );
-
-  const productXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urlBlocks.join('\n')}
+  </url>
 </urlset>
 `;
   fs.writeFileSync(path.join(ROOT, 'product-sitemap.xml'), productXml, 'utf8');
@@ -221,7 +220,7 @@ ${urlBlocks.join('\n')}
     `window.WK_PRODUCT_SEO_MAP = ${JSON.stringify(map, null, 0)};\n`;
   fs.writeFileSync(path.join(ROOT, 'scripts', 'product-seo-map.js'), js, 'utf8');
 
-  console.log(`Wrote ${skus.length} product URLs → product-sitemap.xml`);
+  console.log(`Wrote 1 static PDP URL (canonical without JS) + ${skus.length} SKUs in product-seo-map.js`);
   console.log(`Wrote scripts/product-seo-map.js (${Object.keys(map).length} SKUs)`);
 }
 

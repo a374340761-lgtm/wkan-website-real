@@ -50,7 +50,7 @@ function injectLangSwitcherIfMissing() {
         wrap.className = 'nav-actions';
         wrap.innerHTML = `
                 <div class="lang-dropdown" id="langDropdown">
-                    <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="Change language" data-translate-aria-label="aria_language" id="langBtn">
                         <i class="fas fa-globe"></i>
                     </button>
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">

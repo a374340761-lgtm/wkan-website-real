@@ -6,7 +6,7 @@
     <title>Product | Wai Kwan Tent — OEM Tents, Beach Flags &amp; Display Hardware</title>
     <meta name="description" content="Product specifications for OEM/ODM custom canopy tents, beach flags, and display hardware. Request a quote from Wai Kwan Tent." />
 
-    <!-- Base URL; scripts/product-detail.js sets canonical to ...?sku= for each product -->
+    <!-- Base URL. With ?sku=, inline + product-detail.js set canonical/OG to product-detail.html?sku= (WK_PRODUCT_SEO_MAP). -->
     <link rel="canonical" href="https://www.waikwantent.com/product-detail.html" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="manifest" href="site.webmanifest" />
@@ -127,9 +127,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                <a href="index.html" class="nav-logo-home" style="display:flex;align-items:center;gap:10px;text-decoration:none;" aria-label="Wai Kwan Tent — home">
                     <div class="nav-brand">
-                        <img src="images/waikwancompanylogo.png" alt="" data-translate-alt="company_name" class="nav-logo-img">
+                        <img src="images/waikwancompanylogo.png" alt="Wai Kwan Tent logo" data-translate-alt="company_name" class="nav-logo-img">
                         <div class="nav-logo-text">
                             <div class="brand-text">
                                 <div class="brand-name" data-company-cn></div>
@@ -182,24 +182,24 @@
                 </li>
             </ul>
             <div class="nav-actions">
-                <button class="nav-icon-btn" id="searchBtn" aria-label="" data-translate-aria-label="aria_search">
-                    <i class="fas fa-search"></i>
+                <button class="nav-icon-btn" id="searchBtn" aria-label="Open site search" data-translate-aria-label="aria_search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
                 </button>
                 <div class="lang-dropdown" id="langDropdown">
-                    <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
-                        <i class="fas fa-globe"></i>
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="Change language" data-translate-aria-label="aria_language" id="langBtn">
+                        <i class="fas fa-globe" aria-hidden="true"></i>
                     </button>
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
                         <button type="button" class="lang-item" data-lang="en" data-lang-option="en">English</button>
                         <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
                     </div>
                 </div>
-                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
-                    <i class="fas fa-shopping-cart"></i>
+                <button class="nav-icon-btn" id="cartBtn" aria-label="Open shopping cart" data-translate-aria-label="aria_cart">
+                    <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                     <span class="cart-badge">0</span>
                 </button>
-                <button class="nav-icon-btn" id="catalogDownloadBtn" aria-label="Download catalog">
-                    <i class="fas fa-book"></i>
+                <button class="nav-icon-btn" id="catalogDownloadBtn" aria-label="Download product catalog">
+                    <i class="fas fa-book" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="hamburger"><span></span><span></span><span></span></div>
@@ -402,7 +402,7 @@
 
     </main>
 
-    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
 
     <div id="pdfModal" class="modal">
         <div class="modal-content">

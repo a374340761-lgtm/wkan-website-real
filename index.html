@@ -23,6 +23,7 @@
     <meta name="twitter:title" content="Custom Canopy Tents &amp; Display Systems Manufacturer | WaiKwan">
     <meta name="twitter:description" content="OEM &amp; ODM factory in China for canopy tents, beach flags, pop-up displays and light boxes. Factory direct, export worldwide.">
     <meta name="twitter:image" content="https://www.waikwantent.com/images/hero/Waikwantentshero.png">
+    <meta name="twitter:url" content="https://www.waikwantent.com/">
     <link rel="preload" as="image" href="images/hero/广交会宣传图hero.png" fetchpriority="high">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multilang.css">
@@ -47,16 +48,18 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <div class="nav-brand">
-                    <img src="images/waikwancompanylogo.png" alt="" data-translate-alt="company_name" class="nav-logo-img">
-                    <div class="nav-logo-text">
-                        <div class="brand-text">
-                            <div class="brand-name" data-company-cn></div>
-                            <div class="brand-name-en" data-company-en></div>
-                            <div class="brand-sub" data-translate="brand_since_2010"></div>
+                <a href="index.html" class="nav-logo-home" aria-label="Wai Kwan Tent — home" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
+                    <div class="nav-brand">
+                        <img src="images/waikwancompanylogo.png" alt="Wai Kwan Tent logo" data-translate-alt="company_name" class="nav-logo-img">
+                        <div class="nav-logo-text">
+                            <div class="brand-text">
+                                <div class="brand-name" data-company-cn></div>
+                                <div class="brand-name-en" data-company-en></div>
+                                <div class="brand-sub" data-translate="brand_since_2010"></div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             <ul class="nav-menu" id="wk-primary-nav">
                 <li class="nav-item-dropdown">
@@ -101,11 +104,11 @@
             </ul>
 
             <div class="nav-actions">
-                <button class="nav-icon-btn" id="searchBtn" aria-label="" data-translate-aria-label="aria_search">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="Open site search" data-translate-aria-label="aria_search">
                     <i class="fas fa-search"></i>
                 </button>
                 <div class="lang-dropdown" id="langDropdown">
-                    <button class="nav-icon-btn lang-btn" type="button" aria-label="" data-translate-aria-label="aria_language" id="langBtn">
+                    <button class="nav-icon-btn lang-btn" type="button" aria-label="Change language" data-translate-aria-label="aria_language" id="langBtn">
                         <i class="fas fa-globe"></i>
                     </button>
                     <div class="lang-menu" id="langMenu" role="menu" aria-label="Select language">
@@ -113,7 +116,7 @@
                         <button type="button" class="lang-item" data-lang="zh" data-lang-option="zh">中文</button>
                     </div>
                 </div>
-                <button class="nav-icon-btn" id="cartBtn" aria-label="" data-translate-aria-label="aria_cart">
+                <button class="nav-icon-btn" id="cartBtn" aria-label="Open shopping cart" data-translate-aria-label="aria_cart">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="cart-badge">0</span>
                 </button>
@@ -137,9 +140,9 @@
             <div class="wk-hero-shell">
                 <div id="heroSlider" class="wk-hero-slider"></div>
                 <div class="wk-hero-controls">
-                    <button class="wk-hero-nav" id="heroPrev" type="button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="wk-hero-nav" id="heroPrev" type="button" aria-label="Previous hero slide"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
                     <div class="wk-hero-dots" id="heroDots"></div>
-                    <button class="wk-hero-nav" id="heroNext" type="button"><i class="fas fa-chevron-right"></i></button>
+                    <button class="wk-hero-nav" id="heroNext" type="button" aria-label="Next hero slide"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
@@ -829,12 +832,12 @@
     <!-- 旧 footer 已删除：新的 contact-bottom section 已包含所有 footer 信息 -->
 
     <!-- 返回顶部按钮 -->
-    <button class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
     </button>
 
     <!-- Mobile sticky CTA -->
-    <a class="wk-sticky-quote" href="#contact" data-translate="cta_primary"></a>
+    <a class="wk-sticky-quote" href="#contact" data-translate="cta_primary" aria-label="Get a quote — scroll to contact"></a>
 
     <!-- PDF下载模态框 -->
     <div id="pdfModal" class="modal">

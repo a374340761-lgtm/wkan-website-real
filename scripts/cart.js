@@ -728,7 +728,7 @@
             try {
                 sessionStorage.setItem('wk_rfq_prefill_message', text);
             } catch { /* ignore */ }
-            window.location.href = 'index.html#contact';
+            window.location.href = 'contact-us.html#getQuoteForm';
         }
 
         applyPendingPrefillMessage() {

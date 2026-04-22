@@ -4138,11 +4138,11 @@ getProductIcon(category) {
                     }
                 }, 500);
             } else {
-                window.location.href = productParam ? `index.html?product=${productParam}#contact` : 'index.html#contact';
+                window.location.href = productParam ? `contact-us.html?product=${encodeURIComponent(productParam)}#getQuoteForm` : 'contact-us.html#getQuoteForm';
             }
         } else {
             // 其他页面直接跳转到首页联系表单
-            window.location.href = productParam ? `index.html?product=${productParam}#contact` : 'index.html#contact';
+            window.location.href = productParam ? `contact-us.html?product=${encodeURIComponent(productParam)}#getQuoteForm` : 'contact-us.html#getQuoteForm';
         }
     }
 

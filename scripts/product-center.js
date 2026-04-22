@@ -248,19 +248,6 @@
 
       renderTentsHub();
 
-      // Optional: if the entry is "Stock" card, provide a clear CTA to the stock listing.
-      if (notice === 'stock') {
-        const hub = document.getElementById('tentsHub');
-        if (hub) {
-          const bar = document.createElement('div');
-          bar.style.cssText = 'max-width:980px;margin:0 auto 16px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center;';
-          bar.innerHTML = `
-            <a class="btn btn-secondary" href="all-products.html?cat=tents&tag=stock">${getCurrentLang() === 'zh' ? '查看现货帐篷' : 'View Stock Tents'}</a>
-            <a class="btn btn-secondary" href="all-products.html?cat=tents">${getCurrentLang() === 'zh' ? '查看帐篷全部产品' : 'View All Tents'}</a>
-          `;
-          hub.prepend(bar);
-        }
-      }
       return;
     }
 

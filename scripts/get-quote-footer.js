@@ -1,8 +1,24 @@
 // Injects the shared bottom "Get a Quote" footer on pages that don't include it.
-// Also normalizes footer links so "Get a Quote" always jumps to index.html#contact.
+// Also normalizes footer links so "Get a Quote" jumps to the standalone contact page.
 
 (function () {
   'use strict';
+
+  function defaultContactPageHref() {
+    try {
+      const p = window.location.pathname || '/';
+      if (p === '/zh' || p === '/zh/' || p.indexOf('/zh/') === 0) {
+        return '/zh/contact-us.html';
+      }
+      return '/contact-us.html';
+    } catch (e) {
+      return 'contact-us.html';
+    }
+  }
+
+  function defaultContactPageHrefWithForm() {
+    return defaultContactPageHref() + '#getQuoteForm';
+  }
 
   function hasMetaRefreshRedirect() {
     const metas = Array.from(document.getElementsByTagName('meta'));
@@ -17,16 +33,15 @@
   function normalizeFooterLinks(root) {
     const container = root || document;
 
-    // If current page doesn't have a #contact section, ensure footer jumps to index.html#contact.
     const hasContactHere = !!document.getElementById('contact');
     const hasAboutHere = !!document.getElementById('about');
 
     container.querySelectorAll('a[href="#contact"]').forEach((a) => {
-      if (!hasContactHere) a.setAttribute('href', 'index.html#contact');
+      if (!hasContactHere) a.setAttribute('href', defaultContactPageHref());
     });
 
     container.querySelectorAll('a[href="#about"]').forEach((a) => {
-      if (!hasAboutHere) a.setAttribute('href', 'index.html#about');
+      if (!hasAboutHere) a.setAttribute('href', 'about-us.html');
     });
 
     // Normalize legal links (some pages still have placeholder href="#").
@@ -44,6 +59,23 @@
       const href = (a.getAttribute('href') || '').trim();
       if (!href || href === '#') a.setAttribute('href', 'site-map.html');
     });
+
+    container.querySelectorAll('a[href="contact-us.html"]').forEach((a) => {
+      a.setAttribute('href', defaultContactPageHref());
+    });
+    container.querySelectorAll('a[href="../contact-us.html"]').forEach((a) => {
+      a.setAttribute('href', defaultContactPageHref());
+    });
+
+    const onZh = /^\/zh(\/|$)/.test(window.location.pathname || '');
+    if (onZh) {
+      container.querySelectorAll('a[href="/contact-us.html"]').forEach((a) => {
+        a.setAttribute('href', '/zh/contact-us.html');
+      });
+      container.querySelectorAll('a[href="/contact-us.html#getQuoteForm"]').forEach((a) => {
+        a.setAttribute('href', '/zh/contact-us.html#getQuoteForm');
+      });
+    }
   }
 
   function buildFooterElement() {
@@ -79,10 +111,10 @@
             </div>
             <div class="contact-bottom__col">
               <div class="contact-bottom__h" data-i18n="footer_companyinfo">Company Info</div>
-              <a class="contact-bottom__link" href="index.html#about" data-i18n="footer_about">About Us</a>
+              <a class="contact-bottom__link" href="about-us.html" data-i18n="footer_about">About Us</a>
               <a class="contact-bottom__link" href="product-center.html" data-i18n="footer_products">Products</a>
               <a class="contact-bottom__link" href="news/index.html" data-i18n="footer_news">News</a>
-              <a class="contact-bottom__link" href="index.html#contact" data-i18n="footer_contactus">Contact Us</a>
+              <a class="contact-bottom__link" href="/contact-us.html" data-i18n="footer_contactus">Contact Us</a>
             </div>
           </div>
         </div>
@@ -92,7 +124,7 @@
           <div class="contact-bottom__askBox">
             <div class="contact-bottom__askText" data-i18n="footer_ask_text">Tell us your product type, size, quantity and printing needs. We will reply within 24 hours.</div>
             <div class="contact-bottom__askActions">
-              <a href="index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
+              <a href="/contact-us.html#getQuoteForm" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary">Get Quote</a>
               <a href="product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary">View Products</a>
             </div>
             <div class="contact-bottom__askSupport">

@@ -231,10 +231,7 @@ function initHomeRedesign() {
     renderHomeHeroSlider();
     initHomeHeroSlider();
 
-    renderHomeCategoryGrid();
-    renderCanopyPriorityStrip();
     renderTrustedByWall();
-    renderHomeResources();
     renderHomeBestSellers();
 
     // If multilang already exists (or appears later), ensure newly-injected nodes translate.
@@ -382,7 +379,9 @@ function getHomeHeroSlides() {
     return [
         {
             image: 'images/hero/广交会宣传图hero.png',
-            inviteGraphic: true
+            keyPrefix: 'home_hero_0',
+            /* Dark photo: keep default (white) copy; do not use wk-hero-slide--light */
+            secondaryHref: 'all-products.html'
         },
         {
             image: 'images/hero/Waikwantentshero.png',
@@ -422,31 +421,36 @@ function renderHomeHeroSlider() {
         }
         slide.style.setProperty('--wk-hero-bg', `url("${bgUrl}")`);
 
-        if (s.inviteGraphic) {
-            slide.classList.add('wk-hero-slide--invite');
-            slide.innerHTML = `
-            <div class="wk-hero-bg" aria-hidden="true"></div>
-            <div class="wk-hero-overlay" aria-hidden="true"></div>
-        `;
-        } else {
+        if (s.keyPrefix) {
             const titleKey = `${s.keyPrefix}_title`;
             const subtitleKey = `${s.keyPrefix}_subtitle`;
             const kickerKey = `${s.keyPrefix}_kicker`;
             const rawSecondary = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
             const secondaryHref = wkLocalizedInternalLinkSafe(rawSecondary);
+            const titleTag = i === 0 ? 'h1' : 'h2';
+            const trustRow =
+                i === 0
+                    ? `
+                    <div class="wk-hero-trust" role="list" data-translate-aria-label="home_hero_trust_aria">
+                        <span class="wk-hero-trust__item" data-translate="home_hero_trust_1" role="listitem"></span>
+                        <span class="wk-hero-trust__item" data-translate="home_hero_trust_2" role="listitem"></span>
+                        <span class="wk-hero-trust__item" data-translate="home_hero_trust_3" role="listitem"></span>
+                    </div>`
+                    : '';
 
             slide.innerHTML = `
             <div class="wk-hero-bg" aria-hidden="true"></div>
             <div class="wk-hero-overlay" aria-hidden="true"></div>
-            <div class="wk-hero-inner container">
+            <div class="wk-hero-inner">
                 <div class="wk-hero-content">
                     <div class="wk-hero-kicker" data-translate="${kickerKey}"></div>
-                    <h1 class="wk-hero-title" data-translate="${titleKey}"></h1>
+                    <${titleTag} class="wk-hero-title" data-translate="${titleKey}"></${titleTag}>
                     <p class="wk-hero-sub" data-translate="${subtitleKey}"></p>
                     <div class="wk-hero-actions">
-                        <a class="btn btn-primary" href="#contact" data-translate="cta_primary"></a>
+                        <a class="btn btn-primary" href="contact-us.html#getQuoteForm" data-translate="cta_primary"></a>
                         <a class="btn btn-secondary" href="${secondaryHref}" data-translate="cta_secondary"></a>
                     </div>
+                    ${trustRow}
                 </div>
             </div>
         `;
@@ -1248,7 +1252,7 @@ function initNavigation() {
 
     document.body.classList.remove('no-scroll');
     
-    // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页链接如 index.html#contact 不拦截）
+    // 平滑滚动到锚点（仅对当前页面的 #xxx 生效；跨页到 contact-us.html 等不拦截）
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href') || '';

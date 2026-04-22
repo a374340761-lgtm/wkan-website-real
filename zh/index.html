@@ -92,8 +92,8 @@
                     </a>
                     <div class="dropdown-menu">
                         <a href="/zh/faq.html"><span data-translate="nav_faq"></span></a>
-                        <a href="#about"><span data-translate="nav_about_us"></span></a>
-                        <a href="#contact"><span data-translate="nav_contact"></span></a>
+                        <a href="about-us.html"><span data-translate="nav_about_us"></span></a>
+                        <a href="contact-us.html"><span data-translate="nav_contact"></span></a>
                         <a href="/zh/news/index.html"><span data-translate="nav_news_resources"></span></a>
                         <a href="#footer-social"><span data-translate="nav_follow_us"></span></a>
                     </div>
@@ -144,100 +144,191 @@
             </div>
         </section>
 
-        <!-- Core Product Categories (conversion path: browse ranges first) -->
+        <!-- 3 core category entrances (image-led) -->
         <section class="wk-section wk-section--conversion" id="core-categories">
             <div class="container">
                 <div class="section-header">
-                    <h2 data-translate="home_popular_categories_title"></h2>
-                    <p data-translate="home_popular_categories_subtitle"></p>
-                    <p class="wk-disclaimer" style="margin-top: 10px;" data-translate="home_core_partner_intro_html"></p>
+                    <h2 data-translate="home_core_routes_title"></h2>
+                    <p data-translate="home_core_routes_subtitle"></p>
                 </div>
-                <div class="wk-discover-bar" role="navigation" aria-label="Product browsing">
-                    <a class="wk-discover-bar__tile" href="/zh/product-center.html">
-                        <span class="wk-discover-bar__icon" aria-hidden="true"><i class="fas fa-layer-group"></i></span>
-                        <span class="wk-discover-bar__text">
-                            <span class="wk-discover-bar__title" data-translate="discover_hub_title"></span>
-                            <span class="wk-discover-bar__desc" data-translate="discover_hub_desc"></span>
-                        </span>
-                    </a>
-                    <a class="wk-discover-bar__tile" href="/zh/all-products.html">
-                        <span class="wk-discover-bar__icon" aria-hidden="true"><i class="fas fa-list-ul"></i></span>
-                        <span class="wk-discover-bar__text">
-                            <span class="wk-discover-bar__title" data-translate="discover_catalog_title"></span>
-                            <span class="wk-discover-bar__desc" data-translate="discover_catalog_desc"></span>
-                        </span>
-                    </a>
+                <p class="wk-core-lede wk-disclaimer" data-translate="home_core_partner_intro_html"></p>
+                <div class="wk-core-routes" role="list">
+                    <article class="wk-core-route" role="listitem">
+                        <div class="wk-core-route__media" aria-hidden="true">
+                            <img src="/images/products/tents/folding40/40铝架3x6实景图2.jpg" alt="" class="wk-core-route__img" width="800" height="480" loading="lazy" />
+                        </div>
+                        <div class="wk-core-route__body">
+                            <h3 class="wk-core-route__title" data-translate="home_core_entrance_tent_title"></h3>
+                            <p class="wk-core-route__desc" data-translate="home_core_entrance_tent_desc"></p>
+                            <div class="wk-core-route__actions">
+                                <a class="btn btn-primary" href="product-center.html?cat=tents" data-translate="home_view_range"></a>
+                                <a class="btn btn-secondary" href="contact-us.html" data-translate="home_get_quote_short"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="wk-core-route" role="listitem">
+                        <div class="wk-core-route__media" aria-hidden="true">
+                            <img src="/images/products/flags/hero/featherhero.png" alt="" class="wk-core-route__img" width="800" height="480" loading="lazy" />
+                        </div>
+                        <div class="wk-core-route__body">
+                            <h3 class="wk-core-route__title" data-translate="home_core_entrance_flags_title"></h3>
+                            <p class="wk-core-route__desc" data-translate="home_core_entrance_flags_desc"></p>
+                            <div class="wk-core-route__actions">
+                                <a class="btn btn-primary" href="product-center.html?cat=flags" data-translate="home_view_range"></a>
+                                <a class="btn btn-secondary" href="contact-us.html" data-translate="home_get_quote_short"></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="wk-core-route" role="listitem">
+                        <div class="wk-core-route__media" aria-hidden="true">
+                            <img src="/images/products/displays/tension-fabric-displays/wk-is003hero.jpg" alt="" class="wk-core-route__img" width="800" height="480" loading="lazy" />
+                        </div>
+                        <div class="wk-core-route__body">
+                            <h3 class="wk-core-route__title" data-translate="home_core_entrance_combined_title"></h3>
+                            <p class="wk-core-route__desc" data-translate="home_core_entrance_combined_desc"></p>
+                            <div class="wk-core-route__actions">
+                                <a class="btn btn-primary" href="product-center.html?cat=displays" data-translate="home_view_range"></a>
+                                <a class="btn btn-secondary" href="contact-us.html" data-translate="home_get_quote_short"></a>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div id="wkCanopyPriority" class="wk-canopy-priority" aria-label="广告帐篷快速入口"></div>
-                <div id="homeCategoryGrid" class="wk-grid wk-cat-grid"></div>
             </div>
         </section>
 
-        <!-- Factory Strength -->
-        <section class="wk-section wk-section--soft wk-section--conversion" id="factory-strength">
+        <!-- Featured product solutions (6) -->
+        <section class="wk-section wk-section--soft wk-section--conversion" id="featured-solutions" aria-labelledby="wk-featured-solutions-h">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="wk-featured-solutions-h" data-translate="home_featured_solutions_title"></h2>
+                    <p data-translate="home_featured_solutions_subtitle"></p>
+                </div>
+                <div class="wk-solution-grid" role="list">
+                    <a class="wk-solution-card" href="10x10-pop-up-canopy-tent.html" role="listitem">
+                        <div class="wk-solution-card__media" aria-hidden="true">
+                            <img src="/images/products/tents/folding40/40铝架3x6实景图2.jpg" alt="" class="wk-solution-card__img" width="600" height="360" loading="lazy" />
+                        </div>
+                        <h3 class="wk-solution-card__title" data-translate="home_solution_1010_title"></h3>
+                        <p class="wk-solution-card__desc" data-translate="home_solution_1010_desc"></p>
+                        <span class="wk-solution-card__cta" data-translate="view_details"></span>
+                    </a>
+                    <a class="wk-solution-card" href="custom-printed-canopy-tents.html" role="listitem">
+                        <div class="wk-solution-card__media" aria-hidden="true">
+                            <img src="/images/products/tents/folding40/40铝架3x6实景图.jpg" alt="" class="wk-solution-card__img" width="600" height="360" loading="lazy" />
+                        </div>
+                        <h3 class="wk-solution-card__title" data-translate="home_solution_print_title"></h3>
+                        <p class="wk-solution-card__desc" data-translate="home_solution_print_desc"></p>
+                        <span class="wk-solution-card__cta" data-translate="view_details"></span>
+                    </a>
+                    <a class="wk-solution-card" href="aluminum-folding-tent.html" role="listitem">
+                        <div class="wk-solution-card__media" aria-hidden="true">
+                            <img src="/images/products/accessories/tent-accessories1/WKT12-hero.jpg" alt="" class="wk-solution-card__img" width="600" height="360" loading="lazy" />
+                        </div>
+                        <h3 class="wk-solution-card__title" data-translate="home_solution_alu_title"></h3>
+                        <p class="wk-solution-card__desc" data-translate="home_solution_alu_desc"></p>
+                        <span class="wk-solution-card__cta" data-translate="view_details"></span>
+                    </a>
+                    <a class="wk-solution-card" href="beach-flag-supplier.html" role="listitem">
+                        <div class="wk-solution-card__media" aria-hidden="true">
+                            <img src="/images/products/flags/hero/Teardropbeachflagpoleshero.jpg" alt="" class="wk-solution-card__img" width="600" height="360" loading="lazy" />
+                        </div>
+                        <h3 class="wk-solution-card__title" data-translate="home_solution_flags_title"></h3>
+                        <p class="wk-solution-card__desc" data-translate="home_solution_flags_desc"></p>
+                        <span class="wk-solution-card__cta" data-translate="view_details"></span>
+                    </a>
+                    <a class="wk-solution-card" href="seg-light-box-manufacturer.html" role="listitem">
+                        <div class="wk-solution-card__media" aria-hidden="true">
+                            <img src="/images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg" alt="" class="wk-solution-card__img" width="600" height="360" loading="lazy" />
+                        </div>
+                        <h3 class="wk-solution-card__title" data-translate="home_solution_seg_title"></h3>
+                        <p class="wk-solution-card__desc" data-translate="home_solution_seg_desc"></p>
+                        <span class="wk-solution-card__cta" data-translate="view_details"></span>
+                    </a>
+                    <a class="wk-solution-card" href="tension-fabric-backwall.html" role="listitem">
+                        <div class="wk-solution-card__media" aria-hidden="true">
+                            <img src="/images/products/displays/tension-fabric-displays/wk-is001hero.jpg" alt="" class="wk-solution-card__img" width="600" height="360" loading="lazy" />
+                        </div>
+                        <h3 class="wk-solution-card__title" data-translate="home_solution_tension_title"></h3>
+                        <p class="wk-solution-card__desc" data-translate="home_solution_tension_desc"></p>
+                        <span class="wk-solution-card__cta" data-translate="view_details"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Factory / capabilities -->
+        <section class="wk-section wk-section--conversion" id="factory-strength">
             <div class="container">
                 <div class="section-header">
                     <h2 data-translate="home_factory_title"></h2>
                     <p data-translate="home_factory_subtitle"></p>
                 </div>
 
-                <div class="wk-grid wk-feature-grid">
+                <div class="wk-grid wk-feature-grid wk-factory-grid">
                     <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-industry"></i></div>
+                        <div class="wk-feature-icon"><i class="fas fa-industry" aria-hidden="true"></i></div>
                         <h3 data-translate="home_factory_f1_title"></h3>
                         <p data-translate="home_factory_f1_desc"></p>
                     </div>
                     <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-print"></i></div>
+                        <div class="wk-feature-icon"><i class="fas fa-print" aria-hidden="true"></i></div>
                         <h3 data-translate="home_factory_f2_title"></h3>
                         <p data-translate="home_factory_f2_desc"></p>
                     </div>
                     <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-truck-fast"></i></div>
+                        <div class="wk-feature-icon"><i class="fas fa-clipboard-check" aria-hidden="true"></i></div>
                         <h3 data-translate="home_factory_f3_title"></h3>
                         <p data-translate="home_factory_f3_desc"></p>
                     </div>
                     <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-shield"></i></div>
+                        <div class="wk-feature-icon"><i class="fas fa-ship" aria-hidden="true"></i></div>
                         <h3 data-translate="home_factory_f4_title"></h3>
                         <p data-translate="home_factory_f4_desc"></p>
                     </div>
                 </div>
+                <p class="wk-factory-foot wk-disclaimer" data-translate="home_fast_start_html"></p>
             </div>
         </section>
 
-        <!-- Why Choose Us -->
-        <section class="wk-section wk-section--conversion" id="why-choose-us">
+        <!-- Applications / industries -->
+        <section class="wk-section wk-section--soft wk-section--conversion" id="home-applications" aria-labelledby="wk-app-h">
             <div class="container">
                 <div class="section-header">
-                    <h2 data-translate="home_why_title"></h2>
-                    <p data-translate="home_why_subtitle"></p>
+                    <h2 id="wk-app-h" data-translate="home_applications_title"></h2>
+                    <p data-translate="home_applications_subtitle"></p>
                 </div>
-
-                <div class="wk-grid wk-feature-grid">
-                    <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-sitemap"></i></div>
-                        <h3 data-translate="home_why_f1_title"></h3>
-                        <p data-translate="home_why_f1_desc"></p>
-                    </div>
-                    <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-print"></i></div>
-                        <h3 data-translate="home_why_f2_title"></h3>
-                        <p data-translate="home_why_f2_desc"></p>
-                    </div>
-                    <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-truck-fast"></i></div>
-                        <h3 data-translate="home_why_f3_title"></h3>
-                        <p data-translate="home_why_f3_desc"></p>
-                    </div>
-                    <div class="wk-card wk-feature-card">
-                        <div class="wk-feature-icon"><i class="fas fa-globe"></i></div>
-                        <h3 data-translate="home_why_f4_title"></h3>
-                        <p data-translate="home_why_f4_desc"></p>
-                    </div>
+                <div class="wk-app-grid" role="list">
+                    <article class="wk-app-card" role="listitem">
+                        <div class="wk-app-card__media" aria-hidden="true">
+                            <img src="/images/hero/Waikwantentshero.png" alt="" class="wk-app-card__img" width="800" height="480" loading="lazy" />
+                        </div>
+                        <div class="wk-app-card__body">
+                            <h3 class="wk-app-card__title" data-translate="home_app_events_title"></h3>
+                            <p class="wk-app-card__desc" data-translate="home_app_events_desc"></p>
+                            <a class="btn btn-secondary btn--inline" href="event-canopy-tents.html" data-translate="home_app_events_cta"></a>
+                        </div>
+                    </article>
+                    <article class="wk-app-card" role="listitem">
+                        <div class="wk-app-card__media" aria-hidden="true">
+                            <img src="/images/products/display-systems/promotion-counter/hero.png" alt="" class="wk-app-card__img" width="800" height="480" loading="lazy" />
+                        </div>
+                        <div class="wk-app-card__body">
+                            <h3 class="wk-app-card__title" data-translate="home_app_retail_title"></h3>
+                            <p class="wk-app-card__desc" data-translate="home_app_retail_desc"></p>
+                            <a class="btn btn-secondary btn--inline" href="portable-display-systems.html" data-translate="home_app_retail_cta"></a>
+                        </div>
+                    </article>
+                    <article class="wk-app-card" role="listitem">
+                        <div class="wk-app-card__media" aria-hidden="true">
+                            <img src="/images/products/light-box-series/WK-LB-NET-hero.png" alt="" class="wk-app-card__img" width="800" height="480" loading="lazy" />
+                        </div>
+                        <div class="wk-app-card__body">
+                            <h3 class="wk-app-card__title" data-translate="home_app_tradeshow_title"></h3>
+                            <p class="wk-app-card__desc" data-translate="home_app_tradeshow_desc"></p>
+                            <a class="btn btn-secondary btn--inline" href="custom-canopy-tent-manufacturer.html" data-translate="home_app_tradeshow_cta"></a>
+                        </div>
+                    </article>
                 </div>
-
-                <p class="wk-disclaimer" style="margin-top: 12px;" data-translate="home_fast_start_html"></p>
             </div>
         </section>
 
@@ -278,169 +369,23 @@
             </div>
         </section>
 
-        <!-- 联系我们 -->
-        <section id="contact" class="contact contact-page">
-            <div class="contact-hero">
-                <h2 data-translate="contact_title"></h2>
-                <p data-translate="contact_subtitle"></p>
-                <p class="contact-hero__seo contact-seo-text" data-translate="contact_seo_text"></p>
-            </div>
-            <div class="contact-mobile-quick" role="navigation" aria-label="Quick contact">
-                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--wa" href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" data-translate="contact_whatsapp_title"></a>
-                <a class="contact-mobile-quick__btn contact-mobile-quick__btn--mail" href="mailto:yishu@waikwantent.com" data-translate="contact_email_label"></a>
-            </div>
-            <div class="contact-grid">
-                <!-- Left: info -->
-                <aside class="contact-card soft-panel contact-info">
-                    <h3 data-translate="contact_info_title"></h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_address_title"></div>
-                            <div class="contact-value" data-i18n="contact_address_value"></div>
-                        </div>
+        <section id="contact" class="wk-section wk-section--conversion wk-home-contact-compact" aria-labelledby="home-contact-h2">
+            <div class="container">
+                <div class="wk-home-contact-compact__inner wk-card">
+                    <h2 id="home-contact-h2" class="wk-home-contact-compact__title" data-translate="home_contact_compact_h2"></h2>
+                    <p class="wk-home-contact-compact__lead" data-translate="home_contact_compact_p"></p>
+                    <p class="wk-home-contact-compact__spec" data-translate="home_contact_compact_spec"></p>
+                    <p class="wk-disclaimer" data-translate="contact_promise_24h"></p>
+                    <div class="wk-home-contact-compact__row">
+                        <a class="btn btn-primary" href="contact-us.html#getQuoteForm" data-translate="home_inquiry_teaser_btn"></a>
+                        <a class="btn btn-secondary" href="https://wa.me/8613824540280" target="_blank" rel="noopener noreferrer" data-translate="home_inquiry_teaser_chat"></a>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_whatsapp_title"></div>
-                            <a
-                                href="https://wa.me/8613824540280"
-                                target="_blank"
-                                class="contact-link"
-                            >
-                                +86 138 2454 0280
-                            </a>
-                            <div class="qr-wrapper">
-                                <img
-                                    src="/images/boss_whatsapp.jpg"
-                                    alt="WhatsApp QR Code"
-                                    class="qr-img"
-                                >
-                            </div>
-                            <div class="contact-note" data-i18n="contact_whatsapp_note"></div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <div class="label" data-translate="contact_email_label"></div>
-                            <div class="value">
-                                <a href="mailto:yishu@waikwantent.com">yishu@waikwantent.com</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-weixin"></i>
-                        <div class="contact-text">
-                            <div class="contact-title" data-i18n="contact_wechat_title"></div>
-                            <div class="contact-value">massifmyth</div>
-                            <div class="qr-wrapper">
-                                <img src="/images/boss_wechat.jpg" alt="WeChat QR Code" class="qr-img">
-                            </div>
-                            <div class="contact-note" data-i18n="contact_wechat_note"></div>
-                        </div>
-                    </div>
-                </aside>
-                <!-- Right: inquiry funnel (trust + form). Keep IDs for replaceable submit hook. -->
-                <div class="contact-right">
-                    <!-- Inquiry form (standardized fields) -->
-                    <div class="contact-card soft-panel contact-form inquiry-form">
-                        <h3 data-translate="contact_form_title"></h3>
-
-                        <p class="wk-disclaimer" data-translate="contact_promise_24h"></p>
-
-                        <ul class="contact-trust-bullets" role="list">
-                            <li data-translate="trust_factory_direct"></li>
-                            <li data-translate="trust_no_middleman"></li>
-                            <li data-translate="trust_oem_odm"></li>
-                            <li data-translate="trust_export_experience"></li>
-                        </ul>
-
-                        <div id="contactSuccess" class="contact-alert contact-alert--success" style="display:none;" data-translate="contact_reply_24h_success"></div>
-                        <div id="formMessage" class="contact-alert contact-alert--message" style="display:none;"></div>
-
-                        <form id="getQuoteForm" class="quote-form" action="javascript:void(0);" novalidate>
-                            <label>
-                                <span data-translate="inquiry_form_name"></span>
-                                <input type="text" name="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_form_email"></span>
-                                <input type="email" name="email" required data-translate-placeholder="inquiry_form_email" />
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_product_label"></span>
-                                <input id="product" type="text" name="product" required data-translate-placeholder="inquiry_field_product_placeholder" />
-                                <div class="form-helper" data-translate="inquiry_helper_size_example"></div>
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_quantity_label"></span>
-                                <input type="text" name="quantity" required inputmode="numeric" data-translate-placeholder="inquiry_field_quantity_placeholder" />
-                                <div class="form-helper" data-translate="inquiry_helper_quantity_example"></div>
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_market_label"></span>
-                                <input type="text" name="target_market" required data-translate-placeholder="inquiry_field_market_placeholder" />
-                            </label>
-
-                            <label>
-                                <span data-translate="inquiry_field_message_label"></span>
-                                <textarea name="message" rows="4" data-translate-placeholder="inquiry_field_message_placeholder"></textarea>
-                            </label>
-
-                            <!-- Honeypot 防垃圾 -->
-                            <input type="text" name="website" class="contact-honeypot" tabindex="-1" autocomplete="off" />
-
-                            <div class="contact-form__actions">
-                                <button id="contactSubmitBtn" class="btn btn-primary contact-form__submit" type="submit" data-translate="inquiry_form_submit"></button>
-                                <button type="reset" class="btn btn-secondary contact-form__reset" data-translate="inquiry_form_reset"></button>
-                            </div>
-                        </form>
-                    </div>
+                    <a class="wk-home-contact-compact__email" href="mailto:yishu@waikwantent.com">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span class="label" data-translate="contact_email_label"></span>
+                        <span class="val">yishu@waikwantent.com</span>
+                    </a>
                 </div>
-            </div>
-            <div class="contact-location contact-card soft-panel" aria-labelledby="contact-location-heading">
-                <h3 id="contact-location-heading" class="contact-location__title" data-translate="contact_location_title"></h3>
-                <div class="contact-location__intro">
-                    <p class="contact-location__address" data-translate="contact_address_en"></p>
-                    <div class="contact-location__hours">
-                        <div class="contact-location__hours-title" data-translate="contact_opening_hours_title"></div>
-                        <p class="contact-location__hours-line" data-translate="contact_opening_hours_line1"></p>
-                        <p class="contact-location__hours-line" data-translate="contact_opening_hours_line2"></p>
-                    </div>
-                    <div class="contact-location__actions">
-                        <a
-                            class="btn btn-secondary contact-location__maps-link"
-                            href="https://www.google.com/maps/search/?api=1&amp;query=21.953486%2C110.186694"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-translate="contact_open_in_maps"
-                        ></a>
-                    </div>
-                </div>
-                <div class="contact-location__map">
-                    <iframe
-                        class="contact-map-embed"
-                        width="100%"
-                        height="450"
-                        style="border:0;"
-                        loading="lazy"
-                        allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        aria-labelledby="contact-location-heading"
-                        title="Google Map — company location"
-                        src="https://www.google.com/maps?q=21.953486%2C110.186694&amp;z=17&amp;hl=zh-CN&amp;output=embed"
-                    ></iframe>
-                </div>
-            </div>
-            <!-- SEO + 转化文案（桌面端为主；移动端隐藏以减少滚动） -->
-            <div class="contact-seo-footer">
-                <p data-translate="contact_seo_footer"></p>
             </div>
         </section>
 
@@ -453,7 +398,7 @@
                     <p data-translate="home_guides_subtitle"></p>
                 </div>
 
-                <div class="wk-grid wk-feature-grid wk-resource-grid home-guides-grid">
+                <div class="wk-grid wk-feature-grid wk-resource-grid home-guides-grid home-guides-grid--compact">
                     <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="/zh/seo/seg-fabric-light-box-manufacturer-b2b-custom-sizes.html">
                         <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
                         <h3 data-translate="home_guide_1_title"></h3>
@@ -472,36 +417,6 @@
                         <p data-translate="home_guide_3_desc"></p>
                         <span class="wk-guide-cta" data-translate="home_guide_read_cta"></span>
                     </a>
-                    <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="/zh/seo/aluminum-frame-pop-up-tent-factory-direct-export.html">
-                        <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-campground"></i></div>
-                        <h3 data-translate="home_guide_4_title"></h3>
-                        <p data-translate="home_guide_4_desc"></p>
-                        <span class="wk-guide-cta" data-translate="home_guide_read_cta"></span>
-                    </a>
-                    <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="/zh/seo/event-feather-flag-printing-manufacturer-factory-direct.html">
-                        <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-flag"></i></div>
-                        <h3 data-translate="home_guide_5_title"></h3>
-                        <p data-translate="home_guide_5_desc"></p>
-                        <span class="wk-guide-cta" data-translate="home_guide_read_cta"></span>
-                    </a>
-                    <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="/zh/seo/heavy-duty-gazebo-tent-wholesale-manufacturer-europe-shipping.html">
-                        <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-truck-fast"></i></div>
-                        <h3 data-translate="home_guide_6_title"></h3>
-                        <p data-translate="home_guide_6_desc"></p>
-                        <span class="wk-guide-cta" data-translate="home_guide_read_cta"></span>
-                    </a>
-                    <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="/zh/seo/modular-exhibition-display-hardware-manufacturer-odm.html">
-                        <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-cubes"></i></div>
-                        <h3 data-translate="home_guide_7_title"></h3>
-                        <p data-translate="home_guide_7_desc"></p>
-                        <span class="wk-guide-cta" data-translate="home_guide_read_cta"></span>
-                    </a>
-                    <a class="wk-card wk-feature-card wk-resource-card wk-guide-card" href="/zh/seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html">
-                        <div class="wk-feature-icon" aria-hidden="true"><i class="fas fa-expand"></i></div>
-                        <h3 data-translate="home_guide_8_title"></h3>
-                        <p data-translate="home_guide_8_desc"></p>
-                        <span class="wk-guide-cta" data-translate="home_guide_read_cta"></span>
-                    </a>
                 </div>
 
                 <div class="wk-section-actions">
@@ -518,53 +433,13 @@
                     <p data-translate="home_buyer_subtitle"></p>
                 </div>
 
-                <div class="wk-grid wk-feature-grid home-buyer-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
-                    <a class="wk-card wk-feature-card" href="/zh/seg-light-box-manufacturer.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-lightbulb"></i></div>
-                        <h3 data-translate="home_br_1_title"></h3>
-                        <p data-translate="home_br_1_desc"></p>
-                    </a>
-                    <a class="wk-card wk-feature-card" href="/zh/tension-fabric-backwall.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-border-all"></i></div>
-                        <h3 data-translate="home_br_2_title"></h3>
-                        <p data-translate="home_br_2_desc"></p>
-                    </a>
-                    <a class="wk-card wk-feature-card" href="/zh/aluminum-folding-tent.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-campground"></i></div>
-                        <h3 data-translate="home_br_3_title"></h3>
-                        <p data-translate="home_br_3_desc"></p>
-                    </a>
-                    <a class="wk-card wk-feature-card" href="/zh/custom-canopy-tent-manufacturer.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-umbrella"></i></div>
-                        <h3 data-translate="home_br_4_title"></h3>
-                        <p data-translate="home_br_4_desc"></p>
-                    </a>
-                    <a class="wk-card wk-feature-card" href="/zh/beach-flag-supplier.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-flag"></i></div>
-                        <h3 data-translate="home_br_5_title"></h3>
-                        <p data-translate="home_br_5_desc"></p>
-                    </a>
-                    <a class="wk-card wk-feature-card" href="/zh/portable-display-systems.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-cubes"></i></div>
-                        <h3 data-translate="home_br_6_title"></h3>
-                        <p data-translate="home_br_6_desc"></p>
-                    </a>
-                    <a class="wk-card wk-feature-card" href="/zh/faq.html" style="text-decoration:none; color:inherit;">
-                        <div class="wk-feature-icon"><i class="fas fa-circle-question"></i></div>
-                        <h3 data-translate="home_br_7_title"></h3>
-                        <p data-translate="home_br_7_desc"></p>
-                    </a>
-                </div>
-
-                <div class="home-secondary__cta-row">
-                    <a class="btn btn-primary" href="/zh/index.html#contact" data-translate="cta_primary"></a>
-                    <a class="btn btn-secondary" href="/zh/product-center.html" data-translate="cta_secondary"></a>
-                    <a class="btn btn-outline btn--resource" href="/zh/faq-moq.html" data-translate="home_buyer_btn_moq"></a>
-                </div>
-
-                <div class="related-products-links home-buyer-related">
-                    <h3 class="related-products-links__title" data-translate="btn_explore"></h3>
+                <div class="home-buyer-compact wk-card">
+                    <p class="wk-disclaimer" data-translate="home_buyer_faq_links_html"></p>
                     <div class="home-buyer-seo-links" data-translate="home_buyer_seo_links_html"></div>
+                </div>
+                <div class="home-secondary__cta-row">
+                    <a class="btn btn-primary" href="/zh/contact-us.html" data-translate="cta_primary"></a>
+                    <a class="btn btn-secondary" href="/zh/product-center.html" data-translate="cta_secondary"></a>
                 </div>
             </div>
         </section>
@@ -596,78 +471,27 @@
             </div>
         </section>
 
-        <section id="about" class="about about--home-secondary">
+        <section id="about" class="wk-section wk-section--secondary wk-home-about-teaser" aria-labelledby="home-about-h2">
             <div class="container">
-                <div class="section-header home-secondary__header">
-                    <h2 data-translate="about_title"></h2>
-                    <p data-translate="about_subtitle"></p>
-                </div>
-                <div class="about-content about-grid">
-                    <div class="about-text">
-                        <p class="about-intro" data-translate="about_intro"></p>
-
-                        <h3 data-translate="about_mission"></h3>
-                        <p data-translate="about_mission_text"></p>
-
-                        <h3 data-translate="about_vision"></h3>
-                        <p data-translate="about_vision_text"></p>
-
-                        <div class="about-products">
-                            <h4 data-translate="about_products_title"></h4>
-                            <div class="about-products-content">
-                                <div class="about-products-list">
-                                    <h5 data-translate="about_products_main"></h5>
-                                    <ul>
-                                        <li data-translate="about_product_1"></li>
-                                        <li data-translate="about_product_2"></li>
-                                        <li data-translate="about_product_3"></li>
-                                        <li data-translate="about_product_4"></li>
-                                        <li data-translate="about_product_5"></li>
-                                    </ul>
-                                </div>
-                                <div class="about-printing-list">
-                                    <h5 data-translate="about_printing_title"></h5>
-                                    <ul>
-                                        <li data-translate="about_printing_1"></li>
-                                        <li data-translate="about_printing_2"></li>
-                                        <li data-translate="about_printing_3"></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="about-philosophy">
-                            <h4 data-translate="about_philosophy_title"></h4>
-                            <ul class="philosophy-list">
-                                <li><strong data-translate="about_philosophy_mission_label"></strong>：<span data-translate="about_philosophy_mission"></span></li>
-                                <li><strong data-translate="about_philosophy_values_label"></strong>：<span data-translate="about_philosophy_values"></span></li>
-                                <li><strong data-translate="about_philosophy_quality_label"></strong>：<span data-translate="about_philosophy_quality"></span></li>
-                                <li><strong data-translate="about_philosophy_commitment_label"></strong>：<span data-translate="about_philosophy_commitment"></span></li>
-                            </ul>
-                        </div>
-
-                        <div class="stats">
-                            <div class="stat-item">
-                                <h4>25+</h4>
-                                <p data-translate="stat_years"></p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>1000+</h4>
-                                <p data-translate="stat_clients"></p>
-                            </div>
-                            <div class="stat-item">
-                                <h4>50+</h4>
-                                <p data-translate="stat_products"></p>
-                            </div>
-                        </div>
+                <div class="wk-home-about-teaser__card wk-card">
+                    <div class="wk-home-about-teaser__copy">
+                        <h2 id="home-about-h2" data-translate="home_about_teaser_title"></h2>
+                        <p class="wk-home-about-teaser__text" data-translate="home_about_teaser_p"></p>
+                        <a class="btn btn-primary" href="about-us.html" data-translate="nav_about_us"></a>
                     </div>
-                    <div class="about-image about-logo">
-                        <div class="about-logo-container">
-                            <img src="/images/waikwancompanylogo.png" alt="WAI KWAN COMPANY" class="about-logo-img">
-                            <span class="logo-since" data-translate="logo_since"></span>
+                    <div class="wk-home-about-teaser__visual" aria-hidden="true">
+                        <div class="wk-home-about-teaser__logo-wrap">
+                            <img src="/images/waikwancompanylogo.png" alt="" class="wk-home-about-teaser__logo" width="180" height="180" loading="lazy" />
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="wk-section wk-section--secondary wk-seo-tertiary" aria-labelledby="wk-seo-footnav-h">
+            <div class="container">
+                <h3 id="wk-seo-footnav-h" class="wk-seo-tertiary__title" data-translate="home_seo_footnav_title"></h3>
+                <p class="wk-seo-tertiary__links" data-translate="home_seo_footnav_html"></p>
             </div>
         </section>
         </div>
@@ -701,10 +525,10 @@
                         </div>
                         <div class="contact-bottom__col">
                             <div class="contact-bottom__h" data-i18n="footer_companyinfo"></div>
-                            <a class="contact-bottom__link" href="/zh/index.html#about" data-i18n="footer_about"></a>
+                            <a class="contact-bottom__link" href="about-us.html" data-i18n="footer_about"></a>
                             <a class="contact-bottom__link" href="/zh/product-center.html" data-i18n="footer_products"></a>
                             <a class="contact-bottom__link" href="/zh/news/index.html" data-i18n="footer_news"></a>
-                            <a class="contact-bottom__link" href="/zh/index.html#contact" data-i18n="footer_contactus"></a>
+                            <a class="contact-bottom__link" href="/zh/contact-us.html" data-i18n="footer_contactus"></a>
                         </div>
                     </div>
                 </div>
@@ -714,7 +538,7 @@
                     <div class="contact-bottom__askBox">
                         <div class="contact-bottom__askText" data-i18n="footer_ask_text"></div>
                         <div class="contact-bottom__askActions">
-                            <a href="/zh/index.html#contact" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary"></a>
+                            <a href="/zh/contact-us.html#getQuoteForm" class="contact-bottom__btn contact-bottom__btn--primary" data-i18n="cta_primary"></a>
                             <a href="/zh/product-center.html" class="contact-bottom__btn contact-bottom__btn--secondary" data-i18n="cta_secondary"></a>
                         </div>
                         <div class="contact-bottom__askSupport">
@@ -785,7 +609,7 @@
     </button>
 
     <!-- Mobile sticky CTA -->
-    <a class="wk-sticky-quote" href="#contact" data-translate="cta_primary"></a>
+    <a class="wk-sticky-quote" href="contact-us.html#getQuoteForm" data-translate="cta_primary" data-translate-aria-label="home_contact_sticky_aria"></a>
 
     <!-- PDF下载模态框 -->
     <div id="pdfModal" class="modal">
@@ -802,40 +626,6 @@
     <script src="/scripts/main.js"></script>
     <script src="/scripts/multilang.js"></script>
     <script src="/scripts/cart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script src="/scripts/contact.js"></script>
-    <script src="/scripts/inquiry-hook.js"></script>
     <script src="/scripts/get-quote-footer.js"></script>
-    <script>
-        // 自动填充产品信息（从 URL 参数）
-        (function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const productParam = urlParams.get('product');
-            if (productParam && document.getElementById('product')) {
-                const productSelect = document.getElementById('product');
-                const productValue = decodeURIComponent(productParam);
-
-                // Supports both <select> (legacy) and <input> (current)
-                if (productSelect && productSelect.tagName === 'SELECT') {
-                    const options = Array.from(productSelect.options || []);
-                    const matchedOption = options.find(opt =>
-                        String(opt.value || '').toLowerCase().includes(productValue.toLowerCase()) ||
-                        String(opt.text || '').toLowerCase().includes(productValue.toLowerCase())
-                    );
-                    if (matchedOption) {
-                        productSelect.value = matchedOption.value;
-                    } else {
-                        const newOption = document.createElement('option');
-                        newOption.value = productValue;
-                        newOption.textContent = productValue;
-                        productSelect.appendChild(newOption);
-                        productSelect.value = productValue;
-                    }
-                } else if (productSelect) {
-                    productSelect.value = productValue;
-                }
-            }
-        })();
-    </script>
 </body>
 </html>

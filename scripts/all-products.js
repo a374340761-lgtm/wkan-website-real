@@ -842,7 +842,7 @@
         const introKey = isFurniture ? 'view_type_intro_furniture' : 'view_type_intro_dome';
         const dataCat = isFurniture ? 'furniture' : 'tents';
         const quoteParam = encodeURIComponent(isFurniture ? 'Tables-Chairs-Stools-Sanitation' : 'DOME-3-Folding-Series');
-        const quoteUrl = apLocalizedPageHref(`/index.html?product=${quoteParam}#contact`);
+        const quoteUrl = apLocalizedPageHref(`/contact-us.html?product=${quoteParam}`) + '#getQuoteForm';
 
         let imgSrc = AP_CATALOG_GROUP_HERO_REL;
         if (typeof window.wkRootAssetUrl === 'function') imgSrc = window.wkRootAssetUrl(imgSrc);
@@ -946,7 +946,7 @@
             const tags = p.tags || '';
             // 构建询价链接，带上产品信息参数
             const productParam = encodeURIComponent(model || name || p.id);
-            const quoteUrl = apLocalizedPageHref(`/index.html?product=${productParam}`) + '#contact';
+            const quoteUrl = apLocalizedPageHref(`/contact-us.html?product=${productParam}`) + '#getQuoteForm';
             // Primary browse: type hub (*-type.html) when available; otherwise unified PDP.
             const preferredSku = getPreferredSku(p);
             const typeUrlRaw = (typeof window.WK_getProductTypePageUrl === 'function')

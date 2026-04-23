@@ -326,8 +326,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 '@type': 'Organization',
                 name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
                 url: BASE_URL + '/'
-            },
-            offers: { '@type': 'Offer', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: canonicalProductUrl }
+            }
         };
         if (catForSchema) {
             productLd.category = catForSchema;

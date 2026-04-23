@@ -118,6 +118,12 @@
 
       const found = findByKey(pm);
       if (found) {
+        const pid = found.id;
+        if (pid === 2001 || pid === 2002 || pid === 2003) {
+          const typeById = { 2001: 'folding30', 2002: 'folding40', 2003: 'folding50' };
+          window.location.replace(localizedInternal(`/tent-type.html?type=${typeById[pid]}`));
+          return true;
+        }
         const preferredSku = (found && found.sku != null && String(found.sku).trim() !== '')
           ? String(found.sku).trim()
           : String(found.id);
@@ -186,6 +192,43 @@
     }
   }
 
+  let _pcDefaultTitle = null;
+  let _pcDefaultDesc = null;
+  function captureDefaultProductCenterHead() {
+    if (_pcDefaultTitle != null) return;
+    const titleEl = document.querySelector('title');
+    const descEl = document.querySelector('meta[name="description"]');
+    _pcDefaultTitle = titleEl ? String(titleEl.textContent || '') : '';
+    _pcDefaultDesc = descEl ? String(descEl.getAttribute('content') || '') : '';
+  }
+  function restoreDefaultProductCenterHead() {
+    captureDefaultProductCenterHead();
+    const titleEl = document.querySelector('title');
+    const descEl = document.querySelector('meta[name="description"]');
+    if (titleEl) titleEl.textContent = _pcDefaultTitle;
+    if (descEl) descEl.setAttribute('content', _pcDefaultDesc);
+    if (typeof window.wkRefreshSocialFromHead === 'function') {
+      window.wkRefreshSocialFromHead();
+    }
+  }
+  function applyTentsHubHead() {
+    captureDefaultProductCenterHead();
+    const t = (k) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(k) : k);
+    const title = String(t('pc_meta_title_tents') || '').trim();
+    const desc = String(t('pc_meta_desc_tents') || '').trim();
+    if (title) {
+      const titleEl = document.querySelector('title');
+      if (titleEl) titleEl.textContent = title;
+    }
+    if (desc) {
+      const descEl = document.querySelector('meta[name="description"]');
+      if (descEl) descEl.setAttribute('content', desc);
+    }
+    if (typeof window.wkRefreshSocialFromHead === 'function') {
+      window.wkRefreshSocialFromHead();
+    }
+  }
+
   function getNotice() {
     try {
       return new URL(window.location.href).searchParams.get('notice') || '';
@@ -231,6 +274,9 @@
 
   function applyCategoryFilter(cat) {
     try {
+    if (cat !== 'tents') {
+      restoreDefaultProductCenterHead();
+    }
     const cards = Array.from(document.querySelectorAll('.category-card'));
     const backWrap = document.getElementById('productCenterBackWrap');
     const noticeEl = document.getElementById('productCenterNotice');
@@ -1063,6 +1109,14 @@
           <a class="btn btn-secondary" href="${localizedInternal('/custom-canopy-tent-manufacturer.html')}"><span class="zh" data-translate="nav_sol_canopy"></span><span class="en" data-translate="nav_sol_canopy"></span></a>
           <a class="btn btn-tertiary" href="${localizedInternal('/all-products.html?cat=tents')}"><span class="zh" data-translate="home_canopy_pri_all_skus"></span><span class="en" data-translate="home_canopy_pri_all_skus"></span></a>
         </div>
+        <div class="pc-tent-cluster" style="margin-top:14px;padding:12px 14px;border-radius:10px;background:#f4f5f7;font-size:0.92rem;line-height:1.55;color:rgba(31,45,61,.86);">
+          <div style="font-weight:800;margin-bottom:6px;">
+            <span class="zh" data-translate="pc_tent_cluster_h2"></span>
+            <span class="en" data-translate="pc_tent_cluster_h2"></span>
+          </div>
+          <div class="zh" data-translate="pc_tent_cluster_html"></div>
+          <div class="en" data-translate="pc_tent_cluster_html"></div>
+        </div>
       </div>`,
       renderHubSection('tents_hub_folding_title', 'Folding Tents', folding),
       renderHubSection('tents_hub_event_title', 'Event Tents', event),
@@ -1073,6 +1127,7 @@
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();
     }
+    applyTentsHubHead();
   }
 
   function init() {
@@ -1087,6 +1142,8 @@
       const c = getQueryCat();
       if (c === 'tents') {
         renderTentsHub();
+      } else {
+        restoreDefaultProductCenterHead();
       }
       if (c === 'flags') {
         renderFlagsHub();

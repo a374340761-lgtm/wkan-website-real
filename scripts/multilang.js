@@ -667,6 +667,15 @@ class MultiLanguageSystem {
                     + '<a href="/zh/faq-artwork-files.html">设计稿</a> · <a href="/zh/faq-shipping.html">物流</a>。'
                     + '</p>',
 
+                landing_canopy_tent_cluster_h2: '相关帐篷与系列入口',
+                landing_canopy_tent_cluster_html:
+                    '<p style="margin:0;line-height:1.65;">'
+                    + '<a href="/zh/tent-type.html">折叠广告帐篷类型</a>（30/40/50）· '
+                    + '<a href="/zh/product-center.html?cat=tents">产品中心—帐篷</a> · '
+                    + '<a href="/zh/all-products.html?cat=tents">全部帐篷</a> · '
+                    + '<a href="/zh/10x10-pop-up-canopy-tent.html">10×10 与 3×3 m</a>。'
+                    + '</p>',
+
                 // Landing: custom-canopy-tent-manufacturer.html
                 landing_top_bar_canopy: '源头工厂 · OEM/ODM · 24 小时内回复',
                 landing_canopy_h1: '定制广告帐篷制造商',
@@ -1278,6 +1287,34 @@ class MultiLanguageSystem {
                 tent_type_link_product_center_tents: '产品中心 — 帐篷',
                 tent_type_error_not_found: '未找到该帐篷类型。',
                 tent_type_breadcrumb_not_found: '未找到',
+                tent_type_link_browse_tens: '浏览全部帐篷',
+                tent_type_hub_lead_p: '本页概述伟群折叠广告帐篷 30/40/50 系列、常见米制尺寸、热转印顶/围布，以及向工厂询价的注意点。适合进口商、经销商、活动公司与展示采购对比 OEM 与批发方案。可通过下方系列卡片或前往<a href="product-center.html?cat=tents">产品中心—帐篷</a>查看全部分类排布。',
+                tent_type_hub_h2_series: '折叠广告帐篷系列',
+                tent_type_anchor_30: '30 方管快开篷',
+                tent_type_hub_30_p: '30mm 方管铁架/铝架。尺寸从 1.5×1.5m 到 3×6m 常见规格，经济型走量款。',
+                tent_type_anchor_40: '40 六角铝架',
+                tent_type_hub_40_p: '40mm 六角管（视 SKU 有铁/铝），适用于展会、路演与更频繁拆装的场景。',
+                tent_type_anchor_50: '50 六角重载铝架',
+                tent_type_hub_50_p: '50mm 六角铝架，重载大跨度，适合大场面活动与对刚性要求更高的项目。',
+                tent_type_hub_link_specs: '帐篷尺寸与参数',
+                tent_type_hub_h2_compare: '30 / 40 / 50 怎么选',
+                tent_type_hub_compare_p: '30 系列偏性价比与走量；40 系列在重量与强度之间更均衡；50 系列面向更大跨度和高承载。均可定制画面；MOQ 低、一般生产周期约 7–15 天、出口纸箱包装。<a href="custom-canopy-tent-manufacturer.html">定制广告帐篷</a>了解 OEM 流程。',
+                tent_type_hub_h2_1010: '10×10 与 3×3 m',
+                tent_type_hub_1010_p: '北美常见的 10×10 ft 可对应 3×3 m 公制展位；本系列 30/40/50 均可提供 3×3 m 类规格，但框架等级不同，请分系列比较后再定稿。可参阅 <a href="10x10-pop-up-canopy-tent.html">10×10 快开专题</a> 与 <a href="all-products.html?cat=tents">全部帐篷 SKU</a>。',
+                tent_type_hub_h2_sizes: '常用帐篷尺寸',
+                tent_type_hub_sizes_p: '按系列提供 1.5×1.5m 起至最大约 4×8m 等规格。打开 <a href="tent-type.html?type=folding30">30 系列</a>、<a href="tent-type.html?type=folding40">40 系列</a>、<a href="tent-type.html?type=folding50">50 系列</a> 看型号/重量表。',
+                tent_type_hub_h2_print: '印刷与定制',
+                tent_type_hub_print_p: '顶布、半围、全围支持热转印。篷架与布面可同一工作流排产。详见 <a href="custom-printed-canopy-tents.html">全彩广告帐篷</a> 专题页。',
+                tent_type_related_pages_h2: '相关帐篷页面',
+                tent_type_guides_h2: '相关采购与指南',
+                tent_type_cta_quote: '获取报价',
+                pc_meta_title_tents: '广告帐篷产品中心｜折叠篷系列与尺寸｜伟群',
+                pc_meta_desc_tents: '伟群广告帐篷产品中心：浏览折叠篷系列、帐篷尺寸、定制印刷与 OEM 就绪方案，服务 B2B 采购。',
+                pc_tent_cluster_h2: '相关帐篷与采购入口',
+                pc_tent_cluster_html: '系列对比见 <a href="tent-type.html">广告帐篷系列指南</a>（30/40/50）。详询 <a href="custom-canopy-tent-manufacturer.html">定制广告帐篷</a>、<a href="all-products.html?cat=tents">全部帐篷</a>，沙滩旗与旗杆 <a href="all-products.html?cat=flags&amp;tag=beach-flag-poles">沙滩旗旗杆</a>。',
+                home_core_tent_topic_html: '<a href="/zh/tent-type.html">折叠广告帐篷系列</a> · <a href="/zh/all-products.html?cat=tents">全部帐篷</a> · <a href="/zh/product-center.html?cat=tents">产品中心—帐篷</a>',
+                ap_tent_topic_h2: '帐篷主题入口',
+                ap_tent_topic_html: '工厂定制：<a href="/zh/custom-canopy-tent-manufacturer.html">定制广告帐篷</a> · 系列 <a href="/zh/tent-type.html">折叠广告帐篷类型</a> · 尺寸与 10×10 意图 <a href="/zh/10x10-pop-up-canopy-tent.html">10×10 快开</a> · <a href="/zh/product-center.html?cat=tents">产品中心—帐篷</a> · <a href="/zh/all-products.html?cat=tents">全部帐篷</a> · 沙滩旗 <a href="/zh/all-products.html?cat=flags&amp;tag=beach-flag-poles">旗杆</a>',
                 ap_open_category_hub: '打开该分类总览（产品中心）',
                 ap_open_type_hub: '打开系列专题页',
                 pdp_back_to_listing: '返回上一页列表',
@@ -2255,6 +2292,15 @@ class MultiLanguageSystem {
                     + '<a href="/faq-artwork-files.html">artwork</a> · <a href="/faq-shipping.html">shipping</a>.'
                     + '</p>',
 
+                landing_canopy_tent_cluster_h2: 'Related tent pages',
+                landing_canopy_tent_cluster_html:
+                    '<p style="margin:0;line-height:1.65;">'
+                    + '<a href="/tent-type.html">Folding Canopy Tent Types</a> (30/40/50) · '
+                    + '<a href="/product-center.html?cat=tents">Product Center – Tents</a> · '
+                    + '<a href="/all-products.html?cat=tents">Browse All Tents</a> · '
+                    + '<a href="/10x10-pop-up-canopy-tent.html">10x10 Canopy Tent Options</a>.'
+                    + '</p>',
+
                 landing_top_bar_canopy: 'Factory direct · OEM/ODM · Reply within 24 hours',
                 landing_canopy_h1: 'Custom Canopy Tents Manufacturer',
                 landing_canopy_lead: 'OEM/ODM printed pop up tents, event canopies and accessories — factory-direct from China, exporting worldwide.',
@@ -2298,7 +2344,7 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
 
-                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | Pop Up & Event Canopies | WaiKwan',
+                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | Folding Pop Up Tent Factory | WaiKwan',
                 landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer',
                 landing_canopy_b2b_lead_html:
                     'Factory-direct <strong>custom canopy tents</strong> and <strong>custom printed canopy tents</strong> for distributors, agencies, and event brands. Start with the '
@@ -2856,6 +2902,34 @@ class MultiLanguageSystem {
                 tent_type_link_product_center_tents: 'Product Center – Tents',
                 tent_type_error_not_found: 'Tent type not found.',
                 tent_type_breadcrumb_not_found: 'Not found',
+                tent_type_link_browse_tens: 'Browse All Tents',
+                tent_type_hub_lead_p: 'This hub explains WaiKwan folding canopy tent series: 30 (square-tube) and 40/50 (hexagon) frames, standard metric sizes, heat-transfer printing on tops and walls, and how to request factory-direct pricing. It is built for importers, distributors, event companies, and display buyers comparing OEM or wholesale tent programs. Use the cards below to open each series page, or jump to <a href="product-center.html?cat=tents">Product Center – Tents</a> for the full category layout.',
+                tent_type_hub_h2_series: 'Folding Canopy Tent Types',
+                tent_type_anchor_30: '30 Series Pop Up Canopy Tent',
+                tent_type_hub_30_p: '30 mm square-tube frame (iron or aluminum). Standard promotional sizes from 1.5×1.5 m to 3×6 m. Economical choice for high-volume programs.',
+                tent_type_anchor_40: '40 Series Hexagon Frame Tent',
+                tent_type_hub_40_p: '40 mm hexagon aluminum (or iron where noted). Mid-range strength for events, retail activations, and repeat setup cycles.',
+                tent_type_anchor_50: '50 Series Heavy Duty Aluminum Tent',
+                tent_type_hub_50_p: '50 mm hexagon aluminum. Heavy-duty line for larger footprints and higher load expectations.',
+                tent_type_hub_link_specs: 'Tent sizes and specifications',
+                tent_type_hub_h2_compare: 'Compare Tent Series',
+                tent_type_hub_compare_p: '<strong>30 series</strong> targets cost-sensitive, high-rotation use with smaller tube diameter. <strong>40 series</strong> balances weight and rigidity for typical trade show and roadshow use. <strong>50 series</strong> is positioned for the largest available folding footprints and the stiffest frame in this group. All three support custom graphics; MOQ from 1 unit and typical production 7–15 days (carton export packing). <a href="custom-canopy-tent-manufacturer.html">Custom Canopy Tent Manufacturer</a> explains the full OEM workflow.',
+                tent_type_hub_h2_1010: '10x10 Canopy Tent Options',
+                tent_type_hub_1010_p: 'A <strong>3×3 m</strong> canopy is the metric equivalent of a <strong>10×10 ft</strong> market reference. 10×10 / 3×3 options exist across 30, 40, and 50 series with different frame grades—compare each series page before locking specifications. For US-market wording, also see <a href="10x10-pop-up-canopy-tent.html">10x10 pop up canopy tent</a> and <a href="all-products.html?cat=tents">Browse All Tents</a> in the live catalog.',
+                tent_type_hub_h2_sizes: 'Common Tent Sizes',
+                tent_type_hub_sizes_p: 'Standard metric footprints include 1.5×1.5 m through 4×8 m depending on series. Each series page lists models, weights, and can pair with <a href="tent-type.html?type=folding30">30 Series</a>, <a href="tent-type.html?type=folding40">40 Series</a>, or <a href="tent-type.html?type=folding50">50 Series</a> detail tables.',
+                tent_type_hub_h2_print: 'Printing & Customization',
+                tent_type_hub_print_p: 'Heat transfer printing is available for canopy tops, half walls, and full walls. WaiKwan coordinates frame production and fabric finishing in one workflow for repeat B2B orders. <a href="custom-printed-canopy-tents.html">Canopy tent printing options</a> (topic) complement this technical hub.',
+                tent_type_related_pages_h2: 'Related Tent Pages',
+                tent_type_guides_h2: 'Related Buying Guides',
+                tent_type_cta_quote: 'Request a Quote',
+                pc_meta_title_tents: 'Canopy Tents Product Center | Folding Tent Series & Sizes | WaiKwan',
+                pc_meta_desc_tents: 'Browse WaiKwan canopy tent product center for folding tent series, tent sizes, custom printing options, and OEM-ready tent solutions for B2B buyers.',
+                pc_tent_cluster_h2: 'Related tent procurement',
+                pc_tent_cluster_html: 'Compare the <a href="tent-type.html">Folding Canopy Tent Types</a> hub (30/40/50), then review <a href="custom-canopy-tent-manufacturer.html">Custom Canopy Tent Manufacturer</a>, <a href="all-products.html?cat=tents">Browse All Tents</a>, and beach flag poles at <a href="all-products.html?cat=flags&amp;tag=beach-flag-poles">all-products (beach flag poles)</a>.',
+                ap_tent_topic_h2: 'Tent topic cluster',
+                ap_tent_topic_html: 'Factory path: <a href="custom-canopy-tent-manufacturer.html">Custom Canopy Tent Manufacturer</a> · <a href="tent-type.html">Folding Canopy Tent Types</a> · <a href="10x10-pop-up-canopy-tent.html">10x10 Canopy Tent Options</a> · <a href="product-center.html?cat=tents">Product Center – Tents</a> · <a href="all-products.html?cat=tents">Browse All Tents</a> · <a href="all-products.html?cat=flags&amp;tag=beach-flag-poles">Beach flag poles (catalog)</a>',
+                home_core_tent_topic_html: '<a href="tent-type.html">Folding Canopy Tent Types</a> · <a href="all-products.html?cat=tents">Browse All Tents</a> · <a href="product-center.html?cat=tents">Product Center – Tents</a>',
                 ap_open_category_hub: 'Open category overview (Product Center)',
                 ap_open_type_hub: 'Open series landing page',
                 pdp_back_to_listing: 'Back to previous list',

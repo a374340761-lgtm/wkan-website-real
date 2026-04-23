@@ -263,6 +263,14 @@
     } catch (e) {}
   }
 
+  /** Re-run OG/Twitter from current <title> and meta description (e.g. after i18n or hub-specific head). */
+  window.wkRefreshSocialFromHead = function () {
+    try {
+      var canonicalAbs = normalizeCanonical();
+      applySocialTags(canonicalAbs);
+    } catch (e) {}
+  };
+
   function isProductDetailPage() {
     try {
       return /\bproduct-detail\.html$/i.test(String(window.location.pathname || '').replace(/\\/g, '/'));

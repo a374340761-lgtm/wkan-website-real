@@ -246,6 +246,10 @@
     function buildUnifiedDetailUrlFromSku(sku) {
         const s = (sku == null ? '' : String(sku)).trim();
         if (!s) return '';
+        const FOLDING_STOCK_PDP_TO_TYPE = { '2001': 'folding30', '2002': 'folding40', '2003': 'folding50' };
+        if (FOLDING_STOCK_PDP_TO_TYPE[s]) {
+            return apLocalizedPageHref(`/tent-type.html?type=${encodeURIComponent(FOLDING_STOCK_PDP_TO_TYPE[s])}`);
+        }
         return apLocalizedPageHref(`/product-detail.html?sku=${encodeURIComponent(s)}`);
     }
 

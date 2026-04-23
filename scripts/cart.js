@@ -34,6 +34,18 @@
         }
         const sku = String(product && (product.sku != null ? product.sku : product.id) || '').trim();
         if (!sku) return '';
+        const idStr = String(product && product.id != null ? product.id : '').trim();
+        const FOLD = { '2001': 'folding30', '2002': 'folding40', '2003': 'folding50' };
+        const foldingType = FOLD[sku] || FOLD[idStr];
+        if (foldingType) {
+            try {
+                const u = new URL('tent-type.html', window.location.href);
+                u.searchParams.set('type', foldingType);
+                return u.pathname + u.search;
+            } catch {
+                return `tent-type.html?type=${encodeURIComponent(foldingType)}`;
+            }
+        }
         try {
             const u = new URL('product-detail.html', window.location.href);
             u.searchParams.set('sku', sku);

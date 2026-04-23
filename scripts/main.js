@@ -1380,20 +1380,9 @@ function enhanceTentsDropdown() {
             }));
     };
 
-    // DETAIL ROUTING (trace)
-    // Flow A described by user: Product Center hover menu (Tents -> e.g. “40 六角铝合金架”).
-    // Stock series types map to product IDs, opened via the unified PDP.
-    // For other tent types, keep the type landing page.
-    const STOCK_TENT_ID_BY_TYPE = {
-        folding30: 2001,
-        folding40: 2002,
-        folding50: 2003,
-    };
-
+    // Tent series: all go to tent-type.html?type=… (procurement hub), not product-detail PDP.
     const getTentTypeHref = (type) => {
         const key = String(type || '').trim();
-        const productId = STOCK_TENT_ID_BY_TYPE[key];
-        if (productId != null) return `product-detail.html?sku=${encodeURIComponent(productId)}`;
         return `tent-type.html?type=${encodeURIComponent(key)}`;
     };
 
@@ -1437,7 +1426,9 @@ function enhanceTentsDropdown() {
 
         // Overview link
         const overview = document.createElement('a');
-        overview.href = 'product-center.html?cat=tents';
+        overview.href = typeof wkLocalizedInternalLinkSafe === 'function'
+            ? wkLocalizedInternalLinkSafe('/tent-type.html')
+            : 'tent-type.html';
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);

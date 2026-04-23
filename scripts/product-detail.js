@@ -4,6 +4,25 @@
 const WK_PREFERRED_ORIGIN = 'https://www.waikwantent.com';
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Main folding stock lines (30/40/50): use tent-type series pages, not this PDP.
+    try {
+        const url = new URL(window.location.href);
+        const p = url.searchParams;
+        const sku = (p.get('sku') || '').trim();
+        const legacy = (p.get('id') || p.get('open') || p.get('pid') || p.get('product') || p.get('model') || '').trim();
+        const chosen = sku || legacy;
+        const FOLDING_STOCK_PDP_TO_TYPE = { '2001': 'folding30', '2002': 'folding40', '2003': 'folding50' };
+        if (chosen && FOLDING_STOCK_PDP_TO_TYPE[chosen]) {
+            const target = new URL('tent-type.html', url);
+            target.searchParams.set('type', FOLDING_STOCK_PDP_TO_TYPE[chosen]);
+            target.hash = url.hash;
+            window.location.replace(target.toString());
+            return;
+        }
+    } catch (e) {
+        // ignore
+    }
+
     // Normalize legacy parameters into the canonical URL format.
     try {
         const url = new URL(window.location.href);

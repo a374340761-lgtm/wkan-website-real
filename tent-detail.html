@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Tent details — redirect | WaiKwan</title>
-  <meta name="description" content="Redirects to product detail or tent category. Bookmark product-detail.html?sku= for products.">
+  <meta name="description" content="Legacy redirect. Use tent-type.html for series hubs or product-detail.html?sku= for other catalog items.">
   <meta name="robots" content="noindex,follow">
   <link rel="canonical" href="https://www.waikwantent.com/product-center.html">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -16,6 +16,11 @@
       try {
         var url = new URL(window.location.href);
         var id = (url.searchParams.get('sku') || url.searchParams.get('id') || '').trim();
+        var fold = { '2001': 'folding30', '2002': 'folding40', '2003': 'folding50' };
+        if (id && fold[id]) {
+          window.location.replace('tent-type.html?type=' + encodeURIComponent(fold[id]));
+          return;
+        }
         if (id) {
           window.location.replace('product-detail.html?sku=' + encodeURIComponent(id));
           return;

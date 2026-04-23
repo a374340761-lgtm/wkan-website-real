@@ -4857,6 +4857,10 @@ function mapStockTentToFoldingType(p) {
  */
 window.WK_getProductTypePageUrl = function (product) {
     const p = product || {};
+    const idNum = Number(p.id);
+    if (idNum === 2001) return 'tent-type.html?type=folding30';
+    if (idNum === 2002) return 'tent-type.html?type=folding40';
+    if (idNum === 2003) return 'tent-type.html?type=folding50';
     const cat = String(p.category || '').toLowerCase();
     const sub = String(p.subcategory || '').trim();
     const type = String(p.type || '').trim();

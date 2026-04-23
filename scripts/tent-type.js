@@ -79,6 +79,212 @@
     folding50: 2003
   };
 
+  const FOLDING_STOCK_TYPES = new Set(['folding30', 'folding40', 'folding50']);
+  const BASE_ORIGIN = 'https://www.waikwantent.com';
+
+  /** Per-series B2B copy, head meta, and image alt. EN-focused; visible page uses this when ?type=folding*. */
+  const FOLDING_SERIES_SEO = {
+    folding30: {
+      h1: '30 Series Pop Up Canopy Tent',
+      title: '30 Series Pop Up Canopy Tent | Standard Folding Tent Supplier | WaiKwan',
+      description:
+        'Explore WaiKwan 30 series pop up canopy tents in multiple sizes with custom printing, OEM support, low MOQ, and factory-direct supply for promotions and outdoor use.',
+      intro:
+        'The 30 series is our economical pop up canopy line built around 30\u202fmm square-tube frames in iron or aluminum. It is used daily by distributors and agencies that need dependable branding at outdoor promotions, market stalls, and regional trade shows. Standard footprints scale from compact 1.5\u00d71.5\u202fm up to 3\u00d76\u202fm, with heat-transfer graphics on the canopy, half walls, and full walls. Production is factory-direct—no third-party markup—with MOQ from one unit, typical lead time 7\u201315 days, and carton packing for export. A 3\u00d73\u202fm size aligns with the common 10\u00d710\u202fft buying brief across many markets; compare 40/50 series if you need a stiffer hexagon frame for heavier use.',
+      heroAlt: 'WaiKwan 30 series pop up canopy tent, square-tube frame, outdoor event display',
+      productName: 'WaiKwan 30 series pop up canopy tent (WK-T30 family)'
+    },
+    folding40: {
+      h1: '40 Series Hexagon Frame Canopy Tent',
+      title: '40 Series Hexagon Frame Canopy Tent | Custom Event Tent | WaiKwan',
+      description:
+        'Discover WaiKwan 40 series canopy tents with stronger hexagon frame options, custom printing, multiple sizes, and OEM supply for event, retail, and outdoor branding projects.',
+      intro:
+        'The 40 series uses 40\u202fmm hexagon-profile tubes in aluminum or iron depending on the SKU. It is the mid-range choice when buyers want a stronger folding frame for repeat build cycles—weekend activations, sports events, and extended outdoor retail. Sizes run from 1.5\u00d71.5\u202fm through 4\u00d78\u202fm, and each configuration supports branded tops and walls using heat transfer. WaiKwan runs printing and frame assembly under one roof for consistent colour and repeat orders, with low MOQ, 7\u201315 day production, and FOB-style export support. 10\u00d710 / 3\u00d73\u202fm is available; larger spans suit buyers stepping up from the 30 line without going full heavy-duty.',
+      heroAlt: 'WaiKwan 40 series hexagon aluminum frame canopy tent, 3x3m trade show use',
+      productName: 'WaiKwan 40 series hexagon frame folding canopy tent (WK-T40 family)'
+    },
+    folding50: {
+      h1: '50 Series Heavy Duty Aluminum Canopy Tent',
+      title: '50 Series Heavy Duty Aluminum Canopy Tent | OEM Tent Factory | WaiKwan',
+      description:
+        'Browse WaiKwan 50 series heavy duty aluminum canopy tents with larger size options, custom graphics, OEM service, and factory-direct export support.',
+      intro:
+        'The 50 series is our heavy-duty aluminum folding line using 50\u202fmm hexagon tubes, aimed at importers and rental firms that need maximum stiffness in a portable product. It covers 2\u00d72\u202fm through 4\u00d78\u202fm footprints, ideal for large festival booths, premium roadshows, and long-duration outdoor cover. Branded canopies, half walls, and full walls are produced with the same heat-transfer workflow as 30/40, coordinated with the factory for frame tolerances. MOQ from one unit, 7\u201315 day lead times, and export carton packing are standard. For 10\u00d710-style coverage, 3\u00d73\u202fm is offered alongside deeper spans for buyers comparing the stiffest option in the folding range.',
+      heroAlt: 'WaiKwan 50 series heavy duty aluminum hexagon frame canopy tent',
+      productName: 'WaiKwan 50 series heavy duty aluminum folding canopy tent (WK-T50 family)'
+    }
+  };
+
+  function getHeroAltForItem(item) {
+    if (item && FOLDING_SERIES_SEO[item.type]) {
+      return FOLDING_SERIES_SEO[item.type].heroAlt;
+    }
+    const lang = getCurrentLang();
+    if (!item) return lang === 'zh' ? '帐篷' : 'Canopy tent';
+    return lang === 'zh' ? safe(item.nameZh || '帐篷') : safe(item.nameEn || 'Canopy tent');
+  }
+
+  function upsertScriptJsonLd(id, data) {
+    let el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement('script');
+      el.id = id;
+      el.type = 'application/ld+json';
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(data);
+  }
+
+  function removeJsonLdByPrefix(prefix) {
+    document.querySelectorAll(`[id^="${prefix}"]`).forEach((n) => n.remove());
+  }
+
+  function setFoldingHeadMeta(s) {
+    if (!s) return;
+    document.title = s.title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', s.description);
+    const ogT = document.querySelector('meta[property="og:title"]');
+    if (ogT) ogT.setAttribute('content', s.title);
+    const ogD = document.querySelector('meta[property="og:description"]');
+    if (ogD) ogD.setAttribute('content', s.description);
+    const twT = document.querySelector('meta[name="twitter:title"]');
+    if (twT) twT.setAttribute('content', s.title);
+    const twD = document.querySelector('meta[name="twitter:description"]');
+    if (twD) twD.setAttribute('content', s.description);
+  }
+
+  function resetTentTypeHubHeadMeta() {
+    const title = 'Tent Types & Specifications | Folding Canopy Tent Series Guide | WaiKwan';
+    const desc =
+      'Compare WaiKwan folding canopy tent types, frame options, common sizes, and printing choices. Explore 30, 40, and 50 series tent solutions for wholesale and OEM projects.';
+    document.title = title;
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute('content', desc);
+    const ogT = document.querySelector('meta[property="og:title"]');
+    if (ogT) ogT.setAttribute('content', 'Tent Types & Specifications | Folding Canopy Series | WaiKwan');
+    const ogD = document.querySelector('meta[property="og:description"]');
+    if (ogD) ogD.setAttribute('content', 'Folding canopy tent series (30/40/50), sizes, and printing. Factory-direct B2B supply.');
+  }
+
+  function injectBreadcrumbJsonLdForTentType(item) {
+    try {
+      const u = new URL(window.location.href);
+      u.hash = '';
+      const firstA = document.querySelector('main nav.breadcrumb a[href]');
+      const homeUrl = (firstA && firstA.href) || `${u.origin}/index.html`;
+      const hubUrl = `${u.origin}${(u.pathname || '/tent-type.html').split('?')[0]}`;
+      const list = [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: homeUrl },
+        { '@type': 'ListItem', position: 2, name: 'Tent types', item: hubUrl }
+      ];
+      if (item) {
+        const t = String(item.type || '');
+        const pageUrl = u.toString();
+        let n = '';
+        if (FOLDING_SERIES_SEO[t]) n = FOLDING_SERIES_SEO[t].h1;
+        else n = getCurrentLang() === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+        if (n) list.push({ '@type': 'ListItem', position: 3, name: n, item: pageUrl });
+      }
+      upsertScriptJsonLd('wk-jsonld-breadcrumb', { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list });
+    } catch (e) { /* ignore */ }
+  }
+
+  function injectProductJsonLdForFolding(s, type) {
+    let purl = `${BASE_ORIGIN}/tent-type.html?type=${encodeURIComponent(type)}`;
+    try {
+      purl = new URL(window.location.href).toString();
+    } catch (e) { /* keep default */ }
+    const ld = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: s.productName,
+      description: s.description,
+      url: purl,
+      brand: { '@type': 'Brand', name: 'WaiKwan' },
+      category: 'Folding pop up canopy tent',
+      manufacturer: { '@type': 'Organization', name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd' }
+    };
+    upsertScriptJsonLd('wk-jsonld-product-series', ld);
+  }
+
+  function setTentTypeHubVisibilityForDetail(detailOn) {
+    const lead = document.getElementById('tentTypeStaticLead');
+    if (lead) lead.hidden = !!detailOn;
+  }
+
+  function renderFoldingSeriesTop(item) {
+    const s = FOLDING_SERIES_SEO[item.type];
+    if (!s) return '';
+    const intro = s.intro;
+    return `
+      <div class="tent-type-folding-landing" style="max-width: 52rem; margin-bottom: 1rem;">
+        <h1 class="tent-type-series-h1" style="font-size: 1.35rem; font-weight: 800; line-height: 1.3; margin: 0 0 0.6rem;">${safe(s.h1)}</h1>
+        <p class="tent-type-series-intro" style="margin: 0; line-height: 1.65; color: rgba(31,45,61,.9);">${safe(intro)}</p>
+      </div>`;
+  }
+
+  function renderFoldingProcurementBlock(item) {
+    if (!item || !FOLDING_STOCK_TYPES.has(item.type)) return '';
+    const dimRows = [
+      { size: '1.5 × 1.5M', w: '150', sw: '215', v: '35', roof: '65', top: '315' },
+      { size: '2 × 2M', w: '200', sw: '215', v: '35', roof: '65', top: '315' },
+      { size: '2.5 × 2.5M', w: '250', sw: '215', v: '35', roof: '65', top: '315' },
+      { size: '3 × 3M', w: '300', sw: '215', v: '35', roof: '90', top: '340' },
+      { size: '3 × 4.5M', w: '450', sw: '215', v: '35', roof: '90', top: '340' },
+      { size: '3 × 6M', w: '600', sw: '215', v: '35', roof: '90', top: '340' },
+      { size: '4 × 4M', w: '400', sw: '215', v: '35', roof: '135', top: '385' },
+      { size: '4 × 6M', w: '600', sw: '215', v: '35', roof: '135', top: '385' },
+      { size: '4 × 8M', w: '800', sw: '215', v: '35', roof: '135', top: '385' }
+    ];
+    const tr = dimRows
+      .map(
+        (r) =>
+          `<tr><td>${r.size}</td><td>Width ${r.w} cm</td><td>Side wall H ${r.sw} cm</td><td>Valance ${r.v} cm</td><td>Roof slope ${r.roof} cm</td><td>Top W ${r.top} cm</td></tr>`
+      )
+      .join('');
+    return `
+      <div class="tent-type-detail__block">
+        <div class="tent-type-detail__blockTitle">Tent sizes &amp; key dimensions (reference)</div>
+        <p class="tent-type-detail__text" style="margin-bottom: 10px;">Factory measurements below are a planning reference. Confirm with your project sheet before final artwork.</p>
+        <div class="tent-type-detail__tableWrap" style="overflow-x: auto;">
+          <table class="tent-type-detail__table">
+            <thead><tr><th>Footprint</th><th>Width</th><th>Side wall height</th><th>Valance</th><th>Roof slope</th><th>Top width</th></tr></thead>
+            <tbody>${tr}</tbody>
+          </table>
+        </div>
+        <h3 class="tent-type-detail__blockTitle" style="font-size: 1rem; margin-top: 12px;">MOQ, lead time &amp; export</h3>
+        <ul class="tent-type-detail__list"><li>MOQ: 1 unit for standard builds</li><li>Typical lead time: 7–15 days (production-based)</li><li>Packing: export cartons</li><li>OEM graphics coordination in-house; FOB support available</li><li>Factory-direct pricing; suitable for trial orders and volume programs</li></ul>
+        <h3 class="tent-type-detail__blockTitle" style="font-size: 1rem; margin-top: 8px;">Typical applications</h3>
+        <p class="tent-type-detail__text">Outdoor promotions, trade shows, market stalls, brand activations, sports events, retail events, and temporary outdoor shelter. ${item.type === 'folding30' ? '30 series' : item.type === 'folding40' ? '40 series' : '50 series'} covers the ${item.type === 'folding30' ? '3×3 m (10×10) entry point' : '3×3 m 10×10 class sizing'} alongside larger spans where listed.</p>
+      </div>
+      <div class="tent-type-detail__block" style="margin-top: 12px; padding: 10px 12px; background: #f4f5f7; border-radius: 8px; font-size: 0.95rem;">
+        <div style="font-weight: 800; margin-bottom: 6px;">Compare folding canopy tent types</div>
+        <p style="margin: 0; line-height: 1.55;">Jump between series: <a href="tent-type.html?type=folding30">30 Series Pop Up Canopy Tent</a> · <a href="tent-type.html?type=folding40">40 Series Hexagon Frame Tent</a> · <a href="tent-type.html?type=folding50">50 Series Heavy Duty Aluminum Tent</a> · <a href="tent-type.html">Folding Canopy Tent Types (hub)</a></p>
+      </div>
+      <div class="tent-type-detail__block" style="margin-top: 12px;">
+        <div class="tent-type-detail__blockTitle">FAQ</div>
+        <p class="tent-type-detail__text"><strong>Do you support custom printing?</strong> Yes—heat transfer on canopy, half, and full walls, coordinated with the frame build.</p>
+        <p class="tent-type-detail__text" style="margin-top:8px"><strong>Is 10×10 the same as 3×3 m?</strong> In most procurement conversations they align closely; we quote in metric; confirm the exact frame SKU you need for US retail.</p>
+        <p class="tent-type-detail__text" style="margin-top:8px"><strong>Factory vs trader?</strong> WaiKwan is the manufacturer, supporting repeat B2B orders and export packing.</p>
+      </div>`;
+  }
+
+  function renderFoldingBottomLinks() {
+    return `
+      <div class="tent-type-detail__block" style="border-top: 1px solid rgba(31,45,61,.1); margin-top: 1rem; padding-top: 1rem;">
+        <div class="tent-type-detail__blockTitle" style="font-size: 0.9rem; font-weight: 700; color: rgba(31,45,61,.65);">Related procurement links</div>
+        <p style="margin: 0.4rem 0 0; font-size: 0.95rem; line-height: 1.6;">
+          <a href="custom-canopy-tent-manufacturer.html">Custom Canopy Tent Manufacturer</a> ·
+          <a href="all-products.html?cat=tents">Browse All Tents</a> ·
+          <a href="product-center.html?cat=tents">Product Center – Tents</a> ·
+          <a href="beach-flag-supplier.html">Beach flag supplier</a> ·
+          <a href="portable-display-systems.html">Portable display systems</a>
+        </p>
+      </div>`;
+  }
+
   function normalizeAssetKey(u) {
     if (u == null || u === '') return '';
     try {
@@ -125,10 +331,11 @@
   }
 
   function renderDefaultHeroHtml(item) {
+    const alt = getHeroAltForItem(item);
     return `
       <div style="margin-bottom: var(--spacing-md);">
         <div class="tent-type-card__imgWrap" style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--wk-border-light);">
-          <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+          <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="${safe(alt)}" loading="lazy" onerror="this.style.display='none'" />
         </div>
       </div>`;
   }
@@ -138,18 +345,19 @@
     if (!imgs.length) return '';
 
     const mainSrc = wkAssetUrl(imgs[0]);
+    const alt = getHeroAltForItem(item);
     const thumbs = imgs
       .map((raw, i) => {
         const full = wkAssetUrl(raw);
         const active = i === 0 ? ' is-active' : '';
-        return `<button type="button" class="tent-type-folding-gallery__thumb${active}" data-wk-folding-gallery-thumb="1" aria-pressed="${i === 0 ? 'true' : 'false'}"><img src="${full}" alt="" loading="${i === 0 ? 'eager' : 'lazy'}" /></button>`;
+        return `<button type="button" class="tent-type-folding-gallery__thumb${active}" data-wk-folding-gallery-thumb="1" aria-pressed="${i === 0 ? 'true' : 'false'}"><img src="${full}" alt="${i === 0 ? safe(alt) : 'Gallery thumbnail'}" loading="${i === 0 ? 'eager' : 'lazy'}" /></button>`;
       })
       .join('');
 
     return `
       <div class="tent-type-folding-gallery" style="margin-bottom: var(--spacing-md);">
         <div class="tent-type-card__imgWrap tent-type-folding-gallery__heroWrap" style="border-radius: var(--radius-lg); overflow:hidden; border: 1px solid var(--wk-border-light);">
-          <img class="tent-type-card__img tent-type-folding-gallery__main" src="${mainSrc}" alt="" loading="eager" onerror="this.style.display='none'" />
+          <img class="tent-type-card__img tent-type-folding-gallery__main" src="${mainSrc}" alt="${safe(alt)}" loading="eager" onerror="this.style.display='none'" />
         </div>
         <div class="tent-type-folding-gallery__thumbs">${thumbs}</div>
       </div>`;
@@ -492,10 +700,14 @@
     }).join('');
 
     const isTentAccessoriesHub = item && item.type === 'tent_accessories';
+    const isFoldingStock = item && FOLDING_STOCK_TYPES.has(item.type);
+    const titleTag = isFoldingStock ? 'h2' : 'h1';
 
-    const headHtmlBlock = `
+    const headHtmlBlock = isFoldingStock
+      ? ''
+      : `
         <div class="tent-type-detail__head">
-          <h2 class="tent-type-detail__title">
+          <${titleTag} class="tent-type-detail__title">
             ${lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn)}
             ${item.seriesCode ? ` <span class=\"tent-type-detail__series\">(${safe(item.seriesCode)})</span>` : ''}
             ${Array.isArray(item.variants) && item.variants.length
@@ -508,7 +720,7 @@
               })()
               : ''
             }
-          </h2>
+          </${titleTag}>
         </div>`;
 
     const gripsAfterTitle = isTentAccessoriesHub ? renderTentAccessoriesGripsBlock(item) : '';
@@ -710,9 +922,15 @@
     if (bc) {
       bc.textContent = ttT('tent_types_title');
     }
+    setTentTypeHubVisibilityForDetail(false);
+    resetTentTypeHubHeadMeta();
+    removeJsonLdByPrefix('wk-jsonld-product');
+    injectBreadcrumbJsonLdForTentType();
   }
 
   function renderTentTypeInvalid() {
+    setTentTypeHubVisibilityForDetail(true);
+    removeJsonLdByPrefix('wk-jsonld-product');
     const root = document.getElementById('tentTypeRoot');
     if (!root) return;
     const hAll = ttPageHref('/all-products.html?cat=tents');
@@ -768,13 +986,31 @@
       return;
     }
 
+    setTentTypeHubVisibilityForDetail(true);
+
     const root = document.getElementById('tentTypeRoot');
     if (!root) return;
 
-    root.innerHTML = `
-      ${renderTopHero(item)}
-      ${renderTableFromSpec(item, variant)}
-    `;
+    const folding = FOLDING_STOCK_TYPES.has(item.type);
+    const s = folding ? FOLDING_SERIES_SEO[item.type] : null;
+
+    injectBreadcrumbJsonLdForTentType(item);
+    if (folding && s) {
+      setFoldingHeadMeta(s);
+      injectProductJsonLdForFolding(s, item.type);
+    } else {
+      removeJsonLdByPrefix('wk-jsonld-product');
+      const lang = getCurrentLang();
+      const name = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+      document.title = `${name} | Tent Types | WaiKwan`;
+    }
+
+    let bodyHtml = `${renderTopHero(item)}${renderTableFromSpec(item, variant)}`;
+    if (folding) {
+      bodyHtml = `${renderFoldingSeriesTop(item)}${bodyHtml}${renderFoldingProcurementBlock(item)}${renderFoldingBottomLinks()}`;
+    }
+
+    root.innerHTML = bodyHtml;
 
     bindFoldingStockGallery(root);
     bindTentTypeRfq(root);

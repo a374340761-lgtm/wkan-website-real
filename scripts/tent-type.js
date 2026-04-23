@@ -26,6 +26,26 @@
     }
   }
 
+  function ttPageHref(href) {
+    if (!href) return href;
+    if (typeof window.wkLocalizedInternalLink === 'function') {
+      const s = href.startsWith('/') ? href : '/' + String(href).replace(/^\.\//, '');
+      return window.wkLocalizedInternalLink(s);
+    }
+    if (typeof window.wkLocalizedPageHref === 'function') {
+      const s = href.startsWith('/') ? href : '/' + String(href).replace(/^\.\//, '');
+      return window.wkLocalizedPageHref(s);
+    }
+    return href;
+  }
+
+  function ttT(key) {
+    if (window.multiLang && typeof window.multiLang.t === 'function') {
+      return window.multiLang.t(key) || key;
+    }
+    return key;
+  }
+
   function getQueryVariant() {
     try {
       return new URL(window.location.href).searchParams.get('variant') || '';
@@ -683,19 +703,44 @@
     `;
   }
 
-  function renderEmpty(type) {
+  function renderTentTypeOverview() {
+    const root = document.getElementById('tentTypeRoot');
+    if (root) root.innerHTML = '';
+    const bc = document.getElementById('tentTypeBreadcrumb');
+    if (bc) {
+      bc.textContent = ttT('tent_types_title');
+    }
+  }
+
+  function renderTentTypeInvalid() {
     const root = document.getElementById('tentTypeRoot');
     if (!root) return;
+    const hAll = ttPageHref('/all-products.html?cat=tents');
+    const hPc = ttPageHref('/product-center.html?cat=tents');
+    const hMfg = ttPageHref('/custom-canopy-tent-manufacturer.html');
     root.innerHTML = `
-      <div class="ap-empty">
-        <p>${type ? 'This tent type is not available yet.' : 'Missing tent type.'}</p>
+      <div class="tent-type-error" style="text-align: left; max-width: 40rem; padding: 0.5rem 0 0;">
+        <p class="tent-type-error__msg" style="margin: 0 0 0.75rem; font-weight: 600;" data-translate="tent_type_error_not_found">Tent type not found.</p>
+        <div class="tent-type-keynav" style="display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-size: 0.95rem; font-weight: 600;" aria-label="Where to go next">
+          <a href="${safe(hAll)}" data-translate="tent_type_link_all_canopy">All Canopy Products</a>
+          <a href="${safe(hPc)}" data-translate="tent_type_link_product_center_tents">Product Center – Tents</a>
+          <a href="${safe(hMfg)}" data-translate="tent_type_link_custom_canopy">Custom Canopy Tent Manufacturer</a>
+        </div>
       </div>
     `;
   }
 
   function render() {
-    let type = getQueryType();
+    let type = String(getQueryType() || '').trim();
     let variant = getQueryVariant();
+    if (!type) {
+      renderTentTypeOverview();
+      if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+      }
+      return;
+    }
+
     let item = findTentTypeData(type);
 
     // Back-compat: older inflatable links used type=airt_9/16/25/36/64.
@@ -707,12 +752,19 @@
 
     const bc = document.getElementById('tentTypeBreadcrumb');
     if (bc) {
-      const lang = getCurrentLang();
-      bc.textContent = item ? (lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn)) : (lang === 'zh' ? '查看类型' : 'View Type');
+      if (!item) {
+        bc.textContent = ttT('tent_type_breadcrumb_not_found');
+      } else {
+        const lang = getCurrentLang();
+        bc.textContent = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
+      }
     }
 
     if (!item) {
-      renderEmpty(type);
+      renderTentTypeInvalid();
+      if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+        window.multiLang.translatePage();
+      }
       return;
     }
 

@@ -105,12 +105,12 @@
         return;
     }
 
-    const DEFAULT_PAGE_TITLE = 'All Products | Search Canopy Tents, Beach Flags & Display Hardware | Wai Kwan Tent';
-    const DEFAULT_META_DESC = 'Search and browse OEM/ODM products: custom canopy tents, beach flags, display hardware, and accessories. Factory-direct pricing — request a quote.';
-    const DEFAULT_OG_TITLE = 'All Products | Wai Kwan Tent';
-    const DEFAULT_OG_DESC = 'Search tents, beach flags, display hardware, and accessories — OEM/ODM from factory.';
-    const DEFAULT_TW_TITLE = 'All Products | Wai Kwan Tent';
-    const DEFAULT_TW_DESC = 'Search OEM/ODM canopy tents, beach flags, and display hardware.';
+    const DEFAULT_PAGE_TITLE = 'All Products | Canopy Tents, Beach Flags & Display Systems | WaiKwan';
+    const DEFAULT_META_DESC = 'Browse all WaiKwan products including canopy tents, beach flags, backdrop displays, counters, light boxes, and event accessories. OEM and wholesale solutions for global B2B buyers.';
+    const DEFAULT_OG_TITLE = 'All Products | WaiKwan';
+    const DEFAULT_OG_DESC = 'Canopy tents, beach flags, display systems, and event accessories — OEM/ODM for B2B buyers.';
+    const DEFAULT_TW_TITLE = 'All Products | WaiKwan';
+    const DEFAULT_TW_DESC = 'Browse WaiKwan catalog: canopy tents, beach flags, displays, and accessories.';
 
     // 获取 URL 参数中的分类
     function getQueryCat() {
@@ -304,8 +304,8 @@
                 if (crumbEl) crumbEl.textContent = lab;
                 return;
             }
-            if (headingEl) headingEl.textContent = t('nav_all_products');
-            if (crumbEl) crumbEl.textContent = t('nav_all_products');
+            if (headingEl) headingEl.textContent = t('ap_h1_all_products');
+            if (crumbEl) crumbEl.textContent = t('ap_h1_all_products');
             return;
         }
 
@@ -451,6 +451,21 @@
     function getQueryQ() {
         const url = new URL(window.location.href);
         return url.searchParams.get('q') || url.searchParams.get('search') || '';
+    }
+
+    /** True when the user (or URL) is actively filtering; used to show empty-state only for zero-result filters. */
+    function getActiveFilterState() {
+        const q = (searchInput && searchInput.value) ? String(searchInput.value).trim() : getQueryQ().trim();
+        const cat = catSelect ? String(catSelect.value || 'all') : getQueryCat();
+        const tag = getQueryTag();
+        const tentType = getQueryTentType();
+        const sub = getQuerySub(cat);
+        if (q) return true;
+        if (cat && cat !== 'all') return true;
+        if (tag) return true;
+        if (tentType) return true;
+        if (sub) return true;
+        return false;
     }
 
     // 获取当前语言（URL 优先：/zh/ => zh）
@@ -919,9 +934,20 @@
         embedOpts = embedOpts || {};
         const showAccEmbed = !!embedOpts.showAccessoriesEmbed;
         const hasItems = !!(list && list.length);
+        const filterActive = embedOpts.activeFilter === true;
 
         grid.style.display = hasItems ? 'grid' : 'none';
-        emptyState.style.display = (!hasItems && !showAccEmbed) ? 'block' : 'none';
+        const showEmpty = !hasItems && !showAccEmbed && filterActive;
+        if (emptyState) {
+            emptyState.classList.toggle('is-visible', showEmpty);
+            if (showEmpty) {
+                emptyState.removeAttribute('hidden');
+                emptyState.setAttribute('aria-hidden', 'false');
+            } else {
+                emptyState.setAttribute('hidden', '');
+                emptyState.setAttribute('aria-hidden', 'true');
+            }
+        }
 
         if (!hasItems) {
             grid.innerHTML = '';
@@ -1349,7 +1375,8 @@
 
         render(listForGrid, {
             showAccessoriesEmbed: spriteAcc.length > 0,
-            accessoryFilterQuery: q
+            accessoryFilterQuery: q,
+            activeFilter: getActiveFilterState()
         });
     }
 
@@ -1406,7 +1433,12 @@
         
         if (products.length === 0) {
             console.warn('All Products: No products found. Check ProductManager initialization.');
-            grid.innerHTML = '<div class="ap-empty"><p data-translate="products_no_results"></p></div>';
+            if (emptyState) {
+                emptyState.classList.remove('is-visible');
+                emptyState.setAttribute('hidden', '');
+                emptyState.setAttribute('aria-hidden', 'true');
+            }
+            grid.innerHTML = '<p class="wk-disclaimer" data-translate="ap_no_catalog_data">Product catalog is loading or temporarily unavailable. Please refresh or contact us for a list.</p>';
             return;
         }
         

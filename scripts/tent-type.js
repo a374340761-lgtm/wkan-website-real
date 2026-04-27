@@ -862,7 +862,11 @@
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
           ${imgs.map((src) => {
             const s = wkAssetUrl(safe(src));
-            const isStarAccessories = /startentaccessories\.png$/i.test(s) || s.includes('startentaccessories.png');
+            const isStarAccessories =
+              /star-shade-tent-poles-base-accessories\.png$/i.test(s) ||
+              s.includes('star-shade-tent-poles-base-accessories.png') ||
+              /startentaccessories\.png$/i.test(s) ||
+              s.includes('startentaccessories.png');
             const cls = isStarAccessories ? 'tent-type-detail__visual tent-type-detail__visual--small' : 'tent-type-detail__visual';
             return `<img class=\"${cls}\" src=\"${s}\" alt=\"\" loading=\"lazy\" />`;
           }).join('')}

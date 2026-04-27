@@ -444,7 +444,9 @@
   }
 
   const PC_GROUPED_HUB_SUBS = new Set(['dome-3-folders', 'table-chair-stool-toilet']);
-  const PC_GROUPED_TYPE_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+  const PC_GROUPED_FURNITURE_HERO_REL =
+    'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+  const PC_GROUPED_DOME_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
 
   function normalizePcSubSlug(catLower, rawSub) {
     const s = String(rawSub || '').trim();
@@ -644,7 +646,8 @@
         </div>`;
     }).join('');
 
-    const groupedHeroSrc = escapeHtml(wkAssetUrl(PC_GROUPED_TYPE_HERO_REL));
+    const groupedFurnitureHeroSrc = escapeHtml(wkAssetUrl(PC_GROUPED_FURNITURE_HERO_REL));
+    const groupedDomeHeroSrc = escapeHtml(wkAssetUrl(PC_GROUPED_DOME_HERO_REL));
     let groupedHtml = '';
     if (hasFurnitureSub) {
       const href = escapeHtml(localizedInternal('/furniture-type.html?type=table-chair-stool-toilet'));
@@ -653,7 +656,7 @@
         <div class="tent-type-card tent-type-card--pc-grouped">
           <a class="tent-type-card__link" href="${href}" aria-label="${aria}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${groupedHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${groupedFurnitureHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">
@@ -680,7 +683,7 @@
         <div class="tent-type-card tent-type-card--pc-grouped">
           <a class="tent-type-card__link" href="${href}" aria-label="${aria}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${groupedHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${groupedDomeHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">

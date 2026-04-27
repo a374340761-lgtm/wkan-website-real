@@ -4412,7 +4412,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, wrap with .en/.zh spans or convert to data-i18n key.
 - racegate-type.html:157 | `hardcoded_disallowed_en_outside_en` | <div class="contact-bottom__p">WeChat: massifmyth</div>
   - Suggestion: If user-facing, wrap with .en/.zh spans or convert to data-i18n key.
-- scripts/accessories-page.js:8 | `hardcoded_disallowed_en_in_js` | const SPRITE = './images/products/accessories/tent-accessories.png';
+- scripts/accessories-page.js:8 | `hardcoded_disallowed_en_in_js` | const SPRITE = './images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/accessories-page.js:13 | `hardcoded_disallowed_en_in_js` | const htmlLang = (document.documentElement.lang || '').toLowerCase();
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -5962,7 +5962,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:24 | `hardcoded_han_in_js` | storyZh: '第三代沙滩旗杆，多种高度可选，适配不同旗形。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:25 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
+- scripts/flag-types.js:25 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:26 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/10.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6052,7 +6052,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:69 | `hardcoded_han_in_js` | storyZh: '铝管与玻纤组合旗杆，兼顾强度与便携。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:70 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
+- scripts/flag-types.js:70 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:71 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/10.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6172,7 +6172,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:128 | `hardcoded_han_in_js` | storyZh: '全玻纤旗杆套装（水滴旗）。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:129 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('Teardropbeachflagpoleshero.jpg'),
+- scripts/flag-types.js:129 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:130 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/11.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6234,7 +6234,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:156 | `hardcoded_han_in_js` | storyZh: '全玻纤旗杆套装（刀旗）。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:157 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('featherhero.png'),
+- scripts/flag-types.js:157 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('feather-flag-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:158 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/11.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6306,7 +6306,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/flag-types.js:192 | `hardcoded_disallowed_en_in_js` | ].join('\n'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/flag-types.js:193 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('Outdoor Giant Flaghero.png'),
+- scripts/flag-types.js:193 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('outdoor-giant-flag-pole-display-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:194 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/12.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6374,7 +6374,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:227 | `hardcoded_han_in_js` | storyZh: '方型沙滩旗杆（玻纤材质）。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:228 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('SquareFlagPolehero.png'),
+- scripts/flag-types.js:228 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('square-flag-pole-fiberglass-outdoor-display-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:229 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/12.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6432,7 +6432,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:254 | `hardcoded_han_in_js` | storyZh: '半圆美式铝杆，可选不同直径/壁厚。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:255 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('semicirclehero.png'),
+- scripts/flag-types.js:255 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('semicircle-flag-shape-size-guide-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:256 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/13.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6500,7 +6500,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:289 | `hardcoded_han_in_js` | storyZh: '方型美式铝杆，可选不同直径/壁厚。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:290 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('sqaurehero.png'),
+- scripts/flag-types.js:290 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('square-flag-shape-size-guide-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:291 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/13.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6568,7 +6568,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:324 | `hardcoded_han_in_js` | storyZh: '新型刀旗铝杆，对应旗面尺寸明确。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:325 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('newfeatherhero.png'),
+- scripts/flag-types.js:325 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('newfeather-flag-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:326 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/13.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6626,7 +6626,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:351 | `hardcoded_han_in_js` | storyZh: '刀旗/水滴旗美式铝杆。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:352 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('featherhero.png'),
+- scripts/flag-types.js:352 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('feather-flag-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:353 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/13.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -6700,7 +6700,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/flag-types.js:395 | `hardcoded_disallowed_en_in_js` | ].join('\n'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/flag-types.js:396 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('Backpack Flagshero.png'),
+- scripts/flag-types.js:396 | `hardcoded_disallowed_en_in_js` | heroImage: FLAG_HERO('backpack-flags-street-display-flags-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:397 | `hardcoded_disallowed_en_in_js` | guideImage: `${PDF_BASE}/16.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -7156,13 +7156,13 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:635 | `hardcoded_han_in_js` | storyZh: '沙滩旗配套底座与配件全系列。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/flag-types.js:637 | `hardcoded_disallowed_en_in_js` | heroImage: 'images/products/accessories/flag-accessories/hero.png',
+- scripts/flag-types.js:637 | `hardcoded_disallowed_en_in_js` | heroImage: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/flag-types.js:640 | `hardcoded_disallowed_en_in_js` | FLAG_ACCESSORIES_IMG('1.png'),
+- scripts/flag-types.js:640 | `hardcoded_disallowed_en_in_js` | FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/flag-types.js:641 | `hardcoded_disallowed_en_in_js` | FLAG_ACCESSORIES_IMG('2.png'),
+- scripts/flag-types.js:641 | `hardcoded_disallowed_en_in_js` | FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/flag-types.js:642 | `hardcoded_disallowed_en_in_js` | FLAG_ACCESSORIES_IMG('flags poles.png'),
+- scripts/flag-types.js:642 | `hardcoded_disallowed_en_in_js` | FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/flag-types.js:643 | `hardcoded_disallowed_en_in_js` | `${CATALOG_ALLPAGE_BASE}/14.png`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -7702,13 +7702,13 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/main.js:305 | `hardcoded_disallowed_en_in_js` | return map[String(cat || '').trim()] || '';
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:314 | `hardcoded_disallowed_en_in_js` | { image: 'images/hero/Waikwantentshero.png', keyPrefix: 'home_hero_1' },
+- scripts/main.js:314 | `hardcoded_disallowed_en_in_js` | { image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', keyPrefix: 'home_hero_1' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:315 | `hardcoded_disallowed_en_in_js` | { image: 'images/hero/waikwanflagshero.png', keyPrefix: 'home_hero_2' },
+- scripts/main.js:315 | `hardcoded_disallowed_en_in_js` | { image: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', keyPrefix: 'home_hero_2' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:317 | `hardcoded_disallowed_en_in_js` | { image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }
+- scripts/main.js:317 | `hardcoded_disallowed_en_in_js` | { image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:317 | `hardcoded_han_in_js` | { image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }
+- scripts/main.js:317 | `hardcoded_han_in_js` | { image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/main.js:322 | `hardcoded_disallowed_en_in_js` | const root = document.getElementById('heroSlider');
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -7798,17 +7798,17 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/main.js:435 | `hardcoded_disallowed_en_in_js` | const grid = document.getElementById('homeCategoryGrid');
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:441 | `hardcoded_disallowed_en_in_js` | { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
+- scripts/main.js:441 | `hardcoded_disallowed_en_in_js` | { id: 'displays', img: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:441 | `hardcoded_han_in_js` | { id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
+- scripts/main.js:441 | `hardcoded_han_in_js` | { id: 'displays', img: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/main.js:442 | `hardcoded_disallowed_en_in_js` | { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+- scripts/main.js:442 | `hardcoded_disallowed_en_in_js` | { id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:443 | `hardcoded_disallowed_en_in_js` | { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+- scripts/main.js:443 | `hardcoded_disallowed_en_in_js` | { id: 'flags', img: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/main.js:444 | `hardcoded_disallowed_en_in_js` | { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/main.js:445 | `hardcoded_disallowed_en_in_js` | { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+- scripts/main.js:445 | `hardcoded_disallowed_en_in_js` | { id: 'accessories', img: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/main.js:448 | `hardcoded_disallowed_en_in_js` | grid.innerHTML = '';
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -14304,7 +14304,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/product-detail.js:262 | `hardcoded_disallowed_en_in_js` | '@id': `${canonicalProductUrl}#product`,
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/product-detail.js:266 | `hardcoded_disallowed_en_in_js` | image: productImageAbs || toAbs('images/hero/Waikwantentshero.png'),
+- scripts/product-detail.js:266 | `hardcoded_disallowed_en_in_js` | image: productImageAbs || toAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/product-detail.js:267 | `hardcoded_disallowed_en_in_js` | sku: String(product.sku || product.id || ''),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -15154,9 +15154,9 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:6 | `hardcoded_disallowed_en_in_js` | id: 'displays',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:7 | `hardcoded_disallowed_en_in_js` | image: 'images/hero/伟群快幕秀照片.jpeg',
+- scripts/products.js:7 | `hardcoded_disallowed_en_in_js` | image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:7 | `hardcoded_han_in_js` | image: 'images/hero/伟群快幕秀照片.jpeg',
+- scripts/products.js:7 | `hardcoded_han_in_js` | image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:8 | `hardcoded_disallowed_en_in_js` | alt: 'Display Systems',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -15432,23 +15432,23 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:141 | `hardcoded_han_in_js` | descriptionZh: 'A字架展示系统（AD-H18 系列）。支持多种型号尺寸与多种画面形状/尺寸选项，适用于活动、展会与户外展示。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:143 | `hardcoded_disallowed_en_in_js` | image: 'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
+- scripts/products.js:143 | `hardcoded_disallowed_en_in_js` | image: 'images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:145 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
+- scripts/products.js:145 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:146 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/A Frame 注释图.jpg'
+- scripts/products.js:146 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:146 | `hardcoded_han_in_js` | 'images/products/displays/A Frame/A Frame 注释图.jpg'
+- scripts/products.js:146 | `hardcoded_han_in_js` | 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:149 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/A Frame Pop Up hero.jpg',
+- scripts/products.js:149 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:150 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/A Frame 注释图.jpg'
+- scripts/products.js:150 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:150 | `hardcoded_han_in_js` | 'images/products/displays/A Frame/A Frame 注释图.jpg'
+- scripts/products.js:150 | `hardcoded_han_in_js` | 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:152 | `hardcoded_disallowed_en_in_js` | referenceImage: 'images/products/displays/A Frame/A Frame 注释图.jpg',
+- scripts/products.js:152 | `hardcoded_disallowed_en_in_js` | referenceImage: 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:152 | `hardcoded_han_in_js` | referenceImage: 'images/products/displays/A Frame/A Frame 注释图.jpg',
+- scripts/products.js:152 | `hardcoded_han_in_js` | referenceImage: 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:153 | `hardcoded_disallowed_en_in_js` | referenceImageLabel: 'A字架规格注释图 / A-Frame Specification Diagram',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -15772,13 +15772,13 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:305 | `hardcoded_han_in_js` | descriptionZh: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:306 | `hardcoded_disallowed_en_in_js` | image: encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+- scripts/products.js:306 | `hardcoded_disallowed_en_in_js` | image: encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:308 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+- scripts/products.js:308 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:309 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:312 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+- scripts/products.js:312 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:313 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -17272,13 +17272,13 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1096 | `hardcoded_han_in_js` | descriptionZh: '专业卡布灯箱系列：铝型材框架 + LED 背光模块 + SEG 硅胶边条布画。外观无缝平整，模块化结构，画面更换便捷，支持定制尺寸。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:1098 | `hardcoded_disallowed_en_in_js` | image: 'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+- scripts/products.js:1098 | `hardcoded_disallowed_en_in_js` | image: 'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1100 | `hardcoded_disallowed_en_in_js` | 'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+- scripts/products.js:1100 | `hardcoded_disallowed_en_in_js` | 'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1101 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/tension-fabric-displays/23.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1104 | `hardcoded_disallowed_en_in_js` | 'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',
+- scripts/products.js:1104 | `hardcoded_disallowed_en_in_js` | 'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1105 | `hardcoded_disallowed_en_in_js` | 'images/products/displays/tension-fabric-displays/23.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18068,11 +18068,11 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1517 | `hardcoded_han_in_js` | descriptionZh: '促销台适用于试吃试用、产品演示与接待。便携结构，顶部头牌展示品牌信息，内部带收纳。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:1518 | `hardcoded_disallowed_en_in_js` | image: 'images/products/display-systems/promotion-counter/hero.png',
+- scripts/products.js:1518 | `hardcoded_disallowed_en_in_js` | image: 'images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1519 | `hardcoded_disallowed_en_in_js` | images: ['images/products/display-systems/promotion-counter/hero.png'],
+- scripts/products.js:1519 | `hardcoded_disallowed_en_in_js` | images: ['images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png'],
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1520 | `hardcoded_disallowed_en_in_js` | gallery: ['images/products/display-systems/promotion-counter/hero.png'],
+- scripts/products.js:1520 | `hardcoded_disallowed_en_in_js` | gallery: ['images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png'],
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1523 | `hardcoded_disallowed_en_in_js` | titleKey: 'models_and_specs',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18158,13 +18158,13 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1564 | `hardcoded_han_in_js` | descriptionZh: '玻璃钢竞速拱门（半圆型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:1565 | `hardcoded_disallowed_en_in_js` | image: encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
+- scripts/products.js:1565 | `hardcoded_disallowed_en_in_js` | image: encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1567 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
+- scripts/products.js:1567 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1568 | `hardcoded_disallowed_en_in_js` | 'images/products/racegate/pdf_p9.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1571 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
+- scripts/products.js:1571 | `hardcoded_disallowed_en_in_js` | encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1572 | `hardcoded_disallowed_en_in_js` | 'images/products/racegate/pdf_p9.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18428,7 +18428,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1711 | `hardcoded_disallowed_en_in_js` | nameEn: 'Half Wall Support Pole (AD-t01)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1712 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1712 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1714 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18450,7 +18450,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1723 | `hardcoded_disallowed_en_in_js` | nameEn: 'Water Weight (Square) (WK-T02)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1724 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1724 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1726 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18472,7 +18472,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1735 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T01A)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1736 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1736 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1738 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18494,7 +18494,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1747 | `hardcoded_disallowed_en_in_js` | nameEn: 'Water Weight (Round) (WK-T02A)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1748 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1748 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1750 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18516,7 +18516,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1759 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t03)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1760 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1760 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1762 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18538,7 +18538,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1771 | `hardcoded_disallowed_en_in_js` | nameEn: 'Sand Bag (AD-t04)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1772 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1772 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1774 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18560,7 +18560,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1783 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T03A)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1784 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1784 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1786 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18582,7 +18582,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1795 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T03D)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1796 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1796 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1798 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18604,7 +18604,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1807 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t05)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1808 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1808 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1810 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18626,7 +18626,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1819 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t06)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1820 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1820 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1822 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18648,7 +18648,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1831 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T12-B)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1832 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1832 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1834 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18670,7 +18670,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1843 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Carry Bag (WK-T06-2)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1844 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1844 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1846 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18692,7 +18692,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1855 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t07)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1856 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1856 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1858 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18714,7 +18714,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1867 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t08)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1868 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1868 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1870 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18736,7 +18736,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1879 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tie Down Rope (WK-T11)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1880 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1880 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1882 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18758,7 +18758,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1891 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tie Down Rope (WK-T11-A)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1892 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1892 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1894 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18780,7 +18780,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1903 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t09)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1904 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1904 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1906 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18802,7 +18802,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1915 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (AD-t10)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1916 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1916 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1918 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18824,7 +18824,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1927 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T05-1)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1928 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1928 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1930 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18846,7 +18846,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1939 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T12)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1940 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1940 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1942 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18868,7 +18868,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1951 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T13)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1952 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1952 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1954 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18890,7 +18890,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1963 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T14)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1964 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1964 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1966 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18912,7 +18912,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1975 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T15)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1976 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1976 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1978 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -18934,7 +18934,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:1987 | `hardcoded_disallowed_en_in_js` | nameEn: 'Tent Accessory (WK-T16)',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:1988 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/tent-accessories.png',
+- scripts/products.js:1988 | `hardcoded_disallowed_en_in_js` | image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:1990 | `hardcoded_disallowed_en_in_js` | specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -19362,13 +19362,13 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:2184 | `hardcoded_han_in_js` | descriptionZh: '对折桌（折半折叠桌）配套桌布；版型与尺寸适用于 WK-Z122、WK-Z153、WK-Z183、WK-Z244 四款对折桌。下图仅为不同款式/角度示意，支持定制印刷与多色。',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/products.js:2185 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/table cover1.jpg',
+- scripts/products.js:2185 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:2187 | `hardcoded_disallowed_en_in_js` | 'images/products/custom/table-covers/table cover1.jpg',
+- scripts/products.js:2187 | `hardcoded_disallowed_en_in_js` | 'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:2188 | `hardcoded_disallowed_en_in_js` | 'images/products/custom/table-covers/tablecover2.jpg',
+- scripts/products.js:2188 | `hardcoded_disallowed_en_in_js` | 'images/products/custom/table-covers/custom-printed-table-cover-trade-show-booth.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:2189 | `hardcoded_disallowed_en_in_js` | 'images/products/custom/table-covers/tablecover3.jpg'
+- scripts/products.js:2189 | `hardcoded_disallowed_en_in_js` | 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:2192 | `hardcoded_disallowed_en_in_js` | '适用对折桌型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -19408,7 +19408,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:2214 | `hardcoded_disallowed_en_in_js` | descriptionEn: '3D fabric cover for round folding-in-half tables, customizable printing.',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:2215 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/tablecover3.jpg',
+- scripts/products.js:2215 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:2216 | `hardcoded_disallowed_en_in_js` | specs: ['立体版型', '适配圆形对折桌', '可定制印刷'],
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -19438,7 +19438,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:2228 | `hardcoded_disallowed_en_in_js` | descriptionEn: '3D fabric cover for folding chairs. Custom printing and colors available.',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:2229 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/tablecover3.jpg',
+- scripts/products.js:2229 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:2230 | `hardcoded_disallowed_en_in_js` | specs: ['立体版型', '适配折叠椅', '可定制印刷'],
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -19468,7 +19468,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/products.js:2242 | `hardcoded_disallowed_en_in_js` | descriptionEn: '3D fabric cover for cocktail tables, multiple colors and custom printing.',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/products.js:2243 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/tablecover3.jpg',
+- scripts/products.js:2243 | `hardcoded_disallowed_en_in_js` | image: 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/products.js:2244 | `hardcoded_disallowed_en_in_js` | specs: ['立体版型', '适配鸡尾酒桌', '多色可选'],
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -20956,7 +20956,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/seo.js:127 | `hardcoded_disallowed_en_in_js` | var title = String(document.title || '').trim() || 'WaiKwan';
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/seo.js:130 | `hardcoded_disallowed_en_in_js` | var defaultImg = 'images/hero/Waikwantentshero.png';
+- scripts/seo.js:130 | `hardcoded_disallowed_en_in_js` | var defaultImg = 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png';
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/seo.js:131 | `hardcoded_disallowed_en_in_js` | var ogImg = (document.head.querySelector('meta[property="og:image"]') || document.head.querySelector('meta[name="twitter:image"]'));
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -21608,7 +21608,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:89 | `hardcoded_han_in_js` | materialZh: '铁',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/tent-types.js:91 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/tent-accessories.png'
+- scripts/tent-types.js:91 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:94 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/_reference/pdf_p5.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -21682,7 +21682,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:136 | `hardcoded_han_in_js` | materialZh: '铝合金',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/tent-types.js:138 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/tent-accessories.png'
+- scripts/tent-types.js:138 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:141 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/_reference/pdf_p5.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -21754,7 +21754,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:182 | `hardcoded_han_in_js` | materialZh: '铝合金',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
-- scripts/tent-types.js:184 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/tent-accessories.png'
+- scripts/tent-types.js:184 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:187 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/_reference/pdf_p5.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -21832,7 +21832,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:234 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/star/startentaccessories.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/tent-types.js:235 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/tent-accessories.png'
+- scripts/tent-types.js:235 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:238 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/_reference/pdf_p6.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -21918,7 +21918,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:282 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/star/startentaccessories.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/tent-types.js:283 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/tent-accessories.png'
+- scripts/tent-types.js:283 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:286 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/_reference/pdf_p6.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -21990,7 +21990,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:325 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/star/startentaccessories.png',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/tent-types.js:326 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/tent-accessories.png'
+- scripts/tent-types.js:326 | `hardcoded_disallowed_en_in_js` | 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:329 | `hardcoded_disallowed_en_in_js` | 'images/products/tents/_reference/pdf_p6.png'
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
@@ -22426,7 +22426,7 @@ Hardcoded language outside .zh/.en blocks or i18n keys. Review to confirm user-f
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML.
 - scripts/tent-types.js:604 | `hardcoded_disallowed_en_in_js` | storyEn: 'Code, name, and specs below; switch language in the page header.',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
-- scripts/tent-types.js:605 | `hardcoded_disallowed_en_in_js` | heroImage: 'images/products/accessories/tent-accessories1/tentsaccessorieshero.jpg',
+- scripts/tent-types.js:605 | `hardcoded_disallowed_en_in_js` | heroImage: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.
 - scripts/tent-types.js:611 | `hardcoded_disallowed_en_in_js` | { href: 'all-products.html?cat=accessories', labelZh: '帐篷配件产品一览（Browse Products）', labelEn: 'Browse all tent accessory products' }
   - Suggestion: If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans.

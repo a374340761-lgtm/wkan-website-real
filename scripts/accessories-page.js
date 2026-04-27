@@ -7,7 +7,7 @@
     window.__accessoriesPageInited = true;
 
     function spriteSheetUrl() {
-        const rel = 'images/products/accessories/tent-accessories.png';
+        const rel = 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';
         if (typeof window.wkRootAssetUrl === 'function') {
             try {
                 return window.wkRootAssetUrl(rel);

@@ -162,7 +162,7 @@ window.WK_getProductCardSpecs = function (product, lang) {
 window.HERO_SLIDES = [
     {
         id: 'displays',
-        image: '/images/hero/伟群快幕秀照片.jpeg',
+        image: '/images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg',
         alt: 'Display Systems',
         kickerZh: '畅销产品 · 展示系统',
         kickerEn: 'Top Seller · Display Systems',
@@ -219,6 +219,16 @@ window.HERO_SLIDES = [
   }
 ];
 
+/**
+ * RaceGate `product.type` → hero asset (root-relative under `images/products/racegate/`).
+ * Must match on-disk filenames; used by WK_getProductCardImage and product `image` rows.
+ */
+window.WK_RACEGATE_HERO_PATH = {
+    v: 'images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png',
+    o: 'images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png',
+    semi: 'images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'
+};
+
 /** URL path is authoritative for listing language (/zh/ vs root). Not localStorage. */
 function wkProductManagerLangFromUrl() {
     if (typeof window.wkResolvePageLanguage === 'function') {
@@ -252,18 +262,18 @@ class ProductManager {
                 description: '30方管铁架快开帐篷，经济耐用，适合租赁与短期活动。可选300D/600D面料及定制印刷。',
                 materialEn: 'Iron',
                 materialZh: '铁',
-                image: 'images/products/tents/folding30/hero.png',
+                image: 'images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png',
                 images: [
-                    'images/products/tents/folding30/hero.png',
-                    'images/products/tents/folding30/30square-tube-frame-iron-authenticaccessories.png',
-                    'images/products/tents/folding30/2D.png',
-                    'images/products/tents/folding30/Pop-up%20Canopy%20Tent%20hero.png'
+                    'images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png',
+                    'images/products/tents/folding30/30mm-square-tube-iron-frame-specification.png',
+                    'images/products/tents/folding30/30mm-folding-canopy-tent-2d-layout.png',
+                    'images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png'
                 ],
                 gallery: [
-                    'images/products/tents/folding30/hero.png',
-                    'images/products/tents/folding30/30square-tube-frame-iron-authenticaccessories.png',
-                    'images/products/tents/folding30/2D.png',
-                    'images/products/tents/folding30/Pop-up%20Canopy%20Tent%20hero.png'
+                    'images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png',
+                    'images/products/tents/folding30/30mm-square-tube-iron-frame-specification.png',
+                    'images/products/tents/folding30/30mm-folding-canopy-tent-2d-layout.png',
+                    'images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png'
                 ],
                 // Unified size table (model -> size -> weight)
                 variants: [
@@ -316,9 +326,9 @@ class ProductManager {
                     seoDescriptionEn: 'A-frame display system for double-sided advertising, event signage, and entrance promotion. Factory direct from WaiKwan.',
                     seoDescriptionZh: 'A字架展示架适用于双面广告与活动导视，室内外宣传展示。广西伟群帐篷制造 OEM/ODM。',
                     // Plain paths only — WK_getProductCardImage() applies encodeURI once (double-encoding breaks Browse Products cards).
-                    image: 'images/products/displays/A Frame/A frame display hero.png',
-                    images: ['images/products/displays/A Frame/A frame display hero.png'],
-                    gallery: ['images/products/displays/A Frame/A frame display hero.png'],
+                    image: 'images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png',
+                    images: ['images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'],
+                    gallery: ['images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'],
                     variantTables: [
                         {
                             titleZh: 'A字架展示架参数',
@@ -362,9 +372,9 @@ class ProductManager {
                     seoTitleZh: '万能架背景系统 | 可调伸缩背景架 | 广西伟群帐篷制造有限公司',
                     seoDescriptionEn: 'Adjustable backdrop system for event branding, promotional backgrounds, and flexible display setup. Factory direct from WaiKwan.',
                     seoDescriptionZh: '万能架背景系统，宽高可调，适合活动主视觉与品牌宣传背景。广西伟群帐篷制造 OEM/ODM。',
-                    image: 'images/products/displays/A Frame/backdropsystemhero.png',
-                    images: ['images/products/displays/A Frame/backdropsystemhero.png'],
-                    gallery: ['images/products/displays/A Frame/backdropsystemhero.png'],
+                    image: 'images/products/displays/A Frame/backdrop-banner-stand-system-trade-show-hero.png',
+                    images: ['images/products/displays/A Frame/backdrop-banner-stand-system-trade-show-hero.png'],
+                    gallery: ['images/products/displays/A Frame/backdrop-banner-stand-system-trade-show-hero.png'],
                     variantTables: [
                         {
                             titleZh: 'Backdrop System 参数',
@@ -400,13 +410,13 @@ class ProductManager {
                     description: '快幕秀布拉网（Fabric Pop-up Display）是最典型、最正统的快幕秀产品。采用折叠式铝合金框架与拉网结构，用作背景墙/展会背板，快速展开、无需工具。常见尺寸：3m / 4m / 5m 宽。可更换画面，便携收纳包装。',
                     descriptionEn: 'Fabric Pop-up Display is the most standard and authentic pop-up backdrop product. Features folding aluminum frame with tension fabric structure, used as backdrop wall for exhibitions. Tool-free quick setup. Common widths: 3m / 4m / 5m. Replaceable graphics with portable carrying case.',
                     descriptionZh: '快幕秀布拉网（Fabric Pop-up Display）是最典型、最正统的快幕秀产品。采用折叠式铝合金框架与拉网结构，用作背景墙/展会背板，快速展开、无需工具。常见尺寸：3m / 4m / 5m 宽。可更换画面，便携收纳包装。',
-                    image: 'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
+                    image: 'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
                     images: [
-                        'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
+                        'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
                         encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
                     ],
                     gallery: [
-                        'images/products/displays/pop-up/wk-po-01-fabric-pop-up-hero.png',
+                        'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
                         encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
                     ],
                     variantTables: [
@@ -459,13 +469,13 @@ class ProductManager {
                     description: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
                     descriptionEn: 'Tension Fabric Counter is an accessory product for display systems. Features the same tension fabric + quick-setup structure, but designed for reception counters, desks and booth furniture rather than backdrops. Available in illuminated and non-illuminated versions with multiple packaging protection. Enhanced visual appeal at night.',
                     descriptionZh: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
-                    image: encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+                    image: encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
                     images: [
-                        encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+                        encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
                         encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
                     ],
                     gallery: [
-                        encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),
+                        encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
                         encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
                     ],
                     variantTables: [
@@ -1068,13 +1078,13 @@ class ProductManager {
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
                 descriptionEn: 'Fiberglass race gate (V shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
                 descriptionZh: '玻璃钢竞速拱门（V型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
-                image: encodeURI('images/products/racegate/V Race Gate/hero.png'),
+                image: encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png'),
                 images: [
-                    encodeURI('images/products/racegate/V Race Gate/hero.png'),
+                    encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 gallery: [
-                    encodeURI('images/products/racegate/V Race Gate/hero.png'),
+                    encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 pdf: '广西伟群帐篷制造有限公司2025改.pdf',
@@ -1104,13 +1114,13 @@ class ProductManager {
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
                 descriptionEn: 'Fiberglass race gate (O shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
                 descriptionZh: '玻璃钢竞速拱门（O型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
-                image: encodeURI('images/products/racegate/O Race Gate/hero.png'),
+                image: encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png'),
                 images: [
-                    encodeURI('images/products/racegate/O Race Gate/hero.png'),
+                    encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 gallery: [
-                    encodeURI('images/products/racegate/O Race Gate/hero.png'),
+                    encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 pdf: '广西伟群帐篷制造有限公司2025改.pdf',
@@ -1143,9 +1153,9 @@ class ProductManager {
                 shortZh: '背包旗、街旗与展示旗系统（完整型号表见沙滩旗类型页）。',
                 descriptionEn: 'Hub entry for RFQ lines from the Backpack & Street / Display Flags catalog page. Each line item stores the exact model row you select.',
                 descriptionZh: '用于“背包旗与街旗/展示旗”类型页询价：每条记录对应您在参数表中选择的具体型号行。',
-                image: encodeURI('images/products/flags/hero/Backpack Flagshero.png'),
-                images: [encodeURI('images/products/flags/hero/Backpack Flagshero.png')],
-                gallery: [encodeURI('images/products/flags/hero/Backpack Flagshero.png')],
+                image: encodeURI('images/products/flags/hero/backpack-flags-street-display-flags-hero.png'),
+                images: [encodeURI('images/products/flags/hero/backpack-flags-street-display-flags-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/backpack-flags-street-display-flags-hero.png')],
                 customRfqUrl: 'flag-type.html?type=backpack_street_flags',
                 keywords: ['backpack flag', 'street flag', 'display flag', 'WK-C16', 'AD-22', '背包旗', '街旗'],
                 tags: 'Flags, Backpack, Street, Display',
@@ -1165,9 +1175,9 @@ class ProductManager {
                 shortZh: '多段式玻纤沙滩旗杆（具体型号以类型页表格为准）。',
                 descriptionEn: 'Parent SKU for RFQ lines selected on the fiberglass beach flag pole type page (WK-XS … WK-XXL).',
                 descriptionZh: '用于“沙滩旗杆（玻纤杆）”类型页询价：每条对应表格中所选型号行。',
-                image: encodeURI('images/products/flags/hero/Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
-                images: [encodeURI('images/products/flags/hero/Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png')],
-                gallery: [encodeURI('images/products/flags/hero/Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png')],
+                image: encodeURI('images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png'),
+                images: [encodeURI('images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png')],
                 customRfqUrl: 'flag-type.html?type=fiberglass_pole',
                 keywords: ['beach flag', 'fiberglass pole', 'WK-XS', 'WK-S', '沙滩旗', '玻纤'],
                 tags: 'Flags, Beach flag pole, Fiberglass',
@@ -1187,9 +1197,9 @@ class ProductManager {
                 shortZh: '铝管 + 玻纤组合旗杆（版本与型号见类型页）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the aluminium + fiberglass beach flag pole page (AD-S … AD-XL, v1/v2).',
                 descriptionZh: '用于“沙滩旗杆（铝管 + 玻纤）”类型页询价：对应所选版本与表格行。',
-                image: encodeURI('images/products/flags/hero/Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
-                images: [encodeURI('images/products/flags/hero/Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png')],
-                gallery: [encodeURI('images/products/flags/hero/Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png')],
+                image: encodeURI('images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png'),
+                images: [encodeURI('images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png')],
                 customRfqUrl: 'flag-type.html?type=alu_fiberglass_pole',
                 keywords: ['beach flag', 'aluminium', 'fiberglass', 'AD-S', 'AD-M', '沙滩旗'],
                 tags: 'Flags, Beach flag pole, Hybrid',
@@ -1209,9 +1219,9 @@ class ProductManager {
                 shortZh: '全玻纤水滴旗杆套装（AD-D1 … AD-D3）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the fully fiberglass teardrop flag pole type page.',
                 descriptionZh: '用于“水滴型沙滩旗杆（全玻纤）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/Teardropbeachflagpoleshero.jpg'),
-                images: [encodeURI('images/products/flags/hero/Teardropbeachflagpoleshero.jpg')],
-                gallery: [encodeURI('images/products/flags/hero/Teardropbeachflagpoleshero.jpg')],
+                image: encodeURI('images/products/flags/hero/teardrop-beach-flag-pole-outdoor-display-hero.jpg'),
+                images: [encodeURI('images/products/flags/hero/teardrop-beach-flag-pole-outdoor-display-hero.jpg')],
+                gallery: [encodeURI('images/products/flags/hero/teardrop-beach-flag-pole-outdoor-display-hero.jpg')],
                 customRfqUrl: 'flag-type.html?type=fully_fiberglass_teardrop',
                 keywords: ['teardrop', 'fiberglass', 'AD-D1', '水滴', '沙滩旗'],
                 tags: 'Flags, Teardrop, Fiberglass',
@@ -1231,9 +1241,9 @@ class ProductManager {
                 shortZh: '全玻纤刀旗杆套装（AD-A1 … AD-A3）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the fully fiberglass feather flag pole type page.',
                 descriptionZh: '用于“刀型沙滩旗杆（全玻纤）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/featherhero.png'),
-                images: [encodeURI('images/products/flags/hero/featherhero.png')],
-                gallery: [encodeURI('images/products/flags/hero/featherhero.png')],
+                image: encodeURI('images/products/flags/hero/feather-flag-hero.png'),
+                images: [encodeURI('images/products/flags/hero/feather-flag-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/feather-flag-hero.png')],
                 customRfqUrl: 'flag-type.html?type=fully_fiberglass_feather',
                 keywords: ['feather flag', 'fiberglass', 'AD-A1', '刀旗', '沙滩旗'],
                 tags: 'Flags, Feather, Fiberglass',
@@ -1253,9 +1263,9 @@ class ProductManager {
                 shortZh: '伸缩注水底座户外高旗杆（AD-11Z01 …）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the outdoor giant flag (water base) type page.',
                 descriptionZh: '用于“户外注水旗杆”类型页询价。',
-                image: encodeURI('images/products/flags/hero/Outdoor Giant Flaghero.png'),
-                images: [encodeURI('images/products/flags/hero/Outdoor Giant Flaghero.png')],
-                gallery: [encodeURI('images/products/flags/hero/Outdoor Giant Flaghero.png')],
+                image: encodeURI('images/products/flags/hero/outdoor-giant-flag-pole-display-hero.png'),
+                images: [encodeURI('images/products/flags/hero/outdoor-giant-flag-pole-display-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/outdoor-giant-flag-pole-display-hero.png')],
                 customRfqUrl: 'flag-type.html?type=outdoor_giant_flag',
                 keywords: ['giant flag', 'water base', 'AD-11Z', '注水旗'],
                 tags: 'Flags, Giant flag, Outdoor',
@@ -1275,9 +1285,9 @@ class ProductManager {
                 shortZh: '方型玻纤旗杆（AD-F10A … AD-F10C）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the square fiberglass flag pole type page.',
                 descriptionZh: '用于“方型沙滩旗杆（玻纤）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/SquareFlagPolehero.png'),
-                images: [encodeURI('images/products/flags/hero/SquareFlagPolehero.png')],
-                gallery: [encodeURI('images/products/flags/hero/SquareFlagPolehero.png')],
+                image: encodeURI('images/products/flags/hero/square-flag-pole-fiberglass-outdoor-display-hero.png'),
+                images: [encodeURI('images/products/flags/hero/square-flag-pole-fiberglass-outdoor-display-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/square-flag-pole-fiberglass-outdoor-display-hero.png')],
                 customRfqUrl: 'flag-type.html?type=square_flag_pole_fiberglass',
                 keywords: ['square flag', 'fiberglass', 'AD-F10', '方旗'],
                 tags: 'Flags, Square pole, Fiberglass',
@@ -1297,9 +1307,9 @@ class ProductManager {
                 shortZh: '半圆美式铝杆沙滩旗（WK-36A …）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the semicircle aluminium beach flag pole type page.',
                 descriptionZh: '用于“铝合金沙滩旗杆（半圆）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/semicirclehero.png'),
-                images: [encodeURI('images/products/flags/hero/semicirclehero.png')],
-                gallery: [encodeURI('images/products/flags/hero/semicirclehero.png')],
+                image: encodeURI('images/products/flags/hero/semicircle-flag-shape-size-guide-hero.png'),
+                images: [encodeURI('images/products/flags/hero/semicircle-flag-shape-size-guide-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/semicircle-flag-shape-size-guide-hero.png')],
                 customRfqUrl: 'flag-type.html?type=alu_pole_semicircle',
                 keywords: ['aluminium pole', 'semicircle', 'WK-36', '沙滩旗'],
                 tags: 'Flags, Aluminium, Semicircle',
@@ -1319,9 +1329,9 @@ class ProductManager {
                 shortZh: '方型美式铝杆沙滩旗（WK-33A …）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the square aluminium beach flag pole type page.',
                 descriptionZh: '用于“铝合金沙滩旗杆（方型）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/sqaurehero.png'),
-                images: [encodeURI('images/products/flags/hero/sqaurehero.png')],
-                gallery: [encodeURI('images/products/flags/hero/sqaurehero.png')],
+                image: encodeURI('images/products/flags/hero/square-flag-shape-size-guide-hero.png'),
+                images: [encodeURI('images/products/flags/hero/square-flag-shape-size-guide-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/square-flag-shape-size-guide-hero.png')],
                 customRfqUrl: 'flag-type.html?type=alu_pole_square',
                 keywords: ['aluminium pole', 'square', 'WK-33', '沙滩旗'],
                 tags: 'Flags, Aluminium, Square',
@@ -1341,9 +1351,9 @@ class ProductManager {
                 shortZh: '新型刀旗铝杆（AD-42A … AD-42C）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the new feather aluminium pole type page.',
                 descriptionZh: '用于“铝合金沙滩旗杆（新型刀旗）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/newfeatherhero.png'),
-                images: [encodeURI('images/products/flags/hero/newfeatherhero.png')],
-                gallery: [encodeURI('images/products/flags/hero/newfeatherhero.png')],
+                image: encodeURI('images/products/flags/hero/newfeather-flag-hero.png'),
+                images: [encodeURI('images/products/flags/hero/newfeather-flag-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/newfeather-flag-hero.png')],
                 customRfqUrl: 'flag-type.html?type=alu_pole_new_feather',
                 keywords: ['aluminium', 'feather', 'AD-42', '刀旗'],
                 tags: 'Flags, Aluminium, New feather',
@@ -1363,9 +1373,9 @@ class ProductManager {
                 shortZh: '刀旗/水滴美式铝杆（AD-39A …）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the feather/teardrop aluminium pole type page.',
                 descriptionZh: '用于“铝合金沙滩旗杆（刀旗/水滴）”类型页询价。',
-                image: encodeURI('images/products/flags/hero/featherhero.png'),
-                images: [encodeURI('images/products/flags/hero/featherhero.png')],
-                gallery: [encodeURI('images/products/flags/hero/featherhero.png')],
+                image: encodeURI('images/products/flags/hero/feather-flag-hero.png'),
+                images: [encodeURI('images/products/flags/hero/feather-flag-hero.png')],
+                gallery: [encodeURI('images/products/flags/hero/feather-flag-hero.png')],
                 customRfqUrl: 'flag-type.html?type=alu_pole_feather',
                 keywords: ['aluminium', 'feather', 'teardrop', 'AD-39', '沙滩旗'],
                 tags: 'Flags, Aluminium, Feather',
@@ -1385,9 +1395,9 @@ class ProductManager {
                 shortZh: '沙滩旗底座、地插、转动轴与收纳袋等（见类型页表格）。',
                 descriptionEn: 'Parent SKU for RFQ lines from the beach flag bases & accessories type page.',
                 descriptionZh: '用于“沙滩旗底座与配件”类型页询价。',
-                image: 'images/products/accessories/flag-accessories/hero.png',
-                images: ['images/products/accessories/flag-accessories/hero.png'],
-                gallery: ['images/products/accessories/flag-accessories/hero.png'],
+                image: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png',
+                images: ['images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png'],
+                gallery: ['images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png'],
                 customRfqUrl: 'flag-type.html?type=flag_bases_accessories',
                 keywords: ['flag base', 'cross base', 'water base', 'AD-C3', '沙滩旗底座'],
                 tags: 'Flags, Bases, Accessories',
@@ -1453,13 +1463,13 @@ class ProductManager {
                 descriptionEn: 'Professional SEG light box series using aluminum profiles, LED backlit modules and silicone edge fabric graphics. Seamless appearance, modular build and quick graphic replacement. Custom sizes available.',
                 descriptionZh: '专业卡布灯箱系列：铝型材框架 + LED 背光模块 + SEG 硅胶边条布画。外观无缝平整，模块化结构，画面更换便捷，支持定制尺寸。',
                 // Plain path — WK_getProductCardImage / detail page apply encodeURI once (double encode breaks listing cards)
-                image: 'images/products/light-box-series/铝型材卡布灯箱系列hero.jpg',
+                image: 'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg',
                 images: [
-                    'images/products/light-box-series/铝型材卡布灯箱系列hero.jpg',
+                    'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg',
                     'images/products/displays/tension-fabric-displays/23.png'
                 ],
                 gallery: [
-                    'images/products/light-box-series/铝型材卡布灯箱系列hero.jpg',
+                    'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg',
                     'images/products/displays/tension-fabric-displays/23.png'
                 ],
                 specsZh: {
@@ -1504,9 +1514,9 @@ class ProductManager {
                 shortZh: '适用于大面积发光背景墙的卡布拉网灯箱系统。',
                 descriptionEn: 'SEG net light box series designed for large backlit walls. Aluminum structure with LED backlighting and silicone edge fabric graphics. Seamless look, modular assembly and custom sizes available.',
                 descriptionZh: '卡布拉网灯箱系列，适合大面积发光背景墙：铝合金结构 + LED 背光 + SEG 硅胶边条布画。外观无缝平整，模块化安装，支持定制尺寸。',
-                image: 'images/hero/伟群快幕秀照片.jpeg',
-                images: ['images/hero/伟群快幕秀照片.jpeg'],
-                gallery: ['images/hero/伟群快幕秀照片.jpeg'],
+                image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg',
+                images: ['images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg'],
+                gallery: ['images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg'],
                 specsZh: {
                     '尺寸': '支持定制（大尺寸可拼接）',
                     '光源': 'LED 背光',
@@ -1753,9 +1763,9 @@ class ProductManager {
                 shortZh: '适用于赛事与活动的广告拱门结构，参数以目录型号表为准。',
                 descriptionEn: 'Advertising arch for event entrances and brand activation. Refer to the model/spec table for available sizes and packing information.',
                 descriptionZh: '广告拱门适用于活动入口、赛事拱门与品牌展示。可选多种尺寸，装箱信息见型号参数表。',
-                image: 'images/products/advertising-arch/广告拱门hero.png',
-                images: ['images/products/advertising-arch/广告拱门hero.png'],
-                gallery: ['images/products/advertising-arch/广告拱门hero.png'],
+                image: 'images/products/advertising-arch/advertising-arch-event-entrance-hero.png',
+                images: ['images/products/advertising-arch/advertising-arch-event-entrance-hero.png'],
+                gallery: ['images/products/advertising-arch/advertising-arch-event-entrance-hero.png'],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -1793,9 +1803,9 @@ class ProductManager {
                 shortZh: '可注水/注沙底座提升稳定性，适合户外人行道广告。参数以目录型号表为准。',
                 descriptionEn: 'A water-filled A poster stand designed for outdoor advertising. Portable and easy to change graphics. Double-sided poster options depending on configuration.',
                 descriptionZh: '注水 A 字海报架，面向户外广告场景。便携易安装，画面更换快捷，支持双面展示（按配置）。',
-                image: 'images/products/water-filled-a-poster-stand/注水A字海报架hero.png',
-                images: ['images/products/water-filled-a-poster-stand/注水A字海报架hero.png'],
-                gallery: ['images/products/water-filled-a-poster-stand/注水A字海报架hero.png'],
+                image: 'images/products/water-filled-a-poster-stand/water-filled-a-board-poster-stand-hero.png',
+                images: ['images/products/water-filled-a-poster-stand/water-filled-a-board-poster-stand-hero.png'],
+                gallery: ['images/products/water-filled-a-poster-stand/water-filled-a-board-poster-stand-hero.png'],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -1844,9 +1854,9 @@ class ProductManager {
                 shortZh: '铝合金底座易拉宝，收放式卷轴结构，无需工具快速安装，含收纳袋。参数以目录型号表为准。',
                 descriptionEn: 'Roll up banner stand for promotions and exhibitions. Designed for quick setup and easy transport.',
                 descriptionZh: '易拉宝展示架，适用于促销与展会展示，安装快捷，便于携带。',
-                image: 'images/products/display-systems/roll-up-stand/rollupstandhero.jpg',
-                images: ['images/products/display-systems/roll-up-stand/rollupstandhero.jpg'],
-                gallery: ['images/products/display-systems/roll-up-stand/rollupstandhero.jpg'],
+                image: 'images/products/display-systems/roll-up-stand/roll-up-banner-stand-trade-show-display-hero.jpg',
+                images: ['images/products/display-systems/roll-up-stand/roll-up-banner-stand-trade-show-display-hero.jpg'],
+                gallery: ['images/products/display-systems/roll-up-stand/roll-up-banner-stand-trade-show-display-hero.jpg'],
                 variantTables: [
                     {
                         titleKey: 'models_and_specs',
@@ -1893,14 +1903,14 @@ class ProductManager {
                 shortZh: '折叠式促销台，快速组装，带内置层板/收纳空间与顶部品牌头牌。参数以目录型号表为准。',
                 descriptionEn: 'Promotion counter for sampling, demo and reception use. Portable structure with branding header and internal storage.',
                 descriptionZh: '促销台适用于试吃试用、产品演示与接待。便携结构，顶部头牌展示品牌信息，内部带收纳。',
-                image: 'images/products/display-systems/promotion-counter/hero.png',
+                image: 'images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png',
                 images: [
-                    'images/products/display-systems/promotion-counter/hero.png',
-                    'images/products/display-systems/promotion-counter/detail-internal-storage.png'
+                    'images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png',
+                    'images/products/display-systems/promotion-counter/promotional-counter-display-internal-storage-detail.png'
                 ],
                 gallery: [
-                    'images/products/display-systems/promotion-counter/hero.png',
-                    'images/products/display-systems/promotion-counter/detail-internal-storage.png'
+                    'images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png',
+                    'images/products/display-systems/promotion-counter/promotional-counter-display-internal-storage-detail.png'
                 ],
                 variantTables: [
                     {
@@ -1947,13 +1957,13 @@ class ProductManager {
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
                 descriptionEn: 'Fiberglass race gate (semi-circle). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
                 descriptionZh: '玻璃钢竞速拱门（半圆型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
-                image: encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
+                image: encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
                 images: [
-                    encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
+                    encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 gallery: [
-                    encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),
+                    encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
                     'images/products/racegate/pdf_p9.png'
                 ],
                 pdf: '广西伟群帐篷制造有限公司2025改.pdf',
@@ -1987,16 +1997,20 @@ class ProductManager {
                 description: '40六角铝合金快开帐篷，轻便耐腐蚀。多尺寸可选，支持300D/600D面料与定制印刷。',
                 materialEn: 'Aluminum',
                 materialZh: '铝合金',
-                image: 'images/products/tents/folding40/hero.png',
+                image: 'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png',
                 images: [
-                    'images/products/tents/folding40/hero.png',
-                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png',
-                    'images/products/tents/folding40/3x6aluminium1.2mm4cmdiameter.png'
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png',
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-specification.png',
+                    'images/products/tents/folding40/40mm-pop-up-canopy-tent-2d-layout-hero.png',
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory.jpg',
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory.jpg'
                 ],
                 gallery: [
-                    'images/products/tents/folding40/hero.png',
-                    'images/products/tents/folding40/40square-tube-frame-aluminum-authenticaccessories.png',
-                    'images/products/tents/folding40/3x6aluminium1.2mm4cmdiameter.png'
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png',
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-specification.png',
+                    'images/products/tents/folding40/40mm-pop-up-canopy-tent-2d-layout-hero.png',
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory.jpg',
+                    'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory.jpg'
                 ],
                 variants: [
                     { model: 'WK-T40I', size: '1.5 × 1.5 M', weight: '12.5 KG' },
@@ -2047,14 +2061,14 @@ class ProductManager {
                 description: '50六角铝合金快开帐篷，强度更高，适合更大跨度与高频使用。多尺寸可选，支持300D/600D面料与定制印刷。',
                 materialEn: 'Aluminum',
                 materialZh: '铝合金',
-                image: 'images/products/tents/folding50/hero.png',
+                image: 'images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png',
                 images: [
-                    'images/products/tents/folding50/hero.png',
-                    'images/products/tents/folding50/50square-tube-frame-aluminum-authenticaccessories.png'
+                    'images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png',
+                    'images/products/tents/folding50/50mm-hexagon-aluminum-frame-specification.png'
                 ],
                 gallery: [
-                    'images/products/tents/folding50/hero.png',
-                    'images/products/tents/folding50/50square-tube-frame-aluminum-authenticaccessories.png'
+                    'images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png',
+                    'images/products/tents/folding50/50mm-hexagon-aluminum-frame-specification.png'
                 ],
                 variants: [
                     { model: 'WK-T50H', size: '2 × 2 M', weight: '20 KG' },
@@ -2097,7 +2111,7 @@ class ProductManager {
                 nameEn: 'Half wall cross bar',
                 descriptionZh: '重量:0.85KG 尺寸:3M',
                 descriptionEn: 'Weight: 0.85KG, Size: 3M',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 1, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2112,7 +2126,7 @@ class ProductManager {
                 nameEn: 'Square water weight bucket',
                 descriptionZh: '重量:0.8KG 尺寸:35×35×10CM 箱规:44×38×38CM 箱规数量:4PCS 毛重:3.8KG',
                 descriptionEn: 'Weight: 0.8KG, Size: 35×35×10CM, Carton: 44×38×38CM, Qty: 4PCS, G.W.: 3.8KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 1, col: 2 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2127,7 +2141,7 @@ class ProductManager {
                 nameEn: 'Sun shade bar',
                 descriptionZh: '重量:1.4KG 尺寸:0.7×3M',
                 descriptionEn: 'Weight: 1.4KG, Size: 0.7×3M',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 1, col: 3 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2142,7 +2156,7 @@ class ProductManager {
                 nameEn: 'Round water weight bucket',
                 descriptionZh: '重量:1.1KG 尺寸:24×25CM 箱规:52×25×48CM 箱规数量:4PCS 毛重:4.5KG',
                 descriptionEn: 'Weight: 1.1KG, Size: 24×25CM, Carton: 52×25×48CM, Qty: 4PCS, G.W.: 4.5KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 1, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2157,7 +2171,7 @@ class ProductManager {
                 nameEn: 'Press weight (iron)',
                 descriptionZh: '颜色:铁喷涂 重量:7KG 尺寸:25.4×25.4×10CM 箱规:26.5×26.5×21CM 箱规数量:2PCS 毛重:14.5KG',
                 descriptionEn: 'Color: Painted iron, Weight: 7KG, Size: 25.4×25.4×10CM, Carton: 26.5×26.5×21CM, Qty: 2PCS, G.W.: 14.5KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 2, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2172,7 +2186,7 @@ class ProductManager {
                 nameEn: 'Sand bag',
                 descriptionZh: '重量:0.15KG 尺寸:50×20CM 箱规:45×40×35CM 箱规数量:100PCS 毛重:16KG',
                 descriptionEn: 'Weight: 0.15KG, Size: 50×20CM, Carton: 45×40×35CM, Qty: 100PCS, G.W.: 16KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 2, col: 2 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2187,7 +2201,7 @@ class ProductManager {
                 nameEn: 'Round press weight (iron)',
                 descriptionZh: '重量:5KG/10KG/15KG 尺寸:26×3CM 箱规:27×27×4CM 箱规数量:1',
                 descriptionEn: 'Weight: 5KG/10KG/15KG, Size: 26×3CM, Carton: 27×27×4CM, Qty: 1',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 2, col: 3 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2202,7 +2216,7 @@ class ProductManager {
                 nameEn: 'Press weight iron (D)',
                 descriptionZh: '重量:15KG 尺寸:26×3CM 箱规:27×27×7CM 箱规数量:1 毛重:15.3KG',
                 descriptionEn: 'Weight: 15KG, Size: 26×3CM, Carton: 27×27×7CM, Qty: 1, G.W.: 15.3KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 2, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2217,7 +2231,7 @@ class ProductManager {
                 nameEn: 'Tent blade flag connector',
                 descriptionZh: '颜色:铁镀铬+尼龙黑 重量:0.7KG 尺寸:14.5/16/16.5MM 箱规:40×30×30CM 箱规数量:24PCS 毛重:17.7KG',
                 descriptionEn: 'Color: Chrome-plated iron + black nylon, Weight: 0.7KG, Size: 14.5/16/16.5MM, Carton: 40×30×30CM, Qty: 24PCS, G.W.: 17.7KG',
-                image: 'images/products/accessories/tent-accessories1/帐篷刀旗连接件ADt05.jpg',
+                image: 'images/products/accessories/tent-accessories1/canopy-tent-feather-flag-connector-ad-t05.jpg',
                 grid: { row: 3, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2232,7 +2246,7 @@ class ProductManager {
                 nameEn: 'Wheeled carry bag',
                 descriptionZh: '重量:0.65KG 尺寸:157×26×26CM',
                 descriptionEn: 'Weight: 0.65KG, Size: 157×26×26CM',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 3, col: 2 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2247,7 +2261,7 @@ class ProductManager {
                 nameEn: 'Blade flag connector (B)',
                 descriptionZh: '重量:1KG',
                 descriptionEn: 'Weight: 1KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 3, col: 3 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2262,7 +2276,7 @@ class ProductManager {
                 nameEn: 'Tent carry bag',
                 descriptionZh: '重量:0.25KG/0.35KG/0.55KG 尺寸:3×3 / 3×4.5 / 3×6M',
                 descriptionEn: 'Weight: 0.25KG/0.35KG/0.55KG, Size: 3×3 / 3×4.5 / 3×6M',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 3, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2277,7 +2291,7 @@ class ProductManager {
                 nameEn: 'Half wall connector',
                 descriptionZh: '颜色:尼龙黑 重量:0.09KG 尺寸:30# / 40# 箱规:45×40×30CM 箱规数量:200PCS 毛重:19KG',
                 descriptionEn: 'Color: Black nylon, Weight: 0.09KG, Size: 30# / 40#, Carton: 45×40×30CM, Qty: 200PCS, G.W.: 19KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 4, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2292,7 +2306,7 @@ class ProductManager {
                 nameEn: 'Half wall blade-flag connector',
                 descriptionZh: '颜色:PC 重量:0.21KG 尺寸:40# / 50# 六棱角 箱规:45×40×30CM 箱规数量:100PCS 毛重:22KG',
                 descriptionEn: 'Color: PC, Weight: 0.21KG, Size: 40# / 50# hex, Carton: 45×40×30CM, Qty: 100PCS, G.W.: 22KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 4, col: 2 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2307,7 +2321,7 @@ class ProductManager {
                 nameEn: 'Tent tie-down rope',
                 descriptionZh: '重量:0.3KG 尺寸:0.6×25CM / 0.4×3M',
                 descriptionEn: 'Weight: 0.3KG, Size: 0.6×25CM / 0.4×3M',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 4, col: 3 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2322,7 +2336,7 @@ class ProductManager {
                 nameEn: 'Tent tie-down rope (A)',
                 descriptionZh: '重量:0.6KG 尺寸:0.6×25CM / 2.2×300CM',
                 descriptionEn: 'Weight: 0.6KG, Size: 0.6×25CM / 2.2×300CM',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 4, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2337,7 +2351,7 @@ class ProductManager {
                 nameEn: 'Half wall blade-flag connector (9)',
                 descriptionZh: '颜色:尼龙黑 重量:0.1KG 尺寸:40/50# 六棱角管 箱规:45×40×30CM 箱规数量:150PCS 毛重:16KG',
                 descriptionEn: 'Color: Black nylon, Weight: 0.1KG, Size: 40/50# hex tube, Carton: 45×40×30CM, Qty: 150PCS, G.W.: 16KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 5, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2352,7 +2366,7 @@ class ProductManager {
                 nameEn: 'Tent blade flag kit',
                 descriptionZh: '颜色:铁镀铬 重量:0.4KG 尺寸:19/25MM 箱规:40×30×30CM 箱规数量:50PCS 毛重:21KG',
                 descriptionEn: 'Color: Chrome-plated iron, Weight: 0.4KG, Size: 19/25MM, Carton: 40×30×30CM, Qty: 50PCS, G.W.: 21KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 5, col: 2 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2367,7 +2381,7 @@ class ProductManager {
                 nameEn: 'Tent rain gutter',
                 descriptionZh: '重量:0.6KG 尺寸:0.25×3M',
                 descriptionEn: 'Weight: 0.6KG, Size: 0.25×3M',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 5, col: 3 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2382,7 +2396,7 @@ class ProductManager {
                 nameEn: 'Blade flag connector',
                 descriptionZh: '重量:0.5KG',
                 descriptionEn: 'Weight: 0.5KG',
-                image: 'images/products/accessories/tent-accessories1/WKT12-hero.jpg',
+                image: 'images/products/accessories/tent-accessories1/feather-flag-connector-wk-t12-hero.jpg',
                 grid: { row: 5, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2397,7 +2411,7 @@ class ProductManager {
                 nameEn: 'Tent clamp / grip',
                 descriptionZh: '重量:0.4KG',
                 descriptionEn: 'Weight: 0.4KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 6, col: 1 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2412,7 +2426,7 @@ class ProductManager {
                 nameEn: 'Half wall pole connector 90°',
                 descriptionZh: '重量:0.5KG',
                 descriptionEn: 'Weight: 0.5KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 6, col: 2 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2427,7 +2441,7 @@ class ProductManager {
                 nameEn: '30/40 square frame connector',
                 descriptionZh: '重量:0.2KG',
                 descriptionEn: 'Weight: 0.2KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 6, col: 3 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
@@ -2442,14 +2456,14 @@ class ProductManager {
                 nameEn: '40/50 diamond frame connector',
                 descriptionZh: '重量:0.15KG',
                 descriptionEn: 'Weight: 0.15KG',
-                image: 'images/products/accessories/tent-accessories.png',
+                image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',
                 grid: { row: 6, col: 4 },
                 specsZh: { Color: '待补充', Size: '待补充', Weight: '待补充', Carton: '待补充', Quantity: '待补充' },
                 specsEn: { Color: 'TBD', Size: 'TBD', Weight: 'TBD', Carton: 'TBD', Quantity: 'TBD' },
                 keywords: ['accessory','accessories','tent accessories','配件','帐篷配件','WK-T16']
             },
 
-            // ===== Furniture series: Table / Chair / Stool / Toilet (hero/image pending) =====
+            // ===== Furniture series: Table / Chair / Stool / Toilet (p.1 hero: folding set) =====
             {
                 id: 31001,
                 category: 'furniture',
@@ -2461,7 +2475,7 @@ class ProductManager {
                 description: '同一系列对折桌，多种台面尺寸可选；可选型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244。便携式对折收纳，适用于展会、活动与户外使用。',
                 descriptionEn: 'One series of bi-fold (fold-in-half) tables in multiple sizes. Models: WK-Z122, WK-Z153, WK-Z183, and WK-Z244. Portable folding for events, exhibitions and outdoor use.',
                 descriptionZh: '同一系列对折桌，多种台面尺寸可选；可选型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244。便携式对折收纳，适用于展会、活动与户外使用。',
-                image: '',
+                image: 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png',
                 specs: ['可选型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244', '对折收纳', '便携', '适用活动/户外'],
                 specsEn: ['Models: WK-Z122, WK-Z153, WK-Z183, WK-Z244', 'Folds in half', 'Portable', 'For events/outdoor'],
                 keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-Z122', 'WK-Z153', 'WK-Z183', 'WK-Z244']
@@ -2621,11 +2635,11 @@ class ProductManager {
                 description: '对折桌（折半折叠桌）配套桌布；版型与尺寸适用于 WK-Z122、WK-Z153、WK-Z183、WK-Z244 四款对折桌。下图仅为不同款式/角度示意，支持定制印刷与多色。',
                 descriptionEn: 'Tablecloths for bi-fold (fold-in-half) tables, cut and patterned to fit models WK-Z122, WK-Z153, WK-Z183, and WK-Z244. Gallery images show style variants; custom printing and colors are available.',
                 descriptionZh: '对折桌（折半折叠桌）配套桌布；版型与尺寸适用于 WK-Z122、WK-Z153、WK-Z183、WK-Z244 四款对折桌。下图仅为不同款式/角度示意，支持定制印刷与多色。',
-                image: 'images/products/custom/table-covers/table cover1.jpg',
+                image: 'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg',
                 images: [
-                    'images/products/custom/table-covers/table cover1.jpg',
-                    'images/products/custom/table-covers/tablecover2.jpg',
-                    'images/products/custom/table-covers/tablecover3.jpg'
+                    'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg',
+                    'images/products/custom/table-covers/custom-printed-table-cover-trade-show-booth.jpg',
+                    'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg'
                 ],
                 specs: [
                     '适用对折桌型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244',
@@ -3963,9 +3977,11 @@ getProductIcon(category) {
     createGroupedHubProductRow(product) {
         const row = document.createElement('div');
         row.className = 'product-row product-row--grouped-hub';
-        const rel = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
-        let imageUrl = wkRootAssetUrl(rel);
         const isFurniture = product && product._hubKind === 'furniture';
+        const rel = isFurniture
+            ? 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png'
+            : 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+        let imageUrl = wkRootAssetUrl(rel);
         const path = isFurniture ? '/furniture-type.html?type=table-chair-stool-toilet' : '/dome-type.html';
         const typeHref = wkLocalizedInternalLink(path);
         const titleKey = isFurniture ? 'menu_table_chair_stool_toilet' : 'menu_dome_3_folders';
@@ -4890,7 +4906,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.productManager = new ProductManager();
 
     // Shared with tent-type / accessories-page 24-grip grid: one PNG sprite, CSS background-position per cell.
-    window.WK_ACCESSORY_SPRITE_SHEET_REL = 'images/products/accessories/tent-accessories.png';
+    window.WK_ACCESSORY_SPRITE_SHEET_REL = 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';
     /** Keep dedicated photos: 9009 Tent blade flag connector, 9020 Blade flag connector (WK-T12). */
     window.WK_ACCESSORY_SPRITE_EXCLUDE_IDS = new Set([9009, 9020]);
 
@@ -4911,13 +4927,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!Number.isFinite(row) || !Number.isFinite(col) || row < 1 || col < 1) return null;
         const x = (col - 1) * 33.333333;
         const y = (row - 1) * 20;
-        const rel = window.WK_ACCESSORY_SPRITE_SHEET_REL || 'images/products/accessories/tent-accessories.png';
+        const rel = window.WK_ACCESSORY_SPRITE_SHEET_REL || 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';
         const url = typeof window.wkRootAssetUrl === 'function' ? window.wkRootAssetUrl(rel) : ('/' + rel.replace(/^\/+/, ''));
         return { url, size: '400% 600%', position: `${x}% ${y}%` };
     };
 
     // Global helper: pick the best image for cards/listings.
-    // - Racegate: use the uploaded hero.png in its named folder.
+    // - Racegate: use WK_RACEGATE_HERO_PATH (per `type`: v / o / semi).
     // - Accessories (9001–9024 grip SKUs except 9009/9020): sprite sheet URL — UI must crop via WK_getAccessorySpriteBackground (matches 24-grip grid).
     // - Fallback: product.image or first of product.images.
     window.WK_getProductCardImage = function(product) {
@@ -4926,19 +4942,15 @@ document.addEventListener('DOMContentLoaded', () => {
         // Racegate hero images (avoid showing PDF sprites in cards)
         if (String(p.category || '') === 'racegate') {
             const t = String(p.type || '').toLowerCase();
-            const folderMap = {
-                o: 'O Race Gate',
-                v: 'V Race Gate',
-                semi: 'Semi-circle Race Gate'
-            };
-            const folder = folderMap[t];
-            if (folder) {
-                return wkRootAssetUrl(encodeURI(`images/products/racegate/${folder}/hero.png`));
+            const map = window.WK_RACEGATE_HERO_PATH || {};
+            const rel = map[t];
+            if (rel) {
+                return wkRootAssetUrl(encodeURI(rel));
             }
         }
 
         if (window.WK_isAccessorySpriteGridProduct && window.WK_isAccessorySpriteGridProduct(p)) {
-            const rel = window.WK_ACCESSORY_SPRITE_SHEET_REL || 'images/products/accessories/tent-accessories.png';
+            const rel = window.WK_ACCESSORY_SPRITE_SHEET_REL || 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';
             return wkRootAssetUrl(rel);
         }
 

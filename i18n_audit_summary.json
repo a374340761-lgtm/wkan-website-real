@@ -33916,7 +33916,7 @@
     "file": "scripts/accessories-page.js",
     "line": 8,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "const SPRITE = './images/products/accessories/tent-accessories.png';",
+    "snippet": "const SPRITE = './images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -40116,7 +40116,7 @@
     "file": "scripts/flag-types.js",
     "line": 25,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),",
+    "snippet": "heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -40476,7 +40476,7 @@
     "file": "scripts/flag-types.js",
     "line": 70,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),",
+    "snippet": "heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -40956,7 +40956,7 @@
     "file": "scripts/flag-types.js",
     "line": 129,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('Teardropbeachflagpoleshero.jpg'),",
+    "snippet": "heroImage: FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -41204,7 +41204,7 @@
     "file": "scripts/flag-types.js",
     "line": 157,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('featherhero.png'),",
+    "snippet": "heroImage: FLAG_HERO('feather-flag-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -41492,7 +41492,7 @@
     "file": "scripts/flag-types.js",
     "line": 193,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('Outdoor Giant Flaghero.png'),",
+    "snippet": "heroImage: FLAG_HERO('outdoor-giant-flag-pole-display-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -41764,7 +41764,7 @@
     "file": "scripts/flag-types.js",
     "line": 228,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('SquareFlagPolehero.png'),",
+    "snippet": "heroImage: FLAG_HERO('square-flag-pole-fiberglass-outdoor-display-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -41996,7 +41996,7 @@
     "file": "scripts/flag-types.js",
     "line": 255,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('semicirclehero.png'),",
+    "snippet": "heroImage: FLAG_HERO('semicircle-flag-shape-size-guide-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -42268,7 +42268,7 @@
     "file": "scripts/flag-types.js",
     "line": 290,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('sqaurehero.png'),",
+    "snippet": "heroImage: FLAG_HERO('square-flag-shape-size-guide-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -42540,7 +42540,7 @@
     "file": "scripts/flag-types.js",
     "line": 325,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('newfeatherhero.png'),",
+    "snippet": "heroImage: FLAG_HERO('newfeather-flag-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -42772,7 +42772,7 @@
     "file": "scripts/flag-types.js",
     "line": 352,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('featherhero.png'),",
+    "snippet": "heroImage: FLAG_HERO('feather-flag-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -43068,7 +43068,7 @@
     "file": "scripts/flag-types.js",
     "line": 396,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: FLAG_HERO('Backpack Flagshero.png'),",
+    "snippet": "heroImage: FLAG_HERO('backpack-flags-street-display-flags-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -44892,7 +44892,7 @@
     "file": "scripts/flag-types.js",
     "line": 637,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: 'images/products/accessories/flag-accessories/hero.png',",
+    "snippet": "heroImage: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -44900,7 +44900,7 @@
     "file": "scripts/flag-types.js",
     "line": 640,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "FLAG_ACCESSORIES_IMG('1.png'),",
+    "snippet": "FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -44908,7 +44908,7 @@
     "file": "scripts/flag-types.js",
     "line": 641,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "FLAG_ACCESSORIES_IMG('2.png'),",
+    "snippet": "FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -44916,7 +44916,7 @@
     "file": "scripts/flag-types.js",
     "line": 642,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "FLAG_ACCESSORIES_IMG('flags poles.png'),",
+    "snippet": "FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47076,7 +47076,7 @@
     "file": "scripts/main.js",
     "line": 314,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ image: 'images/hero/Waikwantentshero.png', keyPrefix: 'home_hero_1' },",
+    "snippet": "{ image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', keyPrefix: 'home_hero_1' },",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47084,7 +47084,7 @@
     "file": "scripts/main.js",
     "line": 315,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ image: 'images/hero/waikwanflagshero.png', keyPrefix: 'home_hero_2' },",
+    "snippet": "{ image: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', keyPrefix: 'home_hero_2' },",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47092,7 +47092,7 @@
     "file": "scripts/main.js",
     "line": 317,
     "type": "hardcoded_han_in_js",
-    "snippet": "{ image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }",
+    "snippet": "{ image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -47100,7 +47100,7 @@
     "file": "scripts/main.js",
     "line": 317,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }",
+    "snippet": "{ image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', keyPrefix: 'home_hero_3', variant: 'light' }",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47460,7 +47460,7 @@
     "file": "scripts/main.js",
     "line": 441,
     "type": "hardcoded_han_in_js",
-    "snippet": "{ id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },",
+    "snippet": "{ id: 'displays', img: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -47468,7 +47468,7 @@
     "file": "scripts/main.js",
     "line": 441,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ id: 'displays', img: encodeURI('images/hero/伟群快幕秀照片.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },",
+    "snippet": "{ id: 'displays', img: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123'), titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47476,7 +47476,7 @@
     "file": "scripts/main.js",
     "line": 442,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },",
+    "snippet": "{ id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47484,7 +47484,7 @@
     "file": "scripts/main.js",
     "line": 443,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },",
+    "snippet": "{ id: 'flags', img: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -47500,7 +47500,7 @@
     "file": "scripts/main.js",
     "line": 445,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "{ id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }",
+    "snippet": "{ id: 'accessories', img: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -73572,7 +73572,7 @@
     "file": "scripts/product-detail.js",
     "line": 266,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: productImageAbs || toAbs('images/hero/Waikwantentshero.png'),",
+    "snippet": "image: productImageAbs || toAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -76972,7 +76972,7 @@
     "file": "scripts/products.js",
     "line": 7,
     "type": "hardcoded_han_in_js",
-    "snippet": "image: 'images/hero/伟群快幕秀照片.jpeg',",
+    "snippet": "image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -76980,7 +76980,7 @@
     "file": "scripts/products.js",
     "line": 7,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/hero/伟群快幕秀照片.jpeg',",
+    "snippet": "image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -78084,7 +78084,7 @@
     "file": "scripts/products.js",
     "line": 143,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/displays/A Frame/A Frame Pop Up hero.jpg',",
+    "snippet": "image: 'images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -78092,7 +78092,7 @@
     "file": "scripts/products.js",
     "line": 145,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/displays/A Frame/A Frame Pop Up hero.jpg',",
+    "snippet": "'images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -78100,7 +78100,7 @@
     "file": "scripts/products.js",
     "line": 146,
     "type": "hardcoded_han_in_js",
-    "snippet": "'images/products/displays/A Frame/A Frame 注释图.jpg'",
+    "snippet": "'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -78108,7 +78108,7 @@
     "file": "scripts/products.js",
     "line": 146,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/displays/A Frame/A Frame 注释图.jpg'",
+    "snippet": "'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -78116,7 +78116,7 @@
     "file": "scripts/products.js",
     "line": 149,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/displays/A Frame/A Frame Pop Up hero.jpg',",
+    "snippet": "'images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -78124,7 +78124,7 @@
     "file": "scripts/products.js",
     "line": 150,
     "type": "hardcoded_han_in_js",
-    "snippet": "'images/products/displays/A Frame/A Frame 注释图.jpg'",
+    "snippet": "'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -78132,7 +78132,7 @@
     "file": "scripts/products.js",
     "line": 150,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/displays/A Frame/A Frame 注释图.jpg'",
+    "snippet": "'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -78140,7 +78140,7 @@
     "file": "scripts/products.js",
     "line": 152,
     "type": "hardcoded_han_in_js",
-    "snippet": "referenceImage: 'images/products/displays/A Frame/A Frame 注释图.jpg',",
+    "snippet": "referenceImage: 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -78148,7 +78148,7 @@
     "file": "scripts/products.js",
     "line": 152,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "referenceImage: 'images/products/displays/A Frame/A Frame 注释图.jpg',",
+    "snippet": "referenceImage: 'images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -79444,7 +79444,7 @@
     "file": "scripts/products.js",
     "line": 306,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),",
+    "snippet": "image: encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -79452,7 +79452,7 @@
     "file": "scripts/products.js",
     "line": 308,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),",
+    "snippet": "encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -79468,7 +79468,7 @@
     "file": "scripts/products.js",
     "line": 312,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "encodeURI('images/products/displays/front desk/front desk ellipse shape without fabric.png'),",
+    "snippet": "encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -85444,7 +85444,7 @@
     "file": "scripts/products.js",
     "line": 1098,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',",
+    "snippet": "image: 'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -85452,7 +85452,7 @@
     "file": "scripts/products.js",
     "line": 1100,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',",
+    "snippet": "'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -85468,7 +85468,7 @@
     "file": "scripts/products.js",
     "line": 1104,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/light-box-series/Aluminum Profile SEG Light Box-example.jpg',",
+    "snippet": "'images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -88628,7 +88628,7 @@
     "file": "scripts/products.js",
     "line": 1518,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/display-systems/promotion-counter/hero.png',",
+    "snippet": "image: 'images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -88636,7 +88636,7 @@
     "file": "scripts/products.js",
     "line": 1519,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "images: ['images/products/display-systems/promotion-counter/hero.png'],",
+    "snippet": "images: ['images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png'],",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -88644,7 +88644,7 @@
     "file": "scripts/products.js",
     "line": 1520,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "gallery: ['images/products/display-systems/promotion-counter/hero.png'],",
+    "snippet": "gallery: ['images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png'],",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -88988,7 +88988,7 @@
     "file": "scripts/products.js",
     "line": 1565,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),",
+    "snippet": "image: encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -88996,7 +88996,7 @@
     "file": "scripts/products.js",
     "line": 1567,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),",
+    "snippet": "encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -89012,7 +89012,7 @@
     "file": "scripts/products.js",
     "line": 1571,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "encodeURI('images/products/racegate/Semi-circle Race Gate/hero.png'),",
+    "snippet": "encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90068,7 +90068,7 @@
     "file": "scripts/products.js",
     "line": 1712,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90156,7 +90156,7 @@
     "file": "scripts/products.js",
     "line": 1724,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90244,7 +90244,7 @@
     "file": "scripts/products.js",
     "line": 1736,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90332,7 +90332,7 @@
     "file": "scripts/products.js",
     "line": 1748,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90420,7 +90420,7 @@
     "file": "scripts/products.js",
     "line": 1760,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90508,7 +90508,7 @@
     "file": "scripts/products.js",
     "line": 1772,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90596,7 +90596,7 @@
     "file": "scripts/products.js",
     "line": 1784,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90684,7 +90684,7 @@
     "file": "scripts/products.js",
     "line": 1796,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90772,7 +90772,7 @@
     "file": "scripts/products.js",
     "line": 1808,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90860,7 +90860,7 @@
     "file": "scripts/products.js",
     "line": 1820,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -90948,7 +90948,7 @@
     "file": "scripts/products.js",
     "line": 1832,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91036,7 +91036,7 @@
     "file": "scripts/products.js",
     "line": 1844,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91124,7 +91124,7 @@
     "file": "scripts/products.js",
     "line": 1856,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91212,7 +91212,7 @@
     "file": "scripts/products.js",
     "line": 1868,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91300,7 +91300,7 @@
     "file": "scripts/products.js",
     "line": 1880,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91388,7 +91388,7 @@
     "file": "scripts/products.js",
     "line": 1892,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91476,7 +91476,7 @@
     "file": "scripts/products.js",
     "line": 1904,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91564,7 +91564,7 @@
     "file": "scripts/products.js",
     "line": 1916,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91652,7 +91652,7 @@
     "file": "scripts/products.js",
     "line": 1928,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91740,7 +91740,7 @@
     "file": "scripts/products.js",
     "line": 1940,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91828,7 +91828,7 @@
     "file": "scripts/products.js",
     "line": 1952,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -91916,7 +91916,7 @@
     "file": "scripts/products.js",
     "line": 1964,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -92004,7 +92004,7 @@
     "file": "scripts/products.js",
     "line": 1976,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -92092,7 +92092,7 @@
     "file": "scripts/products.js",
     "line": 1988,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/accessories/tent-accessories.png',",
+    "snippet": "image: 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -93804,7 +93804,7 @@
     "file": "scripts/products.js",
     "line": 2185,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/custom/table-covers/table cover1.jpg',",
+    "snippet": "image: 'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -93812,7 +93812,7 @@
     "file": "scripts/products.js",
     "line": 2187,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/custom/table-covers/table cover1.jpg',",
+    "snippet": "'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -93820,7 +93820,7 @@
     "file": "scripts/products.js",
     "line": 2188,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/custom/table-covers/tablecover2.jpg',",
+    "snippet": "'images/products/custom/table-covers/custom-printed-table-cover-trade-show-booth.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -93828,7 +93828,7 @@
     "file": "scripts/products.js",
     "line": 2189,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/custom/table-covers/tablecover3.jpg'",
+    "snippet": "'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -93988,7 +93988,7 @@
     "file": "scripts/products.js",
     "line": 2215,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/custom/table-covers/tablecover3.jpg',",
+    "snippet": "image: 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -94108,7 +94108,7 @@
     "file": "scripts/products.js",
     "line": 2229,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/custom/table-covers/tablecover3.jpg',",
+    "snippet": "image: 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -94228,7 +94228,7 @@
     "file": "scripts/products.js",
     "line": 2243,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "image: 'images/products/custom/table-covers/tablecover3.jpg',",
+    "snippet": "image: 'images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -100196,7 +100196,7 @@
     "file": "scripts/seo.js",
     "line": 130,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "var defaultImg = 'images/hero/Waikwantentshero.png';",
+    "snippet": "var defaultImg = 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png';",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -102804,7 +102804,7 @@
     "file": "scripts/tent-types.js",
     "line": 91,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/accessories/tent-accessories.png'",
+    "snippet": "'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -103100,7 +103100,7 @@
     "file": "scripts/tent-types.js",
     "line": 138,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/accessories/tent-accessories.png'",
+    "snippet": "'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -103388,7 +103388,7 @@
     "file": "scripts/tent-types.js",
     "line": 184,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/accessories/tent-accessories.png'",
+    "snippet": "'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -103700,7 +103700,7 @@
     "file": "scripts/tent-types.js",
     "line": 235,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/accessories/tent-accessories.png'",
+    "snippet": "'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -104044,7 +104044,7 @@
     "file": "scripts/tent-types.js",
     "line": 283,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/accessories/tent-accessories.png'",
+    "snippet": "'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -104332,7 +104332,7 @@
     "file": "scripts/tent-types.js",
     "line": 326,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "'images/products/accessories/tent-accessories.png'",
+    "snippet": "'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -106076,7 +106076,7 @@
     "file": "scripts/tent-types.js",
     "line": 605,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "heroImage: 'images/products/accessories/tent-accessories1/tentsaccessorieshero.jpg',",
+    "snippet": "heroImage: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {

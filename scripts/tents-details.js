@@ -6,11 +6,11 @@
   window.TENTS_DETAILS = {
     images: [
       {
-        src: 'images/products/tents/page_5_img_10.png',
+        src: 'images/products/tents/folding40/40mm-hexagon-aluminum-frame-specification.png',
         captionKey: 'tents_detail_wk_t40_sizes'
       },
       {
-        src: 'images/products/tents/page_5_img_11.png',
+        src: 'images/products/tents/folding50/50mm-hexagon-aluminum-frame-specification.png',
         captionKey: 'tents_detail_wk_t50_sizes'
       },
       {

@@ -164,7 +164,7 @@
     var title = String(document.title || '').trim() || 'WaiKwan';
     var desc = getDescription();
 
-    var defaultImg = 'images/hero/Waikwantentshero.png';
+    var defaultImg = 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png';
     var ogImg = (document.head.querySelector('meta[property="og:image"]') || document.head.querySelector('meta[name="twitter:image"]'));
     var imgContent = (ogImg && ogImg.getAttribute('content')) || defaultImg;
 

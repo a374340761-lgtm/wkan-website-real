@@ -14,6 +14,20 @@
     return x.startsWith('/') ? x : '/' + x;
   }
 
+  /** Brochure p.1 (furniture line): folding table & chair set — page hero, not the full p.17 sheet. */
+  function furnitureHeroAssetUrl() {
+    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+    if (typeof window.wkRootAssetUrl === 'function') {
+      try {
+        return window.wkRootAssetUrl(rel);
+      } catch (e) {
+        /* ignore */
+      }
+    }
+    const x = rel.replace(/^\.\//, '');
+    return x.startsWith('/') ? x : '/' + x;
+  }
+
   function getCurrentLang() {
     try {
       if (typeof window.wkResolvePageLanguage === 'function') {
@@ -157,8 +171,9 @@
     const img = document.getElementById('furnitureBrochureImg');
     const btn = document.getElementById('furnitureBrochureBtn');
     const brochure = brochureAssetUrl();
+    const heroUrl = furnitureHeroAssetUrl();
 
-    if (hero) hero.src = brochure;
+    if (hero) hero.src = heroUrl;
     if (img) img.src = brochure;
 
     if (btn) {

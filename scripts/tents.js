@@ -4,7 +4,7 @@ const tents = [
     id: 2001,
     name: "30 Square Tube Iron Frame Tent",
     category: "stock",
-    image: "images/products/tents/30square-tube-frame-iron.png",
+    image: "images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png",
     material: "Iron",
     detailPage: "tent-type.html?type=folding30"
   },
@@ -12,7 +12,7 @@ const tents = [
     id: 2002,
     name: "40 Hexagon Aluminum Frame Tent",
     category: "stock",
-    image: "images/products/tents/40square-tube-frame-aluminum.png",
+    image: "images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png",
     material: "Aluminum",
     detailPage: "tent-type.html?type=folding40"
   },
@@ -20,7 +20,7 @@ const tents = [
     id: 2003,
     name: "50 Hexagon Aluminum Frame Tent",
     category: "stock",
-    image: "images/products/tents/50square-tube-frame-aluminum.png",
+    image: "images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png",
     material: "Aluminum",
     detailPage: "tent-type.html?type=folding50"
   }

@@ -78,10 +78,10 @@ function primaryImageForSeo(p) {
     id <= 9024 &&
     !SPRITE_EXCLUDE.has(id)
   ) {
-    return rootAssetAbs('images/products/accessories/tent-accessories.png');
+    return rootAssetAbs('images/products/accessories/canopy-tent-accessories-and-replacement-parts.png');
   }
   const raw = p.image || (Array.isArray(p.images) && p.images[0]) || '';
-  return raw ? rootAssetAbs(raw) : rootAssetAbs('images/hero/Waikwantentshero.png');
+  return raw ? rootAssetAbs(raw) : rootAssetAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png');
 }
 
 function enTitle(p) {

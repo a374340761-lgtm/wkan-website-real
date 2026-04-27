@@ -41,7 +41,7 @@ Audit scope: static HTML, `scripts/seo.js`, `scripts/product-detail.js`, `sitema
 
 ### 4. Case sensitivity
 
-- Paths use **lowercase** `.html` and folder names (`seo/`, `news/`). Hero image filenames vary (`Waikwantentshero.png` vs `waikwanflagshero.png`) — distinct files; **no** duplicate-casing conflict detected in references.
+- Paths use **lowercase** `.html` and folder names (`seo/`, `news/`). Hero image filenames vary (`pop-up-canopy-tent-10x10-blue-trade-show-booth.png` vs `custom-beach-flags-feather-teardrop-flags-outdoor.png`) — distinct files; **no** duplicate-casing conflict detected in references.
 
 ### 5. Parameterized URLs & canonicals
 

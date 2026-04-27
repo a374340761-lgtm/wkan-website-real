@@ -816,7 +816,9 @@
     /** Collapse table/chair/stool/sanitation + DOME 3 SKUs into two type-hub cards (same brochure hero as type pages). */
     const AP_CATALOG_GROUP_SUB_FURNITURE = 'table-chair-stool-toilet';
     const AP_CATALOG_GROUP_SUB_DOME = 'dome-3-folders';
-    const AP_CATALOG_GROUP_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+    const AP_CATALOG_GROUP_FURNITURE_HERO_REL =
+        'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+    const AP_CATALOG_GROUP_DOME_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
 
     function getApProductSubSlug(p) {
         if (!p || p._isApGroupedHub) return '';
@@ -863,7 +865,7 @@
         const quoteParam = encodeURIComponent(isFurniture ? 'Tables-Chairs-Stools-Sanitation' : 'DOME-3-Folding-Series');
         const quoteUrl = apLocalizedPageHref(`/contact-us.html?product=${quoteParam}`) + '#getQuoteForm';
 
-        let imgSrc = AP_CATALOG_GROUP_HERO_REL;
+        let imgSrc = isFurniture ? AP_CATALOG_GROUP_FURNITURE_HERO_REL : AP_CATALOG_GROUP_DOME_HERO_REL;
         if (typeof window.wkRootAssetUrl === 'function') imgSrc = window.wkRootAssetUrl(imgSrc);
 
         return `

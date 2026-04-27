@@ -22,7 +22,7 @@
                 'Water proof',
                 'Fire retardant (DIN4102-1_B2&CPAI-84)'
             ].join('\n'),
-            heroImage: 'images/products/tents/star/hero.png',
+            heroImage: 'images/products/tents/star/star-shade-tent-outdoor-event-shelter-hero.png',
             pdfPage: 6
         },
         awning: {
@@ -30,7 +30,7 @@
             nameEn: 'Awning Tent',
             descriptionZh: '',
             descriptionEn: '',
-            heroImage: 'images/products/tents/awning/hero.png',
+            heroImage: 'images/products/tents/awning/awning-tent-outdoor-event-hero.png',
             pdfPage: 6
         },
         six_sided: {
@@ -38,7 +38,7 @@
             nameEn: 'Six-sided Tent',
             descriptionZh: '',
             descriptionEn: '',
-            heroImage: 'images/products/tents/six-sided/hero.png',
+            heroImage: 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png',
             pdfPage: 6
         }
     };

@@ -183,9 +183,9 @@ def primary_image(p: dict) -> str:
         and 9001 <= idn <= 9024
         and idn not in SPRITE_EXCLUDE
     ):
-        return root_asset_abs("images/products/accessories/tent-accessories.png")
+        return root_asset_abs("images/products/accessories/canopy-tent-accessories-and-replacement-parts.png")
     raw = p["image"] or p["firstImage"]
-    return root_asset_abs(raw) if raw else root_asset_abs("images/hero/Waikwantentshero.png")
+    return root_asset_abs(raw) if raw else root_asset_abs("images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png")
 
 
 def canonical_sku(p: dict) -> str:

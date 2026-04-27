@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (accessorySpriteBg) {
             const rel = (typeof window.WK_ACCESSORY_SPRITE_SHEET_REL === 'string' && window.WK_ACCESSORY_SPRITE_SHEET_REL)
                 ? window.WK_ACCESSORY_SPRITE_SHEET_REL
-                : 'images/products/accessories/tent-accessories.png';
+                : 'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png';
             imgsList = [rel];
         }
         const primaryImagePath = imgsList[0] || product.image || '';
@@ -319,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: name,
             url: canonicalProductUrl,
             description: (shortText || description || name).substring(0, 500),
-            image: productImageAbs || toAbs('images/hero/Waikwantentshero.png'),
+            image: productImageAbs || toAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png'),
             sku: String(product.sku || product.id || ''),
             brand: { '@type': 'Brand', name: 'WaiKwan' },
             manufacturer: {

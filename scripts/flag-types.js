@@ -23,7 +23,7 @@
         hubDescZh: '多段式玻纤旗杆，多种高度可选，适配水滴/刀旗。',
         storyEn: 'The third generation beach flag poles. Multiple heights available for different flag shapes.',
         storyZh: '第三代沙滩旗杆，多种高度可选，适配不同旗形。',
-        heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
+        heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),
         guideImage: `${PDF_BASE}/10.png`,
         infoBlocks: [
           {
@@ -69,7 +69,7 @@
         hubDescZh: '铝管段 + 玻纤段组合，两种版本可选。',
         storyEn: 'Hybrid aluminium + fiberglass poles for improved rigidity and portability.',
         storyZh: '铝管与玻纤组合旗杆，兼顾强度与便携。',
-        heroImage: FLAG_HERO('Beach Flag Poles Fiberglass Pole Aluminium Fiberglass hero.png'),
+        heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),
         guideImage: `${PDF_BASE}/10.png`,
         variants: [
           {
@@ -129,7 +129,7 @@
         hubDescZh: '全玻纤水滴旗杆，适合户外活动。',
         storyEn: 'Fully fiberglass pole sets for teardrop beach flags.',
         storyZh: '全玻纤旗杆套装（水滴旗）。',
-        heroImage: FLAG_HERO('Teardropbeachflagpoleshero.jpg'),
+        heroImage: FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg'),
         guideImage: `${PDF_BASE}/11.png`,
         specTable: {
           columns: [
@@ -158,7 +158,7 @@
         hubDescZh: '全玻纤刀旗杆，适合户外活动。',
         storyEn: 'Fully fiberglass pole sets for feather beach flags.',
         storyZh: '全玻纤旗杆套装（刀旗）。',
-        heroImage: FLAG_HERO('featherhero.png'),
+        heroImage: FLAG_HERO('feather-flag-hero.png'),
         guideImage: `${PDF_BASE}/11.png`,
         specTable: {
           columns: [
@@ -195,7 +195,7 @@
           '伸缩铝旗杆插入可注水底座以增强稳定性。',
           '旗面通过顶帽与环固定，可随风向自由旋转。'
         ].join('\n'),
-        heroImage: FLAG_HERO('Outdoor Giant Flaghero.png'),
+        heroImage: FLAG_HERO('outdoor-giant-flag-pole-display-hero.png'),
         guideImage: `${PDF_BASE}/12.png`,
         specTable: {
           columns: [
@@ -231,7 +231,7 @@
         hubDescZh: '方型玻纤旗杆，适配方旗/矩形旗。',
         storyEn: 'Square flag poles in fiberglass material.',
         storyZh: '方型沙滩旗杆（玻纤材质）。',
-        heroImage: FLAG_HERO('SquareFlagPolehero.png'),
+        heroImage: FLAG_HERO('square-flag-pole-fiberglass-outdoor-display-hero.png'),
         guideImage: `${PDF_BASE}/12.png`,
         specTable: {
           columns: [
@@ -259,7 +259,7 @@
         hubDescZh: '美式铝杆（半圆）。',
         storyEn: 'Semicircle American aluminium poles. Optional diameters/thickness available.',
         storyZh: '半圆美式铝杆，可选不同直径/壁厚。',
-        heroImage: FLAG_HERO('semicirclehero.png'),
+        heroImage: FLAG_HERO('semicircle-flag-shape-size-guide-hero.png'),
         guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
@@ -295,7 +295,7 @@
         hubDescZh: '美式铝杆（方型）。',
         storyEn: 'Square American aluminium poles. Optional diameters/thickness available.',
         storyZh: '方型美式铝杆，可选不同直径/壁厚。',
-        heroImage: FLAG_HERO('sqaurehero.png'),
+        heroImage: FLAG_HERO('square-flag-shape-size-guide-hero.png'),
         guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
@@ -331,7 +331,7 @@
         hubDescZh: '新型刀旗铝杆，3m/4m/5m 可选。',
         storyEn: 'New feather aluminium poles with defined graphic sizes.',
         storyZh: '新型刀旗铝杆，对应旗面尺寸明确。',
-        heroImage: FLAG_HERO('newfeatherhero.png'),
+        heroImage: FLAG_HERO('newfeather-flag-hero.png'),
         guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
@@ -359,7 +359,7 @@
         hubDescZh: '美式铝杆（刀旗/水滴）。',
         storyEn: 'American aluminium poles for feather/teardrop flags.',
         storyZh: '刀旗/水滴旗美式铝杆。',
-        heroImage: FLAG_HERO('featherhero.png'),
+        heroImage: FLAG_HERO('feather-flag-hero.png'),
         guideImage: `${PDF_BASE}/13.png`,
         specTable: {
           columns: [
@@ -404,7 +404,7 @@
           '便携式旗帜展示解决方案，适用于街头推广、活动宣传与品牌展示。',
           '包含背包旗系列与街旗/展示旗系列，多种造型与型号可选。'
         ].join('\n'),
-        heroImage: FLAG_HERO('Backpack Flagshero.png'),
+        heroImage: FLAG_HERO('backpack-flags-street-display-flags-hero.png'),
         guideImage: `${PDF_BASE}/16.png`,
         specTables: [
           {
@@ -471,12 +471,12 @@
         storyEn: 'A full range of bases and accessories for beach flags.',
         storyZh: '沙滩旗配套底座与配件全系列。',
         // Top hero (P1): original brochure-style hero — unchanged
-        heroImage: 'images/products/accessories/flag-accessories/hero.png',
+        heroImage: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png',
         // Real product photos only in the example block below (not the hero)
         exampleImages: [
-          FLAG_ACCESSORIES_IMG('1.png'),
-          FLAG_ACCESSORIES_IMG('2.png'),
-          FLAG_ACCESSORIES_IMG('flags poles.png'),
+          FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png'),
+          FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.png'),
+          FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.png'),
           `${CATALOG_ALLPAGE_BASE}/14.png`,
           `${CATALOG_ALLPAGE_BASE}/15.png`
         ],

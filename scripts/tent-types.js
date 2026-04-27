@@ -94,12 +94,12 @@
                 materialEn: 'Iron',
                 materialZh: '铁',
                 accessoriesImages: [
-                    'images/products/accessories/tent-accessories.png'
+                    'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
                     CATALOG_PAGE(5)
                 ],
-                heroImage: 'images/products/tents/folding30/hero.png',
+                heroImage: 'images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png',
                 pdfPage: 5
             },
             {
@@ -141,12 +141,12 @@
                 materialEn: 'Aluminum',
                 materialZh: '铝合金',
                 accessoriesImages: [
-                    'images/products/accessories/tent-accessories.png'
+                    'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
                     CATALOG_PAGE(5)
                 ],
-                heroImage: 'images/products/tents/folding40/hero.png',
+                heroImage: 'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png',
                 pdfPage: 5
             },
             {
@@ -187,12 +187,12 @@
                 materialEn: 'Aluminum',
                 materialZh: '铝合金',
                 accessoriesImages: [
-                    'images/products/accessories/tent-accessories.png'
+                    'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
                     CATALOG_PAGE(5)
                 ],
-                heroImage: 'images/products/tents/folding50/hero.png',
+                heroImage: 'images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png',
                 pdfPage: 5
             }
         ],
@@ -235,10 +235,10 @@
                 descriptionZh: '防水阻燃',
                 // Keep description concise here; shared connection method is rendered in the View Type detail panel.
                 descriptionEn: 'Waterproof & fire retardant',
-                heroImage: 'images/products/tents/star/startenttype1hero.png',
+                heroImage: 'images/products/tents/star/star-shade-tent-outdoor-event-shelter-hero.png',
                 accessoriesImages: [
-                    'images/products/tents/star/startentaccessories.png',
-                    'images/products/accessories/tent-accessories.png'
+                    'images/products/tents/star/star-shade-tent-poles-base-accessories.png',
+                    'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
                     CATALOG_PAGE(5)
@@ -283,10 +283,10 @@
                 },
                 descriptionZh: '防水阻燃',
                 descriptionEn: 'Waterproof & fire retardant',
-                heroImage: 'images/products/tents/star/startenttype2hero.png',
+                heroImage: 'images/products/tents/star/star-shade-tent-type-2-promotional-event-hero.png',
                 accessoriesImages: [
-                    'images/products/tents/star/startentaccessories.png',
-                    'images/products/accessories/tent-accessories.png'
+                    'images/products/tents/star/star-shade-tent-poles-base-accessories.png',
+                    'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
                     CATALOG_PAGE(5)
@@ -326,10 +326,10 @@
                 },
                 descriptionZh: '防水阻燃',
                 descriptionEn: 'Waterproof & fire retardant',
-                heroImage: 'images/products/tents/awning/hero.png',
+                heroImage: 'images/products/tents/awning/awning-tent-outdoor-event-hero.png',
                 accessoriesImages: [
-                    'images/products/tents/star/startentaccessories.png',
-                    'images/products/accessories/tent-accessories.png'
+                    'images/products/tents/star/star-shade-tent-poles-base-accessories.png',
+                    'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
                     CATALOG_PAGE(5)
@@ -374,7 +374,7 @@
                 guideImages: [
                     CATALOG_PAGE(5)
                 ],
-                heroImage: 'images/products/tents/six-sided/hero.png',
+                heroImage: 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png',
                 pdfPage: 6
             }
         ],
@@ -509,7 +509,7 @@
                     'Inflatable tent series: portable and fast to set up for promotions, exhibitions and brand activations.',
                     'Supports walls, connectors, LED options and multi-unit combinations to build a complete branded space.'
                 ].join('\n'),
-                heroImage: 'images/products/tents/inflatable/hero.jpg',
+                heroImage: 'images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg',
                 guideImages: [INFLATABLE_BROCHURE_GUIDE],
                 pdfPage: 8,
                 infoBlocks: [
@@ -596,7 +596,7 @@
             ];
         })(),
 
-        // Tent accessories hub — single full-range listing (XLS + catalog p.4); hero: tentsaccessorieshero.jpg
+        // Tent accessories hub — single full-range listing (XLS + catalog p.4); hero: camping-tent-accessories-hero.jpg
         accessories: [
             (function () {
                 const CATALOG04 = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/04.png');
@@ -608,7 +608,7 @@
                     hubDescEn: 'Weights, tie-downs, connectors, blade-flag kits, and more.',
                     storyZh: '下表为编码、名称与备注；详情页可切换中英文。',
                     storyEn: 'Code, name, and specs below; switch language in the page header.',
-                    heroImage: 'images/products/accessories/tent-accessories1/tentsaccessorieshero.jpg',
+                    heroImage: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',
                     exampleImages: [CATALOG04],
                     skipCommonDetails: true,
                     skipAccessoriesBlock: true,

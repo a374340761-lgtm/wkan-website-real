@@ -378,24 +378,24 @@ function getHomeHeroSlides() {
     // Use real filenames from /images/hero (verified in repo)
     return [
         {
-            image: 'images/hero/广交会宣传图hero.png',
+            image: 'images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png',
             keyPrefix: 'home_hero_0',
             /* Dark photo: keep default (white) copy; do not use wk-hero-slide--light */
             secondaryHref: 'all-products.html'
         },
         {
-            image: 'images/hero/Waikwantentshero.png',
+            image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png',
             keyPrefix: 'home_hero_1',
             secondaryHref: 'product-center.html?cat=tents'
         },
         {
-            image: 'images/hero/waikwanflagshero.png',
+            image: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png',
             keyPrefix: 'home_hero_2',
             secondaryHref: 'product-center.html?cat=flags'
         },
         // Cache-bust to ensure the updated JPEG shows immediately.
         {
-            image: 'images/hero/伟群快幕秀照片.jpeg?v=20260123',
+            image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123',
             keyPrefix: 'home_hero_3',
             variant: 'light',
             secondaryHref: 'product-center.html?cat=displays'
@@ -539,11 +539,11 @@ function renderHomeCategoryGrid() {
     // and the product.category IDs present in scripts/products.js.
     // Order matches main buyer journeys: tents → flags → displays → light boxes → accessories
     const categories = [
-        { id: 'tents', img: 'images/hero/Waikwantentshero.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
-        { id: 'flags', img: 'images/hero/waikwanflagshero.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-        { id: 'displays', img: 'images/hero/伟群快幕秀照片.jpeg?v=20260123', titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
+        { id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+        { id: 'flags', img: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+        { id: 'displays', img: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
         { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
-        { id: 'accessories', img: 'images/products/accessories/flag-accessories/hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+        { id: 'accessories', img: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
 
     grid.innerHTML = '';

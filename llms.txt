@@ -1,25 +1,36 @@
-# WaiKwan (waikwantent.com)
+# WaiKwan Tent
 
-Guangxi WaiKwan Tent Manufacturing Co., Ltd. is a B2B factory-direct manufacturer of custom outdoor and exhibition display products. The site supports OEM, ODM, and export programs for distributors, event companies, print shops, and resellers.
+WaiKwan Tent is the website of Guangxi WaiKwan Tent Manufacturing Co., Ltd., an OEM/ODM manufacturer in China for custom canopy tents, beach flags, flag poles, portable display systems and event display products.
 
-## Product focus
+## Company summary
+WaiKwan manufactures custom printed event shelter and display products for distributors, event teams, advertising suppliers, importers and global brands. Core strengths described on the site include factory-direct production, custom printing, bulk order support, OEM/ODM service and export-ready packaging.
+
+## Important pages
+- https://www.waikwantent.com/ - Homepage and main product overview.
+- https://www.waikwantent.com/company-profile.html - AI-readable company entity profile and buyer fit.
+- https://www.waikwantent.com/manufacturing-capabilities.html - OEM/ODM process, printing workflow, materials, packing and export preparation.
+- https://www.waikwantent.com/faq.html - Buyer FAQ for products, quotes, artwork, samples and shipping.
+- https://www.waikwantent.com/custom-canopy-tent-manufacturer.html - Custom canopy tent and folding tent manufacturing page.
+- https://www.waikwantent.com/pop-up-canopy-tent.html - Pop-up canopy tent product line page.
+- https://www.waikwantent.com/beach-flag-supplier.html - Beach flags, feather flags, teardrop flags, poles and bases.
+- https://www.waikwantent.com/portable-display-systems.html - Portable display systems, backdrops, counters and trade show displays.
+- https://www.waikwantent.com/canopy-tent-buying-guide.html - Buyer guide for canopy tent sizes, frames, printing and packing.
+- https://www.waikwantent.com/beach-flag-buying-guide.html - Buyer guide for flag shapes, poles, bases and printing.
+- https://www.waikwantent.com/portable-display-buying-guide.html - Buyer guide for portable displays and trade show kits.
+- https://www.waikwantent.com/contact-us.html - Contact and quotation request page.
+
+## Main products
 - Custom canopy tents
-- Pop up canopy tents
-- Beach flags and poles
+- Pop-up canopy tents
+- Folding tents
+- Beach flags and flag poles
+- Feather flags and teardrop flags
 - Portable display systems
-- SEG light boxes
+- Fabric pop-up backdrops
+- Tension fabric counters
+- Light boxes
+- Advertising arches and race gates
+- Event display products
 
-## Canonical site
-https://www.waikwantent.com/
-
-## Key URLs
-- https://www.waikwantent.com/
-- https://www.waikwantent.com/custom-canopy-tent-manufacturer.html
-- https://www.waikwantent.com/canopy-tents.html
-- https://www.waikwantent.com/pop-up-canopy-tents.html
-- https://www.waikwantent.com/beach-flag-supplier.html
-- https://www.waikwantent.com/portable-display-systems.html
-- https://www.waikwantent.com/seg-light-box-manufacturer.html
-
-## Contact
-Use the site contact form, email on-page, or WhatsApp links in the site footer for quotes and program details.
+## Quote information
+For a useful quotation, provide product type, size, quantity, artwork or logo files, material preference, printing requirements, packaging needs and destination if available.

@@ -1767,7 +1767,7 @@ function enhanceRacegateDropdown() {
 
         const lightboxA = Array.from(menu.querySelectorAll(':scope > a[href]')).find((a) => {
             const h = (a.getAttribute('href') || '').toLowerCase();
-            return h.includes('products-lightbox.html') || h.includes('cat=lightbox') || h.includes('category=lightbox');
+            return h.includes('cat=lightbox') || h.includes('category=lightbox');
         });
 
         const wrapper = document.createElement('div');
@@ -1965,8 +1965,7 @@ function ensureProductCenterDropdownHasLightbox() {
     const hasLightboxLink = (menu) => {
         return Array.from(menu.querySelectorAll('a[href]')).some((a) => {
             const href = (a.getAttribute('href') || '').toLowerCase();
-            return href.includes('products-lightbox.html')
-                || (href.includes('product-center.html') && (href.includes('cat=lightbox') || href.includes('category=lightbox')));
+            return href.includes('product-center.html') && (href.includes('cat=lightbox') || href.includes('category=lightbox'));
         });
     };
 

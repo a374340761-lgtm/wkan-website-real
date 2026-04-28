@@ -36,6 +36,7 @@
     '/custom-canopy-tent-manufacturer.html': true,
     '/custom-printed-canopy-tents.html': true,
     '/canopy-tents.html': true,
+    '/pop-up-canopy-tent.html': true,
     '/pop-up-canopy-tents.html': true,
     '/event-canopy-tents.html': true,
     '/pop-up-canopy-tent-manufacturer.html': true,
@@ -253,6 +254,11 @@
   }
 
   function injectHreflang() {
+    if (document.querySelector('link[rel="alternate"][hreflang="en"]:not([data-wk-hreflang])')) {
+      removeOldHreflang();
+      return;
+    }
+
     var pathname = normPath(window.location.pathname);
     var rawSearch = window.location.search || '';
     var search = rawSearch;

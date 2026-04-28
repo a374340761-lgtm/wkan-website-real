@@ -631,7 +631,7 @@
         <div class="tent-type-card tent-type-card--pc-subhub">
           <a class="tent-type-card__link" href="${listHref}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${imgUrl}" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${imgUrl}" alt="${escapeHtml(s.name || 'Product subcategory image')}" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">
@@ -656,7 +656,7 @@
         <div class="tent-type-card tent-type-card--pc-grouped">
           <a class="tent-type-card__link" href="${href}" aria-label="${aria}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${groupedFurnitureHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${groupedFurnitureHeroSrc}" alt="${aria}" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">
@@ -683,7 +683,7 @@
         <div class="tent-type-card tent-type-card--pc-grouped">
           <a class="tent-type-card__link" href="${href}" aria-label="${aria}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${groupedDomeHeroSrc}" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${groupedDomeHeroSrc}" alt="${aria}" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">
@@ -864,7 +864,7 @@
         <div class="tent-type-card">
           <a class="tent-type-card__link" href="${escapeHtml(detailHref)}" aria-label="${escapeHtml(title)}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${escapeHtml(img)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${escapeHtml(img)}" alt="${escapeHtml(title)}" loading="lazy" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">
@@ -947,7 +947,7 @@
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
                   <div class="tent-type-card__imgWrap">
-                    <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                    <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="${safe(title)}" loading="lazy" onerror="this.style.display='none'" />
                   </div>
                 </a>
                 <div class="tent-type-card__body">
@@ -1018,7 +1018,7 @@
           <div class="tent-type-card">
             <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
               <div class="tent-type-card__imgWrap">
-                <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="${safe(title)}" loading="lazy" onerror="this.style.display='none'" />
               </div>
             </a>
             <div class="tent-type-card__body">
@@ -1061,7 +1061,7 @@
               <div class="tent-type-card">
                 <a class="tent-type-card__link" href="${viewTypeHref}" aria-label="${safe(title)}">
                   <div class="tent-type-card__imgWrap">
-                    <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                    <img class="tent-type-card__img" src="${wkAssetUrl(item.heroImage)}" alt="${safe(title)}" loading="lazy" onerror="this.style.display='none'" />
                   </div>
                 </a>
                 <div class="tent-type-card__body">

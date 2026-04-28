@@ -380,23 +380,27 @@ function getHomeHeroSlides() {
         {
             image: 'images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png',
             keyPrefix: 'home_hero_0',
+            imageAlt: 'WaiKwan Canton Fair 2026 invitation for booth 12.1F29-30',
             /* Dark photo: keep default (white) copy; do not use wk-hero-slide--light */
             secondaryHref: 'all-products.html'
         },
         {
             image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png',
             keyPrefix: 'home_hero_1',
+            imageAlt: 'Custom printed 10x10 pop-up canopy tent for outdoor event booth',
             secondaryHref: 'product-center.html?cat=tents'
         },
         {
             image: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png',
             keyPrefix: 'home_hero_2',
+            imageAlt: 'Custom beach flags with feather and teardrop flag pole systems',
             secondaryHref: 'product-center.html?cat=flags'
         },
         // Cache-bust to ensure the updated JPEG shows immediately.
         {
             image: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123',
             keyPrefix: 'home_hero_3',
+            imageAlt: 'Aluminum profile fabric light box display wall for trade show booth',
             variant: 'light',
             secondaryHref: 'product-center.html?cat=displays'
         }
@@ -438,8 +442,10 @@ function renderHomeHeroSlider() {
                     </div>`
                     : '';
 
+            const imageAlt = String(s.imageAlt || '').replace(/"/g, '&quot;');
+
             slide.innerHTML = `
-            <div class="wk-hero-bg" aria-hidden="true"></div>
+            <div class="wk-hero-bg" role="img" aria-label="${imageAlt}"></div>
             <div class="wk-hero-overlay" aria-hidden="true"></div>
             <div class="wk-hero-inner">
                 <div class="wk-hero-content">
@@ -539,11 +545,11 @@ function renderHomeCategoryGrid() {
     // and the product.category IDs present in scripts/products.js.
     // Order matches main buyer journeys: tents → flags → displays → light boxes → accessories
     const categories = [
-        { id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
-        { id: 'flags', img: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
-        { id: 'displays', img: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
-        { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
-        { id: 'accessories', img: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
+        { id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', imgAlt: 'Custom printed pop-up canopy tent for outdoor events', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+        { id: 'flags', img: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', imgAlt: 'Custom beach flags with feather and teardrop pole systems', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
+        { id: 'displays', img: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', imgAlt: 'Portable fabric display wall and light box system', titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
+        { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', imgAlt: 'SEG light box display booth at exhibition', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },
+        { id: 'accessories', img: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png', imgAlt: 'Beach flag bases and outdoor display accessories', titleKey: 'home_cat_accessories_title', descKey: 'home_cat_accessories_desc' }
     ];
 
     grid.innerHTML = '';
@@ -557,8 +563,9 @@ function renderHomeCategoryGrid() {
         const catalogHref = wkLocalizedInternalLinkSafe(`/all-products.html?cat=${encodeURIComponent(c.id)}`);
 
         const imgSrc = wkPublicAssetUrl(c.img);
+        const imgAlt = String(c.imgAlt || '').replace(/"/g, '&quot;');
         const mediaHtml = imgSrc
-            ? `<img class="wk-card-img" src="${imgSrc}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />`
+            ? `<img class="wk-card-img" src="${imgSrc}" alt="${imgAlt}" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />`
             : `<div class="wk-card-placeholder" aria-hidden="true"><i class="fas fa-layer-group"></i></div>`;
 
         wrap.innerHTML = `
@@ -632,7 +639,7 @@ function renderTrustedByWall() {
         logos.slice(0, 12).forEach((src) => {
             const item = document.createElement('div');
             item.className = 'wk-logo-badge';
-            item.innerHTML = `<img class="wk-logo-img" src="${wkPublicAssetUrl(String(src))}" alt="" loading="lazy" onerror="this.style.display='none'" />`;
+            item.innerHTML = `<img class="wk-logo-img" src="${wkPublicAssetUrl(String(src))}" alt="Customer brand logo" loading="lazy" onerror="this.style.display='none'" />`;
             grid.appendChild(item);
         });
         return;
@@ -750,7 +757,7 @@ function renderHomeBestSellers() {
             card.className = 'wk-card wk-product-card';
             card.innerHTML = `
                 <a class="wk-product-media" href="${primaryHref}" aria-label="${String(name).replace(/"/g, '&quot;')}">
-                    <img class="wk-product-img" src="${img}" alt="" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
+                    <img class="wk-product-img" src="${img}" alt="${String(name).replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
                 </a>
                 <div class="wk-card-body">
                     <div class="wk-product-title">${name}</div>

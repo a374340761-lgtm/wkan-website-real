@@ -868,9 +868,13 @@
         let imgSrc = isFurniture ? AP_CATALOG_GROUP_FURNITURE_HERO_REL : AP_CATALOG_GROUP_DOME_HERO_REL;
         if (typeof window.wkRootAssetUrl === 'function') imgSrc = window.wkRootAssetUrl(imgSrc);
 
+        const heroAlt = isFurniture
+            ? 'Folding tables, chairs and event furniture catalog'
+            : 'Six-sided canopy tent event booth series';
+
         return `
                 <article class="ap-card ap-card--grouped-hub" data-cat="${dataCat}" data-ap-hub="${p._hubKind}">
-                    <div class="ap-img"><img src="${safeText(imgSrc)}" alt="" loading="lazy" onerror="this.src='/images/placeholder.svg'"></div>
+                    <div class="ap-img"><img src="${safeText(imgSrc)}" alt="${safeText(heroAlt)}" loading="lazy" onerror="this.src='/images/placeholder.svg'"></div>
                     <div class="ap-body">
                         <h3><span class="zh" data-translate="${titleKey}"></span><span class="en" data-translate="${titleKey}"></span></h3>
                         <p class="ap-meta ap-meta--hub-desc" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;">
@@ -1057,7 +1061,7 @@
                 const y = (r - 1) * 20;
                 imgHtml = `<div class="ap-img"><div class="sprite-thumb" style="background-image:url('${imgSrc}');background-position:${x}% ${y}%;background-size:400% 600%;"></div></div>`;
             } else {
-                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='/images/placeholder.svg'"></div>`;
+                imgHtml = `<div class="ap-img"><img src="${safeText(imgSrc)}" alt="${safeText(name)}" loading="lazy" onerror="this.src='/images/placeholder.svg'"></div>`;
             }
 
             return `
@@ -1139,7 +1143,7 @@
                     const key = img.captionKey;
                     return `
                         <figure class="tents-details__card">
-                            <img class="tents-details__img" src="${src}" alt="" loading="lazy" onerror="this.style.display='none'">
+                            <img class="tents-details__img" src="${src}" alt="Canopy tent fabric and size reference image" loading="lazy" onerror="this.style.display='none'">
                             <figcaption class="tents-details__cap" data-translate="${key}"></figcaption>
                         </figure>
                     `;
@@ -1240,7 +1244,7 @@
             return `
                 <a class="tent-type-card${active ? ' is-active' : ''}" href="${href}">
                     <div class="tent-type-card__imgWrap">
-                        <img class="tent-type-card__img" src="${heroImg}" alt="" loading="lazy" onerror="this.style.display='none'" />
+                        <img class="tent-type-card__img" src="${heroImg}" alt="${String(title || 'Canopy tent type image').replace(/"/g, '&quot;')}" loading="lazy" onerror="this.style.display='none'" />
                     </div>
                     <div class="tent-type-card__body">
                         <div class="tent-type-card__title">${title}</div>

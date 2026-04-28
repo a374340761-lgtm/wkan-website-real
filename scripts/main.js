@@ -381,7 +381,7 @@ function getHomeHeroSlides() {
             image: 'images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png',
             keyPrefix: 'home_hero_0',
             imageAlt: 'WaiKwan Canton Fair 2026 invitation for booth 12.1F29-30',
-            /* Dark photo: keep default (white) copy; do not use wk-hero-slide--light */
+            variant: 'invite',
             secondaryHref: 'all-products.html'
         },
         {
@@ -420,8 +420,12 @@ function renderHomeHeroSlider() {
         slide.setAttribute('data-index', String(i));
         // Root-absolute URL + encodeURI so non-ASCII filenames work in CSS url() from /zh/... too.
         const bgUrl = wkPublicAssetUrl(String(s.image || ''));
-        if (String(s.variant || '').toLowerCase() === 'light') {
+        const variant = String(s.variant || '').toLowerCase();
+        if (variant === 'light') {
             slide.classList.add('wk-hero-slide--light');
+        }
+        if (variant === 'invite') {
+            slide.classList.add('wk-hero-slide--invite');
         }
         slide.style.setProperty('--wk-hero-bg', `url("${bgUrl}")`);
 
@@ -466,6 +470,14 @@ function renderHomeHeroSlider() {
         const bgEl = slide.querySelector('.wk-hero-bg');
         if (bgEl) bgEl.style.backgroundImage = `url("${bgUrl}")`;
         root.appendChild(slide);
+    });
+
+    // Warm all hero backgrounds so mobile slide changes never reveal an empty layer.
+    slides.forEach((s) => {
+        const src = wkPublicAssetUrl(String(s.image || ''));
+        if (!src) return;
+        const img = new Image();
+        img.src = src;
     });
 
     // Build dots

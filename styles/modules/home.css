@@ -323,12 +323,16 @@
     position: absolute;
     inset: 0;
     opacity: 0;
+    visibility: hidden;
+    z-index: 0;
     pointer-events: none;
     transition: opacity 520ms ease;
 }
 
 .home .wk-hero-slide.is-active{
     opacity: 1;
+    visibility: visible;
+    z-index: 1;
     pointer-events: auto;
 }
 
@@ -340,6 +344,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transform: scale(1.03);
+    z-index: 0;
 }
 
 /* Invitation / full-bleed graphic: no zoom crop, no dark wash */
@@ -359,6 +364,7 @@
     background:
     linear-gradient(90deg, rgba(15, 23, 42, 0.68) 0%, rgba(15, 23, 42, 0.42) 44%, rgba(15, 23, 42, 0.12) 100%),
     linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.06) 40%, rgba(0,0,0,0.14) 100%);
+    z-index: 1;
 }
 
 .home .wk-hero-slide.wk-hero-slide--light .wk-hero-overlay{
@@ -370,6 +376,7 @@
 
 .home .wk-hero-inner{
     position: relative;
+    z-index: 2;
     height: 100%;
     width: 100%;
     max-width: none;
@@ -486,7 +493,7 @@
     justify-content: center;
     gap: 14px;
     pointer-events: none;
-    z-index: 2;
+    z-index: 4;
     padding: 0 clamp(12px, 3vw, 24px);
 }
 
@@ -1518,29 +1525,50 @@
 @media (max-width: 768px){
     .home .wk-hero{
         --wk-home-hero-pull: var(--wk-mobile-header-offset, 108px);
+        background: #08111f;
     }
 
     .home .wk-hero-shell,
     .home .wk-hero-slider{
-        min-height: min(88svh, 760px);
-        height: min(88svh, 760px);
+        min-height: max(620px, calc(100svh - var(--wk-mobile-header-offset, 108px)));
+        height: max(620px, calc(100svh - var(--wk-mobile-header-offset, 108px)));
+    }
+
+    .home .wk-hero-bg{
+        background-position: center center;
+    }
+
+    .home .wk-hero-slide--invite .wk-hero-bg{
+        top: calc(var(--wk-home-hero-pull, 108px) + 10px);
+        bottom: auto;
+        height: min(52svh, 520px);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: #08111f;
+        transform: none;
+    }
+
+    .home .wk-hero-slide--invite .wk-hero-overlay{
+        background: linear-gradient(180deg, rgba(8, 17, 31, 0.02) 0%, rgba(8, 17, 31, 0.02) 48%, rgba(8, 17, 31, 0.54) 70%, rgba(8, 17, 31, 0.92) 100%);
+        opacity: 1;
     }
 
     .home .wk-hero-inner{
-        padding-top: calc(var(--wk-home-hero-pull, 108px) + 10px);
-        padding-bottom: max(112px, calc(env(safe-area-inset-bottom, 0px) + 104px));
+        padding-top: calc(var(--wk-home-hero-pull, 108px) + 8px);
+        padding-bottom: max(142px, calc(env(safe-area-inset-bottom, 0px) + 136px));
         align-items: flex-end;
     }
 
     .home .wk-hero-content{
-        max-width: min(560px, 100%);
-        padding: 18px;
-        border-radius: 20px;
-        background: rgba(7, 13, 24, 0.68);
+        max-width: min(520px, calc(100% - 32px));
+        padding: 16px;
+        border-radius: 18px;
+        background: rgba(7, 13, 24, 0.56);
         border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow: 0 16px 42px rgba(0, 0, 0, 0.26);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
     }
 
     .home .wk-hero-slide.wk-hero-slide--light .wk-hero-content{
@@ -1549,22 +1577,23 @@
     }
 
     .home .wk-hero-kicker{
-        margin-bottom: 10px;
-        padding: 6px 10px;
-        font-size: 0.72rem;
+        margin-bottom: 8px;
+        padding: 5px 9px;
+        font-size: 0.7rem;
         letter-spacing: 0.035em;
     }
 
     .home .wk-hero-title{
-        font-size: clamp(1.75rem, 5.4vw, 2.35rem);
+        font-size: clamp(1.55rem, 5vw, 2.1rem);
         line-height: 1.12;
         letter-spacing: -0.025em;
+        margin-bottom: 8px;
     }
 
     .home .wk-hero-sub{
-        margin-bottom: 14px;
-        font-size: 0.98rem;
-        line-height: 1.5;
+        margin-bottom: 12px;
+        font-size: 0.92rem;
+        line-height: 1.45;
     }
 
     .home .wk-hero-actions{
@@ -1572,24 +1601,24 @@
     }
 
     .home .wk-hero-actions .btn{
-        min-height: 44px;
-        padding: 10px 14px;
-        font-size: 0.92rem;
+        min-height: 40px;
+        padding: 9px 12px;
+        font-size: 0.88rem;
     }
 
     .home .wk-hero-trust{
         gap: 6px;
-        margin-top: 12px;
+        margin-top: 10px;
     }
 
     .home .wk-hero-trust__item{
-        padding: 5px 8px;
-        font-size: 0.68rem;
+        padding: 4px 7px;
+        font-size: 0.64rem;
         letter-spacing: 0.025em;
     }
 
     .home .wk-hero-controls{
-        bottom: max(58px, calc(env(safe-area-inset-bottom, 0px) + 52px));
+        bottom: max(82px, calc(env(safe-area-inset-bottom, 0px) + 76px));
         gap: 10px;
     }
 
@@ -1607,45 +1636,45 @@
 @media (max-width: 640px){
     .home .wk-hero-shell,
     .home .wk-hero-slider{
-        min-height: min(84svh, 720px);
-        height: min(84svh, 720px);
+        min-height: max(660px, calc(100svh - var(--wk-mobile-header-offset, 84px)));
+        height: max(660px, calc(100svh - var(--wk-mobile-header-offset, 84px)));
     }
 
-    .home .wk-hero-bg{
-        background-position: center top;
-    }
-
-    /* The Canton Fair invitation is a graphic slide; contain it on phones so booth/time text is not cropped. */
-    .home .wk-hero-slide[data-index="0"] .wk-hero-bg{
+    /* Keep the Canton Fair graphic below the fixed header and out from under the card. */
+    .home .wk-hero-slide--invite .wk-hero-bg{
+        top: calc(var(--wk-home-hero-pull, 84px) + 8px);
+        bottom: auto;
+        height: min(48svh, 360px);
         background-size: contain;
         background-position: center top;
-        background-color: #0b1220;
+        background-repeat: no-repeat;
+        background-color: #08111f;
         transform: none;
     }
 
-    .home .wk-hero-slide[data-index="0"] .wk-hero-overlay{
-        background: linear-gradient(180deg, rgba(5, 10, 19, 0.02) 0%, rgba(5, 10, 19, 0.02) 38%, rgba(5, 10, 19, 0.72) 63%, rgba(5, 10, 19, 0.9) 100%);
+    .home .wk-hero-slide--invite .wk-hero-overlay{
+        background: linear-gradient(180deg, rgba(8, 17, 31, 0.02) 0%, rgba(8, 17, 31, 0.02) 42%, rgba(8, 17, 31, 0.58) 66%, rgba(8, 17, 31, 0.92) 100%);
     }
 
     .home .wk-hero-inner{
         padding-left: 14px;
         padding-right: 14px;
-        padding-bottom: max(108px, calc(env(safe-area-inset-bottom, 0px) + 100px));
+        padding-top: calc(var(--wk-home-hero-pull, 84px) + 8px);
+        padding-bottom: max(136px, calc(env(safe-area-inset-bottom, 0px) + 128px));
     }
 
     .home .wk-hero-content{
-        padding: 14px;
+        padding: 12px;
         border-radius: 16px;
     }
 
     .home .wk-hero-title{
-        font-size: clamp(1.5rem, 7vw, 1.95rem);
-        margin-bottom: 8px;
+        font-size: clamp(1.32rem, 6.1vw, 1.78rem);
     }
 
     .home .wk-hero-sub{
-        font-size: 0.9rem;
-        line-height: 1.42;
+        font-size: 0.84rem;
+        line-height: 1.38;
     }
 
     .home .wk-hero-actions .btn{
@@ -1658,7 +1687,7 @@
     }
 
     .home .wk-hero-controls{
-        bottom: max(54px, calc(env(safe-area-inset-bottom, 0px) + 48px));
+        bottom: max(78px, calc(env(safe-area-inset-bottom, 0px) + 72px));
         padding-inline: 10px;
     }
 
@@ -1689,8 +1718,8 @@
 @media (max-width: 360px){
     .home .wk-hero-shell,
     .home .wk-hero-slider{
-        min-height: 88svh;
-        height: 88svh;
+        min-height: 700px;
+        height: 700px;
     }
 
     .home .wk-hero-actions .btn{

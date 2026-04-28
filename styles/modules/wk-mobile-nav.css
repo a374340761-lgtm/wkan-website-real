@@ -282,3 +282,174 @@ a.wk-mobile-nav__top-link {
         margin-bottom: 0;
     }
 }
+
+/* Phase 2: compact mobile header. Keeps search/language/cart/catalog/hamburger available while reducing hero crowding. */
+@media (max-width: 768px) {
+    :root {
+        --wk-mobile-header-offset: 108px;
+    }
+
+    .top-bar {
+        height: 28px;
+        padding: 5px 10px;
+        font-size: 11px;
+        line-height: 1.25;
+        overflow: hidden;
+    }
+
+    .navbar {
+        top: 28px;
+    }
+
+    .nav-container {
+        padding-top: 6px;
+        padding-bottom: 8px;
+        row-gap: 3px;
+    }
+
+    .nav-container > .nav-actions {
+        gap: 3px;
+    }
+
+    .nav-container > .nav-actions .nav-icon-btn,
+    .nav-container > .nav-actions .lang-dropdown > .lang-btn {
+        width: 36px;
+        height: 36px;
+        padding: 7px;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --wk-mobile-header-offset: 84px;
+    }
+
+    .top-bar {
+        height: 24px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        font-size: 10.5px;
+    }
+
+    .top-bar-content {
+        min-width: 0;
+    }
+
+    .top-bar-content span {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .navbar {
+        top: 24px;
+    }
+
+    .nav-container {
+        flex-wrap: nowrap;
+        min-height: 60px;
+        padding: 7px 10px;
+        gap: 6px;
+    }
+
+    .nav-container > .nav-logo {
+        order: 1;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .nav-container > .nav-actions {
+        order: 2;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        gap: 1px;
+    }
+
+    .nav-container > .hamburger {
+        order: 3;
+        width: 32px;
+        min-width: 32px;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .nav-container > .hamburger span {
+        width: 22px;
+        height: 2px;
+    }
+
+    .nav-logo .nav-brand {
+        min-width: 0;
+        max-width: none;
+        gap: 7px;
+    }
+
+    .nav-logo-img {
+        width: 38px;
+        height: 38px;
+        flex: 0 0 auto;
+    }
+
+    .nav-logo-text,
+    .brand-text {
+        min-width: 0;
+    }
+
+    .brand-name,
+    .brand-name-en {
+        max-width: calc(100vw - 236px);
+        font-size: 12px !important;
+        line-height: 1.15;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .brand-sub {
+        margin-top: 2px;
+        font-size: 9px;
+        letter-spacing: 0.6px;
+    }
+
+    .brand-sub::before {
+        width: 8px;
+        margin-right: 5px;
+        transform: translateY(-2px);
+    }
+
+    .nav-container > .nav-actions .nav-icon-btn,
+    .nav-container > .nav-actions .lang-dropdown > .lang-btn {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+        font-size: 0.96rem;
+    }
+
+    .cart-badge {
+        min-width: 15px;
+        padding: 1px 4px;
+        font-size: 0.62rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand-sub {
+        display: none;
+    }
+
+    .brand-name,
+    .brand-name-en {
+        max-width: calc(100vw - 218px);
+    }
+
+    .nav-container > .nav-actions .nav-icon-btn,
+    .nav-container > .nav-actions .lang-dropdown > .lang-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+}

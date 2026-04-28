@@ -215,11 +215,11 @@
 		const imageEl = document.getElementById('productImage');
 		const carouselEl = document.querySelector('.image-carousel');
 		const imgs = Array.isArray(product.images) ? product.images : (product.image ? [product.image] : []);
-		const primary = imgs[0] || 'images/placeholder.png';
+		const primary = imgs[0] || 'images/placeholder.svg';
 		if (imageEl) {
 			imageEl.src = primary;
 			imageEl.alt = name;
-			imageEl.onerror = function () { this.src = 'images/placeholder.png'; };
+			imageEl.onerror = function () { this.src = 'images/placeholder.svg'; };
 		}
 		if (carouselEl) {
 			carouselEl.innerHTML = '';

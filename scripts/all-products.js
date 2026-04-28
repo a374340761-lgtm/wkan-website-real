@@ -41,7 +41,7 @@
                 nameEn: 'Tent',
                 model: 'WK-T-1',
                 tags: 'pop-up tent, event tent, exhibition',
-                image: 'images/page_24_img_6.png'
+                image: 'images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png'
             },
             {
                 id: 2,
@@ -50,7 +50,7 @@
                 nameEn: 'Weiqun Beach Flag Poles',
                 model: 'WK-FLAG-S',
                 tags: 'beach flag, pole, 2.8m',
-                image: 'images/page_24_img_15.png'
+                image: 'images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png'
             },
             {
                 id: 3,
@@ -59,7 +59,7 @@
                 nameEn: 'Tent Frame',
                 model: 'WK-FRAME',
                 tags: 'aluminum frame, quick assembly',
-                image: 'images/page_24_img_6.png'
+                image: 'images/products/tents/folding40/40mm-pop-up-canopy-tent-2d-layout-hero.png'
             },
             {
                 id: 4,
@@ -68,7 +68,7 @@
                 nameEn: 'Display Systems',
                 model: 'WK-DISPLAY-3M',
                 tags: 'backdrop, display, 3m',
-                image: 'images/page_24_img_10.png'
+                image: 'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png'
             },
             {
                 id: 5,
@@ -77,7 +77,7 @@
                 nameEn: 'Stretchy Table Cloth',
                 model: 'WK-TABLE',
                 tags: 'table cover, fabric',
-                image: 'images/page_24_img_10.png'
+                image: 'images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg'
             },
             {
                 id: 6,
@@ -86,7 +86,7 @@
                 nameEn: 'Custom Solutions',
                 model: 'WK-CUSTOM',
                 tags: 'OEM, ODM, customization',
-                image: 'images/page_24_img_6.png'
+                image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png'
             }
         ];
     }
@@ -818,7 +818,7 @@
     const AP_CATALOG_GROUP_SUB_DOME = 'dome-3-folders';
     const AP_CATALOG_GROUP_FURNITURE_HERO_REL =
         'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
-    const AP_CATALOG_GROUP_DOME_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+    const AP_CATALOG_GROUP_DOME_HERO_REL = 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png';
 
     function getApProductSubSlug(p) {
         if (!p || p._isApGroupedHub) return '';
@@ -870,7 +870,7 @@
 
         return `
                 <article class="ap-card ap-card--grouped-hub" data-cat="${dataCat}" data-ap-hub="${p._hubKind}">
-                    <div class="ap-img"><img src="${safeText(imgSrc)}" alt="" loading="lazy" onerror="this.src='/images/placeholder.png'"></div>
+                    <div class="ap-img"><img src="${safeText(imgSrc)}" alt="" loading="lazy" onerror="this.src='/images/placeholder.svg'"></div>
                     <div class="ap-body">
                         <h3><span class="zh" data-translate="${titleKey}"></span><span class="en" data-translate="${titleKey}"></span></h3>
                         <p class="ap-meta ap-meta--hub-desc" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden;">
@@ -967,7 +967,7 @@
                 ? window.WK_getProductCardImage(p)
                 : '';
 
-            let imgSrc = resolved || p.image || 'images/placeholder.png';
+            let imgSrc = resolved || p.image || 'images/placeholder.svg';
             if (imgSrc && !imgSrc.startsWith('images/') && !imgSrc.startsWith('/') && !imgSrc.startsWith('./')) imgSrc = 'images/' + imgSrc;
             if (typeof window.wkRootAssetUrl === 'function') imgSrc = window.wkRootAssetUrl(imgSrc);
 
@@ -1057,7 +1057,7 @@
                 const y = (r - 1) * 20;
                 imgHtml = `<div class="ap-img"><div class="sprite-thumb" style="background-image:url('${imgSrc}');background-position:${x}% ${y}%;background-size:400% 600%;"></div></div>`;
             } else {
-                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='/images/placeholder.png'"></div>`;
+                imgHtml = `<div class="ap-img"><img src="${imgSrc}" alt="${name}" loading="lazy" onerror="this.src='/images/placeholder.svg'"></div>`;
             }
 
             return `

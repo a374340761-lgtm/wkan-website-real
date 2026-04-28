@@ -101,13 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return `/${s.replace(/^\/+/, '')}`;
     };
 
-    /** Exported PDF catalog scans live under `...2025allpagepng/` — must not be replaced by product hero images. */
+    /** Detect old uncommitted brochure exports so they can fall back to committed product images. */
     const isCatalogScanPath = (p) => {
         const s = String(p || '').trim();
         if (!s) return false;
-        if (/2025allpagepng/i.test(s)) return true;
+        if (/allpagepng/i.test(s)) return true;
         try {
-            if (decodeURIComponent(s).includes('2025allpagepng')) return true;
+            if (/allpagepng/i.test(decodeURIComponent(s))) return true;
         } catch (e) { /* ignore */ }
         return false;
     };
@@ -252,6 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const pathForCanon = String(window.location.pathname || '').replace(/\\/g, '/');
         const pdpLocalePrefix = pathForCanon.indexOf('/zh/') >= 0 ? '/zh' : '';
         const canonicalProductUrl = `${BASE_URL}${pdpLocalePrefix}/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
+        const robotsMeta = document.querySelector('meta[name="robots"]');
+        if (robotsMeta) robotsMeta.setAttribute('content', 'index,follow');
         const linkCanonical = document.querySelector('link[rel="canonical"]');
         if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
         const ogUrlMeta = document.querySelector('meta[property="og:url"]');
@@ -466,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const imgs = Array.isArray(product.images) && product.images.length
                 ? product.images.filter(Boolean)
                 : (product.image ? [product.image] : []);
-            const primaryImage = toSiteRootAssetUrl(imgs[0] || product.image || 'images/placeholder.png');
+            const primaryImage = toSiteRootAssetUrl(imgs[0] || product.image || 'images/placeholder.svg');
             imageEl.src = primaryImage;
             imageEl.alt = name;
             imageEl.onerror = function() {
@@ -770,8 +772,8 @@ document.addEventListener('DOMContentLoaded', () => {
             variantsEl.appendChild(tbl);
         }
 
-        // Catalog reference image (产品画册参考) — must use pages under 2025allpagepng; never substitute product.image / hero.
-        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/17.png');
+        // Catalog reference fallback uses a committed furniture hero when brochure scan exports are unavailable.
+        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png');
         const isFurnitureTableChairCat = product
             && String(product.category) === 'furniture'
             && String(product.subcategory) === 'table-chair-stool-toilet';

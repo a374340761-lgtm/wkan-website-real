@@ -7,6 +7,9 @@ function wkRootAssetUrl(path) {
     if (/^(https?:|data:|\/\/)/i.test(s)) return s;
     let p = s.replace(/^\.\//, '');
     if (!p.startsWith('/')) p = '/' + p;
+    if (/\/images\/placeholder\.png$/i.test(p)) {
+        p = '/images/placeholder.svg';
+    }
     if (!/[^\u0000-\u007f]/.test(p)) return p;
     const parts = p.split('/');
     for (let i = 1; i < parts.length; i++) {
@@ -181,7 +184,7 @@ window.HERO_SLIDES = [
   },
   {
     id: 'flags',
-    image: '/images/hero/hero-flag.jpg',
+    image: '/images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png',
     alt: 'Beach Flags',
     kickerZh: '畅销产品 · 户外广告',
     kickerEn: 'Top Seller · Outdoor Advertising',
@@ -200,7 +203,7 @@ window.HERO_SLIDES = [
   },
   {
     id: 'tents',
-    image: '/images/hero/hero-tent.jpg',
+    image: '/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png',
     alt: 'Custom Canopy Tent',
     kickerZh: '畅销产品 · 户外帐篷',
     kickerEn: 'Top Seller · Event Tent',
@@ -413,11 +416,11 @@ class ProductManager {
                     image: 'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
                     images: [
                         'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
-                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png')
                     ],
                     gallery: [
                         'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
-                        encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png')
+                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png')
                     ],
                     variantTables: [
                         {
@@ -450,7 +453,7 @@ class ProductManager {
                     keywords: ['快幕秀', '布拉网', 'pop up display', 'popup display', 'fabric display', 'backdrop', 'exhibition backdrop', 'WK-PO-01', 'trade show', 'portable display'],
                     tags: 'Fabric Pop Up Display, 快幕秀, 布拉网, WK-PO-01, backdrop, exhibition',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    referenceImage: encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     referenceSourceKey: 'view_type_brochure_source_19',
                     price: '询价'
@@ -472,11 +475,11 @@ class ProductManager {
                     image: encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
                     images: [
                         encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
-                        encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
+                        encodeURI('images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.png')
                     ],
                     gallery: [
                         encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
-                        encodeURI('images/products/displays/front desk/front desk rectangle without fabric.png')
+                        encodeURI('images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.png')
                     ],
                     variantTables: [
                         {
@@ -532,7 +535,7 @@ class ProductManager {
                     keywords: ['张拉布', '前台', 'tension fabric', 'fabric counter', 'reception counter', 'display counter', 'WK-PO-01-A', 'WK-PO-02-B', 'WK-PO-03-C', 'illuminated', 'booth furniture'],
                     tags: 'Tension Fabric Counter, 张拉布前台, Fabric Counter, counter, reception desk, exhibition counter',
                     pdf: '广西伟群帐篷制造有限公司2025改.pdf',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/19.png'),
+                    referenceImage: encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     referenceSourceKey: 'view_type_brochure_source_19',
                     price: '询价'
@@ -612,7 +615,7 @@ class ProductManager {
                     searchableKeywords: ['WK-H-01', 'WK-H-02', 'WK H 01', 'WK H 02', 'fabric banner stand', 'tension fabric', 'seg', 'push-fit', '立牌', '张力布', '快幕秀'],
                     keywords: ['WK-H-01', 'WK-H-02', 'fabric banner stand', 'tension fabric', 'SEG', 'push-fit', '立牌', '张力布', '快幕秀'],
                     tags: 'WK-H-01, WK-H-02, Fabric Banner Stand, tension fabric, SEG, push-fit, display',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceImage: encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -692,7 +695,7 @@ class ProductManager {
                     searchableKeywords: ['WK-HZ', 'WK HZ', 'straight line', 'backwall', 'tension fabric', 'SEG', 'push-fit', '直型系列', '快幕秀'],
                     keywords: ['WK-HZ', 'straight line', 'backwall', 'tension fabric', 'SEG', '直型系列', '快幕秀'],
                     tags: 'WK-HZ, Straight Line Series, tension fabric, SEG, display backwall',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImage: encodeURI('images/products/displays/tension-fabric-displays/Straight Line Tension Fabric Backwall-produced product.jpg'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -760,7 +763,7 @@ class ProductManager {
                     searchableKeywords: ['WK-HS', 'S-shaped', 'tension fabric display', 'SEG', 'push-fit', 'S型', '张拉布', '张力布', '快幕秀'],
                     keywords: ['WK-HS', 'S-shaped', 'tension fabric', 'SEG', 'S型系列', '张拉布'],
                     tags: 'WK-HS, S-shaped series, tension fabric display, SEG',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/22.png'),
+                    referenceImage: encodeURI('images/products/displays/tension-fabric-displays/????hero.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -829,7 +832,7 @@ class ProductManager {
                     searchableKeywords: ['WK-HB', 'WK-HB-1', 'WK-HB-2', 'WK-HB-3', 'hanging banner', 'tension fabric', 'SEG', '吊挂', '吊环', '快幕秀'],
                     keywords: ['WK-HB', 'hanging banner', 'tension fabric', 'SEG', '吊挂张拉布'],
                     tags: 'WK-HB, Hanging Banner, tension fabric, SEG',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/22.png'),
+                    referenceImage: encodeURI('images/products/displays/tension-fabric-displays/????hero.png'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -898,7 +901,7 @@ class ProductManager {
                     searchableKeywords: ['WK-HZ', 'curved line', 'curved tension fabric display', 'tension fabric', 'SEG', '弧型', '弧型系列', '张拉布', '快幕秀'],
                     keywords: ['WK-HZ', 'curved', 'tension fabric', 'SEG', '弧型系列', '张拉布'],
                     tags: 'WK-HZ, Curved line series, tension fabric display, SEG',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                    referenceImage: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -969,7 +972,7 @@ class ProductManager {
                     searchableKeywords: ['WK-HC', 'WK HC', 'c-shaped', 'curved', 'backwall', 'tension fabric', 'SEG', 'C型系列', '快幕秀'],
                     keywords: ['WK-HC', 'c-shaped', 'curved backwall', 'tension fabric', 'SEG', 'C型系列', '快幕秀'],
                     tags: 'WK-HC, C-Shaped Series, tension fabric, SEG, curved backwall',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/21.png'),
+                    referenceImage: encodeURI('images/products/displays/tension-fabric-displays/Straight Line Tension Fabric Backwall-produced product.jpg'),
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
@@ -985,9 +988,9 @@ class ProductManager {
                     shortZh: '展示系统可选照明套件：提升画面亮度与展位吸引力。',
                     descriptionEn: 'Shared lighting accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes LED spotlight, clamp-on light arm and power cable (final configuration depends on project).',
                     descriptionZh: '展示系统通用照明配件（立牌/直型/C型通用）：包含 LED 射灯、夹装式灯臂与电源线（具体配置按项目确定）。',
-                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
-                    images: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
-                    gallery: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
+                    image: encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png'),
+                    images: [encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png')],
+                    gallery: [encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png')],
                     specsZh: {
                         '包含': 'LED 射灯 / 夹装式灯臂 / 电源线',
                         '适用': '立牌系列 / 直型系列 / C型系列（快幕秀）',
@@ -1013,7 +1016,7 @@ class ProductManager {
                     searchableKeywords: ['WK-TFD-LIGHT', 'tension fabric light', 'spotlight', 'lighting system', 'SEG light', '照明系统', '照明', '快幕秀 配件'],
                     keywords: ['WK-TFD-LIGHT', 'lighting system', 'tension fabric', 'spotlight', '照明系统', '快幕秀配件'],
                     tags: 'WK-TFD-LIGHT, Lighting System, tension fabric displays, accessories',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceImage: encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png'),
                     referenceSourceKey: 'view_type_brochure_source_20',
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
@@ -1030,9 +1033,9 @@ class ProductManager {
                     shortZh: '展示系统通用收纳运输方案（软包/硬箱/带轮箱）。',
                     descriptionEn: 'Shared transport & storage accessories for tension fabric displays (banner stands, straight line series, C-shaped series). Includes soft carry bag, hard case and wheeled trolley case options (matched by model/size).',
                     descriptionZh: '展示系统通用收纳运输配件（立牌/直型/C型通用）：软包、硬箱、带轮拉杆箱等可选（按型号/尺寸匹配）。',
-                    image: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
-                    images: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
-                    gallery: [encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png')],
+                    image: encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png'),
+                    images: [encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png')],
+                    gallery: [encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png')],
                     specsZh: {
                         '包含': '软包 / 硬箱 / 带轮拉杆箱',
                         '优势': '便于运输与保护框架、画面与配件',
@@ -1058,7 +1061,7 @@ class ProductManager {
                     searchableKeywords: ['WK-TFD-CASE', 'transport case', 'wheeled case', 'hard case', 'soft bag', '收纳运输', '收纳箱', '运输箱', '拉杆箱', '快幕秀 配件'],
                     keywords: ['WK-TFD-CASE', 'transport', 'storage', 'wheeled case', 'carry bag', '收纳运输', '快幕秀配件'],
                     tags: 'WK-TFD-CASE, Transport & Storage, tension fabric displays, accessories',
-                    referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/20.png'),
+                    referenceImage: encodeURI('images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png'),
                     referenceSourceKey: 'view_type_brochure_source_20',
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
@@ -1076,16 +1079,14 @@ class ProductManager {
                 nameZh: 'V型拱门',
                 shortEn: 'Portable fiberglass race gate for events and racing. Sizes and packing specs from catalog.',
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
-                descriptionEn: 'Fiberglass race gate (V shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
-                descriptionZh: '玻璃钢竞速拱门（V型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
+                descriptionEn: 'Fiberglass race gate (V shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog table.',
+                descriptionZh: '玻璃钢竞速拱门（V型）。尺寸、直径、厚度、箱规与装箱数量来自目录参数表。',
                 image: encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png'),
                 images: [
-                    encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png'),
-                    'images/products/racegate/pdf_p9.png'
+                    encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png')
                 ],
                 gallery: [
-                    encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png'),
-                    'images/products/racegate/pdf_p9.png'
+                    encodeURI('images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png')
                 ],
                 pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                 variantTable: {
@@ -1112,16 +1113,14 @@ class ProductManager {
                 nameZh: 'O型拱门',
                 shortEn: 'Portable fiberglass race gate for events and racing. Sizes and packing specs from catalog.',
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
-                descriptionEn: 'Fiberglass race gate (O shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
-                descriptionZh: '玻璃钢竞速拱门（O型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
+                descriptionEn: 'Fiberglass race gate (O shape). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog table.',
+                descriptionZh: '玻璃钢竞速拱门（O型）。尺寸、直径、厚度、箱规与装箱数量来自目录参数表。',
                 image: encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png'),
                 images: [
-                    encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png'),
-                    'images/products/racegate/pdf_p9.png'
+                    encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png')
                 ],
                 gallery: [
-                    encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png'),
-                    'images/products/racegate/pdf_p9.png'
+                    encodeURI('images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png')
                 ],
                 pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                 variantTable: {
@@ -1446,7 +1445,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Trade shows', 'Retail displays', 'Showrooms', 'Brand activation events', 'Indoor advertising'],
                 applicationsZh: ['展会展示', '门店陈列', '展厅展示', '品牌活动', '室内广告'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImage: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1498,7 +1497,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Retail signage', 'Brand walls', 'Showrooms', 'Trade show booths', 'Indoor promotions'],
                 applicationsZh: ['门店广告', '品牌形象墙', '展厅展示', '展会展位', '室内促销'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImage: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1543,7 +1542,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Large brand walls', 'Showrooms', 'Retail flagship stores', 'Exhibitions', 'Indoor advertising'],
                 applicationsZh: ['大面积品牌形象墙', '展厅展示', '旗舰店陈列', '展会展示', '室内广告'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/23.png'),
+                referenceImage: encodeURI('images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1590,7 +1589,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Trade shows', 'Retail displays', 'Indoor promotions'],
                 applicationsZh: ['展会展示', '门店陈列', '室内促销'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImage: encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1635,7 +1634,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Retail signage', 'Promotions', 'Indoor advertising'],
                 applicationsZh: ['门店广告', '促销活动', '室内宣传'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImage: encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1655,11 +1654,11 @@ class ProductManager {
                 image: 'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
                 images: [
                     'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
-                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                    encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg')
                 ],
                 gallery: [
                     'images/products/displays/tension-fabric-displays/wk-is003hero.jpg',
-                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                    encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg')
                 ],
                 specsZh: {
                     '画面尺寸': '60 × 80 CM',
@@ -1689,7 +1688,7 @@ class ProductManager {
                 applicationsZh: ['零售门店', '品牌推广', '室内展示'],
                 keywords: ['light box display stand', 'SEG light box', '灯箱展示架', '配重底座', 'WK-IS003', 'base-style-variant', '卡布灯箱'],
                 tags: 'Light box display stand, 灯箱展示架, WK-IS003, weighted base, SEG',
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImage: encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 referenceSourceKey: 'view_type_brochure_source_25',
                 price: '询价'
@@ -1710,11 +1709,11 @@ class ProductManager {
                 image: 'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
                 images: [
                     'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
-                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                    encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg')
                 ],
                 gallery: [
                     'images/products/displays/tension-fabric-displays/wk-is004hero.jpg',
-                    encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png')
+                    encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg')
                 ],
                 specsZh: {
                     '画面尺寸': '100 × 200 CM',
@@ -1744,7 +1743,7 @@ class ProductManager {
                 applicationsZh: ['旗舰店陈列', '展厅展示', '室内广告'],
                 keywords: ['light box display stand', 'SEG light box', '灯箱展示架', '落地', '落地款', 'WK-IS004', 'base-style-variant', '卡布灯箱'],
                 tags: 'Light box display stand, 灯箱展示架, WK-IS004, floor-standing, large format, SEG',
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/25.png'),
+                referenceImage: encodeURI('images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 referenceSourceKey: 'view_type_brochure_source_25',
                 price: '询价'
@@ -1785,7 +1784,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Event entrances', 'Races & sports events', 'Outdoor promotions', 'Brand activation'],
                 applicationsZh: ['活动入口', '赛事与运动活动', '户外促销', '品牌推广'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/24.png'),
+                referenceImage: encodeURI('images/products/advertising-arch/advertising-arch-event-entrance-hero.png'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1836,7 +1835,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Sidewalk advertising', 'Retail storefront', 'Outdoor promotions'],
                 applicationsZh: ['人行道广告', '门店门口', '户外促销'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/24.png'),
+                referenceImage: encodeURI('images/products/advertising-arch/advertising-arch-event-entrance-hero.png'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1885,7 +1884,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Trade shows', 'Retail promotions', 'Wayfinding signage'],
                 applicationsZh: ['展会展示', '门店促销', '导视指引'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/26.png'),
+                referenceImage: encodeURI('images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1940,7 +1939,7 @@ class ProductManager {
                 ],
                 applicationsEn: ['Sampling', 'Product demos', 'Reception counter', 'Pop-up events'],
                 applicationsZh: ['试吃试用', '产品演示', '接待台', '快闪活动'],
-                referenceImage: encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/26.png'),
+                referenceImage: encodeURI('images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png'),
                 referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                 price: '询价'
             },
@@ -1955,16 +1954,14 @@ class ProductManager {
                 nameZh: '半圆型拱门',
                 shortEn: 'Portable fiberglass race gate for events and racing. Sizes and packing specs from catalog.',
                 shortZh: '玻璃钢竞速拱门，适用于赛事与活动。尺寸与装箱信息参考目录。',
-                descriptionEn: 'Fiberglass race gate (semi-circle). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog image (pdf_p9.png).',
-                descriptionZh: '玻璃钢竞速拱门（半圆型）。尺寸、直径、厚度、箱规与装箱数量来自目录图片（pdf_p9.png）。',
+                descriptionEn: 'Fiberglass race gate (semi-circle). Sizes, diameter, thickness, pack size and pack quantity are based on the catalog table.',
+                descriptionZh: '玻璃钢竞速拱门（半圆型）。尺寸、直径、厚度、箱规与装箱数量来自目录参数表。',
                 image: encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
                 images: [
-                    encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
-                    'images/products/racegate/pdf_p9.png'
+                    encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png')
                 ],
                 gallery: [
-                    encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png'),
-                    'images/products/racegate/pdf_p9.png'
+                    encodeURI('images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png')
                 ],
                 pdf: '广西伟群帐篷制造有限公司2025改.pdf',
                 variantTable: {
@@ -2897,7 +2894,7 @@ class ProductManager {
         let subEn = '';
 
         if (id === 42001 || id === 42002) {
-            paths = ['images/广西伟群帐篷制造有限公司2025allpagepng/18.png'];
+            paths = ['images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png'];
             subZh = '以下为画册页示例，用于对照 A 字架展示架与万能架背景系统（可点击放大）。';
             subEn = 'Catalog reference: A-Frame Display System and Backdrop System (click to enlarge).';
         } else if (id === 42009 || String(p.sku || '').toUpperCase() === 'WK-HZ-STRAIGHT') {
@@ -3379,7 +3376,7 @@ class ProductManager {
                 cardImg = raw ? wkRootAssetUrl(String(raw).trim()) : '';
             }
             productImageInner = cardImg
-                ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.png';" />`
+                ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.svg';" />`
                 : `<i class="fas fa-${iconClass}"></i>`;
         }
 
@@ -3980,7 +3977,7 @@ getProductIcon(category) {
         const isFurniture = product && product._hubKind === 'furniture';
         const rel = isFurniture
             ? 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png'
-            : 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+            : 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
         let imageUrl = wkRootAssetUrl(rel);
         const path = isFurniture ? '/furniture-type.html?type=table-chair-stool-toilet' : '/dome-type.html';
         const typeHref = wkLocalizedInternalLink(path);
@@ -3994,7 +3991,7 @@ getProductIcon(category) {
         };
 
         row.innerHTML = `
-            <div class="product-row-image"><img src="${this._escapeHtml(imageUrl)}" alt="" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.png';" /></div>
+            <div class="product-row-image"><img src="${this._escapeHtml(imageUrl)}" alt="" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.svg';" /></div>
             <div class="product-row-info">
                 <h3>
                     <a href="${this._escapeHtml(typeHref)}" style="text-decoration:none;color:inherit;">
@@ -4061,7 +4058,7 @@ getProductIcon(category) {
             imageHtml = `<div class="product-row-image"><div class="sprite-thumb" style="background-image:url('${imageUrl}');background-position:${x}% ${y}%;"></div></div>`;
         } else if (imageUrl) {
             const altText = `${product.nameEn || name} / ${product.name || ''}`;
-            imageHtml = `<div class="product-row-image"><img src="${imageUrl}" alt="${altText}" onerror="this.src='/images/placeholder.png'" /></div>`;
+            imageHtml = `<div class="product-row-image"><img src="${imageUrl}" alt="${altText}" onerror="this.src='/images/placeholder.svg'" /></div>`;
         } else {
             imageHtml = `<div class="product-row-image"><i class=\"fas fa-${imageIcon}\" style=\"font-size:4rem;color:var(--primary-color);display:flex;align-items:center;justify-content:center;height:100%;\"></i></div>`;
         }

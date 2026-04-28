@@ -5,9 +5,6 @@
 
   // NOTE: The folder name contains spaces; use URL-encoded paths in src/href.
   const PDF_BASE = 'images/products/flags/page%20in%20pdf';
-  // NOTE: The folder name contains Chinese characters; use encodeURI for safety.
-  const CATALOG_ALLPAGE_BASE = encodeURI('images/\u5e7f\u897f\u4f1f\u7fa4\u5e10\u7bf7\u5236\u9020\u6709\u9650\u516c\u53f82025allpagepng');
-
   const FLAG_HERO = (fileName) => encodeURI(`images/products/flags/hero/${fileName}`);
   // Local accessory photos (folder may contain spaces in filenames)
   const FLAG_ACCESSORIES_IMG = (fileName) => encodeURI(`images/products/flags/accessories/${fileName}`);
@@ -477,8 +474,8 @@
           FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png'),
           FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.png'),
           FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.png'),
-          `${CATALOG_ALLPAGE_BASE}/14.png`,
-          `${CATALOG_ALLPAGE_BASE}/15.png`
+          FLAG_HERO('feather-flag-hero.png'),
+          FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg')
         ],
         exampleImagesTitleZh: '实物图 / 画册页对照',
         exampleImagesTitleEn: 'Product photos & catalog pages',

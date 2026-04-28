@@ -6,10 +6,14 @@
 (function () {
     'use strict';
 
-    /** Full PDF page exports (filename = page number). Replaces missing `images/products/tents/_reference/pdf_p*.png` placeholders. */
-    const CAT2025 = 'images/广西伟群帐篷制造有限公司2025allpagepng';
+    /** Committed product images used where brochure page exports are not present in the repo. */
+    const CATALOG_PAGE_ASSETS = {
+        4: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',
+        5: 'images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png',
+        8: 'images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg'
+    };
     const CATALOG_PAGE = function (n) {
-        return `${CAT2025}/${String(n).padStart(2, '0')}.png`;
+        return CATALOG_PAGE_ASSETS[Number(n)] || 'images/placeholder.svg';
     };
 
     // NOTE:
@@ -51,8 +55,8 @@
             visuals: {
                 // These are full rendered pages from the brochure.
                 // If you want tighter crops later, replace these with cropped images.
-                sizeGuideImage: 'images/products/tents/_reference/pdf_p9.png',
-                wallGuideImage: 'images/products/tents/_reference/pdf_p10.png'
+                sizeGuideImage: 'images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png',
+                wallGuideImage: 'images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png'
             }
         },
         folding: [
@@ -379,10 +383,10 @@
             }
         ],
 
-        // New tent series: Inflatable Tent (brochure page — images/广西伟群帐篷制造有限公司2025allpagepng/08.png)
+        // New tent series: Inflatable Tent (brochure page — images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg)
         // UX: One "Inflatable Tent" type with internal AirTent size selection.
         inflatable: (function () {
-            const INFLATABLE_BROCHURE_GUIDE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/08.png');
+            const INFLATABLE_BROCHURE_GUIDE = encodeURI('images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg');
             const commonBlocks = {
                 accessories: {
                     titleZh: '充气帐篷配件',
@@ -599,7 +603,7 @@
         // Tent accessories hub — single full-range listing (XLS + catalog p.4); hero: camping-tent-accessories-hero.jpg
         accessories: [
             (function () {
-                const CATALOG04 = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/04.png');
+                const CATALOG04 = encodeURI('images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg');
                 return {
                     type: 'tent_accessories',
                     nameZh: '帐篷配件（全系列）',

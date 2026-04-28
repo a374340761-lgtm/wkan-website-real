@@ -109,7 +109,7 @@
     const products = pm.products.filter(p => p && p.category === 'racegate');
     const first = products[0];
 
-    const img = 'images/products/racegate/pdf_p9.png';
+    const img = 'images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png';
 
     const cards = products.map(p => {
       const name = (getLang() === 'zh') ? (p.nameZh || p.name || p.nameEn) : (p.nameEn || p.name || p.nameZh);
@@ -120,7 +120,7 @@
       return `
         <article class="ap-card" style="overflow:hidden;">
           <div class="ap-img">
-            <img src="${img}" alt="${escapeHtml(name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='images/placeholder.png'">
+            <img src="${img}" alt="${escapeHtml(name)}" loading="lazy" style="width:100%;height:100%;object-fit:cover;" onerror="this.src='images/placeholder.svg'">
           </div>
           <div class="ap-body">
             <h3 style="margin:0 0 0.5rem 0;">${escapeHtml(name)}</h3>
@@ -139,7 +139,7 @@
       <div class="section-header">
         <h1>${escapeHtml(t('竞速拱门 RaceGate', 'Race Gate'))}</h1>
         <p style="max-width: 900px; margin: 0.5rem auto 0; color: var(--text-light);">
-          ${escapeHtml(t('以下信息来自目录图片（pdf_p9.png）。', 'The information below is extracted from the catalog image (pdf_p9.png).'))}
+          ${escapeHtml(t('以下信息来自目录参数表。', 'The information below is extracted from the catalog table.'))}
         </p>
       </div>
 

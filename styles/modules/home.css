@@ -1513,3 +1513,191 @@
     border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
 .home .wk-seo-tertiary__links a:hover{ color: var(--wk-red-700, #9f1a1d); }
+
+/* Phase 2: homepage hero/header collision fixes. Scoped to .home so catalog and PDP layouts keep their existing behavior. */
+@media (max-width: 768px){
+    .home .wk-hero{
+        --wk-home-hero-pull: var(--wk-mobile-header-offset, 108px);
+    }
+
+    .home .wk-hero-shell,
+    .home .wk-hero-slider{
+        min-height: min(88svh, 760px);
+        height: min(88svh, 760px);
+    }
+
+    .home .wk-hero-inner{
+        padding-top: calc(var(--wk-home-hero-pull, 108px) + 10px);
+        padding-bottom: max(112px, calc(env(safe-area-inset-bottom, 0px) + 104px));
+        align-items: flex-end;
+    }
+
+    .home .wk-hero-content{
+        max-width: min(560px, 100%);
+        padding: 18px;
+        border-radius: 20px;
+        background: rgba(7, 13, 24, 0.68);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow: 0 16px 42px rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+
+    .home .wk-hero-slide.wk-hero-slide--light .wk-hero-content{
+        background: rgba(255, 255, 255, 0.82);
+        border-color: rgba(15, 23, 42, 0.1);
+    }
+
+    .home .wk-hero-kicker{
+        margin-bottom: 10px;
+        padding: 6px 10px;
+        font-size: 0.72rem;
+        letter-spacing: 0.035em;
+    }
+
+    .home .wk-hero-title{
+        font-size: clamp(1.75rem, 5.4vw, 2.35rem);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+    }
+
+    .home .wk-hero-sub{
+        margin-bottom: 14px;
+        font-size: 0.98rem;
+        line-height: 1.5;
+    }
+
+    .home .wk-hero-actions{
+        gap: 8px;
+    }
+
+    .home .wk-hero-actions .btn{
+        min-height: 44px;
+        padding: 10px 14px;
+        font-size: 0.92rem;
+    }
+
+    .home .wk-hero-trust{
+        gap: 6px;
+        margin-top: 12px;
+    }
+
+    .home .wk-hero-trust__item{
+        padding: 5px 8px;
+        font-size: 0.68rem;
+        letter-spacing: 0.025em;
+    }
+
+    .home .wk-hero-controls{
+        bottom: max(58px, calc(env(safe-area-inset-bottom, 0px) + 52px));
+        gap: 10px;
+    }
+
+    .home .wk-hero-nav{
+        width: 38px;
+        height: 38px;
+        background: rgba(15, 23, 42, 0.46);
+    }
+
+    .home .wk-hero-dots{
+        padding: 7px 9px;
+    }
+}
+
+@media (max-width: 640px){
+    .home .wk-hero-shell,
+    .home .wk-hero-slider{
+        min-height: min(84svh, 720px);
+        height: min(84svh, 720px);
+    }
+
+    .home .wk-hero-bg{
+        background-position: center top;
+    }
+
+    /* The Canton Fair invitation is a graphic slide; contain it on phones so booth/time text is not cropped. */
+    .home .wk-hero-slide[data-index="0"] .wk-hero-bg{
+        background-size: contain;
+        background-position: center top;
+        background-color: #0b1220;
+        transform: none;
+    }
+
+    .home .wk-hero-slide[data-index="0"] .wk-hero-overlay{
+        background: linear-gradient(180deg, rgba(5, 10, 19, 0.02) 0%, rgba(5, 10, 19, 0.02) 38%, rgba(5, 10, 19, 0.72) 63%, rgba(5, 10, 19, 0.9) 100%);
+    }
+
+    .home .wk-hero-inner{
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: max(108px, calc(env(safe-area-inset-bottom, 0px) + 100px));
+    }
+
+    .home .wk-hero-content{
+        padding: 14px;
+        border-radius: 16px;
+    }
+
+    .home .wk-hero-title{
+        font-size: clamp(1.5rem, 7vw, 1.95rem);
+        margin-bottom: 8px;
+    }
+
+    .home .wk-hero-sub{
+        font-size: 0.9rem;
+        line-height: 1.42;
+    }
+
+    .home .wk-hero-actions .btn{
+        flex: 1 1 calc(50% - 6px);
+        justify-content: center;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: normal;
+    }
+
+    .home .wk-hero-controls{
+        bottom: max(54px, calc(env(safe-area-inset-bottom, 0px) + 48px));
+        padding-inline: 10px;
+    }
+
+    .home .wk-hero-nav{
+        width: 34px;
+        height: 34px;
+        font-size: 0.82rem;
+    }
+
+    .home .wk-hero-dot{
+        width: 8px;
+        height: 8px;
+    }
+
+    .wk-sticky-quote{
+        left: auto;
+        right: 12px;
+        bottom: max(10px, env(safe-area-inset-bottom, 0px));
+        width: auto;
+        max-width: 46vw;
+        padding: 10px 14px;
+        font-size: 0.86rem;
+        line-height: 1.15;
+        box-shadow: 0 12px 30px rgba(200, 30, 30, 0.28);
+    }
+}
+
+@media (max-width: 360px){
+    .home .wk-hero-shell,
+    .home .wk-hero-slider{
+        min-height: 88svh;
+        height: 88svh;
+    }
+
+    .home .wk-hero-actions .btn{
+        flex-basis: 100%;
+    }
+
+    .home .wk-hero-sub{
+        font-size: 0.86rem;
+    }
+}

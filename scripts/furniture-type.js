@@ -2,7 +2,7 @@
   'use strict';
 
   function brochureAssetUrl() {
-    const rel = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
     if (typeof window.wkRootAssetUrl === 'function') {
       try {
         return window.wkRootAssetUrl(rel);

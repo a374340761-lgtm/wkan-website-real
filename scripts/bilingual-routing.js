@@ -254,9 +254,24 @@
 
   function injectHreflang() {
     var pathname = normPath(window.location.pathname);
-    var search = window.location.search || '';
+    var rawSearch = window.location.search || '';
+    var search = rawSearch;
     var enAbs;
     var zhAbs;
+
+    // Filter/search URLs are catalog UI states in this phase, not separate indexable pages.
+    // Keep hreflang aligned with the clean canonical URLs produced by scripts/seo.js/HTML.
+    var enKeyForSearch = enPathKey(isZhPath(pathname) ? stripZhPrefix(pathname) : pathname);
+    if (enKeyForSearch === '/product-center.html' || enKeyForSearch === '/all-products.html') {
+      search = '';
+    } else if (enKeyForSearch === '/product-detail.html') {
+      try {
+        var sku = (new URLSearchParams(rawSearch).get('sku') || '').trim();
+        search = sku ? '?sku=' + encodeURIComponent(sku) : '';
+      } catch (e) {
+        search = '';
+      }
+    }
 
     var seo = PRODUCTION_ORIGIN;
     if (isZhPath(pathname)) {

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product | Wai Kwan Tent — OEM Tents, Beach Flags &amp; Display Hardware</title>
     <meta name="description" content="Product specifications for OEM/ODM custom canopy tents, beach flags, and display hardware. Request a quote from Wai Kwan Tent." />
+    <meta name="robots" content="noindex,follow" />
 
     <!-- Base URL. With ?sku=, inline + product-detail.js set canonical/OG to product-detail.html?sku= (WK_PRODUCT_SEO_MAP). -->
     <link rel="canonical" href="https://www.waikwantent.com/product-detail.html" />
@@ -49,6 +50,7 @@
           var el = document.querySelector(sel);
           if (el) el.setAttribute(name, val);
         }
+        attr('meta[name="robots"]', 'content', 'index,follow');
         attr('link[rel="canonical"]', 'href', canonical);
         attr('meta[property="og:url"]', 'content', canonical);
         attr('meta[name="twitter:url"]', 'content', canonical);
@@ -151,7 +153,7 @@
                         <a href="product-center.html?cat=tents"><span class="zh" data-translate="nav_cat_tents"></span><span class="en" data-translate="nav_cat_tents"></span></a>
                         <a href="product-center.html?cat=flags"><span class="zh" data-translate="nav_cat_flags_poles"></span><span class="en" data-translate="nav_cat_flags_poles"></span></a>
                         <a href="product-center.html?cat=displays"><span class="zh" data-translate="nav_cat_displays"></span><span class="en" data-translate="nav_cat_displays"></span></a>
-                        <a href="products-lightbox.html"><span class="zh" data-translate="nav_light_boxes_nav"></span><span class="en" data-translate="nav_light_boxes_nav"></span></a>
+                        <a href="product-center.html?cat=lightbox"><span class="zh" data-translate="nav_light_boxes_nav"></span><span class="en" data-translate="nav_light_boxes_nav"></span></a>
                     </div>
                 </li>
                 <li class="nav-item-dropdown">
@@ -232,7 +234,7 @@
         <!-- Top Section -->
         <section id="productDetailBody" class="pdp-top">
             <div class="pdp-image">
-                <img id="productImage" src="/images/placeholder.png" alt="Selected product image — Wai Kwan Tent" loading="lazy" onerror="this.src='/images/placeholder.png';">
+                <img id="productImage" src="/images/placeholder.svg" alt="Selected product image — Wai Kwan Tent" loading="lazy" onerror="this.src='/images/placeholder.svg';">
                 <div class="image-carousel"></div>
             </div>
 

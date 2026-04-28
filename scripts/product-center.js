@@ -446,7 +446,7 @@
   const PC_GROUPED_HUB_SUBS = new Set(['dome-3-folders', 'table-chair-stool-toilet']);
   const PC_GROUPED_FURNITURE_HERO_REL =
     'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
-  const PC_GROUPED_DOME_HERO_REL = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
+  const PC_GROUPED_DOME_HERO_REL = 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png';
 
   function normalizePcSubSlug(catLower, rawSub) {
     const s = String(rawSub || '').trim();
@@ -489,7 +489,7 @@
     }
     const slide = slides.find((s) => s && s.id === catLower);
     if (slide && slide.image) return wkAssetUrl(String(slide.image).replace(/^\//, ''));
-    return wkAssetUrl('images/placeholder.png');
+    return wkAssetUrl('images/placeholder.svg');
   }
 
   function blurbFromRepForPc(rep, lang, escapeHtmlFn) {

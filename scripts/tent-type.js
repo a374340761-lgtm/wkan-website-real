@@ -798,16 +798,58 @@
     }).join('');
   }
 
+  function renderIntroductionPhoto(item) {
+    const p = item && item.introductionPhoto;
+    if (!p || !p.src) return '';
+    const lang = getCurrentLang();
+    const src = wkAssetUrl(p.src);
+    const alt = safe(p.alt || '');
+    const subtitle =
+      lang === 'zh'
+        ? safe(p.subtitleZh || p.subtitleEn || '')
+        : safe(p.subtitleEn || p.subtitleZh || '');
+    const caption =
+      lang === 'zh'
+        ? safe(p.captionZh || p.captionEn || '')
+        : safe(p.captionEn || p.captionZh || '');
+    const subHtml = subtitle
+      ? `<div class="tent-type-detail__intro-photo-sub" style="font-weight:800;margin-bottom:10px;color:var(--wk-black);font-size:var(--font-size-sm);">${subtitle}</div>`
+      : '';
+    const capHtml = caption
+      ? `<figcaption class="tent-type-detail__text tent-type-detail__intro-photo-cap" style="margin-top:10px;line-height:1.6;">${caption}</figcaption>`
+      : '';
+    return `
+      <div class="tent-type-detail__visuals tent-type-detail__intro-photo-visuals" style="grid-template-columns:1fr;margin-bottom:var(--spacing-md);max-width:100%;">
+        <figure class="tent-type-detail__intro-photo-figure" style="margin:0;">
+          ${subHtml}
+          <div class="tent-type-detail__intro-photo-wrap" style="border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--wk-border-light);background:var(--wk-bg-soft);">
+            <img
+              class="tent-type-detail__intro-photo-img"
+              src="${src}"
+              alt="${alt}"
+              loading="lazy"
+              decoding="async"
+              style="width:100%;height:auto;display:block;max-width:100%;object-fit:contain;vertical-align:middle;"
+              onerror="this.style.display='none'"
+            />
+          </div>
+          ${capHtml}
+        </figure>
+      </div>`;
+  }
+
   function renderStory(item) {
     const lang = getCurrentLang();
     if (!item) return '';
     const zh = safe(item.storyZh || '');
     const en = safe(item.storyEn || '');
-    if (!zh && !en) return '';
+    const introPhoto = renderIntroductionPhoto(item);
+    if (!zh && !en && !introPhoto) return '';
     const title = lang === 'zh' ? '产品介绍' : 'Product Story';
     return `
       <div class="tent-type-detail__block">
         <div class="tent-type-detail__blockTitle">${title}</div>
+        ${introPhoto}
         ${lang === 'zh'
           ? `
             ${zh ? renderRichText(zh) : ''}

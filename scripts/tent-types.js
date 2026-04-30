@@ -9,7 +9,8 @@
     /** Committed product images used where brochure page exports are not present in the repo. */
     const CATALOG_PAGE_ASSETS = {
         4: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',
-        5: 'images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png',
+        // Brochure PDF p.5 export (folding tent series)
+        5: 'images/广西伟群帐篷制造有限公司2025allpagepng/05.png',
         8: 'images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg'
     };
     const CATALOG_PAGE = function (n) {
@@ -197,6 +198,16 @@
                     CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png',
+                introductionPhoto: {
+                    src: 'images/products/tents/folding50/wk-t50d-50mm-aluminum-3x6m-pop-up-canopy-tent-frame-workshop.jpg',
+                    alt: 'WK-T50D 50mm aluminum 3x6m pop up canopy tent frame assembled in WaiKwan factory workshop',
+                    subtitleEn: 'WK-T50D 3 × 6 m — factory workshop',
+                    subtitleZh: 'WK-T50D 3×6 m · 车间实拍',
+                    captionEn:
+                        'WK-T50D is the 3×6 m pop up canopy tent in our 50 mm aluminum hex series: a heavy duty aluminum tent frame assembled at WaiKwan’s workshop before canopy fitting and optional custom printed canopy graphics—part of our OEM canopy tent manufacturing program for branded outdoor displays.',
+                    captionZh:
+                        'WK-T50D 为 3×6 m 规格的 50 mm 六角铝合金重型折叠篷架，车间实拍展示组装状态；可配套定制印刷篷顶与全套 OEM 外贸出货方案。'
+                },
                 pdfPage: 5
             }
         ],

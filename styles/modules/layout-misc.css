@@ -1498,6 +1498,18 @@ html[lang="en"] .hero-slide p {
     margin-right: auto;
 }
 
+/* Workshop / intro photo under Product Story — single frame, fluid width */
+.tent-type-detail__intro-photo-wrap{
+    width: 100%;
+    max-width: 100%;
+}
+.tent-type-detail__intro-photo-img{
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+}
+
 /* Flag-type hero: constrain tall/narrow images (e.g. Outdoor Giant Flag) to normal viewing size */
 body[data-page-category="flag-type"] .tent-type-detail__visuals--hero,
 .tent-type-detail__visuals--hero {

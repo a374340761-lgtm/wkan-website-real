@@ -1730,3 +1730,32 @@
         font-size: 0.86rem;
     }
 }
+
+/* Mobile Canton Fair invitation hero fix */
+@media (max-width: 640px){
+    .home .wk-hero-slide--invite .wk-hero-overlay{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background: none !important;
+    }
+
+    .home .wk-hero-slide--invite .wk-hero-inner .wk-hero-content{
+        display: none !important;
+    }
+
+    .home .wk-hero-slide--invite .wk-hero-bg{
+        inset: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: auto 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        transform: none;
+        background-color: transparent;
+    }
+}

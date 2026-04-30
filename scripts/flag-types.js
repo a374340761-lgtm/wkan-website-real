@@ -3,8 +3,8 @@
 (function () {
   'use strict';
 
-  // NOTE: The folder name contains spaces; use URL-encoded paths in src/href.
-  const PDF_BASE = 'images/products/flags/page%20in%20pdf';
+  /** Branded brochure scans (广西伟群帐篷制造有限公司2025 — full-page PNG exports). */
+  const CATALOG_BROCHURE_BASE = 'images/广西伟群帐篷制造有限公司2025allpagepng';
   const FLAG_HERO = (fileName) => encodeURI(`images/products/flags/hero/${fileName}`);
   // Local accessory photos (folder may contain spaces in filenames)
   const FLAG_ACCESSORIES_IMG = (fileName) => encodeURI(`images/products/flags/accessories/${fileName}`);
@@ -21,7 +21,7 @@
         storyEn: 'The third generation beach flag poles. Multiple heights available for different flag shapes.',
         storyZh: '第三代沙滩旗杆，多种高度可选，适配不同旗形。',
         heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),
-        guideImage: `${PDF_BASE}/10.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/10.png`,
         infoBlocks: [
           {
             titleEn: 'Available Heights (Flag Poles)',
@@ -67,7 +67,7 @@
         storyEn: 'Hybrid aluminium + fiberglass poles for improved rigidity and portability.',
         storyZh: '铝管与玻纤组合旗杆，兼顾强度与便携。',
         heroImage: FLAG_HERO('beach-flag-poles-fiberglass-pole-hero.png'),
-        guideImage: `${PDF_BASE}/10.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/10.png`,
         variants: [
           {
             key: 'v1',
@@ -127,7 +127,7 @@
         storyEn: 'Fully fiberglass pole sets for teardrop beach flags.',
         storyZh: '全玻纤旗杆套装（水滴旗）。',
         heroImage: FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg'),
-        guideImage: `${PDF_BASE}/11.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/11.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -156,7 +156,7 @@
         storyEn: 'Fully fiberglass pole sets for feather beach flags.',
         storyZh: '全玻纤旗杆套装（刀旗）。',
         heroImage: FLAG_HERO('feather-flag-hero.png'),
-        guideImage: `${PDF_BASE}/11.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/11.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -193,7 +193,7 @@
           '旗面通过顶帽与环固定，可随风向自由旋转。'
         ].join('\n'),
         heroImage: FLAG_HERO('outdoor-giant-flag-pole-display-hero.png'),
-        guideImage: `${PDF_BASE}/12.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/12.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -229,7 +229,7 @@
         storyEn: 'Square flag poles in fiberglass material.',
         storyZh: '方型沙滩旗杆（玻纤材质）。',
         heroImage: FLAG_HERO('square-flag-pole-fiberglass-outdoor-display-hero.png'),
-        guideImage: `${PDF_BASE}/12.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/12.png`,
         specTable: {
           columns: [
             { key: 'material', labelEn: 'Material', labelZh: '材质' },
@@ -257,7 +257,7 @@
         storyEn: 'Semicircle American aluminium poles. Optional diameters/thickness available.',
         storyZh: '半圆美式铝杆，可选不同直径/壁厚。',
         heroImage: FLAG_HERO('semicircle-flag-shape-size-guide-hero.png'),
-        guideImage: `${PDF_BASE}/13.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -293,7 +293,7 @@
         storyEn: 'Square American aluminium poles. Optional diameters/thickness available.',
         storyZh: '方型美式铝杆，可选不同直径/壁厚。',
         heroImage: FLAG_HERO('square-flag-shape-size-guide-hero.png'),
-        guideImage: `${PDF_BASE}/13.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -329,7 +329,7 @@
         storyEn: 'New feather aluminium poles with defined graphic sizes.',
         storyZh: '新型刀旗铝杆，对应旗面尺寸明确。',
         heroImage: FLAG_HERO('newfeather-flag-hero.png'),
-        guideImage: `${PDF_BASE}/13.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -357,7 +357,7 @@
         storyEn: 'American aluminium poles for feather/teardrop flags.',
         storyZh: '刀旗/水滴旗美式铝杆。',
         heroImage: FLAG_HERO('feather-flag-hero.png'),
-        guideImage: `${PDF_BASE}/13.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/13.png`,
         specTable: {
           columns: [
             { key: 'model', labelEn: 'Model', labelZh: '型号' },
@@ -402,7 +402,7 @@
           '包含背包旗系列与街旗/展示旗系列，多种造型与型号可选。'
         ].join('\n'),
         heroImage: FLAG_HERO('backpack-flags-street-display-flags-hero.png'),
-        guideImage: `${PDF_BASE}/16.png`,
+        guideImage: `${CATALOG_BROCHURE_BASE}/16.png`,
         specTables: [
           {
             titleEn: 'Backpack Flag Series',

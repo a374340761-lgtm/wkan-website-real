@@ -1,5 +1,6 @@
 // Tent Types Hub data (source PDF only)
 // PDF: 广西伟群帐篷制造有限公司2025改.pdf
+// - Page 4: Tent accessories grid (catalog examples)
 // - Page 5: Folding tent series (30/40/50)
 // - Page 6: Event tents (Star / Awning / Six-sided)
 // Global export: window.TENT_TYPES
@@ -8,10 +9,14 @@
 
     /** Committed product images used where brochure page exports are not present in the repo. */
     const CATALOG_PAGE_ASSETS = {
-        4: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',
+        // Brochure PDF p.4 export (tent accessories grid — Catalog Examples on tent_accessories hub)
+        4: 'images/广西伟群帐篷制造有限公司2025allpagepng/04.png',
         // Brochure PDF p.5 export (folding tent series)
         5: 'images/广西伟群帐篷制造有限公司2025allpagepng/05.png',
-        8: 'images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg'
+        // Brochure PDF p.6 export (star / awning / six-sided event tents)
+        6: 'images/广西伟群帐篷制造有限公司2025allpagepng/06.png',
+        // Brochure PDF p.8 export (inflatable tent series)
+        8: 'images/广西伟群帐篷制造有限公司2025allpagepng/08.png'
     };
     const CATALOG_PAGE = function (n) {
         return CATALOG_PAGE_ASSETS[Number(n)] || 'images/placeholder.svg';
@@ -256,7 +261,7 @@
                     'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
-                    CATALOG_PAGE(5)
+                    CATALOG_PAGE(6)
                 ],
                 pdfPage: 6
             },
@@ -304,7 +309,7 @@
                     'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
-                    CATALOG_PAGE(5)
+                    CATALOG_PAGE(6)
                 ],
                 pdfPage: 6
             },
@@ -347,7 +352,7 @@
                     'images/products/accessories/canopy-tent-accessories-and-replacement-parts.png'
                 ],
                 guideImages: [
-                    CATALOG_PAGE(5)
+                    CATALOG_PAGE(6)
                 ],
                 pdfPage: 6
             },
@@ -387,17 +392,17 @@
                     { href: 'six-sided-booth.html', labelZh: '查看详情页', labelEn: 'View product page' }
                 ],
                 guideImages: [
-                    CATALOG_PAGE(5)
+                    CATALOG_PAGE(6)
                 ],
                 heroImage: 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png',
                 pdfPage: 6
             }
         ],
 
-        // New tent series: Inflatable Tent (brochure page — images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg)
+        // New tent series: Inflatable Tent — brochure scan images/广西伟群帐篷制造有限公司2025allpagepng/08.png
         // UX: One "Inflatable Tent" type with internal AirTent size selection.
         inflatable: (function () {
-            const INFLATABLE_BROCHURE_GUIDE = encodeURI('images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg');
+            const INFLATABLE_BROCHURE_GUIDE = CATALOG_PAGE(8);
             const commonBlocks = {
                 accessories: {
                     titleZh: '充气帐篷配件',
@@ -611,10 +616,9 @@
             ];
         })(),
 
-        // Tent accessories hub — single full-range listing (XLS + catalog p.4); hero: camping-tent-accessories-hero.jpg
+        // Tent accessories hub — catalog examples: brochure p.4 PNG; hero: product photo
         accessories: [
             (function () {
-                const CATALOG04 = encodeURI('images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg');
                 return {
                     type: 'tent_accessories',
                     nameZh: '帐篷配件（全系列）',
@@ -624,7 +628,7 @@
                     storyZh: '下表为编码、名称与备注；详情页可切换中英文。',
                     storyEn: 'Code, name, and specs below; switch language in the page header.',
                     heroImage: 'images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg',
-                    exampleImages: [CATALOG04],
+                    exampleImages: [CATALOG_PAGE(4)],
                     skipCommonDetails: true,
                     skipAccessoriesBlock: true,
                     guideImages: [],

@@ -59,7 +59,7 @@ Fix og:url, og:image, meta description and canonical tags for all important HTML
 
 Base URL: https://www.waikwantent.com
 
-Pages: index.html, custom-canopy-tent-manufacturer.html, beach-flag-supplier.html, portable-display-systems.html, faq.html, faq-moq.html, faq-lead-time.html, faq-artwork-files.html, faq-color-matching.html, faq-shipping.html, faq-samples.html, product-detail.html, product-center.html, all-products.html, tent-type.html, flag-type.html, dome-type.html, furniture-type.html, racegate-type.html, six-sided-booth.html.
+Pages: index.html, custom-canopy-tent-manufacturer.html, beach-flag-supplier.html, portable-display-systems.html, faq.html, faq-moq.html, faq-lead-time.html, faq-artwork-files.html, faq-color-matching.html, faq-shipping.html, faq-samples.html, product-detail.html, product-center.html, all-products.html, tent-type.html, flag-type.html, dome-type.html, furniture-type.html, six-sided-booth.html.
 
 Requirements:
 - Each page: unique title, meta description, canonical, og:title, og:description, og:url, og:image
@@ -262,7 +262,7 @@ You are editing the waikwantent.com repository.
 Task: fix SEO meta tags across all important HTML pages.
 
 Pages to prioritize:
-index.html, custom-canopy-tent-manufacturer.html, beach-flag-supplier.html, portable-display-systems.html, faq.html, faq-moq.html, faq-lead-time.html, faq-artwork-files.html, faq-color-matching.html, faq-shipping.html, faq-samples.html, product-detail.html, product-center.html, all-products.html, tent-type.html, flag-type.html, dome-type.html, furniture-type.html, racegate-type.html, six-sided-booth.html.
+index.html, custom-canopy-tent-manufacturer.html, beach-flag-supplier.html, portable-display-systems.html, faq.html, faq-moq.html, faq-lead-time.html, faq-artwork-files.html, faq-color-matching.html, faq-shipping.html, faq-samples.html, product-detail.html, product-center.html, all-products.html, tent-type.html, flag-type.html, dome-type.html, furniture-type.html, six-sided-booth.html.
 
 Requirements:
 1. Every page: unique title, meta description, canonical, og:title, og:description, og:url, og:image

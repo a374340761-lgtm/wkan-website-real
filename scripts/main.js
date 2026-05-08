@@ -472,13 +472,19 @@ function renderHomeHeroSlider() {
         root.appendChild(slide);
     });
 
-    // Warm all hero backgrounds so mobile slide changes never reveal an empty layer.
-    slides.forEach((s) => {
+    // Warm non-LCP hero backgrounds after first paint instead of competing with the first slide.
+    const warmRemainingHeroImages = () => slides.slice(1).forEach((s) => {
         const src = wkPublicAssetUrl(String(s.image || ''));
         if (!src) return;
         const img = new Image();
+        img.decoding = 'async';
         img.src = src;
     });
+    if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(warmRemainingHeroImages, { timeout: 2500 });
+    } else {
+        window.setTimeout(warmRemainingHeroImages, 1200);
+    }
 
     // Build dots
     const dotsWrap = document.getElementById('heroDots');
@@ -577,7 +583,7 @@ function renderHomeCategoryGrid() {
         const imgSrc = wkPublicAssetUrl(c.img);
         const imgAlt = String(c.imgAlt || '').replace(/"/g, '&quot;');
         const mediaHtml = imgSrc
-            ? `<img class="wk-card-img" src="${imgSrc}" alt="${imgAlt}" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />`
+            ? `<img class="wk-card-img" src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />`
             : `<div class="wk-card-placeholder" aria-hidden="true"><i class="fas fa-layer-group"></i></div>`;
 
         wrap.innerHTML = `
@@ -651,7 +657,7 @@ function renderTrustedByWall() {
         logos.slice(0, 12).forEach((src) => {
             const item = document.createElement('div');
             item.className = 'wk-logo-badge';
-            item.innerHTML = `<img class="wk-logo-img" src="${wkPublicAssetUrl(String(src))}" alt="Customer brand logo" loading="lazy" onerror="this.style.display='none'" />`;
+            item.innerHTML = `<img class="wk-logo-img" src="${wkPublicAssetUrl(String(src))}" alt="Customer brand logo" loading="lazy" decoding="async" onerror="this.style.display='none'" />`;
             grid.appendChild(item);
         });
         return;
@@ -769,7 +775,7 @@ function renderHomeBestSellers() {
             card.className = 'wk-card wk-product-card';
             card.innerHTML = `
                 <a class="wk-product-media" href="${primaryHref}" aria-label="${String(name).replace(/"/g, '&quot;')}">
-                    <img class="wk-product-img" src="${img}" alt="${String(name).replace(/"/g, '&quot;')}" loading="lazy" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
+                    <img class="wk-product-img" src="${img}" alt="${String(name).replace(/"/g, '&quot;')}" loading="lazy" decoding="async" onerror="this.src='${WK_PLACEHOLDER_IMG}'" />
                 </a>
                 <div class="wk-card-body">
                     <div class="wk-product-title">${name}</div>
@@ -1334,7 +1340,7 @@ function enhanceProductsDropdownExtras() {
         const existing = Array.from(menu.querySelectorAll('a[href]')).map((a) => a.getAttribute('href') || '');
         const raceGateLink = Array.from(menu.querySelectorAll('a[href]')).find((a) => {
             const h = (a.getAttribute('href') || '').trim();
-            return h === 'racegate-type.html' || /cat=racegate/i.test(h);
+            return /cat=racegate/i.test(h);
         });
 
         extras.forEach((x) => {
@@ -2405,7 +2411,7 @@ function renderHeroSlides() {
             </div>
             <div class="hero-sz-right">
                 <div class="hero-sz-image-wrap hero-image">
-                    <img src="${imgSrc}" alt="${s.alt || ''}" loading="lazy">
+                    <img src="${imgSrc}" alt="${s.alt || ''}" loading="lazy" decoding="async">
                 </div>
             </div>
         `;
@@ -2441,7 +2447,7 @@ function initHeroCarouselSz() {
             </div>
             <div class="hero-sz-right">
                 <div class="hero-sz-image-wrap">
-                    <img src="${fallbackImg}" alt="Portable display backdrop — Wai Kwan Tent product range" loading="lazy">
+                    <img src="${fallbackImg}" alt="Portable display backdrop — Wai Kwan Tent product range" loading="lazy" decoding="async">
                 </div>
             </div>
         `;

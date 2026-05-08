@@ -67,7 +67,6 @@
     '/products-furniture.html': true,
     '/products-inflatable.html': true,
     '/products-lightbox.html': true,
-    '/racegate-type.html': true,
     '/seg-light-box-manufacturer.html': true,
     '/seo/advertising-flag-pole-and-base-wholesale-supplier-b2b.html': true,
     '/seo/aluminum-frame-fabric-display-manufacturer-custom-branding.html': true,
@@ -161,11 +160,17 @@
     var nav = getNavOrigin();
     if (targetLang === 'zh') {
       if (isZhPath(pathname)) return null;
+      if (pathname === '/racegate-type.html') {
+        return absolutize(nav, '/zh/product-center.html', '?cat=racegate');
+      }
       var zhPath = getZhPathForEnPath(pathname);
       return absolutize(nav, zhPath, search);
     }
     if (targetLang === 'en') {
       if (!isZhPath(pathname)) return null;
+      if (pathname === '/zh/racegate-type.html') {
+        return absolutize(nav, '/product-center.html', '?cat=racegate');
+      }
       var enPath = stripZhPrefix(pathname);
       var enKey = enPathKey(enPath);
       if (!hasEnMirror(enKey)) {
@@ -280,6 +285,8 @@
     }
 
     var seo = PRODUCTION_ORIGIN;
+    var racegateDeprecatedStub = pathname === '/racegate-type.html' || pathname === '/zh/racegate-type.html';
+
     if (isZhPath(pathname)) {
       zhAbs = absolutize(seo, pathname, search);
       var enPath = stripZhPrefix(pathname);
@@ -303,6 +310,11 @@
 
     if (!zhAbs) {
       zhAbs = absolutize(seo, '/zh/index.html', search);
+    }
+
+    if (racegateDeprecatedStub) {
+      enAbs = absolutize(seo, '/product-center.html', '?cat=racegate');
+      zhAbs = absolutize(seo, '/zh/product-center.html', '?cat=racegate');
     }
 
     removeOldHreflang();

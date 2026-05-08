@@ -2911,7 +2911,7 @@ class ProductManager {
         const cells = paths
             .map((raw) => {
                 const src = wkRootAssetUrl(encodeURI(raw));
-                return `<a href="${src}" target="_blank" rel="noopener" class="pdp-catalog-examples__link"><img class="pdp-catalog-examples__img" src="${src}" alt="" loading="lazy" /></a>`;
+                return `<a href="${src}" target="_blank" rel="noopener" class="pdp-catalog-examples__link"><img class="pdp-catalog-examples__img" src="${src}" alt="" loading="lazy" decoding="async" /></a>`;
             })
             .join('');
 
@@ -3376,7 +3376,7 @@ class ProductManager {
                 cardImg = raw ? wkRootAssetUrl(String(raw).trim()) : '';
             }
             productImageInner = cardImg
-                ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.svg';" />`
+                ? `<img src="${this._escapeHtml(cardImg)}" alt="${this._escapeHtml(altText)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/images/placeholder.svg';" />`
                 : `<i class="fas fa-${iconClass}"></i>`;
         }
 
@@ -3991,7 +3991,7 @@ getProductIcon(category) {
         };
 
         row.innerHTML = `
-            <div class="product-row-image"><img src="${this._escapeHtml(imageUrl)}" alt="" loading="lazy" onerror="this.onerror=null;this.src='/images/placeholder.svg';" /></div>
+            <div class="product-row-image"><img src="${this._escapeHtml(imageUrl)}" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/images/placeholder.svg';" /></div>
             <div class="product-row-info">
                 <h3>
                     <a href="${this._escapeHtml(typeHref)}" style="text-decoration:none;color:inherit;">
@@ -4058,7 +4058,7 @@ getProductIcon(category) {
             imageHtml = `<div class="product-row-image"><div class="sprite-thumb" style="background-image:url('${imageUrl}');background-position:${x}% ${y}%;"></div></div>`;
         } else if (imageUrl) {
             const altText = `${product.nameEn || name} / ${product.name || ''}`;
-            imageHtml = `<div class="product-row-image"><img src="${imageUrl}" alt="${altText}" onerror="this.src='/images/placeholder.svg'" /></div>`;
+            imageHtml = `<div class="product-row-image"><img src="${imageUrl}" alt="${altText}" loading="lazy" decoding="async" onerror="this.src='/images/placeholder.svg'" /></div>`;
         } else {
             imageHtml = `<div class="product-row-image"><i class=\"fas fa-${imageIcon}\" style=\"font-size:4rem;color:var(--primary-color);display:flex;align-items:center;justify-content:center;height:100%;\"></i></div>`;
         }

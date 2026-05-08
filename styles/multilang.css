@@ -238,12 +238,24 @@
 }
 
 /* ===================== 语言切换：.zh / .en 显示/隐藏控制 ===================== */
-/* 默认：显示中文，隐藏英文 */
-.en {
+/* Default follows the document language so English URLs do not flash Chinese text before JS runs. */
+html[lang="en"] .zh,
+html:not([lang]) .zh {
     display: none !important;
 }
 
-.zh {
+html[lang="en"] .en,
+html:not([lang]) .en {
+    display: inline !important;
+}
+
+html[lang="zh-CN"] .en,
+html[lang="zh"] .en {
+    display: none !important;
+}
+
+html[lang="zh-CN"] .zh,
+html[lang="zh"] .zh {
     display: inline !important;
 }
 

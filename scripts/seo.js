@@ -194,6 +194,68 @@
     upsertMeta('name', 'twitter:url', absUrl);
   }
 
+  function currentPageName() {
+    var h1 = document.querySelector('main h1, h1');
+    var name = h1 ? String(h1.textContent || '').replace(/\s+/g, ' ').trim() : '';
+    if (name) return name;
+    return String(document.title || 'WaiKwan Tent').replace(/\s*\|.*$/, '').trim();
+  }
+
+  function injectWebPageJsonLd(canonicalAbs) {
+    if (!canonicalAbs || document.getElementById('wk-webpage-jsonld')) return;
+    try {
+      var path = String(window.location.pathname || '/').replace(/\\/g, '/');
+      if (/\bproduct-detail\.html$/i.test(path)) return;
+      var script = document.createElement('script');
+      script.id = 'wk-webpage-jsonld';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': canonicalAbs + '#webpage',
+        url: canonicalAbs,
+        name: currentPageName(),
+        description: getDescription(),
+        isPartOf: { '@id': BASE_URL + '/#website' },
+        about: { '@id': BASE_URL + '/#organization' },
+        inLanguage: /^\/zh(\/|$)/i.test(path) ? 'zh-CN' : 'en'
+      });
+      document.head.appendChild(script);
+    } catch (e) {}
+  }
+
+  function injectBreadcrumbJsonLd(canonicalAbs) {
+    if (!canonicalAbs || document.getElementById('wk-auto-breadcrumb-jsonld')) return;
+    var existingBreadcrumb = false;
+    try {
+      var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      for (var i = 0; i < scripts.length; i += 1) {
+        if (/breadcrumb/i.test(String(scripts[i].id || ''))) {
+          existingBreadcrumb = true;
+          break;
+        }
+      }
+    } catch (e0) {}
+    if (existingBreadcrumb) return;
+    try {
+      var path = String(window.location.pathname || '/').replace(/\\/g, '/');
+      if (path === '/' || /\/index\.html$/i.test(path) || /\bproduct-detail\.html$/i.test(path)) return;
+      var name = currentPageName();
+      var script = document.createElement('script');
+      script.id = 'wk-auto-breadcrumb-jsonld';
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE_URL + '/' },
+          { '@type': 'ListItem', position: 2, name: name || 'Current page', item: canonicalAbs }
+        ]
+      });
+      document.head.appendChild(script);
+    } catch (e) {}
+  }
+
   function injectOrganizationJsonLd() {
     if (document.getElementById('wk-org-jsonld')) return;
     try {
@@ -256,6 +318,8 @@
     try {
       var canonicalAbs = normalizeCanonical();
       applySocialTags(canonicalAbs);
+      injectWebPageJsonLd(canonicalAbs);
+      injectBreadcrumbJsonLd(canonicalAbs);
       injectOrganizationJsonLd();
       if (typeof window.wkBilingualInjectHreflang === 'function') {
         window.wkBilingualInjectHreflang();

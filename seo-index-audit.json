@@ -101,8 +101,8 @@
       "reason": "Large set of SKU URLs sharing one HTML shell; thin differentiation if specs overlap; classic soft-duplicate risk."
     },
     {
-      "paths": ["racegate-type.html", "six-sided-booth.html"],
-      "reason": "Shorter unique copy vs pillar pages; may compete with category/tent-type content."
+      "paths": ["six-sided-booth.html"],
+      "reason": "Shorter unique copy vs pillar pages; may compete with category/tent-type content. Race Gate hub consolidated to product-center.html?cat=racegate."
     }
   ],
   "pagesRiskDuplicateCanonicalUserVsGoogle": [

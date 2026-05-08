@@ -28,7 +28,6 @@
   '/products-furniture.html': true,
   '/products-inflatable.html': true,
   '/products-lightbox.html': true,
-  '/racegate-type.html': true,
   '/seg-light-box-manufacturer.html': true,
   '/seo/advertising-flag-pole-and-base-wholesale-supplier-b2b.html': true,
   '/seo/aluminum-frame-fabric-display-manufacturer-custom-branding.html': true,

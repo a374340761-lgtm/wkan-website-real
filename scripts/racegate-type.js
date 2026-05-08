@@ -1,4 +1,4 @@
-// RaceGate view-type page (racegate-type.html)
+// Deprecated: racegate-type.html is a static redirect to product-center.html?cat=racegate (this script is not loaded).
 (function () {
   'use strict';
 

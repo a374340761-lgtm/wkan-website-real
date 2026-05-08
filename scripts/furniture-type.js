@@ -2,7 +2,7 @@
   'use strict';
 
   function brochureAssetUrl() {
-    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+    const rel = 'images/广西伟群帐篷制造有限公司2025allpagepng/17.png';
     if (typeof window.wkRootAssetUrl === 'function') {
       try {
         return window.wkRootAssetUrl(rel);
@@ -14,7 +14,7 @@
     return x.startsWith('/') ? x : '/' + x;
   }
 
-  /** Brochure p.1 (furniture line): folding table & chair set — page hero, not the full p.17 sheet. */
+  /** Hero: clean product shot (left column). Brochure card uses catalog p.17 scan via brochureAssetUrl(). */
   function furnitureHeroAssetUrl() {
     const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
     if (typeof window.wkRootAssetUrl === 'function') {
@@ -174,11 +174,17 @@
     const heroUrl = furnitureHeroAssetUrl();
 
     if (hero) hero.src = heroUrl;
-    if (img) img.src = brochure;
+    if (img) {
+      img.src = brochure;
+      img.onerror = function () {
+        this.onerror = null;
+        this.src = typeof window.wkRootAssetUrl === 'function' ? window.wkRootAssetUrl('images/placeholder.svg') : '/images/placeholder.svg';
+      };
+    }
 
     if (btn) {
       btn.addEventListener('click', () => {
-        const title = getCurrentLang() === 'zh' ? '产品画册参考' : 'Brochure PDF Guide';
+        const title = getCurrentLang() === 'zh' ? '产品画册第 17 页' : 'Catalog page 17';
         openImageModal(brochure, title);
       });
     }

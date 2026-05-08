@@ -79,15 +79,15 @@ This report flags URLs and templates that are **more likely** to be crawled but 
 
 ---
 
-### 6. `racegate-type.html` (JS root)
+### 6. Legacy `racegate-type.html` (redirect)
 
-**Why crawl but not index:** Similar to type hubs, but **already** includes a substantive static paragraph before `#racegateRoot`.
+`racegate-type.html` and `/zh/racegate-type.html` are **lightweight redirect stubs** (meta refresh + JS) to `product-center.html?cat=racegate`. **Canonical** and **hreflang** target the Product Center category URL.
 
-**Risk:** **Medium–Low**
+**Why crawl but not index:** Minimal HTML; consolidates with the official category page via canonical.
 
-**Minimal fixes:** Optional extra cross-links or a short `h1` if metrics show issues.
+**Risk:** **Low** (intentional deprecation).
 
-**Status:** No change this pass.
+**Status:** Redirect stubs deployed; prefer internal links to `product-center.html?cat=racegate`.
 
 ---
 

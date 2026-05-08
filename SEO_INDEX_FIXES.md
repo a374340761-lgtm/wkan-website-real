@@ -8,6 +8,8 @@ These changes align **canonical URLs**, **Open Graph / Twitter URLs**, **JSON-LD
 
 ## Files changed
 
+Note: `racegate-type.html` is a **redirect stub** to `product-center.html?cat=racegate` (no longer a standalone SEO landing page).
+
 | File | What changed | Why it matters for Google |
 |------|----------------|---------------------------|
 | `scripts/product-detail.js` | `WK_PREFERRED_ORIGIN` / `BASE_URL` fixed to `https://www.waikwantent.com`; canonical, `og:url`, JSON-LD, and **`twitter:url`** use that origin. | Eliminates apex vs **www** canonical conflicts in GSC; structured data `url` matches indexed URL. |
@@ -19,7 +21,7 @@ These changes align **canonical URLs**, **Open Graph / Twitter URLs**, **JSON-LD
 | `all-products.html` | **Product center** link in “Related reading”. | Connects search page back to category hub. |
 | `dome-type.html`, `furniture-type.html` | Static **title** fallback text, **`meta name="description"`** (dome + furniture), short **intro paragraph** with internal links. | No empty `<title>` for no-JS; unique copy reduces thin-template risk. |
 | `products-accessories.html` | Title fallback; **intro links** to filtered catalog, product center, tent types. | Clear crawl paths + uniqueness. |
-| `racegate-type.html`, `six-sided-booth.html` | Richer **meta description**; **intro paragraphs** with internal links. | Distinct snippets + internal discovery. |
+| `six-sided-booth.html` | Richer **meta description**; **intro paragraphs** with internal links. | Distinct snippets + internal discovery. |
 | `products.html` | **`meta name="description"`** (still **`noindex`**). | Consistent head even on redirect stub. |
 | `index.original.html`, `index.wireframe.html` | **Absolute canonical** to `https://www.waikwantent.com/`; **meta description**; **distinct titles**. | Relative `index.html` canonicals were invalid/ambiguous; titles no longer duplicate “Redirecting…”. |
 | `test_logo.html`, `test_stats.html` | **Absolute canonical** to site root; **meta description** (still **`noindex`**). | Test pages still blocked but heads are valid if ever fetched. |

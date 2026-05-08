@@ -82,7 +82,7 @@ These files have **no literal text** inside `<title>` (or empty), or no `<title>
 ## Pages likely causing “Crawled – currently not indexed”
 
 - **All `product-detail.html?sku=...` URLs:** Same shell; differentiation is JS-driven. Many SKUs → **template similarity** and **soft duplicates** if copy is thin.
-- **Secondary type pages** (e.g. shorter copy): `racegate-type.html`, `six-sided-booth.html` — **lower unique text** vs long-form `/seo/` pages.
+- **Secondary type pages** (e.g. shorter copy): `six-sided-booth.html` — **lower unique text** vs long-form `/seo/` pages. Race Gate uses `product-center.html?cat=racegate` (legacy `racegate-type.html` redirects).
 
 ---
 

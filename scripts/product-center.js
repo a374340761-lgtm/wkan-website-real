@@ -325,7 +325,7 @@
       return;
     }
 
-    // RaceGate: exactly three shape groups → unified PDP (?sku=9401/9402/9403), no racegate-type hub.
+    // RaceGate: Semi / V / O → PDP (?sku=9403/9401/9402); official hub is product-center?cat=racegate (racegate-type.html redirects).
     if (cat === 'racegate') {
       const showcase = document.querySelector('.product-categories-showcase');
       if (showcase) showcase.style.display = 'none';
@@ -804,7 +804,7 @@
     if (el && el.parentElement) el.parentElement.removeChild(el);
   }
 
-  /** RaceGate shapes (V / O / semi) + Advertising Arch card — same tent-type-card grip, PDP only. */
+  /** RaceGate shapes (semi / V / O) — same tent-type-card grid; PDP + full catalog links. */
   function renderRacegateHub() {
     removeTentsHub();
     removeFlagsHub();
@@ -816,14 +816,11 @@
 
     const pm = window.productManager;
     const list = pm && Array.isArray(pm.products) ? pm.products : [];
-    const ids = [9401, 9402, 9403];
+    const ids = [9403, 9401, 9402];
     const racegateOnly = ids
       .map((id) => list.find((p) => p && Number(p.id) === id))
       .filter(Boolean);
-    const adArch =
-      list.find((p) => p && String(p.sku || '').trim().toUpperCase() === 'WK-AD')
-      || list.find((p) => p && Number(p.id) === 44001);
-    const products = adArch ? racegateOnly.concat([adArch]) : racegateOnly;
+    const products = racegateOnly;
 
     const lang = getCurrentLang();
     const safe = (s) => (s || '').toString();
@@ -855,16 +852,28 @@
         ? String(p.sku).trim()
         : String(p.id);
       const detailHref = localizedInternal(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
+      const browseAllHref = localizedInternal('all-products.html?cat=racegate');
       let img = '';
       if (typeof window.WK_getProductCardImage === 'function') {
         img = window.WK_getProductCardImage(p) || '';
+      }
+      if (!img && window.WK_RACEGATE_HERO_PATH) {
+        const t = String(p.type || '').toLowerCase();
+        const rel = window.WK_RACEGATE_HERO_PATH[t];
+        if (rel && typeof window.wkRootAssetUrl === 'function') {
+          try {
+            img = window.wkRootAssetUrl(encodeURI(rel));
+          } catch (e) {
+            img = wkAssetUrl(rel);
+          }
+        }
       }
       if (!img) img = wkAssetUrl(p.image);
       return `
         <div class="tent-type-card">
           <a class="tent-type-card__link" href="${escapeHtml(detailHref)}" aria-label="${escapeHtml(title)}">
             <div class="tent-type-card__imgWrap">
-              <img class="tent-type-card__img" src="${escapeHtml(img)}" alt="${escapeHtml(title)}" loading="lazy" onerror="this.style.display='none'" />
+              <img class="tent-type-card__img" src="${escapeHtml(img)}" alt="${escapeHtml(title)}" loading="lazy" decoding="async" onerror="this.style.display='none'" />
             </div>
           </a>
           <div class="tent-type-card__body">
@@ -872,8 +881,9 @@
               <div class="tent-type-card__title">${escapeHtml(title)}</div>
               ${desc ? `<div class="tent-type-card__desc">${escapeHtml(desc)}</div>` : ''}
             </a>
-            <div class="tent-type-card__cta">
+            <div class="tent-type-card__cta" style="display:flex;flex-wrap:wrap;gap:8px;">
               <a class="btn btn-secondary product-details-btn" href="${escapeHtml(detailHref)}" data-translate="view_details">View Details</a>
+              <a class="btn btn-tertiary" href="${escapeHtml(browseAllHref)}" data-translate="pc_racegate_browse_all">Browse All Race Gate Products</a>
             </div>
           </div>
         </div>

@@ -1617,3 +1617,87 @@ body[data-page-category="flag-type"] .tent-type-detail__visuals--hero img,
     color: var(--wk-gray-700);
 }
 
+/* Page-specific sharing and reference support */
+.page-share-block,
+.page-reference-box {
+    max-width: 1040px;
+    margin: 0 auto 1.25rem;
+    padding: 1.15rem 1.25rem;
+    border: 1px solid var(--wk-border-light);
+    border-radius: 14px;
+    background: var(--wk-bg-card, #fff);
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(15, 23, 42, 0.06));
+}
+.page-share-block__title,
+.page-reference-box__title {
+    margin: 0 0 0.45rem;
+    font-size: 1.08rem;
+    line-height: 1.35;
+    color: var(--wk-black, #111827);
+}
+.page-share-block__text {
+    margin: 0 0 0.85rem;
+    color: var(--wk-gray-700, #4b5563);
+    line-height: 1.6;
+}
+.page-share-block__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+.page-share-block__button,
+.page-reference-box__copy {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid rgba(164, 22, 26, 0.18);
+    border-radius: 999px;
+    background: #fff;
+    color: var(--wk-red-700, #a4161a);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+.page-share-block__button:hover,
+.page-reference-box__copy:hover {
+    background: rgba(164, 22, 26, 0.06);
+    text-decoration: none;
+}
+.page-reference-box {
+    background: linear-gradient(135deg, rgba(164, 22, 26, 0.035), #fff);
+}
+.page-reference-box__item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--wk-border-light);
+}
+.page-reference-box__item:first-of-type {
+    margin-top: 0.25rem;
+}
+.page-reference-box__item p {
+    margin: 0;
+    color: var(--wk-gray-700, #4b5563);
+    line-height: 1.55;
+}
+@media (max-width: 640px) {
+    .page-share-block,
+    .page-reference-box {
+        padding: 1rem;
+    }
+    .page-share-block__actions,
+    .page-reference-box__item {
+        grid-template-columns: 1fr;
+    }
+    .page-share-block__button,
+    .page-reference-box__copy {
+        width: 100%;
+    }
+}
+

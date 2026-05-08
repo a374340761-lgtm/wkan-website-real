@@ -1594,3 +1594,26 @@ body[data-page-category="flag-type"] .tent-type-detail__visuals--hero img,
     background: var(--wk-bg-card);
 }
 
+/* Reusable Canton Fair trust block for product and category pages */
+.wk-canton-trust {
+    margin: 0 auto 2.5rem;
+    max-width: 1040px;
+    padding: 0 1rem;
+}
+.wk-canton-trust__card {
+    padding: 1.4rem;
+    border: 1px solid rgba(164, 22, 26, 0.18);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(164, 22, 26, 0.06), #fff);
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(15, 23, 42, 0.06));
+}
+.wk-canton-trust__card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+}
+.wk-canton-trust__card p {
+    margin: 0 0 1rem;
+    line-height: 1.6;
+    color: var(--wk-gray-700);
+}
+

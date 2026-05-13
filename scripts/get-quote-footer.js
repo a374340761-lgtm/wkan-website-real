@@ -12,7 +12,7 @@
       }
       return '/contact-us.html';
     } catch (e) {
-      return 'contact-us.html';
+      return '/contact-us.html';
     }
   }
 

@@ -740,7 +740,14 @@
             try {
                 sessionStorage.setItem('wk_rfq_prefill_message', text);
             } catch { /* ignore */ }
-            window.location.href = 'contact-us.html#getQuoteForm';
+            let contactQuoteHref = '/contact-us.html#getQuoteForm';
+            try {
+                const p = window.location.pathname || '/';
+                if (p === '/zh' || p === '/zh/' || p.indexOf('/zh/') === 0) {
+                    contactQuoteHref = '/zh/contact-us.html#getQuoteForm';
+                }
+            } catch { /* keep EN default */ }
+            window.location.href = contactQuoteHref;
         }
 
         applyPendingPrefillMessage() {

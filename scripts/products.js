@@ -4121,6 +4121,14 @@ getProductIcon(category) {
         const productName = product ? (product.nameEn || product.name || '') : '';
         const productModel = product ? (product.model || '') : '';
         const productParam = encodeURIComponent(productModel || productName || '');
+
+        let contactPageBase = '/contact-us.html';
+        try {
+            const p = window.location.pathname || '/';
+            if (p === '/zh' || p === '/zh/' || p.indexOf('/zh/') === 0) {
+                contactPageBase = '/zh/contact-us.html';
+            }
+        } catch (e) { /* keep root EN default */ }
         
         // 如果当前页面是 index.html，直接滚动到联系表单
         if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
@@ -4151,11 +4159,11 @@ getProductIcon(category) {
                     }
                 }, 500);
             } else {
-                window.location.href = productParam ? `contact-us.html?product=${encodeURIComponent(productParam)}#getQuoteForm` : 'contact-us.html#getQuoteForm';
+                window.location.href = productParam ? `${contactPageBase}?product=${encodeURIComponent(productParam)}#getQuoteForm` : `${contactPageBase}#getQuoteForm`;
             }
         } else {
             // 其他页面直接跳转到首页联系表单
-            window.location.href = productParam ? `contact-us.html?product=${encodeURIComponent(productParam)}#getQuoteForm` : 'contact-us.html#getQuoteForm';
+            window.location.href = productParam ? `${contactPageBase}?product=${encodeURIComponent(productParam)}#getQuoteForm` : `${contactPageBase}#getQuoteForm`;
         }
     }
 

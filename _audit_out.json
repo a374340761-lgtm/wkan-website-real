@@ -1,0 +1,21 @@
+﻿{
+  "html_count": 168,
+  "no_canonical": [
+    "googlead697dfed14475b1.html"
+  ],
+  "hreflang_missing_targets": {},
+  "sitemap_index_ok": true,
+  "bad_sitemap_index": [],
+  "page_sitemap_ok": true,
+  "bad_page_sitemap": [],
+  "bad_page_sitemap_total": 0,
+  "windows_paths_in_html": [],
+  "missing_internal_html_links_count": 0,
+  "missing_internal_html_links": {},
+  "pdf_issues": [],
+  "json_ld_issues": [],
+  "data_wk_customizer_counts": {
+    "contact-us.html": 1,
+    "zh/contact-us.html": 1
+  }
+}

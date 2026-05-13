@@ -1,0 +1,56 @@
+.wk-customizer {
+  margin: 0 auto 1.25rem;
+  max-width: 980px;
+  padding: 22px;
+}
+
+.wk-customizer__intro {
+  margin: 0 0 18px;
+  max-width: 680px;
+  color: rgba(31, 45, 61, 0.78);
+  line-height: 1.7;
+}
+
+.wk-customizer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 14px;
+}
+
+.wk-customizer__field {
+  display: grid;
+  gap: 7px;
+  font-weight: 600;
+  color: #263447;
+}
+
+.wk-customizer__field select {
+  min-height: 44px;
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  border-radius: 12px;
+  padding: 0 12px;
+  background: #fff;
+  color: #263447;
+}
+
+.wk-customizer__summary {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid rgba(164, 22, 26, 0.18);
+  border-radius: 14px;
+  background: rgba(164, 22, 26, 0.04);
+}
+
+.wk-customizer__sku {
+  font-weight: 800;
+  color: #a4161a;
+}
+
+.wk-customizer__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}

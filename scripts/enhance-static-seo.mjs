@@ -12,6 +12,8 @@ const SKIP_HTML = new Set([
   'index.wireframe.html',
   'test_logo.html',
   'test_stats.html',
+  'news/contact-us.html',
+  'zh/news/contact-us.html',
 ]);
 
 const GEO_META = [
@@ -77,6 +79,11 @@ function absUrl(pathname) {
 
 function isZhRel(rel) {
   return rel === 'zh/index.html' || rel.startsWith('zh/');
+}
+
+function isPrimaryContactPage(rel) {
+  const clean = String(rel || '').replace(/\\/g, '/');
+  return /^contact-us\.html$/i.test(clean) || /^zh\/contact-us\.html$/i.test(clean);
 }
 
 function enRelFor(rel) {
@@ -466,7 +473,7 @@ function customizerBlock(lang) {
 }
 
 function ensureCustomizerScript(html, rel) {
-  if (!/contact-us\.html$/i.test(rel)) return html;
+  if (!isPrimaryContactPage(rel)) return html;
   const src = isZhRel(rel) ? '/scripts/customizer.js' : 'scripts/customizer.js';
   html = html.replace(/\n?\s*<script\s+src=["']\/?scripts\/customizer\.js["']><\/script>\s*/gi, '\n');
   if (/<script\s+src=["']\/?scripts\/contact\.js["']><\/script>/i.test(html)) {
@@ -479,7 +486,7 @@ function ensureCustomizerScript(html, rel) {
 }
 
 function ensureContactCustomizer(html, rel) {
-  if (!/contact-us\.html$/i.test(rel)) return html;
+  if (!isPrimaryContactPage(rel)) return html;
   html = html.replace(/\n?\s*<!-- wk-customizer:start -->[\s\S]*?<!-- wk-customizer:end -->\s*/gi, '\n');
   const block = `${customizerBlock(isZhRel(rel) ? 'zh' : 'en')}\n\n`;
   if (/<div\s+class=["']contact-grid["']>/i.test(html)) {

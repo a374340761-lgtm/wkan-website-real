@@ -16,7 +16,10 @@ function buildInquiryPayload(form) {
     email: get('email'),
     product: get('product'),
     quantity: get('quantity'),
+    frame_material: get('frame_material'),
+    fabric_printing: get('fabric_printing'),
     target_market: get('target_market'),
+    deadline: get('deadline'),
     message: get('message'),
     page_url: window.location.href,
     user_agent: navigator.userAgent,
@@ -51,6 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("contactSubmitBtn");
   const successBox = document.getElementById("contactSuccess");
   const msgBox = document.getElementById("formMessage");
+
+  function prefillProductFromUrl() {
+    try {
+      const value = new URL(window.location.href).searchParams.get('product');
+      if (!value) return;
+      const productInput = form.elements && form.elements.product;
+      if (productInput && !String(productInput.value || '').trim()) {
+        productInput.value = value;
+      }
+    } catch (err) {
+      /* Product-aware quote links are optional. */
+    }
+  }
+
+  prefillProductFromUrl();
 
   function setMsg(text, ok = true) {
     if (!msgBox) return;

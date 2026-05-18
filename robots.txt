@@ -1,16 +1,21 @@
-# Waikwan Tent — https://www.waikwantent.com/robots.txt
-# Submit sitemap in Google Search Console: Sitemaps → https://www.waikwantent.com/sitemap.xml
+# Waikwan Tent - https://www.waikwantent.com/robots.txt
+# Canonical production host: https://www.waikwantent.com
 
 User-agent: *
 Allow: /
 
-# Server / dev-only (not for indexing)
+# Server / development-only paths
 Disallow: /backend/
 
-# Legacy / test HTML (not public site pages)
+# Internal test or archived design files
 Disallow: /index.original.html
 Disallow: /index.wireframe.html
 Disallow: /test_logo.html
 Disallow: /test_stats.html
+
+# Low-value duplicate/legacy entry points; canonical pages remain allowed.
+Disallow: /product.html
+Disallow: /products.html
+Disallow: /tent-detail.html
 
 Sitemap: https://www.waikwantent.com/sitemap.xml

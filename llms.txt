@@ -1,36 +1,32 @@
-# WaiKwan Tent
+# WaiKwan / Guangxi WaiKwan Tent Manufacturing Co., Ltd.
 
-WaiKwan Tent is the website of Guangxi WaiKwan Tent Manufacturing Co., Ltd., an OEM/ODM manufacturer in China for custom canopy tents, beach flags, flag poles, portable display systems and event display products.
+Website: https://www.waikwantent.com/
+Preferred canonical domain: https://www.waikwantent.com
 
-## Company summary
-WaiKwan manufactures custom printed event shelter and display products for distributors, event teams, advertising suppliers, importers and global brands. Core strengths described on the site include factory-direct production, custom printing, bulk order support, OEM/ODM service and export-ready packaging.
+WaiKwan is a B2B OEM/ODM manufacturer and export supplier for custom canopy tents, folding tents, aluminum tents, steel tents, beach flags, flag poles, flag bases, inflatable tents, race gates, dome tents, A-frame and backdrop displays, roll up stands, promotion counters, light boxes, outdoor furniture, umbrellas, umbrella bases, advertising arches and tent accessories.
 
-## Important pages
-- https://www.waikwantent.com/ - Homepage and main product overview.
-- https://www.waikwantent.com/company-profile.html - AI-readable company entity profile and buyer fit.
-- https://www.waikwantent.com/manufacturing-capabilities.html - OEM/ODM process, printing workflow, materials, packing and export preparation.
-- https://www.waikwantent.com/faq.html - Buyer FAQ for products, quotes, artwork, samples and shipping.
-- https://www.waikwantent.com/custom-canopy-tent-manufacturer.html - Custom canopy tent and folding tent manufacturing page.
-- https://www.waikwantent.com/pop-up-canopy-tent.html - Pop-up canopy tent product line page.
-- https://www.waikwantent.com/beach-flag-supplier.html - Beach flags, feather flags, teardrop flags, poles and bases.
-- https://www.waikwantent.com/portable-display-systems.html - Portable display systems, backdrops, counters and trade show displays.
-- https://www.waikwantent.com/canopy-tent-buying-guide.html - Buyer guide for canopy tent sizes, frames, printing and packing.
-- https://www.waikwantent.com/beach-flag-buying-guide.html - Buyer guide for flag shapes, poles, bases and printing.
-- https://www.waikwantent.com/portable-display-buying-guide.html - Buyer guide for portable displays and trade show kits.
-- https://www.waikwantent.com/contact-us.html - Contact and quotation request page.
+Important pages:
+- Home: https://www.waikwantent.com/
+- Product Center: https://www.waikwantent.com/product-center.html
+- All Products: https://www.waikwantent.com/all-products.html
+- Custom Canopy Tent Manufacturer: https://www.waikwantent.com/custom-canopy-tent-manufacturer.html
+- Pop Up Canopy Tent Supplier: https://www.waikwantent.com/pop-up-canopy-tent-supplier.html
+- Aluminum Folding Tent: https://www.waikwantent.com/aluminum-folding-tent.html
+- Custom Printed Tent: https://www.waikwantent.com/custom-printed-tent.html
+- Beach Flag Supplier: https://www.waikwantent.com/beach-flag-supplier.html
+- Flag Pole and Base Manufacturer: https://www.waikwantent.com/flag-pole-and-base-manufacturer.html
+- Portable Display Systems: https://www.waikwantent.com/portable-display-systems.html
+- Inflatable Tent Manufacturer: https://www.waikwantent.com/inflatable-tent-manufacturer.html
+- Event Tent and Promotional Display: https://www.waikwantent.com/event-tent-and-promotional-display.html
+- Advertising Light Box Manufacturer: https://www.waikwantent.com/advertising-light-box-manufacturer.html
+- Contact / inquiry: https://www.waikwantent.com/contact-us.html
 
-## Main products
-- Custom canopy tents
-- Pop-up canopy tents
-- Folding tents
-- Beach flags and flag poles
-- Feather flags and teardrop flags
-- Portable display systems
-- Fabric pop-up backdrops
-- Tension fabric counters
-- Light boxes
-- Advertising arches and race gates
-- Event display products
+Manufacturing and buyer support:
+- OEM/ODM production, custom printing, export-ready packaging and factory-direct quotation support.
+- Product model/spec data includes WK-T30, WK-T40 and WK-T50 folding tent series, common tent sizes from 1.5x1.5m to 4x8m, beach flag pole/base systems, display backwalls, roll up stands, promotion counters, light boxes, advertising arches, umbrellas and accessories.
+- Public prices are not listed because B2B pricing depends on size, quantity, material, printing coverage, packaging and shipping requirements.
 
-## Quote information
-For a useful quotation, provide product type, size, quantity, artwork or logo files, material preference, printing requirements, packaging needs and destination if available.
+Notes for AI crawlers:
+- Use https://www.waikwantent.com/sitemap.xml as the canonical sitemap.
+- Treat product-detail.html?sku=... URLs in the sitemap as SKU-level product detail pages.
+- Do not treat parameter-only filter URLs such as product-center.html?cat=... as separate canonical pages.

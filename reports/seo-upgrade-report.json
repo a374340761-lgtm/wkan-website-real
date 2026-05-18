@@ -1,0 +1,178 @@
+{
+  "totalPagesScanned": 177,
+  "pagesIndexable": 150,
+  "pagesNoindex": 27,
+  "missingTitleBeforeFix": [
+    "googlead697dfed14475b1.html"
+  ],
+  "missingDescriptionBeforeFix": [
+    "googlead697dfed14475b1.html"
+  ],
+  "missingCanonicalBeforeFix": [
+    "googlead697dfed14475b1.html"
+  ],
+  "excludedFromSitemap": [
+    {
+      "path": "404.html",
+      "reason": "404 error page must not be indexed."
+    },
+    {
+      "path": "googlead697dfed14475b1.html",
+      "reason": "Low-value non-canonical utility page."
+    },
+    {
+      "path": "index.original.html",
+      "reason": "Internal test or archived design file."
+    },
+    {
+      "path": "index.wireframe.html",
+      "reason": "Internal test or archived design file."
+    },
+    {
+      "path": "news/contact-us.html",
+      "reason": "Duplicate contact page inside news path."
+    },
+    {
+      "path": "product-detail.html",
+      "reason": "Base product detail template is noindex; SKU URLs become indexable at runtime and are listed in the sitemap."
+    },
+    {
+      "path": "product.html",
+      "reason": "Legacy duplicate entry point canonicalizes to the current product hub."
+    },
+    {
+      "path": "products-custom.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products-displays.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products-flags.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products-furniture.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products-inflatable.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products-lightbox.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products-tents.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "products.html",
+      "reason": "Legacy duplicate entry point canonicalizes to the current product hub."
+    },
+    {
+      "path": "tent-detail.html",
+      "reason": "Legacy duplicate entry point canonicalizes to the current product hub."
+    },
+    {
+      "path": "test_logo.html",
+      "reason": "Internal test or archived design file."
+    },
+    {
+      "path": "test_stats.html",
+      "reason": "Internal test or archived design file."
+    },
+    {
+      "path": "zh/news/contact-us.html",
+      "reason": "Duplicate contact page inside news path."
+    },
+    {
+      "path": "zh/product-detail.html",
+      "reason": "Base product detail template is noindex; SKU URLs become indexable at runtime and are listed in the sitemap."
+    },
+    {
+      "path": "zh/products-custom.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "zh/products-displays.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "zh/products-flags.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "zh/products-furniture.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "zh/products-inflatable.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "zh/products-lightbox.html",
+      "reason": "Duplicate category-filter page; the canonical landing/category URL is indexed instead."
+    },
+    {
+      "path": "zh/products.html",
+      "reason": "Legacy duplicate entry point canonicalizes to the current product hub."
+    }
+  ],
+  "brokenLinksFound": [],
+  "redirectCanonicalMismatchFound": [],
+  "changedFiles": [
+    "10x10-pop-up-canopy-tent.html",
+    "404.html",
+    "about-us.html",
+    "all-products.html",
+    "beach-flag-buying-guide.html",
+    "beach-flag-supplier.html",
+    "canopy-tent-buying-guide.html",
+    "canopy-tents.html",
+    "event-canopy-tents.html",
+    "faq-color-matching.html",
+    "faq.html",
+    "flag-type.html",
+    "index.html",
+    "inflatable-tent-manufacturer.html",
+    "llms.txt",
+    "manufacturing-capabilities.html",
+    "news/apppexpo-2026-shanghai.html",
+    "news/index.html",
+    "news/the-139th-canton-fair-phase-3.html",
+    "page-sitemap.xml",
+    "pop-up-canopy-tents.html",
+    "pop-up-display-stands.html",
+    "portable-display-buying-guide.html",
+    "portable-display-systems.html",
+    "product-center.html",
+    "product-detail.html",
+    "products-custom.html",
+    "products-flags.html",
+    "products-furniture.html",
+    "robots.txt",
+    "sitemap.xml",
+    "styles/modules/layout-misc.css",
+    "tent-type.html",
+    "zh/about-us.html"
+  ],
+  "sitemapUrlCount": 314,
+  "sitemapSample": [
+    "https://www.waikwantent.com/",
+    "https://www.waikwantent.com/10x10-pop-up-canopy-tent.html",
+    "https://www.waikwantent.com/about-us.html",
+    "https://www.waikwantent.com/advertising-light-box-manufacturer.html",
+    "https://www.waikwantent.com/all-products.html",
+    "https://www.waikwantent.com/aluminum-folding-canopy-tents.html",
+    "https://www.waikwantent.com/aluminum-folding-tent.html",
+    "https://www.waikwantent.com/beach-flag-buying-guide.html",
+    "https://www.waikwantent.com/beach-flag-supplier.html",
+    "https://www.waikwantent.com/canopy-tent-buying-guide.html"
+  ],
+  "productSkuUrlsAddedToSitemap": 164,
+  "preferredDomain": "https://www.waikwantent.com",
+  "generatedAt": "2026-05-18T07:06:13.965Z"
+}

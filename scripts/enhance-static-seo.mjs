@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { resolveSeoPageSku } from './seo-page-sku-map.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://www.waikwantent.com';
@@ -280,7 +281,8 @@ function breadcrumbSchema(rel, title, canonical) {
 
 function productSchema(rel, html, title, description, canonical) {
   const name = getH1(html) || title;
-  const sku = path.basename(rel, '.html').toUpperCase().replace(/[^A-Z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const slug = path.basename(rel, '.html');
+  const sku = resolveSeoPageSku(slug);
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',

@@ -1272,6 +1272,7 @@ function initNavigation() {
     enhanceFurnitureDropdown();
     ensureProductCenterDropdownHasLightbox();
     ensureProductCenterDropdownHasAccessories();
+    ensureAboutAndResourcesNavigation();
 
     WK_bindMobileNavSystem(hamburger);
 
@@ -1368,6 +1369,86 @@ function enhanceProductsDropdownExtras() {
             }
         });
     });
+}
+
+function ensureAboutAndResourcesNavigation() {
+    const nav = document.querySelector('#wk-primary-nav') || document.querySelector('.nav-menu');
+    if (!nav) return;
+    const isZh = (() => {
+        try {
+            const p = window.location.pathname.replace(/\\/g, '/');
+            if (p === '/zh' || p.startsWith('/zh/')) return true;
+        } catch (e) {}
+        const lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+        return lang === 'zh' || lang === 'zh-cn';
+    })();
+    const local = (href) => {
+        const clean = String(href || '').replace(/^\/+/, '');
+        return isZh ? `/zh/${clean}` : `/${clean}`;
+    };
+    const hasTopLink = (needle) => Array.from(nav.querySelectorAll(':scope > li > a[href]')).some((a) => {
+        const href = (a.getAttribute('href') || '').toLowerCase();
+        return href.includes(needle);
+    });
+    const label = (zhText, enText) => {
+        const frag = document.createDocumentFragment();
+        const zh = document.createElement('span');
+        zh.className = 'zh';
+        zh.textContent = zhText;
+        const en = document.createElement('span');
+        en.className = 'en';
+        en.textContent = enText;
+        frag.appendChild(zh);
+        frag.appendChild(en);
+        return frag;
+    };
+    const createDropdown = (id, topHref, zhText, enText, items) => {
+        const li = document.createElement('li');
+        li.className = 'nav-item-dropdown';
+        li.setAttribute('data-nav-extra', id);
+        const top = document.createElement('a');
+        top.href = topHref;
+        top.className = 'nav-link';
+        top.appendChild(label(zhText, enText));
+        const icon = document.createElement('i');
+        icon.className = 'fas fa-chevron-down';
+        icon.setAttribute('aria-hidden', 'true');
+        top.appendChild(icon);
+        const menu = document.createElement('div');
+        menu.className = 'dropdown-menu';
+        items.forEach((item) => {
+            const a = document.createElement('a');
+            a.href = item.href;
+            a.appendChild(label(item.zh, item.en));
+            menu.appendChild(a);
+        });
+        li.appendChild(top);
+        li.appendChild(menu);
+        return li;
+    };
+    const support = Array.from(nav.children).find((li) => {
+        const a = li.querySelector(':scope > a[href]');
+        const href = (a && a.getAttribute('href') || '').toLowerCase();
+        return href.includes('faq.html') || href.includes('contact-us.html');
+    });
+    if (!hasTopLink('about-us.html') && !nav.querySelector('[data-nav-extra="about"]')) {
+        const about = createDropdown('about', local('about-us.html'), '关于伟群', 'About WaiKwan', [
+            { href: local('about-us.html'), zh: '公司介绍', en: 'Company Profile' },
+            { href: local('manufacturing-capabilities.html'), zh: '制造能力', en: 'Manufacturing Capabilities' },
+            { href: local('contact-us.html'), zh: '联系我们', en: 'Contact Us' }
+        ]);
+        nav.insertBefore(about, support || null);
+    }
+    if (!nav.querySelector('[data-nav-extra="resources"]')) {
+        const resources = createDropdown('resources', local('news/index.html'), '资源', 'Resources', [
+            { href: local('news/index.html'), zh: '新闻与采购指南', en: 'News & Guides' },
+            { href: local('site-map.html#seo-guides'), zh: 'B2B 采购指南', en: 'B2B Sourcing Guides' },
+            { href: local('faq.html'), zh: '常见问题', en: 'FAQ Hub' },
+            { href: local('all-products.html'), zh: '全部产品目录', en: 'All Products Catalog' },
+            { href: local('site-map.html'), zh: '网站地图', en: 'Site Map' }
+        ]);
+        nav.insertBefore(resources, support || null);
+    }
 }
 
 function enhanceTentsDropdown() {

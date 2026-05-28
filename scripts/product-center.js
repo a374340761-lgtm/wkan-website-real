@@ -211,11 +211,20 @@
       window.wkRefreshSocialFromHead();
     }
   }
-  function applyTentsHubHead() {
+  function applyCategoryHubHead(cat) {
     captureDefaultProductCenterHead();
     const t = (k) => (window.multiLang && typeof window.multiLang.t === 'function' ? window.multiLang.t(k) : k);
-    const title = String(t('pc_meta_title_tents') || '').trim();
-    const desc = String(t('pc_meta_desc_tents') || '').trim();
+    const safeCat = String(cat || '').trim().toLowerCase().replace(/[^a-z0-9]+/g, '_');
+    const titleKey = safeCat ? `pc_meta_title_${safeCat}` : '';
+    const descKey = safeCat ? `pc_meta_desc_${safeCat}` : '';
+    const rawTitle = titleKey ? String(t(titleKey) || '').trim() : '';
+    const rawDesc = descKey ? String(t(descKey) || '').trim() : '';
+    const title = rawTitle && rawTitle !== titleKey ? rawTitle : '';
+    const desc = rawDesc && rawDesc !== descKey ? rawDesc : '';
+    if (!title && !desc) {
+      restoreDefaultProductCenterHead();
+      return;
+    }
     if (title) {
       const titleEl = document.querySelector('title');
       if (titleEl) titleEl.textContent = title;
@@ -227,6 +236,10 @@
     if (typeof window.wkRefreshSocialFromHead === 'function') {
       window.wkRefreshSocialFromHead();
     }
+  }
+
+  function applyTentsHubHead() {
+    applyCategoryHubHead('tents');
   }
 
   function getNotice() {
@@ -274,8 +287,10 @@
 
   function applyCategoryFilter(cat) {
     try {
-    if (cat !== 'tents') {
+    if (!cat) {
       restoreDefaultProductCenterHead();
+    } else {
+      applyCategoryHubHead(cat);
     }
     const cards = Array.from(document.querySelectorAll('.category-card'));
     const backWrap = document.getElementById('productCenterBackWrap');
@@ -1155,6 +1170,9 @@
       const c = getQueryCat();
       if (c === 'tents') {
         renderTentsHub();
+      }
+      if (c) {
+        applyCategoryHubHead(c);
       } else {
         restoreDefaultProductCenterHead();
       }

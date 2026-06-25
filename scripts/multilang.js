@@ -2356,12 +2356,10 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
 
-                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | Folding Pop Up Tent Factory | WaiKwan',
-                landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer',
+                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | OEM Pop Up Tents | WaiKwan',
+                landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer for OEM Pop Up Tent Programs',
                 landing_canopy_b2b_lead_html:
-                    'Factory-direct <strong>custom canopy tents</strong> and <strong>custom printed canopy tents</strong> for distributors, agencies, and event brands. Start with the '
-                    + '<a href="/canopy-tents.html">canopy tents overview</a> and <a href="/pop-up-canopy-tents.html">pop up canopy tents</a> primers, then filter SKUs in '
-                    + '<a href="/product-center.html?cat=tents">tents — product center</a> with OEM artwork support and export-oriented packing.',
+                    'WaiKwan manufactures <strong>custom canopy tents</strong> and <strong>OEM/ODM pop up tent programs</strong> for distributors, event agencies, resellers and brand teams. Send size, frame grade, quantity, artwork and destination to confirm MOQ, lead time, printing options, sidewalls, accessories and export-ready packing.',
                 landing_canopy_b2b_p1_html:
                     '<p>WaiKwan manufactures <strong>pop up canopy tents</strong> and <strong>printed event tents</strong> for professional use—trade shows, promotions, sports, and outdoor activations. As an <strong>OEM canopy tent manufacturer</strong>, we align frame series (aluminum or steel), canopy graphics, and accessories to your program, whether you need a compact 3×3 unit or a larger <strong>3×6 custom canopy tent</strong> footprint for high-visibility branding.</p>',
                 landing_canopy_b2b_p2_html:
@@ -2485,10 +2483,10 @@ class MultiLanguageSystem {
                 landing_canopy_buyers_faq_10_a_html:
                     'Yes—sidewalls can be sized and printed to match your frame series and campaign. Separate replenishment is common; keep hook placements and zipper lines consistent by referencing the original BOM. Use <a href="/faq-artwork-files.html">artwork guidelines</a> for panel seams and safe zones.',
 
-                page_title_1010_canopy: '10×10 Pop Up Canopy Tent | Custom Canopy Tent 10×10 | WaiKwan',
-                landing_1010_h1: '10×10 Pop Up Canopy Tent (3×3 m) for B2B Programs',
+                page_title_1010_canopy: '10x10 Pop Up Canopy Tent | Custom 3x3 OEM Factory | WaiKwan',
+                landing_1010_h1: '10x10 Pop Up Canopy Tent for Custom 3x3 OEM Programs',
                 landing_1010_lead_html:
-                    'Source <strong>10×10 pop up canopy tent</strong> and <strong>custom canopy tent 10×10</strong> programs with factory-direct OEM/ODM support—frame grades, <strong>custom tent with logo</strong> printing, sidewalls, accessories, and export packing for distributors.',
+                    'Source <strong>10x10 pop up canopy tents</strong> for B2B OEM programs with 3x3 m frame options, roof and sidewall printing, weights, bags and export packing. Share quantity, artwork and destination to confirm MOQ, sample timing, production lead time and shipping options.',
                 landing_1010_use_cases_h2: 'Where teams deploy 10×10 first',
                 landing_1010_use_cases_html:
                     '<p>Sampling lanes, registration desks, outdoor retail pods, and mobile roadshows—<strong>10×10</strong> balances shipping volume with usable coverage, making it a strong default SKU for reseller catalogs and event suppliers.</p>',
@@ -2569,11 +2567,11 @@ class MultiLanguageSystem {
                 landing_aluminum_rel_moq_h3: 'MOQ',
                 landing_aluminum_rel_moq_p: 'How minimums work by model and printing.',
 
-                page_title_portable_display: 'Portable Display Systems Manufacturer | Event & Trade Show Displays | WaiKwan',
+                page_title_portable_display: 'Portable Display Systems Manufacturer | OEM Trade Show Kits | WaiKwan',
                 landing_top_bar_portable: 'Factory direct · Portable displays · Reply within 24 hours',
-                landing_portable_h1: 'Portable Display Systems Manufacturer',
+                landing_portable_h1: 'Portable Display Systems Manufacturer for OEM Trade Show Kits',
                 landing_portable_lead:
-                    'Event & trade show display systems with printing — counters, roll-up stands, fabric displays and custom setups.',
+                    'WaiKwan builds portable display systems for trade shows, retail launches and reseller catalogs: fabric backdrops, pop-up displays, counters, roll-up stands and custom booth kits. Send booth size, graphics, quantity and deadline to confirm MOQ, artwork requirements, lead time and export packing.',
                 landing_portable_card_1_h3: 'Product Range',
                 landing_portable_card_1_p:
                     'Pop-up display systems, fabric displays, promotion counters, roll-up stands, accessories.',
@@ -2611,11 +2609,11 @@ class MultiLanguageSystem {
                 landing_portable_faq_card_3_p: 'Express vs air vs sea and how to choose.',
                 landing_portable_faq_view_all: 'View all FAQs',
 
-                page_title_beach: 'Beach Flag Supplier | Custom Feather & Teardrop Flags | WaiKwan',
+                page_title_beach: 'Beach Flag Supplier | Feather & Teardrop Flag OEM | WaiKwan',
                 landing_top_bar_beach: 'Factory direct · Flags + poles + bases · Reply within 24 hours',
-                landing_beach_h1: 'Beach Flags Supplier',
+                landing_beach_h1: 'Beach Flag Supplier for OEM Feather and Teardrop Flag Kits',
                 landing_beach_lead:
-                    'Custom feather flags and teardrop flags with poles, bases and carry bags — factory-direct for events, retail and outdoor promotions.',
+                    'WaiKwan supplies custom feather flags, teardrop flags, poles, bases and carry bags for distributors, print shops, agencies and outdoor promotion teams. Share flag shape, size, quantity, artwork and destination to confirm MOQ, production lead time, packing and shipping options.',
                 landing_beach_card_1_h3: 'Product Range',
                 landing_beach_card_1_p: 'Feather flags, teardrop flags, rectangular flags, pole sets, bases (cross, water/sand, ground spike).',
                 landing_beach_card_2_h3: 'MOQ',
@@ -3130,9 +3128,9 @@ class MultiLanguageSystem {
                 
                 // Contact
                 contact_title: 'Contact Us',
-                contact_subtitle: 'We look forward to working with you',
-                contact_page_h1: 'Contact Us',
-                contact_page_spec_line: 'Include product type, size, quantity, target market, and printing requirements for a faster quotation.',
+                contact_subtitle: 'Send your RFQ for OEM/ODM tents, flags and display systems',
+                contact_page_h1: 'Request a Quote for Custom Tents, Flags and Displays',
+                contact_page_spec_line: 'Include product type, size, quantity, artwork files, target market, deadline and destination for faster MOQ and lead-time confirmation.',
                 contact_page_final_title: 'Need a fast quote?',
                 contact_page_final_sub: 'Send your spec today — we typically reply within 24 hours.',
                 home_contact_compact_h2: 'Request a quotation',
@@ -3140,7 +3138,7 @@ class MultiLanguageSystem {
                 home_contact_compact_spec: 'Tip: include product type, size, quantity, printing and delivery needs.',
                 home_contact_sticky_aria: 'Get a quote — open contact page',
                 contact_info_title: 'How to reach us',
-                contact_seo_text: 'Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd today to discuss your custom tent and display project requirements.',
+                contact_seo_text: 'Contact Guangxi WaiKwan Tent Manufacturing Co., Ltd. for factory-direct custom canopy tents, beach flags, portable displays and light boxes with OEM/ODM support, export packing and quote response within 24 hours.',
                 contact_address_label: 'Address',
                 contact_address_title: 'Address',
                 contact_address_value: '500 meters southeast of the intersection of County Road 400 and Provincial Road 313, Bobai County, Yulin City, Guangxi Zhuang Autonomous Region, China',

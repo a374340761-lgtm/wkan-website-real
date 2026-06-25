@@ -14,8 +14,8 @@ The tracked diff currently covers 175 modified tracked files plus the new files 
 ## SEO / Indexing Issues Fixed
 - Preferred canonical domain normalized to `https://www.waikwantent.com` across canonical, Open Graph, Twitter and generated sitemap URLs.
 - Important public pages now use `index,follow`; accidental noindex was removed from indexable pages such as `aluminum-folding-canopy-tents.html`.
-- Intentional noindex remains on legacy duplicates, product/template base pages, test/archive pages, duplicate filter/category pages and `404.html`, with code comments explaining why.
-- `sitemap.xml` and `page-sitemap.xml` were rebuilt as clean URL sets with 314 canonical URLs, including SKU-level `product-detail.html?sku=...` URLs from `scripts/product-seo-map.js`.
+- Intentional noindex remains on legacy duplicates, redirect stubs, test/archive pages, duplicate filter/category pages and `404.html`, with code comments explaining why.
+- `sitemap.xml` and `page-sitemap.xml` were rebuilt as clean URL sets with 328 canonical URLs, including SKU-level `product-detail.html?sku=...` URLs from `scripts/product-seo-map.js`.
 - Legacy duplicate pages and noindex URLs are excluded from the sitemap. Filter URLs such as `product-center.html?cat=...` are not included as canonical sitemap entries.
 - Internal link scan now reports `0` broken internal HTML links.
 

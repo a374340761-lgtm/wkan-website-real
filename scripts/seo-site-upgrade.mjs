@@ -93,7 +93,7 @@ function canonicalFor(relative) {
 function isIntentionalNoindex(relative) {
   const r = relative.replace(/\\/g, '/');
   if (/^(index\.original|index\.wireframe|test_|googlead)/.test(r)) return true;
-  if (/(^|\/)(product|products|tent-detail|product-detail)\.html$/.test(r)) return true;
+  if (/(^|\/)(product|products|tent-detail)\.html$/.test(r)) return true;
   if (/(^|\/)products-(tents|flags|displays|lightbox|inflatable|custom|furniture)\.html$/.test(r)) return true;
   if (/(^|\/)racegate-type\.html$/.test(r)) return true;
   if (/(^|\/)news\/contact-us\.html$/.test(r)) return true;
@@ -104,7 +104,6 @@ function isIntentionalNoindex(relative) {
 function noindexReason(relative) {
   const r = relative.replace(/\\/g, '/');
   if (r === '404.html') return '404 error page must not be indexed.';
-  if (/product-detail\.html$/.test(r)) return 'Base product detail template is noindex; SKU URLs become indexable at runtime and are listed in the sitemap.';
   if (/racegate-type\.html$/.test(r)) return 'Redirect stub for the race gate product-center view; the canonical product-center page is indexed instead.';
   if (/(product|products|tent-detail)\.html$/.test(r)) return 'Legacy duplicate entry point canonicalizes to the current product hub.';
   if (/products-/.test(r)) return 'Duplicate category-filter page; the canonical landing/category URL is indexed instead.';
@@ -798,6 +797,7 @@ function generateSitemaps(report, productSeoMap) {
   for (const file of htmlFiles) {
     const relative = rel(file);
     if (isIntentionalNoindex(relative)) continue;
+    if (/(^|\/)product-detail\.html$/i.test(relative.replace(/\\/g, '/'))) continue;
     const canonical = canonicalFor(relative);
     if (!canonical.startsWith(BASE)) continue;
     urls.push({ loc: canonical, priority: canonical === `${BASE}/` ? '1.0' : '0.8' });
@@ -854,7 +854,7 @@ ${changedFiles.map((f) => `- \`${f}\``).join('\n')}
 ## SEO / Indexing Issues Fixed
 - Preferred canonical domain normalized to \`${BASE}\` in canonical, Open Graph, Twitter and generated sitemap URLs.
 - Accidental noindex was removed from indexable pages by standardizing important static pages to \`index,follow\`.
-- Intentional noindex remains only on legacy duplicates, product/template base pages, tests and the 404 page, with inline comments explaining why.
+- Intentional noindex remains only on legacy duplicates, redirect stubs, tests and the 404 page, with inline comments explaining why.
 - \`sitemap.xml\` and \`page-sitemap.xml\` were regenerated with canonical, indexable static URLs plus SKU-level \`product-detail.html?sku=...\` URLs from \`scripts/product-seo-map.js\`.
 - Legacy duplicate pages are excluded from the sitemap and canonicalized to the preferred product/category pages.
 - A custom \`404.html\` was added with noindex, product shortcuts and inquiry CTAs.
@@ -867,7 +867,7 @@ ${changedFiles.map((f) => `- \`${f}\``).join('\n')}
 ## Structured Data Added
 - Static pages receive WebPage and BreadcrumbList JSON-LD where appropriate.
 - New landing pages include Organization, CollectionPage, BreadcrumbList and FAQPage JSON-LD.
-- Product SKU URLs remain supported by existing product-detail runtime Product JSON-LD and are now included in the sitemap.
+- Product SKU URLs remain supported by product-detail runtime Product JSON-LD and are included in the sitemap; the bare product-detail template itself is omitted from sitemap output.
 
 ## Internal Linking Improved
 - Homepage now links to high-value B2B landing pages using real \`<a href>\` links.

@@ -70,12 +70,12 @@ These URLs should not appear in sitemap output because they are redirect stubs, 
 
 ## Product Detail SKU Strategy
 
-The static `product-detail.html` template remains `noindex,follow` because it has no standalone product entity without a SKU.
+The bare `product-detail.html` template is excluded from sitemap output because it has no standalone product entity without a SKU. The template head uses `index,follow` so submitted `?sku=` URLs do not inherit a blocking `noindex` directive before runtime SEO data is applied.
 
 When `?sku=` is present:
 
 - The early head script reads `window.WK_PRODUCT_SEO_MAP`.
-- The page switches robots to `index,follow`.
+- The page keeps robots as `index,follow`.
 - Canonical, `og:url`, `twitter:url`, and hreflang alternates are set to SKU-specific URLs.
 - Product JSON-LD uses the same SKU canonical URL as `@id` and `url`.
 

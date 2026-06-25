@@ -74,6 +74,7 @@ function canonicalFor(relative) {
     'products-inflatable.html': '/inflatable-tent-manufacturer.html',
     'products-custom.html': '/custom-printed-tent.html',
     'products-furniture.html': '/product-center.html',
+    'racegate-type.html': '/product-center.html',
     'zh/product.html': '/zh/all-products.html',
     'zh/products.html': '/zh/product-center.html',
     'zh/products-tents.html': '/zh/custom-canopy-tent-manufacturer.html',
@@ -82,7 +83,8 @@ function canonicalFor(relative) {
     'zh/products-lightbox.html': '/zh/seg-light-box-manufacturer.html',
     'zh/products-inflatable.html': '/zh/product-center.html',
     'zh/products-custom.html': '/zh/custom-printed-canopy-tents.html',
-    'zh/products-furniture.html': '/zh/product-center.html'
+    'zh/products-furniture.html': '/zh/product-center.html',
+    'zh/racegate-type.html': '/zh/product-center.html'
   };
   const cleanRel = relative.replace(/\\/g, '/');
   return `${BASE}${duplicateCanon[cleanRel] || pathOnly}`;
@@ -93,6 +95,7 @@ function isIntentionalNoindex(relative) {
   if (/^(index\.original|index\.wireframe|test_|googlead)/.test(r)) return true;
   if (/(^|\/)(product|products|tent-detail|product-detail)\.html$/.test(r)) return true;
   if (/(^|\/)products-(tents|flags|displays|lightbox|inflatable|custom|furniture)\.html$/.test(r)) return true;
+  if (/(^|\/)racegate-type\.html$/.test(r)) return true;
   if (/(^|\/)news\/contact-us\.html$/.test(r)) return true;
   if (r === '404.html') return true;
   return false;
@@ -102,6 +105,7 @@ function noindexReason(relative) {
   const r = relative.replace(/\\/g, '/');
   if (r === '404.html') return '404 error page must not be indexed.';
   if (/product-detail\.html$/.test(r)) return 'Base product detail template is noindex; SKU URLs become indexable at runtime and are listed in the sitemap.';
+  if (/racegate-type\.html$/.test(r)) return 'Redirect stub for the race gate product-center view; the canonical product-center page is indexed instead.';
   if (/(product|products|tent-detail)\.html$/.test(r)) return 'Legacy duplicate entry point canonicalizes to the current product hub.';
   if (/products-/.test(r)) return 'Duplicate category-filter page; the canonical landing/category URL is indexed instead.';
   if (/test_|index\.(original|wireframe)/.test(r)) return 'Internal test or archived design file.';

@@ -44,6 +44,8 @@
         var origin = 'https://www.waikwantent.com';
         var pathPrefix = '/zh';
         var canonical = origin + pathPrefix + '/product-detail.html?sku=' + encodeURIComponent(sku);
+        var canonicalEn = origin + '/product-detail.html?sku=' + encodeURIComponent(sku);
+        var canonicalZh = origin + '/zh/product-detail.html?sku=' + encodeURIComponent(sku);
         var map = (window.WK_PRODUCT_SEO_MAP && window.WK_PRODUCT_SEO_MAP[sku]) || null;
         var isZh = true;
         var title = map
@@ -56,10 +58,16 @@
           var el = document.querySelector(sel);
           if (el) el.setAttribute(name, val);
         }
+        function alternate(lang, href) {
+          attr('link[rel="alternate"][hreflang="' + lang + '"]', 'href', href);
+        }
         attr('meta[name="robots"]', 'content', 'index,follow');
         attr('link[rel="canonical"]', 'href', canonical);
         attr('meta[property="og:url"]', 'content', canonical);
         attr('meta[name="twitter:url"]', 'content', canonical);
+        alternate('en', canonicalEn);
+        alternate('zh-CN', canonicalZh);
+        alternate('x-default', canonicalEn);
         attr('meta[property="og:type"]', 'content', 'product');
         document.title = title;
         attr('meta[property="og:title"]', 'content', title);

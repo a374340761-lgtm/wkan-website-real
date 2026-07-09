@@ -20,8 +20,8 @@ const SKIP_HTML = new Set([
 const GEO_META = [
   ['geo.region', 'CN-GX'],
   ['geo.placename', 'Guangxi, China'],
-  ['geo.position', '21.953486;110.186694'],
-  ['ICBM', '21.953486, 110.186694'],
+  ['geo.position', '21.94804409797996;110.26915576448359'],
+  ['ICBM', '21.94804409797996, 110.26915576448359'],
 ];
 
 function walk(dir, out = []) {
@@ -204,15 +204,16 @@ function localBusinessSchema(canonical) {
     telephone: '+86 138 2454 0280',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '500 meters southeast of the intersection of County Road 400 and Provincial Road 313',
-      addressLocality: 'Bobai County',
+      streetAddress: 'Niujiaochong',
+      addressLocality: 'Luchuan County',
       addressRegion: 'Guangxi',
       addressCountry: 'CN',
+      postalCode: '537609'
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 21.953486,
-      longitude: 110.186694,
+      latitude: 21.94804409797996,
+      longitude: 110.26915576448359,
     },
     areaServed: ['North America', 'Europe', 'Southeast Asia', 'Worldwide'],
     contactPoint: {

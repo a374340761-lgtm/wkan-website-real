@@ -295,10 +295,11 @@
           },
           address: {
             '@type': 'PostalAddress',
-            streetAddress: '500 meters southeast of the intersection of County Road 400 and Provincial Road 313',
-            addressLocality: 'Bobai County',
-            addressRegion: 'Yulin, Guangxi Zhuang Autonomous Region',
-            addressCountry: 'CN'
+            streetAddress: 'Niujiaochong',
+            addressLocality: 'Luchuan County',
+            addressRegion: 'Guangxi',
+            addressCountry: 'CN',
+            postalCode: '537609'
           }
         },
         {

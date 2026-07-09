@@ -95,7 +95,7 @@
           <div class="contact-bottom__cols">
             <div class="contact-bottom__col">
               <div class="contact-bottom__h" data-i18n="footer_findus">Find Us</div>
-              <div class="contact-bottom__p" data-i18n="footer_address">广西壮族自治区玉林市博白县400县道与313省道交叉口东南500米<br>中国</div>
+              <div class="contact-bottom__p" data-i18n="footer_address">中国广西壮族自治区玉林市陆川县牛角冲<br>邮政编码：537609</div>
             </div>
             <div class="contact-bottom__col">
               <div class="contact-bottom__h" data-i18n="footer_contact">Contact</div>

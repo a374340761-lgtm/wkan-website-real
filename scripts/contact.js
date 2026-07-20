@@ -11,6 +11,24 @@ function buildInquiryPayload(form) {
     return String(value || '').trim();
   };
 
+  const page = new URL(window.location.href);
+  const attribution = {};
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach((key) => {
+    const value = page.searchParams.get(key);
+    if (value) attribution[key] = value;
+  });
+
+  let landingPage = '';
+  try {
+    landingPage = sessionStorage.getItem('wk_landing_page') || '';
+    if (!landingPage) {
+      landingPage = window.location.href;
+      sessionStorage.setItem('wk_landing_page', landingPage);
+    }
+  } catch (err) {
+    landingPage = window.location.href;
+  }
+
   return {
     name: get('name'),
     email: get('email'),
@@ -22,6 +40,9 @@ function buildInquiryPayload(form) {
     deadline: get('deadline'),
     message: get('message'),
     page_url: window.location.href,
+    landing_page: landingPage,
+    referrer: document.referrer || '',
+    ...attribution,
     user_agent: navigator.userAgent,
     submitted_at: new Date().toISOString(),
   };
@@ -108,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result && result.ok) {
         if (successBox) successBox.style.display = "block";
         setMsg((window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_success') : '', true);
+        document.dispatchEvent(new CustomEvent('wk:inquiry-success'));
         form.reset();
         return;
       }

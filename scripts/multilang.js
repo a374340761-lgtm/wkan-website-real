@@ -720,8 +720,8 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF 规范、出血、字体与色彩配置。',
                 landing_canopy_faq_view_all: '查看全部常见问题',
 
-                page_title_canopy_b2b: '定制广告帐篷制造商｜快开广告帐篷与 LOGO 篷房｜伟群帐篷',
-                landing_canopy_b2b_h1: '定制广告帐篷制造商',
+                page_title_canopy_b2b: '帐篷生产厂家｜定制广告帐篷 OEM/ODM 源头工厂｜伟群',
+                landing_canopy_b2b_h1: '定制广告帐篷生产厂家（B2B OEM/ODM）',
                 landing_canopy_b2b_lead_html:
                     '工厂直供<strong>定制广告帐篷</strong>与<strong>全彩印刷帐篷</strong>，服务分销商、活动公司与品牌方。建议先读 <a href="/zh/canopy-tents.html">广告帐篷总览</a> 与 <a href="/zh/pop-up-canopy-tents.html">快开广告篷</a>，再在 <a href="/zh/product-center.html?cat=tents">帐篷分类</a> 中筛选具体 SKU，支持 OEM 画面与出口包装。',
                 landing_canopy_b2b_p1_html:
@@ -2356,8 +2356,8 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
 
-                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | OEM Pop Up Tents | WaiKwan',
-                landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer for OEM Pop Up Tent Programs',
+                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | OEM & Wholesale | WaiKwan',
+                landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer for OEM and Wholesale Programs',
                 landing_canopy_b2b_lead_html:
                     'WaiKwan manufactures <strong>custom canopy tents</strong> and <strong>OEM/ODM pop up tent programs</strong> for distributors, event agencies, resellers and brand teams. Send size, frame grade, quantity, artwork and destination to confirm MOQ, lead time, printing options, sidewalls, accessories and export-ready packing.',
                 landing_canopy_b2b_p1_html:
@@ -2902,7 +2902,7 @@ class MultiLanguageSystem {
                 ap_intro_keywords: 'We manufacture folding canopy tents, printed beach flags, pop-up backdrops, counters, light boxes, and related event display accessories for wholesale and OEM projects.',
                 ap_no_catalog_data: 'Product catalog is loading or temporarily unavailable. Please refresh, or contact us for a list.',
                 ap_browse_by_category: 'Browse by category',
-                tent_type_seo_h1: 'Tent Types & Specifications',
+                tent_type_seo_h1: 'Types of Canopy Tents & Specifications',
                 tent_type_seo_intro_1: 'Explore WaiKwan canopy tent types, frame options, common sizes, and material specifications for events, retail promotions, exhibitions, and outdoor branding projects. This guide helps wholesale and OEM buyers compare folding tents, inflatable tents, and larger event tent structures.',
                 tent_type_seo_intro_2: 'Compare frame series, size options, roof styles, and typical applications before moving to a product detail page or requesting a quotation from our factory team.',
                 tent_type_seo_type_param_note: 'URLs with a type query open the dedicated model view.',

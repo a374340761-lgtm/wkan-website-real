@@ -201,8 +201,36 @@
     return String(document.title || 'WaiKwan Tent').replace(/\s*\|.*$/, '').trim();
   }
 
+  function hasJsonLdType(typeName) {
+    try {
+      var scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      function nodeHasType(node) {
+        if (Array.isArray(node)) {
+          return node.some(nodeHasType);
+        }
+        if (!node || typeof node !== 'object') return false;
+        var type = node['@type'];
+        if (type === typeName || (Array.isArray(type) && type.indexOf(typeName) !== -1)) {
+          return true;
+        }
+        if (Array.isArray(node['@graph']) && node['@graph'].some(nodeHasType)) {
+          return true;
+        }
+        return false;
+      }
+      for (var i = 0; i < scripts.length; i += 1) {
+        try {
+          if (nodeHasType(JSON.parse(scripts[i].textContent || '{}'))) return true;
+        } catch (e) {
+          /* Invalid JSON-LD is reported by the repository validator. */
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+
   function injectWebPageJsonLd(canonicalAbs) {
-    if (!canonicalAbs || document.getElementById('wk-webpage-jsonld')) return;
+    if (!canonicalAbs || document.getElementById('wk-webpage-jsonld') || hasJsonLdType('WebPage')) return;
     try {
       var path = String(window.location.pathname || '/').replace(/\\/g, '/');
       if (/\bproduct-detail\.html$/i.test(path)) return;
@@ -225,7 +253,7 @@
   }
 
   function injectBreadcrumbJsonLd(canonicalAbs) {
-    if (!canonicalAbs || document.getElementById('wk-auto-breadcrumb-jsonld')) return;
+    if (!canonicalAbs || document.getElementById('wk-auto-breadcrumb-jsonld') || hasJsonLdType('BreadcrumbList')) return;
     var existingBreadcrumb = false;
     try {
       var scripts = document.querySelectorAll('script[type="application/ld+json"]');
@@ -257,7 +285,7 @@
   }
 
   function injectOrganizationJsonLd() {
-    if (document.getElementById('wk-org-jsonld')) return;
+    if (document.getElementById('wk-org-jsonld') || hasJsonLdType('Organization')) return;
     try {
       var path = (window.location.pathname || '/').replace(/\\/g, '/');
       var isHome =

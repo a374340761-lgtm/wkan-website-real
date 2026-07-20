@@ -156,16 +156,16 @@
   }
 
   function resetTentTypeHubHeadMeta() {
-    const title = 'Tent Types & Specifications | Folding Canopy Tent Series Guide | WaiKwan';
+    const title = 'Types of Canopy Tents | Frame, Size & Printing Guide | WaiKwan';
     const desc =
-      'Compare WaiKwan folding canopy tent types, frame options, common sizes, and printing choices. Explore 30, 40, and 50 series tent solutions for wholesale and OEM projects.';
+      'Compare folding canopy tent types by frame series, material, size and printing options. Review 30, 40 and 50 series models for wholesale and OEM sourcing.';
     document.title = title;
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute('content', desc);
     const ogT = document.querySelector('meta[property="og:title"]');
-    if (ogT) ogT.setAttribute('content', 'Tent Types & Specifications | Folding Canopy Series | WaiKwan');
+    if (ogT) ogT.setAttribute('content', title);
     const ogD = document.querySelector('meta[property="og:description"]');
-    if (ogD) ogD.setAttribute('content', 'Folding canopy tent series (30/40/50), sizes, and printing. Factory-direct B2B supply.');
+    if (ogD) ogD.setAttribute('content', desc);
   }
 
   function injectBreadcrumbJsonLdForTentType(item) {

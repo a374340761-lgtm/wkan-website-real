@@ -1,6 +1,46 @@
 {
   "redirects": [
     {
+      "source": "/products.html",
+      "destination": "/all-products.html",
+      "permanent": true
+    },
+    {
+      "source": "/product.html",
+      "destination": "/all-products.html",
+      "permanent": true
+    },
+    {
+      "source": "/tent-detail.html",
+      "destination": "/product-center.html",
+      "permanent": true
+    },
+    {
+      "source": "/aluminum-folding-canopy-tents.html",
+      "destination": "/aluminum-folding-tent.html",
+      "permanent": true
+    },
+    {
+      "source": "/zh/products.html",
+      "destination": "/zh/all-products.html",
+      "permanent": true
+    },
+    {
+      "source": "/zh/product.html",
+      "destination": "/zh/all-products.html",
+      "permanent": true
+    },
+    {
+      "source": "/zh/tent-detail.html",
+      "destination": "/zh/product-center.html",
+      "permanent": true
+    },
+    {
+      "source": "/zh/aluminum-folding-canopy-tents.html",
+      "destination": "/zh/aluminum-folding-tent.html",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "waikwantent.com" }],
       "destination": "https://www.waikwantent.com/:path*",

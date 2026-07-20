@@ -17,5 +17,8 @@ Disallow: /test_stats.html
 Disallow: /product.html
 Disallow: /products.html
 Disallow: /tent-detail.html
+Disallow: /zh/product.html
+Disallow: /zh/products.html
+Disallow: /zh/tent-detail.html
 
 Sitemap: https://www.waikwantent.com/sitemap.xml

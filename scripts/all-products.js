@@ -105,12 +105,12 @@
         return;
     }
 
-    const DEFAULT_PAGE_TITLE = 'All Products | Canopy Tents, Beach Flags & Display Systems | WaiKwan';
-    const DEFAULT_META_DESC = 'Browse all WaiKwan products including canopy tents, beach flags, backdrop displays, counters, light boxes, and event accessories. OEM and wholesale solutions for global B2B buyers.';
-    const DEFAULT_OG_TITLE = 'All Products | WaiKwan';
-    const DEFAULT_OG_DESC = 'Canopy tents, beach flags, display systems, and event accessories — OEM/ODM for B2B buyers.';
-    const DEFAULT_TW_TITLE = 'All Products | WaiKwan';
-    const DEFAULT_TW_DESC = 'Browse WaiKwan catalog: canopy tents, beach flags, displays, and accessories.';
+    const DEFAULT_PAGE_TITLE = 'OEM Product Catalog | Canopy Tents, Flags & Displays | WaiKwan';
+    const DEFAULT_META_DESC = "Browse WaiKwan's B2B catalog of canopy tents, beach flags, display systems, light boxes and accessories. Filter products and send selected SKUs for an OEM quote.";
+    const DEFAULT_OG_TITLE = DEFAULT_PAGE_TITLE;
+    const DEFAULT_OG_DESC = DEFAULT_META_DESC;
+    const DEFAULT_TW_TITLE = DEFAULT_PAGE_TITLE;
+    const DEFAULT_TW_DESC = DEFAULT_META_DESC;
 
     // 获取 URL 参数中的分类
     function getQueryCat() {

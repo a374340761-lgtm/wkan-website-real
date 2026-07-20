@@ -282,10 +282,9 @@ this.whatsAppSecondary = '8613824540280'; // 备用号
 ## 📞 联系方式
 
 - **公司名称**: 广西伟群帐篷制造有限公司
-- **WhatsApp（主）**: +86 183 7878 1011
-- **WhatsApp（备）**: +86 138 2454 0280
+- **WhatsApp**: +86 138 2454 0280
 - **WeChat ID**: massifmyth
-- **邮箱**: wktent@vip.163.com
+- **邮箱**: yishu@waikwantent.com
 
 ## 📝 更新日志
 

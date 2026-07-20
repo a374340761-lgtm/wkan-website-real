@@ -33,7 +33,7 @@ const limiter = rateLimit({
 });
 
 // 邮件配置
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
     service: 'gmail', // 或其他邮件服务
     auth: {
         user: process.env.EMAIL_USER,
@@ -45,7 +45,7 @@ const transporter = nodemailer.createTransporter({
 const contactValidation = [
     body('name').trim().isLength({ min: 2, max: 50 }).withMessage('姓名长度应在2-50字符之间'),
     body('email').isEmail().normalizeEmail().withMessage('请输入有效的邮箱地址'),
-    body('phone').optional().isMobilePhone('zh-CN').withMessage('请输入有效的手机号码'),
+    body('phone').optional({ checkFalsy: true }).isMobilePhone('any').withMessage('请输入有效的手机号码'),
     body('message').trim().isLength({ min: 10, max: 1000 }).withMessage('消息长度应在10-1000字符之间')
 ];
 
@@ -115,9 +115,9 @@ app.post('/api/contact', limiter, contactValidation, async (req, res) => {
                         
                         <div style="background: #e3f2fd; padding: 15px; border-radius: 8px; margin: 20px 0;">
                             <h4 style="color: #1e3c72; margin-top: 0;">联系方式：</h4>
-                            <p><strong>电话:</strong> +86 183 7878 1011</p>
+                            <p><strong>电话:</strong> +86 138 2454 0280</p>
                             <p><strong>邮箱:</strong> yishu@waikwantent.com</p>
-                            <p><strong>地址:</strong> 2nd Xuweiqian Building, Bridge South xilian Dong Cun Gaosha Development District, Nanhai Danzao, Foshan, China</p>
+                            <p><strong>地址:</strong> 中国广西壮族自治区玉林市陆川县牛角冲，邮政编码 537609</p>
                         </div>
                         
                         <p>如有紧急需求，请直接致电我们。</p>

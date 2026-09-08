@@ -1890,7 +1890,7 @@ class MultiLanguageSystem {
                 pdp_tent_b2b_lead: 'Pair tents with beach flags, tension-fabric backwalls, table covers and light boxes from the same factory for aligned graphics and export packing.',
                 page_title_pop_up_mfg: 'Pop Up Canopy Tent Manufacturer | WaiKwan',
                 landing_pop_up_mfg_h1: 'Pop Up Canopy Tent Manufacturer',
-                page_title_custom_printed_canopy: 'Custom Printed Canopy Tents | WaiKwan',
+                page_title_custom_printed_canopy: 'Custom Printed Canopy Tents & Sidewalls | Waikwan',
                 landing_custom_printed_canopy_h1: 'Custom Printed Canopy Tents',
                 page_title_canopy_hub: 'Commercial Canopy Tents | 30/40/50 Series & OEM Export | WaiKwan',
                 page_title_pop_canopy_hub: 'Pop Up Canopy Tents | Folding Event Canopies B2B | WaiKwan',

@@ -226,7 +226,7 @@
                     <label class="wk-customizer__field">
                         <span>尺寸</span>
                         <select name="customizer_size">
-                            <option value="3x3m">3x3 m / 10x10 ft</option>
+                            <option value="3x3m">3x3 m</option>
                             <option value="3x4.5m">3x4.5 m</option>
                             <option value="3x6m">3x6 m</option>
                             <option value="custom">定制尺寸</option>
@@ -334,15 +334,15 @@
                             <li data-translate="trust_export_experience"></li>
                         </ul>
                         <div id="contactSuccess" class="contact-alert contact-alert--success" style="display:none;" data-translate="contact_reply_24h_success"></div>
-                        <div id="formMessage" class="contact-alert contact-alert--message" style="display:none;"></div>
+                        <div id="formMessage" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" class="contact-alert contact-alert--message" style="display:none;"></div>
                         <form id="getQuoteForm" class="quote-form" action="javascript:void(0);" novalidate>
                             <label>
                                 <span data-translate="inquiry_form_name"></span>
-                                <input type="text" name="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
+                                <input type="text" name="name" autocomplete="name" required minlength="2" maxlength="50" data-translate-placeholder="inquiry_form_name" />
                             </label>
                             <label>
                                 <span data-translate="inquiry_form_email"></span>
-                                <input type="email" name="email" required data-translate-placeholder="inquiry_form_email" />
+                                <input type="email" name="email" autocomplete="email" required data-translate-placeholder="inquiry_form_email" />
                             </label>
                             <label>
                                 <span data-translate="inquiry_field_product_label"></span>
@@ -362,7 +362,7 @@
                                 <span data-translate="inquiry_field_message_label"></span>
                                 <textarea name="message" rows="4" data-translate-placeholder="inquiry_field_message_placeholder"></textarea>
                             </label>
-                            <input type="text" name="website" class="contact-honeypot" tabindex="-1" autocomplete="off" />
+                            <input type="text" name="website" class="contact-honeypot" aria-label="Leave this field empty" aria-hidden="true" tabindex="-1" autocomplete="off" />
                             <div class="contact-form__actions">
                                 <button id="contactSubmitBtn" class="btn btn-primary contact-form__submit" type="submit" data-translate="inquiry_form_submit"></button>
                                 <button type="reset" class="btn btn-secondary contact-form__reset" data-translate="inquiry_form_reset"></button>

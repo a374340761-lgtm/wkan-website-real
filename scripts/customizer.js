@@ -1,7 +1,7 @@
 (function () {
   var OPTIONS = {
     size: {
-      '3x3m': '3x3 m / 10x10 ft',
+      '3x3m': '3x3 m',
       '3x4.5m': '3x4.5 m',
       '3x6m': '3x6 m',
       custom: 'Custom size',

@@ -2,7 +2,20 @@
 // IMPORTANT:
 // - This file should NOT hard-bind to EmailJS / Google Sheet / backend endpoints.
 // - Keep the form structure and event listener, but leave submission as a replaceable hook.
-// TODO: Connect to Google Sheet or Email service (via backend or Apps Script)
+// Production: inquiry-hook.js -> Google Apps Script -> Google Sheets.
+
+function inquirySourcePage() {
+  try {
+    const page = new URL(window.location.href);
+    const source = new URL(page.searchParams.get('source') || document.referrer || page.href, page.origin);
+    if (source.origin !== page.origin) return '';
+    const clean = new URL(source.pathname, page.origin);
+    ['id', 'model', 'cat', 'open'].forEach((key) => {
+      if (source.searchParams.has(key)) clean.searchParams.set(key, source.searchParams.get(key));
+    });
+    return clean.href;
+  } catch { return ''; }
+}
 
 function buildInquiryPayload(form) {
   const get = (name) => {
@@ -38,7 +51,9 @@ function buildInquiryPayload(form) {
     fabric_printing: get('fabric_printing'),
     target_market: get('target_market'),
     deadline: get('deadline'),
-    message: get('message'),
+    // Preserve the source even with an Apps Script using only the existing columns.
+    message: [get('message'), inquirySourcePage() ? 'Product / source page: ' + inquirySourcePage() : ''].filter(Boolean).join('\n\n'),
+    source_page: inquirySourcePage(),
     page_url: window.location.href,
     landing_page: landingPage,
     referrer: document.referrer || '',
@@ -75,6 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBtn = document.getElementById("contactSubmitBtn");
   const successBox = document.getElementById("contactSuccess");
   const msgBox = document.getElementById("formMessage");
+  const resetBtn = form.querySelector('button[type="reset"]');
+  let submitting = false;
+  function message(en, zh) {
+    return /^\/zh(?:\/|$)/.test(window.location.pathname) ? zh : en;
+  }
 
   function prefillProductFromUrl() {
     try {
@@ -100,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
+    if (submitting) return;
 
     if (successBox) successBox.style.display = "none";
     if (msgBox) msgBox.style.display = "none";
@@ -115,11 +136,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const honey = form.elements && form.elements['website'] ? String(form.elements['website'].value || '') : '';
       if (honey.trim()) return;
 
+      submitting = true;
+      form.setAttribute('aria-busy', 'true');
+      if (resetBtn) resetBtn.disabled = true;
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
-          ? window.wkI18n.t('inquiry_form_sending')
-          : '';
+        submitBtn.textContent = message('Sending…', '提交中…');
       }
 
       const payload = buildInquiryPayload(form);
@@ -128,28 +150,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (result && result.ok) {
         if (successBox) successBox.style.display = "block";
-        setMsg((window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_success') : '', true);
+        setMsg(message('Your inquiry has been received. Our team will review your requirements and contact you by email. No automatic confirmation email is sent.', '询价已收到。我们的团队会审核需求并通过邮件联系您；系统暂不发送自动确认邮件。'), true);
         document.dispatchEvent(new CustomEvent('wk:inquiry-success'));
         form.reset();
         return;
       }
 
-      // Not connected yet: keep UI production-ready, but do not pretend it was submitted.
-      const pending = (window.wkI18n && typeof window.wkI18n.t === 'function')
-        ? window.wkI18n.t('inquiry_form_unconfigured')
-        : '';
-      setMsg(pending, false);
+      setMsg(result && result.reason === 'rejected'
+        ? message('Your inquiry was not accepted. Your details are still here. Please review them or contact us by email or WhatsApp.', '询价未被接受，已保留填写内容。请核对信息，或通过邮件、WhatsApp 联系我们。')
+        : message('We could not confirm receipt. Your inquiry may already have arrived. Your details are still here; please contact us by email or WhatsApp before submitting again.', '暂时无法确认收件，询价可能已经送达。已保留填写内容；再次提交前，请通过邮件或 WhatsApp 联系我们确认。'), false);
     } catch (err) {
-      const base = (window.wkI18n && typeof window.wkI18n.t === 'function') ? window.wkI18n.t('inquiry_form_failed') : '';
-      const detail = (err && (err.message || err)) ? ` ${err.message || err}` : '';
-      const msg = `${base}${detail}`.trim();
-      setMsg(msg, false);
+      setMsg(message('We could not confirm receipt. Your details are still here. Please contact us by email or WhatsApp before submitting again.', '暂时无法确认收件，已保留填写内容。再次提交前，请通过邮件或 WhatsApp 联系我们确认。'), false);
     } finally {
+      submitting = false;
+      form.setAttribute('aria-busy', 'false');
+      if (resetBtn) resetBtn.disabled = false;
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = (window.wkI18n && typeof window.wkI18n.t === 'function')
-          ? window.wkI18n.t('inquiry_form_submit')
-          : '';
+        submitBtn.textContent = message('Send Inquiry', '发送询价');
       }
     }
   });

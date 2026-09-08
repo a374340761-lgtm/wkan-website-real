@@ -1,100 +1,43 @@
-/*
- * Privacy-safe SEO conversion events.
- *
- * This file does not load Google Analytics or set cookies. When a consent-aware
- * GA4 tag is installed, events are sent through gtag. Until then they remain in
- * dataLayer so the same event names can be used by GTM or another analytics tool.
- */
+/* Consent-gated conversion events. No tag installation and no personal data. */
 (function () {
   'use strict';
-
-  window.dataLayer = window.dataLayer || [];
-
-  function cleanParams(params) {
-    var output = {};
-    Object.keys(params || {}).forEach(function (key) {
-      var value = params[key];
-      if (value === undefined || value === null || value === '') return;
-      output[key] = value;
-    });
-    return output;
-  }
-
-  window.wkTrackEvent = function (name, params) {
-    if (!name) return;
-    var safeParams = cleanParams(params);
-    safeParams.page_path = window.location.pathname;
-
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', name, safeParams);
-      return;
-    }
-
-    window.dataLayer.push(Object.assign({ event: name }, safeParams));
+  if (window.wkTrackEvent) return;
+  const methods = {
+    contact_click: ['whatsapp', 'email', 'phone'],
+    quote_click: ['quote_page', 'product'],
+    file_download: ['catalog'],
+    inquiry_submit_success: ['quote_form'],
   };
-
-  function linkLabel(link) {
-    return String(
-      link.getAttribute('aria-label') ||
-      link.textContent ||
-      link.getAttribute('title') ||
-      ''
-    ).replace(/\s+/g, ' ').trim().slice(0, 100);
-  }
-
+  window.wkTrackEvent = function (name, params) {
+    try {
+      if (!window.wkCookieConsent || window.wkCookieConsent.get().analytics !== true) return;
+      const method = params && params.contact_method;
+      if (!methods[name] || !methods[name].includes(method)) return;
+      // Never forward labels, query strings, form values or arbitrary parameters.
+      const safe = { contact_method: method, page_path: window.location.pathname };
+      if (typeof window.gtag === 'function') window.gtag('event', name, safe);
+      else {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(Object.assign({ event: name }, safe));
+      }
+    } catch (error) { /* Analytics must never interrupt an inquiry. */ }
+  };
   document.addEventListener('click', function (event) {
-    var link = event.target && event.target.closest
-      ? event.target.closest('a[href]')
-      : null;
+    const link = event.target && event.target.closest ? event.target.closest('a[href]') : null;
     if (!link) return;
-
-    var href = String(link.getAttribute('href') || '').trim();
-    var lower = href.toLowerCase();
-    var label = linkLabel(link);
-
-    if (lower.indexOf('https://wa.me/') === 0 || lower.indexOf('whatsapp') !== -1) {
-      window.wkTrackEvent('generate_lead', {
-        contact_method: 'whatsapp',
-        link_text: label
-      });
-      return;
-    }
-
-    if (lower.indexOf('mailto:') === 0) {
-      window.wkTrackEvent('generate_lead', {
-        contact_method: 'email',
-        link_text: label
-      });
-      return;
-    }
-
-    if (lower.indexOf('tel:') === 0) {
-      window.wkTrackEvent('generate_lead', {
-        contact_method: 'phone',
-        link_text: label
-      });
-      return;
-    }
-
-    if (link.hasAttribute('download') || /\.pdf(?:$|[?#])/i.test(href)) {
-      window.wkTrackEvent('file_download', {
-        file_name: href.split('/').pop().split(/[?#]/)[0],
-        link_text: label
-      });
-      return;
-    }
-
-    if (/\/(?:zh\/)?contact-us\.html(?:$|[?#])/i.test(href)) {
-      window.wkTrackEvent('begin_lead', {
-        contact_method: 'quote_page',
-        link_text: label
-      });
+    let url;
+    try { url = new URL(link.getAttribute('href'), window.location.href); } catch { return; }
+    if (url.hostname === 'wa.me' || url.hostname === 'api.whatsapp.com') {
+      window.wkTrackEvent('contact_click', { contact_method: 'whatsapp' });
+    } else if (url.protocol === 'mailto:' || url.protocol === 'tel:') {
+      window.wkTrackEvent('contact_click', { contact_method: url.protocol === 'mailto:' ? 'email' : 'phone' });
+    } else if (link.hasAttribute('download') || /\.pdf$/i.test(url.pathname)) {
+      window.wkTrackEvent('file_download', { contact_method: 'catalog' });
+    } else if (url.origin === window.location.origin && /\/(?:zh\/)?contact-us\.html$/.test(url.pathname)) {
+      window.wkTrackEvent('quote_click', { contact_method: 'quote_page' });
     }
   });
-
   document.addEventListener('wk:inquiry-success', function () {
-    window.wkTrackEvent('generate_lead', {
-      contact_method: 'quote_form'
-    });
+    window.wkTrackEvent('inquiry_submit_success', { contact_method: 'quote_form' });
   });
 })();

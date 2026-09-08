@@ -4120,7 +4120,14 @@ getProductIcon(category) {
         // 统一跳转到首页联系表单，带上产品信息参数
         const productName = product ? (product.nameEn || product.name || '') : '';
         const productModel = product ? (product.model || '') : '';
-        const productParam = encodeURIComponent(productModel || productName || '');
+        const productParam = [productName, productModel].filter(Boolean).join(' — ');
+        const inquiryUrl = new URL('/contact-us.html', window.location.origin);
+        inquiryUrl.searchParams.set('product', productParam);
+        const source = new URL(window.location.pathname, window.location.origin);
+        if (product && product.id) source.searchParams.set('id', product.id);
+        if (productModel) source.searchParams.set('model', productModel);
+        inquiryUrl.searchParams.set('source', source.pathname + source.search);
+        inquiryUrl.hash = 'getQuoteForm';
 
         let contactPageBase = '/contact-us.html';
         try {
@@ -4130,6 +4137,8 @@ getProductIcon(category) {
             }
         } catch (e) { /* keep root EN default */ }
         
+        inquiryUrl.pathname = contactPageBase;
+        if (typeof window.wkTrackEvent === 'function') window.wkTrackEvent('quote_click', { contact_method: 'product' });
         // 如果当前页面是 index.html，直接滚动到联系表单
         if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/' || window.location.pathname.endsWith('/')) {
             const contactSection = document.getElementById('contact');
@@ -4148,22 +4157,24 @@ getProductIcon(category) {
                     const productSelect = document.getElementById('product');
                     if (productSelect && productName) {
                         // 尝试匹配现有选项
-                        const options = Array.from(productSelect.options);
+                        const options = Array.from(productSelect.options || []);
                         const matchedOption = options.find(opt => 
                             opt.value.toLowerCase().includes(productName.toLowerCase()) ||
                             opt.text.toLowerCase().includes(productName.toLowerCase())
                         );
                         if (matchedOption) {
                             productSelect.value = matchedOption.value;
+                        } else if (productSelect.tagName === 'INPUT') {
+                            productSelect.value = productParam;
                         }
                     }
                 }, 500);
             } else {
-                window.location.href = productParam ? `${contactPageBase}?product=${encodeURIComponent(productParam)}#getQuoteForm` : `${contactPageBase}#getQuoteForm`;
+                window.location.href = inquiryUrl.href;
             }
         } else {
             // 其他页面直接跳转到首页联系表单
-            window.location.href = productParam ? `${contactPageBase}?product=${encodeURIComponent(productParam)}#getQuoteForm` : `${contactPageBase}#getQuoteForm`;
+            window.location.href = inquiryUrl.href;
         }
     }
 

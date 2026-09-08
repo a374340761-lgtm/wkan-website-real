@@ -10,7 +10,7 @@ window.WK_INQUIRY_SUBMIT = async function (payload) {
     throw new Error("Inquiry submit endpoint not configured");
   }
 
-  payload = payload || {};
+  payload = Object.assign({}, payload);
 
   // Required by spec
   payload.pageUrl = window.location.href;
@@ -21,20 +21,39 @@ window.WK_INQUIRY_SUBMIT = async function (payload) {
 
   const body = new URLSearchParams(payload);
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 25000);
+  try {
   const res = await fetch(ENDPOINT, {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
     },
     body,
+    signal: controller.signal,
   });
 
   const text = await res.text();
 
-  if (!res.ok || (text && text.toLowerCase().includes("error"))) {
-    throw new Error(text || "Inquiry submission failed");
+  if (!res.ok) return { ok: false, reason: 'unconfirmed' };
+  let response;
+  try { response = JSON.parse(text); } catch { response = null; }
+  // Verify the deployed acknowledgement before release; see INQUIRY-OPERATIONS.md.
+  if (response && typeof response === 'object') {
+    if (response.ok === false || response.success === false || response.error ||
+        ['error', 'failed', 'failure'].includes(response.result) ||
+        ['error', 'failed', 'failure'].includes(response.status)) {
+      return { ok: false, reason: 'rejected' };
+    }
+    if (response.ok === true || response.success === true ||
+        response.result === 'success' || response.status === 'success') return { ok: true };
   }
-
-  // contact.js expects an object with { ok: true }
-  return { ok: true, text };
+  if (/^(ok|success)$/i.test(text.trim())) return { ok: true };
+  return { ok: false, reason: 'unconfirmed' };
+  } catch (error) {
+    // A network failure can happen AFTER saving. Never retry automatically.
+    return { ok: false, reason: 'unconfirmed' };
+  } finally {
+    clearTimeout(timeout);
+  }
 };

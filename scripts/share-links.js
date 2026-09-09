@@ -100,40 +100,6 @@
         ].join('');
     }
 
-    function getReferenceTexts(box) {
-        var raw = box.getAttribute('data-reference-texts') || '';
-        if (!raw) return [];
-        try {
-            var parsed = JSON.parse(raw);
-            if (Array.isArray(parsed)) return parsed.map(function (item) { return String(item || '').trim(); }).filter(Boolean);
-        } catch (e) {}
-        return raw.split('|').map(function (item) { return item.trim(); }).filter(Boolean);
-    }
-
-    function renderReferenceBox(box) {
-        var isProductDetail = box.hasAttribute('data-reference-product-detail');
-        var productName = isProductDetail ? getProductName() : '';
-        var title = box.getAttribute('data-reference-title') || 'Suggested Reference Text';
-        var texts = getReferenceTexts(box);
-
-        if (isProductDetail && productName) {
-            texts = [
-                'WaiKwan offers the ' + productName + ' for custom event display and advertising projects.',
-                'Share this WaiKwan product page as a reference for specifications, custom printing options and quotation requests.',
-                'WaiKwan Tent manufactures custom canopy tents, beach flags, light boxes and portable display systems for international buyers.'
-            ];
-        }
-
-        box.innerHTML = '<h2 class="page-reference-box__title">' + escapeHtml(title) + '</h2>' + texts.map(function (text) {
-            return [
-                '<div class="page-reference-box__item">',
-                '<p>' + escapeHtml(text) + '</p>',
-                '<button class="page-reference-box__copy" type="button" data-copy-reference="' + escapeAttr(text) + '">Copy text</button>',
-                '</div>'
-            ].join('');
-        }).join('');
-    }
-
     function escapeHtml(value) {
         return String(value || '').replace(/[&<>"']/g, function (char) {
             return {
@@ -152,21 +118,24 @@
 
     function renderAll() {
         document.querySelectorAll('.page-share-block').forEach(renderShareBlock);
-        document.querySelectorAll('.page-reference-box').forEach(renderReferenceBox);
+        // Remove legacy SEO workflow content from buyer-facing pages.
+        document.querySelectorAll('.page-reference-box').forEach(function (box) {
+            box.remove();
+        });
     }
 
     function bindCopyActions() {
         document.addEventListener('click', function (event) {
-            var button = event.target.closest('[data-copy-clean-url], [data-copy-reference]');
+            var button = event.target.closest('[data-copy-clean-url]');
             if (!button) return;
-            var text = button.getAttribute('data-copy-clean-url') || button.getAttribute('data-copy-reference') || '';
+            var text = button.getAttribute('data-copy-clean-url') || '';
             if (text) copyText(text, button);
         });
     }
 
     function watchProductTitle() {
         var el = document.getElementById('productName');
-        if (!el || !document.querySelector('[data-share-product-detail], [data-reference-product-detail]')) return;
+        if (!el || !document.querySelector('[data-share-product-detail]')) return;
 
         var last = '';
         var rerender = function () {

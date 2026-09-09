@@ -347,9 +347,67 @@
     z-index: 0;
 }
 
+.home .wk-hero-bg-link{
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+}
+
+.home .wk-hero-bg-link:focus-visible{
+    outline: 3px solid #fff;
+    outline-offset: -6px;
+}
+
 /* Invitation / full-bleed graphic: no zoom crop, no dark wash */
 .home .wk-hero-slide--invite .wk-hero-bg{
     transform: none;
+}
+
+/* Event artwork must remain fully visible instead of being cropped like a photo. */
+.home .wk-hero-slide--invite.wk-hero-slide--event-poster .wk-hero-bg{
+    top: var(--wk-home-hero-pull, 112px);
+    bottom: 0;
+    height: auto;
+    background-size: contain;
+    background-position: center center;
+    background-color: #fff;
+    transform: none;
+}
+
+@media (min-width: 769px){
+    .home .wk-hero-slide--event-poster .wk-hero-inner{
+        align-items: center;
+        padding-bottom: 36px;
+    }
+
+    .home .wk-hero-slide--event-poster .wk-hero-content{
+        max-width: clamp(190px, 15vw, 240px);
+        padding: 14px;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 10px 28px rgba(15, 23, 42, 0.12);
+    }
+
+    .home .wk-hero-slide--event-poster .wk-hero-title{
+        font-size: clamp(1.35rem, 2.2vw, 2rem);
+        line-height: 1.08;
+    }
+
+    .home .wk-hero-slide--event-poster .wk-hero-sub{
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+
+    .home .wk-hero-slide--event-poster .wk-hero-actions{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .home .wk-hero-slide--event-poster .wk-hero-trust{
+        display: none;
+    }
 }
 
 .home .wk-hero-slide--invite .wk-hero-overlay{
@@ -1757,5 +1815,11 @@
         background-repeat: no-repeat;
         transform: none;
         background-color: transparent;
+    }
+
+    .home .wk-hero-slide--event-poster .wk-hero-bg{
+        background-size: contain;
+        background-position: center center;
+        background-color: #fff;
     }
 }

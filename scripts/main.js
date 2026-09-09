@@ -378,10 +378,22 @@ function getHomeHeroSlides() {
     // Use real filenames from /images/hero (verified in repo)
     return [
         {
+            image: 'images/hero/2026-shanghai-international-advertising-exhibition-waikwan.webp',
+            keyPrefix: 'home_hero_4',
+            imageAlt: 'WaiKwan invitation to SIGN CHINA 2026 in Shanghai, booth W3D08, 15 to 17 September 2026',
+            variant: 'event-poster',
+            secondaryHref: 'all-products.html'
+        },
+        {
             image: 'images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png',
             keyPrefix: 'home_hero_0',
             imageAlt: 'WaiKwan Canton Fair 2026 invitation for booth 12.1F29-30',
             variant: 'invite',
+            clickHref: '/news/the-139th-canton-fair-phase-3.html',
+            clickHrefLocalized: false,
+            tertiaryHref: '/news/the-139th-canton-fair-phase-3.html',
+            tertiaryHrefLocalized: false,
+            tertiaryLabelKey: 'home_hero_canton_news_cta',
             secondaryHref: 'all-products.html'
         },
         {
@@ -427,6 +439,9 @@ function renderHomeHeroSlider() {
         if (variant === 'invite') {
             slide.classList.add('wk-hero-slide--invite');
         }
+        if (variant === 'event-poster') {
+            slide.classList.add('wk-hero-slide--invite', 'wk-hero-slide--light', 'wk-hero-slide--event-poster');
+        }
         slide.style.setProperty('--wk-hero-bg', `url("${bgUrl}")`);
 
         if (s.keyPrefix) {
@@ -435,6 +450,21 @@ function renderHomeHeroSlider() {
             const kickerKey = `${s.keyPrefix}_kicker`;
             const rawSecondary = (s.secondaryHref && String(s.secondaryHref).trim()) || 'product-center.html';
             const secondaryHref = wkLocalizedInternalLinkSafe(rawSecondary);
+            const rawClickHref = s.clickHref && String(s.clickHref).trim();
+            const clickHref = rawClickHref
+                ? (s.clickHrefLocalized === false
+                    ? (rawClickHref.startsWith('/') ? rawClickHref : '/' + rawClickHref.replace(/^\.\//, ''))
+                    : wkLocalizedInternalLinkSafe(rawClickHref))
+                : '';
+            const rawTertiaryHref = s.tertiaryHref && String(s.tertiaryHref).trim();
+            const tertiaryHref = rawTertiaryHref
+                ? (s.tertiaryHrefLocalized === false
+                    ? (rawTertiaryHref.startsWith('/') ? rawTertiaryHref : '/' + rawTertiaryHref.replace(/^\.\//, ''))
+                    : wkLocalizedInternalLinkSafe(rawTertiaryHref))
+                : '';
+            const tertiaryAction = tertiaryHref
+                ? `<a class="btn btn-secondary" href="${tertiaryHref}" data-translate="${s.tertiaryLabelKey || 'home_hero_canton_news_cta'}"></a>`
+                : '';
             const titleTag = i === 0 ? 'h1' : 'h2';
             const trustRow =
                 i === 0
@@ -447,9 +477,12 @@ function renderHomeHeroSlider() {
                     : '';
 
             const imageAlt = String(s.imageAlt || '').replace(/"/g, '&quot;');
+            const backgroundMarkup = clickHref
+                ? `<a class="wk-hero-bg-link" href="${clickHref}" aria-label="${imageAlt}"><span class="wk-hero-bg" role="img" aria-label="${imageAlt}"></span></a>`
+                : `<div class="wk-hero-bg" role="img" aria-label="${imageAlt}"></div>`;
 
             slide.innerHTML = `
-            <div class="wk-hero-bg" role="img" aria-label="${imageAlt}"></div>
+            ${backgroundMarkup}
             <div class="wk-hero-overlay" aria-hidden="true"></div>
             <div class="wk-hero-inner">
                 <div class="wk-hero-content">
@@ -459,6 +492,7 @@ function renderHomeHeroSlider() {
                     <div class="wk-hero-actions">
                         <a class="btn btn-primary" href="contact-us.html#getQuoteForm" data-translate="cta_primary"></a>
                         <a class="btn btn-secondary" href="${secondaryHref}" data-translate="cta_secondary"></a>
+                        ${tertiaryAction}
                     </div>
                     ${trustRow}
                 </div>

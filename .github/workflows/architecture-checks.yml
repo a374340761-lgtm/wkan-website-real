@@ -1,0 +1,33 @@
+name: Architecture checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check JavaScript syntax
+        run: |
+          node --check scripts/contact.js
+          node --check scripts/inquiry-hook.js
+          node --check scripts/legacy-route.js
+          node --check backend/server.js
+      - name: Validate architecture contracts
+        run: node scripts/validate-architecture.mjs
+      - name: Validate SEO and structured data
+        run: |
+          python scripts/validate-seo.py
+          node scripts/validate-structured-data.mjs

@@ -42,7 +42,20 @@ function buildInquiryPayload(form) {
     landingPage = window.location.href;
   }
 
+  const inquiryId = (() => {
+    try {
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+        return window.crypto.randomUUID();
+      }
+    } catch (err) {
+      /* Fall through to a collision-resistant client identifier. */
+    }
+    return `wk-${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
+  })();
+
   return {
+    inquiry_id: inquiryId,
+    idempotency_key: inquiryId,
     name: get('name'),
     email: get('email'),
     product: get('product'),
@@ -151,7 +164,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result && result.ok) {
         if (successBox) successBox.style.display = "block";
         setMsg(message('Your inquiry has been received. Our team will review your requirements and contact you by email. No automatic confirmation email is sent.', '询价已收到。我们的团队会审核需求并通过邮件联系您；系统暂不发送自动确认邮件。'), true);
-        document.dispatchEvent(new CustomEvent('wk:inquiry-success'));
+        document.dispatchEvent(new CustomEvent('wk:inquiry-success', {
+          detail: { inquiry_id: result.inquiry_id || payload.inquiry_id }
+        }));
         form.reset();
         return;
       }

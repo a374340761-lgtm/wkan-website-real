@@ -27,27 +27,7 @@
     <meta name="twitter:image" content="https://www.waikwantent.com/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png">
 
     <!-- Legacy entry point. Canonical PDP is product-detail.html?sku=XXXX -->
-    <script>
-        (function () {
-            try {
-                var url = new URL(window.location.href);
-                var p = url.searchParams;
-                var sku = (p.get('sku') || '').trim();
-                var legacy = (p.get('id') || p.get('open') || p.get('pid') || p.get('product') || p.get('model') || '').trim();
-                var chosen = sku || legacy;
-                if (!chosen) {
-                    window.location.replace('all-products.html');
-                    return;
-                }
-                var target = new URL('product-detail.html', url);
-                target.searchParams.set('sku', chosen);
-                target.hash = url.hash;
-                window.location.replace(target.toString());
-            } catch (e) {
-                // ignore
-            }
-        })();
-    </script>
+    <script src="/scripts/legacy-route.js"></script>
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multilang.css">
@@ -384,4 +364,3 @@
     <script src="scripts/get-quote-footer.js"></script>
 </body>
 </html>
-

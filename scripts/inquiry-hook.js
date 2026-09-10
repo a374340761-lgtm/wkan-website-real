@@ -1,7 +1,7 @@
 // Inquiry submit hook (Google Apps Script)
 // - Keeps form logic decoupled (contact.js calls window.WK_INQUIRY_SUBMIT)
 // - Sends application/x-www-form-urlencoded
-// - Production-safe: throws on failed request
+// - Sends a client-generated inquiry_id/idempotency_key for safe deduplication
 
 window.WK_INQUIRY_SUBMIT = async function (payload) {
   const ENDPOINT = "https://script.google.com/macros/s/AKfycbwLKD0KmUD1fa93ZV3fUzvb1vxOWQYp1N2iJO_QPZF3FxnOSrcpGBqlAN5kFMzUXm7E/exec";
@@ -12,7 +12,7 @@ window.WK_INQUIRY_SUBMIT = async function (payload) {
 
   payload = Object.assign({}, payload);
 
-  // Required by spec
+  // Required by the deployed compatibility contract.
   payload.pageUrl = window.location.href;
 
   // Back-compat for current payload shape from contact.js
@@ -35,7 +35,7 @@ window.WK_INQUIRY_SUBMIT = async function (payload) {
 
   const text = await res.text();
 
-  if (!res.ok) return { ok: false, reason: 'unconfirmed' };
+  if (!res.ok) return { ok: false, reason: 'unconfirmed', inquiry_id: payload.inquiry_id };
   let response;
   try { response = JSON.parse(text); } catch { response = null; }
   // Verify the deployed acknowledgement before release; see INQUIRY-OPERATIONS.md.
@@ -43,16 +43,18 @@ window.WK_INQUIRY_SUBMIT = async function (payload) {
     if (response.ok === false || response.success === false || response.error ||
         ['error', 'failed', 'failure'].includes(response.result) ||
         ['error', 'failed', 'failure'].includes(response.status)) {
-      return { ok: false, reason: 'rejected' };
+      return { ok: false, reason: 'rejected', inquiry_id: response.inquiry_id || payload.inquiry_id };
     }
     if (response.ok === true || response.success === true ||
-        response.result === 'success' || response.status === 'success') return { ok: true };
+        response.result === 'success' || response.status === 'success') {
+      return { ok: true, inquiry_id: response.inquiry_id || payload.inquiry_id };
+    }
   }
-  if (/^(ok|success)$/i.test(text.trim())) return { ok: true };
-  return { ok: false, reason: 'unconfirmed' };
+  if (/^(ok|success)$/i.test(text.trim())) return { ok: true, inquiry_id: payload.inquiry_id };
+  return { ok: false, reason: 'unconfirmed', inquiry_id: payload.inquiry_id };
   } catch (error) {
     // A network failure can happen AFTER saving. Never retry automatically.
-    return { ok: false, reason: 'unconfirmed' };
+    return { ok: false, reason: 'unconfirmed', inquiry_id: payload.inquiry_id };
   } finally {
     clearTimeout(timeout);
   }

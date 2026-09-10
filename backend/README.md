@@ -1,5 +1,7 @@
 # 伟群帐篷公司网站后端API
 
+> 状态：备用实现。当前网站表单使用 `scripts/inquiry-hook.js` 对接 Google Apps Script，本服务未被生产页面调用。接入前请阅读 `../docs/INQUIRY-OPERATIONS.md`，实现幂等与持久化契约，并完成真实部署环境的收件测试。
+
 ## 功能特性
 
 - ✅ 联系表单提交处理

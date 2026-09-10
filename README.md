@@ -36,8 +36,9 @@
 - **面包屑导航**：清晰的页面层级导航
 
 #### 产品详情页（PDP）
-- **产品详情（统一入口）**：`product-center.html?open=xxx`（可选 `&cat=...`）
-- **兼容旧链接**：`product.html?id=xxx` / `product-detail.html?id=xxx` 会自动跳转到 Product Center
+- **产品目录入口**：`all-products.html`，支持分类和搜索参数
+- **规范详情入口**：`product-detail.html?sku=xxx`
+- **兼容旧链接**：`product.html?id=xxx`、`tent-detail.html?id=xxx` 会保留产品编号并转到当前详情或系列页
 - **完整产品信息**：图片、名称、描述、规格、应用场景
 - **标签页内容**：
   - 产品描述
@@ -82,11 +83,11 @@
 - **与 RFQ 集成**：询价时自动使用购物车产品
 
 ### 📧 联系表单
-- **在线联系表单**：姓名、邮箱、电话、公司、消息
-- **后端 API 支持**：Node.js + Express 后端服务
-- **邮件发送**：使用 Nodemailer 自动发送询盘邮件
-- **表单验证**：前端和后端双重验证
-- **安全防护**：Helmet、CORS、Rate Limiting
+- **在线联系表单**：姓名、邮箱、产品需求、数量、目标市场和消息
+- **生产提交链路**：可替换的提交 hook，当前适配 Google Apps Script
+- **可靠性标识**：每次提交包含 `inquiry_id` 和 `idempotency_key`
+- **前端保护**：原生字段约束、蜜罐、重复点击保护和超时状态
+- **运行契约**：参见 `docs/INQUIRY-OPERATIONS.md`
 
 ### 📄 文件下载
 - **PDF 下载**：产品资料和公司介绍 PDF
@@ -108,21 +109,20 @@
   - URLSearchParams API
   - Fetch API
 
-### 后端技术
-- **Node.js** + **Express**：RESTful API 服务
-- **Nodemailer**：邮件发送服务
-- **express-validator**：表单验证
-- **helmet**：安全防护
-- **express-rate-limit**：请求限流
-- **CORS**：跨域支持
+### 询价集成
+- **当前生产适配器**：`scripts/inquiry-hook.js` → Google Apps Script
+- **备用实现**：`backend/` 下的 Express + Nodemailer 服务未接入当前页面
+- **切换要求**：更换 `WK_INQUIRY_SUBMIT` 适配器并按运行契约完成收件测试
 
 ### 文件结构
 
 ```
 weiqun-website/
 ├── index.html              # 主页面（含 Language Gate）
-├── products.html           # 产品列表页（筛选+列表+RFQ）
-├── product.html            # 产品详情页（PDP）
+├── all-products.html       # 产品目录页（筛选+列表）
+├── product-detail.html     # 产品详情页（PDP）
+├── products.html           # 旧目录兼容入口
+├── product.html            # 旧产品链接兼容入口
 ├── products-*.html         # 分类页面
 ├── styles/
 │   ├── main.css            # 主要样式文件（含所有新功能样式）
@@ -136,7 +136,7 @@ weiqun-website/
 │   ├── cart.js             # 购物车功能
 │   └── contact.js          # 联系表单
 ├── backend/
-│   ├── server.js            # Express 后端服务器
+│   ├── server.js            # 未接入当前页面的备用 Express 服务
 │   ├── package.json        # 后端依赖
 │   └── env.example         # 环境变量示例
 ├── images/                 # 图片资源（498+ 文件）
@@ -159,7 +159,13 @@ python -m http.server 3000
 npx http-server -p 3000
 ```
 
-### 2. 启动后端服务（可选）
+### 2. 运行架构校验
+
+```bash
+node scripts/validate-architecture.mjs
+```
+
+### 3. 启动备用后端（可选，不会自动接入页面）
 
 ```bash
 cd backend
@@ -170,9 +176,9 @@ cp env.example .env
 npm start
 ```
 
-后端服务将在 `http://localhost:3000` 运行。
-http://localhost:3000
-### 3. 配置说明
+备用后端服务将在 `http://localhost:3001` 运行。若要用于生产，必须先实现前端适配器并按 `docs/INQUIRY-OPERATIONS.md` 验证完整链路。
+
+### 4. 配置说明
 
 #### 邮箱配置（后端）
 编辑 `backend/.env` 文件：
@@ -212,7 +218,7 @@ this.whatsAppSecondary = '8613824540280'; // 备用号
 - [x] **WhatsApp 集成**（一键发送）
 - [x] **WeChat 集成**（二维码+复制ID）
 - [x] **购物车功能**（添加/管理产品）
-- [x] **联系表单**（后端 API 支持）
+- [x] **联系表单**（Google Apps Script 提交适配器）
 - [x] **PDF 下载**（产品资料）
 - [x] **CSV 导出**（RFQ 产品列表）
 - [x] **响应式设计**（移动端适配）

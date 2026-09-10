@@ -2,16 +2,6 @@
   "redirects": [
     {
       "source": "/products.html",
-      "destination": "/all-products.html",
-      "permanent": true
-    },
-    {
-      "source": "/product.html",
-      "destination": "/all-products.html",
-      "permanent": true
-    },
-    {
-      "source": "/tent-detail.html",
       "destination": "/product-center.html",
       "permanent": true
     },
@@ -22,16 +12,6 @@
     },
     {
       "source": "/zh/products.html",
-      "destination": "/zh/all-products.html",
-      "permanent": true
-    },
-    {
-      "source": "/zh/product.html",
-      "destination": "/zh/all-products.html",
-      "permanent": true
-    },
-    {
-      "source": "/zh/tent-detail.html",
       "destination": "/zh/product-center.html",
       "permanent": true
     },

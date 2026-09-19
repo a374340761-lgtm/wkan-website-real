@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "name": "KAP7 International",
+    "country": "美国",
+    "url": "https://www.kap7.com/products/kap7-custom-canopies",
+    "email": "sales@kap7inc.com",
+    "products": "定制帐篷",
+    "type": "体育用品渠道商"
+  },
+  {
+    "id": 2,
+    "name": "WestShade",
+    "country": "美国",
+    "url": "https://westshade.com/",
+    "email": "sales@westshade.com",
+    "products": "帐篷、充气帐篷、展示背景",
+    "type": "活动展示品牌"
+  },
+  {
+    "id": 3,
+    "name": "MVP Visuals",
+    "country": "美国",
+    "url": "https://mvpvisuals.com/pages/on-time-or-its-free-guarantee",
+    "email": "hello@mvpvisuals.com",
+    "products": "帐篷、旗帜、充气拱门",
+    "type": "活动展示品牌"
+  },
+  {
+    "id": 4,
+    "name": "Starline Tents",
+    "country": "美国",
+    "url": "https://www.starlinetents.com/",
+    "email": "sales@starlinetents.com",
+    "products": "帐篷、旗帜、桌布、展示系统",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 5,
+    "name": "House of Flags & Banners / Flags Vancouver",
+    "country": "加拿大",
+    "url": "https://flagsvancouver.com/",
+    "email": "sales@houseofflags.com",
+    "products": "沙滩旗、旗杆、帐篷",
+    "type": "旗帜印刷供应商"
+  },
+  {
+    "id": 6,
+    "name": "Printcloud",
+    "country": "加拿大",
+    "url": "https://printcloud.ca/products/feather-flag",
+    "email": "support@printcloud.ca",
+    "products": "羽毛旗及硬件",
+    "type": "商业印刷公司"
+  },
+  {
+    "id": 7,
+    "name": "Display Solution",
+    "country": "加拿大",
+    "url": "https://displaysolution.ca/",
+    "email": "sales@displaysolution.ca",
+    "products": "快幕秀、展示架、户外展示",
+    "type": "展示用品供应商"
+  },
+  {
+    "id": 8,
+    "name": "My Printed Gazebo / AJL",
+    "country": "英国",
+    "url": "https://www.myprintedgazebo.co.uk/contact",
+    "email": "hello@myprintedgazebo.co.uk",
+    "products": "定制广告帐篷",
+    "type": "广告帐篷供应商"
+  },
+  {
+    "id": 9,
+    "name": "Peppermint Print",
+    "country": "英国",
+    "url": "https://www.peppermintprint.co.uk/product/printed-gazebos",
+    "email": "info@peppermintprint.co.uk",
+    "products": "印花帐篷、侧墙",
+    "type": "本地印刷公司"
+  },
+  {
+    "id": 10,
+    "name": "Signwaves",
+    "country": "英国",
+    "url": "https://www.signwaves.co.uk/pages/gazebo-launch",
+    "email": "enquiries@signwaves.co.uk",
+    "products": "帐篷、旗帜支架、配件",
+    "type": "标识展示供应商"
+  },
+  {
+    "id": 11,
+    "name": "Star Print",
+    "country": "澳大利亚",
+    "url": "https://www.starprint.com.au/",
+    "email": "sales@starprint.com.au",
+    "products": "旗帜、帐篷",
+    "type": "广告印刷供应商"
+  },
+  {
+    "id": 12,
+    "name": "Betta Marquee",
+    "country": "澳大利亚",
+    "url": "https://www.bettamarquee.com.au/",
+    "email": "sales@bettamarquee.com.au",
+    "products": "折叠帐篷、印花帐篷",
+    "type": "帐篷品牌供应商"
+  },
+  {
+    "id": 13,
+    "name": "Expandasign Australia",
+    "country": "澳大利亚",
+    "url": "https://www.expandasign.com/contact-us/",
+    "email": "sales@expandasign.com",
+    "products": "旗帜、帐篷、活动展示",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 14,
+    "name": "All Signed Up",
+    "country": "新西兰",
+    "url": "https://allsignedup.co.nz/what-we-do/popup-tent/",
+    "email": "kyle@allsignedup.co.nz",
+    "products": "帐篷、旗帜、桌布",
+    "type": "标识制作公司"
+  },
+  {
+    "id": 15,
+    "name": "Flag Seller",
+    "country": "新西兰",
+    "url": "https://flagseller.co.nz/",
+    "email": "flagseller.co.nz@gmail.com",
+    "products": "沙滩旗、旗杆",
+    "type": "旗帜印刷供应商"
+  },
+  {
+    "id": 16,
+    "name": "Imagine That",
+    "country": "新西兰",
+    "url": "https://www.imaginethat.nz/signage-and-displays/expo-signage/flags/",
+    "email": "sales@imaginethat.nz",
+    "products": "羽毛旗、水滴旗",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 17,
+    "name": "Flagman",
+    "country": "南非",
+    "url": "https://flagman.co.za/",
+    "email": "sales@flagman.co.za",
+    "products": "旗帜、帐篷",
+    "type": "广告印刷供应商"
+  },
+  {
+    "id": 18,
+    "name": "Stam Products",
+    "country": "南非",
+    "url": "https://www.stam.co.za/pages/contact",
+    "email": "info@stam.co.za",
+    "products": "帐篷、旗帜、横幅",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 19,
+    "name": "Gazebo World",
+    "country": "南非",
+    "url": "https://www.gazeboworld.co.za/branches/",
+    "email": "quotes@gazeboworld.co.za",
+    "products": "帐篷、横幅、展示用品",
+    "type": "本地生产及供应商"
+  },
+  {
+    "id": 20,
+    "name": "Branding Display",
+    "country": "南非",
+    "url": "https://brandingdisplay.co.za/",
+    "email": "info@brandingdisplay.co.za",
+    "products": "帐篷、背景墙、展示柜台",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 21,
+    "name": "Expoz",
+    "country": "法国",
+    "url": "https://www.expoz.fr/fr/",
+    "email": "contact@expoz.fr",
+    "products": "帐篷、快幕秀、充气展示",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 22,
+    "name": "Menth'Allo",
+    "country": "法国",
+    "url": "https://www.menthallo.fr/signaletique/signaletique-exterieure/beach-flag",
+    "email": "contact@menthallo.fr",
+    "products": "沙滩旗",
+    "type": "广告设计制作公司"
+  },
+  {
+    "id": 23,
+    "name": "BE ZWEI Werbetechnik",
+    "country": "德国",
+    "url": "https://www.be-zwei.de/werbetechnik/faltzelte-displays-praesentationssysteme/",
+    "email": "info@be-zwei.de",
+    "products": "折叠帐篷、快幕秀、沙滩旗",
+    "type": "广告标识公司"
+  },
+  {
+    "id": 24,
+    "name": "my-beachflag",
+    "country": "德国",
+    "url": "https://my-beachflag.de/",
+    "email": "info@my-beachflag.de",
+    "products": "沙滩旗、旗杆、底座",
+    "type": "旗帜供应商"
+  },
+  {
+    "id": 25,
+    "name": "FlyBanderas",
+    "country": "西班牙",
+    "url": "https://flybanderas.com/",
+    "email": "hola@flybanderas.com",
+    "products": "旗帜、折叠帐篷、展示架",
+    "type": "展示用品供应商"
+  },
+  {
+    "id": 26,
+    "name": "Carpas Racing",
+    "country": "西班牙",
+    "url": "https://carpasracing.com/11-banderas",
+    "email": "info@carpasracing.com",
+    "products": "旗帜、活动帐篷",
+    "type": "本地制作及供应商"
+  },
+  {
+    "id": 27,
+    "name": "SwS Printing",
+    "country": "意大利",
+    "url": "https://www.studiowebsite.it/",
+    "email": "vendite@studiowebsite.it",
+    "products": "广告帐篷、旗帜、展示系统",
+    "type": "展示印刷供应商"
+  },
+  {
+    "id": 28,
+    "name": "iWird",
+    "country": "意大利",
+    "url": "https://www.iwird.it/prodotti/bandiere-pubblicitarie/",
+    "email": "commerciale@iwird.it",
+    "products": "沙滩旗及展示硬件",
+    "type": "广告印刷供应商"
+  },
+  {
+    "id": 29,
+    "name": "Expofit / Beachflag-shop",
+    "country": "荷兰",
+    "url": "https://www.beachflag-shop.nl/",
+    "email": "sales@expofit.nl",
+    "products": "旗帜、旗杆、底座",
+    "type": "展示用品供应商"
+  },
+  {
+    "id": 30,
+    "name": "Naqsh Media",
+    "country": "阿联酋",
+    "url": "https://nqshmedia.com/feather-flag-printing-dubai",
+    "email": "info@nqshmedia.com",
+    "products": "羽毛旗、旗杆、底座",
+    "type": "商业印刷公司"
+  },
+  {
+    "id": 31,
+    "name": "Al Wasl Printing",
+    "country": "阿联酋",
+    "url": "https://alwaslprinting.com/service/flags-printing/",
+    "email": "amit@alwaslprinting.com",
+    "products": "定制旗帜、旗杆",
+    "type": "商业印刷公司"
+  },
+  {
+    "id": 32,
+    "name": "Efficient Advertising",
+    "country": "阿联酋",
+    "url": "https://efficientadvt.com/product/product-beach-flag/",
+    "email": "info@efficientadvt.com",
+    "products": "沙滩旗及展示硬件",
+    "type": "广告制作公司"
+  },
+  {
+    "id": 33,
+    "name": "DINO WORK",
+    "country": "马来西亚",
+    "url": "https://www.dinowork.com.my/showproducts/productid/6665039/beach-flag-3m-4m-5m/",
+    "email": "enquiry@dinowork.com.my",
+    "products": "沙滩旗、促销展示",
+    "type": "礼品供应批发进口商（官网自述）"
+  },
+  {
+    "id": 34,
+    "name": "Wonder Balloons",
+    "country": "马来西亚",
+    "url": "https://wonderballoons.com.my/corporate-giveaways/beach-flags/",
+    "email": "sales@wonderballoons.com.my",
+    "products": "沙滩旗、活动展示",
+    "type": "活动用品供应商"
+  },
+  {
+    "id": 35,
+    "name": "Signtech",
+    "country": "新加坡",
+    "url": "https://signtech.com.sg/printing-services/contact-us/",
+    "email": "chinsigntech@gmail.com",
+    "products": "快幕秀、旗帜、桌布",
+    "type": "商业印刷公司"
+  },
+  {
+    "id": 36,
+    "name": "Media Design Print",
+    "country": "新加坡",
+    "url": "https://www.mdp.sg/products/bunting",
+    "email": "ultimediastudio@yahoo.com.sg",
+    "products": "展示架、旗帜、POP展示",
+    "type": "商业印刷公司"
+  },
+  {
+    "id": 37,
+    "name": "Adapt Affairs",
+    "country": "印度",
+    "url": "https://theadaptaffairs.com/",
+    "email": "sales@adaptaffairs.com",
+    "products": "折叠帐篷、沙滩旗、活动遮篷",
+    "type": "活动帐篷及旗帜供应商"
+  },
+  {
+    "id": 38,
+    "name": "Tenda Promosi Indonesia / CV. BST",
+    "country": "印度尼西亚",
+    "url": "https://www.tendapromosi88.com/p/contact.html?m=1",
+    "email": "tendapromosi17@gmail.com",
+    "products": "折叠帐篷、促销帐篷",
+    "type": "本地帐篷制作商"
+  },
+  {
+    "id": 39,
+    "name": "Wind Banner Pro / Supriart",
+    "country": "巴西",
+    "url": "https://windbannerpro.com.br/contato",
+    "email": "atendimento@supriart.com.br",
+    "products": "沙滩旗及配件",
+    "type": "本地广告印刷公司"
+  },
+  {
+    "id": 40,
+    "name": "Wind Flag Curitiba / Stamp Ideias",
+    "country": "巴西",
+    "url": "https://www.windflagcuritiba.com.br/contato",
+    "email": "atendimento@stampideias.com.br",
+    "products": "沙滩旗及配件",
+    "type": "本地广告印刷公司"
+  },
+  {
+    "id": 41,
+    "name": "Carpas de México",
+    "country": "墨西哥",
+    "url": "https://www.carpasdemexico.com/",
+    "email": "info@carpasdemexico.com",
+    "products": "折叠帐篷、旗帜",
+    "type": "本地帐篷制造供应商"
+  },
+  {
+    "id": 42,
+    "name": "Banderas Publicitarias",
+    "country": "墨西哥",
+    "url": "https://banderapublicitaria.mx/contacto/",
+    "email": "ventas@banderapublicitaria.mx",
+    "products": "广告旗帜、配件",
+    "type": "旗帜供应商"
+  },
+  {
+    "id": 43,
+    "name": "Publicarpas",
+    "country": "智利",
+    "url": "https://publicarpas.cl/",
+    "email": "comercial@publicarpas.cl",
+    "products": "帐篷、广告旗",
+    "type": "帐篷制造供应商"
+  },
+  {
+    "id": 44,
+    "name": "Sublimax",
+    "country": "智利",
+    "url": "https://www.sublimax.cl/contacto.php",
+    "email": "ventas@sublimax.cl",
+    "products": "旗帜、充气帐篷、快幕秀",
+    "type": "活动展示供应商"
+  },
+  {
+    "id": 45,
+    "name": "Carpas Colombia",
+    "country": "哥伦比亚",
+    "url": "https://www.carpascolombia.com/publicitarios/",
+    "email": "comercial@carpascolombia.com",
+    "products": "广告帐篷、旗帜、POP",
+    "type": "帐篷及广告制作商"
+  },
+  {
+    "id": 46,
+    "name": "Reniola Enterprises",
+    "country": "肯尼亚",
+    "url": "https://reniola.com/services.php",
+    "email": "info@reniola.com",
+    "products": "帐篷、水滴旗、促销用品",
+    "type": "广告及印刷公司"
+  },
+  {
+    "id": 47,
+    "name": "The Card Guys",
+    "country": "肯尼亚",
+    "url": "https://www.thecardguys.co.ke/teardrop-banner",
+    "email": "info@thecardguys.co.ke",
+    "products": "水滴旗",
+    "type": "商业印刷公司"
+  },
+  {
+    "id": 48,
+    "name": "Rollupbanners.ng",
+    "country": "尼日利亚",
+    "url": "https://rollupbanners.ng/product-category/outdoor-displays/",
+    "email": "hello@rollupbanners.ng",
+    "products": "帐篷、羽毛旗、展示架",
+    "type": "商业印刷供应商"
+  },
+  {
+    "id": 49,
+    "name": "Etihad Golden Falcons",
+    "country": "沙特阿拉伯",
+    "url": "https://etihad-gf.com/printing-services/offset-printing/flag-printing/",
+    "email": "sales@etihad-gf.com",
+    "products": "旗帜、展会广告展示",
+    "type": "广告及印刷公司"
+  },
+  {
+    "id": 50,
+    "name": "Upper Case Outdoor",
+    "country": "爱尔兰",
+    "url": "https://ucoutdoor.ie/design/",
+    "email": "info@ucoutdoor.ie",
+    "products": "帐篷、旗帜、充气展示",
+    "type": "活动展示供应商"
+  }
+]

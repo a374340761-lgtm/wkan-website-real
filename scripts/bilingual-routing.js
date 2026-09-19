@@ -52,6 +52,7 @@
     '/flag-type.html': true,
     '/furniture-type.html': true,
     '/index.html': true,
+    '/news/sign-china-2026-shanghai.html': true,
     '/news/apppexpo-2026-shanghai.html': true,
     '/news/index.html': true,
     '/pop-up-display-stands.html': true,

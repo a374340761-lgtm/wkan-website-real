@@ -1,0 +1,25 @@
+/* SIGN CHINA exhibition feature; shared site navigation and news components. */
+.sign-china-hero .news-article-hero__media { height: clamp(440px, 48vw, 650px); }
+.sign-china-hero .news-article-hero__media > img { position: absolute; inset: 0; object-position: center 45%; }
+.sign-china-hero .news-article-hero__text { max-width: 850px; }
+.sign-china-hero .news-article-hero__overlay { background: linear-gradient(0deg, rgba(12,20,29,.9), rgba(12,20,29,.3) 65%, rgba(12,20,29,.08)); }
+.sign-kicker { color: #fff; font-size: .8rem; letter-spacing: .16em; margin-bottom: 1rem; }
+.sign-section-links { display:flex; flex-wrap:wrap; gap:1rem 2rem; margin:1.5rem 0 3rem; font-weight:700; }
+.sign-china-article h3 { margin:2.5rem 0 1rem; color:var(--wk-black); }
+.sign-china-article section[id], .sign-china-article h2[id] { scroll-margin-top:110px; }
+.sign-product-photo { margin:0 0 1.25rem; cursor:zoom-in; }
+.sign-product-photo img { display:block; width:100%; height:auto; max-height:520px; object-fit:contain; border-radius:12px; background:#f3f4f6; }
+.sign-photo-pair { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+.sign-photo-pair img { aspect-ratio:4/3; object-fit:cover; }
+.sign-spec-scroll { max-width:100%; overflow-x:auto; margin:1.25rem 0; }
+.sign-specs { border-collapse:collapse; width:100%; font-size:.9rem; }
+.sign-specs caption { text-align:left; font-weight:700; padding:.5rem 0; }
+.sign-specs th,.sign-specs td { padding:.75rem; border-bottom:1px solid #ddd; text-align:left; white-space:nowrap; }
+.sign-specs thead { background:#f5f3f0; }
+.sign-enquiry { margin:3rem 0; padding:1.5rem; background:#f7f4f1; border-radius:12px; border-left:4px solid #a4161a; }
+.sign-enquiry .btn { margin:.4rem .4rem 0 0; }
+.sign-gallery > p { margin:.75rem 0 1.5rem; }
+.sign-gallery-card { margin:0; min-width:0; }
+.sign-gallery-card .news-gallery__item { margin:0; }
+.sign-gallery-card figcaption { padding:.6rem 0 1rem; font-size:.85rem; color:#505866; }
+@media(max-width:600px) { .sign-photo-pair { grid-template-columns:1fr; } .sign-china-hero .news-article-hero__text { padding:1.5rem; } .sign-china-hero .news-article-hero__sub { font-size:.95rem; } }

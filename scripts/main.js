@@ -382,6 +382,9 @@ function getHomeHeroSlides() {
             keyPrefix: 'home_hero_4',
             imageAlt: 'WaiKwan invitation to SIGN CHINA 2026 in Shanghai, booth W3D08, 15 to 17 September 2026',
             variant: 'event-poster',
+            clickHref: '/news/sign-china-2026-shanghai.html',
+            tertiaryHref: '/news/sign-china-2026-shanghai.html',
+            tertiaryLabelKey: 'home_hero_shanghai_news_cta',
             secondaryHref: 'all-products.html'
         },
         {
@@ -483,6 +486,7 @@ function renderHomeHeroSlider() {
 
             slide.innerHTML = `
             ${backgroundMarkup}
+            ${variant === 'event-poster' && tertiaryHref ? `<a class="btn btn-primary wk-hero-event-news" href="${tertiaryHref}" data-translate="${s.tertiaryLabelKey}"></a>` : ''}
             <div class="wk-hero-overlay" aria-hidden="true"></div>
             <div class="wk-hero-inner">
                 <div class="wk-hero-content">

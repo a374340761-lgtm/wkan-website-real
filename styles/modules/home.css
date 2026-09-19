@@ -1789,6 +1789,11 @@
     }
 }
 
+/* The event poster remains clickable; expose an explicit action on mobile too. */
+.home .wk-hero-event-news {
+    display: none;
+}
+
 /* Mobile Canton Fair invitation hero fix */
 @media (max-width: 640px){
     .home .wk-hero-slide--invite .wk-hero-overlay{
@@ -1821,5 +1826,16 @@
         background-size: contain;
         background-position: center center;
         background-color: #fff;
+    }
+
+    .home .wk-hero-event-news {
+        display: inline-flex;
+        position: absolute;
+        z-index: 5;
+        bottom: 132px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: calc(100% - 28px);
+        white-space: nowrap;
     }
 }

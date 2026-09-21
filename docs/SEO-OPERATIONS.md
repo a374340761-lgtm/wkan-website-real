@@ -46,11 +46,21 @@ not fully localized. Publish a Chinese guide only after a fluent review confirms
 Run these from the repository root before every SEO deployment:
 
 ```powershell
+node scripts/build-home-static-content.mjs
 python scripts/apply-seo-hardening.py
 python scripts/build-page-sitemap.py
+node scripts/build-home-static-content.mjs --check
 python scripts/validate-structured-data.py
 python scripts/validate-seo.py
 ```
+
+The homepage builder fills empty translated elements from `scripts/multilang.js`
+in English and Chinese. It preserves existing copy; when changing a translation,
+update the corresponding static homepage text as well. CI rejects empty translated
+homepage elements. Sitemap dates come from Git history (or today's UTC date for
+uncommitted HTML changes), not filesystem copy timestamps. Dates are omitted when
+history is unavailable. The sitemap builder and SEO validator exclude local
+`outputs/`, dependency and build directories.
 
 The hardening command is idempotent. It removes obsolete geo/keyword meta tags,
 deduplicates JSON-LD, removes fabricated zero-price offers, adds conversion-event

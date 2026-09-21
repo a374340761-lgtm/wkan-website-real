@@ -65,7 +65,9 @@ def main() -> int:
 
     for path in sorted(ROOT.rglob("*.html")):
         rel = path.relative_to(ROOT).as_posix()
-        if rel in SKIP or "backend/" in rel or ".git/" in rel:
+        if rel in SKIP or set(path.relative_to(ROOT).parts) & {
+            "backend", ".git", "node_modules", "outputs", "dist", "build"
+        }:
             continue
         source = path.read_text(encoding="utf-8", errors="replace")
         robots = tags(

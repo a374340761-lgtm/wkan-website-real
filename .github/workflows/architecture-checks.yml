@@ -29,5 +29,6 @@ jobs:
         run: node scripts/validate-architecture.mjs
       - name: Validate SEO and structured data
         run: |
+          node scripts/build-home-static-content.mjs --check
           python scripts/validate-seo.py
           node scripts/validate-structured-data.mjs

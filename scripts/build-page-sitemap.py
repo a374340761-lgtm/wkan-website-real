@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html as html_lib
 import re
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
@@ -56,11 +57,40 @@ def normalized_url(value: str) -> str:
     return urlunsplit(("https", "www.waikwantent.com", path, parts.query, ""))
 
 
+def content_dates() -> dict[str, str]:
+    """Use content history, never checkout/copy timestamps, for sitemap lastmod."""
+    try:
+        history = subprocess.run(
+            ["git", "log", "--format=DATE:%cs", "--name-only", "--", "*.html"],
+            cwd=ROOT, check=True, capture_output=True, encoding="utf-8",
+        ).stdout
+        dates: dict[str, str] = {}
+        date = None
+        for line in history.splitlines():
+            if line.startswith("DATE:"):
+                date = line[5:]
+            elif line.strip() and date:
+                dates.setdefault(line.strip(), date)
+        changed = subprocess.run(
+            ["git", "diff", "--name-only", "HEAD", "--", "*.html"],
+            cwd=ROOT, check=True, capture_output=True, encoding="utf-8",
+        ).stdout
+        for rel in changed.splitlines():
+            dates[rel] = datetime.now(timezone.utc).date().isoformat()
+        return dates
+    except (OSError, subprocess.CalledProcessError):
+        # lastmod is optional; omit it when a source archive has no Git history.
+        return {}
+
+
 def collect_pages() -> list[dict]:
     pages: list[dict] = []
+    dates = content_dates()
     for path in sorted(ROOT.rglob("*.html")):
         rel = path.relative_to(ROOT).as_posix()
-        if rel in EXCLUDE or "backend/" in rel or ".git/" in rel:
+        if rel in EXCLUDE or set(path.relative_to(ROOT).parts) & {
+            "backend", ".git", "node_modules", "outputs", "dist", "build"
+        }:
             continue
         source = path.read_text(encoding="utf-8", errors="replace")
         robots = ROBOTS_RE.search(source)
@@ -81,9 +111,7 @@ def collect_pages() -> list[dict]:
             {
                 "url": url,
                 "alternates": alternates,
-                "lastmod": datetime.fromtimestamp(
-                    path.stat().st_mtime, tz=timezone.utc
-                ).date().isoformat(),
+                "lastmod": dates.get(rel),
             }
         )
     return pages
@@ -100,7 +128,8 @@ def main() -> None:
     for page in pages:
         lines.append("  <url>")
         lines.append(f"    <loc>{html_lib.escape(page['url'])}</loc>")
-        lines.append(f"    <lastmod>{page['lastmod']}</lastmod>")
+        if page["lastmod"]:
+            lines.append(f"    <lastmod>{page['lastmod']}</lastmod>")
         for language, href in page["alternates"].items():
             if href not in canonical_urls:
                 continue

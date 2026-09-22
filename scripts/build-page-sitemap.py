@@ -140,8 +140,11 @@ def main() -> None:
             )
         lines.append("  </url>")
     lines.append("</urlset>")
-    (ROOT / "sitemap.xml").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"Wrote sitemap.xml with {len(pages)} canonical URL(s).")
+    xml = "\n".join(lines) + "\n"
+    # Keep the formerly submitted sitemap URL valid without stale SKU/duplicate URLs.
+    for filename in ("sitemap.xml", "page-sitemap.xml"):
+        (ROOT / filename).write_text(xml, encoding="utf-8")
+    print(f"Wrote both sitemaps with {len(pages)} canonical URL(s).")
 
 
 if __name__ == "__main__":

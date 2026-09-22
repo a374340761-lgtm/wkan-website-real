@@ -1,0 +1,1258 @@
+{
+  "pages": 136,
+  "empty_slots_before": 4857,
+  "empty_slots_after": 0,
+  "duplicate_titles": {},
+  "largest_hero_assets": [
+    {
+      "path": "images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png",
+      "bytes": 2660701
+    },
+    {
+      "path": "images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png",
+      "bytes": 2548615
+    },
+    {
+      "path": "images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png",
+      "bytes": 2512940
+    },
+    {
+      "path": "images/hero/2026-shanghai-international-advertising-exhibition-waikwan.webp",
+      "bytes": 1602283
+    },
+    {
+      "path": "images/hero/2026上海国际广告展宣传图.png",
+      "bytes": 1601333
+    },
+    {
+      "path": "images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg",
+      "bytes": 84760
+    }
+  ],
+  "details": [
+    {
+      "file": "10x10-pop-up-canopy-tent.html",
+      "title": "10x10 Pop Up Canopy Tent | Custom 3x3 OEM Factory | WaiKwan",
+      "empty_slots_before": 67,
+      "empty_slots_after": 0,
+      "main_text_characters": 4467,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "about-us.html",
+      "title": "About WaiKwan | Canopy Tents, Beach Flags & Display Systems Manufacturer",
+      "empty_slots_before": 93,
+      "empty_slots_after": 0,
+      "main_text_characters": 2680,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "advertising-light-box-manufacturer.html",
+      "title": "Advertising Light Box Manufacturer | SEG Fabric Displays | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3535,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "all-products.html",
+      "title": "OEM Product Catalog | Canopy Tents, Flags & Displays | WaiKwan",
+      "empty_slots_before": 54,
+      "empty_slots_after": 0,
+      "main_text_characters": 4399,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "aluminum-folding-tent.html",
+      "title": "Aluminum Pop Up Canopy Tent | Heavy Duty Pop Up Tent Frames | WaiKwan",
+      "empty_slots_before": 43,
+      "empty_slots_after": 0,
+      "main_text_characters": 3351,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "beach-flag-buying-guide.html",
+      "title": "Beach Flag Buying Guide | Feather Flags, Teardrop Flags, Poles & Bases | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 2208,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "beach-flag-supplier.html",
+      "title": "Beach Flag Supplier | Feather & Teardrop Flag OEM | WaiKwan",
+      "empty_slots_before": 38,
+      "empty_slots_after": 0,
+      "main_text_characters": 7350,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "canopy-tent-buying-guide.html",
+      "title": "Canopy Tent Buying Guide | Frames, Sizes, Printing & Export Packing | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 2218,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "canopy-tents.html",
+      "title": "Canopy Tents for Trade Shows & Outdoor Promotions | WaiKwan",
+      "empty_slots_before": 79,
+      "empty_slots_after": 0,
+      "main_text_characters": 5239,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "collections/accessories-parts.html",
+      "title": "Accessories & Replacement Parts Collection | Tent, Flag & Display Parts | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 849,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "collections/display-systems.html",
+      "title": "Display Systems Collection | Backwalls, Counters & Booth Kits | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 1016,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "collections/flags-poles.html",
+      "title": "Flags & Poles Collection | Beach Flags, Bases & Hardware | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 1050,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "collections/light-boxes.html",
+      "title": "Light Boxes Collection | SEG Fabric & Advertising Light Boxes | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 950,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "company-profile.html",
+      "title": "Company Profile | Guangxi WaiKwan Tent Manufacturing Co., Ltd.",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3611,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "contact-us.html",
+      "title": "Request a Quote | Custom Tents, Flags & Displays | WaiKwan",
+      "empty_slots_before": 107,
+      "empty_slots_after": 0,
+      "main_text_characters": 4550,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "custom-canopy-tent-manufacturer.html",
+      "title": "Custom Canopy Tent Manufacturer | OEM & Wholesale | WaiKwan",
+      "empty_slots_before": 101,
+      "empty_slots_after": 0,
+      "main_text_characters": 17160,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "custom-printed-canopy-tents.html",
+      "title": "Custom Printed Canopy Tents & Sidewalls | Waikwan",
+      "empty_slots_before": 45,
+      "empty_slots_after": 0,
+      "main_text_characters": 4286,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "custom-printed-tent.html",
+      "title": "Custom Printed Tent Manufacturer | OEM Event Canopies | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3589,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "dome-type.html",
+      "title": "Dome Tent Types & Custom Event Structures | WaiKwan",
+      "empty_slots_before": 66,
+      "empty_slots_after": 0,
+      "main_text_characters": 1890,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "event-canopy-tents.html",
+      "title": "Event Canopy Tents | WaiKwan",
+      "empty_slots_before": 64,
+      "empty_slots_after": 0,
+      "main_text_characters": 2954,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "event-tent-and-promotional-display.html",
+      "title": "Event Tent and Promotional Display Manufacturer | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3653,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "faq-artwork-files.html",
+      "title": "Artwork Files for Printing (AI/PDF) | WaiKwan FAQ",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1714,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "faq-color-matching.html",
+      "title": "Color Matching & Color Difference | WaiKwan FAQ",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1760,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "faq-lead-time.html",
+      "title": "Lead Time (Production Time) | WaiKwan FAQ",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1693,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "faq-moq.html",
+      "title": "MOQ (Minimum Order Quantity) | WaiKwan FAQ",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1722,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "faq-samples.html",
+      "title": "Samples Policy | WaiKwan FAQ",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 1426,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "faq-shipping.html",
+      "title": "Shipping Options (Express / Air / Sea) | WaiKwan FAQ",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 2696,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "faq.html",
+      "title": "Buyer FAQ | MOQ, Lead Time, Artwork, Color & Shipping | WaiKwan",
+      "empty_slots_before": 53,
+      "empty_slots_after": 0,
+      "main_text_characters": 4286,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "flag-pole-and-base-manufacturer.html",
+      "title": "Flag Pole and Base Manufacturer | Beach Flag Hardware | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3560,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "flag-type.html",
+      "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1483,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "furniture-type.html",
+      "title": "Outdoor Event Furniture for Tents | WaiKwan",
+      "empty_slots_before": 60,
+      "empty_slots_after": 0,
+      "main_text_characters": 1732,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "index.html",
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags & Displays | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 11053,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "inflatable-tent-manufacturer.html",
+      "title": "Inflatable Tent Manufacturer | Event Spider Tents & Race Gates | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3586,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "manufacturing-capabilities.html",
+      "title": "Manufacturing Capabilities | OEM/ODM Custom Tents, Flags & Displays | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3234,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "news/apppexpo-2026-shanghai.html",
+      "title": "APPPEXPO 2026 Shanghai | Wai Kwan Tent — Beach Flags & Display Hardware",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 2793,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "news/beach-flag-base-selection-guide.html",
+      "title": "Beach Flag Base Selection Guide | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 623,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "news/how-to-choose-trade-show-canopy-tent.html",
+      "title": "How to Choose a Trade Show Canopy Tent | WaiKwan Guide",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 1168,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "news/index.html",
+      "title": "News & Guides | Wai Kwan Tent — OEM Tent & Display Manufacturer",
+      "empty_slots_before": 51,
+      "empty_slots_after": 0,
+      "main_text_characters": 3394,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "news/seg-light-box-installation-maintenance.html",
+      "title": "SEG Light Box Installation and Maintenance Guide | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 969,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "news/sign-china-2026-shanghai.html",
+      "title": "SIGN CHINA 2026 Shanghai | New Inflatable Tents, Tables & Chairs | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 4050,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "news/the-139th-canton-fair-phase-3.html",
+      "title": "WaiKwan at the 139th Canton Fair Phase 3 | Custom Tents & Display Systems",
+      "empty_slots_before": 19,
+      "empty_slots_after": 0,
+      "main_text_characters": 5942,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "news/trade-show-display-system-checklist.html",
+      "title": "Trade Show Display System Procurement Checklist | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 601,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "pop-up-canopy-tent-manufacturer.html",
+      "title": "Pop Up Canopy Tent Manufacturer | WaiKwan",
+      "empty_slots_before": 45,
+      "empty_slots_after": 0,
+      "main_text_characters": 1093,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "pop-up-canopy-tent-supplier.html",
+      "title": "Pop Up Canopy Tent Supplier | Folding Event Tent OEM | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3554,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "pop-up-canopy-tent.html",
+      "title": "Pop Up Canopy Tent Manufacturer | 10x10 Pop Up Canopy Tents | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3590,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "pop-up-canopy-tents.html",
+      "title": "Pop Up Canopy Tents | Commercial Folding Canopies | WaiKwan",
+      "empty_slots_before": 67,
+      "empty_slots_after": 0,
+      "main_text_characters": 3339,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "pop-up-display-stands.html",
+      "title": "Pop Up Display Stands Supplier | Trade Show Display Manufacturer | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 3548,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "portable-display-buying-guide.html",
+      "title": "Portable Display Buying Guide | Backdrops, Counters, Light Boxes & Trade Shows | WaiKwan",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 2132,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "portable-display-systems.html",
+      "title": "Portable Display Systems Manufacturer | OEM Trade Show Kits | WaiKwan",
+      "empty_slots_before": 40,
+      "empty_slots_after": 0,
+      "main_text_characters": 8259,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "privacy.html",
+      "title": "Privacy Policy | WaiKwan",
+      "empty_slots_before": 38,
+      "empty_slots_after": 0,
+      "main_text_characters": 2430,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "product-center.html",
+      "title": "Products | Custom Canopy Tents, Beach Flags & Display Hardware | Wai Kwan Tent",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 5261,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "product-detail.html",
+      "title": "Product | Wai Kwan Tent — OEM Tents, Beach Flags & Display Hardware",
+      "empty_slots_before": 42,
+      "empty_slots_after": 0,
+      "main_text_characters": 850,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "products-accessories.html",
+      "title": "Tent & Display Accessories for OEM Projects | WaiKwan",
+      "empty_slots_before": 49,
+      "empty_slots_after": 0,
+      "main_text_characters": 305,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seg-light-box-manufacturer.html",
+      "title": "SEG Light Box Manufacturer in China | Custom Fabric Displays | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 3832,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/advertising-flag-pole-and-base-wholesale-supplier-b2b.html",
+      "title": "Advertising Flag Pole and Base Wholesale Supplier | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 3057,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/aluminum-frame-fabric-display-manufacturer-custom-branding.html",
+      "title": "Aluminum Frame Fabric Display Manufacturer Custom Branding | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2956,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/aluminum-frame-pop-up-tent-factory-direct-export.html",
+      "title": "Aluminum Frame Pop Up Tent Factory Direct Export | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3400,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html",
+      "title": "Beach Flag Manufacturer Wholesale Feather Teardrop Flags | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2957,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/branded-promotional-tent-supplier-b2b-bulk-orders.html",
+      "title": "Branded Promotional Tent Supplier B2B Bulk Orders | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3283,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/collapsible-display-system-wholesale-distributor-pricing.html",
+      "title": "Collapsible Display System Wholesale | Distributor Pricing | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 3472,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/commercial-grade-pop-up-canopy-wholesale-supplier.html",
+      "title": "Commercial Grade Pop Up Canopy Wholesale Supplier | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3047,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/custom-beach-flag-kit-supplier-for-agencies.html",
+      "title": "Custom Beach Flag Kit Supplier for Agencies | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2754,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/custom-canopy-tent-factory-for-reseller-programs.html",
+      "title": "Custom Canopy Tent Factory for Resellers | OEM Programs | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3588,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/custom-printed-canopy-tent-manufacturer-oem-china.html",
+      "title": "Custom Printed Canopy Tent Manufacturer | OEM China | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3733,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/custom-printed-feather-flag-supplier-bulk-order-oem.html",
+      "title": "Custom Printed Feather Flag Supplier Bulk Order OEM | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2938,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/double-sided-beach-flag-manufacturer-export-quality.html",
+      "title": "Double Sided Beach Flag Manufacturer Export Quality | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2963,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/event-feather-flag-printing-manufacturer-factory-direct.html",
+      "title": "Event Feather Flag Printing Manufacturer Factory Direct | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2846,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/exhibition-tent-frame-and-fabric-manufacturer-odm.html",
+      "title": "Exhibition Tent Frame and Fabric Manufacturer ODM | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3105,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/fabric-tension-backwall-supplier-bulk-for-rental-companies.html",
+      "title": "Fabric Tension Backwall Supplier Bulk for Rental Companies | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2908,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/folding-event-tent-supplier-wholesale-moq.html",
+      "title": "Folding Event Tent Supplier Wholesale MOQ | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3489,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/heavy-duty-gazebo-tent-wholesale-manufacturer-europe-shipping.html",
+      "title": "Heavy Duty Gazebo Tent Wholesale Manufacturer Europe Shipping | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3285,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/modular-exhibition-display-hardware-manufacturer-odm.html",
+      "title": "Modular Exhibition Display Hardware Manufacturer ODM | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2839,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/outdoor-advertising-tent-oem-supplier-custom-sizes.html",
+      "title": "Outdoor Advertising Tent OEM Supplier Custom Sizes | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3215,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/outdoor-promotional-flag-system-manufacturer-oem.html",
+      "title": "Outdoor Promotional Flag System Manufacturer OEM | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2751,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/pop-up-display-stand-wholesale-supplier-for-events.html",
+      "title": "Pop Up Display Stand Wholesale Supplier for Events | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2808,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/portable-backdrop-display-system-supplier-wholesale.html",
+      "title": "Portable Backdrop Display System Supplier Wholesale | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2795,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/portable-trade-show-booth-backdrop-manufacturer-export.html",
+      "title": "Portable Trade Show Booth Backdrop Manufacturer Export | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2882,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/quick-setup-display-frame-supplier-oem-graphics.html",
+      "title": "Quick Setup Display Frame Supplier OEM Graphics | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2834,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/replacement-beach-flag-pole-base-supplier-wholesale.html",
+      "title": "Replacement Beach Flag Pole Base Supplier Wholesale | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2817,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/seg-fabric-light-box-manufacturer-b2b-custom-sizes.html",
+      "title": "SEG Fabric Light Box Manufacturer B2B Custom Sizes | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2913,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/teardrop-flag-hardware-supplier-for-print-shops.html",
+      "title": "Teardrop Flag Hardware Supplier for Print Shops | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2847,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html",
+      "title": "Tension Fabric Display Wall Manufacturer OEM Trade Show | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2915,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/trade-show-canopy-tent-manufacturer-for-distributors.html",
+      "title": "Trade Show Canopy Tent Manufacturer | Distributor OEM | WaiKwan",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 3948,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "seo/wind-sail-banner-flag-wholesale-supplier-moq.html",
+      "title": "Wind Sail Banner Flag Wholesale Supplier MOQ | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2783,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "site-map.html",
+      "title": "Site Map | WaiKwan",
+      "empty_slots_before": 44,
+      "empty_slots_after": 0,
+      "main_text_characters": 2785,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "six-sided-booth.html",
+      "title": "Six-sided Promotional Booth - Wai Kwan",
+      "empty_slots_before": 48,
+      "empty_slots_after": 0,
+      "main_text_characters": 1110,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "tension-fabric-backwall.html",
+      "title": "Tension Fabric Backwall Supplier | Trade Show Display Manufacturer | WaiKwan",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2412,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "tent-type.html",
+      "title": "Types of Canopy Tents | Frame, Size & Printing Guide | WaiKwan",
+      "empty_slots_before": 41,
+      "empty_slots_after": 0,
+      "main_text_characters": 3624,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "terms.html",
+      "title": "Terms of Use | WaiKwan",
+      "empty_slots_before": 38,
+      "empty_slots_after": 0,
+      "main_text_characters": 2354,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/10x10-pop-up-canopy-tent.html",
+      "title": "10×10 快开广告帐篷｜3×3 m 定制篷房与出口｜伟群帐篷",
+      "empty_slots_before": 67,
+      "empty_slots_after": 0,
+      "main_text_characters": 2260,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/about-us.html",
+      "title": "关于伟群帐篷｜定制帐篷、沙滩旗与展示系统制造商",
+      "empty_slots_before": 93,
+      "empty_slots_after": 0,
+      "main_text_characters": 1144,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/all-products.html",
+      "title": "全部产品｜搜索帐篷、沙滩旗与展示配件｜伟群帐篷",
+      "empty_slots_before": 52,
+      "empty_slots_after": 0,
+      "main_text_characters": 1563,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/aluminum-folding-tent.html",
+      "title": "铝合金快开广告帐篷｜重型折叠帐篷框架｜伟群帐篷",
+      "empty_slots_before": 43,
+      "empty_slots_after": 0,
+      "main_text_characters": 1599,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/beach-flag-supplier.html",
+      "title": "沙滩旗供应商｜羽毛旗、水滴旗与旗杆底座源头工厂｜伟群",
+      "empty_slots_before": 38,
+      "empty_slots_after": 0,
+      "main_text_characters": 2638,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/canopy-tents.html",
+      "title": "商业广告帐篷总览｜伟群帐篷",
+      "empty_slots_before": 79,
+      "empty_slots_after": 0,
+      "main_text_characters": 2537,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/collections/accessories-parts.html",
+      "title": "配件与替换零件集合页｜帐篷、旗帜与展示备件｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 256,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/collections/display-systems.html",
+      "title": "展示系统集合页｜背景墙、前台与展位套装｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 349,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/collections/flags-poles.html",
+      "title": "旗帜与旗杆集合页｜沙滩旗、底座与五金｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 343,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/collections/light-boxes.html",
+      "title": "灯箱集合页｜SEG 拉布灯箱与广告灯箱｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 303,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/contact-us.html",
+      "title": "联系我们 | 广西伟群帐篷 WaiKwan",
+      "empty_slots_before": 107,
+      "empty_slots_after": 0,
+      "main_text_characters": 1498,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/custom-canopy-tent-manufacturer.html",
+      "title": "帐篷生产厂家｜定制广告帐篷 OEM/ODM 源头工厂｜伟群",
+      "empty_slots_before": 100,
+      "empty_slots_after": 0,
+      "main_text_characters": 6058,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/custom-printed-canopy-tents.html",
+      "title": "定制印刷广告帐篷｜伟群帐篷",
+      "empty_slots_before": 45,
+      "empty_slots_after": 0,
+      "main_text_characters": 1224,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/dome-type.html",
+      "title": "球形篷类型与定制活动结构 | 伟群帐篷",
+      "empty_slots_before": 66,
+      "empty_slots_after": 0,
+      "main_text_characters": 1084,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "zh/event-canopy-tents.html",
+      "title": "活动用广告帐篷｜伟群帐篷",
+      "empty_slots_before": 64,
+      "empty_slots_after": 0,
+      "main_text_characters": 1483,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq-artwork-files.html",
+      "title": "稿件与文件要求｜印刷与对稿｜伟群帐篷",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1640,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq-color-matching.html",
+      "title": "色彩与打样对色｜品牌色还原｜伟群帐篷",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1686,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq-lead-time.html",
+      "title": "交期与排产｜订单周期｜伟群帐篷",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1619,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq-moq.html",
+      "title": "起订量 MOQ｜批量与样品政策｜伟群帐篷",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1648,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq-samples.html",
+      "title": "样品政策｜打样与确认｜伟群帐篷",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 1426,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq-shipping.html",
+      "title": "物流与出货｜包装与运输｜伟群帐篷",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1811,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/faq.html",
+      "title": "常见问题｜采购、定制与交付｜伟群帐篷",
+      "empty_slots_before": 53,
+      "empty_slots_after": 0,
+      "main_text_characters": 1495,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/flag-type.html",
+      "title": "旗帜类型｜羽毛旗刀旗矩形旗｜伟群帐篷",
+      "empty_slots_before": 37,
+      "empty_slots_after": 0,
+      "main_text_characters": 1259,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/furniture-type.html",
+      "title": "户外活动家具与帐篷配套用品 | 伟群帐篷",
+      "empty_slots_before": 60,
+      "empty_slots_after": 0,
+      "main_text_characters": 1124,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "zh/index.html",
+      "title": "定制广告帐篷与展示系统制造商｜广西伟群帐篷（WaiKwan）",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 3432,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/news/apppexpo-2026-shanghai.html",
+      "title": "APPPEXPO 2026 上海｜展会动态｜伟群帐篷",
+      "empty_slots_before": 40,
+      "empty_slots_after": 0,
+      "main_text_characters": 2793,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "zh/news/beach-flag-base-selection-guide.html",
+      "title": "沙滩旗底座选择指南｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 207,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/news/how-to-choose-trade-show-canopy-tent.html",
+      "title": "如何选择展会广告帐篷｜伟群采购指南",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 399,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/news/index.html",
+      "title": "新闻与采购指南｜展会、产品与采购知识｜伟群帐篷",
+      "empty_slots_before": 54,
+      "empty_slots_after": 0,
+      "main_text_characters": 1802,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/news/seg-light-box-installation-maintenance.html",
+      "title": "SEG 灯箱安装与维护指南｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 293,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/news/sign-china-2026-shanghai.html",
+      "title": "上海国际广告展 SIGN CHINA 2026｜充气新品与现场照片｜伟群帐篷",
+      "empty_slots_before": 40,
+      "empty_slots_after": 0,
+      "main_text_characters": 4050,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "zh/news/trade-show-display-system-checklist.html",
+      "title": "展会展示系统采购清单｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 189,
+      "images_without_alt": 0,
+      "images_without_dimensions": 0
+    },
+    {
+      "file": "zh/pop-up-canopy-tent-manufacturer.html",
+      "title": "快开广告帐篷制造商｜伟群帐篷",
+      "empty_slots_before": 45,
+      "empty_slots_after": 0,
+      "main_text_characters": 846,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/pop-up-canopy-tent.html",
+      "title": "折叠广告帐篷制造商｜10x10 快开帐篷与来图定制｜伟群",
+      "empty_slots_before": 0,
+      "empty_slots_after": 0,
+      "main_text_characters": 451,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/pop-up-canopy-tents.html",
+      "title": "快开广告篷（折叠）｜商业用途｜伟群帐篷",
+      "empty_slots_before": 67,
+      "empty_slots_after": 0,
+      "main_text_characters": 1717,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/pop-up-display-stands.html",
+      "title": "快展展架｜弹展背景与便携展示｜伟群帐篷",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 3499,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/portable-display-systems.html",
+      "title": "便携式展示系统｜快幕秀与展架背景墙｜伟群帐篷",
+      "empty_slots_before": 40,
+      "empty_slots_after": 0,
+      "main_text_characters": 1994,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/privacy.html",
+      "title": "隐私政策｜伟群帐篷",
+      "empty_slots_before": 38,
+      "empty_slots_after": 0,
+      "main_text_characters": 2430,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/product-center.html",
+      "title": "产品中心｜定制帐篷、沙滩旗与展示配件｜伟群帐篷",
+      "empty_slots_before": 82,
+      "empty_slots_after": 0,
+      "main_text_characters": 2038,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/product-detail.html",
+      "title": "产品详情｜伟群帐篷 OEM/ODM 帐篷与展示系统",
+      "empty_slots_before": 42,
+      "empty_slots_after": 0,
+      "main_text_characters": 767,
+      "images_without_alt": 0,
+      "images_without_dimensions": 2
+    },
+    {
+      "file": "zh/products-accessories.html",
+      "title": "帐篷与展示配件 | 伟群帐篷",
+      "empty_slots_before": 49,
+      "empty_slots_after": 0,
+      "main_text_characters": 140,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/seg-light-box-manufacturer.html",
+      "title": "SEG卡布灯箱制造商｜背光卡布灯箱定制｜伟群帐篷",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2923,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/site-map.html",
+      "title": "网站地图｜页面导航｜伟群帐篷",
+      "empty_slots_before": 42,
+      "empty_slots_after": 0,
+      "main_text_characters": 1074,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/six-sided-booth.html",
+      "title": "六边形展位｜特型展示空间｜伟群帐篷",
+      "empty_slots_before": 48,
+      "empty_slots_after": 0,
+      "main_text_characters": 935,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/tension-fabric-backwall.html",
+      "title": "张拉布背景墙｜快幕秀展墙与画面更换｜伟群帐篷",
+      "empty_slots_before": 36,
+      "empty_slots_after": 0,
+      "main_text_characters": 2412,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/tent-type.html",
+      "title": "帐篷型号与系列｜框架与规格入口｜伟群帐篷",
+      "empty_slots_before": 41,
+      "empty_slots_after": 0,
+      "main_text_characters": 1221,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    },
+    {
+      "file": "zh/terms.html",
+      "title": "服务条款｜伟群帐篷",
+      "empty_slots_before": 38,
+      "empty_slots_after": 0,
+      "main_text_characters": 2354,
+      "images_without_alt": 0,
+      "images_without_dimensions": 1
+    }
+  ]
+}

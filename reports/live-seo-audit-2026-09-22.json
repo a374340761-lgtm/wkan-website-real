@@ -1,0 +1,92 @@
+{
+  "checkedAt": "2026-09-22T05:31:18.012Z",
+  "results": [
+    {
+      "url": "https://waikwantent.com/",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/",
+      "server": "cloudflare",
+      "bytes": 72787,
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
+      "canonical": "https://www.waikwantent.com/",
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "http://www.waikwantent.com/",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/",
+      "server": "cloudflare",
+      "bytes": 72787,
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
+      "canonical": "https://www.waikwantent.com/",
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "https://www.waikwantent.com/",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/",
+      "server": "cloudflare",
+      "bytes": 72787,
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
+      "canonical": "https://www.waikwantent.com/",
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "https://www.waikwantent.com/robots.txt",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/robots.txt",
+      "server": "cloudflare",
+      "bytes": 639,
+      "emptyTranslationSlots": 0,
+      "text": "# Waikwan Tent - https://www.waikwantent.com/robots.txt\n# Canonical production host: https://www.waikwantent.com\n\nUser-agent: *\nAllow: /\n\n# Server / development-only paths\nDisallow: /backend/\n\n# Internal test or archived design files\nDisallow: /index.original.html\nDisallow: /index.wireframe.html\nDisallow: /test_logo.html\nDisallow: /test_stats.html\n\n# Low-value duplicate/legacy entry points; canonical pages remain allowed.\nDisallow: /product.html\nDisallow: /products.html\nDisallow: /tent-detail.html\nDisallow: /zh/product.html\nDisallow: /zh/products.html\nDisallow: /zh/tent-detail.html\n\nSitemap: https://www.waikwantent.com/sitemap.xml\n"
+    },
+    {
+      "url": "https://www.waikwantent.com/sitemap.xml",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/sitemap.xml",
+      "server": "cloudflare",
+      "bytes": 58352,
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
+      "server": "cloudflare",
+      "bytes": 55923,
+      "title": "Custom Canopy Tent Manufacturer | OEM &amp; Wholesale | WaiKwan",
+      "canonical": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
+      "emptyTranslationSlots": 101
+    },
+    {
+      "url": "https://www.waikwantent.com/portable-display-systems.html",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/portable-display-systems.html",
+      "server": "cloudflare",
+      "bytes": 42804,
+      "title": "Portable Display Systems Manufacturer | OEM Trade Show Kits | WaiKwan",
+      "canonical": "https://www.waikwantent.com/portable-display-systems.html",
+      "emptyTranslationSlots": 40
+    },
+    {
+      "url": "https://www.waikwantent.com/product-detail.html?sku=2001",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/product-detail.html?sku=2001",
+      "server": "cloudflare",
+      "bytes": 30021,
+      "title": "Product | Wai Kwan Tent — OEM Tents, Beach Flags &amp; Display Hardware",
+      "canonical": "https://www.waikwantent.com/product-detail.html",
+      "emptyTranslationSlots": 42
+    },
+    {
+      "url": "https://www.waikwantent.com/does-not-exist-seo-audit-20260922.html",
+      "status": 404,
+      "finalUrl": "https://www.waikwantent.com/does-not-exist-seo-audit-20260922.html",
+      "server": "cloudflare",
+      "bytes": 5006,
+      "title": "Page Not Found | WaiKwan Tent",
+      "canonical": "https://www.waikwantent.com/404.html",
+      "emptyTranslationSlots": 0
+    }
+  ]
+}

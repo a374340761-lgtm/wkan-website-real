@@ -162,6 +162,11 @@ def main() -> int:
     for extra in sorted(sitemap_urls - expected_urls):
         issues.append(f"[sitemap.xml] non-canonical or excluded URL: {extra}")
 
+    legacy_sitemap = ElementTree.parse(ROOT / "page-sitemap.xml")
+    legacy_urls = [item.text.strip() for item in legacy_sitemap.findall(".//sm:loc", namespace) if item.text]
+    if set(legacy_urls) != sitemap_urls or len(legacy_urls) != len(sitemap_urls):
+        issues.append("[page-sitemap.xml] must contain the same unique canonical URLs as sitemap.xml")
+
     if issues:
         print(f"Found {len(issues)} SEO validation issue(s):")
         for issue in issues:

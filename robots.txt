@@ -13,12 +13,7 @@ Disallow: /index.wireframe.html
 Disallow: /test_logo.html
 Disallow: /test_stats.html
 
-# Low-value duplicate/legacy entry points; canonical pages remain allowed.
-Disallow: /product.html
-Disallow: /products.html
-Disallow: /tent-detail.html
-Disallow: /zh/product.html
-Disallow: /zh/products.html
-Disallow: /zh/tent-detail.html
+# Legacy entry points must remain crawlable so crawlers can see their
+# redirects, canonical targets and noindex directives. They are not in sitemaps.
 
 Sitemap: https://www.waikwantent.com/sitemap.xml

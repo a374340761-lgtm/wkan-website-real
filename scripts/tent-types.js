@@ -400,9 +400,20 @@
         ],
 
         // New tent series: Inflatable Tent — brochure scan images/广西伟群帐篷制造有限公司2025allpagepng/08.png
-        // UX: One "Inflatable Tent" type with internal AirTent size selection.
+        // The core AirTent range uses the brochure; the five SIGN CHINA 2026 additions use
+        // exhibition photography and specifications published in the Shanghai show feature.
         inflatable: (function () {
             const INFLATABLE_BROCHURE_GUIDE = CATALOG_PAGE(8);
+            const SIGN_CHINA_IMAGE = function (n) {
+                return `news/images/Sign%20China%202026/sign-china-2026-shanghai-${String(n).padStart(2, '0')}.webp`;
+            };
+            const SIGN_CHINA_LINKS = [
+                {
+                    href: 'news/sign-china-2026-shanghai.html',
+                    labelZh: '查看上海国际广告展现场专栏',
+                    labelEn: 'View the SIGN CHINA Shanghai showcase'
+                }
+            ];
             const commonBlocks = {
                 accessories: {
                     titleZh: '充气帐篷配件',
@@ -611,8 +622,256 @@
                     nameEn: 'Inflatable Tent',
                     // Default selection on the View Type page when no variant is specified.
                     defaultVariant: 'airt_16',
-                    variants
-                })
+                    variants,
+                    links: [
+                        { href: 'tent-type.html?type=inflatable-three-leg-tent', labelZh: '三脚充气帐篷', labelEn: 'Three-Leg Inflatable Tent' },
+                        { href: 'tent-type.html?type=inflatable-single-chair', labelZh: '单人充气椅', labelEn: 'Single-Seat Inflatable Chair' },
+                        { href: 'tent-type.html?type=inflatable-double-chair', labelZh: '双人充气椅', labelEn: 'Two-Seat Inflatable Chair' },
+                        { href: 'tent-type.html?type=inflatable-arch', labelZh: '充气拱门', labelEn: 'Inflatable Arch' },
+                        { href: 'tent-type.html?type=inflatable-column', labelZh: '充气圆柱', labelEn: 'Inflatable Display Column' }
+                    ]
+                }),
+                {
+                    type: 'inflatable-three-leg-tent',
+                    nameZh: '三脚充气帐篷',
+                    nameEn: 'Three-Leg Inflatable Tent',
+                    hubDescZh: '闭气式三角 / V 型结构，适合展会、路演与品牌活动。',
+                    hubDescEn: 'Sealed-air triangular / V-shaped shelter for exhibitions, roadshows and brand events.',
+                    storyZh: [
+                        '三脚充气帐篷采用闭气式结构，完成充气后无需持续连接气泵，可减少活动现场的噪音与电源占用。',
+                        '外层为 400D（220g）PU 涂层涤纶布，内置 0.3mm TPU 内胆，支持热升华全彩印刷，可选配电泵。',
+                        '3m、4m、5m 与 6m 四种宽度可覆盖接待、展示、快闪及户外品牌活动等不同空间。'
+                    ].join('\n'),
+                    storyEn: [
+                        'The three-leg inflatable tent uses a sealed-air structure, so it does not need a continuously running blower after inflation. This reduces noise and power use at the event site.',
+                        'It uses 400D (220g) PU-coated polyester with a 0.3mm TPU bladder, supports full-colour dye-sublimation printing and can be supplied with an optional electric pump.',
+                        'Widths of 3m, 4m, 5m and 6m cover reception, display, pop-up and outdoor brand-event layouts.'
+                    ].join('\n'),
+                    heroImage: SIGN_CHINA_IMAGE(6),
+                    introductionPhoto: {
+                        src: SIGN_CHINA_IMAGE(7),
+                        alt: 'Inside the three-leg inflatable tent at SIGN CHINA 2026 Shanghai',
+                        subtitleZh: '展会实拍：帐篷内部结构',
+                        subtitleEn: 'Exhibition photo: interior structure',
+                        captionZh: '上海国际广告展现场照片展示三脚 / V 型支撑与内部使用空间。',
+                        captionEn: 'The Shanghai exhibition photo shows the three-leg / V-shaped support and usable interior space.'
+                    },
+                    specTable: {
+                        columns: [
+                            { key: 'model', labelZh: '款式', labelEn: 'Model' },
+                            { key: 'overallWidth', labelZh: '整体宽度', labelEn: 'Overall Width' },
+                            { key: 'overallHeight', labelZh: '整体高度', labelEn: 'Overall Height' },
+                            { key: 'entranceHeight', labelZh: '门高', labelEn: 'Entrance Height' }
+                        ],
+                        rows: [
+                            { model: '3 m', overallWidth: '3000 mm', overallHeight: '2300 mm', entranceHeight: '1850 mm' },
+                            { model: '4 m', overallWidth: '4000 mm', overallHeight: '2900 mm', entranceHeight: '2200 mm' },
+                            { model: '5 m', overallWidth: '5000 mm', overallHeight: '3200 mm', entranceHeight: '2200 mm' },
+                            { model: '6 m', overallWidth: '6000 mm', overallHeight: '3600 mm', entranceHeight: '2200 mm' }
+                        ]
+                    },
+                    infoBlocks: [
+                        {
+                            titleZh: '材料与印刷',
+                            titleEn: 'Material & Printing',
+                            textZh: '• 400D（220g）PU 涂层涤纶布\n• 0.3mm TPU 内胆\n• 热升华全彩印刷\n• 可选配电泵',
+                            textEn: '• 400D (220g) PU-coated polyester\n• 0.3mm TPU bladder\n• Full-colour dye-sublimation printing\n• Optional electric pump'
+                        }
+                    ],
+                    skipCommonDetails: true,
+                    skipAccessoriesBlock: true,
+                    links: SIGN_CHINA_LINKS
+                },
+                {
+                    type: 'inflatable-single-chair',
+                    nameZh: '单人充气椅',
+                    nameEn: 'Single-Seat Inflatable Chair',
+                    hubDescZh: '适合展位接待与活动休息区的可定制单人充气座椅。',
+                    hubDescEn: 'Custom-branded inflatable seating for exhibition reception and event lounge areas.',
+                    storyZh: [
+                        '单人充气椅为展位接待、品牌快闪和活动休息区提供便携座位，可与充气桌子及三脚充气帐篷组合使用。',
+                        '产品采用 0.5mm PVC 内胆与 220g 数码印花布料，展会样品以统一品牌画面展示。'
+                    ].join('\n'),
+                    storyEn: [
+                        'The single-seat inflatable chair provides portable seating for exhibition reception, brand pop-ups and event lounge areas. It can be paired with an inflatable table and three-leg inflatable tent.',
+                        'The product uses a 0.5mm PVC bladder and 220g digitally printed fabric. The exhibition sample shows a coordinated full-brand graphic treatment.'
+                    ].join('\n'),
+                    heroImage: SIGN_CHINA_IMAGE(12),
+                    specTable: {
+                        columns: [
+                            { key: 'model', labelZh: '款式', labelEn: 'Model' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'bladder', labelZh: '内胆', labelEn: 'Bladder' },
+                            { key: 'cover', labelZh: '外层面料', labelEn: 'Outer Fabric' }
+                        ],
+                        rows: [
+                            { modelZh: '单人款', modelEn: 'Single-seat', size: '100 × 83 × 80 cm', bladder: '0.5 mm PVC', coverZh: '220g 数码印花布', coverEn: '220g digitally printed fabric' }
+                        ]
+                    },
+                    infoBlocks: [
+                        {
+                            titleZh: '适用场景',
+                            titleEn: 'Applications',
+                            textZh: '• 展会接待区\n• 活动休息区\n• 品牌快闪与产品发布\n• 充气桌椅组合陈列',
+                            textEn: '• Exhibition reception areas\n• Event lounges\n• Brand pop-ups and product launches\n• Coordinated inflatable table-and-chair displays'
+                        }
+                    ],
+                    skipCommonDetails: true,
+                    skipAccessoriesBlock: true,
+                    links: SIGN_CHINA_LINKS
+                },
+                {
+                    type: 'inflatable-double-chair',
+                    nameZh: '双人充气椅',
+                    nameEn: 'Two-Seat Inflatable Chair',
+                    hubDescZh: '适合洽谈与休息空间的可定制双人充气座椅。',
+                    hubDescEn: 'Custom-branded two-seat inflatable furniture for meeting and lounge spaces.',
+                    storyZh: [
+                        '双人充气椅为展会洽谈区、活动休息区和品牌接待空间提供两人座位，宽幅椅面适合与同系列充气桌搭配。',
+                        '产品采用 0.5mm PVC 内胆与 220g 数码印花布料，可根据活动视觉统一定制外层画面。'
+                    ].join('\n'),
+                    storyEn: [
+                        'The two-seat inflatable chair gives exhibition meeting areas, event lounges and branded reception spaces a portable two-person seat. Its wider format pairs with the matching inflatable table.',
+                        'The product uses a 0.5mm PVC bladder and 220g digitally printed fabric. The outer graphic can be coordinated with the event identity.'
+                    ].join('\n'),
+                    heroImage: SIGN_CHINA_IMAGE(13),
+                    specTable: {
+                        columns: [
+                            { key: 'model', labelZh: '款式', labelEn: 'Model' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'bladder', labelZh: '内胆', labelEn: 'Bladder' },
+                            { key: 'cover', labelZh: '外层面料', labelEn: 'Outer Fabric' }
+                        ],
+                        rows: [
+                            { modelZh: '双人款', modelEn: 'Two-seat', size: '170 × 83 × 80 cm', bladder: '0.5 mm PVC', coverZh: '220g 数码印花布', coverEn: '220g digitally printed fabric' }
+                        ]
+                    },
+                    infoBlocks: [
+                        {
+                            titleZh: '适用场景',
+                            titleEn: 'Applications',
+                            textZh: '• 展会洽谈区\n• 访客休息区\n• 品牌活动与路演\n• 充气桌椅组合陈列',
+                            textEn: '• Exhibition meeting areas\n• Visitor lounges\n• Brand events and roadshows\n• Coordinated inflatable table-and-chair displays'
+                        }
+                    ],
+                    skipCommonDetails: true,
+                    skipAccessoriesBlock: true,
+                    links: SIGN_CHINA_LINKS
+                },
+                {
+                    type: 'inflatable-arch',
+                    nameZh: '充气拱门',
+                    nameEn: 'Inflatable Arch',
+                    hubDescZh: '用于入口、赛事与品牌活动的定制印刷充气门型。',
+                    hubDescEn: 'Custom-printed inflatable entrance structure for races, events and brand activations.',
+                    storyZh: [
+                        '充气拱门可作为展位入口、赛事起终点、开幕通道或品牌活动的视觉门头。',
+                        '上海国际广告展样品采用大面积品牌画面，并与充气圆柱及三脚充气帐篷组成统一的现场展示系统。',
+                        '成品尺寸、结构配置与报价按项目场地、印刷范围、数量及交付地点确认。'
+                    ].join('\n'),
+                    storyEn: [
+                        'The inflatable arch works as an exhibition entrance, race start/finish gate, opening walkway or visual gateway for a brand activation.',
+                        'The SIGN CHINA Shanghai sample uses large-format branded graphics and coordinates with inflatable columns and the three-leg inflatable tent.',
+                        'Finished size, structure and quotation are confirmed from the venue, print coverage, quantity and delivery destination.'
+                    ].join('\n'),
+                    heroImage: SIGN_CHINA_IMAGE(5),
+                    introductionPhoto: {
+                        src: SIGN_CHINA_IMAGE(4),
+                        alt: 'Inflatable arch and display columns at SIGN CHINA 2026 Shanghai',
+                        subtitleZh: '展会实拍：拱门与展示柱组合',
+                        subtitleEn: 'Exhibition photo: arch and display-column set',
+                        captionZh: '拱门可与不同高度的充气圆柱组合，形成完整入口与品牌展示。',
+                        captionEn: 'The arch can be paired with inflatable columns in different heights to create a complete entrance display.'
+                    },
+                    specTable: {
+                        columns: [
+                            { key: 'configuration', labelZh: '配置', labelEn: 'Configuration' },
+                            { key: 'branding', labelZh: '画面', labelEn: 'Branding' },
+                            { key: 'size', labelZh: '尺寸', labelEn: 'Size' },
+                            { key: 'use', labelZh: '用途', labelEn: 'Use' }
+                        ],
+                        rows: [
+                            {
+                                configurationZh: '充气门型结构',
+                                configurationEn: 'Inflatable gateway structure',
+                                brandingZh: '定制品牌印刷',
+                                brandingEn: 'Custom branded print',
+                                sizeZh: '按项目确认',
+                                sizeEn: 'Project-specific',
+                                useZh: '入口、赛事、品牌活动',
+                                useEn: 'Entrances, races and brand events'
+                            }
+                        ]
+                    },
+                    infoBlocks: [
+                        {
+                            titleZh: '询价所需信息',
+                            titleEn: 'Information for Quotation',
+                            textZh: '• 目标宽度与高度\n• 室内 / 户外及安装地面\n• 印刷范围与图稿\n• 数量、目的地与活动日期',
+                            textEn: '• Target width and height\n• Indoor/outdoor use and installation surface\n• Print coverage and artwork\n• Quantity, destination and event date'
+                        }
+                    ],
+                    skipCommonDetails: true,
+                    skipAccessoriesBlock: true,
+                    links: SIGN_CHINA_LINKS
+                },
+                {
+                    type: 'inflatable-column',
+                    nameZh: '充气圆柱',
+                    nameEn: 'Inflatable Display Column',
+                    hubDescZh: '适合入口导视、展位陈列与品牌活动的定制展示柱。',
+                    hubDescEn: 'Custom-branded display columns for entrances, exhibition stands and event wayfinding.',
+                    storyZh: [
+                        '充气圆柱以竖向大画面提升远距离识别度，可用于展位入口、通道导视、赞助商展示与品牌活动布置。',
+                        '上海国际广告展现场展示了不同高度的圆柱组合，可单独使用，也可与充气拱门或帐篷共同搭建视觉入口。',
+                        '圆柱高度、直径、底部固定方式与报价按场地、数量、画面及交付需求确认。'
+                    ].join('\n'),
+                    storyEn: [
+                        'Inflatable display columns use a tall graphic area to improve visibility from a distance. They suit booth entrances, wayfinding, sponsor displays and brand-event layouts.',
+                        'The SIGN CHINA Shanghai stand showed columns in different heights. They can stand alone or combine with an inflatable arch or tent to create a visual entrance.',
+                        'Column height, diameter, base fixing and quotation are confirmed from the venue, quantity, artwork and delivery requirements.'
+                    ].join('\n'),
+                    heroImage: SIGN_CHINA_IMAGE(9),
+                    introductionPhoto: {
+                        src: SIGN_CHINA_IMAGE(8),
+                        alt: 'Custom branded inflatable display column detail at SIGN CHINA 2026 Shanghai',
+                        subtitleZh: '展会实拍：品牌画面细节',
+                        subtitleEn: 'Exhibition photo: branded graphic detail',
+                        captionZh: '竖向画面适合品牌标志、活动信息与赞助商内容展示。',
+                        captionEn: 'The vertical graphic area suits logos, event information and sponsor messaging.'
+                    },
+                    specTable: {
+                        columns: [
+                            { key: 'configuration', labelZh: '配置', labelEn: 'Configuration' },
+                            { key: 'branding', labelZh: '画面', labelEn: 'Branding' },
+                            { key: 'size', labelZh: '高度 / 直径', labelEn: 'Height / Diameter' },
+                            { key: 'use', labelZh: '用途', labelEn: 'Use' }
+                        ],
+                        rows: [
+                            {
+                                configurationZh: '独立充气展示柱',
+                                configurationEn: 'Freestanding inflatable column',
+                                brandingZh: '定制品牌印刷',
+                                brandingEn: 'Custom branded print',
+                                sizeZh: '按项目确认',
+                                sizeEn: 'Project-specific',
+                                useZh: '入口、导视、赞助商展示',
+                                useEn: 'Entrances, wayfinding and sponsor display'
+                            }
+                        ]
+                    },
+                    infoBlocks: [
+                        {
+                            titleZh: '询价所需信息',
+                            titleEn: 'Information for Quotation',
+                            textZh: '• 目标高度与直径\n• 使用环境及固定条件\n• 单面 / 环绕画面内容\n• 数量、目的地与活动日期',
+                            textEn: '• Target height and diameter\n• Use environment and fixing conditions\n• Graphic coverage and artwork\n• Quantity, destination and event date'
+                        }
+                    ],
+                    skipCommonDetails: true,
+                    skipAccessoriesBlock: true,
+                    links: SIGN_CHINA_LINKS
+                }
             ];
         })(),
 

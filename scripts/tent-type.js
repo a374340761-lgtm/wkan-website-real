@@ -155,6 +155,44 @@
     if (twD) twD.setAttribute('content', s.description);
   }
 
+  function setInflatableSeriesHeadMeta(item) {
+    if (!item || !/^inflatable-/.test(String(item.type || ''))) return false;
+    const lang = getCurrentLang();
+    const name = lang === 'zh' ? safe(item.nameZh || item.nameEn) : safe(item.nameEn || item.nameZh);
+    const summary = lang === 'zh'
+      ? safe(item.hubDescZh || item.storyZh || item.hubDescEn || item.storyEn)
+      : safe(item.hubDescEn || item.storyEn || item.hubDescZh || item.storyZh);
+    const description = summary.split(/\r?\n/)[0].replace(/\s+/g, ' ').trim().slice(0, 180);
+    const title = lang === 'zh'
+      ? `${name}｜定制充气展示产品｜伟群帐篷`
+      : `${name} | Custom Inflatable Display | WaiKwan`;
+    const localePrefix = lang === 'zh' ? '/zh' : '';
+    const canonicalUrl = `${BASE_ORIGIN}${localePrefix}/tent-type.html?type=${encodeURIComponent(item.type)}`;
+    const imageUrl = item.heroImage
+      ? `${BASE_ORIGIN}/${String(item.heroImage).replace(/^\//, '')}`
+      : `${BASE_ORIGIN}/images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg`;
+
+    document.title = title;
+    const values = [
+      ['meta[name="description"]', 'content', description],
+      ['meta[property="og:title"]', 'content', title],
+      ['meta[property="og:description"]', 'content', description],
+      ['meta[property="og:url"]', 'content', canonicalUrl],
+      ['meta[property="og:image"]', 'content', imageUrl],
+      ['meta[name="twitter:title"]', 'content', title],
+      ['meta[name="twitter:description"]', 'content', description],
+      ['meta[name="twitter:url"]', 'content', canonicalUrl],
+      ['meta[name="twitter:image"]', 'content', imageUrl]
+    ];
+    values.forEach(([selector, attribute, value]) => {
+      const node = document.querySelector(selector);
+      if (node) node.setAttribute(attribute, value);
+    });
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute('href', canonicalUrl);
+    return true;
+  }
+
   function resetTentTypeHubHeadMeta() {
     const title = 'Types of Canopy Tents | Frame, Size & Printing Guide | WaiKwan';
     const desc =
@@ -1048,7 +1086,9 @@
       removeJsonLdByPrefix('wk-jsonld-product');
       const lang = getCurrentLang();
       const name = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
-      document.title = `${name} | Tent Types | WaiKwan`;
+      if (!setInflatableSeriesHeadMeta(item)) {
+        document.title = `${name} | Tent Types | WaiKwan`;
+      }
     }
 
     let bodyHtml = `${renderTopHero(item)}${renderTableFromSpec(item, variant)}`;

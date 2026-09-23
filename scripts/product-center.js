@@ -262,6 +262,7 @@
       displays: 'menu_popup_displays',
       lightbox: 'category_lightbox',
       furniture: 'category_furniture',
+      inflatable: 'category_inflatable',
       custom: 'category_custom',
       accessories: 'menu_accessories',
       racegate: 'home_cat_racegate_title',
@@ -278,7 +279,11 @@
     const k = keyMap[cat];
     if (badge) badge.textContent = k ? t(k) : cat;
     if (catalog) {
-      catalog.href = cat === 'accessories' ? 'all-products.html' : `all-products.html?cat=${encodeURIComponent(cat)}`;
+      catalog.href = cat === 'accessories'
+        ? 'all-products.html'
+        : cat === 'inflatable'
+          ? 'tent-type.html?type=inflatable'
+          : `all-products.html?cat=${encodeURIComponent(cat)}`;
     }
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();
@@ -309,6 +314,20 @@
 
       renderTentsHub();
 
+      return;
+    }
+
+    // Dedicated inflatable hub used by products-inflatable.html and exhibition CTAs.
+    if (cat === 'inflatable') {
+      const showcase = document.querySelector('.product-categories-showcase');
+      if (showcase) showcase.style.display = 'none';
+      cards.forEach((card) => {
+        card.style.display = 'none';
+      });
+      if (backWrap) backWrap.style.display = '';
+      if (noticeEl) noticeEl.style.display = notice ? '' : 'none';
+
+      renderInflatableHub();
       return;
     }
 
@@ -1119,10 +1138,6 @@
     const event = data && Array.isArray(data.event) ? data.event : [];
     const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
 
-    const inflatableSummary = inflatable.find((x) => x && x.type === 'inflatable')
-      ? [inflatable.find((x) => x && x.type === 'inflatable')]
-      : inflatable;
-
     container.innerHTML = [
       `<div class="tents-hub__buyer-intro wk-card" style="max-width:980px;margin:0 auto 20px;padding:16px 18px;border-radius:14px;">
         <div style="font-weight:900;margin-bottom:8px;">
@@ -1148,14 +1163,57 @@
       </div>`,
       renderHubSection('tents_hub_folding_title', 'Folding Tents', folding),
       renderHubSection('tents_hub_event_title', 'Event Tents', event),
-      renderHubSection('tents_hub_inflatable_title', 'Inflatable Tents', inflatableSummary),
+      renderHubSection('tents_hub_inflatable_title', 'Inflatable Tents & Displays', inflatable),
       renderTentAccessoriesHubCard()
     ].join('');
 
     if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
       window.multiLang.translatePage();
     }
+    const inflatableHeading = container.querySelector('[data-translate="tents_hub_inflatable_title"]');
+    if (inflatableHeading && !inflatableHeading.textContent.trim()) {
+      inflatableHeading.textContent = getCurrentLang() === 'zh' ? '充气帐篷与展示' : 'Inflatable Tents & Displays';
+    }
     applyTentsHubHead();
+  }
+
+  function renderInflatableHub() {
+    removeFlagsHub();
+    removeAccessoriesHub();
+    removeRacegateHub();
+
+    const container = ensureTentsHubContainer();
+    if (!container) return;
+    const lang = getCurrentLang();
+    const data = window.TENT_TYPES;
+    const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
+    const introTitle = lang === 'zh' ? '充气产品系列' : 'Inflatable product series';
+    const intro = lang === 'zh'
+      ? '从闭气式活动帐篷到品牌座椅、拱门和展示柱，选择产品后可查看展会实拍、规格与询价所需信息。'
+      : 'Explore sealed-air event tents, branded seating, arches and display columns. Open a series for exhibition photos, specifications and quotation requirements.';
+    const manufacturerHref = localizedInternal('/inflatable-tent-manufacturer.html');
+    const showHref = localizedInternal('/news/sign-china-2026-shanghai.html');
+
+    container.innerHTML = [
+      `<div class="tents-hub__buyer-intro wk-card" style="max-width:980px;margin:0 auto 20px;padding:16px 18px;border-radius:14px;">
+        <div style="font-weight:900;margin-bottom:8px;">${introTitle}</div>
+        <p style="margin:0;color:rgba(31,45,61,.78);line-height:1.55;font-size:0.95rem;">${intro}</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
+          <a class="btn btn-secondary" href="${manufacturerHref}">${lang === 'zh' ? '充气产品制造能力' : 'Inflatable manufacturing'}</a>
+          <a class="btn btn-tertiary" href="${showHref}">${lang === 'zh' ? '上海展会现场照片' : 'Shanghai exhibition photos'}</a>
+        </div>
+      </div>`,
+      renderHubSection('tents_hub_inflatable_title', 'Inflatable Tents & Displays', inflatable)
+    ].join('');
+
+    if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
+      window.multiLang.translatePage();
+    }
+    const heading = container.querySelector('[data-translate="tents_hub_inflatable_title"]');
+    if (heading && !heading.textContent.trim()) {
+      heading.textContent = lang === 'zh' ? '充气帐篷与展示' : 'Inflatable Tents & Displays';
+    }
+    applyCategoryHubHead('inflatable');
   }
 
   function init() {

@@ -4,7 +4,7 @@ import path from 'node:path';
 const ROOT = path.resolve(new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const BASE = 'https://www.waikwantent.com';
 const TODAY = new Date().toISOString().slice(0, 10);
-const DEFAULT_IMAGE = `${BASE}/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png`;
+const DEFAULT_IMAGE = `${BASE}/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg`;
 
 const POSIX = (p) => p.split(path.sep).join('/');
 const rel = (abs) => POSIX(path.relative(ROOT, abs));
@@ -234,7 +234,7 @@ const landingPages = [
     title: 'Pop Up Canopy Tent Supplier | Folding Event Tent OEM | WaiKwan',
     description: 'B2B pop up canopy tent supplier for event, promotion and retail buyers. Compare sizes, frame options, custom printing, export packing and OEM/ODM support.',
     h1: 'Pop Up Canopy Tent Supplier for Events, Promotions and Resale',
-    image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png',
+    image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg',
     category: 'Canopy tents',
     specs: ['WK-T30 steel frame series for budget event programs', 'WK-T40 aluminum frame series for frequent commercial use', 'WK-T50 heavy-duty aluminum frame series for larger outdoor events', 'Common sizes include 1.5x1.5m, 2x2m, 2.5x2.5m, 3x3m, 3x4.5m, 3x6m, 4x4m, 4x6m and 4x8m'],
     links: [['Custom canopy tent manufacturer', 'custom-canopy-tent-manufacturer.html'], ['Aluminum folding tent', 'aluminum-folding-tent.html'], ['All products', 'all-products.html']]
@@ -254,7 +254,7 @@ const landingPages = [
     title: 'Flag Pole and Base Manufacturer | Beach Flag Hardware | WaiKwan',
     description: 'Beach flag pole and base manufacturer for distributors, print shops and agencies. Fiberglass, aluminum, ground spikes, cross bases and water bases.',
     h1: 'Flag Pole and Base Manufacturer for Beach Flag Programs',
-    image: 'images/products/flags/accessories/beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png',
+    image: 'images/products/flags/accessories/beach-flag-poles-ground-stakes-cross-bases-hardware-kit.jpg',
     category: 'Flag hardware',
     specs: ['Fiberglass poles for feather, teardrop and square beach flags', 'Aluminum plus fiberglass pole options for selected flag systems', 'Ground spikes, cross bases, water bases, rotors, bags and replacement hardware', 'Designed for print shops, agencies and distributors that need repeatable flag kits'],
     links: [['Beach flag supplier', 'beach-flag-supplier.html'], ['Beach flag buying guide', 'beach-flag-buying-guide.html'], ['Flag type page', 'flag-type.html']]

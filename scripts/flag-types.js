@@ -471,9 +471,9 @@
         heroImage: 'images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png',
         // Real product photos only in the example block below (not the hero)
         exampleImages: [
-          FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png'),
-          FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.png'),
-          FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.png'),
+          FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.jpg'),
+          FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.jpg'),
+          FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.jpg'),
           FLAG_HERO('feather-flag-hero.png'),
           FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg')
         ],

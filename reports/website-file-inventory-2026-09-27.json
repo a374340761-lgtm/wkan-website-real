@@ -1,0 +1,4750 @@
+{
+  "files_count": 585,
+  "bytes": 822678806,
+  "extensions": {
+    ".md": 39,
+    ".jpg": 93,
+    "[no extension]": 6,
+    ".mdc": 1,
+    ".yml": 1,
+    ".html": 198,
+    ".cdr": 2,
+    ".txt": 7,
+    ".pyc": 1,
+    ".json": 13,
+    ".py": 14,
+    ".example": 1,
+    ".js": 32,
+    ".xlsx": 5,
+    ".xls": 1,
+    ".pdf": 4,
+    ".csv": 3,
+    ".svg": 2,
+    ".png": 98,
+    ".webp": 17,
+    ".jpeg": 8,
+    ".toml": 1,
+    ".xml": 2,
+    ".mjs": 10,
+    ".webmanifest": 1,
+    ".css": 19,
+    ".backup": 1,
+    ".ps1": 5
+  },
+  "missing_local_references": [],
+  "script_usage": {
+    "scripts/bilingual-routing.js": 18,
+    "scripts/seo.js": 61,
+    "/scripts/analytics.js": 190,
+    "scripts/main.js": 33,
+    "scripts/multilang.js": 32,
+    "scripts/cart.js": 43,
+    "/scripts/bilingual-routing.js": 148,
+    "scripts/get-quote-footer.js": 45,
+    "scripts/products.js": 10,
+    "scripts/accessories-page.js": 3,
+    "scripts/tents-details.js": 1,
+    "scripts/tent-types.js": 3,
+    "scripts/all-products.js": 1,
+    "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js": 3,
+    "scripts/contact.js": 1,
+    "scripts/inquiry-hook.js": 1,
+    "scripts/share-links.js": 12,
+    "scripts/main.js?v=20260909-2": 9,
+    "scripts/multilang.js?v=20260909-2": 9,
+    "scripts/share-links.js?v=20260909-2": 5,
+    "scripts/customizer.js": 1,
+    "scripts/contact.js?v=20260909-2": 1,
+    "scripts/inquiry-hook.js?v=20260909-2": 1,
+    "scripts/flag-types.js": 5,
+    "scripts/dome-type.js": 1,
+    "scripts/flag-type.js": 1,
+    "scripts/furniture-type.js": 1,
+    "scripts/main.js?v=20260919-sign-china": 1,
+    "scripts/multilang.js?v=20260919-sign-china": 1,
+    "../scripts/seo.js": 33,
+    "../scripts/multilang.js": 33,
+    "../scripts/cart.js": 34,
+    "../scripts/main.js": 33,
+    "../scripts/news-lightbox.js": 3,
+    "../scripts/get-quote-footer.js": 4,
+    "/scripts/seo.js": 77,
+    "../scripts/multilang.js?v=20260909-2": 1,
+    "../scripts/main.js?v=20260909-2": 1,
+    "scripts/multilang.js?v=20260923-inflatables": 1,
+    "scripts/tent-types.js?v=20260923-inflatables": 2,
+    "scripts/product-center.js?v=20260923-inflatables": 1,
+    "scripts/product-seo-map.js": 1,
+    "scripts/product-detail.js": 1,
+    "/scripts/legacy-route.js": 4,
+    "scripts/product-page.js": 1,
+    "scripts/six-sided-booth.js": 1,
+    "scripts/tent-type.js?v=20260923-inflatables": 1,
+    "/scripts/main.js": 69,
+    "/scripts/multilang.js": 68,
+    "/scripts/cart.js": 70,
+    "/scripts/get-quote-footer.js": 45,
+    "/scripts/products.js": 9,
+    "/scripts/accessories-page.js": 3,
+    "/scripts/tents-details.js": 1,
+    "/scripts/tent-types.js": 3,
+    "/scripts/all-products.js": 1,
+    "/scripts/contact.js": 2,
+    "/scripts/inquiry-hook.js": 2,
+    "/scripts/customizer.js": 1,
+    "/scripts/flag-types.js": 5,
+    "/scripts/dome-type.js": 1,
+    "/scripts/flag-type.js": 1,
+    "/scripts/furniture-type.js": 1,
+    "/scripts/main.js?v=20260919-sign-china": 1,
+    "/scripts/multilang.js?v=20260919-sign-china": 1,
+    "/scripts/news-lightbox.js": 2,
+    "/scripts/multilang.js?v=20260923-inflatables": 1,
+    "/scripts/tent-types.js?v=20260923-inflatables": 2,
+    "/scripts/product-center.js?v=20260923-inflatables": 1,
+    "/scripts/product-seo-map.js": 1,
+    "/scripts/product-detail.js": 1,
+    "/scripts/six-sided-booth.js": 1,
+    "/scripts/tent-type.js?v=20260923-inflatables": 1
+  },
+  "files": [
+    {
+      "path": "docs/WEBSITE-OVERVIEW-2026-09-27.md",
+      "bytes": 10054,
+      "lines": 127
+    },
+    {
+      "path": "images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg",
+      "bytes": 488678
+    },
+    {
+      "path": "images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.jpg",
+      "bytes": 286462
+    },
+    {
+      "path": "images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.jpg",
+      "bytes": 386473
+    },
+    {
+      "path": "images/products/flags/accessories/beach-flag-bases-metal-plates-water-bags-accessories-overview.jpg",
+      "bytes": 344758
+    },
+    {
+      "path": "images/products/flags/accessories/beach-flag-poles-feather-flag-poles-display.jpg",
+      "bytes": 347054
+    },
+    {
+      "path": "images/products/flags/accessories/beach-flag-poles-ground-stakes-cross-bases-hardware-kit.jpg",
+      "bytes": 395803
+    },
+    {
+      "path": "images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg",
+      "bytes": 384220
+    },
+    {
+      "path": ".DS_Store",
+      "bytes": 10244
+    },
+    {
+      "path": ".cursor/rules/seo-engineer.mdc",
+      "bytes": 1787
+    },
+    {
+      "path": ".gitattributes",
+      "bytes": 66
+    },
+    {
+      "path": ".github/workflows/architecture-checks.yml",
+      "bytes": 965,
+      "lines": 35
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 216
+    },
+    {
+      "path": ".nojekyll",
+      "bytes": 0
+    },
+    {
+      "path": "10x10-pop-up-canopy-tent.html",
+      "bytes": 34925,
+      "lines": 441,
+      "title": "10x10 Pop Up Canopy Tent | Custom 3x3 OEM Factory | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "2025下季广西伟群展品.cdr",
+      "bytes": 3060137
+    },
+    {
+      "path": "2025伟群帐篷下季展会展品1.5米帐篷 转曲.cdr",
+      "bytes": 91033747
+    },
+    {
+      "path": "404.html",
+      "bytes": 5006,
+      "lines": 82,
+      "title": "Page Not Found | WaiKwan Tent",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "CANONICAL_REDIRECT_SITEMAP_CONFLICTS.md",
+      "bytes": 7322,
+      "lines": 111
+    },
+    {
+      "path": "CNAME",
+      "bytes": 19
+    },
+    {
+      "path": "CRAWLED_NOT_INDEXED_FIXES.md",
+      "bytes": 3661,
+      "lines": 79
+    },
+    {
+      "path": "CRAWLED_NOT_INDEXED_RISK_REPORT.md",
+      "bytes": 6165,
+      "lines": 119
+    },
+    {
+      "path": "GSC_ACTION_CHECKLIST.md",
+      "bytes": 7665,
+      "lines": 127
+    },
+    {
+      "path": "GSC_RECHECK_URLS.txt",
+      "bytes": 802,
+      "lines": 19
+    },
+    {
+      "path": "PERFORMANCE_REPORT.md",
+      "bytes": 2398,
+      "lines": 34
+    },
+    {
+      "path": "PRODUCT_DETAIL_INDEXING_AUDIT.md",
+      "bytes": 4184,
+      "lines": 61
+    },
+    {
+      "path": "PRODUCT_DETAIL_INDEXING_FIXES.md",
+      "bytes": 2522,
+      "lines": 54
+    },
+    {
+      "path": "PRODUCT_LAYOUT_FIX.md",
+      "bytes": 3958,
+      "lines": 61
+    },
+    {
+      "path": "README.md",
+      "bytes": 10959,
+      "lines": 318
+    },
+    {
+      "path": "REFACTOR_ROADMAP.md",
+      "bytes": 9281,
+      "lines": 158
+    },
+    {
+      "path": "SEO_IMPACT_REPORT.md",
+      "bytes": 11860,
+      "lines": 127
+    },
+    {
+      "path": "SEO_INDEX_AUDIT.md",
+      "bytes": 8051,
+      "lines": 153
+    },
+    {
+      "path": "SEO_INDEX_FIXES.md",
+      "bytes": 3995,
+      "lines": 38
+    },
+    {
+      "path": "__pycache__/_footer_normalize.cpython-312.pyc",
+      "bytes": 12961
+    },
+    {
+      "path": "_audit_out.json",
+      "bytes": 505,
+      "lines": 21
+    },
+    {
+      "path": "_canonical_check.py",
+      "bytes": 1501,
+      "lines": 50
+    },
+    {
+      "path": "about-us.html",
+      "bytes": 28145,
+      "lines": 380,
+      "title": "About WaiKwan | Canopy Tents, Beach Flags & Display Systems Manufacturer",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "advertising-light-box-manufacturer.html",
+      "bytes": 13356,
+      "lines": 227,
+      "title": "Advertising Light Box Manufacturer | SEG Fabric Displays | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "ai-visibility-report.md",
+      "bytes": 3148,
+      "lines": 57
+    },
+    {
+      "path": "all-products.html",
+      "bytes": 40405,
+      "lines": 584,
+      "title": "OEM Product Catalog | Canopy Tents, Flags & Displays | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/accessories-page.js",
+        "scripts/tents-details.js",
+        "scripts/tent-types.js",
+        "scripts/all-products.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
+        "scripts/contact.js",
+        "scripts/inquiry-hook.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "aluminum-folding-canopy-tents.html",
+      "bytes": 13941,
+      "lines": 226,
+      "title": "Aluminum Folding Canopy Tents | WaiKwan",
+      "h1": 0,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "aluminum-folding-tent.html",
+      "bytes": 29651,
+      "lines": 392,
+      "title": "Aluminum Pop Up Canopy Tent | Heavy Duty Pop Up Tent Frames | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "backend/README.md",
+      "bytes": 3182,
+      "lines": 184
+    },
+    {
+      "path": "backend/env.example",
+      "bytes": 266
+    },
+    {
+      "path": "backend/package-lock.json",
+      "bytes": 45895,
+      "lines": 1306
+    },
+    {
+      "path": "backend/package.json",
+      "bytes": 633,
+      "lines": 26
+    },
+    {
+      "path": "backend/server.js",
+      "bytes": 7121,
+      "lines": 181
+    },
+    {
+      "path": "beach-flag-buying-guide.html",
+      "bytes": 15842,
+      "lines": 185,
+      "title": "Beach Flag Buying Guide | Feather Flags, Teardrop Flags, Poles & Bases | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "beach-flag-supplier.html",
+      "bytes": 44031,
+      "lines": 588,
+      "title": "Beach Flag Supplier | Feather & Teardrop Flag OEM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js?v=20260909-2"
+      ]
+    },
+    {
+      "path": "canopy-tent-buying-guide.html",
+      "bytes": 15858,
+      "lines": 185,
+      "title": "Canopy Tent Buying Guide | Frames, Sizes, Printing & Export Packing | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "canopy-tents.html",
+      "bytes": 34782,
+      "lines": 412,
+      "title": "Canopy Tents for Trade Shows & Outdoor Promotions | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "collections/accessories-parts.html",
+      "bytes": 2799,
+      "lines": 31,
+      "title": "Accessories & Replacement Parts Collection | Tent, Flag & Display Parts | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "collections/display-systems.html",
+      "bytes": 3061,
+      "lines": 31,
+      "title": "Display Systems Collection | Backwalls, Counters & Booth Kits | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "collections/flags-poles.html",
+      "bytes": 3160,
+      "lines": 37,
+      "title": "Flags & Poles Collection | Beach Flags, Bases & Hardware | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "collections/light-boxes.html",
+      "bytes": 2978,
+      "lines": 31,
+      "title": "Light Boxes Collection | SEG Fabric & Advertising Light Boxes | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "company-profile.html",
+      "bytes": 18888,
+      "lines": 197,
+      "title": "Company Profile | Guangxi WaiKwan Tent Manufacturing Co., Ltd.",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "contact-us.html",
+      "bytes": 38821,
+      "lines": 503,
+      "title": "Request a Quote | Custom Tents, Flags & Displays | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/customizer.js",
+        "scripts/contact.js?v=20260909-2",
+        "scripts/inquiry-hook.js?v=20260909-2",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "content-upgrade-report.md",
+      "bytes": 2488,
+      "lines": 42
+    },
+    {
+      "path": "custom-canopy-tent-manufacturer.html",
+      "bytes": 71257,
+      "lines": 779,
+      "title": "Custom Canopy Tent Manufacturer in China | OEM Factory",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/share-links.js?v=20260909-2"
+      ]
+    },
+    {
+      "path": "custom-printed-canopy-tents.html",
+      "bytes": 30291,
+      "lines": 355,
+      "title": "Custom Printed Canopy Tents & Sidewalls | Waikwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "custom-printed-tent.html",
+      "bytes": 13351,
+      "lines": 227,
+      "title": "Custom Printed Tent Manufacturer | OEM Event Canopies | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "data/2025伟群牌沙滩旗杆价格10(1).xlsx",
+      "bytes": 23616902
+    },
+    {
+      "path": "data/2025奥动帐篷-快幕秀 拉网 升降台价格表.xlsx",
+      "bytes": 7030742
+    },
+    {
+      "path": "data/伟群帐篷有限公司（毫华铝合金方管40管30管架)(2).xls",
+      "bytes": 25576448
+    },
+    {
+      "path": "data/奥动帐篷产品画册20250925.pdf",
+      "bytes": 55502187
+    },
+    {
+      "path": "data/帐篷架子最新价格.xlsx",
+      "bytes": 24402889
+    },
+    {
+      "path": "data/广西伟群帐篷制造有限公司2025改.pdf",
+      "bytes": 64283933
+    },
+    {
+      "path": "docs/ARCHITECTURE-REVIEW-2026-09-10.md",
+      "bytes": 13982,
+      "lines": 148
+    },
+    {
+      "path": "docs/CURSOR-SEO-PROMPTS.md",
+      "bytes": 9671,
+      "lines": 346
+    },
+    {
+      "path": "docs/GSC-BASELINE-2026-07.md",
+      "bytes": 5504,
+      "lines": 70
+    },
+    {
+      "path": "docs/INQUIRY-OPERATIONS.md",
+      "bytes": 1824,
+      "lines": 33
+    },
+    {
+      "path": "docs/LOCALIZATION_AUDIT.md",
+      "bytes": 7297,
+      "lines": 120
+    },
+    {
+      "path": "docs/SEO-DAILY-CHECK-2026-09-21.md",
+      "bytes": 3609,
+      "lines": 38
+    },
+    {
+      "path": "docs/SEO-OPERATIONS.md",
+      "bytes": 3725,
+      "lines": 91
+    },
+    {
+      "path": "docs/gsc-baseline-template.csv",
+      "bytes": 298
+    },
+    {
+      "path": "docs/international-geo-roadmap.md",
+      "bytes": 1129,
+      "lines": 21
+    },
+    {
+      "path": "dome-type.html",
+      "bytes": 26815,
+      "lines": 387,
+      "title": "Dome Tent Types & Custom Event Structures | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/multilang.js",
+        "scripts/tent-types.js",
+        "scripts/flag-types.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/main.js",
+        "scripts/dome-type.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "event-canopy-tents.html",
+      "bytes": 29630,
+      "lines": 376,
+      "title": "Event Canopy Tents | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "event-tent-and-promotional-display.html",
+      "bytes": 13396,
+      "lines": 227,
+      "title": "Event Tent and Promotional Display Manufacturer | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "faq-artwork-files.html",
+      "bytes": 24428,
+      "lines": 370,
+      "title": "Artwork Files for Printing (AI/PDF) | WaiKwan FAQ",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "faq-color-matching.html",
+      "bytes": 24415,
+      "lines": 369,
+      "title": "Color Matching & Color Difference | WaiKwan FAQ",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "faq-lead-time.html",
+      "bytes": 24307,
+      "lines": 369,
+      "title": "Lead Time (Production Time) | WaiKwan FAQ",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "faq-moq.html",
+      "bytes": 24066,
+      "lines": 367,
+      "title": "MOQ (Minimum Order Quantity) | WaiKwan FAQ",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "faq-samples.html",
+      "bytes": 23400,
+      "lines": 367,
+      "title": "Samples Policy | WaiKwan FAQ",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "faq-shipping.html",
+      "bytes": 25687,
+      "lines": 378,
+      "title": "Shipping Options (Express / Air / Sea) | WaiKwan FAQ",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "faq.html",
+      "bytes": 34634,
+      "lines": 467,
+      "title": "Buyer FAQ | MOQ, Lead Time, Artwork, Color & Shipping | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 625
+    },
+    {
+      "path": "flag-pole-and-base-manufacturer.html",
+      "bytes": 13405,
+      "lines": 227,
+      "title": "Flag Pole and Base Manufacturer | Beach Flag Hardware | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "flag-type.html",
+      "bytes": 23982,
+      "lines": 363,
+      "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/multilang.js",
+        "scripts/flag-types.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/flag-type.js",
+        "scripts/main.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "formspree-autoresponse-template.md",
+      "bytes": 5019,
+      "lines": 205
+    },
+    {
+      "path": "furniture-type.html",
+      "bytes": 26213,
+      "lines": 379,
+      "title": "Outdoor Event Furniture for Tents | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/multilang.js",
+        "scripts/tent-types.js",
+        "scripts/flag-types.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/main.js",
+        "scripts/furniture-type.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "generate_us_companies_excel.py",
+      "bytes": 13546,
+      "lines": 311
+    },
+    {
+      "path": "googlead697dfed14475b1.html",
+      "bytes": 53,
+      "lines": 1,
+      "title": "",
+      "h1": 0,
+      "scripts": []
+    },
+    {
+      "path": "i18n_audit_report.md",
+      "bytes": 3081375,
+      "lines": 27933
+    },
+    {
+      "path": "i18n_audit_summary.json",
+      "bytes": 4316281,
+      "lines": 111562
+    },
+    {
+      "path": "images/boss_wechat.jpg",
+      "bytes": 157285
+    },
+    {
+      "path": "images/boss_whatsapp.jpg",
+      "bytes": 59944
+    },
+    {
+      "path": "images/google-search-logo.png",
+      "bytes": 14259
+    },
+    {
+      "path": "images/hero/2026-shanghai-international-advertising-exhibition-waikwan.webp",
+      "bytes": 1602283
+    },
+    {
+      "path": "images/hero/2026上海国际广告展宣传图.png",
+      "bytes": 1601333
+    },
+    {
+      "path": "images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg",
+      "bytes": 84760
+    },
+    {
+      "path": "images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png",
+      "bytes": 2512940
+    },
+    {
+      "path": "images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png",
+      "bytes": 2660701
+    },
+    {
+      "path": "images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png",
+      "bytes": 2548615
+    },
+    {
+      "path": "images/placeholder.svg",
+      "bytes": 718
+    },
+    {
+      "path": "images/products/accessories/canopy-tent-accessories-and-replacement-parts.png",
+      "bytes": 1534515
+    },
+    {
+      "path": "images/products/accessories/flag-accessories/beach-flag-bases-accessories-hero.png",
+      "bytes": 2169031
+    },
+    {
+      "path": "images/products/accessories/tent-accessories1/camping-tent-accessories-hero.jpg",
+      "bytes": 13988
+    },
+    {
+      "path": "images/products/accessories/tent-accessories1/canopy-tent-feather-flag-connector-ad-t05.jpg",
+      "bytes": 323050
+    },
+    {
+      "path": "images/products/accessories/tent-accessories1/feather-flag-connector-wk-t12-hero.jpg",
+      "bytes": 280355
+    },
+    {
+      "path": "images/products/advertising-arch/advertising-arch-event-entrance-hero.png",
+      "bytes": 349526
+    },
+    {
+      "path": "images/products/custom/table-covers/.gitkeep",
+      "bytes": 0
+    },
+    {
+      "path": "images/products/custom/table-covers/black-custom-logo-table-cover-event-display.jpg",
+      "bytes": 517474
+    },
+    {
+      "path": "images/products/custom/table-covers/custom-printed-table-cover-trade-show-booth.jpg",
+      "bytes": 397191
+    },
+    {
+      "path": "images/products/custom/table-covers/stretch-table-cover-custom-printing.jpg",
+      "bytes": 522778
+    },
+    {
+      "path": "images/products/display-systems/promotion-counter/promotional-counter-display-booth-hero.png",
+      "bytes": 33725
+    },
+    {
+      "path": "images/products/display-systems/promotion-counter/promotional-counter-display-internal-storage-detail.png",
+      "bytes": 37709
+    },
+    {
+      "path": "images/products/display-systems/roll-up-stand/roll-up-banner-stand-trade-show-display-hero.jpg",
+      "bytes": 463593
+    },
+    {
+      "path": "images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png",
+      "bytes": 1940257
+    },
+    {
+      "path": "images/products/displays/A Frame/backdrop-banner-stand-system-trade-show-hero.png",
+      "bytes": 2173387
+    },
+    {
+      "path": "images/products/displays/A Frame/pop-up-a-frame-banner-accessories-details.jpg",
+      "bytes": 134883
+    },
+    {
+      "path": "images/products/displays/A Frame/pop-up-a-frame-banner-outdoor-event-display-hero.jpg",
+      "bytes": 3360288
+    },
+    {
+      "path": "images/products/displays/backdrop-banner-stand-frame-display-system.png",
+      "bytes": 1281974
+    },
+    {
+      "path": "images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png",
+      "bytes": 11354551
+    },
+    {
+      "path": "images/products/displays/front desk/old-pop-up-promotion-counter-installation-guide.png",
+      "bytes": 296110
+    },
+    {
+      "path": "images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.png",
+      "bytes": 11437550
+    },
+    {
+      "path": "images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png",
+      "bytes": 46467
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/20.png",
+      "bytes": 755001
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/21.png",
+      "bytes": 825697
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/22.png",
+      "bytes": 895189
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/23.png",
+      "bytes": 919014
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/Straight Line Tension Fabric Backwall-produced product.jpg",
+      "bytes": 678595
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/WK-IS002hero.png",
+      "bytes": 1064558
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/tesionfacbricdisplacestraightlinehero.png",
+      "bytes": 1074109
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/wk-is001hero.jpg",
+      "bytes": 543904
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/wk-is003hero.jpg",
+      "bytes": 492762
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/wk-is004hero.jpg",
+      "bytes": 249403
+    },
+    {
+      "path": "images/products/displays/tension-fabric-displays/立牌系列hero.png",
+      "bytes": 2096464
+    },
+    {
+      "path": "images/products/flags/accessories/beach-flag-bases-metal-plates-water-bags-accessories-overview.png",
+      "bytes": 11355226
+    },
+    {
+      "path": "images/products/flags/accessories/beach-flag-poles-feather-flag-poles-display.png",
+      "bytes": 10889829
+    },
+    {
+      "path": "images/products/flags/accessories/beach-flag-poles-ground-stakes-cross-bases-hardware-kit.png",
+      "bytes": 11913042
+    },
+    {
+      "path": "images/products/flags/hero/backpack-flags-street-display-flags-hero.png",
+      "bytes": 816339
+    },
+    {
+      "path": "images/products/flags/hero/beach-flag-poles-fiberglass-pole-hero.png",
+      "bytes": 1207766
+    },
+    {
+      "path": "images/products/flags/hero/feather-flag-hero.png",
+      "bytes": 29575
+    },
+    {
+      "path": "images/products/flags/hero/newfeather-flag-hero.png",
+      "bytes": 25867
+    },
+    {
+      "path": "images/products/flags/hero/outdoor-giant-flag-pole-display-hero.png",
+      "bytes": 24020
+    },
+    {
+      "path": "images/products/flags/hero/semicircle-flag-shape-size-guide-hero.png",
+      "bytes": 23707
+    },
+    {
+      "path": "images/products/flags/hero/square-flag-pole-fiberglass-outdoor-display-hero.png",
+      "bytes": 1985798
+    },
+    {
+      "path": "images/products/flags/hero/square-flag-shape-size-guide-hero.png",
+      "bytes": 27383
+    },
+    {
+      "path": "images/products/flags/hero/teardrop-beach-flag-pole-outdoor-display-hero.jpg",
+      "bytes": 951597
+    },
+    {
+      "path": "images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png",
+      "bytes": 12664785
+    },
+    {
+      "path": "images/products/light-box-series/WK-LB-NET-hero.png",
+      "bytes": 919014
+    },
+    {
+      "path": "images/products/light-box-series/aluminum-profile-seg-fabric-light-box-detail.jpg",
+      "bytes": 164550
+    },
+    {
+      "path": "images/products/light-box-series/aluminum-profile-seg-fabric-light-box-hero.jpg",
+      "bytes": 1376064
+    },
+    {
+      "path": "images/products/racegate/O Race Gate/o-shape-inflatable-arch-hero.png",
+      "bytes": 1454333
+    },
+    {
+      "path": "images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png",
+      "bytes": 2169539
+    },
+    {
+      "path": "images/products/racegate/V Race Gate/v-race-gate-event-arch-hero.png",
+      "bytes": 865558
+    },
+    {
+      "path": "images/products/tents/awning/awning-tent-outdoor-event-hero.png",
+      "bytes": 143953
+    },
+    {
+      "path": "images/products/tents/folding30/30mm-folding-canopy-tent-2d-layout.png",
+      "bytes": 79532
+    },
+    {
+      "path": "images/products/tents/folding30/30mm-square-tube-iron-frame-specification.png",
+      "bytes": 124790
+    },
+    {
+      "path": "images/products/tents/folding30/30mm-square-tube-pop-up-canopy-tent-hero.png",
+      "bytes": 1025209
+    },
+    {
+      "path": "images/products/tents/folding30/pop-up-canopy-tent-flags-table-display-hero.png",
+      "bytes": 472856
+    },
+    {
+      "path": "images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory.jpg",
+      "bytes": 443118
+    },
+    {
+      "path": "images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory.jpg",
+      "bytes": 506773
+    },
+    {
+      "path": "images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png",
+      "bytes": 2117194
+    },
+    {
+      "path": "images/products/tents/folding40/40mm-hexagon-aluminum-frame-specification.png",
+      "bytes": 140680
+    },
+    {
+      "path": "images/products/tents/folding40/40mm-pop-up-canopy-tent-2d-layout-hero.png",
+      "bytes": 95287
+    },
+    {
+      "path": "images/products/tents/folding40/printed-canopy-1200.webp",
+      "bytes": 95946
+    },
+    {
+      "path": "images/products/tents/folding40/printed-canopy-640.webp",
+      "bytes": 40378
+    },
+    {
+      "path": "images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png",
+      "bytes": 54135
+    },
+    {
+      "path": "images/products/tents/folding50/50mm-hexagon-aluminum-frame-specification.png",
+      "bytes": 127450
+    },
+    {
+      "path": "images/products/tents/folding50/wk-t50d-50mm-aluminum-3x6m-pop-up-canopy-tent-frame-workshop.jpg",
+      "bytes": 546656
+    },
+    {
+      "path": "images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg",
+      "bytes": 367013
+    },
+    {
+      "path": "images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png",
+      "bytes": 191289
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/主图_005.JPEG",
+      "bytes": 262992
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/主图_006.JPEG",
+      "bytes": 202389
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/主图_007.JPEG",
+      "bytes": 312155
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/详情_003.JPEG",
+      "bytes": 295974
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/详情_004.JPEG",
+      "bytes": 362868
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/详情_005.JPEG",
+      "bytes": 470535
+    },
+    {
+      "path": "images/products/tents/six-sided/圆顶促销台户外促销展示六角折叠桌圆顶展示台广告帐篷架展示架/详情_006.JPEG",
+      "bytes": 309037
+    },
+    {
+      "path": "images/products/tents/star/star-shade-tent-outdoor-event-shelter-hero.png",
+      "bytes": 102527
+    },
+    {
+      "path": "images/products/tents/star/star-shade-tent-poles-base-accessories.png",
+      "bytes": 133440
+    },
+    {
+      "path": "images/products/tents/star/star-shade-tent-type-2-promotional-event-hero.png",
+      "bytes": 192328
+    },
+    {
+      "path": "images/products/tents/waterproof-fire-proof.png",
+      "bytes": 44265
+    },
+    {
+      "path": "images/products/water-filled-a-poster-stand/water-filled-a-board-poster-stand-hero.png",
+      "bytes": 62320
+    },
+    {
+      "path": "images/waikwan_logo_large.png",
+      "bytes": 39753
+    },
+    {
+      "path": "images/waikwan_logo_medium.png",
+      "bytes": 23955
+    },
+    {
+      "path": "images/waikwancompanylogo.png",
+      "bytes": 79544
+    },
+    {
+      "path": "images/websiteflowbackground.png",
+      "bytes": 424470
+    },
+    {
+      "path": "images/weiqun-logo.png",
+      "bytes": 90663334
+    },
+    {
+      "path": "images/伟群logo.pdf",
+      "bytes": 378029
+    },
+    {
+      "path": "images/伟群产品展示大图.png",
+      "bytes": 1157749
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/01.png",
+      "bytes": 1739235
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/02.png",
+      "bytes": 46538
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/03.png",
+      "bytes": 532119
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/04.png",
+      "bytes": 1429323
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/05.png",
+      "bytes": 1704445
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/06.png",
+      "bytes": 1213029
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/07.png",
+      "bytes": 1224965
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/08.png",
+      "bytes": 749238
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/09.png",
+      "bytes": 2379650
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/10.png",
+      "bytes": 693473
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/11.png",
+      "bytes": 391730
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/12.png",
+      "bytes": 1738201
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/13.png",
+      "bytes": 558564
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/14.png",
+      "bytes": 951450
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/15.png",
+      "bytes": 1116046
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/16.png",
+      "bytes": 1896586
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/17.png",
+      "bytes": 1490284
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/18.png",
+      "bytes": 1067036
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/19.png",
+      "bytes": 1259548
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/20.png",
+      "bytes": 755001
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/21.png",
+      "bytes": 825697
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/22.png",
+      "bytes": 895189
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/23.png",
+      "bytes": 919014
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/24.png",
+      "bytes": 493814
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/25.png",
+      "bytes": 746251
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/26.png",
+      "bytes": 727777
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/27.png",
+      "bytes": 2251128
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/28.png",
+      "bytes": 1559268
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/29.png",
+      "bytes": 901499
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/30.png",
+      "bytes": 1111473
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/31.png",
+      "bytes": 1018570
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/32.png",
+      "bytes": 851312
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/33.png",
+      "bytes": 499592
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/34.png",
+      "bytes": 2924905
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/35.png",
+      "bytes": 3075654
+    },
+    {
+      "path": "images/广西伟群帐篷制造有限公司2025allpagepng/36.png",
+      "bytes": 1019447
+    },
+    {
+      "path": "images/快幕秀图片.jpg",
+      "bytes": 143865
+    },
+    {
+      "path": "index-priority.md",
+      "bytes": 4939,
+      "lines": 110
+    },
+    {
+      "path": "index.html",
+      "bytes": 72402,
+      "lines": 906,
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags & Displays | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/products.js",
+        "scripts/flag-types.js",
+        "scripts/main.js?v=20260919-sign-china",
+        "scripts/multilang.js?v=20260919-sign-china",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js?v=20260909-2"
+      ]
+    },
+    {
+      "path": "index.original.html",
+      "bytes": 1821,
+      "lines": 32,
+      "title": "Legacy redirect | WaiKwan",
+      "h1": 0,
+      "scripts": [
+        "scripts/seo.js"
+      ]
+    },
+    {
+      "path": "index.wireframe.html",
+      "bytes": 2118,
+      "lines": 32,
+      "title": "Wireframe redirect | WaiKwan",
+      "h1": 0,
+      "scripts": [
+        "scripts/seo.js"
+      ]
+    },
+    {
+      "path": "inflatable-tent-manufacturer.html",
+      "bytes": 13947,
+      "lines": 232,
+      "title": "Inflatable Tent Manufacturer | Event Spider Tents & Race Gates | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 2895,
+      "lines": 40
+    },
+    {
+      "path": "manufacturing-capabilities.html",
+      "bytes": 16820,
+      "lines": 176,
+      "title": "Manufacturing Capabilities | OEM/ODM Custom Tents, Flags & Displays | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "marketing/canton-fair-backlink-targets.csv",
+      "bytes": 1065
+    },
+    {
+      "path": "marketing/canton-fair-outreach-templates.md",
+      "bytes": 4706,
+      "lines": 95
+    },
+    {
+      "path": "marketing/canton-fair-share-links.md",
+      "bytes": 1490,
+      "lines": 24
+    },
+    {
+      "path": "marketing/product-page-backlink-targets.csv",
+      "bytes": 1724
+    },
+    {
+      "path": "marketing/product-page-outreach-templates.md",
+      "bytes": 3884,
+      "lines": 91
+    },
+    {
+      "path": "monitoring-playbook.md",
+      "bytes": 9523,
+      "lines": 279
+    },
+    {
+      "path": "netlify.toml",
+      "bytes": 233,
+      "lines": 7
+    },
+    {
+      "path": "news/apppexpo-2026-shanghai.html",
+      "bytes": 40331,
+      "lines": 547,
+      "title": "APPPEXPO 2026 Shanghai | Wai Kwan Tent — Beach Flags & Display Hardware",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js",
+        "../scripts/main.js",
+        "../scripts/news-lightbox.js",
+        "../scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "news/beach-flag-base-selection-guide.html",
+      "bytes": 2390,
+      "lines": 30,
+      "title": "Beach Flag Base Selection Guide | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "news/contact-us.html",
+      "bytes": 1958,
+      "lines": 30,
+      "title": "Redirecting…",
+      "h1": 0,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "news/how-to-choose-trade-show-canopy-tent.html",
+      "bytes": 3203,
+      "lines": 38,
+      "title": "How to Choose a Trade Show Canopy Tent | WaiKwan Guide",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-01.jpg",
+      "bytes": 313846
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-02.jpg",
+      "bytes": 304480
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-03.jpg",
+      "bytes": 354733
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-04.jpg",
+      "bytes": 127594
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-05.jpg",
+      "bytes": 339399
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-06.jpg",
+      "bytes": 236300
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-07.jpg",
+      "bytes": 283250
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-08.jpg",
+      "bytes": 357046
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-09.jpg",
+      "bytes": 269622
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg",
+      "bytes": 252810
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-11.jpg",
+      "bytes": 257783
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-12.jpg",
+      "bytes": 298494
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-13.jpg",
+      "bytes": 295476
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-14.jpg",
+      "bytes": 397755
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-15.jpg",
+      "bytes": 279702
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-16.jpg",
+      "bytes": 300655
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-17.jpg",
+      "bytes": 297897
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-18.jpg",
+      "bytes": 274015
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-19.jpg",
+      "bytes": 205147
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-20.jpg",
+      "bytes": 333048
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-21.jpg",
+      "bytes": 348214
+    },
+    {
+      "path": "news/images/APPPEXPO2026/apppexpo-2026-shanghai-22.jpg",
+      "bytes": 310565
+    },
+    {
+      "path": "news/images/APPPEXPO2026/selfie1.jpg",
+      "bytes": 123298
+    },
+    {
+      "path": "news/images/APPPEXPO2026/selfie2.jpg",
+      "bytes": 93373
+    },
+    {
+      "path": "news/images/APPPEXPO2026/selfie3.jpg",
+      "bytes": 219182
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-01.jpg",
+      "bytes": 5344062
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-01.webp",
+      "bytes": 343412
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-02.jpg",
+      "bytes": 4747040
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-02.webp",
+      "bytes": 358278
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-03.jpg",
+      "bytes": 4730603
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-03.webp",
+      "bytes": 342362
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-04.jpg",
+      "bytes": 4923420
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-04.webp",
+      "bytes": 361498
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-05.jpg",
+      "bytes": 3992632
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-05.webp",
+      "bytes": 251294
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-06.jpg",
+      "bytes": 3841170
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-06.webp",
+      "bytes": 226432
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-07.jpg",
+      "bytes": 4541038
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-07.webp",
+      "bytes": 212886
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-08.jpg",
+      "bytes": 5794701
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-08.webp",
+      "bytes": 267242
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-09.jpg",
+      "bytes": 4596025
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-09.webp",
+      "bytes": 335884
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-10.jpg",
+      "bytes": 4451477
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-10.webp",
+      "bytes": 323842
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-11.jpg",
+      "bytes": 423294
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-11.webp",
+      "bytes": 127850
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-12.jpg",
+      "bytes": 4843580
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-12.webp",
+      "bytes": 296502
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-13.jpg",
+      "bytes": 5586111
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-13.webp",
+      "bytes": 172014
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-14.jpg",
+      "bytes": 4001172
+    },
+    {
+      "path": "news/images/Sign China 2026/sign-china-2026-shanghai-14.webp",
+      "bytes": 265326
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-1.jpg",
+      "bytes": 5142163
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-10.jpg",
+      "bytes": 4540575
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-11.jpg",
+      "bytes": 3629673
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-12.jpg",
+      "bytes": 4958701
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-13.jpg",
+      "bytes": 4944848
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-14.jpg",
+      "bytes": 668954
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-2.jpg",
+      "bytes": 5218861
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-3.jpg",
+      "bytes": 5220134
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-4.jpg",
+      "bytes": 5120257
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-5.jpg",
+      "bytes": 4813579
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-6.jpg",
+      "bytes": 4616244
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-7.jpg",
+      "bytes": 4752237
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-8.jpg",
+      "bytes": 5252600
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-9.jpg",
+      "bytes": 4357395
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-1.jpg",
+      "bytes": 5650468
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-10.jpg",
+      "bytes": 4942869
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-2.jpg",
+      "bytes": 5096049
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-3.jpg",
+      "bytes": 4872253
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-4.jpg",
+      "bytes": 4631459
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-5.jpg",
+      "bytes": 3008645
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-6.jpg",
+      "bytes": 5016425
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-7.jpg",
+      "bytes": 4721615
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-8.jpg",
+      "bytes": 4821378
+    },
+    {
+      "path": "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-selfie with client-9.jpg",
+      "bytes": 4503255
+    },
+    {
+      "path": "news/index.html",
+      "bytes": 35720,
+      "lines": 488,
+      "title": "News & Guides | Wai Kwan Tent — OEM Tent & Display Manufacturer",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js",
+        "../scripts/main.js",
+        "../scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "news/seg-light-box-installation-maintenance.html",
+      "bytes": 2890,
+      "lines": 36,
+      "title": "SEG Light Box Installation and Maintenance Guide | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "news/sign-china-2026-shanghai.html",
+      "bytes": 36071,
+      "lines": 270,
+      "title": "SIGN CHINA 2026 Shanghai | New Inflatable Tents, Tables & Chairs | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js",
+        "../scripts/main.js",
+        "../scripts/news-lightbox.js",
+        "../scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "news/the-139th-canton-fair-phase-3.html",
+      "bytes": 45406,
+      "lines": 491,
+      "title": "WaiKwan at the 139th Canton Fair Phase 3 | Custom Tents & Display Systems",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/multilang.js?v=20260909-2",
+        "../scripts/cart.js",
+        "../scripts/main.js?v=20260909-2",
+        "../scripts/news-lightbox.js",
+        "../scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "news/trade-show-display-system-checklist.html",
+      "bytes": 2302,
+      "lines": 30,
+      "title": "Trade Show Display System Procurement Checklist | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "outputs/global-leads-20260910/leads-research.json",
+      "bytes": 12953,
+      "lines": 452
+    },
+    {
+      "path": "outputs/global-leads-20260910/public-contact-fetch.json",
+      "bytes": 7493,
+      "lines": 202
+    },
+    {
+      "path": "outputs/global-leads-20260910/一键BCC写信_50家.html",
+      "bytes": 10398,
+      "lines": 13,
+      "title": "全球客户 BCC 写信",
+      "h1": 1,
+      "scripts": []
+    },
+    {
+      "path": "outputs/global-leads-20260910/全球目标客户50家_公开联系人_2026-09-10.xlsx",
+      "bytes": 17289
+    },
+    {
+      "path": "outputs/global-leads-20260910/全部邮箱_分号.txt",
+      "bytes": 1149,
+      "lines": 1
+    },
+    {
+      "path": "outputs/global-leads-20260910/全部邮箱_逗号.txt",
+      "bytes": 1149,
+      "lines": 1
+    },
+    {
+      "path": "page-sitemap.xml",
+      "bytes": 58352,
+      "lines": 890
+    },
+    {
+      "path": "performance-image-report.md",
+      "bytes": 3223,
+      "lines": 45
+    },
+    {
+      "path": "pop-up-canopy-tent-manufacturer.html",
+      "bytes": 22831,
+      "lines": 319,
+      "title": "Pop Up Canopy Tent Manufacturer | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "pop-up-canopy-tent-supplier.html",
+      "bytes": 13358,
+      "lines": 227,
+      "title": "Pop Up Canopy Tent Supplier | Folding Event Tent OEM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "pop-up-canopy-tent.html",
+      "bytes": 19997,
+      "lines": 324,
+      "title": "Pop Up Canopy Tent Manufacturer | 10x10 Pop Up Canopy Tents | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "pop-up-canopy-tents.html",
+      "bytes": 29405,
+      "lines": 353,
+      "title": "Pop Up Canopy Tents | Commercial Folding Canopies | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "pop-up-display-stands.html",
+      "bytes": 29727,
+      "lines": 430,
+      "title": "Pop Up Display Stands Supplier | Trade Show Display Manufacturer | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "portable-display-buying-guide.html",
+      "bytes": 15775,
+      "lines": 185,
+      "title": "Portable Display Buying Guide | Backdrops, Counters, Light Boxes & Trade Shows | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js"
+      ]
+    },
+    {
+      "path": "portable-display-systems.html",
+      "bytes": 46000,
+      "lines": 607,
+      "title": "Portable Display Systems Manufacturer | OEM Trade Show Kits | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js?v=20260909-2"
+      ]
+    },
+    {
+      "path": "privacy.html",
+      "bytes": 24165,
+      "lines": 368,
+      "title": "Privacy Policy | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "product-center.html",
+      "bytes": 43446,
+      "lines": 579,
+      "title": "Products | Custom Canopy Tents, Beach Flags & Display Hardware | Wai Kwan Tent",
+      "h1": 1,
+      "scripts": [
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/multilang.js?v=20260923-inflatables",
+        "scripts/tent-types.js?v=20260923-inflatables",
+        "scripts/flag-types.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/product-center.js?v=20260923-inflatables",
+        "scripts/main.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "product-detail.html",
+      "bytes": 30359,
+      "lines": 478,
+      "title": "Product | Wai Kwan Tent — OEM Tents, Beach Flags & Display Hardware",
+      "h1": 1,
+      "scripts": [
+        "scripts/product-seo-map.js",
+        "scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/get-quote-footer.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/product-detail.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "product.html",
+      "bytes": 23309,
+      "lines": 366,
+      "title": "Legacy product link — redirect | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/legacy-route.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/products.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/product-page.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "products-accessories.html",
+      "bytes": 16907,
+      "lines": 257,
+      "title": "Tent & Display Accessories for OEM Projects | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js",
+        "scripts/accessories-page.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "products-custom.html",
+      "bytes": 3409,
+      "lines": 69,
+      "title": "Custom Products | OEM & ODM Services",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "products-displays.html",
+      "bytes": 4308,
+      "lines": 75,
+      "title": "Portable Display Systems | Exhibition Displays",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "products-flags.html",
+      "bytes": 4274,
+      "lines": 75,
+      "title": "Custom Advertising Flags | Feather & Teardrop Flags",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "products-furniture.html",
+      "bytes": 3488,
+      "lines": 69,
+      "title": "Outdoor Furniture | Foldable Tables & Chairs",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "products-inflatable.html",
+      "bytes": 4357,
+      "lines": 75,
+      "title": "Inflatable Products | Custom Inflatable Displays",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "products-lightbox.html",
+      "bytes": 4294,
+      "lines": 75,
+      "title": "Lightbox Systems | LED Display Solutions",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "products-tents.html",
+      "bytes": 4001,
+      "lines": 69,
+      "title": "Custom Canopy Tents | Folding Tent Products",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "products.html",
+      "bytes": 3345,
+      "lines": 71,
+      "title": "Redirect to product center | WaiKwan",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "racegate-type.html",
+      "bytes": 3347,
+      "lines": 84,
+      "title": "Race Gate Products | Wai Kwan Tent",
+      "h1": 0,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "reports/final-seo-upgrade-summary.md",
+      "bytes": 4870,
+      "lines": 47
+    },
+    {
+      "path": "reports/live-seo-audit-2026-09-22.json",
+      "bytes": 3992,
+      "lines": 92
+    },
+    {
+      "path": "reports/seo-deep-audit-2026-09-22.md",
+      "bytes": 7517,
+      "lines": 76
+    },
+    {
+      "path": "reports/seo-upgrade-report.json",
+      "bytes": 5991,
+      "lines": 178
+    },
+    {
+      "path": "reports/static-seo-audit-2026-09-22.json",
+      "bytes": 42654,
+      "lines": 1258
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 552,
+      "lines": 19
+    },
+    {
+      "path": "scripts/accessories-page.js",
+      "bytes": 11925,
+      "lines": 315
+    },
+    {
+      "path": "scripts/all-products.js",
+      "bytes": 72328,
+      "lines": 1570
+    },
+    {
+      "path": "scripts/analytics.js",
+      "bytes": 2215,
+      "lines": 43
+    },
+    {
+      "path": "scripts/apply-seo-hardening.py",
+      "bytes": 8908,
+      "lines": 257
+    },
+    {
+      "path": "scripts/audit-live-seo.mjs",
+      "bytes": 1551,
+      "lines": 24
+    },
+    {
+      "path": "scripts/audit-static-seo.py",
+      "bytes": 2937,
+      "lines": 65
+    },
+    {
+      "path": "scripts/bilingual-routing.js",
+      "bytes": 13653,
+      "lines": 381
+    },
+    {
+      "path": "scripts/build-home-static-content.mjs",
+      "bytes": 1911,
+      "lines": 36
+    },
+    {
+      "path": "scripts/build-page-sitemap.py",
+      "bytes": 5086,
+      "lines": 151
+    },
+    {
+      "path": "scripts/build-product-sitemap.mjs",
+      "bytes": 7015,
+      "lines": 220
+    },
+    {
+      "path": "scripts/build-product-sitemap.py",
+      "bytes": 10978,
+      "lines": 325
+    },
+    {
+      "path": "scripts/build-static-translations.mjs",
+      "bytes": 3272,
+      "lines": 66
+    },
+    {
+      "path": "scripts/cart.js",
+      "bytes": 34120,
+      "lines": 803
+    },
+    {
+      "path": "scripts/contact.js",
+      "bytes": 7452,
+      "lines": 189
+    },
+    {
+      "path": "scripts/customizer.js",
+      "bytes": 3545,
+      "lines": 126
+    },
+    {
+      "path": "scripts/dome-type.js",
+      "bytes": 7320,
+      "lines": 194
+    },
+    {
+      "path": "scripts/enhance-static-seo.mjs",
+      "bytes": 20894,
+      "lines": 540
+    },
+    {
+      "path": "scripts/extract_pdf_embedded_images.py",
+      "bytes": 6399,
+      "lines": 198
+    },
+    {
+      "path": "scripts/extract_pdf_images.py",
+      "bytes": 7439,
+      "lines": 226
+    },
+    {
+      "path": "scripts/flag-type.js",
+      "bytes": 21668,
+      "lines": 587
+    },
+    {
+      "path": "scripts/flag-types.js",
+      "bytes": 37917,
+      "lines": 534
+    },
+    {
+      "path": "scripts/furniture-type.js",
+      "bytes": 7247,
+      "lines": 198
+    },
+    {
+      "path": "scripts/get-quote-footer.js",
+      "bytes": 10811,
+      "lines": 214
+    },
+    {
+      "path": "scripts/inquiry-hook.js",
+      "bytes": 2559,
+      "lines": 61
+    },
+    {
+      "path": "scripts/legacy-route.js",
+      "bytes": 1858,
+      "lines": 51
+    },
+    {
+      "path": "scripts/main.js",
+      "bytes": 116285,
+      "lines": 2819
+    },
+    {
+      "path": "scripts/multilang.js",
+      "bytes": 310116,
+      "lines": 3687
+    },
+    {
+      "path": "scripts/news-lightbox.js",
+      "bytes": 1332,
+      "lines": 46
+    },
+    {
+      "path": "scripts/normalize-sku.mjs",
+      "bytes": 2475,
+      "lines": 88
+    },
+    {
+      "path": "scripts/patch-seo-product-sku.py",
+      "bytes": 4279,
+      "lines": 103
+    },
+    {
+      "path": "scripts/product-center.js",
+      "bytes": 51164,
+      "lines": 1257
+    },
+    {
+      "path": "scripts/product-detail.js",
+      "bytes": 52281,
+      "lines": 1101
+    },
+    {
+      "path": "scripts/product-page.js",
+      "bytes": 13563,
+      "lines": 379
+    },
+    {
+      "path": "scripts/product-seo-map.js",
+      "bytes": 51760,
+      "lines": 1
+    },
+    {
+      "path": "scripts/products.js",
+      "bytes": 280726,
+      "lines": 4977
+    },
+    {
+      "path": "scripts/racegate-type.js",
+      "bytes": 9321,
+      "lines": 230
+    },
+    {
+      "path": "scripts/seo-page-sku-map.mjs",
+      "bytes": 3746,
+      "lines": 81
+    },
+    {
+      "path": "scripts/seo-site-upgrade.mjs",
+      "bytes": 52626,
+      "lines": 931
+    },
+    {
+      "path": "scripts/seo.js",
+      "bytes": 14236,
+      "lines": 386
+    },
+    {
+      "path": "scripts/share-links.js",
+      "bytes": 6064,
+      "lines": 160
+    },
+    {
+      "path": "scripts/six-sided-booth.js",
+      "bytes": 970,
+      "lines": 31
+    },
+    {
+      "path": "scripts/sort_images_by_page_map.py",
+      "bytes": 3598,
+      "lines": 120
+    },
+    {
+      "path": "scripts/tent-subcategories.js",
+      "bytes": 1742,
+      "lines": 45
+    },
+    {
+      "path": "scripts/tent-type.js",
+      "bytes": 48758,
+      "lines": 1139
+    },
+    {
+      "path": "scripts/tent-types.js",
+      "bytes": 60387,
+      "lines": 932
+    },
+    {
+      "path": "scripts/tents-details.js",
+      "bytes": 667,
+      "lines": 22
+    },
+    {
+      "path": "scripts/tents.js",
+      "bytes": 1241,
+      "lines": 38
+    },
+    {
+      "path": "scripts/validate-architecture.mjs",
+      "bytes": 6124,
+      "lines": 138
+    },
+    {
+      "path": "scripts/validate-seo.py",
+      "bytes": 6884,
+      "lines": 180
+    },
+    {
+      "path": "scripts/validate-structured-data.mjs",
+      "bytes": 4871,
+      "lines": 142
+    },
+    {
+      "path": "scripts/validate-structured-data.py",
+      "bytes": 4145,
+      "lines": 127
+    },
+    {
+      "path": "seg-light-box-manufacturer.html",
+      "bytes": 32656,
+      "lines": 472,
+      "title": "SEG Light Box Manufacturer in China | Custom Fabric Displays | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js?v=20260909-2"
+      ]
+    },
+    {
+      "path": "seo-index-audit.json",
+      "bytes": 10039,
+      "lines": 217
+    },
+    {
+      "path": "seo/advertising-flag-pole-and-base-wholesale-supplier-b2b.html",
+      "bytes": 31727,
+      "lines": 499,
+      "title": "Advertising Flag Pole and Base Wholesale Supplier | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/aluminum-frame-fabric-display-manufacturer-custom-branding.html",
+      "bytes": 31799,
+      "lines": 499,
+      "title": "Aluminum Frame Fabric Display Manufacturer Custom Branding | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/aluminum-frame-pop-up-tent-factory-direct-export.html",
+      "bytes": 32728,
+      "lines": 503,
+      "title": "Aluminum Frame Pop Up Tent Factory Direct Export | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html",
+      "bytes": 31643,
+      "lines": 499,
+      "title": "Beach Flag Manufacturer Wholesale Feather Teardrop Flags | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/branded-promotional-tent-supplier-b2b-bulk-orders.html",
+      "bytes": 32576,
+      "lines": 503,
+      "title": "Branded Promotional Tent Supplier B2B Bulk Orders | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/collapsible-display-system-wholesale-distributor-pricing.html",
+      "bytes": 33086,
+      "lines": 513,
+      "title": "Collapsible Display System Wholesale | Distributor Pricing | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/commercial-grade-pop-up-canopy-wholesale-supplier.html",
+      "bytes": 32137,
+      "lines": 503,
+      "title": "Commercial Grade Pop Up Canopy Wholesale Supplier | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/custom-beach-flag-kit-supplier-for-agencies.html",
+      "bytes": 31240,
+      "lines": 499,
+      "title": "Custom Beach Flag Kit Supplier for Agencies | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/custom-canopy-tent-factory-for-reseller-programs.html",
+      "bytes": 33617,
+      "lines": 517,
+      "title": "Custom Canopy Tent Factory for Resellers | OEM Programs | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/custom-printed-canopy-tent-manufacturer-oem-china.html",
+      "bytes": 33184,
+      "lines": 503,
+      "title": "Custom Printed Canopy Tent Manufacturer | OEM China | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/custom-printed-feather-flag-supplier-bulk-order-oem.html",
+      "bytes": 31527,
+      "lines": 499,
+      "title": "Custom Printed Feather Flag Supplier Bulk Order OEM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/double-sided-beach-flag-manufacturer-export-quality.html",
+      "bytes": 31718,
+      "lines": 499,
+      "title": "Double Sided Beach Flag Manufacturer Export Quality | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/event-feather-flag-printing-manufacturer-factory-direct.html",
+      "bytes": 31476,
+      "lines": 499,
+      "title": "Event Feather Flag Printing Manufacturer Factory Direct | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/exhibition-tent-frame-and-fabric-manufacturer-odm.html",
+      "bytes": 32301,
+      "lines": 503,
+      "title": "Exhibition Tent Frame and Fabric Manufacturer ODM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/fabric-tension-backwall-supplier-bulk-for-rental-companies.html",
+      "bytes": 31655,
+      "lines": 499,
+      "title": "Fabric Tension Backwall Supplier Bulk for Rental Companies | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/folding-event-tent-supplier-wholesale-moq.html",
+      "bytes": 32830,
+      "lines": 503,
+      "title": "Folding Event Tent Supplier Wholesale MOQ | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/heavy-duty-gazebo-tent-wholesale-manufacturer-europe-shipping.html",
+      "bytes": 32777,
+      "lines": 503,
+      "title": "Heavy Duty Gazebo Tent Wholesale Manufacturer Europe Shipping | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/modular-exhibition-display-hardware-manufacturer-odm.html",
+      "bytes": 31466,
+      "lines": 499,
+      "title": "Modular Exhibition Display Hardware Manufacturer ODM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/outdoor-advertising-tent-oem-supplier-custom-sizes.html",
+      "bytes": 32478,
+      "lines": 503,
+      "title": "Outdoor Advertising Tent OEM Supplier Custom Sizes | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/outdoor-promotional-flag-system-manufacturer-oem.html",
+      "bytes": 31259,
+      "lines": 499,
+      "title": "Outdoor Promotional Flag System Manufacturer OEM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/pop-up-display-stand-wholesale-supplier-for-events.html",
+      "bytes": 31365,
+      "lines": 499,
+      "title": "Pop Up Display Stand Wholesale Supplier for Events | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/portable-backdrop-display-system-supplier-wholesale.html",
+      "bytes": 31384,
+      "lines": 499,
+      "title": "Portable Backdrop Display System Supplier Wholesale | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/portable-trade-show-booth-backdrop-manufacturer-export.html",
+      "bytes": 31601,
+      "lines": 499,
+      "title": "Portable Trade Show Booth Backdrop Manufacturer Export | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/quick-setup-display-frame-supplier-oem-graphics.html",
+      "bytes": 31334,
+      "lines": 499,
+      "title": "Quick Setup Display Frame Supplier OEM Graphics | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/replacement-beach-flag-pole-base-supplier-wholesale.html",
+      "bytes": 31408,
+      "lines": 499,
+      "title": "Replacement Beach Flag Pole Base Supplier Wholesale | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/seg-fabric-light-box-manufacturer-b2b-custom-sizes.html",
+      "bytes": 31518,
+      "lines": 499,
+      "title": "SEG Fabric Light Box Manufacturer B2B Custom Sizes | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/teardrop-flag-hardware-supplier-for-print-shops.html",
+      "bytes": 31334,
+      "lines": 499,
+      "title": "Teardrop Flag Hardware Supplier for Print Shops | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html",
+      "bytes": 31685,
+      "lines": 499,
+      "title": "Tension Fabric Display Wall Manufacturer OEM Trade Show | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/trade-show-canopy-tent-manufacturer-for-distributors.html",
+      "bytes": 34258,
+      "lines": 517,
+      "title": "Trade Show Canopy Tent Manufacturer | Distributor OEM | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "seo/wind-sail-banner-flag-wholesale-supplier-moq.html",
+      "bytes": 31248,
+      "lines": 499,
+      "title": "Wind Sail Banner Flag Wholesale Supplier MOQ | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "../scripts/seo.js",
+        "/scripts/analytics.js",
+        "../scripts/main.js",
+        "../scripts/multilang.js",
+        "../scripts/cart.js"
+      ]
+    },
+    {
+      "path": "serp-copy.md",
+      "bytes": 4665,
+      "lines": 63
+    },
+    {
+      "path": "site-map.html",
+      "bytes": 32627,
+      "lines": 492,
+      "title": "Site Map | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "site.webmanifest",
+      "bytes": 333
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 58352,
+      "lines": 890
+    },
+    {
+      "path": "six-sided-booth.html",
+      "bytes": 22255,
+      "lines": 348,
+      "title": "Six-sided Promotional Booth - Wai Kwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/six-sided-booth.js",
+        "scripts/main.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "styles/cart.css",
+      "bytes": 6662,
+      "lines": 354
+    },
+    {
+      "path": "styles/main.css",
+      "bytes": 714,
+      "lines": 17
+    },
+    {
+      "path": "styles/main.css.monolithic.backup",
+      "bytes": 532
+    },
+    {
+      "path": "styles/modules/about-page.css",
+      "bytes": 5497,
+      "lines": 250
+    },
+    {
+      "path": "styles/modules/buying-guide.css",
+      "bytes": 1344,
+      "lines": 20
+    },
+    {
+      "path": "styles/modules/contact-page.css",
+      "bytes": 25513,
+      "lines": 1245
+    },
+    {
+      "path": "styles/modules/faq-page.css",
+      "bytes": 5619,
+      "lines": 247
+    },
+    {
+      "path": "styles/modules/header-layout.css",
+      "bytes": 31288,
+      "lines": 1431
+    },
+    {
+      "path": "styles/modules/home.css",
+      "bytes": 43964,
+      "lines": 1841
+    },
+    {
+      "path": "styles/modules/layout-misc.css",
+      "bytes": 39165,
+      "lines": 1734
+    },
+    {
+      "path": "styles/modules/modals-overlays.css",
+      "bytes": 17913,
+      "lines": 865
+    },
+    {
+      "path": "styles/modules/pages-catalog.css",
+      "bytes": 30581,
+      "lines": 1560
+    },
+    {
+      "path": "styles/modules/product-cards.css",
+      "bytes": 6592,
+      "lines": 318
+    },
+    {
+      "path": "styles/modules/product-detail.css",
+      "bytes": 5896,
+      "lines": 307
+    },
+    {
+      "path": "styles/modules/quote-customizer.css",
+      "bytes": 963,
+      "lines": 56
+    },
+    {
+      "path": "styles/modules/tokens-base.css",
+      "bytes": 9595,
+      "lines": 313
+    },
+    {
+      "path": "styles/modules/wk-mobile-nav.css",
+      "bytes": 9843,
+      "lines": 455
+    },
+    {
+      "path": "styles/multilang.css",
+      "bytes": 6104,
+      "lines": 307
+    },
+    {
+      "path": "styles/news.css",
+      "bytes": 13335,
+      "lines": 670
+    },
+    {
+      "path": "styles/sign-china.css",
+      "bytes": 2169,
+      "lines": 25
+    },
+    {
+      "path": "tension-fabric-backwall.html",
+      "bytes": 27104,
+      "lines": 392,
+      "title": "Tension Fabric Backwall Supplier | Trade Show Display Manufacturer | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js?v=20260909-2",
+        "scripts/multilang.js?v=20260909-2",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "tent-detail.html",
+      "bytes": 13524,
+      "lines": 250,
+      "title": "Tent details — redirect | WaiKwan",
+      "h1": 0,
+      "scripts": [
+        "scripts/seo.js",
+        "/scripts/legacy-route.js",
+        "/scripts/analytics.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "tent-type.html",
+      "bytes": 31031,
+      "lines": 428,
+      "title": "Types of Canopy Tents | Frame, Size & Printing Guide | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/tent-types.js?v=20260923-inflatables",
+        "scripts/products.js",
+        "scripts/cart.js",
+        "scripts/accessories-page.js",
+        "scripts/tent-type.js?v=20260923-inflatables",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/get-quote-footer.js",
+        "scripts/share-links.js"
+      ]
+    },
+    {
+      "path": "terms.html",
+      "bytes": 24068,
+      "lines": 367,
+      "title": "Terms of Use | WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "scripts/seo.js",
+        "/scripts/analytics.js",
+        "scripts/main.js",
+        "scripts/multilang.js",
+        "scripts/cart.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "test_logo.html",
+      "bytes": 5792,
+      "lines": 126,
+      "title": "Logo Test - WaiKwan Company",
+      "h1": 1,
+      "scripts": [
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "test_stats.html",
+      "bytes": 3950,
+      "lines": 106,
+      "title": "统计标签测试",
+      "h1": 1,
+      "scripts": [
+        "scripts/seo.js",
+        "scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "tools/build-zh-full.ps1",
+      "bytes": 11526,
+      "lines": 233
+    },
+    {
+      "path": "tools/gen-zh-phase1.ps1",
+      "bytes": 1871,
+      "lines": 52
+    },
+    {
+      "path": "tools/i18n_audit.py",
+      "bytes": 8346,
+      "lines": 304
+    },
+    {
+      "path": "tools/i18n_audit_repo.ps1",
+      "bytes": 18192,
+      "lines": 515
+    },
+    {
+      "path": "tools/i18n_audit_repo.py",
+      "bytes": 25783,
+      "lines": 770
+    },
+    {
+      "path": "tools/i18n_audit_repo_run.ps1",
+      "bytes": 15343,
+      "lines": 378
+    },
+    {
+      "path": "tools/i18n_compare_zh_en.ps1",
+      "bytes": 909,
+      "lines": 20
+    },
+    {
+      "path": "tools/zh-mirrored-en-snippet.txt",
+      "bytes": 3366,
+      "lines": 66
+    },
+    {
+      "path": "tools/zh-seo-meta.json",
+      "bytes": 8263,
+      "lines": 150
+    },
+    {
+      "path": "tools/zh-term-map.json",
+      "bytes": 1316,
+      "lines": 30
+    },
+    {
+      "path": "tools/zh-title-suffix.txt",
+      "bytes": 26,
+      "lines": 1
+    },
+    {
+      "path": "vercel.json",
+      "bytes": 742,
+      "lines": 30
+    },
+    {
+      "path": "videos/README.md",
+      "bytes": 1516,
+      "lines": 51
+    },
+    {
+      "path": "zh/10x10-pop-up-canopy-tent.html",
+      "bytes": 34477,
+      "lines": 440,
+      "title": "10×10 快开广告帐篷｜3×3 m 定制篷房与出口｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/about-us.html",
+      "bytes": 28114,
+      "lines": 380,
+      "title": "关于伟群帐篷｜定制帐篷、沙滩旗与展示系统制造商",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/all-products.html",
+      "bytes": 36159,
+      "lines": 549,
+      "title": "全部产品｜搜索帐篷、沙滩旗与展示配件｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/accessories-page.js",
+        "/scripts/tents-details.js",
+        "/scripts/tent-types.js",
+        "/scripts/all-products.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
+        "/scripts/contact.js",
+        "/scripts/inquiry-hook.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/aluminum-folding-canopy-tents.html",
+      "bytes": 14291,
+      "lines": 226,
+      "title": "铝合金折叠广告帐篷｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/aluminum-folding-tent.html",
+      "bytes": 29263,
+      "lines": 392,
+      "title": "铝合金快开广告帐篷｜重型折叠帐篷框架｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/beach-flag-supplier.html",
+      "bytes": 33275,
+      "lines": 465,
+      "title": "沙滩旗供应商｜羽毛旗、水滴旗与旗杆底座源头工厂｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/canopy-tents.html",
+      "bytes": 36696,
+      "lines": 438,
+      "title": "商业广告帐篷总览｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/collections/accessories-parts.html",
+      "bytes": 2659,
+      "lines": 31,
+      "title": "配件与替换零件集合页｜帐篷、旗帜与展示备件｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/collections/display-systems.html",
+      "bytes": 2987,
+      "lines": 31,
+      "title": "展示系统集合页｜背景墙、前台与展位套装｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/collections/flags-poles.html",
+      "bytes": 2994,
+      "lines": 32,
+      "title": "旗帜与旗杆集合页｜沙滩旗、底座与五金｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/collections/light-boxes.html",
+      "bytes": 2787,
+      "lines": 31,
+      "title": "灯箱集合页｜SEG 拉布灯箱与广告灯箱｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/contact-us.html",
+      "bytes": 38224,
+      "lines": 530,
+      "title": "联系我们 | 广西伟群帐篷 WaiKwan",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js",
+        "/scripts/customizer.js",
+        "/scripts/contact.js",
+        "/scripts/inquiry-hook.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/custom-canopy-tent-manufacturer.html",
+      "bytes": 60770,
+      "lines": 678,
+      "title": "帐篷生产厂家｜定制广告帐篷 OEM/ODM 源头工厂｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/custom-printed-canopy-tents.html",
+      "bytes": 25379,
+      "lines": 323,
+      "title": "定制印刷广告帐篷｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/dome-type.html",
+      "bytes": 26058,
+      "lines": 381,
+      "title": "球形篷类型与定制活动结构 | 伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/tent-types.js",
+        "/scripts/flag-types.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/main.js",
+        "/scripts/dome-type.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/event-canopy-tents.html",
+      "bytes": 29488,
+      "lines": 366,
+      "title": "活动用广告帐篷｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq-artwork-files.html",
+      "bytes": 24650,
+      "lines": 370,
+      "title": "稿件与文件要求｜印刷与对稿｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq-color-matching.html",
+      "bytes": 24675,
+      "lines": 369,
+      "title": "色彩与打样对色｜品牌色还原｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq-lead-time.html",
+      "bytes": 24484,
+      "lines": 369,
+      "title": "交期与排产｜订单周期｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq-moq.html",
+      "bytes": 24345,
+      "lines": 367,
+      "title": "起订量 MOQ｜批量与样品政策｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq-samples.html",
+      "bytes": 23717,
+      "lines": 367,
+      "title": "样品政策｜打样与确认｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq-shipping.html",
+      "bytes": 25642,
+      "lines": 378,
+      "title": "物流与出货｜包装与运输｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/faq.html",
+      "bytes": 29202,
+      "lines": 397,
+      "title": "常见问题｜采购、定制与交付｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/flag-type.html",
+      "bytes": 23373,
+      "lines": 367,
+      "title": "旗帜类型｜羽毛旗刀旗矩形旗｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/flag-types.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/flag-type.js",
+        "/scripts/main.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/furniture-type.html",
+      "bytes": 25556,
+      "lines": 373,
+      "title": "户外活动家具与帐篷配套用品 | 伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/tent-types.js",
+        "/scripts/flag-types.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/main.js",
+        "/scripts/furniture-type.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/index.html",
+      "bytes": 62961,
+      "lines": 785,
+      "title": "定制广告帐篷与展示系统制造商｜广西伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/products.js",
+        "/scripts/flag-types.js",
+        "/scripts/main.js?v=20260919-sign-china",
+        "/scripts/multilang.js?v=20260919-sign-china",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/news/apppexpo-2026-shanghai.html",
+      "bytes": 40934,
+      "lines": 558,
+      "title": "APPPEXPO 2026 上海｜展会动态｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/main.js",
+        "/scripts/news-lightbox.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/news/beach-flag-base-selection-guide.html",
+      "bytes": 2342,
+      "lines": 30,
+      "title": "沙滩旗底座选择指南｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/news/contact-us.html",
+      "bytes": 1984,
+      "lines": 30,
+      "title": "正在跳转…",
+      "h1": 0,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/news/how-to-choose-trade-show-canopy-tent.html",
+      "bytes": 3039,
+      "lines": 38,
+      "title": "如何选择展会广告帐篷｜伟群采购指南",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/news/index.html",
+      "bytes": 34026,
+      "lines": 471,
+      "title": "新闻与采购指南｜展会、产品与采购知识｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/main.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/news/seg-light-box-installation-maintenance.html",
+      "bytes": 2709,
+      "lines": 36,
+      "title": "SEG 灯箱安装与维护指南｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/news/sign-china-2026-shanghai.html",
+      "bytes": 36425,
+      "lines": 281,
+      "title": "上海国际广告展 SIGN CHINA 2026｜充气新品与现场照片｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/main.js",
+        "/scripts/news-lightbox.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/news/trade-show-display-system-checklist.html",
+      "bytes": 2218,
+      "lines": 30,
+      "title": "展会展示系统采购清单｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/pop-up-canopy-tent-manufacturer.html",
+      "bytes": 22992,
+      "lines": 319,
+      "title": "快开广告帐篷制造商｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/pop-up-canopy-tent.html",
+      "bytes": 12790,
+      "lines": 213,
+      "title": "折叠广告帐篷制造商｜10x10 快开帐篷与来图定制｜伟群",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/pop-up-canopy-tents.html",
+      "bytes": 31068,
+      "lines": 379,
+      "title": "快开广告篷（折叠）｜商业用途｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/pop-up-display-stands.html",
+      "bytes": 29857,
+      "lines": 430,
+      "title": "快展展架｜弹展背景与便携展示｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/portable-display-systems.html",
+      "bytes": 35123,
+      "lines": 484,
+      "title": "便携式展示系统｜快幕秀与展架背景墙｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/privacy.html",
+      "bytes": 24468,
+      "lines": 368,
+      "title": "隐私政策｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/product-center.html",
+      "bytes": 44264,
+      "lines": 622,
+      "title": "产品中心｜定制帐篷、沙滩旗与展示配件｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js?v=20260923-inflatables",
+        "/scripts/tent-types.js?v=20260923-inflatables",
+        "/scripts/flag-types.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/product-center.js?v=20260923-inflatables",
+        "/scripts/main.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/product-detail.html",
+      "bytes": 29087,
+      "lines": 471,
+      "title": "产品详情｜伟群帐篷 OEM/ODM 帐篷与展示系统",
+      "h1": 1,
+      "scripts": [
+        "/scripts/product-seo-map.js",
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/product-detail.js"
+      ]
+    },
+    {
+      "path": "zh/product.html",
+      "bytes": 574,
+      "lines": 15,
+      "title": "旧产品链接跳转｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/legacy-route.js"
+      ]
+    },
+    {
+      "path": "zh/products-accessories.html",
+      "bytes": 16217,
+      "lines": 251,
+      "title": "帐篷与展示配件 | 伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/accessories-page.js"
+      ]
+    },
+    {
+      "path": "zh/products-custom.html",
+      "bytes": 3527,
+      "lines": 69,
+      "title": "定制项目｜特殊结构与 OEM 方案｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/products-displays.html",
+      "bytes": 3506,
+      "lines": 69,
+      "title": "展示系统｜快幕秀与展架｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/products-flags.html",
+      "bytes": 3498,
+      "lines": 69,
+      "title": "旗帜产品｜沙滩旗与广告旗系统｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/products-furniture.html",
+      "bytes": 3542,
+      "lines": 69,
+      "title": "展示家具｜促销台与配套展具｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/products-inflatable.html",
+      "bytes": 3533,
+      "lines": 69,
+      "title": "充气展示｜充气拱门与展示单元｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/products-lightbox.html",
+      "bytes": 3516,
+      "lines": 69,
+      "title": "灯箱产品｜SEG 与背光展示｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/products.html",
+      "bytes": 3517,
+      "lines": 71,
+      "title": "产品总览｜帐篷旗帜与展示系统｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/get-quote-footer.js",
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/racegate-type.html",
+      "bytes": 3717,
+      "lines": 84,
+      "title": "赛事拱门产品 | 伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/analytics.js"
+      ]
+    },
+    {
+      "path": "zh/seg-light-box-manufacturer.html",
+      "bytes": 28743,
+      "lines": 412,
+      "title": "SEG卡布灯箱制造商｜背光卡布灯箱定制｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/seo/advertising-flag-pole-and-base-wholesale-supplier-b2b.html",
+      "bytes": 31496,
+      "lines": 500,
+      "title": "广告 Flag Pole and Base 批发 供应商 B2B | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/aluminum-frame-fabric-display-manufacturer-custom-branding.html",
+      "bytes": 31525,
+      "lines": 500,
+      "title": "铝架 Fabric Display 制造商 Custom Branding | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/aluminum-frame-pop-up-tent-factory-direct-export.html",
+      "bytes": 32297,
+      "lines": 504,
+      "title": "铝架 折叠 Tent 工厂直供 出口 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html",
+      "bytes": 31442,
+      "lines": 500,
+      "title": "沙滩旗 制造商 批发 Feather 水滴旗 Flags | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/branded-promotional-tent-supplier-b2b-bulk-orders.html",
+      "bytes": 32241,
+      "lines": 504,
+      "title": "Branded Promotional Tent 供应商 B2B Bulk Orders | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/collapsible-display-system-wholesale-distributor-pricing.html",
+      "bytes": 31333,
+      "lines": 500,
+      "title": "Collapsible 展示系统 批发 Distributor Pricing | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/commercial-grade-pop-up-canopy-wholesale-supplier.html",
+      "bytes": 31788,
+      "lines": 504,
+      "title": "Commercial Grade 折叠 Canopy 批发 供应商 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/custom-beach-flag-kit-supplier-for-agencies.html",
+      "bytes": 31085,
+      "lines": 500,
+      "title": "Custom 沙滩旗 Kit 供应商 for Agencies | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/custom-canopy-tent-factory-for-reseller-programs.html",
+      "bytes": 31729,
+      "lines": 504,
+      "title": "定制广告帐篷 Factory for Reseller Programs | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/custom-printed-canopy-tent-manufacturer-oem-china.html",
+      "bytes": 32732,
+      "lines": 504,
+      "title": "定制印刷 广告帐篷 制造商 OEM China | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/custom-printed-feather-flag-supplier-bulk-order-oem.html",
+      "bytes": 31326,
+      "lines": 500,
+      "title": "定制印刷 羽毛旗 供应商 Bulk Order OEM | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/double-sided-beach-flag-manufacturer-export-quality.html",
+      "bytes": 31531,
+      "lines": 500,
+      "title": "Double Sided 沙滩旗 制造商 出口 Quality | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/event-feather-flag-printing-manufacturer-factory-direct.html",
+      "bytes": 31238,
+      "lines": 500,
+      "title": "Event 羽毛旗 Printing 制造商 工厂直供 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/exhibition-tent-frame-and-fabric-manufacturer-odm.html",
+      "bytes": 31882,
+      "lines": 504,
+      "title": "展览 Tent Frame and Fabric 制造商 ODM | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/fabric-tension-backwall-supplier-bulk-for-rental-companies.html",
+      "bytes": 31534,
+      "lines": 500,
+      "title": "Fabric Tension 背景墙 供应商 Bulk for Rental Companies | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/folding-event-tent-supplier-wholesale-moq.html",
+      "bytes": 32474,
+      "lines": 504,
+      "title": "Folding Event Tent 供应商 批发 MOQ | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/heavy-duty-gazebo-tent-wholesale-manufacturer-europe-shipping.html",
+      "bytes": 32400,
+      "lines": 504,
+      "title": "Heavy Duty Gazebo Tent 批发 制造商 Europe Shipping | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/modular-exhibition-display-hardware-manufacturer-odm.html",
+      "bytes": 31250,
+      "lines": 500,
+      "title": "Modular 展览 Display Hardware 制造商 ODM | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/outdoor-advertising-tent-oem-supplier-custom-sizes.html",
+      "bytes": 32085,
+      "lines": 504,
+      "title": "户外 广告 Tent OEM 供应商 定制尺寸 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/outdoor-promotional-flag-system-manufacturer-oem.html",
+      "bytes": 31069,
+      "lines": 500,
+      "title": "户外 Promotional Flag System 制造商 OEM | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/pop-up-display-stand-wholesale-supplier-for-events.html",
+      "bytes": 31182,
+      "lines": 500,
+      "title": "折叠 Display Stand 批发 供应商 for Events | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/portable-backdrop-display-system-supplier-wholesale.html",
+      "bytes": 31197,
+      "lines": 500,
+      "title": "Portable Backdrop 展示系统 供应商 批发 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/portable-trade-show-booth-backdrop-manufacturer-export.html",
+      "bytes": 31389,
+      "lines": 500,
+      "title": "Portable 展会 Booth Backdrop 制造商 出口 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/quick-setup-display-frame-supplier-oem-graphics.html",
+      "bytes": 31193,
+      "lines": 500,
+      "title": "Quick Setup Display Frame 供应商 OEM Graphics | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/replacement-beach-flag-pole-base-supplier-wholesale.html",
+      "bytes": 31231,
+      "lines": 500,
+      "title": "Replacement 沙滩旗 Pole Base 供应商 批发 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/seg-fabric-light-box-manufacturer-b2b-custom-sizes.html",
+      "bytes": 31264,
+      "lines": 500,
+      "title": "SEG卡布灯箱 制造商 B2B 定制尺寸 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/teardrop-flag-hardware-supplier-for-print-shops.html",
+      "bytes": 31207,
+      "lines": 500,
+      "title": "水滴旗 Flag Hardware 供应商 for Print Shops | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/tension-fabric-display-wall-manufacturer-oem-trade-show.html",
+      "bytes": 31367,
+      "lines": 500,
+      "title": "张拉布 Display Wall 制造商 OEM 展会 | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/trade-show-canopy-tent-manufacturer-for-distributors.html",
+      "bytes": 32347,
+      "lines": 504,
+      "title": "展会 广告帐篷 制造商 for Distributors | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/seo/wind-sail-banner-flag-wholesale-supplier-moq.html",
+      "bytes": 31044,
+      "lines": 500,
+      "title": "Wind Sail Banner Flag 批发 供应商 MOQ | 伟群帐篷（WaiKwan）",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js"
+      ]
+    },
+    {
+      "path": "zh/site-map.html",
+      "bytes": 31701,
+      "lines": 473,
+      "title": "网站地图｜页面导航｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/six-sided-booth.html",
+      "bytes": 22557,
+      "lines": 348,
+      "title": "六边形展位｜特型展示空间｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/six-sided-booth.js",
+        "/scripts/main.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/tension-fabric-backwall.html",
+      "bytes": 27140,
+      "lines": 392,
+      "title": "张拉布背景墙｜快幕秀展墙与画面更换｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/tent-detail.html",
+      "bytes": 612,
+      "lines": 15,
+      "title": "旧帐篷详情链接跳转｜伟群帐篷",
+      "h1": 0,
+      "scripts": [
+        "/scripts/legacy-route.js"
+      ]
+    },
+    {
+      "path": "zh/tent-type.html",
+      "bytes": 23281,
+      "lines": 356,
+      "title": "帐篷型号与系列｜框架与规格入口｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/tent-types.js?v=20260923-inflatables",
+        "/scripts/products.js",
+        "/scripts/cart.js",
+        "/scripts/accessories-page.js",
+        "/scripts/tent-type.js?v=20260923-inflatables",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "zh/terms.html",
+      "bytes": 24289,
+      "lines": 367,
+      "title": "服务条款｜伟群帐篷",
+      "h1": 1,
+      "scripts": [
+        "/scripts/bilingual-routing.js",
+        "/scripts/seo.js",
+        "/scripts/analytics.js",
+        "/scripts/main.js",
+        "/scripts/multilang.js",
+        "/scripts/cart.js",
+        "/scripts/get-quote-footer.js"
+      ]
+    },
+    {
+      "path": "广西伟群帐篷制造有限公司2025改.pdf",
+      "bytes": 64619043
+    },
+    {
+      "path": "美国公司名单使用说明_README.md",
+      "bytes": 5114,
+      "lines": 165
+    },
+    {
+      "path": "美国帐篷快幕秀沙滩旗公司名单_US_Tent_Canopy_Flag_Companies.xlsx",
+      "bytes": 7856
+    },
+    {
+      "path": "联系模板_Contact_Template.md",
+      "bytes": 7353,
+      "lines": 175
+    }
+  ]
+}

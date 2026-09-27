@@ -2369,7 +2369,7 @@ class MultiLanguageSystem {
                 landing_canopy_faq_art_d: 'AI/PDF guidelines, bleed, fonts, and color profiles.',
                 landing_canopy_faq_view_all: 'View all FAQs',
 
-                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer | OEM & Wholesale | WaiKwan',
+                page_title_canopy_b2b: 'Custom Canopy Tent Manufacturer in China | OEM Factory',
                 landing_canopy_b2b_h1: 'Custom Canopy Tent Manufacturer for OEM and Wholesale Programs',
                 landing_canopy_b2b_lead_html:
                     'WaiKwan manufactures <strong>custom canopy tents</strong> and <strong>OEM/ODM pop up tent programs</strong> for distributors, event agencies, resellers and brand teams. Send size, frame grade, quantity, artwork and destination to confirm MOQ, lead time, printing options, sidewalls, accessories and export-ready packing.',

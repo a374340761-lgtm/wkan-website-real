@@ -50,6 +50,15 @@ Recommended comparison windows:
 
 ## GSC Filters
 
+### Raw and Clean Views
+
+Keep two versions of every weekly and 28-day comparison:
+
+- **Raw view:** no query exclusion, retained as the official Search Console total.
+- **Clean view:** exclude the exact query `b2b custom canopy manufacturers 16x16 inch specifications` before comparing clicks, impressions, CTR, position, country, device or landing page.
+
+The excluded phrase has repeatedly generated high impressions and zero clicks and does not describe a supported tent size. Do not add `16x16 inch` copy or build a landing page for it. If its pattern changes, inspect query + page + country + device separately before changing website content.
+
 ### High Impressions, Low Clicks
 
 Use weekly:

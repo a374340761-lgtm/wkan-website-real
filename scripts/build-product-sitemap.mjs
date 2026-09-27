@@ -81,7 +81,7 @@ function primaryImageForSeo(p) {
     return rootAssetAbs('images/products/accessories/canopy-tent-accessories-and-replacement-parts.png');
   }
   const raw = p.image || (Array.isArray(p.images) && p.images[0]) || '';
-  return raw ? rootAssetAbs(raw) : rootAssetAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png');
+  return raw ? rootAssetAbs(raw) : rootAssetAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg');
 }
 
 function enTitle(p) {

@@ -400,7 +400,7 @@ function getHomeHeroSlides() {
             secondaryHref: 'all-products.html'
         },
         {
-            image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png',
+            image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg',
             keyPrefix: 'home_hero_1',
             imageAlt: 'Custom printed 10x10 pop-up canopy tent for outdoor event booth',
             secondaryHref: 'product-center.html?cat=tents'
@@ -601,7 +601,7 @@ function renderHomeCategoryGrid() {
     // and the product.category IDs present in scripts/products.js.
     // Order matches main buyer journeys: tents → flags → displays → light boxes → accessories
     const categories = [
-        { id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png', imgAlt: 'Custom printed pop-up canopy tent for outdoor events', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
+        { id: 'tents', img: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg', imgAlt: 'Custom printed pop-up canopy tent for outdoor events', titleKey: 'home_cat_tents_title', descKey: 'home_cat_tents_desc' },
         { id: 'flags', img: 'images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png', imgAlt: 'Custom beach flags with feather and teardrop pole systems', titleKey: 'home_cat_flags_title', descKey: 'home_cat_flags_desc' },
         { id: 'displays', img: 'images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg?v=20260123', imgAlt: 'Portable fabric display wall and light box system', titleKey: 'home_cat_displays_title', descKey: 'home_cat_displays_desc' },
         { id: 'lightbox', img: 'news/images/APPPEXPO2026/apppexpo-2026-shanghai-10.jpg', imgAlt: 'SEG light box display booth at exhibition', titleKey: 'home_cat_lightbox_title', descKey: 'home_cat_lightbox_desc' },

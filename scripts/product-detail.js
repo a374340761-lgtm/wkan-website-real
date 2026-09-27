@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
             name: name,
             url: canonicalProductUrl,
             description: (shortText || description || name).substring(0, 500),
-            image: productImageAbs || toAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png'),
+            image: productImageAbs || toAbs('images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg'),
             sku: String(product.sku || product.id || ''),
             brand: { '@type': 'Brand', name: 'WaiKwan' },
             manufacturer: {
@@ -773,7 +773,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Catalog reference fallback uses a committed furniture hero when brochure scan exports are unavailable.
-        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png');
+        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg');
         const isFurnitureTableChairCat = product
             && String(product.category) === 'furniture'
             && String(product.subcategory) === 'table-chair-stool-toilet';

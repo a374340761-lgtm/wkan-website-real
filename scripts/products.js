@@ -203,7 +203,7 @@ window.HERO_SLIDES = [
   },
   {
     id: 'tents',
-    image: '/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png',
+    image: '/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg',
     alt: 'Custom Canopy Tent',
     kickerZh: '畅销产品 · 户外帐篷',
     kickerEn: 'Top Seller · Event Tent',
@@ -472,14 +472,14 @@ class ProductManager {
                     description: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
                     descriptionEn: 'Tension Fabric Counter is an accessory product for display systems. Features the same tension fabric + quick-setup structure, but designed for reception counters, desks and booth furniture rather than backdrops. Available in illuminated and non-illuminated versions with multiple packaging protection. Enhanced visual appeal at night.',
                     descriptionZh: '张拉布前台（Tension Fabric Counter）是展示系统的配套产品。采用同样的张拉布+快装结构，但用途是前台/接待桌/展位家具，不作为"背景墙"。支持发光与不发光两种模式，多重包装保护，夜间效果更佳。',
-                    image: encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
+                    image: encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.jpg'),
                     images: [
-                        encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
-                        encodeURI('images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.png')
+                        encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.jpg'),
+                        encodeURI('images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.jpg')
                     ],
                     gallery: [
-                        encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.png'),
-                        encodeURI('images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.png')
+                        encodeURI('images/products/displays/front desk/ellipse-shape-promotion-counter-frame-without-fabric.jpg'),
+                        encodeURI('images/products/displays/front desk/rectangle-front-desk-display-frame-without-fabric.jpg')
                     ],
                     variantTables: [
                         {
@@ -2472,7 +2472,7 @@ class ProductManager {
                 description: '同一系列对折桌，多种台面尺寸可选；可选型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244。便携式对折收纳，适用于展会、活动与户外使用。',
                 descriptionEn: 'One series of bi-fold (fold-in-half) tables in multiple sizes. Models: WK-Z122, WK-Z153, WK-Z183, and WK-Z244. Portable folding for events, exhibitions and outdoor use.',
                 descriptionZh: '同一系列对折桌，多种台面尺寸可选；可选型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244。便携式对折收纳，适用于展会、活动与户外使用。',
-                image: 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png',
+                image: 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg',
                 specs: ['可选型号：WK-Z122、WK-Z153、WK-Z183、WK-Z244', '对折收纳', '便携', '适用活动/户外'],
                 specsEn: ['Models: WK-Z122, WK-Z153, WK-Z183, WK-Z244', 'Folds in half', 'Portable', 'For events/outdoor'],
                 keywords: ['furniture', 'table', 'folding table', '对折桌', 'WK-Z122', 'WK-Z153', 'WK-Z183', 'WK-Z244']
@@ -3976,8 +3976,8 @@ getProductIcon(category) {
         row.className = 'product-row product-row--grouped-hub';
         const isFurniture = product && product._hubKind === 'furniture';
         const rel = isFurniture
-            ? 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png'
-            : 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+            ? 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg'
+            : 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg';
         let imageUrl = wkRootAssetUrl(rel);
         const path = isFurniture ? '/furniture-type.html?type=table-chair-stool-toilet' : '/dome-type.html';
         const typeHref = wkLocalizedInternalLink(path);

@@ -86,7 +86,7 @@
                 nameEn: 'Custom Solutions',
                 model: 'WK-CUSTOM',
                 tags: 'OEM, ODM, customization',
-                image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png'
+                image: 'images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg'
             }
         ];
     }
@@ -817,7 +817,7 @@
     const AP_CATALOG_GROUP_SUB_FURNITURE = 'table-chair-stool-toilet';
     const AP_CATALOG_GROUP_SUB_DOME = 'dome-3-folders';
     const AP_CATALOG_GROUP_FURNITURE_HERO_REL =
-        'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+        'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg';
     const AP_CATALOG_GROUP_DOME_HERO_REL = 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png';
 
     function getApProductSubSlug(p) {

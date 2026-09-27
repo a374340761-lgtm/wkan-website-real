@@ -3,7 +3,7 @@
 
   /** Root-absolute URL so brochure loads on `/zh/...` (relative `images/` would hit `/zh/images/...`). */
   function brochureAssetUrl() {
-    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg';
     if (typeof window.wkRootAssetUrl === 'function') {
       try {
         return window.wkRootAssetUrl(rel);

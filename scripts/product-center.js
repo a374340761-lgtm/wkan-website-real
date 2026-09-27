@@ -479,7 +479,7 @@
 
   const PC_GROUPED_HUB_SUBS = new Set(['dome-3-folders', 'table-chair-stool-toilet']);
   const PC_GROUPED_FURNITURE_HERO_REL =
-    'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+    'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg';
   const PC_GROUPED_DOME_HERO_REL = 'images/products/tents/six-sided/six-sided-canopy-tent-event-booth-hero.png';
 
   function normalizePcSubSlug(catLower, rawSub) {

@@ -127,7 +127,7 @@ function getDescription(html) {
 
 function getOgImage(html) {
   const match = html.match(/<meta\b[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["'][^>]*>/i);
-  return match ? match[1].trim() : `${ORIGIN}/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png`;
+  return match ? match[1].trim() : `${ORIGIN}/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg`;
 }
 
 function getH1(html) {
@@ -197,7 +197,7 @@ function localBusinessSchema(canonical) {
     alternateName: ['WaiKwan', 'WaiKwan Tent'],
     url: ORIGIN + '/',
     logo: `${ORIGIN}/images/waikwancompanylogo.png`,
-    image: `${ORIGIN}/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png`,
+    image: `${ORIGIN}/images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg`,
     description:
       'OEM/ODM manufacturer in China for custom canopy tents, pop-up canopy tents, beach flags, flag poles, portable display systems, light boxes and event display products.',
     email: 'yishu@waikwantent.com',

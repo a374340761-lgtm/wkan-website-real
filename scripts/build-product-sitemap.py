@@ -185,7 +185,7 @@ def primary_image(p: dict) -> str:
     ):
         return root_asset_abs("images/products/accessories/canopy-tent-accessories-and-replacement-parts.png")
     raw = p["image"] or p["firstImage"]
-    return root_asset_abs(raw) if raw else root_asset_abs("images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.png")
+    return root_asset_abs(raw) if raw else root_asset_abs("images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg")
 
 
 def canonical_sku(p: dict) -> str:

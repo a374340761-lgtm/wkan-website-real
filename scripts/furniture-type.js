@@ -16,7 +16,7 @@
 
   /** Hero: clean product shot (left column). Brochure card uses catalog p.17 scan via brochureAssetUrl(). */
   function furnitureHeroAssetUrl() {
-    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.png';
+    const rel = 'images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg';
     if (typeof window.wkRootAssetUrl === 'function') {
       try {
         return window.wkRootAssetUrl(rel);

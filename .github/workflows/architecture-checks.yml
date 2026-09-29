@@ -31,5 +31,6 @@ jobs:
         run: |
           node scripts/build-home-static-content.mjs --check
           node scripts/build-static-translations.mjs --check
+          node scripts/build-static-product-pages.mjs --check
           python scripts/validate-seo.py
           node scripts/validate-structured-data.mjs

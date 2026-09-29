@@ -51,7 +51,9 @@
             u.searchParams.set('sku', sku);
             return u.pathname + u.search;
         } catch {
-            return `product-detail.html?sku=${encodeURIComponent(sku)}`;
+            return typeof window.WK_getProductDetailUrl === 'function'
+                ? window.WK_getProductDetailUrl(sku)
+                : `product-detail.html?sku=${encodeURIComponent(sku)}`;
         }
     }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>产品详情｜伟群帐篷 OEM/ODM 帐篷与展示系统</title>
     <meta name="description" content="查看定制广告帐篷、沙滩旗与展示配件规格与印刷选项。广西伟群帐篷制造有限公司，支持询盘报价与出口协同。">
-    <!-- SEO note: SKU URLs are listed in the sitemap and become product-specific before render; bare template redirects to All Products. -->
+    <!-- 动态兼容模板：已静态化的 SKU 会跳转至可抓取页面；无 SKU 时返回全部产品。 -->
     <meta name="robots" content="index,follow">
 
     <!-- Base URL; scripts/product-detail.js sets canonical to ...?sku= for each product -->
@@ -41,6 +41,17 @@
         u.hash = '';
         var sku = (u.searchParams.get('sku') || '').trim();
         if (!sku) return;
+        var staticRoutes = {
+          '9403': 'semi-circle-race-gate-9403',
+          '31007': 'folding-chair-31007',
+          '9004': 'round-water-weight-bucket-9004',
+          '9014': 'half-wall-blade-flag-connector-9014',
+          'WK-IS004': 'floor-standing-seg-light-box-wk-is004'
+        };
+        if (staticRoutes[sku]) {
+          window.location.replace('/zh/products/' + staticRoutes[sku] + '.html');
+          return;
+        }
         var origin = 'https://www.waikwantent.com';
         var pathPrefix = '/zh';
         var canonical = origin + pathPrefix + '/product-detail.html?sku=' + encodeURIComponent(sku);
@@ -166,7 +177,7 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
-                <span data-translate="top_bar_text">服务企业超过15年！值得信赖的客户服务！</span>
+                <span data-translate="top_bar_text">自 2010 年起专注 OEM/ODM 制造与出口服务</span>
             </div>
         </div>
     </div>
@@ -286,13 +297,13 @@
             </div>
 
             <div class="pdp-info">
-                <h1 id="productName"></h1>
+                <h1 id="productName">产品详情</h1>
                 <script>
                 (function () {
                   try {
                     var sku = (new URLSearchParams(window.location.search).get('sku') || '').trim();
                     var h = document.getElementById('productName');
-                    if (h && sku && !String(h.textContent || '').trim()) h.textContent = 'SKU ' + sku;
+                    if (h && sku) h.textContent = '产品 SKU ' + sku;
                   } catch (e) {}
                 })();
                 </script>

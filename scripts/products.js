@@ -38,6 +38,28 @@ function wkLocalizedInternalLink(href) {
 }
 window.wkLocalizedInternalLink = wkLocalizedInternalLink;
 
+/** Clean, crawlable product pages for the first static-PDP pilot. */
+const WK_STATIC_PRODUCT_SLUGS = Object.freeze({
+    '9403': 'semi-circle-race-gate-9403',
+    '31007': 'folding-chair-31007',
+    '9004': 'round-water-weight-bucket-9004',
+    '9014': 'half-wall-blade-flag-connector-9014',
+    'WK-IS004': 'floor-standing-seg-light-box-wk-is004'
+});
+
+function wkProductDetailUrl(sku) {
+    const s = sku == null ? '' : String(sku).trim();
+    if (!s) return wkLocalizedInternalLink('/all-products.html');
+    const slug = WK_STATIC_PRODUCT_SLUGS[s];
+    if (slug) {
+        const zh = /^\/zh(?:\/|$)/.test(window.location.pathname);
+        return `${zh ? '/zh' : ''}/products/${slug}.html`;
+    }
+    return wkLocalizedInternalLink(`/product-detail.html?sku=${encodeURIComponent(s)}`);
+}
+window.WK_STATIC_PRODUCT_SLUGS = WK_STATIC_PRODUCT_SLUGS;
+window.WK_getProductDetailUrl = wkProductDetailUrl;
+
 /**
  * Short spec chips for product cards (all-products grid, products list rows).
  * Built from real product fields — never uses the old generic "3m/4m/5m" display placeholders.
@@ -3348,7 +3370,7 @@ class ProductManager {
         const typeHrefRaw = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
         const typeHref = typeHrefRaw ? wkLocalizedInternalLink(typeHrefRaw) : '';
         const detailHref = preferredSku
-            ? wkLocalizedInternalLink(`/product-detail.html?sku=${encodeURIComponent(preferredSku)}`)
+            ? wkProductDetailUrl(preferredSku)
             : wkLocalizedInternalLink('/all-products.html');
         const primaryHref = typeHref || detailHref;
         const primaryTranslate = typeHref ? 'view_type_button' : 'view_details';
@@ -4035,7 +4057,7 @@ getProductIcon(category) {
                 const typeHrefRaw = (typeof window.WK_getProductTypePageUrl === 'function') ? window.WK_getProductTypePageUrl(product) : '';
                 const typeHref = typeHrefRaw ? wkLocalizedInternalLink(typeHrefRaw) : '';
                 const detailHref = preferredSku
-                    ? wkLocalizedInternalLink(`/product-detail.html?sku=${encodeURIComponent(preferredSku)}`)
+                    ? wkProductDetailUrl(preferredSku)
                     : wkLocalizedInternalLink('/all-products.html');
                 const titleHref = typeHref || detailHref;
         const description = this.getLocalizedDescription(product);

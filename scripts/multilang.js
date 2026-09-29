@@ -1028,7 +1028,7 @@ class MultiLanguageSystem {
                 // 公司介绍
                 about_title: '关于伟群',
                 about_subtitle: '帐篷、沙滩旗与展示系统的专业源头制造工厂',
-                about_intro: '广西伟群帐篷制造有限公司是一家专注于帐篷、沙滩旗、快幕秀等展示系统及户外品牌展示产品研发与制造的源头工厂。公司深耕便携式户外展示行业25年以上，为全球客户提供稳定、高效、可定制的展示解决方案。',
+                about_intro: '广西伟群帐篷制造有限公司自 2010 年起专注于广告帐篷、沙滩旗、便携展示系统及户外品牌展示产品，为全球经销商、活动公司和品牌客户提供 OEM/ODM 制造、印刷、质检与出口包装支持。',
                 about_mission_title: '我们的使命',
                 about_mission: '我们的使命', // 兼容旧key
                 about_mission_text: '专注于帐篷、沙滩旗及便携式展示系统的研发与制造，为全球客户提供高品质、易安装、可定制的展示产品，帮助品牌在各类活动、展会与商业场景中实现更高效的曝光与传播。',
@@ -1085,7 +1085,7 @@ class MultiLanguageSystem {
                 faq_cta_title: '没找到答案？',
                 faq_cta_text: '把产品类型、数量与目标市场发给我们，业务与工程同事会协助你推进下一步。',
                 faq_cta_whatsapp: 'WhatsApp 联系',
-                stat_years: '年制造经验',
+                stat_years: '开始制造',
                 stat_clients: '全球合作客户',
                 stat_products: '产品型号与解决方案',
                 
@@ -1243,7 +1243,7 @@ class MultiLanguageSystem {
                 category_frames: '帐篷框架',
                 
                 // 顶部栏
-                top_bar_text: '25+ 年制造经验 · 值得信赖的全球合作伙伴',
+                top_bar_text: '自 2010 年起专注 OEM/ODM 制造与出口服务',
                 
                 // 导航
                 nav_products_by_size: '按尺寸',
@@ -1277,7 +1277,7 @@ class MultiLanguageSystem {
                 pc_context_browse_skus: '查看该分类全部 SKU',
                 pc_context_all_categories: '全部分类',
                 ap_page_role_hint: '可搜索、筛选的完整产品目录。需要按子系列浏览请前往「产品中心」。',
-                ap_h1_all_products: '全部产品',
+                ap_h1_all_products: 'OEM/ODM 产品目录',
                 ap_intro_lead: '浏览我们的全系列：广告帐篷、沙滩旗、展示系统、活动器材与 OEM 展示方案。本页帮助 B2B 客户在询价前快速对比分类、尺寸与适用场景。',
                 ap_intro_keywords: '我们生产折叠广告帐篷、印刷沙滩旗、快幕秀背景、前台、灯箱及活动展示相关配件，支持批发与 OEM 项目。',
                 ap_no_catalog_data: '产品目录暂不可用。请刷新页面，或通过页面底部方式联系以获取清单。',
@@ -2729,7 +2729,7 @@ class MultiLanguageSystem {
                 faq_cta_title: 'Still have questions?',
                 faq_cta_text: 'Send product type, rough quantities and your target market—our team will help you move to a quote or sampling plan.',
                 faq_cta_whatsapp: 'Message on WhatsApp',
-                stat_years: 'Years Manufacturing Experience',
+                stat_years: 'Manufacturing Since',
                 stat_clients: 'Global Clients',
                 stat_products: 'Product Models & Solutions',
                 
@@ -2876,7 +2876,7 @@ class MultiLanguageSystem {
                 category_frames: 'Tent Frame',
                 
                 // Top Bar
-                top_bar_text: '25+ years of trusted manufacturing experience',
+                top_bar_text: 'OEM/ODM manufacturing and export support since 2010',
                 
                 // Navigation
                 nav_products_by_size: 'By Size',
@@ -2910,7 +2910,7 @@ class MultiLanguageSystem {
                 pc_context_browse_skus: 'Browse full SKU list for this category',
                 pc_context_all_categories: 'All categories',
                 ap_page_role_hint: 'Searchable catalog of every SKU. To browse by sub-series, use Product Center.',
-                ap_h1_all_products: 'All Products',
+                ap_h1_all_products: 'OEM Product Catalog for Tents, Flags and Displays',
                 ap_intro_lead: 'Browse our full range of canopy tents, beach flags, display systems, event hardware, and OEM display solutions. This page helps B2B buyers quickly compare categories, sizes, and applications before requesting a quote.',
                 ap_intro_keywords: 'We manufacture folding canopy tents, printed beach flags, pop-up backdrops, counters, light boxes, and related event display accessories for wholesale and OEM projects.',
                 ap_no_catalog_data: 'Product catalog is loading or temporarily unavailable. Please refresh, or contact us for a list.',

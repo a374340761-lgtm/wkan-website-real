@@ -115,7 +115,9 @@
       const name = (getLang() === 'zh') ? (p.nameZh || p.name || p.nameEn) : (p.nameEn || p.name || p.nameZh);
       const desc = (getLang() === 'zh') ? (p.shortZh || p.descriptionZh || '') : (p.shortEn || p.descriptionEn || '');
       const preferredSku = (p && p.sku != null && String(p.sku).trim() !== '') ? String(p.sku).trim() : String(p.id);
-      const detailUrl = `product-detail.html?sku=${encodeURIComponent(preferredSku)}`;
+      const detailUrl = typeof window.WK_getProductDetailUrl === 'function'
+        ? window.WK_getProductDetailUrl(preferredSku)
+        : `product-detail.html?sku=${encodeURIComponent(preferredSku)}`;
 
       return `
         <article class="ap-card" style="overflow:hidden;">

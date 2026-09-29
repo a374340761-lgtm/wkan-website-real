@@ -132,7 +132,9 @@
       const name = lang === 'zh' ? (p.name || p.nameEn || p.model) : (p.nameEn || p.name || p.model);
       const model = p.model || '';
       const preferredSku = (p && p.sku != null && String(p.sku).trim() !== '') ? String(p.sku).trim() : (p && p.id != null ? String(p.id).trim() : '');
-      const href = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html?cat=furniture&sub=table-chair-stool-toilet';
+      const href = preferredSku
+        ? (typeof window.WK_getProductDetailUrl === 'function' ? window.WK_getProductDetailUrl(preferredSku) : `product-detail.html?sku=${encodeURIComponent(preferredSku)}`)
+        : 'all-products.html?cat=furniture&sub=table-chair-stool-toilet';
       const pid = p && p.id != null ? String(p.id) : '';
       return `
         <div style="display:flex; gap:10px; align-items:flex-start; padding: 12px; border:1px solid var(--border-color); border-radius: 12px; background: var(--bg-white); flex-wrap:wrap;">

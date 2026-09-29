@@ -47,10 +47,12 @@ Run these from the repository root before every SEO deployment:
 
 ```powershell
 node scripts/build-home-static-content.mjs
+node scripts/build-static-product-pages.mjs
 python scripts/apply-seo-hardening.py
 python scripts/build-page-sitemap.py
 node scripts/build-home-static-content.mjs --check
-python scripts/validate-structured-data.py
+node scripts/build-static-product-pages.mjs --check
+node scripts/validate-structured-data.mjs
 python scripts/validate-seo.py
 ```
 
@@ -61,6 +63,11 @@ homepage elements. Sitemap dates come from Git history (or today's UTC date for
 uncommitted HTML changes), not filesystem copy timestamps. Dates are omitted when
 history is unavailable. The sitemap builder and SEO validator exclude local
 `outputs/`, dependency and build directories.
+
+The static product builder maintains the first crawlable SKU-page cohort in
+English and Chinese. Update its source records, rebuild, then check the generated
+pages before adding URLs to the sitemap. Keep `product-detail.html?sku=...` as the
+compatibility route for SKUs that have not yet moved to a static page.
 
 The hardening command is idempotent. It removes obsolete geo/keyword meta tags,
 deduplicates JSON-LD, removes fabricated zero-price offers, adds conversion-event

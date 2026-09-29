@@ -198,7 +198,9 @@
 
         const detailsLink = document.createElement('a');
         detailsLink.className = 'btn btn-secondary product-details-btn';
-        detailsLink.href = `product-detail.html?sku=${encodeURIComponent(id)}`;
+        detailsLink.href = typeof window.WK_getProductDetailUrl === 'function'
+            ? window.WK_getProductDetailUrl(id)
+            : `product-detail.html?sku=${encodeURIComponent(id)}`;
         detailsLink.setAttribute('data-translate', 'view_details');
         detailsLink.textContent = '';
 
@@ -216,7 +218,9 @@
         });
 
         const go = () => {
-            location.href = `product-detail.html?sku=${encodeURIComponent(id)}`;
+            location.href = typeof window.WK_getProductDetailUrl === 'function'
+                ? window.WK_getProductDetailUrl(id)
+                : `product-detail.html?sku=${encodeURIComponent(id)}`;
         };
 
         hero.addEventListener('click', go);

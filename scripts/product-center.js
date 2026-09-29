@@ -127,7 +127,10 @@
         const preferredSku = (found && found.sku != null && String(found.sku).trim() !== '')
           ? String(found.sku).trim()
           : String(found.id);
-        window.location.replace(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
+        const target = typeof window.WK_getProductDetailUrl === 'function'
+          ? window.WK_getProductDetailUrl(preferredSku)
+          : `product-detail.html?sku=${encodeURIComponent(preferredSku)}`;
+        window.location.replace(target);
         return true;
       }
 
@@ -885,7 +888,9 @@
       const preferredSku = (p.sku != null && String(p.sku).trim() !== '')
         ? String(p.sku).trim()
         : String(p.id);
-      const detailHref = localizedInternal(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
+      const detailHref = typeof window.WK_getProductDetailUrl === 'function'
+        ? window.WK_getProductDetailUrl(preferredSku)
+        : localizedInternal(`product-detail.html?sku=${encodeURIComponent(preferredSku)}`);
       const browseAllHref = localizedInternal('all-products.html?cat=racegate');
       let img = '';
       if (typeof window.WK_getProductCardImage === 'function') {

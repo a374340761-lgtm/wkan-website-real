@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product | Wai Kwan Tent — OEM Tents, Beach Flags &amp; Display Hardware</title>
     <meta name="description" content="Product specifications for OEM/ODM custom canopy tents, beach flags, and display hardware. Request a quote from Wai Kwan Tent.">
-    <!-- SEO note: SKU URLs are listed in the sitemap and become product-specific before render; bare template redirects to All Products. -->
+    <!-- Dynamic compatibility template. Selected SKUs redirect to crawlable static pages; the bare template redirects to All Products. -->
     <meta name="robots" content="index,follow">
 
     <!-- Base URL. With ?sku=, inline + product-detail.js set canonical/OG to product-detail.html?sku= (WK_PRODUCT_SEO_MAP). -->
@@ -42,6 +42,17 @@
         u.hash = '';
         var sku = (u.searchParams.get('sku') || '').trim();
         if (!sku) return;
+        var staticRoutes = {
+          '9403': 'semi-circle-race-gate-9403',
+          '31007': 'folding-chair-31007',
+          '9004': 'round-water-weight-bucket-9004',
+          '9014': 'half-wall-blade-flag-connector-9014',
+          'WK-IS004': 'floor-standing-seg-light-box-wk-is004'
+        };
+        if (staticRoutes[sku]) {
+          window.location.replace('/products/' + staticRoutes[sku] + '.html');
+          return;
+        }
         var origin = 'https://www.waikwantent.com';
         var pathPrefix = /^\/zh\//.test(u.pathname) ? '/zh' : '';
         var canonical = origin + pathPrefix + '/product-detail.html?sku=' + encodeURIComponent(sku);
@@ -167,7 +178,7 @@
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-content">
-                <span data-translate="top_bar_text">25+ years of trusted manufacturing experience</span>
+                <span data-translate="top_bar_text">OEM/ODM manufacturing and export support since 2010</span>
             </div>
         </div>
     </div>
@@ -287,13 +298,13 @@
             </div>
 
             <div class="pdp-info">
-                <h1 id="productName"></h1>
+                <h1 id="productName">Product details</h1>
                 <script>
                 (function () {
                   try {
                     var sku = (new URLSearchParams(window.location.search).get('sku') || '').trim();
                     var h = document.getElementById('productName');
-                    if (h && sku && !String(h.textContent || '').trim()) h.textContent = 'SKU ' + sku;
+                    if (h && sku) h.textContent = 'SKU ' + sku;
                   } catch (e) {}
                 })();
                 </script>

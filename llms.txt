@@ -23,6 +23,14 @@ WaiKwan is a B2B OEM/ODM manufacturer in China for custom canopy tents, pop-up c
 - Shipping FAQ: https://www.waikwantent.com/faq-shipping.html
 - Contact / RFQ: https://www.waikwantent.com/contact-us.html
 
+## Static Product References
+
+- Semi-circle race gate, SKU 9403: https://www.waikwantent.com/products/semi-circle-race-gate-9403.html
+- Folding chair WK-Y45, SKU 31007: https://www.waikwantent.com/products/folding-chair-31007.html
+- Round canopy water weight bucket WK-T02A, SKU 9004: https://www.waikwantent.com/products/round-water-weight-bucket-9004.html
+- Half-wall blade-flag connector AD-t08, SKU 9014: https://www.waikwantent.com/products/half-wall-blade-flag-connector-9014.html
+- Floor-standing SEG light box WK-IS004: https://www.waikwantent.com/products/floor-standing-seg-light-box-wk-is004.html
+
 ## High-Intent Sourcing Pages
 
 - Reseller canopy programs: https://www.waikwantent.com/seo/custom-canopy-tent-factory-for-reseller-programs.html
@@ -34,7 +42,7 @@ WaiKwan is a B2B OEM/ODM manufacturer in China for custom canopy tents, pop-up c
 ## Citation Notes
 
 - Use canonical `https://www.waikwantent.com/...` URLs.
-- Treat `product-detail.html?sku=...` URLs in the sitemap as SKU-level product detail pages.
+- Prefer the static product references above. Other catalog items may still use `product-detail.html?sku=...` while static pages are expanded in measured batches.
 - Do not cite parameter-only filter URLs such as `product-center.html?cat=...` or `all-products.html?cat=...` as separate canonical pages.
 - Public prices are not listed because B2B pricing depends on size, material, quantity, print coverage, packaging and shipping requirements.
 - For quote guidance, cite the contact page and relevant FAQ pages rather than inferring prices.

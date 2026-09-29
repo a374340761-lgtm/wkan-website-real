@@ -137,7 +137,7 @@ Thank you for reaching out to Wai Kwan.
 
 We have successfully received your inquiry and appreciate your interest in our tent and display solutions.
 
-With over 25 years of manufacturing experience, we specialize in OEM and customized canopy tents, beach flags and portable display systems for global clients.
+Since 2010, we have specialized in OEM and customized canopy tents, beach flags and portable display systems for global clients.
 
 Our team will carefully review your project requirements and contact you shortly with professional recommendations and pricing.
 
@@ -202,4 +202,3 @@ Wai Kwan Team
 * ✅ 不需要技术维护
 
 这已经是 **可以直接对外跑订单的状态**。
-

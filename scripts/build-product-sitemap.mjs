@@ -1,6 +1,6 @@
 /**
- * Build product-sitemap.xml + scripts/product-seo-map.js from scripts/products.js (Node vm sandbox).
- * One-time: if sitemap.xml is a monolithic <urlset>, split into page-sitemap.xml + sitemap index.
+ * Build scripts/product-seo-map.js from scripts/products.js (Node vm sandbox).
+ * Canonical HTML pages, including static product pages, are owned by build-page-sitemap.py.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -128,7 +128,9 @@ function zhDescription(p) {
 function maybeMigrateSitemapIndex() {
   const smPath = path.join(ROOT, 'sitemap.xml');
   let raw = fs.readFileSync(smPath, 'utf8');
-  if (raw.includes('<sitemapindex') || raw.includes('sitemapindex')) {
+  // The current sitemap is intentionally a canonical <urlset>. Never replace it
+  // with the legacy sitemap-index format when refreshing product metadata.
+  if (raw.includes('<urlset') || raw.includes('<sitemapindex') || raw.includes('sitemapindex')) {
     return;
   }
   const locs = [...raw.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim());

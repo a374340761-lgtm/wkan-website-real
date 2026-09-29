@@ -96,6 +96,10 @@ def main() -> int:
             found = tags(source, pattern)
             if len(found) != 1:
                 issues.append(f"[{rel}] expected one {label}, found {len(found)}")
+            elif label == "H1" and rel.startswith("zh/"):
+                visible_h1 = re.sub(r"<[^>]+>", " ", found[0])
+                if not re.search(r"[\u3400-\u9fff]", html_unescape(visible_h1)):
+                    issues.append(f"[{rel}] Chinese indexable page H1 has no Chinese text")
 
         hreflangs = tags(
             source,

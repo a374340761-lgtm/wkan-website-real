@@ -1934,7 +1934,7 @@ function enhanceRacegateDropdown() {
         const rows = [
             { href: `/product-detail.html?sku=${encodeURIComponent('9401')}`, translateKey: 'nav_racegate_sub_v' },
             { href: `/product-detail.html?sku=${encodeURIComponent('9402')}`, translateKey: 'nav_racegate_sub_o' },
-            { href: `/product-detail.html?sku=${encodeURIComponent('9403')}`, translateKey: 'nav_racegate_sub_semi' },
+            { href: '/products/semi-circle-race-gate-9403.html', translateKey: 'nav_racegate_sub_semi' },
             { href: `/product-detail.html?sku=${encodeURIComponent('WK-AD')}`, translateKey: 'category_advertising_arch' }
         ];
         rows.forEach((r) => {

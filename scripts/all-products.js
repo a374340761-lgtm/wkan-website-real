@@ -250,6 +250,9 @@
         if (FOLDING_STOCK_PDP_TO_TYPE[s]) {
             return apLocalizedPageHref(`/tent-type.html?type=${encodeURIComponent(FOLDING_STOCK_PDP_TO_TYPE[s])}`);
         }
+        if (typeof window.WK_getProductDetailUrl === 'function') {
+            return window.WK_getProductDetailUrl(s);
+        }
         return apLocalizedPageHref(`/product-detail.html?sku=${encodeURIComponent(s)}`);
     }
 
@@ -1567,4 +1570,3 @@
         getQueryCat: getQueryCat
     };
 })();
-

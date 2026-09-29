@@ -48,10 +48,12 @@ Run these from the repository root before every SEO deployment:
 ```powershell
 node scripts/build-home-static-content.mjs
 node scripts/build-static-product-pages.mjs
+python scripts/apply-google-tag-manager.py
 python scripts/apply-seo-hardening.py
 python scripts/build-page-sitemap.py
 node scripts/build-home-static-content.mjs --check
 node scripts/build-static-product-pages.mjs --check
+python scripts/apply-google-tag-manager.py --check
 node scripts/validate-structured-data.mjs
 python scripts/validate-seo.py
 ```

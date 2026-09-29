@@ -31,9 +31,10 @@ Source: the six-month Search Console export downloaded on 2026-09-29, covering
   Chinese homepage returned HTTP 200; a fake URL returned 404.
 - HTTP apex currently reaches HTTPS www through two redirects. Cloudflare or DNS
   configuration is required to make this a single hop.
-- No GA4 measurement ID or GTM container is present. `scripts/analytics.js`
-  exposes lead and download events, but attribution needs a consent-aware GA4 or
-  GTM installation.
+- At the start of the check, no GA4 measurement ID or GTM container was present.
+  GTM container `GTM-TVQFLJP7` is now installed across the site with consent
+  defaults and lead/download data-layer events. GA4 measurement ID
+  `G-4H3KDBSS0Y` still needs to be configured and published in the GTM workspace.
 - Several hero assets remain between roughly 1.6 MB and 2.66 MB and should enter
   a measured image-compression pass after visual review.
 
@@ -50,6 +51,9 @@ Source: the six-month Search Console export downloaded on 2026-09-29, covering
   sourcing notes, canonical/hreflang links, Product schema, and direct quote CTAs.
 - Routed internal catalog links for the pilot SKUs to their static URLs and kept
   the dynamic SKU route as compatibility fallback.
+- Installed the consent-aware GTM container and lead/download data-layer events
+  without forwarding form values or URL query strings. The GA4 Google tag still
+  needs to be published in GTM.
 
 ## Next measurement window
 

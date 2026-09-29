@@ -124,6 +124,21 @@ function initCookieConsent() {
         return;
     }
 
+    const cookieZh = String(document.documentElement.lang || '').toLowerCase().startsWith('zh');
+    const cookieCopy = cookieZh ? {
+        title: 'Cookie 设置',
+        text: '我们使用必要 Cookie 保障网站运行，并仅在您同意后启用统计分析。',
+        reject: '全部拒绝', customize: '自定义', accept: '全部接受',
+        settings: 'Cookie 偏好设置', close: '关闭',
+        necessary: '必要 Cookie（始终启用）', preferences: '偏好 Cookie', analytics: '统计分析 Cookie', save: '保存设置'
+    } : {
+        title: 'Cookie Settings',
+        text: 'We use necessary cookies to operate the site and enable analytics only with your consent.',
+        reject: 'Reject all', customize: 'Customize', accept: 'Accept all',
+        settings: 'Cookie Preferences', close: 'Close',
+        necessary: 'Necessary cookies (always on)', preferences: 'Preference cookies', analytics: 'Analytics cookies', save: 'Save settings'
+    };
+
     // Banner
     const banner = document.createElement('div');
     banner.id = 'wkCookieBanner';
@@ -131,13 +146,13 @@ function initCookieConsent() {
     banner.innerHTML = `
         <div class="wk-cookie-banner__card" role="dialog" aria-modal="false">
             <div class="wk-cookie-banner__text" style="flex:1; min-width: 240px;">
-                <div class="wk-cookie-banner__title" data-translate="cookie_title"></div>
-                <div class="wk-cookie-banner__desc" data-translate="cookie_text"></div>
+                <div class="wk-cookie-banner__title" data-translate="cookie_title">${cookieCopy.title}</div>
+                <div class="wk-cookie-banner__desc" data-translate="cookie_text">${cookieCopy.text}</div>
             </div>
             <div class="wk-cookie-banner__actions">
-                <button type="button" class="btn btn-secondary" data-wk-cookie="reject" data-translate="cookie_reject_all"></button>
-                <button type="button" class="btn btn-secondary" data-wk-cookie="customize" data-translate="cookie_customize"></button>
-                <button type="button" class="btn btn-primary" data-wk-cookie="accept" data-translate="cookie_accept_all"></button>
+                <button type="button" class="btn btn-secondary" data-wk-cookie="reject" data-translate="cookie_reject_all">${cookieCopy.reject}</button>
+                <button type="button" class="btn btn-secondary" data-wk-cookie="customize" data-translate="cookie_customize">${cookieCopy.customize}</button>
+                <button type="button" class="btn btn-primary" data-wk-cookie="accept" data-translate="cookie_accept_all">${cookieCopy.accept}</button>
             </div>
         </div>
     `;
@@ -150,25 +165,25 @@ function initCookieConsent() {
     modal.innerHTML = `
         <div class="wk-cookie-modal__panel" role="dialog" aria-modal="true">
             <div class="wk-cookie-modal__head">
-                <div class="wk-cookie-modal__title" data-translate="cookie_settings_title"></div>
-                <button type="button" class="btn btn-secondary" data-wk-cookie="close" data-translate="cookie_close"></button>
+                <div class="wk-cookie-modal__title" data-translate="cookie_settings_title">${cookieCopy.settings}</div>
+                <button type="button" class="btn btn-secondary" data-wk-cookie="close" data-translate="cookie_close">${cookieCopy.close}</button>
             </div>
             <div class="wk-cookie-modal__body">
                 <div class="wk-cookie-row">
-                    <div class="wk-cookie-row__label" data-translate="cookie_category_necessary"></div>
+                    <div class="wk-cookie-row__label" data-translate="cookie_category_necessary">${cookieCopy.necessary}</div>
                     <input type="checkbox" checked disabled aria-hidden="true" />
                 </div>
                 <div class="wk-cookie-row">
-                    <div class="wk-cookie-row__label" data-translate="cookie_category_preferences"></div>
+                    <div class="wk-cookie-row__label" data-translate="cookie_category_preferences">${cookieCopy.preferences}</div>
                     <input id="wkCookiePref" type="checkbox" />
                 </div>
                 <div class="wk-cookie-row">
-                    <div class="wk-cookie-row__label" data-translate="cookie_category_analytics"></div>
+                    <div class="wk-cookie-row__label" data-translate="cookie_category_analytics">${cookieCopy.analytics}</div>
                     <input id="wkCookieAnalytics" type="checkbox" />
                 </div>
             </div>
             <div class="wk-cookie-modal__foot">
-                <button type="button" class="btn btn-primary" data-wk-cookie="save" data-translate="cookie_save"></button>
+                <button type="button" class="btn btn-primary" data-wk-cookie="save" data-translate="cookie_save">${cookieCopy.save}</button>
             </div>
         </div>
     `;
@@ -186,6 +201,9 @@ function initCookieConsent() {
             get: () => wkReadConsent() || { necessary: true, preferences: false, analytics: false, ts: 0 },
             open: openModal
         };
+        document.dispatchEvent(new CustomEvent('wk:consent-change', {
+            detail: { analytics: !!(consent && consent.analytics) }
+        }));
     };
 
     banner.querySelectorAll('[data-wk-cookie]').forEach((el) => {

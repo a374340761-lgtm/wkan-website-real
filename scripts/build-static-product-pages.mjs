@@ -4,6 +4,31 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://www.waikwantent.com';
+const GTM_ID = 'GTM-TVQFLJP7';
+const GTM_HEAD = `<!-- Google Consent Mode default -->
+<script>
+window.dataLayer=window.dataLayer||[];
+window.gtag=window.gtag||function(){dataLayer.push(arguments);};
+window.gtag('consent','default',{
+  analytics_storage:'denied',
+  ad_storage:'denied',
+  ad_user_data:'denied',
+  ad_personalization:'denied',
+  wait_for_update:500
+});
+</script>
+<!-- End Google Consent Mode default -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');</script>
+<!-- End Google Tag Manager -->`;
+const GTM_BODY = `<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_ID}"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->`;
 
 export const STATIC_PRODUCTS = [
   {
@@ -98,6 +123,7 @@ function page(product, lang) {
   return `<!doctype html>
 <html lang="${zh ? 'zh-CN' : 'en'}">
 <head>
+${GTM_HEAD}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${esc(text.title)}</title>
@@ -113,8 +139,10 @@ function page(product, lang) {
   <style>.static-product{max-width:1180px;margin:0 auto;padding:120px 24px 64px}.crumbs{margin-bottom:28px;font-size:.95rem}.crumbs a{color:#7c1d1d}.product-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:42px;align-items:center}.product-hero img{width:100%;max-height:520px;object-fit:contain;background:#f6f6f6;border-radius:12px}.eyebrow{color:#8f171b;font-weight:700;letter-spacing:.04em}.lead{font-size:1.12rem;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.content-section{margin-top:52px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}.facts div{background:#fff;padding:16px}.facts dt{font-weight:700}.facts dd{margin:6px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left}th{background:#f3f3f3}.source-note{padding:18px;border-left:4px solid #a4161a;background:#fff6f3}.image-note{font-size:.9rem;color:#555}.lang-link{margin-left:auto}@media(max-width:780px){.product-hero{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}</style>
   <script type="application/ld+json">${schema(product, lang, url, otherUrl)}</script>
   <script src="/scripts/analytics.js" defer></script>
+  <script src="/scripts/main.js" defer></script>
 </head>
 <body>
+${GTM_BODY}
   <header class="navbar"><div class="nav-container"><a class="logo" href="${homeHref}"><img src="/favicon.svg" alt="WaiKwan" width="44" height="44"><span>WaiKwan</span></a><nav class="nav-menu"><a href="${productsHref}">${zh ? '产品目录' : 'Products'}</a><a href="${zh ? '/zh/about-us.html' : '/about-us.html'}">${zh ? '关于我们' : 'About'}</a><a href="${zh ? '/zh/contact-us.html' : '/contact-us.html'}">${zh ? '联系我们' : 'Contact'}</a></nav><a class="lang-link" href="${zh ? otherUrl : otherUrl}" hreflang="${zh ? 'en' : 'zh-CN'}">${zh ? 'English' : '中文'}</a></div></header>
   <main class="static-product">
     <nav class="crumbs" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${homeHref}">${zh ? '首页' : 'Home'}</a> / <a href="${productsHref}">${zh ? '产品目录' : 'Products'}</a> / <span>${esc(text.name)}</span></nav>

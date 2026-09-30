@@ -230,7 +230,7 @@ def process(path: Path) -> bool:
     if "/scripts/analytics.js" not in html and "</head>" in html.lower():
         html = re.sub(
             r"</head>",
-            '    <script src="/scripts/analytics.js" defer></script>\n</head>',
+            '    <script src="/scripts/analytics.js?v=20260930-ga4-consent" defer></script>\n</head>',
             html,
             count=1,
             flags=re.IGNORECASE,

@@ -1,0 +1,324 @@
+{
+  "images/hero/aluminum-profile-fabric-light-box-display-wall.jpeg": {
+    "originalBytes": 84760,
+    "variants": [
+      {
+        "url": "/images/optimized/home/aluminum-profile-fabric-light-box-display-wall-8a570eec-480.webp",
+        "width": 480,
+        "height": 369,
+        "bytes": 26912
+      },
+      {
+        "url": "/images/optimized/home/aluminum-profile-fabric-light-box-display-wall-8a570eec-800.webp",
+        "width": 800,
+        "height": 616,
+        "bytes": 58418
+      },
+      {
+        "url": "/images/optimized/home/aluminum-profile-fabric-light-box-display-wall-8a570eec-1600.webp",
+        "width": 803,
+        "height": 618,
+        "bytes": 61202
+      }
+    ]
+  },
+  "images/hero/custom-beach-flags-feather-teardrop-flags-outdoor.png": {
+    "originalBytes": 2660701,
+    "variants": [
+      {
+        "url": "/images/optimized/home/custom-beach-flags-feather-teardrop-flags-outdoor-2ab8c2ee-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 39704
+      },
+      {
+        "url": "/images/optimized/home/custom-beach-flags-feather-teardrop-flags-outdoor-2ab8c2ee-800.webp",
+        "width": 800,
+        "height": 533,
+        "bytes": 90474
+      },
+      {
+        "url": "/images/optimized/home/custom-beach-flags-feather-teardrop-flags-outdoor-2ab8c2ee-1600.webp",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 224178
+      }
+    ]
+  },
+  "images/hero/pop-up-canopy-tent-10x10-blue-trade-show-booth.jpg": {
+    "originalBytes": 488678,
+    "variants": [
+      {
+        "url": "/images/optimized/home/pop-up-canopy-tent-10x10-blue-trade-show-booth-49d02f2b-480.webp",
+        "width": 480,
+        "height": 720,
+        "bytes": 56538
+      },
+      {
+        "url": "/images/optimized/home/pop-up-canopy-tent-10x10-blue-trade-show-booth-49d02f2b-800.webp",
+        "width": 800,
+        "height": 1200,
+        "bytes": 128550
+      },
+      {
+        "url": "/images/optimized/home/pop-up-canopy-tent-10x10-blue-trade-show-booth-49d02f2b-1600.webp",
+        "width": 1024,
+        "height": 1536,
+        "bytes": 187434
+      }
+    ]
+  },
+  "images/products/accessories/tent-accessories1/feather-flag-connector-wk-t12-hero.jpg": {
+    "originalBytes": 280355,
+    "variants": [
+      {
+        "url": "/images/optimized/home/feather-flag-connector-wk-t12-hero-6fb4b711-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 17424
+      },
+      {
+        "url": "/images/optimized/home/feather-flag-connector-wk-t12-hero-6fb4b711-800.webp",
+        "width": 800,
+        "height": 1422,
+        "bytes": 33402
+      },
+      {
+        "url": "/images/optimized/home/feather-flag-connector-wk-t12-hero-6fb4b711-1600.webp",
+        "width": 810,
+        "height": 1440,
+        "bytes": 34058
+      }
+    ]
+  },
+  "images/products/displays/tension-fabric-displays/wk-is001hero.jpg": {
+    "originalBytes": 543904,
+    "variants": [
+      {
+        "url": "/images/optimized/home/wk-is001hero-385d73f3-480.webp",
+        "width": 480,
+        "height": 1067,
+        "bytes": 106754
+      },
+      {
+        "url": "/images/optimized/home/wk-is001hero-385d73f3-800.webp",
+        "width": 800,
+        "height": 1778,
+        "bytes": 229518
+      },
+      {
+        "url": "/images/optimized/home/wk-is001hero-385d73f3-1600.webp",
+        "width": 1280,
+        "height": 2844,
+        "bytes": 396156
+      }
+    ]
+  },
+  "images/products/displays/tension-fabric-displays/wk-is003hero.jpg": {
+    "originalBytes": 492762,
+    "variants": [
+      {
+        "url": "/images/optimized/home/wk-is003hero-6cd052a8-480.webp",
+        "width": 480,
+        "height": 1067,
+        "bytes": 90402
+      },
+      {
+        "url": "/images/optimized/home/wk-is003hero-6cd052a8-800.webp",
+        "width": 800,
+        "height": 1778,
+        "bytes": 206826
+      },
+      {
+        "url": "/images/optimized/home/wk-is003hero-6cd052a8-1600.webp",
+        "width": 1280,
+        "height": 2844,
+        "bytes": 369930
+      }
+    ]
+  },
+  "images/products/flags/hero/teardrop-beach-flag-pole-outdoor-display-hero.jpg": {
+    "originalBytes": 951597,
+    "variants": [
+      {
+        "url": "/images/optimized/home/teardrop-beach-flag-pole-outdoor-display-hero-3f416184-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 64000
+      },
+      {
+        "url": "/images/optimized/home/teardrop-beach-flag-pole-outdoor-display-hero-3f416184-800.webp",
+        "width": 800,
+        "height": 800,
+        "bytes": 171562
+      },
+      {
+        "url": "/images/optimized/home/teardrop-beach-flag-pole-outdoor-display-hero-3f416184-1600.webp",
+        "width": 1600,
+        "height": 1600,
+        "bytes": 474678
+      }
+    ]
+  },
+  "images/products/light-box-series/WK-LB-NET-hero.png": {
+    "originalBytes": 919014,
+    "variants": [
+      {
+        "url": "/images/optimized/home/wk-lb-net-hero-86c600f5-480.webp",
+        "width": 480,
+        "height": 343,
+        "bytes": 14670
+      },
+      {
+        "url": "/images/optimized/home/wk-lb-net-hero-86c600f5-800.webp",
+        "width": 800,
+        "height": 571,
+        "bytes": 32762
+      },
+      {
+        "url": "/images/optimized/home/wk-lb-net-hero-86c600f5-1600.webp",
+        "width": 1600,
+        "height": 1143,
+        "bytes": 85004
+      }
+    ]
+  },
+  "images/products/racegate/Semi-circle Race Gate/semi-circle-race-gate-event-arch-hero.png": {
+    "originalBytes": 2169539,
+    "variants": [
+      {
+        "url": "/images/optimized/home/semi-circle-race-gate-event-arch-hero-24d993df-480.webp",
+        "width": 480,
+        "height": 297,
+        "bytes": 23556
+      },
+      {
+        "url": "/images/optimized/home/semi-circle-race-gate-event-arch-hero-24d993df-800.webp",
+        "width": 800,
+        "height": 495,
+        "bytes": 49290
+      },
+      {
+        "url": "/images/optimized/home/semi-circle-race-gate-event-arch-hero-24d993df-1600.webp",
+        "width": 1600,
+        "height": 990,
+        "bytes": 113608
+      }
+    ]
+  },
+  "images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory.jpg": {
+    "originalBytes": 443118,
+    "variants": [
+      {
+        "url": "/images/optimized/home/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory-cc30b220-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 21126
+      },
+      {
+        "url": "/images/optimized/home/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory-cc30b220-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 51324
+      },
+      {
+        "url": "/images/optimized/home/40mm-hexagon-aluminum-frame-3x6-canopy-tent-indoor-factory-cc30b220-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 143878
+      }
+    ]
+  },
+  "images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory.jpg": {
+    "originalBytes": 506773,
+    "variants": [
+      {
+        "url": "/images/optimized/home/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory-94e67723-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 30128
+      },
+      {
+        "url": "/images/optimized/home/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory-94e67723-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 71330
+      },
+      {
+        "url": "/images/optimized/home/40mm-hexagon-aluminum-frame-3x6-canopy-tent-outdoor-factory-94e67723-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 178262
+      }
+    ]
+  },
+  "news/images/APPPEXPO2026/apppexpo-2026-shanghai-05.jpg": {
+    "originalBytes": 339399,
+    "variants": [
+      {
+        "url": "/images/optimized/home/apppexpo-2026-shanghai-05-1bca6093-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 30466
+      },
+      {
+        "url": "/images/optimized/home/apppexpo-2026-shanghai-05-1bca6093-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 75962
+      },
+      {
+        "url": "/images/optimized/home/apppexpo-2026-shanghai-05-1bca6093-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 242034
+      }
+    ]
+  },
+  "news/images/Sign China 2026/sign-china-2026-shanghai-03.webp": {
+    "originalBytes": 342362,
+    "variants": [
+      {
+        "url": "/images/optimized/home/sign-china-2026-shanghai-03-f316d55c-480.webp",
+        "width": 480,
+        "height": 360,
+        "bytes": 38472
+      },
+      {
+        "url": "/images/optimized/home/sign-china-2026-shanghai-03-f316d55c-800.webp",
+        "width": 800,
+        "height": 600,
+        "bytes": 89896
+      },
+      {
+        "url": "/images/optimized/home/sign-china-2026-shanghai-03-f316d55c-1600.webp",
+        "width": 1600,
+        "height": 1200,
+        "bytes": 306558
+      }
+    ]
+  },
+  "news/images/The 139th Canton Fair phase 3/The 139th Canton Fair phase 3-3.jpg": {
+    "originalBytes": 5220134,
+    "variants": [
+      {
+        "url": "/images/optimized/home/the-139th-canton-fair-phase-3-3-ca7b3594-480.webp",
+        "width": 480,
+        "height": 640,
+        "bytes": 46352
+      },
+      {
+        "url": "/images/optimized/home/the-139th-canton-fair-phase-3-3-ca7b3594-800.webp",
+        "width": 800,
+        "height": 1067,
+        "bytes": 121516
+      },
+      {
+        "url": "/images/optimized/home/the-139th-canton-fair-phase-3-3-ca7b3594-1600.webp",
+        "width": 1600,
+        "height": 2133,
+        "bytes": 455372
+      }
+    ]
+  }
+}

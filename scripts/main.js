@@ -452,7 +452,8 @@ function renderHomeHeroSlider() {
         slide.className = 'wk-hero-slide' + (i === 0 ? ' is-active' : '');
         slide.setAttribute('data-index', String(i));
         // Root-absolute URL + encodeURI so non-ASCII filenames work in CSS url() from /zh/... too.
-        const bgUrl = wkPublicAssetUrl(String(s.image || ''));
+        const image = window.matchMedia('(max-width: 780px)').matches ? (s.imageMobile || s.image) : s.image;
+        const bgUrl = wkPublicAssetUrl(String(image || ''));
         const variant = String(s.variant || '').toLowerCase();
         if (variant === 'light') {
             slide.classList.add('wk-hero-slide--light');
@@ -463,7 +464,7 @@ function renderHomeHeroSlider() {
         if (variant === 'event-poster') {
             slide.classList.add('wk-hero-slide--invite', 'wk-hero-slide--light', 'wk-hero-slide--event-poster');
         }
-        slide.style.setProperty('--wk-hero-bg', `url("${bgUrl}")`);
+        slide.dataset.bgUrl = bgUrl;
 
         if (s.keyPrefix) {
             const titleKey = `${s.keyPrefix}_title`;
@@ -486,7 +487,7 @@ function renderHomeHeroSlider() {
             const tertiaryAction = tertiaryHref
                 ? `<a class="btn btn-secondary" href="${tertiaryHref}" data-translate="${s.tertiaryLabelKey || 'home_hero_canton_news_cta'}"></a>`
                 : '';
-            const titleTag = i === 0 ? 'h1' : 'h2';
+            const titleTag = 'h2';
             const trustRow =
                 i === 0
                     ? `
@@ -524,23 +525,11 @@ function renderHomeHeroSlider() {
 
         // Also set the bg inline for maximum compatibility (avoids CSS var parsing issues).
         const bgEl = slide.querySelector('.wk-hero-bg');
-        if (bgEl) bgEl.style.backgroundImage = `url("${bgUrl}")`;
+        if (bgEl && i === 0) bgEl.style.backgroundImage = `url("${bgUrl}")`;
         root.appendChild(slide);
     });
 
-    // Warm non-LCP hero backgrounds after first paint instead of competing with the first slide.
-    const warmRemainingHeroImages = () => slides.slice(1).forEach((s) => {
-        const src = wkPublicAssetUrl(String(s.image || ''));
-        if (!src) return;
-        const img = new Image();
-        img.decoding = 'async';
-        img.src = src;
-    });
-    if ('requestIdleCallback' in window) {
-        window.requestIdleCallback(warmRemainingHeroImages, { timeout: 2500 });
-    } else {
-        window.setTimeout(warmRemainingHeroImages, 1200);
-    }
+    // Other backgrounds load only when their slide is shown.
 
     // Build dots
     const dotsWrap = document.getElementById('heroDots');
@@ -572,6 +561,10 @@ function initHomeHeroSlider() {
     if (idx < 0) idx = 0;
 
     const setActive = (i) => {
+        const background = slides[i].querySelector('.wk-hero-bg');
+        if (background && slides[i].dataset.bgUrl) {
+            background.style.backgroundImage = `url("${slides[i].dataset.bgUrl}")`;
+        }
         slides.forEach((s, k) => s.classList.toggle('is-active', k === i));
         if (dotsWrap) {
             Array.from(dotsWrap.children).forEach((d, k) => d.classList.toggle('is-active', k === i));

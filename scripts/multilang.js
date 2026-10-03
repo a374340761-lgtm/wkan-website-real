@@ -427,7 +427,7 @@ class MultiLanguageSystem {
                     '<p>若您仍在比较方案，可从<a href="/zh/canopy-tents.html">广告帐篷总览</a>或<a href="/zh/pop-up-canopy-tents.html">快开广告篷</a>进入；框架细节见<a href="/zh/aluminum-folding-tent.html">铝架折叠篷</a>，OEM 见<a href="/zh/custom-canopy-tent-manufacturer.html">定制制造商</a>。</p>',
 
                 home_trusted_by_title: '合作客户',
-                home_trusted_by_subtitle: '服务全球品牌、经销商与项目客户（示意）。',
+                home_trusted_by_subtitle: '为品牌、经销商与活动团队提供定制产品和出口配套方案。',
 
                 home_trusted_badge_1: 'OEM 合作伙伴',
                 home_trusted_badge_2: '活动品牌',
@@ -441,7 +441,7 @@ class MultiLanguageSystem {
                 home_trusted_badge_10: '跨境电商',
 
                 home_best_sellers_title: '畅销产品',
-                home_best_sellers_subtitle: '基于现有数据集规则自动推荐（可按需调整）。',
+                home_best_sellers_subtitle: '探索适用于活动与品牌推广的帐篷、旗帜和展示产品。',
                 home_best_sellers_empty: '暂无可展示的产品。',
                 home_view_all_products: '查看全部产品',
 
@@ -2071,7 +2071,7 @@ class MultiLanguageSystem {
                     '<p>Compare formats from the <a href="/canopy-tents.html">canopy tents overview</a> or <a href="/pop-up-canopy-tents.html">pop up canopy tents</a> hub; for frame detail see <a href="/aluminum-folding-tent.html">aluminum folding tent</a>, and for OEM programs see <a href="/custom-canopy-tent-manufacturer.html">custom canopy tent manufacturer</a>.</p>',
 
                 home_trusted_by_title: 'Trusted by',
-                home_trusted_by_subtitle: 'Serving global brands, distributors and project clients (placeholder).',
+                home_trusted_by_subtitle: 'Supporting brands, distributors and event teams with custom products and export-ready solutions.',
 
                 home_trusted_badge_1: 'OEM Partners',
                 home_trusted_badge_2: 'Event Brands',
@@ -2085,7 +2085,7 @@ class MultiLanguageSystem {
                 home_trusted_badge_10: 'E-commerce',
 
                 home_best_sellers_title: 'Best Sellers',
-                home_best_sellers_subtitle: 'Auto-selected from the existing dataset using a deterministic rule.',
+                home_best_sellers_subtitle: 'Explore canopy tents, flags and display products for your next event or promotion.',
                 home_best_sellers_empty: 'No products to display yet.',
                 home_view_all_products: 'View All Products',
 

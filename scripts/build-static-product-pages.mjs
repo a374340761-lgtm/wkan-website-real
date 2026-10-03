@@ -165,7 +165,8 @@ for (const product of STATIC_PRODUCTS) {
     const dest = path.join(ROOT, rel);
     const output = page(product, lang);
     if (check) {
-      if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8') !== output) {
+      // Windows checkouts may use CRLF; compare generated content independently of line endings.
+      if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8').replace(/\r\n/g, '\n') !== output.replace(/\r\n/g, '\n')) {
         console.error(`Out of date: ${rel}`);
         failed = true;
       }

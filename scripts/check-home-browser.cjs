@@ -32,8 +32,8 @@ const server = http.createServer((req, res) => {
         await page.goto(origin + (language === 'zh' ? '/zh/' : '/'), { waitUntil: 'networkidle' });
         assert.equal(await page.locator('h1').count(), 1, 'One H1 after rendering');
         const active = page.locator('#heroSlider .is-active');
-        assert.equal(await active.locator('[data-translate="home_hero_4_title"]').count(), 1);
-        assert.ok(await active.locator('.wk-hero-bg').evaluate(e => getComputedStyle(e).backgroundImage.includes('2026-shanghai-international-advertising-exhibition-waikwan.webp')));
+        assert.equal(await active.locator('[data-translate="home_hero_0_title"]').count(), 1);
+        assert.ok(await active.locator('.wk-hero-bg').evaluate(e => getComputedStyle(e).backgroundImage.includes('canton-fair-140-phase-3-2026-waikwan.png')));
         assert.equal(await page.locator('#heroSlider article:not(.is-active) .wk-hero-bg').evaluateAll(es => es.every(e => getComputedStyle(e).backgroundImage === 'none')), true);
         await page.evaluate(() => window.__wkHeroGoTo(4, true));
         assert.match(await page.locator('#heroSlider .is-active .wk-hero-title').innerText(), /背景墙|Display/);

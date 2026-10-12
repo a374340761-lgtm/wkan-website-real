@@ -396,6 +396,18 @@ function getHomeHeroSlides() {
     // Use real filenames from /images/hero (verified in repo)
     return [
         {
+            image: 'images/hero/canton-fair-140-phase-3-2026-waikwan.png',
+            keyPrefix: 'home_hero_0',
+            imageAlt: 'WaiKwan invitation to the 140th Canton Fair Phase 3, booth 12.1F29-30, October 31 to November 4, 2026',
+            variant: 'invite',
+            clickHref: '/news/the-139th-canton-fair-phase-3.html',
+            clickHrefLocalized: false,
+            tertiaryHref: '/news/the-139th-canton-fair-phase-3.html',
+            tertiaryHrefLocalized: false,
+            tertiaryLabelKey: 'home_hero_canton_news_cta',
+            secondaryHref: 'all-products.html'
+        },
+        {
             image: 'images/hero/2026-shanghai-international-advertising-exhibition-waikwan.webp',
             keyPrefix: 'home_hero_4',
             imageAlt: 'WaiKwan invitation to SIGN CHINA 2026 in Shanghai, booth W3D08, 15 to 17 September 2026',
@@ -403,18 +415,6 @@ function getHomeHeroSlides() {
             clickHref: '/news/sign-china-2026-shanghai.html',
             tertiaryHref: '/news/sign-china-2026-shanghai.html',
             tertiaryLabelKey: 'home_hero_shanghai_news_cta',
-            secondaryHref: 'all-products.html'
-        },
-        {
-            image: 'images/hero/canton-fair-2026-invitation-waikwan-booth-12-1f29-30.png',
-            keyPrefix: 'home_hero_0',
-            imageAlt: 'WaiKwan Canton Fair 2026 invitation for booth 12.1F29-30',
-            variant: 'invite',
-            clickHref: '/news/the-139th-canton-fair-phase-3.html',
-            clickHrefLocalized: false,
-            tertiaryHref: '/news/the-139th-canton-fair-phase-3.html',
-            tertiaryHrefLocalized: false,
-            tertiaryLabelKey: 'home_hero_canton_news_cta',
             secondaryHref: 'all-products.html'
         },
         {

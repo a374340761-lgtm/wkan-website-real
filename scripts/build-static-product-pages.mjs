@@ -32,6 +32,135 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 export const STATIC_PRODUCTS = [
   {
+  "sku": "standard-black-flat-tube-3x3",
+  "internalCatalogKey": true,
+  "slug": "3x3-standard-black-flat-tube-canopy-frame",
+  "model": "Standard Black / 普通黑金刚",
+  "image": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+  "imageWidth": 810,
+  "imageHeight": 1440,
+  "gallery": [
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+      "en": "Folded frame in the workshop (3×3 m sample)",
+      "zh": "车间内的折叠架整体（3×3米示例）",
+      "width": 810,
+      "height": 1440
+    },
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
+      "en": "Top corner joint and bolts (3×3 m sample)",
+      "zh": "顶部角连接与螺栓（3×3米示例）",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
+      "en": "Center post and cross-brace connections (3×3 m sample)",
+      "zh": "中心立柱与交叉撑杆连接（3×3米示例）",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
+      "en": "Leg slider and locking detail (3×3 m sample)",
+      "zh": "立柱滑动连接与锁扣细节（3×3米示例）",
+      "width": 810,
+      "height": 1440
+    },
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg",
+      "en": "Flat-tube cross braces and folding joint (3×3 m sample)",
+      "zh": "扁管交叉撑杆与折叠连接（3×3米示例）",
+      "width": 1080,
+      "height": 1920
+    }
+  ],
+  "en": {
+    "name": "Standard Black Flat-Tube Canopy Frame",
+    "title": "Standard Black Flat-Tube Canopy Frame | Sizes & Details | WaiKwan",
+    "description": "Standard Black flat-tube folding canopy frame in seven sizes from 2×2 m to 4×4 m, including 3×4.5 m and 3×6 m. View real 3×3 m sample photographs.",
+    "intro": "The Standard Black flat-tube folding canopy frame is available in seven sizes listed below. The five workshop photographs show a 3×3 m sample frame and its connections, without a canopy cover.",
+    "applications": [
+      "Canopy frame sourcing in multiple sizes",
+      "Checking joints and braces using a 3×3 m sample"
+    ],
+    "note": "Specify Standard Black, required size, quantity and destination when requesting a quote. Weight varies with size and configuration. Confirm frame material, tube dimensions, wall thickness, packing, canopy compatibility and anchoring requirements in writing."
+  },
+  "zh": {
+    "name": "普通黑金刚扁管帐篷架",
+    "title": "普通黑金刚扁管帐篷架｜尺寸与实拍细节｜伟群帐篷",
+    "description": "普通黑金刚扁管折叠帐篷架提供2×2、2×3、2.5×2.5、3×3、3×4.5、3×6及4×4米规格，展示3×3米示例架的五张实拍细节。",
+    "intro": "普通黑金刚扁管帐篷架提供下表所列的七种尺寸。本页五张车间实拍仅以3×3米架子为示例，展示折叠状态、连接件与锁扣；照片展示裸架，不含顶布。",
+    "applications": [
+      "多种尺寸的帐篷架采购",
+      "通过3×3米示例查看连接与撑杆细节"
+    ],
+    "note": "询价请注明普通黑金刚、所需尺寸、数量和目的地。重量随尺寸及配置而异，材质、管径、壁厚、包装、顶布适配及固定方式请书面确认。"
+  },
+  "facts": [
+    [
+      "Product name",
+      "Standard Black (普通黑金刚)"
+    ],
+    [
+      "Available sizes",
+      "2 × 2 / 2 × 3 / 2.5 × 2.5 / 3 × 3 / 3 × 4.5 / 3 × 6 / 4 × 4 m"
+    ],
+    [
+      "Brace profile",
+      "Flat tube"
+    ],
+    [
+      "Appearance",
+      "Black"
+    ],
+    [
+      "Structure",
+      "Folding frame"
+    ],
+    [
+      "Photo sample",
+      "3 × 3 m bare frame; canopy cover not shown"
+    ]
+  ],
+  "factsZh": [
+    [
+      "产品名称",
+      "普通黑金刚"
+    ],
+    [
+      "可选尺寸",
+      "2 × 2 / 2 × 3 / 2.5 × 2.5 / 3 × 3 / 3 × 4.5 / 3 × 6 / 4 × 4 米"
+    ],
+    [
+      "撑杆形式",
+      "扁管"
+    ],
+    [
+      "外观颜色",
+      "黑色"
+    ],
+    [
+      "结构形式",
+      "折叠架"
+    ],
+    [
+      "实拍示例",
+      "3 × 3 米裸架，未展示顶布"
+    ]
+  ],
+  "sizes": [
+    "2 × 2",
+    "2 × 3",
+    "2.5 × 2.5",
+    "3 × 3",
+    "3 × 4.5",
+    "3 × 6",
+    "4 × 4"
+  ]
+},
+  {
     sku: '9403', slug: 'semi-circle-race-gate-9403', model: 'RaceGate-SemiCircle',
     en: { name: 'Semi-circle Race Gate', title: 'Semi-circle Race Gate 9403 | Fiberglass Event Arch | WaiKwan', description: 'Portable semi-circle fiberglass race gate for races, sports events and brand activations. Compare four sizes, pole diameters and export carton quantities.', intro: 'SKU 9403 is a portable semi-circle race gate built with fiberglass poles. Four catalog sizes cover small course markers through large start and finish arches.', applications: ['Running and cycling events', 'FPV and drone courses', 'Brand activations and finish lines'], note: 'Choose the model from the table and include quantity, destination and artwork status in your quote request.' },
     zh: { name: '半圆型竞速拱门', title: '半圆型竞速拱门 9403｜玻璃钢赛事活动拱门｜伟群帐篷', description: '便携式半圆型玻璃钢竞速拱门，适合赛事、运动活动与品牌推广。对比四种尺寸、杆径及出口装箱数量。', intro: 'SKU 9403 为玻璃钢杆结构的便携式半圆型竞速拱门，目录提供四种尺寸，可用于小型赛道标识及大型起终点拱门。', applications: ['跑步及自行车赛事', 'FPV 与无人机赛道', '品牌推广及起终点展示'], note: '询价时请注明型号、数量、目的地及画面文件准备情况。' },
@@ -106,7 +235,7 @@ function schema(product, lang, url, otherUrl) {
   }).replace(/</g, '\\u003c');
 }
 
-function page(product, lang) {
+function basePage(product, lang) {
   const zh = lang === 'zh';
   const text = product[lang];
   const pathPrefix = zh ? '/zh' : '';
@@ -114,7 +243,7 @@ function page(product, lang) {
   const otherUrl = `${ORIGIN}${zh ? '' : '/zh'}/products/${product.slug}.html`;
   const homeHref = zh ? '/zh/' : '/';
   const productsHref = zh ? '/zh/all-products.html' : '/all-products.html';
-  const quoteLabel = text.name.includes(product.sku) ? text.name : `${text.name} SKU ${product.sku}`;
+  const quoteLabel = product.internalCatalogKey ? text.name : text.name.includes(product.sku) ? text.name : `${text.name} SKU ${product.sku}`;
   const contactHref = `${zh ? '/zh' : ''}/contact-us.html?product=${encodeURIComponent(quoteLabel)}#getQuoteForm`;
   const rows = product.specs
     ? `<div class="table-wrap"><table><thead><tr>${(zh ? product.headersZh : product.headersEn).map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${product.specs.map((row) => `<tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
@@ -136,7 +265,7 @@ ${GTM_HEAD}
   <meta property="og:type" content="product"><meta property="og:site_name" content="WaiKwan"><meta property="og:title" content="${esc(text.title)}"><meta property="og:description" content="${esc(text.description)}"><meta property="og:url" content="${url}"><meta property="og:image" content="${ORIGIN}${product.image}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(text.title)}"><meta name="twitter:description" content="${esc(text.description)}"><meta name="twitter:image" content="${ORIGIN}${product.image}">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles/main.css"><link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <style>.static-product{max-width:1180px;margin:0 auto;padding:120px 24px 64px}.crumbs{margin-bottom:28px;font-size:.95rem}.crumbs a{color:#7c1d1d}.product-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:42px;align-items:center}.product-hero img{width:100%;max-height:520px;object-fit:contain;background:#f6f6f6;border-radius:12px}.eyebrow{color:#8f171b;font-weight:700;letter-spacing:.04em}.lead{font-size:1.12rem;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.content-section{margin-top:52px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}.facts div{background:#fff;padding:16px}.facts dt{font-weight:700}.facts dd{margin:6px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left}th{background:#f3f3f3}.source-note{padding:18px;border-left:4px solid #a4161a;background:#fff6f3}.image-note{font-size:.9rem;color:#555}.lang-link{margin-left:auto}@media(max-width:780px){.product-hero{grid-template-columns:1fr}.facts{grid-template-columns:1fr}}</style>
+  <style>.static-product{max-width:1180px;margin:0 auto;padding:120px 24px 64px}.crumbs{margin-bottom:28px;font-size:.95rem}.crumbs a{color:#7c1d1d}.product-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:42px;align-items:center}.product-hero img{width:100%;max-height:520px;object-fit:contain;background:#f6f6f6;border-radius:12px}.eyebrow{color:#8f171b;font-weight:700;letter-spacing:.04em}.lead{font-size:1.12rem;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.content-section{margin-top:52px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}.facts div{background:#fff;padding:16px}.facts dt{font-weight:700}.facts dd{margin:6px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left}th{background:#f3f3f3}.source-note{padding:18px;border-left:4px solid #a4161a;background:#fff6f3}.image-note{font-size:.9rem;color:#555}.product-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product-photo-grid figure{margin:0;min-width:0}.product-photo-grid img{width:100%;height:360px;object-fit:contain;background:#f6f6f6;border-radius:8px}.product-photo-grid figcaption{padding:12px 0}.lang-link{margin-left:auto}@media(max-width:780px){.product-hero{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.product-photo-grid{grid-template-columns:1fr}}</style>
   <script type="application/ld+json">${schema(product, lang, url, otherUrl)}</script>
   <script src="/scripts/analytics.js?v=20260930-ga4-consent" defer></script>
   <script src="/scripts/main.js" defer></script>
@@ -147,8 +276,9 @@ ${GTM_BODY}
   <main class="static-product">
     <nav class="crumbs" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${homeHref}">${zh ? '首页' : 'Home'}</a> / <a href="${productsHref}">${zh ? '产品目录' : 'Products'}</a> / <span>${esc(text.name)}</span></nav>
     <article>
-      <div class="product-hero"><div><img src="${product.image}" alt="${esc(text.name)}" width="800" height="800" fetchpriority="high">${imageNote ? `<p class="image-note">${esc(imageNote)}</p>` : ''}</div><div><p class="eyebrow">SKU ${esc(product.sku)} · ${esc(product.model)}</p><h1>${esc(text.name)}</h1><p class="lead">${esc(text.intro)}</p><div class="actions"><a class="btn btn-primary" href="${contactHref}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${productsHref}">${zh ? '查看全部产品' : 'View All Products'}</a></div></div></div>
+      <div class="product-hero"><div><img src="${product.image}" alt="${esc(text.name)}" width="${product.imageWidth || 800}" height="${product.imageHeight || 800}" fetchpriority="high">${imageNote ? `<p class="image-note">${esc(imageNote)}</p>` : ''}</div><div><p class="eyebrow">${product.internalCatalogKey ? (zh ? '普通黑金刚 · 3×3 米扁管架' : 'Standard Black · 3×3 m flat-tube frame') : `SKU ${esc(product.sku)} · ${esc(product.model)}`}</p><h1>${esc(text.name)}</h1><p class="lead">${esc(text.intro)}</p><div class="actions"><a class="btn btn-primary" href="${contactHref}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${productsHref}">${zh ? '查看全部产品' : 'View All Products'}</a></div></div></div>
       <section class="content-section"><h2>${zh ? '已确认规格' : 'Confirmed specifications'}</h2>${rows}</section>
+      ${product.gallery ? `<section class="content-section"><h2>${zh ? '产品实拍与结构细节' : 'Real product photographs and frame details'}</h2><div class="product-photo-grid">${product.gallery.map(photo => `<figure><a href="${esc(photo.src)}"><img src="${esc(photo.src)}" alt="${esc(text.name + ' — ' + photo[lang])}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async"></a><figcaption>${esc(photo[lang])}</figcaption></figure>`).join('')}</div></section><section class="content-section"><h2>${zh ? '选型时如何比较' : 'What to compare before ordering'}</h2><p>${zh ? '本款为普通黑金刚扁管架，不能直接套用 30 方管铁架、40 或 50 六角铝架的参数。请按撑杆形式、立柱尺寸、连接方式、顶布适配与包装要求逐项确认。' : 'This Standard Black flat-tube frame is a separate model from the 30 square-tube and 40/50 hexagonal aluminum ranges. Compare brace profile, leg dimensions, connections, canopy compatibility and packing rather than applying another frame’s specifications.'}</p><a href="/canopy-tent-buying-guide.html">${zh ? '帐篷采购选型指南' : 'Canopy tent buying guide'}</a></section>` : ''}
       <section class="content-section"><h2>${zh ? '常见应用' : 'Common applications'}</h2><ul>${text.applications.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></section>
       <section class="content-section source-note"><h2>${zh ? '询价前说明' : 'Before requesting a quote'}</h2><p>${esc(text.note)}</p><p>${zh ? '本页参数来自伟群当前产品目录记录；未列出的参数请以书面报价确认为准。' : 'Specifications on this page come from WaiKwan’s current product catalog record. Confirm unlisted details in the written quotation.'}</p></section>
     </article>
@@ -157,13 +287,50 @@ ${GTM_BODY}
 </html>\n`;
 }
 
+
+// Use the established tent page shell and gallery for this folding-frame product.
+function page(product, lang) {
+  const original = basePage(product, lang);
+  if (!product.internalCatalogKey) return original;
+  const zh = lang === 'zh', text = product[lang], prefix = zh ? '/zh' : '';
+  const template = fs.readFileSync(path.join(ROOT, 'tent-type.html'), 'utf8');
+  const localizeShell = html => html.replace(/\b(href|src)="([^"]+)"/g, (all, attr, value) => {
+    if (/^(https?:|mailto:|tel:|data:|#|\/\/)/.test(value)) return all;
+    const clean = value.replace(/^\.?\//, '');
+    const asset = /^(images|scripts|styles)\//.test(clean) || /^(favicon|site\.webmanifest)/.test(clean);
+    const localized = !asset && zh && fs.existsSync(path.join(ROOT, 'zh', clean.split(/[?#]/)[0]));
+    return `${attr}="${localized ? '/zh/' : '/'}${clean}"`;
+  });
+  const header = localizeShell(template.slice(template.indexOf('  <!-- Top bar -->'), template.indexOf('  <main>')));
+  const footerStart = template.indexOf('<section class="contact-bottom">');
+  const footer = localizeShell(template.slice(footerStart, template.indexOf('    </main>', footerStart)));
+  const quote = `${prefix}/contact-us.html?product=${encodeURIComponent(text.name)}#getQuoteForm`;
+  const thumbs = product.gallery.map((photo, i) => `<button type="button" class="tent-type-folding-gallery__thumb${i === 0 ? ' is-active' : ''}" data-frame-photo="${i}" aria-pressed="${i === 0}" aria-label="${esc(photo[lang])}"><img src="${esc(photo.src)}" alt="${esc(photo[lang])}" width="${photo.width}" height="${photo.height}"></button>`).join('');
+  const facts = (zh ? product.factsZh : product.facts).map(([k,v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');
+  const sizeRows = product.sizes.map(size => `<tr><td>${esc(size)} ${zh ? '米' : 'm'}</td><td>${size === '3 × 3' ? (zh ? '本页实拍示例尺寸' : 'Photographed sample size') : (zh ? '可选规格' : 'Available size')}</td></tr>`).join('');
+  const main = `<main><section class="products" style="padding-top:110px"><div class="container">
+  <nav class="breadcrumb" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${prefix}/">${zh ? '首页' : 'Home'}</a> / <a href="${prefix}/tent-type.html">${zh ? '帐篷' : 'Canopy Tents'}</a> / <span>${esc(text.name)}</span></nav>
+  <article class="tent-type-detail"><h1>${esc(text.name)}</h1><p class="frame-intro">${esc(text.intro)}</p>
+  <div class="tent-type-folding-gallery"><div class="tent-type-card__imgWrap tent-type-folding-gallery__heroWrap"><img id="frameMainImage" class="tent-type-card__img tent-type-folding-gallery__main" src="${product.image}" alt="${esc(product.gallery[0][lang])}" width="810" height="1440" fetchpriority="high"></div><div class="tent-type-folding-gallery__thumbs">${thumbs}</div><p id="framePhotoCaption">${esc(product.gallery[0][lang])}</p></div>
+  <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '可选尺寸' : 'Available Sizes'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table"><thead><tr><th>${zh ? '尺寸' : 'Size'}</th><th>${zh ? '说明' : 'Notes'}</th></tr></thead><tbody>${sizeRows}</tbody></table></div></section>
+  <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '型号参数' : 'Models & Specifications'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table">${facts}</table></div></section>
+  <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '选型说明' : 'Frame Selection'}</h2><p>${zh ? '普通黑金刚为独立的扁管架款式，不能套用 30 方管铁架或 40/50 六角铝架的重量、壁厚和性能参数。请结合撑杆、连接件及顶布适配要求选型。' : 'Standard Black is a separate flat-tube frame model. Do not apply the weight, wall thickness or performance specifications of the 30 square-tube or 40/50 hexagonal frames. Compare brace profile, joints and canopy compatibility.'}</p></section>
+  <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
+  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
+  return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
+    .replace('  <script src="/scripts/main.js" defer></script>', '<script src="/scripts/bilingual-routing.js" defer></script>')
+    .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
+    .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
+    .replace('</body>', scripts + '\n</body>');
+}
+
 const check = process.argv.includes('--check');
 let failed = false;
 for (const product of STATIC_PRODUCTS) {
   for (const lang of ['en', 'zh']) {
     const rel = `${lang === 'zh' ? 'zh/' : ''}products/${product.slug}.html`;
     const dest = path.join(ROOT, rel);
-    const output = page(product, lang);
+    const output = page(product, lang).replace(/[ \t]+$/gm, '');
     if (check) {
       // Windows checkouts may use CRLF; compare generated content independently of line endings.
       if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8').replace(/\r\n/g, '\n') !== output.replace(/\r\n/g, '\n')) {

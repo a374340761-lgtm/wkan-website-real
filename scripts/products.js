@@ -40,6 +40,7 @@ window.wkLocalizedInternalLink = wkLocalizedInternalLink;
 
 /** Clean, crawlable product pages for the first static-PDP pilot. */
 const WK_STATIC_PRODUCT_SLUGS = Object.freeze({
+    'standard-black-flat-tube-3x3': '3x3-standard-black-flat-tube-canopy-frame',
     '9403': 'semi-circle-race-gate-9403',
     '31007': 'folding-chair-31007',
     '9004': 'round-water-weight-bucket-9004',
@@ -269,6 +270,66 @@ function wkProductManagerLangFromUrl() {
 class ProductManager {
     constructor() {
         this.products = [
+            // Internal catalog key; no factory SKU has been supplied.
+            {
+                "id": "standard-black-flat-tube-3x3",
+                "category": "tents",
+                "type": "stock",
+                "subcategory": "stock",
+                "name": "普通黑金刚扁管帐篷架",
+                "nameZh": "普通黑金刚扁管帐篷架",
+                "nameEn": "Standard Black Flat-Tube Canopy Frame",
+                "model": "普通黑金刚 / Standard Black",
+                "shortZh": "普通黑金刚扁管折叠架，提供七种尺寸；实拍为3×3米示例。",
+                "shortEn": "Standard Black flat-tube folding frame in seven sizes; photographs show a 3×3 m sample.",
+                "descriptionZh": "普通黑金刚扁管帐篷架提供下表所列的七种尺寸。本页五张车间实拍仅以3×3米架子为示例，展示折叠状态、连接件与锁扣；照片展示裸架，不含顶布。",
+                "descriptionEn": "The Standard Black flat-tube folding canopy frame is available in seven sizes listed below. The five workshop photographs show a 3×3 m sample frame and its connections, without a canopy cover.",
+                "image": "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+                "images": [
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg"
+                ],
+                "gallery": [
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg"
+                ],
+                "variants": [
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "2 × 2 M"
+                                },
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "2 × 3 M"
+                                },
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "2.5 × 2.5 M"
+                                },
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "3 × 3 M"
+                                },
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "3 × 4.5 M"
+                                },
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "3 × 6 M"
+                                },
+                                {
+                                                "model": "普通黑金刚 / Standard Black",
+                                                "size": "4 × 4 M"
+                                }
+                ]
+},
             // ===== Stock folding tents (used by all-products + product-detail) =====
             {
                 id: 2001,
@@ -641,6 +702,101 @@ class ProductManager {
                     referenceImageLabel: '产品画册参考 / Product Catalog Reference',
                     price: '询价'
                 },
+
+                {
+                "id": "fabric-banner-stand-curved",
+                "sku": "fabric-banner-stand-curved",
+                "category": "displays",
+                "subcategory": "fabric-banner-stands",
+                "model": "Curved Banner Stand",
+                "name": "立牌弧形",
+                "nameZh": "立牌弧形",
+                "nameEn": "Curved Fabric Banner Stand",
+                "shortZh": "弧形管架立牌，尺寸参考直形立牌，附六张结构实拍。",
+                "shortEn": "Curved banner stand with six real frame detail photos. Dimensions follow the straight banner stand.",
+                "descriptionZh": "立牌弧形采用弧形管架轮廓与支撑脚。本页实拍展示裸架的整体、顶部弧度、管件连接及底座。尺寸参考同系列直形立牌。",
+                "descriptionEn": "Curved banner stand with support feet. Real workshop photographs show the bare frame, curved top, tube connections and bases. Dimensions follow the straight banner stand in this series.",
+                "image": "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg",
+                "images": [
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.jpg"
+                ],
+                "gallery": [
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.jpg",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.jpg"
+                ],
+                "specsZh": {
+                                "Size": "80 × 200 CM",
+                                "Graphic Size": "83 × 205 CM"
+                },
+                "specsEn": {
+                                "Size": "80 × 200 CM",
+                                "Graphic Size": "83 × 205 CM"
+                },
+                "detailDescZh": [
+                                "立牌弧形与直形立牌同属立牌系列，外形通过实拍图展示。",
+                                "展示尺寸80×200厘米，画面尺寸83×205厘米，按直形立牌尺寸参考。",
+                                "照片展示裸架；画面版型、材质、重量及包装请在报价时确认。"
+                ],
+                "detailDescEn": [
+                                "The curved and straight banner stands belong to the same banner stand series.",
+                                "Display size: 80×200 cm. Graphic size: 83×205 cm, following the straight banner stand dimensions.",
+                                "Photographs show the bare frame. Confirm graphic template, material, weight and packing when requesting a quote."
+                ],
+                "applicationsZh": [
+                                "展会展示",
+                                "门店陈列",
+                                "活动品牌展示"
+                ],
+                "applicationsEn": [
+                                "Exhibitions",
+                                "Retail displays",
+                                "Event branding"
+                ],
+                "variantTables": [
+                                {
+                                                "titleZh": "尺寸参数（参考直形立牌）",
+                                                "titleEn": "Dimensions (following the straight banner stand)",
+                                                "columns": [
+                                                                {
+                                                                                "key": "size",
+                                                                                "labelZh": "尺寸",
+                                                                                "labelEn": "Size"
+                                                                },
+                                                                {
+                                                                                "key": "graphic",
+                                                                                "labelZh": "画面尺寸",
+                                                                                "labelEn": "Graphic Size"
+                                                                }
+                                                ],
+                                                "rows": [
+                                                                {
+                                                                                "size": "80 × 200 CM",
+                                                                                "graphic": "83 × 205 CM"
+                                                                }
+                                                ]
+                                }
+                ],
+                "searchableKeywords": [
+                                "立牌弧形",
+                                "弧形立牌",
+                                "curved banner stand",
+                                "fabric banner stand"
+                ],
+                "keywords": [
+                                "立牌弧形",
+                                "curved banner stand"
+                ],
+                "price": "询价"
+},
 
                 // ===== Tension Fabric Displays: Straight Line Series (Catalog p21) =====
                 {

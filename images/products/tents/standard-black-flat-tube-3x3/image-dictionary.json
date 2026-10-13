@@ -1,0 +1,46 @@
+{
+  "productZh": "普通黑金刚扁管帐篷架",
+  "source": "User-supplied product photographs, 2026-10-13",
+  "images": [
+    {
+      "original": "7be6afe9d8a2a73a73d6caee6a5a2a4a.jpg",
+      "filename": "3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+      "descriptionEn": "Folded frame in the workshop (3×3 m sample)",
+      "descriptionZh": "车间内的折叠架整体（3×3米示例）"
+    },
+    {
+      "original": "5d8719c24732e30ec9c70aa154219751.jpg",
+      "filename": "3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
+      "descriptionEn": "Top corner joint and bolts (3×3 m sample)",
+      "descriptionZh": "顶部角连接与螺栓（3×3米示例）"
+    },
+    {
+      "original": "824423230f828264f8a62aff42edab0b.jpg",
+      "filename": "3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
+      "descriptionEn": "Center post and cross-brace connections (3×3 m sample)",
+      "descriptionZh": "中心立柱与交叉撑杆连接（3×3米示例）"
+    },
+    {
+      "original": "efddca05449ed633d54e11ce1bcfa2ad.jpg",
+      "filename": "3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
+      "descriptionEn": "Leg slider and locking detail (3×3 m sample)",
+      "descriptionZh": "立柱滑动连接与锁扣细节（3×3米示例）"
+    },
+    {
+      "original": "f1dcb723873248f3e3d82b6b697fa164.jpg",
+      "filename": "3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg",
+      "descriptionEn": "Flat-tube cross braces and folding joint (3×3 m sample)",
+      "descriptionZh": "扁管交叉撑杆与折叠连接（3×3米示例）"
+    }
+  ],
+  "sampleSize": "3 × 3 m",
+  "availableSizesMetres": [
+    "2 × 2",
+    "2 × 3",
+    "2.5 × 2.5",
+    "3 × 3",
+    "3 × 4.5",
+    "3 × 6",
+    "4 × 4"
+  ]
+}

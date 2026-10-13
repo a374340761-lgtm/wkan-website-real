@@ -1604,6 +1604,11 @@ function enhanceTentsDropdown() {
             sub.appendChild(a);
         });
 
+        const blackFrameLink = document.createElement('a');
+        blackFrameLink.href = wkLocalizedInternalLinkSafe('/products/3x3-standard-black-flat-tube-canopy-frame.html');
+        blackFrameLink.innerHTML = '<span class="zh">普通黑金刚扁管帐篷架</span><span class="en">Standard Black Flat-Tube Canopy Frame</span>';
+        sub.appendChild(blackFrameLink);
+
         const types = getTypes();
 
         types.forEach((t) => {

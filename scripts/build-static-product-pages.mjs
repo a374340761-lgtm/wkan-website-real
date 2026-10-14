@@ -32,7 +32,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 export const STATIC_PRODUCTS = [
   {
-  "sku": "standard-black-flat-tube-3x3",
+  "sku": "STANDARD-BLACK-FLAT-TUBE-3X3",
   "internalCatalogKey": true,
   "slug": "3x3-standard-black-flat-tube-canopy-frame",
   "model": "Standard Black / 普通黑金刚",
@@ -268,7 +268,7 @@ ${GTM_HEAD}
   <style>.static-product{max-width:1180px;margin:0 auto;padding:120px 24px 64px}.crumbs{margin-bottom:28px;font-size:.95rem}.crumbs a{color:#7c1d1d}.product-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:42px;align-items:center}.product-hero img{width:100%;max-height:520px;object-fit:contain;background:#f6f6f6;border-radius:12px}.eyebrow{color:#8f171b;font-weight:700;letter-spacing:.04em}.lead{font-size:1.12rem;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.content-section{margin-top:52px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}.facts div{background:#fff;padding:16px}.facts dt{font-weight:700}.facts dd{margin:6px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left}th{background:#f3f3f3}.source-note{padding:18px;border-left:4px solid #a4161a;background:#fff6f3}.image-note{font-size:.9rem;color:#555}.product-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product-photo-grid figure{margin:0;min-width:0}.product-photo-grid img{width:100%;height:360px;object-fit:contain;background:#f6f6f6;border-radius:8px}.product-photo-grid figcaption{padding:12px 0}.lang-link{margin-left:auto}@media(max-width:780px){.product-hero{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.product-photo-grid{grid-template-columns:1fr}}</style>
   <script type="application/ld+json">${schema(product, lang, url, otherUrl)}</script>
   <script src="/scripts/analytics.js?v=20260930-ga4-consent" defer></script>
-  <script src="/scripts/main.js" defer></script>
+  <script src="/scripts/main.js?v=20261014-products" defer></script>
 </head>
 <body>
 ${GTM_BODY}
@@ -316,9 +316,9 @@ function page(product, lang) {
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '型号参数' : 'Models & Specifications'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table">${facts}</table></div></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '选型说明' : 'Frame Selection'}</h2><p>${zh ? '普通黑金刚为独立的扁管架款式，不能套用 30 方管铁架或 40/50 六角铝架的重量、壁厚和性能参数。请结合撑杆、连接件及顶布适配要求选型。' : 'Standard Black is a separate flat-tube frame model. Do not apply the weight, wall thickness or performance specifications of the 30 square-tube or 40/50 hexagonal frames. Compare brace profile, joints and canopy compatibility.'}</p></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
-  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
+  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261014-products"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
-    .replace('  <script src="/scripts/main.js" defer></script>', '<script src="/scripts/bilingual-routing.js" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-products" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts + '\n</body>');

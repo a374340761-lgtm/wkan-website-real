@@ -324,6 +324,7 @@ ${GTM_BODY}
 // Use the established tent page shell and gallery for this folding-frame product.
 function page(product, lang) {
   const original = basePage(product, lang);
+  if (product.slug === 'curved-fabric-banner-stand') return displayProductPage(product, lang, original);
   if (!product.internalCatalogKey) return original;
   const zh = lang === 'zh', text = product[lang], prefix = zh ? '/zh' : '';
   const template = fs.readFileSync(path.join(ROOT, 'tent-type.html'), 'utf8');
@@ -351,6 +352,49 @@ function page(product, lang) {
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
   const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261014-static-stand"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
+    .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
+    .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
+    .replace('</body>', scripts + '\n</body>');
+}
+
+function displayProductPage(product, lang, original) {
+  const zh = lang === 'zh', text = product[lang], prefix = zh ? '/zh' : '';
+  const template = fs.readFileSync(path.join(ROOT, `${zh ? 'zh/' : ''}product-detail.html`), 'utf8');
+  const localize = html => html.replace(/\b(href|src)="([^"]+)"/g, (all, attr, value) => {
+    if (/^(https?:|mailto:|tel:|data:|#|\/\/|\/)/.test(value)) return all;
+    const clean = value.replace(/^\.\//, '');
+    const asset = /^(images|scripts|styles)\//.test(clean) || /^(favicon|site\.webmanifest)/.test(clean);
+    const mirror = !asset && zh && fs.existsSync(path.join(ROOT, 'zh', clean.split(/[?#]/)[0]));
+    return `${attr}="${mirror ? '/zh/' : '/'}${clean}"`;
+  });
+  const header = localize(template.slice(template.indexOf('    <!-- 语言切换器 -->'), template.indexOf('    <main class="product-detail">')));
+  const footerStart = template.indexOf('<section class="contact-bottom">');
+  const footer = localize(template.slice(footerStart, template.indexOf('    </main>', footerStart)));
+  const facts = zh ? product.factsZh : product.facts;
+  const quote = `${prefix}/contact-us.html?product=${encodeURIComponent(text.name)}#getQuoteForm`;
+  const pdf = '/' + encodeURI('广西伟群帐篷制造有限公司2025改.pdf');
+  const labels = zh ? ['产品描述', '技术参数', '应用场景', '资料下载'] : ['Description', 'Specifications', 'Applications', 'Downloads'];
+  const keys = ['desc', 'specs', 'apps', 'download'];
+  const thumbs = product.gallery.map((photo, i) => `<button type="button" data-static-photo aria-pressed="${i === 0}" aria-label="${esc(photo[lang])}"><img class="${i === 0 ? 'is-active' : ''}" src="${photo.src}" alt="${esc(photo[lang])}" width="4032" height="3024" loading="lazy" decoding="async"></button>`).join('');
+  const main = `<main class="product-detail" data-static-product="fabric-banner-stand-curved">
+    <nav class="breadcrumbs" style="margin-top:110px" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${prefix}/">${zh ? '首页' : 'Home'}</a><span class="sep">/</span><a href="${prefix}/product-center.html?cat=displays">${zh ? '展示系统' : 'Display Systems'}</a><span class="sep">/</span><span>${esc(text.name)}</span></nav>
+    <section class="pdp-top" id="productDetailBody">
+      <div><div class="pdp-image"><img id="productImage" src="${product.image}" alt="${esc(text.name)}" width="4032" height="3024" fetchpriority="high" decoding="async"><div class="image-carousel">${thumbs}</div></div><p class="pdp-desc" id="staticPhotoCaption">${esc(zh ? product.imageNoteZh : product.imageNoteEn)}</p></div>
+      <div class="pdp-info"><h1 id="productName">${esc(text.name)}</h1><p class="pdp-desc" id="productDesc">${esc(text.intro)}</p><ul class="pdp-specs">${facts.map(([k,v]) => `<li><strong>${esc(k)}：</strong> ${esc(v)}</li>`).join('')}</ul><div class="pdp-actions"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Get Quote'}</a><a class="btn btn-secondary" href="${pdf}" target="_blank" rel="noopener">${zh ? '下载' : 'Download'}</a><button class="btn btn-accent" type="button" data-static-cart>${zh ? '加入询价车' : 'Add to Cart'}</button></div></div>
+    </section>
+    <section class="pdp-tabs"><div class="tabs-header" role="tablist" aria-label="${zh ? '产品资料' : 'Product information'}">${keys.map((key,i) => `<button type="button" class="tab${i === 0 ? ' active' : ''}" id="static-tab-${key}" data-static-tab="${key}" role="tab" aria-selected="${i === 0}" aria-controls="tab-${key}" tabindex="${i === 0 ? 0 : -1}">${labels[i]}</button>`).join('')}</div><div class="tabs-content">
+      <div class="tab-panel active" id="tab-desc" role="tabpanel" aria-labelledby="static-tab-desc"><h2>${labels[0]}</h2><p>${esc(text.intro)}</p><p>${esc(text.note)}</p></div>
+      <div class="tab-panel" id="tab-specs" role="tabpanel" aria-labelledby="static-tab-specs"><h2>${labels[1]}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table"><tbody>${facts.map(([k,v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table></div><p>${esc(text.note)}</p></div>
+      <div class="tab-panel" id="tab-apps" role="tabpanel" aria-labelledby="static-tab-apps"><h2>${labels[2]}</h2><ul>${text.applications.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>
+      <div class="tab-panel" id="tab-download" role="tabpanel" aria-labelledby="static-tab-download"><h2>${labels[3]}</h2><p>${zh ? '下载伟群产品目录；弧形画面版型请在印刷前联系确认。' : 'Download the WaiKwan product catalog. Contact us to confirm the curved graphic template before printing.'}</p><a class="btn btn-secondary" href="${pdf}" target="_blank" rel="noopener">${zh ? '下载产品目录 PDF' : 'Download Product Catalog PDF'}</a></div>
+    </div></section>
+    <section class="related-products"><h2>${zh ? '相关产品' : 'Related Products'}</h2><div class="pdp-actions"><a class="btn btn-secondary" href="${prefix}/product-detail.html?sku=42005">${zh ? '直形立牌系列' : 'Straight Fabric Banner Stands'}</a><a class="btn btn-secondary" href="${prefix}/portable-display-systems.html">${zh ? '便携展示系统' : 'Portable Display Systems'}</a></div></section>
+    ${footer}
+  </main>`;
+  const scripts = `<button class="back-to-top" id="backToTop" type="button" aria-label="${zh ? '返回顶部' : 'Back to top'}"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+  <script src="/scripts/products.js?v=20261014-static-stand"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/static-product-detail.js?v=20261014-layout"></script>`;
+  return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>[data-static-photo]{background:none;border:0;padding:0;cursor:pointer} .related-products{margin-bottom:32px}</style>`)
     .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)

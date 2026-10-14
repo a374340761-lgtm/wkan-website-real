@@ -40,6 +40,8 @@ window.wkLocalizedInternalLink = wkLocalizedInternalLink;
 
 /** Clean, crawlable product pages for the first static-PDP pilot. */
 const WK_STATIC_PRODUCT_SLUGS = Object.freeze({
+    'fabric-banner-stand-curved': 'curved-fabric-banner-stand',
+    'FABRIC-BANNER-STAND-CURVED': 'curved-fabric-banner-stand',
     'standard-black-flat-tube-3x3': '3x3-standard-black-flat-tube-canopy-frame',
     '9403': 'semi-circle-race-gate-9403',
     '31007': 'folding-chair-31007',

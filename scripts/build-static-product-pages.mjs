@@ -32,6 +32,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 export const STATIC_PRODUCTS = [
   {
+    sku: 'FABRIC-BANNER-STAND-CURVED', catalogIdentifier: true, imageWidth: 4032, imageHeight: 3024,
+    slug: 'curved-fabric-banner-stand', model: 'Curved Banner Stand',
+    image: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg',
+    imageNoteEn: 'Workshop photograph of the bare frame; printed fabric is not shown.',
+    imageNoteZh: '车间裸架实拍，未展示印刷布画。',
+    en: {
+      name: 'Curved Fabric Banner Stand',
+      title: 'Curved Fabric Banner Stand | Frame Photos & Dimensions | WaiKwan',
+      description: 'Curved fabric banner stand for exhibitions, retail and event branding. View six real frame photographs and reference display and graphic dimensions.',
+      intro: 'This banner stand has a curved tube-frame outline and support feet. Six workshop photographs show the bare frame, rounded top, tube connections and base details. The dimensions below follow the straight banner stand in the same series and should be confirmed for the curved model before printing.',
+      applications: ['Exhibition and trade show displays', 'Retail brand presentations', 'Indoor event branding'],
+      note: 'Request the curved banner stand and specify quantity, destination and graphic requirements. The 80 × 200 cm display and 83 × 205 cm graphic sizes are references from the straight stand. Confirm the curved graphic template, material, weight, packing and supplied components in writing before ordering or printing.'
+    },
+    zh: {
+      name: '立牌弧形',
+      title: '立牌弧形｜结构实拍与参考尺寸｜伟群帐篷',
+      description: '弧形管架立牌，适用于展会、门店及活动品牌展示。查看六张裸架结构实拍、支撑脚与连接细节，以及参考展示和画面尺寸。',
+      intro: '立牌弧形采用弧形管架轮廓与支撑脚。六张车间实拍展示裸架整体、顶部弧度、管件连接及底座。下列尺寸参考同系列直形立牌，弧形款的画面版型请在制作前确认。',
+      applications: ['展会及展位展示', '门店品牌陈列', '室内活动品牌展示'],
+      note: '询价请注明立牌弧形、数量、目的地及画面要求。展示尺寸 80 × 200 厘米、画面尺寸 83 × 205 厘米均参考直形立牌；下单及印刷前请书面确认弧形画面版型、材质、重量、包装及供货配件。'
+    },
+    facts: [['Frame form', 'Curved tube frame with support feet'], ['Reference display size', '80 × 200 cm (straight stand reference)'], ['Reference graphic size', '83 × 205 cm (straight stand reference)'], ['Photographs', 'Bare frame; printed graphic not shown']],
+    factsZh: [['架体形式', '弧形管架及支撑脚'], ['参考展示尺寸', '80 × 200 厘米（参考直形立牌）'], ['参考画面尺寸', '83 × 205 厘米（参考直形立牌）'], ['实拍内容', '裸架，未展示印刷画面']],
+    gallery: [
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg', en: 'Bare frame overview', zh: '裸架整体' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.jpg', en: 'Support feet and lower frame', zh: '支撑脚及下部框架' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.jpg', en: 'Rounded top profile', zh: '顶部弧度' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.jpg', en: 'Curved side connection', zh: '弧形侧面连接' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.jpg', en: 'Upright tube connection', zh: '立管连接细节' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.jpg', en: 'Base detail', zh: '底座细节' }
+    ]
+  },
+  {
   "sku": "STANDARD-BLACK-FLAT-TUBE-3X3",
   "internalCatalogKey": true,
   "slug": "3x3-standard-black-flat-tube-canopy-frame",
@@ -243,7 +276,7 @@ function basePage(product, lang) {
   const otherUrl = `${ORIGIN}${zh ? '' : '/zh'}/products/${product.slug}.html`;
   const homeHref = zh ? '/zh/' : '/';
   const productsHref = zh ? '/zh/all-products.html' : '/all-products.html';
-  const quoteLabel = product.internalCatalogKey ? text.name : text.name.includes(product.sku) ? text.name : `${text.name} SKU ${product.sku}`;
+  const quoteLabel = product.internalCatalogKey || product.catalogIdentifier ? text.name : text.name.includes(product.sku) ? text.name : `${text.name} SKU ${product.sku}`;
   const contactHref = `${zh ? '/zh' : ''}/contact-us.html?product=${encodeURIComponent(quoteLabel)}#getQuoteForm`;
   const rows = product.specs
     ? `<div class="table-wrap"><table><thead><tr>${(zh ? product.headersZh : product.headersEn).map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${product.specs.map((row) => `<tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`
@@ -276,9 +309,9 @@ ${GTM_BODY}
   <main class="static-product">
     <nav class="crumbs" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${homeHref}">${zh ? '首页' : 'Home'}</a> / <a href="${productsHref}">${zh ? '产品目录' : 'Products'}</a> / <span>${esc(text.name)}</span></nav>
     <article>
-      <div class="product-hero"><div><img src="${product.image}" alt="${esc(text.name)}" width="${product.imageWidth || 800}" height="${product.imageHeight || 800}" fetchpriority="high">${imageNote ? `<p class="image-note">${esc(imageNote)}</p>` : ''}</div><div><p class="eyebrow">${product.internalCatalogKey ? (zh ? '普通黑金刚 · 3×3 米扁管架' : 'Standard Black · 3×3 m flat-tube frame') : `SKU ${esc(product.sku)} · ${esc(product.model)}`}</p><h1>${esc(text.name)}</h1><p class="lead">${esc(text.intro)}</p><div class="actions"><a class="btn btn-primary" href="${contactHref}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${productsHref}">${zh ? '查看全部产品' : 'View All Products'}</a></div></div></div>
+      <div class="product-hero"><div><img src="${product.image}" alt="${esc(text.name)}" width="${product.imageWidth || 800}" height="${product.imageHeight || 800}" fetchpriority="high">${imageNote ? `<p class="image-note">${esc(imageNote)}</p>` : ''}</div><div><p class="eyebrow">${product.internalCatalogKey ? (zh ? '普通黑金刚 · 3×3 米扁管架' : 'Standard Black · 3×3 m flat-tube frame') : product.catalogIdentifier ? (zh ? '弧形立牌 · 裸架实拍' : 'Curved banner stand · Frame photographs') : `SKU ${esc(product.sku)} · ${esc(product.model)}`}</p><h1>${esc(text.name)}</h1><p class="lead">${esc(text.intro)}</p><div class="actions"><a class="btn btn-primary" href="${contactHref}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${productsHref}">${zh ? '查看全部产品' : 'View All Products'}</a></div></div></div>
       <section class="content-section"><h2>${zh ? '已确认规格' : 'Confirmed specifications'}</h2>${rows}</section>
-      ${product.gallery ? `<section class="content-section"><h2>${zh ? '产品实拍与结构细节' : 'Real product photographs and frame details'}</h2><div class="product-photo-grid">${product.gallery.map(photo => `<figure><a href="${esc(photo.src)}"><img src="${esc(photo.src)}" alt="${esc(text.name + ' — ' + photo[lang])}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async"></a><figcaption>${esc(photo[lang])}</figcaption></figure>`).join('')}</div></section><section class="content-section"><h2>${zh ? '选型时如何比较' : 'What to compare before ordering'}</h2><p>${zh ? '本款为普通黑金刚扁管架，不能直接套用 30 方管铁架、40 或 50 六角铝架的参数。请按撑杆形式、立柱尺寸、连接方式、顶布适配与包装要求逐项确认。' : 'This Standard Black flat-tube frame is a separate model from the 30 square-tube and 40/50 hexagonal aluminum ranges. Compare brace profile, leg dimensions, connections, canopy compatibility and packing rather than applying another frame’s specifications.'}</p><a href="/canopy-tent-buying-guide.html">${zh ? '帐篷采购选型指南' : 'Canopy tent buying guide'}</a></section>` : ''}
+      ${product.gallery ? `<section class="content-section"><h2>${zh ? '产品实拍与结构细节' : 'Real product photographs and frame details'}</h2><div class="product-photo-grid">${product.gallery.map(photo => `<figure><a href="${esc(photo.src)}"><img src="${esc(photo.src)}" alt="${esc(text.name + ' — ' + photo[lang])}" width="${photo.width || product.imageWidth}" height="${photo.height || product.imageHeight}" loading="lazy" decoding="async"></a><figcaption>${esc(photo[lang])}</figcaption></figure>`).join('')}</div></section>` : ''}
       <section class="content-section"><h2>${zh ? '常见应用' : 'Common applications'}</h2><ul>${text.applications.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></section>
       <section class="content-section source-note"><h2>${zh ? '询价前说明' : 'Before requesting a quote'}</h2><p>${esc(text.note)}</p><p>${zh ? '本页参数来自伟群当前产品目录记录；未列出的参数请以书面报价确认为准。' : 'Specifications on this page come from WaiKwan’s current product catalog record. Confirm unlisted details in the written quotation.'}</p></section>
     </article>
@@ -316,9 +349,9 @@ function page(product, lang) {
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '型号参数' : 'Models & Specifications'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table">${facts}</table></div></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '选型说明' : 'Frame Selection'}</h2><p>${zh ? '普通黑金刚为独立的扁管架款式，不能套用 30 方管铁架或 40/50 六角铝架的重量、壁厚和性能参数。请结合撑杆、连接件及顶布适配要求选型。' : 'Standard Black is a separate flat-tube frame model. Do not apply the weight, wall thickness or performance specifications of the 30 square-tube or 40/50 hexagonal frames. Compare brace profile, joints and canopy compatibility.'}</p></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
-  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261014-products"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
+  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261014-static-stand"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
-    .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-products" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts + '\n</body>');

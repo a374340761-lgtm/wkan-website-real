@@ -29,6 +29,7 @@
   }
 
   var MIRRORED_EN = {
+    '/products/curved-fabric-banner-stand.html': true,
     '/products/3x3-standard-black-flat-tube-canopy-frame.html': true,
     '/all-products.html': true,
     '/10x10-pop-up-canopy-tent.html': true,

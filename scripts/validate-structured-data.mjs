@@ -95,6 +95,9 @@ function validateProduct(product, fileRel) {
     const offers = Array.isArray(product.offers) ? product.offers : [product.offers];
     for (const offer of offers) {
       if (!offer || typeof offer !== 'object') continue;
+      if (String(offer.price ?? offer.priceSpecification?.price ?? '').trim().match(/^0(?:\.0+)?$/)) {
+        issues.push({ file: fileRel, field: 'offers.price', issue: 'quote-only products must not use a fabricated zero-dollar price' });
+      }
       if (!offer.url) {
         issues.push({ file: fileRel, field: 'offers.url', issue: 'Offer missing url' });
       }
@@ -122,6 +125,9 @@ for (const rel of htmlFiles) {
       continue;
     }
     const products = collectProducts(parsed);
+    if (/^(?:zh\/)?seo\//.test(rel) && products.length) {
+      allIssues.push({ file: rel, field: '@type', issue: 'procurement guides must use guide metadata, not a generic Product with a borrowed SKU' });
+    }
     for (const product of products) {
       productCount += 1;
       allIssues.push(...validateProduct(product, rel));

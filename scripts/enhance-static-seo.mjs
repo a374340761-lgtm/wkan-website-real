@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { resolveSeoPageSku } from './seo-page-sku-map.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const ORIGIN = 'https://www.waikwantent.com';
@@ -280,43 +279,17 @@ function breadcrumbSchema(rel, title, canonical) {
   };
 }
 
-function productSchema(rel, html, title, description, canonical) {
-  const name = getH1(html) || title;
-  const slug = path.basename(rel, '.html');
-  const sku = resolveSeoPageSku(slug);
+function guideSchema(rel, html, title, description, canonical) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `${canonical}#product`,
-    name,
-    image: [getOgImage(html)],
+    '@type': 'Article',
+    '@id': `${canonical}#guide`,
+    headline: getH1(html) || title,
     description,
-    brand: {
-      '@type': 'Brand',
-      name: 'WaiKwan',
-    },
-    manufacturer: {
-      '@id': `${ORIGIN}/#organization`,
-    },
-    sku,
-    mpn: '',
-    category: 'Custom event tents, flags and display systems',
-    offers: {
-      '@type': 'Offer',
-      url: canonical,
-      price: '0',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      priceSpecification: {
-        '@type': 'PriceSpecification',
-        price: '0',
-        priceCurrency: 'USD',
-        description: 'Request a Quote for project pricing, MOQ, printing options and freight.',
-      },
-      seller: {
-        '@id': `${ORIGIN}/#organization`,
-      },
-    },
+    mainEntityOfPage: canonical,
+    author: { '@type': 'Organization', name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd.' },
+    publisher: { '@id': `${ORIGIN}/#organization` },
+    inLanguage: isZhRel(rel) ? 'zh-CN' : 'en',
   };
 }
 
@@ -377,7 +350,7 @@ function schemaBlock(rel, html) {
     jsonLdScript('wk-schema-breadcrumb', breadcrumbSchema(rel, title, canonical)),
   ];
   if (rel.includes('/seo/') || rel.startsWith('seo/')) {
-    blocks.push(jsonLdScript('wk-schema-product', productSchema(rel, html, title, description, canonical)));
+    blocks.push(jsonLdScript('wk-schema-guide', guideSchema(rel, html, title, description, canonical)));
   }
   const faq = extractFaqSchema(html);
   if (faq) blocks.push(jsonLdScript('wk-schema-faq', faq));

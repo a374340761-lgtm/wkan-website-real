@@ -20,6 +20,8 @@ EXCLUDE = {
     "product.html",
     "products.html",
     "tent-detail.html",
+    "product-detail.html",
+    "zh/product-detail.html",
     "news/contact-us.html",
     "zh/news/contact-us.html",
 }

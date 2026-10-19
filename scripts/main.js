@@ -396,7 +396,9 @@ function getHomeHeroSlides() {
     // Use real filenames from /images/hero (verified in repo)
     return [
         {
-            image: 'images/hero/canton-fair-140-phase-3-2026-waikwan.png',
+            image: window.matchMedia('(max-width: 767px)').matches
+                ? 'images/hero/canton-fair-140-phase-3-2026-waikwan-768.webp'
+                : 'images/hero/canton-fair-140-phase-3-2026-waikwan-1536.webp',
             keyPrefix: 'home_hero_0',
             imageAlt: 'WaiKwan invitation to the 140th Canton Fair Phase 3, booth 12.1F29-30, October 31 to November 4, 2026',
             variant: 'invite',

@@ -1,0 +1,61 @@
+[
+  {
+    "url": "https://www.waikwantent.com/",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/robots.txt",
+    "status": 200,
+    "finalUrl": "https://www.waikwantent.com/robots.txt",
+    "ms": 9116,
+    "bytes": 552,
+    "headers": {
+      "cacheControl": "max-age=14400",
+      "encoding": "gzip",
+      "robots": null
+    },
+    "text": "# Waikwan Tent - https://www.waikwantent.com/robots.txt\n# Canonical production host: https://www.waikwantent.com\n\nUser-agent: *\nAllow: /\n\n# Server / development-only paths\nDisallow: /backend/\n\n# Internal test or archived design files\nDisallow: /index.original.html\nDisallow: /index.wireframe.html\nDisallow: /test_logo.html\nDisallow: /test_stats.html\n\n# Legacy entry points must remain crawlable so crawlers can see their\n# redirects, canonical targets and noindex directives. They are not in sitemaps.\n\nSitemap: https://www.waikwantent.com/sitemap.xml\n"
+  },
+  {
+    "url": "https://www.waikwantent.com/sitemap.xml",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/product-detail.html",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/zh/product-detail.html",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/products/folding-chair-31007.html",
+    "status": 200,
+    "finalUrl": "https://www.waikwantent.com/products/folding-chair-31007.html",
+    "ms": 1998,
+    "bytes": 8806,
+    "headers": {
+      "cacheControl": "max-age=600",
+      "encoding": "br",
+      "robots": null
+    },
+    "canonical": "https://www.waikwantent.com/products/folding-chair-31007.html"
+  },
+  {
+    "url": "https://www.waikwantent.com/manufacturing-capabilities.html",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/faq-moq.html",
+    "status": 200,
+    "finalUrl": "https://www.waikwantent.com/faq-moq.html",
+    "ms": 1805,
+    "bytes": 25416,
+    "headers": {
+      "cacheControl": "max-age=600",
+      "encoding": "br",
+      "robots": null
+    },
+    "canonical": "https://www.waikwantent.com/faq-moq.html"
+  }
+]

@@ -15,3 +15,15 @@
 @import url("modules/faq-page.css");
 @import url("modules/product-cards.css");
 @import url("modules/wk-mobile-nav.css");
+
+/* Product decision tables use confirmed catalog facts. */
+.seo-comparison table { width: 100%; border-collapse: collapse; line-height: 1.6; }
+.seo-comparison th, .seo-comparison td { padding: 12px; border: 1px solid #dfe3e8; text-align: left; vertical-align: top; }
+.seo-comparison thead { background: #f3f5f7; }
+.seo-comparison tbody th { width: 25%; }
+.comparison-scroll-note { display: none; }
+@media (max-width: 767px) {
+  .seo-comparison table { font-size: 14px; min-width: 600px; }
+  .comparison-scroll-note { display: block; font-size: 14px; }
+  .seo-comparison th, .seo-comparison td { padding: 8px; overflow-wrap: normal; }
+}

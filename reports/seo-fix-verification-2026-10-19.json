@@ -1,0 +1,26 @@
+{
+  "htmlPages": 208,
+  "sitemapUrls": 148,
+  "missingLocalTargets": [],
+  "unreachableCanonicalPages": [],
+  "staticProductClickDepth": {
+    "products/3x3-standard-black-flat-tube-canopy-frame.html": 2,
+    "products/round-water-weight-bucket-9004.html": 2,
+    "products/floor-standing-seg-light-box-wk-is004.html": 2,
+    "products/folding-chair-31007.html": 2,
+    "products/curved-fabric-banner-stand.html": 2,
+    "products/semi-circle-race-gate-9403.html": 2,
+    "products/half-wall-blade-flag-connector-9014.html": 2,
+    "zh/products/round-water-weight-bucket-9004.html": 3,
+    "zh/products/floor-standing-seg-light-box-wk-is004.html": 3,
+    "zh/products/folding-chair-31007.html": 3,
+    "zh/products/semi-circle-race-gate-9403.html": 3,
+    "zh/products/half-wall-blade-flag-connector-9014.html": 3,
+    "zh/products/curved-fabric-banner-stand.html": 3,
+    "zh/products/3x3-standard-black-flat-tube-canopy-frame.html": 3
+  },
+  "heroBytes": {
+    "768": 98722,
+    "1536": 270776
+  }
+}

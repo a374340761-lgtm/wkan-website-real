@@ -105,6 +105,18 @@ function validateCategoryMigrations() {
   }
 }
 
+function validateStaticProductDiscovery() {
+  for (const prefix of ['', 'zh/']) {
+    for (const name of fs.readdirSync(path.join(ROOT, prefix, 'products'))) {
+      if (!name.endsWith('.html')) continue;
+      const href = `/${prefix}products/${name}`;
+      for (const parent of ['all-products.html', 'site-map.html']) {
+        requireCondition(read(prefix + parent).includes(`href="${href}"`), `${prefix}${parent}: missing static product link to ${name}`);
+      }
+    }
+  }
+}
+
 function loadProducts() {
   const context = { console };
   context.window = context;
@@ -151,6 +163,7 @@ function validateProducts() {
 
 validateRoutes();
 validateCategoryMigrations();
+validateStaticProductDiscovery();
 validateInquiryContract();
 const productCount = validateProducts();
 

@@ -1,0 +1,46 @@
+[
+  {
+    "route": "/product-detail.html",
+    "finalPath": "/all-products.html",
+    "canonical": "https://www.waikwantent.com/all-products.html",
+    "h1": [
+      "OEM Product Catalog for Tents, Flags and Displays"
+    ],
+    "errors": [],
+    "overflow": false,
+    "resourceBytes": 2844365
+  },
+  {
+    "route": "/zh/product-detail.html",
+    "finalPath": "/zh/all-products.html",
+    "canonical": "https://www.waikwantent.com/zh/all-products.html",
+    "h1": [
+      "OEM/ODM 产品目录"
+    ],
+    "errors": [],
+    "overflow": false,
+    "resourceBytes": 3273418
+  },
+  {
+    "route": "/",
+    "finalPath": "/",
+    "canonical": "https://www.waikwantent.com/",
+    "h1": [
+      "Custom Canopy Tent Manufacturer for OEM Tents, Flags and Displays"
+    ],
+    "errors": [],
+    "overflow": false,
+    "resourceBytes": 3410879
+  },
+  {
+    "route": "/collections/display-systems.html",
+    "finalPath": "/collections/display-systems.html",
+    "canonical": "https://www.waikwantent.com/collections/display-systems.html",
+    "h1": [
+      "Display Systems Collection"
+    ],
+    "errors": [],
+    "overflow": false,
+    "resourceBytes": 244807
+  }
+]

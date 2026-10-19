@@ -13,6 +13,9 @@ from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parent.parent
 ORIGIN = "https://www.waikwantent.com"
+# Shared parameter-driven templates redirect without a SKU. Validate their
+# markup below, but never submit their bare URLs as standalone landing pages.
+PARAMETER_TEMPLATES = {"product-detail.html", "zh/product-detail.html"}
 SKIP = {
     "404.html",
     "googlead697dfed14475b1.html",
@@ -160,7 +163,10 @@ def main() -> int:
         for item in sitemap.findall(".//sm:loc", namespace)
         if item.text
     }
-    expected_urls = set(canonicals.values())
+    expected_urls = {url for rel, url in canonicals.items() if rel not in PARAMETER_TEMPLATES}
+    for rel in PARAMETER_TEMPLATES:
+        if expected_url(rel) in sitemap_urls:
+            issues.append(f"[sitemap.xml] bare product template must not be submitted: {rel}")
     for missing in sorted(expected_urls - sitemap_urls):
         issues.append(f"[sitemap.xml] missing canonical URL: {missing}")
     for extra in sorted(sitemap_urls - expected_urls):
@@ -176,7 +182,7 @@ def main() -> int:
         for issue in issues:
             print(f"  {issue}")
         return 1
-    print(f"OK: validated {len(canonicals)} indexable HTML pages and sitemap coverage.")
+    print(f"OK: validated {len(canonicals)} HTML pages and {len(expected_urls)} sitemap landing pages.")
     return 0
 
 

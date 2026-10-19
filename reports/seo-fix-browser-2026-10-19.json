@@ -1,0 +1,98 @@
+[
+  {
+    "route": "/product-detail.html",
+    "finalPath": "/all-products.html",
+    "canonical": "https://www.waikwantent.com/all-products.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/zh/product-detail.html",
+    "finalPath": "/zh/all-products.html",
+    "canonical": "https://www.waikwantent.com/zh/all-products.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/product-detail.html?sku=31007",
+    "finalPath": "/products/folding-chair-31007.html",
+    "canonical": "https://www.waikwantent.com/products/folding-chair-31007.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/zh/product-detail.html?sku=31007",
+    "finalPath": "/zh/products/folding-chair-31007.html",
+    "canonical": "https://www.waikwantent.com/zh/products/folding-chair-31007.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/all-products.html",
+    "finalPath": "/all-products.html",
+    "canonical": "https://www.waikwantent.com/all-products.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/zh/all-products.html",
+    "finalPath": "/zh/all-products.html",
+    "canonical": "https://www.waikwantent.com/zh/all-products.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/canopy-tent-buying-guide.html",
+    "finalPath": "/canopy-tent-buying-guide.html",
+    "canonical": "https://www.waikwantent.com/canopy-tent-buying-guide.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/portable-display-buying-guide.html",
+    "finalPath": "/portable-display-buying-guide.html",
+    "canonical": "https://www.waikwantent.com/portable-display-buying-guide.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/zh/custom-canopy-tent-manufacturer.html",
+    "finalPath": "/zh/custom-canopy-tent-manufacturer.html",
+    "canonical": "https://www.waikwantent.com/zh/custom-canopy-tent-manufacturer.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/zh/portable-display-systems.html",
+    "finalPath": "/zh/portable-display-systems.html",
+    "canonical": "https://www.waikwantent.com/zh/portable-display-systems.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/collections/light-boxes.html",
+    "finalPath": "/collections/light-boxes.html",
+    "canonical": "https://www.waikwantent.com/collections/light-boxes.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "route": "/zh/collections/accessories-parts.html",
+    "finalPath": "/zh/collections/accessories-parts.html",
+    "canonical": "https://www.waikwantent.com/zh/collections/accessories-parts.html",
+    "overflow": false,
+    "errors": [],
+    "missing": []
+  }
+]

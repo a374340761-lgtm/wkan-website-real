@@ -73,7 +73,7 @@ function canonicalFor(relative) {
     'products-lightbox.html': '/advertising-light-box-manufacturer.html',
     'products-inflatable.html': '/inflatable-tent-manufacturer.html',
     'products-custom.html': '/custom-printed-tent.html',
-    'products-furniture.html': '/product-center.html',
+    'products-furniture.html': '/furniture-type.html',
     'racegate-type.html': '/product-center.html',
     'zh/product.html': '/zh/all-products.html',
     'zh/products.html': '/zh/product-center.html',
@@ -83,7 +83,7 @@ function canonicalFor(relative) {
     'zh/products-lightbox.html': '/zh/seg-light-box-manufacturer.html',
     'zh/products-inflatable.html': '/zh/product-center.html',
     'zh/products-custom.html': '/zh/custom-printed-canopy-tents.html',
-    'zh/products-furniture.html': '/zh/product-center.html',
+    'zh/products-furniture.html': '/zh/furniture-type.html',
     'zh/racegate-type.html': '/zh/product-center.html'
   };
   const cleanRel = relative.replace(/\\/g, '/');

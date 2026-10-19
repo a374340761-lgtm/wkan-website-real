@@ -1,0 +1,43 @@
+[
+  {
+    "url": "https://waikwantent.com/",
+    "error": "fetch failed",
+    "cause": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  {
+    "url": "https://www.waikwantent.com/robots.txt",
+    "error": "fetch failed",
+    "cause": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  {
+    "url": "https://www.waikwantent.com/sitemap.xml",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/portable-display-systems.html",
+    "status": 200,
+    "finalUrl": "https://www.waikwantent.com/portable-display-systems.html",
+    "bytes": 47850,
+    "canonical": "https://www.waikwantent.com/portable-display-systems.html"
+  },
+  {
+    "url": "https://www.waikwantent.com/product-detail.html?sku=2001",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "url": "https://www.waikwantent.com/contact-us.html",
+    "status": 200,
+    "finalUrl": "https://www.waikwantent.com/contact-us.html",
+    "bytes": 40341,
+    "canonical": "https://www.waikwantent.com/contact-us.html"
+  },
+  {
+    "url": "https://www.waikwantent.com/all-products.html",
+    "error": "fetch failed",
+    "cause": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  {
+    "url": "https://www.waikwantent.com/zh/",
+    "error": "The operation was aborted due to timeout"
+  }
+]

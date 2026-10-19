@@ -1,0 +1,34 @@
+[
+  {
+    "route": "/product-detail.html?sku=31007",
+    "finalPath": "/products/folding-chair-31007.html",
+    "canonical": "https://www.waikwantent.com/products/folding-chair-31007.html",
+    "h1": [
+      "Folding Chair WK-Y45"
+    ]
+  },
+  {
+    "route": "/products/folding-chair-31007.html",
+    "finalPath": "/products/folding-chair-31007.html",
+    "canonical": "https://www.waikwantent.com/products/folding-chair-31007.html",
+    "h1": [
+      "Folding Chair WK-Y45"
+    ]
+  },
+  {
+    "route": "/product-detail.html?sku=WK-IS004",
+    "finalPath": "/products/floor-standing-seg-light-box-wk-is004.html",
+    "canonical": "https://www.waikwantent.com/products/floor-standing-seg-light-box-wk-is004.html",
+    "h1": [
+      "Floor-standing SEG Light Box WK-IS004"
+    ]
+  },
+  {
+    "route": "/products/floor-standing-seg-light-box-wk-is004.html",
+    "finalPath": "/products/floor-standing-seg-light-box-wk-is004.html",
+    "canonical": "https://www.waikwantent.com/products/floor-standing-seg-light-box-wk-is004.html",
+    "h1": [
+      "Floor-standing SEG Light Box WK-IS004"
+    ]
+  }
+]

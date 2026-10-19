@@ -51,7 +51,7 @@ EMAIL_PASS=your-app-password
 修改 `server.js` 中的 `transporter` 配置：
 
 ```javascript
-const transporter = nodemailer.createTransporter({
+const transporter = nodemailer.createTransport({
     host: 'smtp.your-provider.com',
     port: 587,
     secure: false,

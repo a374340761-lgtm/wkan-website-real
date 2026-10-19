@@ -45,8 +45,8 @@
 | `scripts/bilingual-routing.js` | 中英切换、镜像页清单和本地化内部链接 |
 | `scripts/all-products.js`、`product-center.js` | 目录筛选与产品系列入口；读取共享产品/系列数据 |
 | `scripts/product-detail.js`、`product-seo-map.js` | SKU详情渲染与生成的产品SEO数据 |
-| `scripts/tent-types.js`、`flag-types.js`、`tent-subcategories.js` | 系列和子分类数据，不应与产品标识随意分叉 |
-| `scripts/*-type.js`、`six-sided-booth.js`、`accessories-page.js`、`tents*.js` | 对应系列、配件或帐篷展示逻辑；racegate-type.js已标为废弃 |
+| `scripts/tent-types.js`、`flag-types.js` | 系列和子分类数据，不应与产品标识随意分叉 |
+| `scripts/*-type.js`、`six-sided-booth.js`、`accessories-page.js`、`tents*.js` | 对应系列、配件或帐篷展示逻辑；无引用的 racegate-type.js、tent-subcategories.js、tents.js 已于 2026-10-19 删除 |
 | `scripts/legacy-route.js`、`product-page.js` | 旧入口兼容与历史详情实现；改路由要保留SKU、语言和参数 |
 | `scripts/cart.js` | 本地询价清单；`wk_rfq_cart_v1`，含旧存储迁移 |
 | `scripts/contact.js` | 表单校验、询价负载、唯一询价标识和提交状态 |

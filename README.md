@@ -196,7 +196,9 @@ this.whatsAppSecondary = '8613824540280'; // 备用号
 
 #### WeChat 信息（前端）
 1. 准备微信二维码图片：`images/wechat-qr.png`
-2. 编辑 `products.html` 中的 WeChat ID：
+2. 联系页的 WeChat 文案位于 `contact-us.html` 与 `zh/contact-us.html`；询价面板相关逻辑位于 `scripts/products.js`。维护时同步核对 `massifmyth`，不要编辑已成为跳转入口的 `products.html`。
+
+询价面板若包含以下节点，也需要保持一致：
 ```html
 <span id="wechatIdText">massifmyth</span>
 ```

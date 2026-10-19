@@ -81,6 +81,30 @@ function validateInquiryContract() {
   requireCondition(fs.existsSync(path.join(ROOT, 'docs', 'INQUIRY-OPERATIONS.md')), 'inquiry operations contract is missing');
 }
 
+function validateCategoryMigrations() {
+  for (const prefix of ['', 'zh/']) {
+    for (const category of ['tents', 'flags', 'displays', 'lightbox', 'inflatable', 'custom', 'furniture']) {
+      const relative = `${prefix}products-${category}.html`;
+      if (!fs.existsSync(path.join(ROOT, relative))) continue;
+      const html = read(relative);
+      const refresh = html.match(/http-equiv="refresh" content="0;url=([^"]+)"/i)?.[1];
+      const canonical = html.match(/rel="canonical" href="([^"]+)"/i)?.[1];
+      requireCondition(Boolean(refresh && canonical), `${relative}: migration destination is missing`);
+      if (!refresh || !canonical) continue;
+      const target = new URL(refresh, `https://www.waikwantent.com/${relative}`);
+      requireCondition(target.href === canonical, `${relative}: redirect and canonical must agree`);
+      const targetFile = path.join(ROOT, target.pathname.slice(1));
+      requireCondition(fs.existsSync(targetFile), `${relative}: migration target does not exist`);
+      if (fs.existsSync(targetFile)) {
+        const targetHtml = fs.readFileSync(targetFile, 'utf8');
+        requireCondition(!/http-equiv="refresh"/i.test(targetHtml), `${relative}: target must not be another redirect`);
+        requireCondition(targetHtml.includes(`rel="canonical" href="${canonical}"`), `${relative}: target must be self-canonical`);
+      }
+      requireCondition(html.includes(`href="${target.pathname}"`), `${relative}: fallback link must reach the destination`);
+    }
+  }
+}
+
 function loadProducts() {
   const context = { console };
   context.window = context;
@@ -126,6 +150,7 @@ function validateProducts() {
 }
 
 validateRoutes();
+validateCategoryMigrations();
 validateInquiryContract();
 const productCount = validateProducts();
 

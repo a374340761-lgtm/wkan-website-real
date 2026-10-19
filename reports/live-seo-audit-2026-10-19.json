@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-10-19T14:26:03.180Z",
+  "results": [
+    {
+      "url": "https://waikwantent.com/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "http://www.waikwantent.com/",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/",
+      "server": "cloudflare",
+      "bytes": 78088,
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
+      "canonical": "https://www.waikwantent.com/",
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "https://www.waikwantent.com/",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/",
+      "server": "cloudflare",
+      "bytes": 78088,
+      "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
+      "canonical": "https://www.waikwantent.com/",
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "https://www.waikwantent.com/robots.txt",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.waikwantent.com/sitemap.xml",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
+      "status": 200,
+      "finalUrl": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
+      "server": "cloudflare",
+      "bytes": 72733,
+      "title": "Custom Canopy Tent Manufacturer in China | OEM Factory",
+      "canonical": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
+      "emptyTranslationSlots": 0
+    },
+    {
+      "url": "https://www.waikwantent.com/portable-display-systems.html",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.waikwantent.com/product-detail.html?sku=2001",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.waikwantent.com/does-not-exist-seo-audit-20260922.html",
+      "status": 404,
+      "finalUrl": "https://www.waikwantent.com/does-not-exist-seo-audit-20260922.html",
+      "server": "cloudflare",
+      "bytes": 6065,
+      "title": "Page Not Found | WaiKwan Tent",
+      "canonical": "https://www.waikwantent.com/404.html",
+      "emptyTranslationSlots": 0
+    }
+  ]
+}

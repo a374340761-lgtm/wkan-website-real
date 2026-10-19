@@ -1,0 +1,67 @@
+[
+  {
+    "route": "/products-tents.html",
+    "finalPath": "/custom-canopy-tent-manufacturer.html",
+    "canonical": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html"
+  },
+  {
+    "route": "/products-flags.html",
+    "finalPath": "/beach-flag-supplier.html",
+    "canonical": "https://www.waikwantent.com/beach-flag-supplier.html"
+  },
+  {
+    "route": "/products-displays.html",
+    "finalPath": "/portable-display-systems.html",
+    "canonical": "https://www.waikwantent.com/portable-display-systems.html"
+  },
+  {
+    "route": "/products-lightbox.html",
+    "finalPath": "/advertising-light-box-manufacturer.html",
+    "canonical": "https://www.waikwantent.com/advertising-light-box-manufacturer.html"
+  },
+  {
+    "route": "/products-inflatable.html",
+    "finalPath": "/inflatable-tent-manufacturer.html",
+    "canonical": "https://www.waikwantent.com/inflatable-tent-manufacturer.html"
+  },
+  {
+    "route": "/products-custom.html",
+    "finalPath": "/custom-printed-tent.html",
+    "canonical": "https://www.waikwantent.com/custom-printed-tent.html"
+  },
+  {
+    "route": "/products-furniture.html",
+    "finalPath": "/furniture-type.html",
+    "canonical": "https://www.waikwantent.com/furniture-type.html"
+  },
+  {
+    "route": "/zh/products-flags.html",
+    "finalPath": "/zh/beach-flag-supplier.html",
+    "canonical": "https://www.waikwantent.com/zh/beach-flag-supplier.html"
+  },
+  {
+    "route": "/zh/products-displays.html",
+    "finalPath": "/zh/portable-display-systems.html",
+    "canonical": "https://www.waikwantent.com/zh/portable-display-systems.html"
+  },
+  {
+    "route": "/zh/products-lightbox.html",
+    "finalPath": "/zh/seg-light-box-manufacturer.html",
+    "canonical": "https://www.waikwantent.com/zh/seg-light-box-manufacturer.html"
+  },
+  {
+    "route": "/zh/products-inflatable.html",
+    "finalPath": "/zh/product-center.html",
+    "canonical": "https://www.waikwantent.com/zh/product-center.html"
+  },
+  {
+    "route": "/zh/products-custom.html",
+    "finalPath": "/zh/custom-printed-canopy-tents.html",
+    "canonical": "https://www.waikwantent.com/zh/custom-printed-canopy-tents.html"
+  },
+  {
+    "route": "/zh/products-furniture.html",
+    "finalPath": "/zh/furniture-type.html",
+    "canonical": "https://www.waikwantent.com/zh/furniture-type.html"
+  }
+]

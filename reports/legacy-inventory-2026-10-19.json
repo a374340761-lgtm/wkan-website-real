@@ -1,0 +1,38 @@
+{
+  "oldInternalLinks": [
+    {
+      "page": "news/sign-china-2026-shanghai.html",
+      "href": "/products-inflatable.html"
+    },
+    {
+      "page": "zh/news/sign-china-2026-shanghai.html",
+      "href": "/zh/products-inflatable.html"
+    }
+  ],
+  "metaRefreshPages": [
+    "index.original.html",
+    "index.wireframe.html",
+    "products-custom.html",
+    "products-displays.html",
+    "products-flags.html",
+    "products-furniture.html",
+    "products-inflatable.html",
+    "products-lightbox.html",
+    "products-tents.html",
+    "products.html",
+    "racegate-type.html",
+    "zh/products-custom.html",
+    "zh/products-displays.html",
+    "zh/products-flags.html",
+    "zh/products-furniture.html",
+    "zh/products-inflatable.html",
+    "zh/products-lightbox.html",
+    "zh/products.html",
+    "zh/racegate-type.html"
+  ],
+  "jsNotDirectlyLoadedByHtml": [
+    "racegate-type.js",
+    "tent-subcategories.js",
+    "tents.js"
+  ]
+}

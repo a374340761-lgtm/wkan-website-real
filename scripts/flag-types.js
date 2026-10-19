@@ -388,6 +388,11 @@
     special: [
       {
         type: 'backpack_street_flags',
+        exampleImages: [{"src": "images/products/flags/backpack-street-flags/backpack-flag-assembled-feather-flag.jpg", "captionZh": "背包刀旗装配示例，展示旗面、旗杆及背包。", "captionEn": "Assembled backpack feather flag with graphic, pole and backpack.", "width": 1080, "height": 1920}, {"src": "images/products/flags/backpack-street-flags/backpack-flag-pole-mounting-detail.jpg", "captionZh": "旗杆与背包固定部位实拍。", "captionEn": "Pole mounting points on the backpack.", "width": 1080, "height": 1920}, {"src": "images/products/flags/backpack-street-flags/backpack-flag-back-panel-and-pole.jpg", "captionZh": "背包背板与装配后的旗杆。", "captionEn": "Backpack panel with the assembled pole.", "width": 1080, "height": 1920}, {"src": "images/products/flags/backpack-street-flags/backpack-flag-straps-and-disassembled-poles.jpg", "captionZh": "背带与拆分旗杆部件，实际配套以报价确认为准。", "captionEn": "Shoulder straps and disassembled pole sections; confirm supplied components in the quotation.", "width": 1080, "height": 1920}],
+        exampleImagesTitleZh: "背包旗实物与装配示例",
+        exampleImagesTitleEn: "Backpack flag photographs and assembly examples",
+        exampleImagesSubtitleZh: "实拍展示旗面、背板、固定部位、背带及拆分旗杆；请确认所需旗形和配套。点击照片可查看原图。",
+        exampleImagesSubtitleEn: "Photographs show the graphic, backpack panel, mounting points, straps and pole sections. Confirm the required flag shape and supplied kit. Select a photo to open the original.",
         rfqProductId: 95001,
         nameEn: 'Backpack Flags & Street/Display Flags',
         nameZh: '背包旗 & 街旗 / 展示旗',

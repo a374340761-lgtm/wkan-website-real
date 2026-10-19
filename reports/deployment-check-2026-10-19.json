@@ -1,0 +1,42 @@
+[
+  {
+    "name": "sitemap",
+    "error": "fetch failed",
+    "cause": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  {
+    "name": "home",
+    "error": "The operation was aborted due to timeout"
+  },
+  {
+    "name": "hero",
+    "error": "fetch failed",
+    "cause": "UND_ERR_CONNECT_TIMEOUT"
+  },
+  {
+    "name": "actions",
+    "status": 200,
+    "bytes": 27821,
+    "details": [
+      {
+        "name": "pages build and deployment",
+        "status": "in_progress",
+        "conclusion": null,
+        "url": "https://github.com/a374340761-lgtm/wkan-website-real/actions/runs/39274891622",
+        "sha": "26648be7ccf01ce4fd461f91accf66a11a20fc9f"
+      },
+      {
+        "name": "Architecture checks",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/a374340761-lgtm/wkan-website-real/actions/runs/39274892409",
+        "sha": "26648be7ccf01ce4fd461f91accf66a11a20fc9f"
+      }
+    ]
+  },
+  {
+    "name": "pages",
+    "status": 404,
+    "bytes": 124
+  }
+]

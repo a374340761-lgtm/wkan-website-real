@@ -1,0 +1,46 @@
+[
+  {
+    "locale": "/",
+    "width": 390,
+    "page": "market-stall",
+    "photos": 6,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 1440,
+    "page": "market-stall",
+    "photos": 6,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "page": "curved-card-and-hover-menu",
+    "correctPhoto": true,
+    "stallNavigation": true
+  },
+  {
+    "locale": "/zh/",
+    "width": 390,
+    "page": "market-stall",
+    "photos": 6,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 1440,
+    "page": "market-stall",
+    "photos": 6,
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "page": "curved-card-and-hover-menu",
+    "correctPhoto": true,
+    "stallNavigation": true
+  }
+]

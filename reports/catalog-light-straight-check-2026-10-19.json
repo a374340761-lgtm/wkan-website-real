@@ -1,0 +1,62 @@
+[
+  {
+    "locale": "/",
+    "sku": "DOME",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "sku": "WK-TFD-LIGHT",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "sku": "WK-TFD-CASE",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "sku": "WK-HZ-STRAIGHT",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "sku": "WK-HZ",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "sku": "DOME",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "sku": "WK-TFD-LIGHT",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "sku": "WK-TFD-CASE",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "sku": "WK-HZ-STRAIGHT",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "sku": "WK-HZ",
+    "errors": [],
+    "missing": []
+  }
+]

@@ -397,9 +397,12 @@
         <div class="tent-type-detail__text">${subtitle}</div>
         <div class="tent-type-detail__visuals" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
           ${imgs
-            .map((src) => {
-              const s = wkAssetUrl(safe(src));
-              return `<a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="" loading="lazy" /></a>`;
+            .map((entry) => {
+              const photo = typeof entry === 'string' ? { src: entry } : entry;
+              const s = wkAssetUrl(safe(photo.src));
+              const caption = safe(lang === 'zh' ? photo.captionZh : photo.captionEn);
+              const dimensions = photo.width && photo.height ? ` width="${Number(photo.width)}" height="${Number(photo.height)}"` : '';
+              return `<figure style="margin:0"><a href="${s}" target="_blank" rel="noopener"><img class="tent-type-detail__visual" src="${s}" alt="${caption}"${dimensions} loading="lazy" decoding="async" /></a>${caption ? `<figcaption>${caption}</figcaption>` : ''}</figure>`;
             })
             .join('')}
         </div>
@@ -489,6 +492,8 @@
 
   function renderSpecTablesBlock(item, selectedVariantKey) {
     const lang = getCurrentLang();
+    const verified = typeof window.WK_renderVerifiedSpecs === 'function' ? window.WK_renderVerifiedSpecs(item.rfqProductId, lang, (r,g) => flagTypeRfqButtonHtml(item, {...r, style:r.height, poleSize:r.pole, flagSize:r.graphic}, g.titleEn)) : '';
+    if (verified) return verified;
     if (Array.isArray(item.specTables) && item.specTables.length) {
       const parts = item.specTables.map((tbl) => {
         const bt = lang === 'zh' ? (tbl.titleZh || tbl.titleEn || '') : (tbl.titleEn || tbl.titleZh || '');

@@ -1,0 +1,776 @@
+{
+  "sourceDirectory": "C:\\Users\\User\\Downloads\\2026价格表",
+  "files": {
+    "2026奥动牌沙滩旗杆价格.xlsx": "fffe9edb559bb7b12ca05496549742665b3be38a687d95ff01e284ad85a5790a",
+    "2026年星帐-充气账-圆顶帐报价表1.xls": "6fec22f8ab548f64e4cc52ee30679718ee2844b7d6963cbacd9e18809702e4ea",
+    "600D帐篷.xls": "b3a1fce9f3155bd2f33a6cb9c08a49c6c5194bbdf5b26b81fd7ac134325b8993",
+    "伟群大金刚王价格表2023.xls": "893e92400cd452921b4a503e03fcab176608de972c801cd32ac76d0066767eb4",
+    "伟群展示型材折叠背景灯箱批量价格.xls": "83b28ae61dc4c701b010df406363f1b4e46551e5909d6c1d6c792af885cf12f7",
+    "伟群帐篷有限公司（毫华铝合金方管40管30管.xls": "24822b411087cd667ca720a40219ba45369d56331bb96382e6ddfaa2c71b9dbb",
+    "伟群帐篷有限公司（豪华铁质方管40管30管架).xls": "702ab7b26fd0b848d025b0dcaa1e990788c6c455320a684895a39c4fe360c443",
+    "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls": "9d57a4066dc591e792ac77af77ecb3edfc15c8eaf52c35d4bb3f22fbae1dacdc",
+    "伟群普通黑金刚价格表.xls": "b46b951b4f33c2e09330fcbeb3ce8100839ae81266b642228051d2a117c7304a",
+    "伟群自动架价格表2023.xls": "15e5eb8883022e5b696f53e218fbb7210cd666e4e0980e05f5ef720c4819836a",
+    "帐篷配件.xls": "2fbbb81451ab93a40cec4f54f033dc38e8fc7f6c78bb38e2640473d554b4a00d",
+    "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx": "4fdc5a4a57ff36b752b79b1512e368dd84fbf0cf02aca7ea5fcd3a16976244a3",
+    "广州市伟群展示器材有限公司快幕秀。拉网.xls": "7cd032c2b290f66b2c47bfe59c325e0eb24328c6e0382df3978439842a39b165",
+    "广西伟群制造有限公司家具折叠桌布价格表.xlsx": "9410915b0f00b996ae39a22fe5ccbb743cf9176c1f58d9a7251530b4bfa9191c",
+    "广西伟群帐篷充气桌椅报价表.xlsx": "73053c17322138e75391f065a7edabac82c571a6682eed89d50b2ded30406381",
+    "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls": "5d9b28882acb7b3f43f2768ac1f0ad2ffee27de1b09cd07ee8103f47d923013f",
+    "广西伟群帐篷制造有限公司300DPU防水布热转印.xls": "cbad0859935761e7aa518ebfc3bcf74ae009995a7252ec281a0c2c12d0a71b66",
+    "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx": "13ff0eece0dff215e01dd59fb7852139e9aa3d3cddec6625c88d2f7805e2c80d",
+    "广西伟群帐篷闭气V型（三脚）价格表.xlsx": "1564b88a4c5e0d3f5bd874d876f5c5de25453650c365ad6b2cf135925ca09b5f",
+    "广西伟群帐篷闭气拱门价格表241205.xlsx": "808470b49d74810a0214a3bfedaa856169e9299e971c99e0c439bb2d7d18f461",
+    "桌子+椅子价格表.xls": "c2757d1ffa38ba873ab0a0ba17603936a51024c0d30b6310940aeb88e8ba61e8"
+  },
+  "matches": [
+    {
+      "target": "31001",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        12,
+        17,
+        22,
+        27
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "31005",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        52
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31006",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        11
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31007",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        4
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31008",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        10
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31009",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        32
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31010",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        37,
+        42,
+        47
+      ],
+      "configurations": 3
+    },
+    {
+      "target": "31013",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        58
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31014",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        9
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31015",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        59
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31016",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        61
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31202",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        65
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31203",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        62
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31204",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        63
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "31205",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        64
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "2002",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "40-50管豪华铁铝菱形架17KG款",
+      "rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "configurations": 9
+    },
+    {
+      "target": "2002",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "铝合金40管经济款15.5KG款",
+      "rows": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "configurations": 9
+    },
+    {
+      "target": "2003",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "40-50管豪华铁铝菱形架17KG款",
+      "rows": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "configurations": 8
+    },
+    {
+      "target": "2003",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "50管1.7厚",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "configurations": 8
+    },
+    {
+      "target": "2001",
+      "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+      "sheet": "豪华铁30.40方形架",
+      "rows": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "configurations": 7
+    },
+    {
+      "target": "9002",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        6
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9003",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        3
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9004",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        7
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9011",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        16
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9012",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        19
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9015",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        23
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9016",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        24
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9020",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        26
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9021",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        27
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9022",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        28
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9023",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        29
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9024",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        14
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9001",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        4
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9005",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        6
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9006",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        7
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9009",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        10
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9010",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        11
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9013",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        14
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9014",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        15
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "9017",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        16
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "42003",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "拉网",
+      "rows": [
+        5,
+        6,
+        7
+      ],
+      "configurations": 3
+    },
+    {
+      "target": "43003",
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "sheet": "卡布拉网灯箱",
+      "rows": [
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "configurations": 7
+    },
+    {
+      "target": "43003",
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "sheet": "卡布拉网灯箱",
+      "rows": [
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "configurations": 8
+    },
+    {
+      "target": "43002",
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "sheet": "型材灯箱",
+      "rows": [
+        4,
+        6,
+        7,
+        8,
+        9
+      ],
+      "configurations": 5
+    },
+    {
+      "target": "95003",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "configurations": 8
+    },
+    {
+      "target": "95005",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        23,
+        25,
+        27,
+        29,
+        36,
+        38,
+        40,
+        42,
+        45,
+        46,
+        47
+      ],
+      "configurations": 11
+    },
+    {
+      "target": "95004",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        24,
+        26,
+        28,
+        30,
+        37,
+        39,
+        41,
+        43
+      ],
+      "configurations": 8
+    },
+    {
+      "target": "95007",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        31,
+        32,
+        33,
+        34
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "95009",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        18,
+        19,
+        20,
+        128,
+        129,
+        130
+      ],
+      "configurations": 6
+    },
+    {
+      "target": "95008",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        131,
+        132,
+        133
+      ],
+      "configurations": 3
+    },
+    {
+      "target": "95010",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        134,
+        135,
+        136
+      ],
+      "configurations": 3
+    },
+    {
+      "target": "95001",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        79
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "95012",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        3,
+        13,
+        14,
+        15,
+        16,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        100,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        125,
+        126
+      ],
+      "configurations": 30
+    },
+    {
+      "target": "tent:star_1",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "single peak star tent",
+      "rows": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "configurations": 6
+    },
+    {
+      "target": "tent:star_2",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "double peak star tent",
+      "rows": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "configurations": 6
+    },
+    {
+      "target": "tent:inflatable",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "inflatable",
+      "rows": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "tent:inflatable-three-leg-tent",
+      "file": "广西伟群帐篷闭气V型（三脚）价格表.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "tent:inflatable-single-chair",
+      "file": "广西伟群帐篷充气桌椅报价表.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        4
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "tent:inflatable-double-chair",
+      "file": "广西伟群帐篷充气桌椅报价表.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        5
+      ],
+      "configurations": 1
+    },
+    {
+      "target": "tent:inflatable-column",
+      "file": "广西伟群帐篷充气桌椅报价表.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "configurations": 8
+    },
+    {
+      "target": "31101",
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "sheet": "桌布",
+      "rows": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "31101",
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "sheet": "桌布",
+      "rows": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "31101",
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "sheet": "桌布",
+      "rows": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "configurations": 4
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "file": "伟群普通黑金刚价格表.xls",
+      "sheet": "普通架",
+      "rows": [
+        5,
+        7,
+        9,
+        11,
+        13,
+        17
+      ],
+      "configurations": 6
+    }
+  ],
+  "omitted": [
+    "No exact product match: 1x1m 40mm market stall. The banner-stall sheet describes different 1.2–2.4m products.",
+    "Light box row WK1 1x4 has 770x12970; WK2 2x2 repeats 1980x2950; profile 85x2H conflicts with 850x2200. These rows are excluded.",
+    "AD-H1 universal frame differs from WK-HO codes; WK-HZ differs from WK-FS waveline codes. No size or weight substitution between these codes.",
+    "9401/9402/9403 are fiberglass race gates; inflatable arch tables do not apply. The supplementary photo does not unambiguously map every frame shape to these SKUs.",
+    "Fabric tables list different 300D/420D/600D options. No blanket waterproof, fire or UV performance claim is applied to all tent configurations.",
+    "AD-T80 dome tent differs from the existing dome-3-folders furniture grouping. No cross-assignment.",
+    "Packing weights and empty item weights with ambiguous labels remain unmerged."
+  ],
+  "policy": "Only verified product specifications are published. Prices and sales terms are excluded."
+}

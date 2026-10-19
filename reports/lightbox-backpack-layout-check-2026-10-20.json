@@ -1,0 +1,152 @@
+[
+  {
+    "locale": "/",
+    "test": "lightbox-hover",
+    "types": 4
+  },
+  {
+    "locale": "/",
+    "width": 390,
+    "test": "backpack",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 390,
+    "test": "stall",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 390,
+    "test": "universal",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 390,
+    "test": "curved",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 390,
+    "test": "canopy",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 1440,
+    "test": "backpack",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 1440,
+    "test": "stall",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 1440,
+    "test": "universal",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 1440,
+    "test": "curved",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/",
+    "width": 1440,
+    "test": "canopy",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "test": "lightbox-hover",
+    "types": 4
+  },
+  {
+    "locale": "/zh/",
+    "width": 390,
+    "test": "backpack",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 390,
+    "test": "stall",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 390,
+    "test": "universal",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 390,
+    "test": "curved",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 390,
+    "test": "canopy",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 1440,
+    "test": "backpack",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 1440,
+    "test": "stall",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 1440,
+    "test": "universal",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 1440,
+    "test": "curved",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "/zh/",
+    "width": 1440,
+    "test": "canopy",
+    "errors": [],
+    "missing": []
+  }
+]

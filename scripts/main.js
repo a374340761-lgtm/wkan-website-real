@@ -1322,6 +1322,7 @@ function initNavigation() {
     enhanceRacegateDropdown();
     enhanceFurnitureDropdown();
     ensureProductCenterDropdownHasLightbox();
+    enhanceLightboxDropdown();
     ensureProductCenterDropdownHasAccessories();
     ensureAboutAndResourcesNavigation();
 
@@ -1800,6 +1801,8 @@ function enhanceDisplaysDropdown() {
         { href: 'all-products.html?cat=displays&sub=tension-fabric', translateKey: 'menu_displays_tension_fabric' },
         { href: 'all-products.html?cat=displays&sub=fabric-banner-stands', translateKey: 'menu_popup_fabric_banner_stands' },
         { href: 'all-products.html?cat=displays&sub=tfd-straight-line', translateKey: 'menu_popup_tfd_straight_line_series' },
+        { href: '/product-detail.html?sku=WK-HZ', translateKey: 'menu_popup_tfd_curved_line_series', zh: '弧形系列', en: 'Curved Line Series' },
+        { href: '/products/1x1m-40mm-aluminum-market-stall.html', translateKey: 'menu_portable_market_stall', zh: '1×1米便携摆摊架', en: '1×1 m Portable Market Stall' },
         { href: 'all-products.html?cat=displays&sub=tfd-c-shaped', translateKey: 'menu_popup_tfd_c_shaped_series' },
         { href: 'all-products.html?cat=displays&sub=tfd-accessories', translateKey: 'menu_popup_tfd_accessories' },
 
@@ -1822,7 +1825,8 @@ function enhanceDisplaysDropdown() {
         const links = Array.from(menu.querySelectorAll('a[href]'));
         const displaysLink = links.find((a) => {
             const href = (a.getAttribute('href') || '').toLowerCase();
-            return href.includes('cat=displays') || href.includes('category=displays');
+            return href.includes('cat=displays') || href.includes('category=displays') ||
+                (href.includes('portable-display-systems.html') && Boolean(a.querySelector('[data-translate="nav_cat_displays"]')));
         });
 
         if (!displaysLink) return;
@@ -1865,7 +1869,7 @@ function enhanceDisplaysDropdown() {
             a.href = wkLocalizedInternalLinkSafe(normalized);
             if (it.translateKey) {
                 a.setAttribute('data-translate', it.translateKey);
-                a.textContent = '';
+                a.textContent = (window.wkI18n && window.wkI18n.t(it.translateKey)) || (getCurrentLang() === 'zh' ? it.zh : it.en) || '';
             } else {
                 const zh = document.createElement('span');
                 zh.className = 'zh';
@@ -1884,6 +1888,10 @@ function enhanceDisplaysDropdown() {
         if (window.multiLang && typeof window.multiLang.translatePage === 'function') {
             window.multiLang.translatePage();
         }
+        items.forEach(it => {
+            const link = sub.querySelector(`[data-translate="${it.translateKey}"]`);
+            if (link && !link.textContent.trim()) link.textContent = (getCurrentLang() === 'zh' ? it.zh : it.en) || '';
+        });
 
         // On touch/mobile, first tap opens submenu instead of navigating.
         displaysLink.addEventListener('click', (e) => {
@@ -2103,6 +2111,52 @@ function enhanceFurnitureDropdown() {
     };
 
     waitForProductManager(inject);
+}
+
+function enhanceLightboxDropdown() {
+    const items = [
+        ['base-style-variant', 'menu_lightbox_base_style_variant', '灯箱展示架', 'Light Box Stands'],
+        ['round-tube-light-box', 'menu_lightbox_round_tube', '圆管灯箱系列', 'Round Tube Light Boxes'],
+        ['aluminum-profile-seg-light-box', 'menu_lightbox_aluminum_profile', '铝型材卡布灯箱系列', 'Aluminum Profile SEG Light Boxes'],
+        ['seg-net-light-box', 'menu_lightbox_seg_net', '卡布拉网灯箱系列', 'SEG Pop-up Light Boxes']
+    ];
+    document.querySelectorAll('.nav-item-dropdown > .dropdown-menu').forEach(menu => {
+        if (menu.querySelector('[data-lightbox-submenu]')) return;
+        const link = Array.from(menu.children).find(a => a.tagName === 'A' && (
+            /product-center\.html\?(?:cat|category)=lightbox/.test(a.getAttribute('href') || '') ||
+            a.querySelector('[data-translate="nav_light_boxes_nav"]')
+        ));
+        if (!link) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dropdown-item-with-submenu';
+        wrapper.dataset.lightboxSubmenu = '1';
+        menu.insertBefore(wrapper, link);
+        wrapper.appendChild(link);
+        link.setAttribute('aria-haspopup', 'true');
+        link.setAttribute('aria-expanded', 'false');
+        const caret = document.createElement('span');
+        caret.className = 'wk-submenu-caret'; caret.textContent = '›'; link.appendChild(caret);
+        const submenu = document.createElement('div'); submenu.className = 'dropdown-submenu';
+        const overview = document.createElement('a'); overview.href = link.href;
+        overview.textContent = getCurrentLangSafe() === 'zh' ? '概览' : 'Overview';
+        overview.dataset.translate = 'ui_overview'; submenu.appendChild(overview);
+        items.forEach(([category, key, zh, en]) => {
+            const a = document.createElement('a');
+            a.href = wkLocalizedInternalLinkSafe('/all-products.html?cat=lightbox&sub=' + category);
+            a.dataset.translate = key;
+            a.textContent = (window.wkI18n && window.wkI18n.t(key)) || (getCurrentLangSafe() === 'zh' ? zh : en);
+            submenu.appendChild(a);
+        });
+        wrapper.appendChild(submenu);
+        link.addEventListener('click', event => {
+            if (!wkShouldToggleNestedSubmenuOnClick()) return;
+            event.preventDefault();
+            const open = !wrapper.classList.contains('is-open');
+            if (open) wkCloseNestedSubmenuPeers(menu, wrapper);
+            wrapper.classList.toggle('is-open', open);
+            link.setAttribute('aria-expanded', String(open));
+        });
+    });
 }
 
 function ensureProductCenterDropdownHasLightbox() {

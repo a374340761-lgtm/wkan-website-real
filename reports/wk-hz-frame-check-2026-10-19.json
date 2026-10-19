@@ -1,0 +1,38 @@
+[
+  {
+    "width": 390,
+    "locale": "/",
+    "photos": 8,
+    "detailPhotos": 8,
+    "errors": [],
+    "missing": [],
+    "overflow": false
+  },
+  {
+    "width": 390,
+    "locale": "/zh/",
+    "photos": 8,
+    "detailPhotos": 8,
+    "errors": [],
+    "missing": [],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "locale": "/",
+    "photos": 8,
+    "detailPhotos": 8,
+    "errors": [],
+    "missing": [],
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "locale": "/zh/",
+    "photos": 8,
+    "detailPhotos": 8,
+    "errors": [],
+    "missing": [],
+    "overflow": false
+  }
+]

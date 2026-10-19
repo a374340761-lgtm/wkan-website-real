@@ -521,7 +521,7 @@
     const SEARCH_SYNONYMS = {
       // ===== Beach Flags =====
       "沙滩旗": ["beach flag", "beach flags", "feather flag", "feather flags", "teardrop flag", "teardrop flags", "swooper flag"],
-      "羽毛旗": ["feather flag", "feather flags", "beach flag"],
+      "刀旗": ["feather flag", "feather flags", "beach flag"],
       "滴水旗": ["teardrop flag", "teardrop flags", "beach flag", "teardrop banner"],
       "水滴旗": ["teardrop flag", "teardrop flags", "beach flag"],
       "沙滩旗杆": ["flag pole", "flagpole", "beach flag pole", "beach flagpole", "pole", "mast"],

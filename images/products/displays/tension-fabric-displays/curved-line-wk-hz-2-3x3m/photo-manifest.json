@@ -1,0 +1,71 @@
+{
+  "sku": "WK-HZ",
+  "sampleSize": "2.3 × 3 m",
+  "scope": "Bare frame photographs only; fabric graphic not installed.",
+  "photos": [
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-frame-overview.jpg",
+      "captionZh": "2.3×3米弧形框架整体实拍；未安装布画。",
+      "captionEn": "2.3×3 m curved frame overview; fabric graphic not installed.",
+      "width": 1702,
+      "height": 1276,
+      "sourceFile": "d1ea34568c4cd5bede661a24f8de3aa6.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-upper-frame-profile.jpg",
+      "captionZh": "弧形顶部与两侧立管的整体轮廓。",
+      "captionEn": "Curved upper rail and side upright profile.",
+      "width": 1702,
+      "height": 1276,
+      "sourceFile": "8533c18cb929c0922ada7f4b1ef1b200.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-lower-curved-rail.jpg",
+      "captionZh": "底部弧形横管与侧边转角。",
+      "captionEn": "Lower curved rail and side corners.",
+      "width": 1702,
+      "height": 1276,
+      "sourceFile": "8eb193d8fceb5f07b7b51ed96e49694c.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-numbered-lower-tube-joint.jpg",
+      "captionZh": "下部弯管拼接与字母配对标记。",
+      "captionEn": "Lower bent-tube joint and matching letter marks.",
+      "width": 1024,
+      "height": 1366,
+      "sourceFile": "8d0acb1e105529804cbb175df805b52f.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-rounded-bottom-corner.jpg",
+      "captionZh": "底部圆弧转角与插接连接位置。",
+      "captionEn": "Rounded bottom corner and tube connections.",
+      "width": 1280,
+      "height": 960,
+      "sourceFile": "910b939e80c9029f2f165a9ebe33a85c.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-upper-bend-and-joint.jpg",
+      "captionZh": "顶部弯管轮廓与拼接细节。",
+      "captionEn": "Upper tube bend and joint detail.",
+      "width": 1276,
+      "height": 958,
+      "sourceFile": "9ed75594ee7dc3cb9228a403fc313ad6.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-upright-push-button-joint.jpg",
+      "captionZh": "立管接缝与弹扣定位细节。",
+      "captionEn": "Upright tube seam and locating push button.",
+      "width": 960,
+      "height": 1280,
+      "sourceFile": "ce3123cb4539ea655e71007dddcdd69a.jpg"
+    },
+    {
+      "src": "images/products/displays/tension-fabric-displays/curved-line-wk-hz-2-3x3m/wk-hz-curved-backwall-2-3x3m-support-tube-connection.jpg",
+      "captionZh": "支撑管与弧形横管的连接细节。",
+      "captionEn": "Support tube connection to the curved rail.",
+      "width": 960,
+      "height": 1280,
+      "sourceFile": "8420c035a0d29a1299fed697d502ec66.jpg"
+    }
+  ]
+}

@@ -157,6 +157,48 @@
                     CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png',
+                detailPhotos: [
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-overview.jpg",
+        "captionZh": "3×6 m 带顶篷整篷示例",
+        "captionEn": "3 × 6 m canopy setup overview"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-end-view.jpg",
+        "captionZh": "顶篷与侧墙搭配示例",
+        "captionEn": "Roof canopy and sidewall example"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-leg-foot.jpg",
+        "captionZh": "铝合金立柱与底脚",
+        "captionEn": "Aluminum upright and foot plate"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-roof-supports.jpg",
+        "captionZh": "顶篷内部支撑与交叉架",
+        "captionEn": "Interior roof supports and scissor frame"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-corner-joint.jpg",
+        "captionZh": "角部连接与篷布边缘",
+        "captionEn": "Corner joint and canopy edge"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-height-adjustment.jpg",
+        "captionZh": "立柱高度调节连接件",
+        "captionEn": "Leg height adjustment connector"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-interior-frame.jpg",
+        "captionZh": "内部撑杆与连接细节",
+        "captionEn": "Interior bracing and joint details"
+    },
+    {
+        "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-fabric-attachment.jpg",
+        "captionZh": "篷布固定带与交叉杆",
+        "captionEn": "Canopy attachment straps and scissor bars"
+    }
+],
                 pdfPage: 5
             },
             {

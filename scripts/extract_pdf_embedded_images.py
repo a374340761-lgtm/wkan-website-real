@@ -27,7 +27,7 @@ from collections import defaultdict
 # -----------------------------
 CATEGORY_KEYWORDS = {
     'tents': ["帐篷", "快装帐篷", "折叠帐篷", "event tent", "canopy", "marquee", "pop-up tent"],
-    'flags': ["沙滩旗", "羽毛旗", "水滴旗", "旗杆", "beach flag", "feather flag", "teardrop", "flag pole"],
+    'flags': ["沙滩旗", "刀旗", "水滴旗", "旗杆", "beach flag", "feather flag", "teardrop", "flag pole"],
     'displays': ["快幕秀", "展示系统", "背景墙", "展架", "pop-up display", "backdrop", "display wall", "trade show display"],
     'accessories': ["配件", "底座", "沙袋", "地钉", "连接件", "accessories", "base", "water bag", "sand bag", "stake", "connector"],
     'frames': ["框架", "支架", "铝架", "铁架", "frame", "structure", "aluminum frame", "steel frame"],

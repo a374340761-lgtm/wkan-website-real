@@ -26,7 +26,7 @@ CATEGORY_KEYWORDS = {
         "帐篷", "快装帐篷", "折叠帐篷", "event tent", "canopy", "marquee", "pop-up tent"
     ],
     'flags': [
-        "沙滩旗", "羽毛旗", "水滴旗", "旗杆", "beach flag", "feather flag", "teardrop", "flag pole"
+        "沙滩旗", "刀旗", "水滴旗", "旗杆", "beach flag", "feather flag", "teardrop", "flag pole"
     ],
     'displays': [
         "快幕秀", "展示系统", "背景墙", "展架", "pop-up display", "backdrop", "display wall", "trade show display"

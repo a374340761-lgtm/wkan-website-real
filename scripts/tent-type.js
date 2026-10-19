@@ -656,6 +656,12 @@
 
   function renderTableFromSpec(item, selectedVariantKey) {
     const lang = getCurrentLang();
+    const verifiedKey = STOCK_TENT_ID_BY_TYPE[item.type] || `tent:${item.type}`;
+    const verified = typeof window.WK_renderVerifiedSpecs === 'function' ? window.WK_renderVerifiedSpecs(verifiedKey, lang, STOCK_TENT_ID_BY_TYPE[item.type] ? (r,g) => tentTypeRfqButtonHtml(item, {...r, model: `${r.model} · ${lang === 'zh' ? g.titleZh : g.titleEn}`, weight:r.weight ? `${r.weight} KG` : ''}, g.titleEn) : null) : '';
+    if (verified) {
+      // Keep the existing photographs, story and related links, replacing only the parameter table.
+      return `<div class="tent-type-detail">${FOLDING_STOCK_TYPES.has(item.type) ? '' : `<h1>${safe(lang === 'zh' ? item.nameZh : item.nameEn)}</h1>`}${verified}${renderStory(item)}${renderExampleImages(item)}${renderInfoBlocks(item)}${renderPdfGuide(item)}${renderRelatedLinks(item)}</div>`;
+    }
     let table = item && item.specTable ? item.specTable : null;
     let materialNoteHtml = '';
 
@@ -876,6 +882,17 @@
       </div>`;
   }
 
+  function renderDetailPhotos(item) {
+    if (!Array.isArray(item.detailPhotos) || !item.detailPhotos.length) return '';
+    const zh = getCurrentLang() === 'zh';
+    return `<section id="canopy-3x6-details" class="tent-type-detail__block" style="scroll-margin-top:130px">
+      <h2>${zh ? '40 mm 铝帐篷 · 3×6 m 带顶篷实拍细节' : '40 mm aluminum tent · 3 × 6 m canopy details'}</h2>
+      <p>${zh ? '本组照片展示 3×6 m 带顶篷样品、立柱底脚、高度调节件、内部交叉支架与篷布固定方式。侧墙和配套件以询价确认配置为准。' : 'These photos show a 3 × 6 m canopy sample, upright feet, height adjustment, interior scissor frame and fabric attachments. Confirm sidewalls and included accessories in your quotation.'}</p>
+      <div class="tent-type-detail__visuals">${item.detailPhotos.map(p => { const caption = safe(zh ? p.captionZh : p.captionEn); const src = wkAssetUrl(p.src); return `<figure style="margin:0;min-width:0"><a href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${caption}" loading="lazy" decoding="async" style="width:100%;height:320px;object-fit:contain" /></a><figcaption>${caption}</figcaption></figure>`; }).join('')}</div>
+      <p><a href="product-detail.html?id=2002">${zh ? '查看 40 mm 系列规格与询价' : 'View 40 mm series specifications and request a quote'}</a> · <a href="tent-type.html">${zh ? '比较折叠帐篷系列' : 'Compare folding canopy series'}</a></p>
+    </section>`;
+  }
+
   function renderStory(item) {
     const lang = getCurrentLang();
     if (!item) return '';
@@ -888,6 +905,8 @@
       <div class="tent-type-detail__block">
         <div class="tent-type-detail__blockTitle">${title}</div>
         ${introPhoto}
+        ${item.detailPhotos ? `<p><a href="#canopy-3x6-details">${lang === 'zh' ? '查看 3×6 m 带顶篷实拍细节（8 张）' : 'View 3 × 6 m canopy details (8 photos)'}</a></p>` : ''}
+        ${renderDetailPhotos(item)}
         ${lang === 'zh'
           ? `
             ${zh ? renderRichText(zh) : ''}
@@ -1099,6 +1118,9 @@
     root.innerHTML = bodyHtml;
 
     bindFoldingStockGallery(root);
+    if (window.location.hash === '#canopy-3x6-details') {
+      requestAnimationFrame(() => root.querySelector('#canopy-3x6-details')?.scrollIntoView());
+    }
     bindTentTypeRfq(root);
 
     if (item.type === 'tent_accessories' && typeof window.WK_mountAccessoriesGrid === 'function') {

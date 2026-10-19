@@ -245,6 +245,128 @@ export const STATIC_PRODUCTS = [
     facts: [['Model', 'WK-IS004'], ['Graphic size', '100 × 200 cm'], ['Graphic', 'Fabric / SEG graphic'], ['Backlight', 'Optional LED'], ['Base', 'Floor-standing, for large-format long-term display']],
     factsZh: [['型号', 'WK-IS004'], ['画面尺寸', '100 × 200 cm'], ['画面', '布画 / SEG 卡布画面'], ['背光', '可选 LED'], ['底座', '落地底座，适合大画面长期陈列']],
   },
+{
+  "sku": "MARKET-STALL-1X1-40MM",
+  "slug": "1x1m-40mm-aluminum-market-stall",
+  "catalogIdentifier": true,
+  "en": {
+    "name": "1×1 m Portable Aluminum Market Stall",
+    "title": "1×1 m Market Stall | 40 mm Aluminum Folding Frame | WaiKwan",
+    "description": "Portable 1×1 m market stall with a 40 mm aluminum tube frame. See expanded and folded frame photographs, counter connections, a complete setup and an optional carry bag.",
+    "intro": "This portable market stall has a 1×1 m footprint and a 40 mm aluminum tube frame. Photographs show the expanded frame, folded storage, counter connections and a complete fabric-covered setup example.",
+    "applications": [
+      "Markets and temporary stalls",
+      "Brand promotion and sampling",
+      "Exhibitions and event reception points"
+    ],
+    "note": "A compatible carry bag is optional. Confirm whether fabric panels, the counter and bag are included. Confirm height, wall thickness, load capacity, weight, packing and print-template dimensions before ordering. Branded graphics in the photographs are application references."
+  },
+  "zh": {
+    "name": "1×1米便携铝合金摆摊架",
+    "title": "1×1米摆摊架｜40毫米铝管折叠架与配套手提包｜伟群帐篷",
+    "description": "1×1米便携摆摊架，采用40毫米铝管框架。查看展开、折叠、台面连接实拍、成套布置示例与可配套手提包。",
+    "intro": "这款便携摆摊架为1×1米规格，采用40毫米铝管框架。照片展示裸架展开、折叠收拢、台面连接以及加装围布后的成套示例。",
+    "applications": [
+      "市集与临时摆摊",
+      "品牌推广与派样",
+      "展会及活动接待点"
+    ],
+    "note": "手提包可配套；围布、台面及包是否包含请在报价中逐项确认。高度、壁厚、承重、重量、箱规与印刷文件尺寸尚未列出，请下单前确认。图片中的品牌布置仅作成套应用参考。"
+  },
+  "image": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-expanded-frame.jpg",
+  "imageWidth": 1440,
+  "imageHeight": 1920,
+  "imageNoteEn": "Expanded frame; the fabric-covered setup is a separate example in the gallery.",
+  "imageNoteZh": "主图为展开框架；成套围布布置另见相册示例。",
+  "facts": [
+    [
+      "Footprint",
+      "1 × 1 m"
+    ],
+    [
+      "Frame material",
+      "Aluminum"
+    ],
+    [
+      "Tube size",
+      "40 mm"
+    ],
+    [
+      "Storage",
+      "Folding frame"
+    ],
+    [
+      "Carry bag",
+      "Compatible optional accessory; confirm inclusion"
+    ]
+  ],
+  "factsZh": [
+    [
+      "占地规格",
+      "1 × 1 米"
+    ],
+    [
+      "框架材质",
+      "铝合金"
+    ],
+    [
+      "管材规格",
+      "40 毫米"
+    ],
+    [
+      "收纳方式",
+      "折叠收拢"
+    ],
+    [
+      "手提包",
+      "可配套选项，是否包含请确认"
+    ]
+  ],
+  "gallery": [
+    {
+      "src": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-expanded-frame.jpg",
+      "zh": "展开的1×1米摆摊架，40毫米铝管框架与台面示例。",
+      "en": "Expanded 1×1 m market stall with a 40 mm aluminum tube frame and counter example.",
+      "width": 1440,
+      "height": 1920
+    },
+    {
+      "src": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-complete-stall-example.jpg",
+      "zh": "成套布置示例：顶部围布、下围布与台面；具体供货配置请确认。",
+      "en": "Complete setup example with top valance, lower fabric and counter. Confirm the supplied configuration.",
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "src": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-folded-frame.jpg",
+      "zh": "折叠收拢状态与交叉撑杆细节。",
+      "en": "Folded frame and cross-brace details.",
+      "width": 1440,
+      "height": 1920
+    },
+    {
+      "src": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-partially-expanded-frame.jpg",
+      "zh": "展开过程中的框架与连接件。",
+      "en": "Frame and joints during expansion.",
+      "width": 1440,
+      "height": 1920
+    },
+    {
+      "src": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-counter-and-connectors.jpg",
+      "zh": "台面示例、夹接部位与立柱调节孔。",
+      "en": "Counter example, connector positions and upright adjustment holes.",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "src": "/images/products/displays/market-stall-1x1-40mm/1x1m-40mm-aluminum-market-stall-optional-carry-bag.jpg",
+      "zh": "可配套手提包，是否包含请在报价中确认。",
+      "en": "Compatible optional carry bag. Confirm whether it is included in the quotation.",
+      "width": 1440,
+      "height": 1920
+    }
+  ]
+}
 ];
 
 function esc(value) {
@@ -297,11 +419,11 @@ ${GTM_HEAD}
   <link rel="alternate" hreflang="x-default" href="${zh ? otherUrl : url}">
   <meta property="og:type" content="product"><meta property="og:site_name" content="WaiKwan"><meta property="og:title" content="${esc(text.title)}"><meta property="og:description" content="${esc(text.description)}"><meta property="og:url" content="${url}"><meta property="og:image" content="${ORIGIN}${product.image}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(text.title)}"><meta name="twitter:description" content="${esc(text.description)}"><meta name="twitter:image" content="${ORIGIN}${product.image}">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles/main.css"><link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles/main.css?v=20261020-gallery"><link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <style>.static-product{max-width:1180px;margin:0 auto;padding:120px 24px 64px}.crumbs{margin-bottom:28px;font-size:.95rem}.crumbs a{color:#7c1d1d}.product-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:42px;align-items:center}.product-hero img{width:100%;max-height:520px;object-fit:contain;background:#f6f6f6;border-radius:12px}.eyebrow{color:#8f171b;font-weight:700;letter-spacing:.04em}.lead{font-size:1.12rem;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.content-section{margin-top:52px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}.facts div{background:#fff;padding:16px}.facts dt{font-weight:700}.facts dd{margin:6px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left}th{background:#f3f3f3}.source-note{padding:18px;border-left:4px solid #a4161a;background:#fff6f3}.image-note{font-size:.9rem;color:#555}.product-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product-photo-grid figure{margin:0;min-width:0}.product-photo-grid img{width:100%;height:360px;object-fit:contain;background:#f6f6f6;border-radius:8px}.product-photo-grid figcaption{padding:12px 0}.lang-link{margin-left:auto}@media(max-width:780px){.product-hero{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.product-photo-grid{grid-template-columns:1fr}}</style>
   <script type="application/ld+json">${schema(product, lang, url, otherUrl)}</script>
   <script src="/scripts/analytics.js?v=20260930-ga4-consent" defer></script>
-  <script src="/scripts/main.js?v=20261014-products" defer></script>
+  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>
 </head>
 <body>
 ${GTM_BODY}
@@ -309,7 +431,7 @@ ${GTM_BODY}
   <main class="static-product">
     <nav class="crumbs" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${homeHref}">${zh ? '首页' : 'Home'}</a> / <a href="${productsHref}">${zh ? '产品目录' : 'Products'}</a> / <span>${esc(text.name)}</span></nav>
     <article>
-      <div class="product-hero"><div><img src="${product.image}" alt="${esc(text.name)}" width="${product.imageWidth || 800}" height="${product.imageHeight || 800}" fetchpriority="high">${imageNote ? `<p class="image-note">${esc(imageNote)}</p>` : ''}</div><div><p class="eyebrow">${product.internalCatalogKey ? (zh ? '普通黑金刚 · 3×3 米扁管架' : 'Standard Black · 3×3 m flat-tube frame') : product.catalogIdentifier ? (zh ? '弧形立牌 · 裸架实拍' : 'Curved banner stand · Frame photographs') : `SKU ${esc(product.sku)} · ${esc(product.model)}`}</p><h1>${esc(text.name)}</h1><p class="lead">${esc(text.intro)}</p><div class="actions"><a class="btn btn-primary" href="${contactHref}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${productsHref}">${zh ? '查看全部产品' : 'View All Products'}</a></div></div></div>
+      <div class="product-hero"><div><img src="${product.image}" alt="${esc(text.name)}" width="${product.imageWidth || 800}" height="${product.imageHeight || 800}" fetchpriority="high">${imageNote ? `<p class="image-note">${esc(imageNote)}</p>` : ''}</div><div><p class="eyebrow">${product.internalCatalogKey ? (zh ? '普通黑金刚 · 3×3 米扁管架' : 'Standard Black · 3×3 m flat-tube frame') : product.catalogIdentifier ? esc(text.name) : `SKU ${esc(product.sku)} · ${esc(product.model)}`}</p><h1>${esc(text.name)}</h1><p class="lead">${esc(text.intro)}</p><div class="actions"><a class="btn btn-primary" href="${contactHref}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${productsHref}">${zh ? '查看全部产品' : 'View All Products'}</a></div></div></div>
       <section class="content-section"><h2>${zh ? '已确认规格' : 'Confirmed specifications'}</h2>${rows}</section>
       ${product.gallery ? `<section class="content-section"><h2>${zh ? '产品实拍与结构细节' : 'Real product photographs and frame details'}</h2><div class="product-photo-grid">${product.gallery.map(photo => `<figure><a href="${esc(photo.src)}"><img src="${esc(photo.src)}" alt="${esc(text.name + ' — ' + photo[lang])}" width="${photo.width || product.imageWidth}" height="${photo.height || product.imageHeight}" loading="lazy" decoding="async"></a><figcaption>${esc(photo[lang])}</figcaption></figure>`).join('')}</div></section>` : ''}
       <section class="content-section"><h2>${zh ? '常见应用' : 'Common applications'}</h2><ul>${text.applications.map((item) => `<li>${esc(item)}</li>`).join('')}</ul></section>
@@ -325,6 +447,7 @@ ${GTM_BODY}
 // Use the established tent page shell and gallery for this folding-frame product.
 function page(product, lang) {
   const original = basePage(product, lang);
+  if (product.slug === '1x1m-40mm-aluminum-market-stall') return marketStallPage(product, lang, original);
   if (product.slug === 'curved-fabric-banner-stand') return displayProductPage(product, lang, original);
   if (!product.internalCatalogKey) return original;
   const zh = lang === 'zh', text = product[lang], prefix = zh ? '/zh' : '';
@@ -351,9 +474,9 @@ function page(product, lang) {
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '型号参数' : 'Models & Specifications'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table">${facts}</table></div></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '选型说明' : 'Frame Selection'}</h2><p>${zh ? '普通黑金刚为独立的扁管架款式，不能套用 30 方管铁架或 40/50 六角铝架的重量、壁厚和性能参数。请结合撑杆、连接件及顶布适配要求选型。' : 'Standard Black is a separate flat-tube frame model. Do not apply the weight, wall thickness or performance specifications of the 30 square-tube or 40/50 hexagonal frames. Compare brace profile, joints and canopy compatibility.'}</p></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
-  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261014-static-stand"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/standard-black-frame.js"></script>`;
+  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261020-canopy-details"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-lightbox-backpack"></script><script src="/scripts/multilang.js?v=20261020-lightbox-backpack"></script><script src="/scripts/get-quote-footer.js?v=20261020-xhs-logo"></script><script src="/scripts/standard-black-frame.js"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
-    .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts + '\n</body>');
@@ -394,12 +517,47 @@ function displayProductPage(product, lang, original) {
     ${footer}
   </main>`;
   const scripts = `<button class="back-to-top" id="backToTop" type="button" aria-label="${zh ? '返回顶部' : 'Back to top'}"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
-  <script src="/scripts/products.js?v=20261014-static-stand"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261014-products"></script><script src="/scripts/multilang.js"></script><script src="/scripts/get-quote-footer.js"></script><script src="/scripts/static-product-detail.js?v=20261014-layout"></script>`;
+  <script src="/scripts/products.js?v=20261020-canopy-details"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-lightbox-backpack"></script><script src="/scripts/multilang.js?v=20261020-lightbox-backpack"></script><script src="/scripts/get-quote-footer.js?v=20261020-xhs-logo"></script><script src="/scripts/static-product-detail.js?v=20261014-layout"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>[data-static-photo]{background:none;border:0;padding:0;cursor:pointer} .related-products{margin-bottom:32px}</style>`)
-    .replace('  <script src="/scripts/main.js?v=20261014-products" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts + '\n</body>');
+}
+
+function marketStallPage(product, lang, original) {
+  const zh = lang === 'zh', text = product[lang], prefix = zh ? '/zh' : '';
+  const template = fs.readFileSync(path.join(ROOT, 'tent-type.html'), 'utf8');
+  const localize = html => html.replace(/\b(href|src)="([^"]+)"/g, (all, attr, value) => {
+    if (/^(https?:|mailto:|tel:|data:|#|\/\/)/.test(value)) return all;
+    const clean = value.replace(/^\.?\//, '');
+    const asset = /^(images|scripts|styles)\//.test(clean) || /^(favicon|site\.webmanifest)/.test(clean);
+    const mirror = zh && !asset && fs.existsSync(path.join(ROOT, 'zh', clean.split(/[?#]/)[0]));
+    return `${attr}="${mirror ? '/zh/' : '/'}${clean}"`;
+  });
+  const header = localize(template.slice(template.indexOf('  <!-- Top bar -->'), template.indexOf('  <main>')));
+  const start = template.indexOf('<section class="contact-bottom">');
+  const footer = localize(template.slice(start, template.indexOf('    </main>', start)));
+  const quote = `${prefix}/contact-us.html?product=${encodeURIComponent(text.name)}#getQuoteForm`;
+  const facts = zh ? product.factsZh : product.facts;
+  const labels = zh ? ['产品描述', '技术参数', '应用场景', '资料下载'] : ['Description', 'Specifications', 'Applications', 'Downloads'];
+  const keys = ['desc', 'specs', 'apps', 'download'];
+  const thumbs = product.gallery.map((photo, i) => `<button type="button" data-static-photo aria-pressed="${i === 0}" aria-label="${esc(photo[lang])}"><img class="${i === 0 ? 'is-active' : ''}" src="${photo.src}" alt="${esc(photo[lang])}" width="${photo.width}" height="${photo.height}" loading="lazy"></button>`).join('');
+  const main = `<main class="product-detail" data-static-product="market-stall-1x1-40mm">
+    <nav class="breadcrumbs" style="margin-top:110px" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${prefix}/">${zh ? '首页' : 'Home'}</a><span class="sep">/</span><a href="${prefix}/product-center.html?cat=displays">${zh ? '展示系统' : 'Display Systems'}</a><span class="sep">/</span><span>${esc(text.name)}</span></nav>
+    <section class="pdp-top" id="productDetailBody"><div><div class="pdp-image pdp-image--gallery"><img id="productImage" src="${product.image}" alt="${esc(product.gallery[0][lang])}" width="${product.imageWidth}" height="${product.imageHeight}" fetchpriority="high"><div class="image-carousel">${thumbs}</div></div><p class="pdp-desc" id="staticPhotoCaption">${esc(zh ? product.imageNoteZh : product.imageNoteEn)}</p></div><div class="pdp-info"><h1 id="productName">${esc(text.name)}</h1><p class="pdp-desc">${esc(text.intro)}</p><ul class="pdp-specs">${facts.map(([k,v]) => `<li><strong>${esc(k)}:</strong> ${esc(v)}</li>`).join('')}</ul><div class="pdp-actions"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Get Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html?cat=displays">${zh ? '查看展示系统' : 'Browse Displays'}</a><button class="btn btn-accent" type="button" data-static-cart>${zh ? '加入询价车' : 'Add to Cart'}</button></div></div></section>
+    <section class="pdp-tabs"><div class="tabs-header" role="tablist">${keys.map((key,i) => `<button type="button" class="tab${i === 0 ? ' active' : ''}" data-static-tab="${key}" id="stall-tab-${key}" role="tab" aria-selected="${i === 0}" aria-controls="tab-${key}" tabindex="${i === 0 ? 0 : -1}">${labels[i]}</button>`).join('')}</div><div class="tabs-content">
+    <div class="tab-panel active" id="tab-desc" role="tabpanel" aria-labelledby="stall-tab-desc"><h2>${labels[0]}</h2><p>${esc(text.intro)}</p><p>${esc(text.note)}</p><div class="product-photo-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px">${product.gallery.map(photo => `<figure style="margin:0"><a href="${photo.src}" target="_blank" rel="noopener"><img src="${photo.src}" alt="${esc(photo[lang])}" width="${photo.width}" height="${photo.height}" loading="lazy" style="width:100%;height:280px;object-fit:contain"></a><figcaption>${esc(photo[lang])}</figcaption></figure>`).join('')}</div></div>
+    <div class="tab-panel" id="tab-specs" role="tabpanel" aria-labelledby="stall-tab-specs"><h2>${labels[1]}</h2><table class="pdp-spec-table"><tbody>${facts.map(([k,v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</tbody></table><p>${esc(text.note)}</p></div>
+    <div class="tab-panel" id="tab-apps" role="tabpanel" aria-labelledby="stall-tab-apps"><h2>${labels[2]}</h2><ul>${text.applications.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></div>
+    <div class="tab-panel" id="tab-download" role="tabpanel" aria-labelledby="stall-tab-download"><h2>${labels[3]}</h2><p>${zh ? '下载公司目录；本款专用画面模板及未列参数请联系确认。' : 'Download the company catalog; contact us for this model’s graphic template and unlisted specifications.'}</p><a class="btn btn-secondary" href="/${encodeURI('广西伟群帐篷制造有限公司2025改.pdf')}">${zh ? '下载公司目录 PDF（2025版）' : 'Download Company Catalog PDF (2025)'}</a></div></div></section>
+    ${footer}</main>`;
+  const scripts = `<script src="/scripts/products.js?v=20261020-canopy-details"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-lightbox-backpack"></script><script src="/scripts/multilang.js?v=20261020-lightbox-backpack"></script><script src="/scripts/get-quote-footer.js?v=20261020-xhs-logo"></script><script src="/scripts/static-product-detail.js"></script>`;
+  return original.replace(/<style>[\s\S]*?<\/style>/, '<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>[data-static-photo]{background:none;border:0;padding:0;cursor:pointer;flex-shrink:0}</style>')
+    .replace('  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
+    .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
+    .replace('</body>', scripts+'\n</body>');
 }
 
 const check = process.argv.includes('--check');

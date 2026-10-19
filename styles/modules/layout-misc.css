@@ -255,10 +255,11 @@
     line-height: 0;
 }
 
-.contact-bottom__socialLink .wk-social-xhs-icon svg {
-    width: 14px;
-    height: 14px;
+.contact-bottom__socialLink .wk-social-xhs-icon img {
+    width: 18px;
+    height: 18px;
     display: block;
+    object-fit: contain;
 }
 
 .contact-bottom__socialLinkLabel {

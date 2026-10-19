@@ -21,10 +21,17 @@
 
 .pdp-top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 40px;
     margin-top: 20px;
 }
+
+.pdp-top > div { min-width: 0; }
+.pdp-spec-table { table-layout: fixed; overflow-wrap: anywhere; }
+#productVariants { max-width: 100%; overflow-x: auto; }
+.pdp-image.pdp-image--gallery { aspect-ratio: auto; max-height: none; }
+.pdp-image.pdp-image--gallery #productImage { flex: 0 0 auto; height: clamp(220px, 35vw, 420px); }
+.pdp-image--gallery .image-carousel { width: 100%; flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; }
 
 .pdp-image {
     position: relative;
@@ -288,7 +295,7 @@
 /* responsive PDP */
 @media (max-width: 992px) {
     .pdp-top {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 24px;
     }
 

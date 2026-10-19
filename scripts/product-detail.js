@@ -465,12 +465,33 @@ document.addEventListener('DOMContentLoaded', () => {
             if (carouselEl) carouselEl.innerHTML = '';
         } else if (imageEl) {
             imageEl.style.display = '';
+            const photoDetails = Array.isArray(product.photoDetails) ? product.photoDetails : [];
+            pdpImageWrap.classList.toggle('pdp-image--gallery', photoDetails.length > 0);
+            const photoCaption = (src) => {
+                const photo = photoDetails.find(item => toSiteRootAssetUrl(item.src) === toSiteRootAssetUrl(src));
+                return photo ? (getCurrentLang() === 'zh' ? photo.captionZh : photo.captionEn) : name;
+            };
+            let captionEl = document.getElementById('productPhotoCaption');
+            if (photoDetails.length && !captionEl) {
+                captionEl = document.createElement('p');
+                captionEl.id = 'productPhotoCaption';
+                captionEl.className = 'pdp-desc';
+                captionEl.setAttribute('aria-live', 'polite');
+                pdpImageWrap.insertAdjacentElement('afterend', captionEl);
+            }
+            const setPhotoCaption = (src) => {
+                imageEl.alt = photoCaption(src);
+                if (captionEl) {
+                    captionEl.hidden = !photoDetails.length;
+                    captionEl.textContent = photoDetails.length ? photoCaption(src) : '';
+                }
+            };
             const imgs = Array.isArray(product.images) && product.images.length
                 ? product.images.filter(Boolean)
                 : (product.image ? [product.image] : []);
             const primaryImage = toSiteRootAssetUrl(imgs[0] || product.image || 'images/placeholder.svg');
             imageEl.src = primaryImage;
-            imageEl.alt = name;
+            setPhotoCaption(primaryImage);
             imageEl.onerror = function() {
                 const icon = pm.getProductIcon ? pm.getProductIcon(product.category) : 'box';
                 this.style.display = 'none';
@@ -487,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const normalized = toSiteRootAssetUrl(src);
                     const imgEl = document.createElement('img');
                     imgEl.src = normalized;
-                    imgEl.alt = name;
+                    imgEl.alt = photoCaption(src);
                     imgEl.loading = 'lazy';
                     imgEl.setAttribute('role', 'button');
                     imgEl.tabIndex = 0;
@@ -495,7 +516,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     imgEl.addEventListener('click', () => {
                         if (imageEl) {
                             imageEl.src = normalized;
-                            imageEl.alt = name;
+                            setPhotoCaption(src);
                         }
                         setActiveThumb(imgEl);
                     });
@@ -772,8 +793,8 @@ document.addEventListener('DOMContentLoaded', () => {
             variantsEl.appendChild(tbl);
         }
 
-        // Catalog reference fallback uses a committed furniture hero when brochure scan exports are unavailable.
-        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/products/furniture/chair table/folding-table-and-chair-set-event-furniture-hero.jpg');
+        // Furniture catalog references use the actual page 17 scan.
+        const FURNITURE_CATALOG_BROCHURE = encodeURI('images/广西伟群帐篷制造有限公司2025allpagepng/17.png');
         const isFurnitureTableChairCat = product
             && String(product.category) === 'furniture'
             && String(product.subcategory) === 'table-chair-stool-toilet';
@@ -937,6 +958,40 @@ document.addEventListener('DOMContentLoaded', () => {
                     tabSpecs.innerHTML = `${listHtml}${extra ? `<div style="margin-top:14px;">${extra}</div>` : ''}`;
                 }
             }
+        }
+
+        // Use the reviewed specification groups instead of stale catalog variants.
+        if (typeof window.WK_renderVerifiedSpecs === 'function') {
+            const verified = window.WK_renderVerifiedSpecs(product.id, getCurrentLang());
+            if (verified) {
+                const technicalTab = document.getElementById('tab-specs');
+                if (technicalTab) technicalTab.innerHTML = verified;
+                if (variantsEl) variantsEl.innerHTML = '';
+                if (specsEl) {
+                    const link = document.createElement('a');
+                    link.href = '#tab-specs';
+                    link.textContent = getCurrentLang() === 'zh' ? '查看各配置尺寸、材质与包装参数' : 'View dimensions, materials and packing by configuration';
+                    link.addEventListener('click', e => {
+                        e.preventDefault();
+                        document.querySelector('[data-tab="specs"]')?.click();
+                        technicalTab?.scrollIntoView({block:'start'});
+                    });
+                    specsEl.replaceChildren(link);
+                }
+            }
+        }
+
+        // Product-specific photographs retain their actual sample scope and captions.
+        const photoTab = document.getElementById('tab-desc');
+        if (photoTab && Array.isArray(product.photoDetails) && product.photoDetails.length) {
+            const zh = getCurrentLang() === 'zh';
+            const heading = escapeHtml((zh ? product.photoHeadingZh : product.photoHeadingEn) || (zh ? '产品实拍与应用示例' : 'Product photographs and application examples'));
+            const note = escapeHtml((zh ? product.photoNoteZh : product.photoNoteEn) || (zh ? '点击照片可查看原图。' : 'Select a photograph to open the original.'));
+            photoTab.innerHTML += `<section class="pdp-photo-details"><h2>${heading}</h2><p>${note}</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;">${product.photoDetails.map(photo => {
+                const src = escapeHtml(toSiteRootAssetUrl(photo.src));
+                const caption = escapeHtml(zh ? photo.captionZh : photo.captionEn);
+                return `<figure style="margin:0"><a href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${caption}" width="${Number(photo.width)}" height="${Number(photo.height)}" loading="lazy" decoding="async" style="width:100%;height:220px;object-fit:contain;background:#f4f5f6"></a><figcaption>${caption}</figcaption></figure>`;
+            }).join('')}</div></section>`;
         }
 
         // Applications

@@ -6,10 +6,10 @@
 @import url("modules/tokens-base.css");
 @import url("modules/header-layout.css");
 @import url("modules/pages-catalog.css");
-@import url("modules/product-detail.css");
+@import url("modules/product-detail.css?v=20261020-gallery");
 @import url("modules/modals-overlays.css");
 @import url("modules/contact-page.css");
-@import url("modules/layout-misc.css");
+@import url("modules/layout-misc.css?v=20261020-xhs-logo");
 @import url("modules/home.css?v=20260919-sign-china");
 @import url("modules/about-page.css");
 @import url("modules/faq-page.css");

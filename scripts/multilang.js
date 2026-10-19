@@ -155,7 +155,7 @@ class MultiLanguageSystem {
 
                 home_hero_2_kicker: '沙滩旗 · 户外引流',
                 home_hero_2_title: '高辨识度广告旗帜系统',
-                home_hero_2_subtitle: '羽毛旗/刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',
+                home_hero_2_subtitle: '刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',
 
                 home_hero_3_kicker: '展示系统 · 快速搭建',
                 home_hero_3_title: '便携式快幕秀展示背景墙',
@@ -179,7 +179,7 @@ class MultiLanguageSystem {
                 home_core_entrance_tent_title: '广告帐篷 / 折叠篷',
                 home_core_entrance_tent_desc: '定制印刷、快开铝架/铁架，用于展会、市集、户外与渠道批发项目。',
                 home_core_entrance_flags_title: '沙滩旗与旗杆',
-                home_core_entrance_flags_desc: '羽毛旗/刀旗/矩形旗，配套多种旗杆、底座与户外展示组合。',
+                home_core_entrance_flags_desc: '刀旗/矩形旗，配套多种旗杆、底座与户外展示组合。',
                 home_core_entrance_combined_title: '展示系统与灯箱',
                 home_core_entrance_combined_desc: '快幕秀、张拉布、促銷台与 SEG 灯箱，服务展会、零售与活动陈列。',
                 home_view_range: '查看系列',
@@ -194,7 +194,7 @@ class MultiLanguageSystem {
                 home_solution_print_desc: '顶篷/檐口/围布一体化品牌呈现。',
                 home_solution_alu_title: '铝合金折叠篷',
                 home_solution_alu_desc: '高频搭建与户外面向的结构选型。',
-                home_solution_flags_title: '羽毛旗与刀旗',
+                home_solution_flags_title: '刀旗',
                 home_solution_flags_desc: '户外引流、点位与通道标识的旗帜系统。',
                 home_solution_seg_title: 'SEG 灯箱',
                 home_solution_seg_desc: '边缘发光+可换图，提升展厅/橱窗效果。',
@@ -234,7 +234,7 @@ class MultiLanguageSystem {
                 home_cat_tents_title: '广告帐篷 / 折叠篷',
                 home_cat_tents_desc: '定制印刷、快开铝架 / 铁架系列，适用于展会、市集与户外活动；工厂 OEM/ODM。',
                 home_cat_flags_title: '旗帜与旗杆',
-                home_cat_flags_desc: '羽毛旗/刀旗/矩形旗 + 旗杆与多种底座系统。',
+                home_cat_flags_desc: '刀旗/矩形旗 + 旗杆与多种底座系统。',
                 home_cat_displays_title: '展示系统',
                 home_cat_displays_desc: '背景墙、张拉布、灯箱等展示方案，适用于展会与品牌展示。',
                 home_cat_lightbox_title: '灯箱',
@@ -540,7 +540,7 @@ class MultiLanguageSystem {
                 home_guide_3_desc: '可折叠框架、印刷画面与出口纸箱，便于经销商全球发货。',
                 home_guide_4_title: '铝合金折叠帐篷（工厂直供出口）',
                 home_guide_4_desc: '轻质六角管型材、品牌篷布与围布，配套收纳袋与 OEM 包装。',
-                home_guide_5_title: '活动羽毛旗印刷（工厂直供）',
+                home_guide_5_title: '活动刀旗印刷（工厂直供）',
                 home_guide_5_desc: '涤纶热升华、旗杆套装与底座，面向活动公司与批发客户。',
                 home_guide_6_title: '重型活动帐篷（欧洲线发货）',
                 home_guide_6_desc: '加强框架、顶篷与围布，出口包装适配欧盟目的地。',
@@ -569,14 +569,14 @@ class MultiLanguageSystem {
                 home_br_4_title: '定制广告帐篷制造商',
                 home_br_4_desc: 'OEM/ODM 广告帐篷，起订量与交期，出口支持。',
                 home_br_5_title: '沙滩旗供应商',
-                home_br_5_desc: '羽毛旗/水滴旗与旗杆、底座及印刷说明。',
+                home_br_5_desc: '刀旗/水滴旗与旗杆、底座及印刷说明。',
                 home_br_6_title: '便携式展示系统',
                 home_br_6_desc: '展会展示、前台、易拉宝与套装。',
                 home_br_7_title: '买家常见问题',
                 home_br_7_desc: '起订量、设计稿、配色与物流等说明。',
                 pc_seo_sourcing_label: '采购指南： ',
                 pc_seo_sourcing_link_1: '经销商贸易展篷房',
-                pc_seo_sourcing_link_2: '批发羽毛旗与水滴旗',
+                pc_seo_sourcing_link_2: '批发刀旗与水滴旗',
                 pc_seo_sourcing_link_3: '张拉布展示墙（OEM）',
                 pc_seo_sourcing_link_4: '全部 B2B 指南',
                 pc_seo_catalog_label: '目录入口： ',
@@ -589,7 +589,7 @@ class MultiLanguageSystem {
                     + '<a href="tension-fabric-backwall.html" style="color: var(--wk-red-700); font-weight: 600;">张拉布背景墙</a>'
                     + '<a href="aluminum-folding-tent.html" style="color: var(--wk-red-700); font-weight: 600;">铝合金折叠帐篷</a>'
                     + '<a href="product-center.html?cat=tents" style="color: var(--wk-red-700); font-weight: 600;">定制广告帐篷制造商</a>'
-                    + '<a href="product-center.html?cat=flags" style="color: var(--wk-red-700); font-weight: 600;">沙滩旗与羽毛旗系统</a>'
+                    + '<a href="product-center.html?cat=flags" style="color: var(--wk-red-700); font-weight: 600;">沙滩旗与刀旗系统</a>'
                     + '<a href="product-center.html?cat=displays" style="color: var(--wk-red-700); font-weight: 600;">便携式展示与展会背景墙</a>'
                     + '<a href="products-accessories.html" style="color: var(--wk-red-700); font-weight: 600;">帐篷与展示配件</a>'
                     + '<a href="all-products.html" style="color: var(--wk-red-700); font-weight: 600;">全部产品目录</a>'
@@ -612,7 +612,7 @@ class MultiLanguageSystem {
                     + '<a href="custom-canopy-tent-manufacturer.html">品牌与 OEM 篷房</a> · <a href="products-accessories.html">围布、配重与收纳包</a>',
                 home_flag_shapes_title: '沙滩旗形状与画面',
                 home_flag_shapes_items_html:
-                    '<a href="beach-flag-supplier.html">羽毛旗 / 水滴旗</a> · <a href="flag-type.html?type=fiberglass_pole">方形广告旗方案</a> · '
+                    '<a href="beach-flag-supplier.html">刀旗 / 水滴旗</a> · <a href="flag-type.html?type=fiberglass_pole">方形广告旗方案</a> · '
                     + '<a href="product-center.html?cat=flags">旗帜类目总览</a>',
                 home_flag_hardware_title: '旗杆、底座与配件',
                 home_flag_hardware_items_html:
@@ -631,7 +631,7 @@ class MultiLanguageSystem {
                     + '<a href="portable-display-systems.html">便携展示系统</a> · <a href="pop-up-display-stands.html">快幕秀展架</a> · '
                     + '<a href="tension-fabric-backwall.html">张拉布背景墙</a> · <a href="seg-light-box-manufacturer.html">SEG 灯箱制造商</a>',
                 pc_intro_tents: '从现货 30/40/50 方管与铝架系列到全定制印刷，服务展会、活动与渠道批发。',
-                pc_intro_flags: '羽毛旗、水滴旗与广告旗杆系统，配套底座、收纳与出口包装。',
+                pc_intro_flags: '刀旗、水滴旗与广告旗杆系统，配套底座、收纳与出口包装。',
                 pc_intro_displays: '快幕秀、张拉布、SEG 灯箱与促销前台，覆盖展会与品牌推广搭建。',
                 pc_seo_links_tents_html:
                     '<a href="canopy-tents.html">广告帐篷总览</a> · <a href="pop-up-canopy-tents.html">快开广告篷</a> · <a href="custom-canopy-tent-manufacturer.html">定制帐篷制造商</a> · <a href="10x10-pop-up-canopy-tent.html">10×10 帐篷</a> · '
@@ -977,13 +977,13 @@ class MultiLanguageSystem {
                 landing_portable_faq_card_3_p: '快递、空运与海运的选择思路。',
                 landing_portable_faq_view_all: '查看全部常见问题',
 
-                page_title_beach: '沙滩旗供应商｜羽毛旗刀旗矩形旗杆底座｜伟群帐篷',
+                page_title_beach: '沙滩旗供应商｜刀旗刀旗矩形旗杆底座｜伟群帐篷',
                 landing_top_bar_beach: '工厂直供 · 旗面 + 旗杆 + 底座 · 24 小时内回复',
                 landing_beach_h1: '沙滩旗供应商',
                 landing_beach_lead:
-                    '定制羽毛旗、水滴旗，配套旗杆、底座与收纳包 — 工厂直供，适用于活动、零售与户外推广。',
+                    '定制刀旗、水滴旗，配套旗杆、底座与收纳包 — 工厂直供，适用于活动、零售与户外推广。',
                 landing_beach_card_1_h3: '产品线',
-                landing_beach_card_1_p: '羽毛旗、水滴旗、矩形旗、旗杆套装、底座（十字、注水/注沙、地钉）。',
+                landing_beach_card_1_p: '刀旗、水滴旗、矩形旗、旗杆套装、底座（十字、注水/注沙、地钉）。',
                 landing_beach_card_2_h3: '起订量（MOQ）',
                 landing_beach_card_2_p: '新设计可低起订；批量订单支持稳定色差控制。',
                 landing_beach_card_3_h3: '交期',
@@ -995,9 +995,9 @@ class MultiLanguageSystem {
                     + '<a href="https://wa.me/8613824540280" target="_blank" rel="noopener">+86 138 2454 0280</a> · 微信：massifmyth',
                 landing_beach_guides_row_html:
                     '长篇指南：'
-                    + '<a href="/zh/seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html">批发羽毛旗与水滴旗</a>'
+                    + '<a href="/zh/seo/beach-flag-manufacturer-wholesale-feather-teardrop-flags.html">批发刀旗与水滴旗</a>'
                     + ' · '
-                    + '<a href="/zh/seo/custom-printed-feather-flag-supplier-bulk-order-oem.html">大批量 OEM 羽毛旗印刷</a>'
+                    + '<a href="/zh/seo/custom-printed-feather-flag-supplier-bulk-order-oem.html">大批量 OEM 刀旗印刷</a>'
                     + ' · '
                     + '<a href="/zh/site-map.html#seo-guides">全部旗帜与帐篷指南</a>',
                 landing_beach_buyers_h2: '常见买家需求',
@@ -1041,7 +1041,7 @@ class MultiLanguageSystem {
                 about_products_title: '产品与能力范围',
                 about_products_main: '主要产品系列：',
                 about_product_1: '帐篷系列（折叠帐篷、篷房、大型活动帐篷）',
-                about_product_2: '沙滩旗及旗杆系列（羽毛旗、水滴旗、刀旗等）',
+                about_product_2: '沙滩旗及旗杆系列（刀旗、水滴旗等）',
                 about_product_3: '展示系统（快幕秀、背景墙等）',
                 about_product_4: '桌布、布艺展示及品牌配件',
                 about_product_5: '定制化品牌展示解决方案',
@@ -1315,8 +1315,8 @@ class MultiLanguageSystem {
                 tent_type_cta_quote: '获取报价',
                 pc_meta_title_tents: '广告帐篷产品中心｜折叠篷系列与尺寸｜伟群',
                 pc_meta_desc_tents: '伟群广告帐篷产品中心：浏览折叠篷系列、帐篷尺寸、定制印刷与 OEM 就绪方案，服务 B2B 采购。',
-                pc_meta_title_flags: '沙滩旗与旗杆产品中心｜羽毛旗、水滴旗与底座｜伟群',
-                pc_meta_desc_flags: '浏览伟群沙滩旗与旗杆产品中心：羽毛旗、水滴旗、旗杆套件、底座和出口包装方案，适合广告公司与活动采购。',
+                pc_meta_title_flags: '沙滩旗与旗杆产品中心｜刀旗、水滴旗与底座｜伟群',
+                pc_meta_desc_flags: '浏览伟群沙滩旗与旗杆产品中心：刀旗、水滴旗、旗杆套件、底座和出口包装方案，适合广告公司与活动采购。',
                 pc_meta_title_displays: '展示系统产品中心｜背景墙、展示架与展会前台｜伟群',
                 pc_meta_desc_displays: '伟群展示系统产品中心覆盖便携背景墙、拉网展架、张拉布展示、展会前台和配件，支持 OEM/ODM 定制。',
                 pc_meta_title_lightbox: '灯箱产品中心｜SEG 拉布灯箱与广告灯箱｜伟群',
@@ -1348,6 +1348,8 @@ class MultiLanguageSystem {
                 menu_popup_fabric_banner_stands: '立牌系列',
                 menu_popup_tfd_accessories: '配件系列',
                 menu_popup_tfd_straight_line_series: '直型系列',
+                menu_popup_tfd_curved_line_series: '弧形系列',
+                menu_portable_market_stall: '1×1米便携摆摊架',
                 menu_popup_tfd_c_shaped_series: 'C型系列',
 
                 menu_displays_roll_up_stand: '易拉宝',
@@ -2981,6 +2983,8 @@ class MultiLanguageSystem {
                 menu_popup_fabric_banner_stands: 'Fabric Banner Stands',
                 menu_popup_tfd_accessories: 'Accessories',
                 menu_popup_tfd_straight_line_series: 'Straight Line Series',
+                menu_popup_tfd_curved_line_series: 'Curved Line Series',
+                menu_portable_market_stall: '1×1 m Portable Market Stall',
                 menu_popup_tfd_c_shaped_series: 'C-Shaped Series',
 
                 menu_displays_roll_up_stand: 'Roll Up Stand',

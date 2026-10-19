@@ -292,7 +292,7 @@
     "file": "scripts/multilang.js",
     "line": 93,
     "type": "zh_translation_contains_disallowed_en",
-    "snippet": "home_hero_2_subtitle: '羽毛旗/刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',",
+    "snippet": "home_hero_2_subtitle: '刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',",
     "suggestion": "Replace with Chinese-only translation (keep only allowed tokens like OEM/ODM, material codes)."
   },
   {
@@ -372,7 +372,7 @@
     "file": "scripts/multilang.js",
     "line": 105,
     "type": "zh_translation_contains_disallowed_en",
-    "snippet": "home_cat_flags_desc: '羽毛旗/刀旗/矩形旗 + 旗杆与多种底座系统。',",
+    "snippet": "home_cat_flags_desc: '刀旗/矩形旗 + 旗杆与多种底座系统。',",
     "suggestion": "Replace with Chinese-only translation (keep only allowed tokens like OEM/ODM, material codes)."
   },
   {
@@ -35660,7 +35660,7 @@
     "file": "scripts/all-products.js",
     "line": 354,
     "type": "hardcoded_han_in_js",
-    "snippet": "\"羽毛旗\": [\"feather flag\", \"feather flags\", \"beach flag\"],",
+    "snippet": "\"刀旗\": [\"feather flag\", \"feather flags\", \"beach flag\"],",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -35668,7 +35668,7 @@
     "file": "scripts/all-products.js",
     "line": 354,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "\"羽毛旗\": [\"feather flag\", \"feather flags\", \"beach flag\"],",
+    "snippet": "\"刀旗\": [\"feather flag\", \"feather flags\", \"beach flag\"],",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -52572,7 +52572,7 @@
     "file": "scripts/multilang.js",
     "line": 93,
     "type": "hardcoded_han_in_js",
-    "snippet": "home_hero_2_subtitle: '羽毛旗/刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',",
+    "snippet": "home_hero_2_subtitle: '刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -52580,7 +52580,7 @@
     "file": "scripts/multilang.js",
     "line": 93,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "home_hero_2_subtitle: '羽毛旗/刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',",
+    "snippet": "home_hero_2_subtitle: '刀旗/矩形旗，搭配多种底座与旗杆材料，适配不同场地。',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {
@@ -52732,7 +52732,7 @@
     "file": "scripts/multilang.js",
     "line": 105,
     "type": "hardcoded_han_in_js",
-    "snippet": "home_cat_flags_desc: '羽毛旗/刀旗/矩形旗 + 旗杆与多种底座系统。',",
+    "snippet": "home_cat_flags_desc: '刀旗/矩形旗 + 旗杆与多种底座系统。',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or data-i18n in generated HTML."
   },
   {
@@ -52740,7 +52740,7 @@
     "file": "scripts/multilang.js",
     "line": 105,
     "type": "hardcoded_disallowed_en_in_js",
-    "snippet": "home_cat_flags_desc: '羽毛旗/刀旗/矩形旗 + 旗杆与多种底座系统。',",
+    "snippet": "home_cat_flags_desc: '刀旗/矩形旗 + 旗杆与多种底座系统。',",
     "suggestion": "If user-facing, replace with wkI18n.t('KEY') or split .zh/.en spans."
   },
   {

@@ -45,7 +45,11 @@
     if(['silent','avoid'].includes(a.q10.style)||['guess','wait'].includes(a.q11.start))priority.push('直接汇报、反馈与无流程任务的沟通方式');
     const totalScore=Object.values(totals).reduce((s,n)=>s+n,0);
     const summary=priority.length?'存在需优先核实的岗位预期或处理方式差异；总分不能替代逐项沟通。':totalScore>=80?'自述与岗位期待较接近，建议面试核实':totalScore>=60?'部分匹配，需针对差异进一步交流':'当前自述有较多待确认项，建议先沟通预期';
-    return {submissionId:data.submission_id,submittedAt:data.submittedAt||new Date().toISOString(),website:data.website,candidate:data.contact,
+    // Preserve the deployed Sheet's existing columns; the optional WeChat ID
+    // is also readable in its existing experience cell without a GAS update.
+    const candidate = {...data.contact};
+    if (candidate.wechat) candidate.experience += '\n\n微信号：' + candidate.wechat;
+    return {submissionId:data.submission_id,submittedAt:data.submittedAt||new Date().toISOString(),website:data.website,candidate,
       assessment:{totalScore,categoryScores:Object.fromEntries(Object.entries(totals).map(([k,v])=>[rules.dimensions[k][0],v])),summary,riskPoints:[...priority,...risks],recommendation:'供招聘负责人结合完整答案面试复核；自动评分不决定录用或拒绝。',needsManualReview:true},answers};
   }
   root.WK_assessCareers=assess;

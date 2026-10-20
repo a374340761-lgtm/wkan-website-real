@@ -12,6 +12,47 @@
   const endpoint = String(window.WK_CAREERS_SCRIPT_URL || '');
   const validEndpoint = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(endpoint);
   let submittedAt = '';
+  const draftKey = 'wk-careers-draft-v1';
+  const draftLifetime = 24 * 60 * 60 * 1000;
+  let draftReady = false;
+  function saveDraft() {
+    if (!draftReady || form.hidden) return;
+    const note = document.getElementById('careersDraftStatus');
+    try {
+      const entries = [...new FormData(form)].filter(([name]) => !['consent', 'website'].includes(name));
+      sessionStorage.setItem(draftKey, JSON.stringify({ version: schema.version, savedAt: Date.now(), entries,
+        identifier, lastContent, submittedAt }));
+      if (note) note.textContent = '草稿已保存在当前标签页，刷新可恢复。关闭标签页后不再保留，草稿最长保留 24 小时；提交成功后自动清除。';
+    } catch (_) {
+      if (note) note.textContent = '浏览器未能保存草稿；请暂勿刷新或关闭此页，以免丢失填写内容。';
+    }
+  }
+  function restoreDraft() {
+    try {
+      const draft = JSON.parse(sessionStorage.getItem(draftKey) || 'null');
+      if (!draft) return;
+      if (draft.version !== schema.version || !Number.isFinite(draft.savedAt) || Date.now() - draft.savedAt > draftLifetime || !Array.isArray(draft.entries)) {
+        sessionStorage.removeItem(draftKey);
+        return;
+      }
+      const values = new Map();
+      draft.entries.forEach(entry => {
+        if (!Array.isArray(entry) || typeof entry[0] !== 'string' || typeof entry[1] !== 'string') return;
+        if (!values.has(entry[0])) values.set(entry[0], []);
+        values.get(entry[0]).push(entry[1]);
+      });
+      [...form.elements].forEach(input => {
+        if (!input.name || ['consent', 'website'].includes(input.name)) return;
+        const saved = values.get(input.name) || [];
+        if (input.type === 'checkbox') input.checked = saved.includes(input.value);
+        else if (saved.length) input.value = saved[0].slice(0, input.maxLength > 0 ? input.maxLength : 12000);
+      });
+      form.elements.consent.checked = false;
+      identifier = typeof draft.identifier === 'string' ? draft.identifier : '';
+      lastContent = identifier && typeof draft.lastContent === 'string' ? draft.lastContent : '';
+      submittedAt = typeof draft.submittedAt === 'string' ? draft.submittedAt : '';
+    } catch (_) { /* Storage may be disabled. The form still works. */ }
+  }
   const node = (tag, text, attrs = {}) => {
     const el = document.createElement(tag);
     if (text) el.textContent = text;
@@ -79,10 +120,13 @@
     })).length;
     progress.textContent = `已填写 ${done} / ${schema.questions.length} 题 · 建议每个简答栏用一两句话说明`;
     checkboxValidation();
+    saveDraft();
   }
   function payload() {
     const contact = {};
     ['name', 'phone', 'email', 'location', 'availability', 'experience'].forEach(key => { contact[key] = form.elements[key].value.trim(); });
+    const wechat = form.elements.wechat.value.trim();
+    if (wechat) contact.wechat = wechat;
     const answers = {};
     schema.questions.forEach(q => {
       answers[q.id] = {};
@@ -117,11 +161,13 @@
     show('正在提交，等待 Google 表格写入确认，请保持网络连接…', 'pending');
     try {
       const data = payload();
+      saveDraft();
       if (data.website) throw new Error('提交未成功，请检查填写内容。');
       const report = window.WK_assessCareers(data, rules);
       await postApplication(report);
       // Only a matching confirmation from this submission iframe means success.
       show('提交成功', 'success');
+      try { sessionStorage.removeItem(draftKey); } catch (_) { /* No stored draft. */ }
       form.hidden = true;
       progress.hidden = true;
       status.focus({ preventScroll: true });
@@ -170,6 +216,9 @@
       if (!response.ok) throw new Error('问卷加载失败，请刷新页面。');
       schema = await response.json();
       render();
+      restoreDraft();
+      draftReady = true;
+      updateProgress();
       const scoringResponse = await fetch('/data/careers-scoring-rules.json?v=20261020-sheets-r2', { cache: 'no-cache' });
       if (!scoringResponse.ok) throw new Error('问卷配置加载失败，请刷新。');
       rules = await scoringResponse.json();

@@ -18,7 +18,7 @@
 
 ## 提交流程与校验
 
-1. 网页保留 13 题、必填与同意框校验；不把个人资料放进 URL 或浏览器本地存储。
+1. 网页保留 13 题、必填与同意框校验；不把个人资料放进 URL。根据用户要求，未提交草稿改用当前标签页的 sessionStorage 临时保存以支持刷新恢复；不使用持久化 localStorage。草稿最长24小时，关闭标签页后不保留，成功提交后清除；隐私同意框不恢复。
 2. 依据与 Python 一致的 100 分规则生成初评，保留每题完整原文、逐项依据、分数、维度汇总、待核实事项。页面 DOM 不展示任何评估内容。
 3. 本次提交创建一个同源、隐藏的 `/careers-submit-bridge.html` iframe。父页面只接受该 iframe 的消息，校验 `event.source`、同源 origin、type、requestId 与严格布尔值 ok。
 4. 桥接 iframe 内用原生 form POST，将 JSON 放入唯一表单字段 `payload`，提交到指定 Apps Script。无 no-cors fetch，也不把 iframe load 当成功。
@@ -81,3 +81,8 @@
 5. 验证失败和重复提交：失败不显示成功，同 ID 重试不产生重复行，部分写入不能返回 ok:true。
 
 不需要 SMTP 环境变量或邮箱密码。当前不自动更新 Apps Script、Git 推送或生产部署。
+
+
+## 微信号选填
+
+基本申请信息增加微信号（选填），不计分，支持当前标签页草稿恢复。payload 的 candidate.wechat 单独携带该值，同时在 candidate.experience 原文末尾增加明确的“微信号：”行，使当前已部署的 Apps Script 无需更改列或重新部署也能保存。可在“候选人总览”的“相关经历”单元格末尾查看。原经历不被覆盖，后端15/11列结构不变。

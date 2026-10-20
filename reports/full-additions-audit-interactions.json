@@ -1,0 +1,122 @@
+[
+  {
+    "zh": false,
+    "case": "lightbox-filter",
+    "sub": "base-style-variant",
+    "count": 4
+  },
+  {
+    "zh": false,
+    "case": "lightbox-filter",
+    "sub": "round-tube-light-box",
+    "count": 1
+  },
+  {
+    "zh": false,
+    "case": "lightbox-filter",
+    "sub": "aluminum-profile-seg-light-box",
+    "count": 1
+  },
+  {
+    "zh": false,
+    "case": "lightbox-filter",
+    "sub": "seg-net-light-box",
+    "count": 1
+  },
+  {
+    "zh": false,
+    "case": "mobile-lightbox-expand",
+    "pass": true
+  },
+  {
+    "zh": false,
+    "case": "rfq-row",
+    "route": "tent-type.html?type=folding40",
+    "pass": true
+  },
+  {
+    "zh": false,
+    "case": "rfq-row",
+    "route": "flag-type.html?type=alu_fiberglass_pole",
+    "pass": true
+  },
+  {
+    "zh": false,
+    "case": "stall-gallery-tabs-rfq",
+    "photos": 6,
+    "pass": true
+  },
+  {
+    "zh": false,
+    "case": "canopy-anchor",
+    "photos": 8,
+    "pass": true
+  },
+  {
+    "zh": false,
+    "case": "export-resources",
+    "links": 6,
+    "photos": 12,
+    "pass": true
+  },
+  {
+    "zh": true,
+    "case": "lightbox-filter",
+    "sub": "base-style-variant",
+    "count": 4
+  },
+  {
+    "zh": true,
+    "case": "lightbox-filter",
+    "sub": "round-tube-light-box",
+    "count": 1
+  },
+  {
+    "zh": true,
+    "case": "lightbox-filter",
+    "sub": "aluminum-profile-seg-light-box",
+    "count": 1
+  },
+  {
+    "zh": true,
+    "case": "lightbox-filter",
+    "sub": "seg-net-light-box",
+    "count": 1
+  },
+  {
+    "zh": true,
+    "case": "mobile-lightbox-expand",
+    "pass": true
+  },
+  {
+    "zh": true,
+    "case": "rfq-row",
+    "route": "tent-type.html?type=folding40",
+    "pass": true
+  },
+  {
+    "zh": true,
+    "case": "rfq-row",
+    "route": "flag-type.html?type=alu_fiberglass_pole",
+    "pass": true
+  },
+  {
+    "zh": true,
+    "case": "stall-gallery-tabs-rfq",
+    "photos": 6,
+    "pass": true
+  },
+  {
+    "zh": true,
+    "case": "canopy-anchor",
+    "photos": 8,
+    "pass": true
+  },
+  {
+    "zh": true,
+    "case": "export-resources",
+    "links": 6,
+    "photos": 12,
+    "pass": true
+  }
+]

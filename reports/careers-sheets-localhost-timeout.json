@@ -1,0 +1,48 @@
+{
+  "testCandidate": "集成测试候选人-请忽略",
+  "messages": [
+    {
+      "origin": "http://127.0.0.1:57991",
+      "data": {
+        "type": "recruitment-bridge-ready"
+      },
+      "sameSource": true
+    }
+  ],
+  "frames": [
+    {
+      "url": "http://127.0.0.1:57991/careers.html"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap",
+      "error": {
+        "errorText": "net::ERR_FAILED"
+      }
+    },
+    {
+      "url": "https://www.googletagmanager.com/gtm.js?id=GTM-TVQFLJP7",
+      "error": {
+        "errorText": "net::ERR_FAILED"
+      }
+    },
+    {
+      "url": "https://fonts.googleapis.com/icon?family=Material+Icons",
+      "error": {
+        "errorText": "net::ERR_FAILED"
+      }
+    },
+    {
+      "url": "https://csp.withgoogle.com/csp/proto/26981ed0d57bbad37e728ff58134270c",
+      "error": {
+        "errorText": "net::ERR_FAILED"
+      }
+    }
+  ],
+  "submissionId": "79a83d10-bbff-4b92-b03e-37356146acc1",
+  "status": "提交超时，尚未收到写入确认。内容已保留，请检查 VPN 和网络；重试会沿用同一提交编号，请勿刷新页面。",
+  "sheetReadbackVerified": false,
+  "state": "error",
+  "frameText": []
+}

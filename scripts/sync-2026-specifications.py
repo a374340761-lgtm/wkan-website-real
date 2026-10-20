@@ -156,6 +156,27 @@ f='广西伟群帐篷充气桌椅报价表.xlsx'
 for key,rows in [('tent:inflatable-single-chair',[4]),('tent:inflatable-double-chair',[5]),('tent:inflatable-column',range(7,15))]:
     group(key,f,'Sheet1',rows,'充气产品尺寸与装箱','Inflatable product dimensions and packing',{'size':3,'carton':5,'packing':6,'weight':7},['尺寸与箱规单位cm；PVC内胆厚0.5 mm，画面布220g，数码印花。重量按原表口径列示，需核对空件与整箱。'],['Dimensions and cartons are in cm. PVC bladder thickness: 0.5 mm; printed fabric: 220g, digitally printed. Confirm whether a source weight applies to an empty item or a carton.'])
 
+# Sealed inflatable arches are a separate type from fiberglass race gates.
+f='广西伟群帐篷闭气拱门价格表241205.xlsx'
+g=group('tent:inflatable-arch',f,'Sheet1',[7,8,9,10,11,12,14],'400D 闭气圆形拱门配置','400D sealed round arch configurations',{'size':2,'carton':8,'gw':9},['尺寸为宽×高×管径，单位mm；400D（220g）PU涂层涤纶、0.3 mm TPU内胆，热升华印刷。','10000×4800一行的尺寸和管径列相互矛盾，未采用。此配置不能与600D补充表混用。'],['Sizes are width × height × tube diameter in mm. 400D (220g) PU-coated polyester, 0.3 mm TPU bladder and dye-sublimation printing.','The conflicting 10000 × 4800 source row is omitted. Do not mix this configuration with the 600D supplement.'])
+# Manually transcribed from the inspected image2.jpeg embedded in the supplied DOCX.
+doc='补充价格表或者尺寸的截图.docx'
+for zh,en,rows in [
+    ('600D 闭气六角拱门配置','600D sealed hexagonal arch configurations',[
+        {'size':'5000 × 3200 × 600','carton':'81 × 81 × 23','gw':'26'},
+        {'size':'6000 × 3800 × 600','carton':'81 × 23 × 61','gw':'26'},
+        {'size':'6000 × 3800 × 800','carton':'83 × 83 × 23','gw':'28'},
+        {'size':'8000 × 4600 × 800','carton':'83 × 83 × 23','gw':'30'}]),
+    ('600D 闭气圆形拱门配置','600D sealed round arch configurations',[
+        {'size':'5000 × 2750 × 500','carton':'81 × 81 × 23','gw':'23'},
+        {'size':'6000 × 3250 × 600','carton':'81 × 81 × 23','gw':'24'}])]:
+    g={'titleZh':zh,'titleEn':en,'columns':[{'key':k,'zh':LABELS[k][0],'en':LABELS[k][1]} for k in ['size','carton','gw']], 'rows':rows,
+       'notesZh':['尺寸为宽×高×管径，单位mm；补充截图列600D（240g）PU涂层涤纶、0.3 mm TPU内胆，热升华印刷。此为独立配置，不套用于400D款或玻纤竞速拱门。'],
+       'notesEn':['Sizes are width × height × tube diameter in mm. The supplement specifies 600D (240g) PU-coated polyester, a 0.3 mm TPU bladder and dye-sublimation printing. This is a separate configuration from 400D arches and fiberglass race gates.'],
+       'source':{'file':doc,'image':'word/media/image2.jpeg','transcription':'Visually checked table: Hex Airtight Arch and Round Airtight Arch'}}
+    DATA['tent:inflatable-arch'].append(g)
+    AUDIT.append({'target':'tent:inflatable-arch',**g['source'],'configurations':len(rows)})
+
 # Export only whitelisted specification fields, never source prices or full workbooks.
 f='广西伟群制造有限公司家具折叠桌布价格表.xlsx'
 for rows,zh,en,material in [(range(5,9),'造型弹力桌布','Sculpted stretch table covers','Weft-knit stretch fabric'),(range(10,14),'罩型弹力桌布','Fitted stretch table covers','Weft-knit stretch fabric'),(range(15,19),'方型桌布','Rectangular tablecloths','260G warp-knit fabric')]:
@@ -174,6 +195,17 @@ for key,groups in DATA.items():
                 if col['key']=='weight':col.update(zh='表列重量 / 容量（按配置）',en='Listed weight / capacity (by configuration)')
         if key=='43002':
             for r in g['rows']:r['model']=r['model'].replace('型材','Profile ').replace('宽',' W ')
+        # Keep shared technical cells readable in both language versions.
+        for r in g['rows']:
+            for field,value in r.items():
+                r[field]=(value.replace('毛重：',' G.W.: ').replace('地钉','Stake ').replace('绳子','Rope ')
+                          .replace('织带','Webbing ').replace('包边加','side returns + ').replace('个/箱',' pcs/carton '))
+        if key=='42003':
+            for col in g['columns']:
+                if col['key']=='weight':col.update(zh='成品重量 (kg)',en='Finished-product weight (kg)')
+        if key=='95012':
+            for col in g['columns']:
+                if col['key']=='size':col.update(zh='尺寸 / 配合 / 装箱说明',en='Dimensions / fit / packing details')
 
 payload={'version':'2026-10-20','products':DATA}
 (ROOT/'data/product-specifications-2026.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
@@ -183,7 +215,7 @@ products_js=re.sub(r'/\* BEGIN VERIFIED 2026 SPECS \*/[\s\S]*?/\* END VERIFIED 2
 runtime=(ROOT/'scripts/verified-specifications-runtime.js').read_text(encoding='utf-8')
 embedded='/* BEGIN VERIFIED 2026 SPECS */\nconst WK_VERIFIED_SPECIFICATIONS = '+json.dumps(payload,ensure_ascii=False,separators=(',',':'))+';\n'+runtime+'\n/* END VERIFIED 2026 SPECS */\n'
 products_path.write_text(embedded+products_js,encoding='utf-8')
-manifest={'sourceDirectory':str(SOURCE),'files':FILES,'matches':AUDIT,'omitted':[
+manifest={'sourceDirectory':str(SOURCE),'files':FILES,'documents':{doc:hashlib.sha256((SOURCE/doc).read_bytes()).hexdigest()},'matches':AUDIT,'omitted':[
     'No exact product match: 1x1m 40mm market stall. The banner-stall sheet describes different 1.2–2.4m products.',
     'Light box row WK1 1x4 has 770x12970; WK2 2x2 repeats 1980x2950; profile 85x2H conflicts with 850x2200. These rows are excluded.',
     'AD-H1 universal frame differs from WK-HO codes; WK-HZ differs from WK-FS waveline codes. No size or weight substitution between these codes.',

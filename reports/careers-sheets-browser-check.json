@@ -1,0 +1,166 @@
+{
+  "checks": [
+    {
+      "mode": "success",
+      "width": 390,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": false,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 390,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": false,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 1440,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": false,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 1440,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": false,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 390,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 390,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 1440,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 1440,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "timeout",
+      "width": 390,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "timeout",
+      "width": 390,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "timeout",
+      "width": 1440,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "timeout",
+      "width": 1440,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "spoof",
+      "width": 390,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "spoof",
+      "width": 390,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "spoof",
+      "width": 1440,
+      "zh": false,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    },
+    {
+      "mode": "spoof",
+      "width": 1440,
+      "zh": true,
+      "questions": 13,
+      "total": 100,
+      "nativeForm": true,
+      "retrySameId": true,
+      "pass": true
+    }
+  ],
+  "realGoogleWrites": 0,
+  "note": "Mock Google nested frames; validates UI and protocol, not real spreadsheet storage."
+}

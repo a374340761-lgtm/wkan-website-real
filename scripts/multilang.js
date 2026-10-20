@@ -112,6 +112,7 @@ class MultiLanguageSystem {
                 nav_sol_portable_display: '便携式展示系统',
                 nav_news_resources: '资讯与资源',
                 nav_follow_us: '关注我们',
+                nav_careers: '加入我们',
                 nav_site_map: '网站地图',
 
                 // Language gate
@@ -1461,10 +1462,11 @@ class MultiLanguageSystem {
                 // View-type pages
                 view_type_models: '型号清单',
                 view_type_brochure_ref: '产品画册参考',
-                view_type_brochure_source_17: '来源：产品画册第 17 页 — images/广西伟群帐篷制造有限公司2025allpagepng/17.png',
+                view_type_brochure_source_17: '来源：产品画册桌椅、桌布与户外收纳系列（印刷页 27–28）',
+                view_type_brochure_source_generic: '来源：产品画册参考，配置以对应型号规格为准。',
                 view_type_brochure_source_dome: '来源：产品画册参考（示意图，以选型表为准）',
                 view_type_brochure_source_19: '来源：目录图片 19.png',
-                view_type_brochure_source_20: '来源：目录图片 20.png',
+                view_type_brochure_source_20: '来源：立版展示与灯具、收纳配件画册（印刷页 33–34）',
                 view_type_brochure_source_25: '来源：目录图片 25.png',
                 view_type_page_title_furniture: '桌 / 椅 / 凳 / 厕所',
                 view_type_page_title_dome: 'DOME 3 折叠系列',
@@ -1750,6 +1752,7 @@ class MultiLanguageSystem {
                 nav_sol_portable_display: 'Portable Display Systems',
                 nav_news_resources: 'News & Resources',
                 nav_follow_us: 'Follow Us',
+                nav_careers: 'Careers',
                 nav_site_map: 'Site Map',
 
                 // Language gate
@@ -3097,10 +3100,11 @@ class MultiLanguageSystem {
                 // View-type pages
                 view_type_models: 'Models',
                 view_type_brochure_ref: 'Brochure PDF Guide',
-                view_type_brochure_source_17: 'Source: catalog page 17 — images/广西伟群帐篷制造有限公司2025allpagepng/17.png',
+                view_type_brochure_source_17: 'Source: tables, chairs, covers and outdoor storage catalog (printed pages 27–28).',
+                view_type_brochure_source_generic: 'Source: product catalog reference; confirm the model-specific configuration.',
                 view_type_brochure_source_dome: 'Source: catalog reference (illustrative — confirm specs with the model table).',
                 view_type_brochure_source_19: 'Source: catalog page 19.png',
-                view_type_brochure_source_20: 'Source: catalog page 20.png',
+                view_type_brochure_source_20: 'Source: fabric banner stands, lighting and carrying accessories catalog (printed pages 33–34).',
                 view_type_brochure_source_25: 'Source: catalog page 25.png',
                 view_type_page_title_furniture: 'Tables / Chairs / Stools / Sanitation',
                 view_type_page_title_dome: 'DOME 3 Folding Series',

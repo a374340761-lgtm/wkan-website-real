@@ -33,6 +33,21 @@
   function normalizeFooterLinks(root) {
     const container = root || document;
 
+    // Older company pages may have a social row without Xiaohongshu, or no social row.
+    if (!container.querySelector('a[href*="xhslink.com/"]')) {
+      const defaults = buildFooterElement();
+      const social = container.querySelector('.contact-bottom__socialLinks');
+      if (social) {
+        const item = defaults.querySelector('a[href*="xhslink.com/"]').closest('li');
+        if (item) social.appendChild(item);
+      } else {
+        const block = defaults.querySelector('.contact-bottom__social');
+        const legal = container.querySelector('.contact-bottom__legal');
+        if (block && legal) legal.before(block);
+        else if (block) (container.querySelector('.contact-bottom__inner') || container).appendChild(block);
+      }
+    }
+
     container.querySelectorAll('a[href*="xhslink.com/"]').forEach((link) => {
       let icon = link.querySelector('.wk-social-xhs-icon');
       if (!icon) {
@@ -45,6 +60,27 @@
         icon.innerHTML = '<img src="/images/social/xiaohongshu-logo-32.png" srcset="/images/social/xiaohongshu-logo-64.png 2x" width="18" height="18" alt="" decoding="async" />';
       }
     });
+
+    if (!container.querySelector('[data-careers-entry]')) {
+      const block = document.createElement('div');
+      block.className = 'contact-bottom__careers';
+      block.setAttribute('data-careers-entry', '1');
+      const link = document.createElement('a');
+      link.href = /^\/zh(\/|$)/.test(location.pathname) ? '/zh/careers.html' : '/careers.html';
+      link.textContent = '加入我们 / Careers →';
+      block.appendChild(link);
+      const social = container.querySelector('.contact-bottom__social');
+      const legal = container.querySelector('.contact-bottom__legal');
+      if (social) social.after(block);
+      else if (legal) legal.before(block);
+      else (container.querySelector('.contact-bottom__inner') || container).appendChild(block);
+    }
+
+    const careersEntry = container.querySelector('[data-careers-entry]');
+    const socialSection = container.querySelector('.contact-bottom__social');
+    if (careersEntry && socialSection && socialSection.nextElementSibling !== careersEntry) {
+      socialSection.after(careersEntry);
+    }
 
     const hasContactHere = !!document.getElementById('contact');
     const hasAboutHere = !!document.getElementById('about');

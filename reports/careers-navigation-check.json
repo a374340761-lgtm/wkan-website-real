@@ -1,0 +1,22 @@
+[
+  {
+    "width": 390,
+    "zh": false,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "pass": true
+  }
+]

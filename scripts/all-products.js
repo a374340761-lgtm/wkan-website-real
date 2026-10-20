@@ -1393,7 +1393,7 @@
         });
     }
 
-    /** Map legacy ?category=foo to ?cat=foo (then stripAccessoriesCatFromUrl can run on final shape). */
+    /** Map legacy ?category=foo to ?cat=foo. */
     function normalizeLegacyCategoryQueryParam() {
         try {
             const url = new URL(window.location.href);
@@ -1410,37 +1410,10 @@
         }
     }
 
-    /** Legacy ?cat=accessories is merged into the full catalog (tent accessory SKUs stay category accessories but list with "all"). */
-    function stripAccessoriesCatFromUrl() {
-        try {
-            const url = new URL(window.location.href);
-            let changed = false;
-            if (url.searchParams.get('cat') === 'accessories') {
-                url.searchParams.delete('cat');
-                changed = true;
-            }
-            if (url.searchParams.get('category') === 'accessories') {
-                url.searchParams.delete('category');
-                changed = true;
-            }
-            if (changed) {
-                const next = url.pathname + (url.searchParams.toString() ? `?${url.searchParams.toString()}` : '') + url.hash;
-                window.history.replaceState({}, '', next);
-            }
-        } catch (e) {
-            // ignore
-        }
-    }
-
     // 初始化
     function initAllProducts() {
         normalizeLegacyCategoryQueryParam();
-        stripAccessoriesCatFromUrl();
 
-        if (catSelect) {
-            const accOpt = catSelect.querySelector('option[value="accessories"]');
-            if (accOpt) accOpt.remove();
-        }
 
         products = enrichProductsForSearch(getProducts());
         
@@ -1482,7 +1455,7 @@
             const existing = new Set(Array.from(catSelect.options).map(o => o.value));
 
             validCats.forEach((cat) => {
-                if (!cat || existing.has(cat) || cat === 'accessories') return;
+                if (!cat || existing.has(cat)) return;
                 const opt = document.createElement('option');
                 opt.value = cat;
                 const mapped = labelMap[cat];
@@ -1522,6 +1495,14 @@
 
         // 3) 首次渲染
         filterAndRender();
+        // Category links can land directly at results after the dynamic list mounts.
+        const resultsAnchor = window.location.hash;
+        if (resultsAnchor === '#productsGrid' || resultsAnchor === '#allProductsAccessoriesSection') {
+            requestAnimationFrame(() => {
+                const target = document.getElementById(resultsAnchor.slice(1));
+                if (target) target.scrollIntoView({ block: 'start' });
+            });
+        }
         
         // 3) 监听搜索输入
         searchInput.addEventListener('input', filterAndRender);

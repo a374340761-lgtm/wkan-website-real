@@ -23,6 +23,9 @@
     "广西伟群帐篷闭气拱门价格表241205.xlsx": "808470b49d74810a0214a3bfedaa856169e9299e971c99e0c439bb2d7d18f461",
     "桌子+椅子价格表.xls": "c2757d1ffa38ba873ab0a0ba17603936a51024c0d30b6310940aeb88e8ba61e8"
   },
+  "documents": {
+    "补充价格表或者尺寸的截图.docx": "caf62a205544f08cd7351d8814e03f4fd373e325d138c08a76fde27040b84000"
+  },
   "matches": [
     {
       "target": "31001",
@@ -711,6 +714,35 @@
         14
       ],
       "configurations": 8
+    },
+    {
+      "target": "tent:inflatable-arch",
+      "file": "广西伟群帐篷闭气拱门价格表241205.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14
+      ],
+      "configurations": 7
+    },
+    {
+      "target": "tent:inflatable-arch",
+      "file": "补充价格表或者尺寸的截图.docx",
+      "image": "word/media/image2.jpeg",
+      "transcription": "Visually checked table: Hex Airtight Arch and Round Airtight Arch",
+      "configurations": 4
+    },
+    {
+      "target": "tent:inflatable-arch",
+      "file": "补充价格表或者尺寸的截图.docx",
+      "image": "word/media/image2.jpeg",
+      "transcription": "Visually checked table: Hex Airtight Arch and Round Airtight Arch",
+      "configurations": 2
     },
     {
       "target": "31101",

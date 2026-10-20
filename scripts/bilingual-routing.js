@@ -29,6 +29,8 @@
   }
 
   var MIRRORED_EN = {
+    '/careers.html': true,
+    '/export-loading.html': true,
     '/products/curved-fabric-banner-stand.html': true,
     '/products/3x3-standard-black-flat-tube-canopy-frame.html': true,
     '/all-products.html': true,

@@ -1,0 +1,194 @@
+[
+  {
+    "id": "95003",
+    "route": "flag-type.html?type=alu_fiberglass_pole",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95004",
+    "route": "flag-type.html?type=fully_fiberglass_teardrop",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95005",
+    "route": "flag-type.html?type=fully_fiberglass_feather",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95007",
+    "route": "flag-type.html?type=square_flag_pole_fiberglass",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95008",
+    "route": "flag-type.html?type=alu_pole_semicircle",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95009",
+    "route": "flag-type.html?type=alu_pole_square",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95010",
+    "route": "flag-type.html?type=alu_pole_new_feather",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95001",
+    "route": "flag-type.html?type=backpack_street_flags",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95012",
+    "route": "flag-type.html?type=flag_bases_accessories",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "2001",
+    "route": "product-detail.html?sku=2001",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "2002",
+    "route": "product-detail.html?sku=2002",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "2003",
+    "route": "product-detail.html?sku=2003",
+    "lang": "en",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95003",
+    "route": "flag-type.html?type=alu_fiberglass_pole",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95004",
+    "route": "flag-type.html?type=fully_fiberglass_teardrop",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95005",
+    "route": "flag-type.html?type=fully_fiberglass_feather",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95007",
+    "route": "flag-type.html?type=square_flag_pole_fiberglass",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95008",
+    "route": "flag-type.html?type=alu_pole_semicircle",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95009",
+    "route": "flag-type.html?type=alu_pole_square",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95010",
+    "route": "flag-type.html?type=alu_pole_new_feather",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95001",
+    "route": "flag-type.html?type=backpack_street_flags",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "95012",
+    "route": "flag-type.html?type=flag_bases_accessories",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "2001",
+    "route": "product-detail.html?sku=2001",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "2002",
+    "route": "product-detail.html?sku=2002",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  },
+  {
+    "id": "2003",
+    "route": "product-detail.html?sku=2003",
+    "lang": "zh",
+    "width": 390,
+    "rfq": true,
+    "pass": true
+  }
+]

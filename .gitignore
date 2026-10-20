@@ -20,3 +20,13 @@ Thumbs.db
 # Optional: build outputs
 /dist/
 /build/
+
+# Recruitment secrets and local runtime data
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.sqlite3-*
+
+careers_backend/.careers-test-*/

@@ -1,0 +1,13 @@
+{
+  "simulated": true,
+  "realSheetWrites": 0,
+  "checks": [
+    "valid native payload creates unchanged 15/11-column headers, 1 summary + 13 answers; retry deduplicates",
+    "missing answer under completed status is repaired",
+    "injected second-sheet write failure returns false; retry restores same summary and 13 answers",
+    "8 malformed/inconsistent submissions rejected before writes",
+    "leading-whitespace formulas stored as text",
+    "existing mismatched headers preserved, no silent column modification"
+  ],
+  "pass": true
+}

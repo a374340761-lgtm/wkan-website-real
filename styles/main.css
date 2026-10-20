@@ -6,7 +6,7 @@
 @import url("modules/tokens-base.css");
 @import url("modules/header-layout.css");
 @import url("modules/pages-catalog.css");
-@import url("modules/product-detail.css?v=20261020-gallery");
+@import url("modules/product-detail.css?v=20261020-specifications-final");
 @import url("modules/modals-overlays.css");
 @import url("modules/contact-page.css");
 @import url("modules/layout-misc.css?v=20261020-xhs-logo");
@@ -15,6 +15,8 @@
 @import url("modules/faq-page.css");
 @import url("modules/product-cards.css");
 @import url("modules/wk-mobile-nav.css");
+
+@import url("modules/resource-navigation.css?v=20261020-header-no-overlap");
 
 /* Product decision tables use confirmed catalog facts. */
 .seo-comparison table { width: 100%; border-collapse: collapse; line-height: 1.6; }

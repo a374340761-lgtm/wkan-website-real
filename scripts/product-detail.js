@@ -814,7 +814,7 @@ document.addEventListener('DOMContentLoaded', () => {
             brochureSrc = rawRefImg;
         }
         const brochureSourceKey = (product.referenceSourceKey && String(product.referenceSourceKey).trim())
-            || 'view_type_brochure_source_17';
+            || (isFurnitureTableChairCat ? 'view_type_brochure_source_17' : 'view_type_brochure_source_generic');
 
         if (variantsEl && brochureSrc) {
             const block = document.createElement('div');
@@ -976,7 +976,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         document.querySelector('[data-tab="specs"]')?.click();
                         technicalTab?.scrollIntoView({block:'start'});
                     });
-                    specsEl.replaceChildren(link);
+                    const li = document.createElement('li');
+                    li.appendChild(link);
+                    specsEl.replaceChildren(li);
                 }
             }
         }

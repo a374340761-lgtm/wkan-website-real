@@ -1,0 +1,35 @@
+.careers-layout{padding-top:170px;}
+.careers-page{line-height:1.8;max-width:100%;}
+.careers-page .container{max-width:1060px;}
+.careers-page h1{font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.3;margin:18px 0;}
+.careers-page h2{font-size:1.5rem;margin:0 0 16px;line-height:1.4;}
+.careers-page .breadcrumb{display:flex;flex-wrap:wrap;gap:10px;}
+.careers-lead{font-size:1.1rem;color:var(--text-light);}
+.careers-box{padding:28px;margin:24px 0;background:var(--bg-white,#fff);border:1px solid var(--border-color,#e4e7eb);border-radius:16px;}
+.careers-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.careers-facts p{padding:18px;border:1px solid #e7e9ed;border-radius:12px;margin:0;}
+.careers-page ul{padding-left:22px;}
+.careers-notice{padding:20px 24px;border-left:4px solid #a4161a;background:#fff8f5;border-radius:10px;margin:24px 0;}
+.careers-notice[data-state=success]{background:#edf8f0;border-color:#276b3c;font-size:1.3rem;font-weight:700;}
+.careers-notice[data-state=error]{background:#fff0f0;border-color:#a4161a;}
+.careers-profile{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+.careers-profile .wide{grid-column:1/-1;}
+.careers-field{margin:18px 0;min-width:0;}
+.careers-field>label,.careers-profile label{display:block;font-weight:600;margin-bottom:7px;}
+.careers-page input:not([type=checkbox]),.careers-page textarea,.careers-page select{width:100%;min-width:0;font:inherit;color:inherit;border:1px solid #cbd2dc;background:#fff;border-radius:8px;padding:10px 12px;box-sizing:border-box;}
+.careers-page textarea{resize:vertical;}
+.careers-page input:focus-visible,.careers-page textarea:focus-visible,.careers-page select:focus-visible{outline:2px solid #a4161a;outline-offset:2px;}
+.careers-question{padding:24px;margin:28px 0;min-width:0;border:1px solid #dce0e7;border-radius:12px;background:#fff;}
+.careers-question>legend{font-weight:700;font-size:1.12rem;line-height:1.6;padding:0 8px;max-width:100%;}
+.careers-hint{font-size:.92rem;color:#596879;margin:6px 0 12px;}
+.careers-choices{border:0;padding:0;min-width:0;}
+.careers-choices legend{font-weight:600;margin-bottom:10px;}
+.careers-check{display:flex;align-items:flex-start;gap:10px;padding:7px 0;font-weight:400;line-height:1.7;cursor:pointer;}
+.careers-check input{width:18px;height:18px;flex:0 0 18px;margin-top:5px;accent-color:#a4161a;}
+.careers-progress{padding:12px 0;font-size:.92rem;color:#596879;}
+.careers-submit{margin-top:20px;}
+.careers-submit:disabled{opacity:.65;cursor:not-allowed;}
+.careers-honey{position:absolute!important;left:-10000px!important;width:1px;height:1px;overflow:hidden;}
+@media(max-width:650px){.careers-facts,.careers-profile{grid-template-columns:1fr;}.careers-box{padding:20px;}.careers-question{padding:18px 14px;}.careers-question>legend{font-size:1.05rem;}.careers-profile .wide{grid-column:auto;}.careers-submit{width:100%;}.careers-layout{padding-top:100px;}}
+
+.careers-page input,.careers-page textarea,.careers-page select,.careers-question{scroll-margin-top:160px;}

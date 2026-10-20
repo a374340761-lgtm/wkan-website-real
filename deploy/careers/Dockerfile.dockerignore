@@ -1,0 +1,8 @@
+# Dockerfile-specific ignore file, used with -f deploy/careers/Dockerfile.
+**/.env
+**/.env.*
+**/__pycache__
+**/*.sqlite3*
+**/.careers-test-*
+.git
+node_modules

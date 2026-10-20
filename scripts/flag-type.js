@@ -166,7 +166,7 @@
       })()
     };
     const enc = encodeURIComponent(JSON.stringify(payload));
-    return `<td class="variant-rfq-cell"><button type="button" class="variant-rfq-btn" data-wk-flag-rfq="1" data-wk-payload="${enc}"><i class="fas fa-cart-plus" aria-hidden="true"></i></button></td>`;
+    return `<td class="variant-rfq-cell"><button type="button" class="variant-rfq-btn" aria-label="${getCurrentLang() === 'zh' ? '加入询价车' : 'Add to quote cart'}" title="${getCurrentLang() === 'zh' ? '加入询价车' : 'Add to quote cart'}" data-wk-flag-rfq="1" data-wk-payload="${enc}"><i class="fas fa-cart-plus" aria-hidden="true"></i></button></td>`;
   }
 
   function bindFlagTypeRfq(root) {
@@ -438,6 +438,7 @@
     return `
       <div class="tent-type-detail__block">
         <div class="tent-type-detail__blockTitle">${title}</div>
+        ${window.WK_getVerifiedSpecs?.(item.rfqProductId).length ? `<p class="tent-type-detail__text">${lang === 'zh' ? '画册仅作款式参考；型号与配置参数以本页更新后的规格表为准。' : 'Brochure images illustrate product styles. Use the updated specification tables on this page for model and configuration details.'}</p>` : ''}
         <div class="tent-type-detail__visuals" style="grid-template-columns: 1fr;">
           ${imgs
             .map((src) => {
@@ -524,7 +525,7 @@
         ${renderPdfGuide(item)}
         ${renderSpecTable(item, selectedVariantKey)}
         ${renderStory(item)}
-        ${renderInfoBlocks(item)}
+        ${window.WK_getVerifiedSpecs?.(item.rfqProductId).length ? '' : renderInfoBlocks(item)}
         ${renderExampleImages(item)}
       </div>
     `;

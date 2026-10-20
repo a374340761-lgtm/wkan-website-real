@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -419,11 +420,11 @@ ${GTM_HEAD}
   <link rel="alternate" hreflang="x-default" href="${zh ? otherUrl : url}">
   <meta property="og:type" content="product"><meta property="og:site_name" content="WaiKwan"><meta property="og:title" content="${esc(text.title)}"><meta property="og:description" content="${esc(text.description)}"><meta property="og:url" content="${url}"><meta property="og:image" content="${ORIGIN}${product.image}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${esc(text.title)}"><meta name="twitter:description" content="${esc(text.description)}"><meta name="twitter:image" content="${ORIGIN}${product.image}">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles/main.css?v=20261020-gallery"><link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles/main.css?v=20261020-header-no-overlap"><link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <style>.static-product{max-width:1180px;margin:0 auto;padding:120px 24px 64px}.crumbs{margin-bottom:28px;font-size:.95rem}.crumbs a{color:#7c1d1d}.product-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,1fr);gap:42px;align-items:center}.product-hero img{width:100%;max-height:520px;object-fit:contain;background:#f6f6f6;border-radius:12px}.eyebrow{color:#8f171b;font-weight:700;letter-spacing:.04em}.lead{font-size:1.12rem;line-height:1.75}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.content-section{margin-top:52px}.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#ddd}.facts div{background:#fff;padding:16px}.facts dt{font-weight:700}.facts dd{margin:6px 0 0}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th,td{padding:12px;border:1px solid #ddd;text-align:left}th{background:#f3f3f3}.source-note{padding:18px;border-left:4px solid #a4161a;background:#fff6f3}.image-note{font-size:.9rem;color:#555}.product-photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.product-photo-grid figure{margin:0;min-width:0}.product-photo-grid img{width:100%;height:360px;object-fit:contain;background:#f6f6f6;border-radius:8px}.product-photo-grid figcaption{padding:12px 0}.lang-link{margin-left:auto}@media(max-width:780px){.product-hero{grid-template-columns:1fr}.facts{grid-template-columns:1fr}.product-photo-grid{grid-template-columns:1fr}}</style>
   <script type="application/ld+json">${schema(product, lang, url, otherUrl)}</script>
   <script src="/scripts/analytics.js?v=20260930-ga4-consent" defer></script>
-  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>
+  <script src="/scripts/main.js?v=20261020-careers-nav" defer></script>
 </head>
 <body>
 ${GTM_BODY}
@@ -449,7 +450,7 @@ function page(product, lang) {
   const original = basePage(product, lang);
   if (product.slug === '1x1m-40mm-aluminum-market-stall') return marketStallPage(product, lang, original);
   if (product.slug === 'curved-fabric-banner-stand') return displayProductPage(product, lang, original);
-  if (!product.internalCatalogKey) return original;
+  if (!product.internalCatalogKey) return sharedStandardPage(original, lang);
   const zh = lang === 'zh', text = product[lang], prefix = zh ? '/zh' : '';
   const template = fs.readFileSync(path.join(ROOT, 'tent-type.html'), 'utf8');
   const localizeShell = html => html.replace(/\b(href|src)="([^"]+)"/g, (all, attr, value) => {
@@ -474,9 +475,9 @@ function page(product, lang) {
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '型号参数' : 'Models & Specifications'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table">${facts}</table></div></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '选型说明' : 'Frame Selection'}</h2><p>${zh ? '普通黑金刚为独立的扁管架款式，不能套用 30 方管铁架或 40/50 六角铝架的重量、壁厚和性能参数。请结合撑杆、连接件及顶布适配要求选型。' : 'Standard Black is a separate flat-tube frame model. Do not apply the weight, wall thickness or performance specifications of the 30 square-tube or 40/50 hexagonal frames. Compare brace profile, joints and canopy compatibility.'}</p></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
-  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261020-canopy-details"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-lightbox-backpack"></script><script src="/scripts/multilang.js?v=20261020-lightbox-backpack"></script><script src="/scripts/get-quote-footer.js?v=20261020-xhs-logo"></script><script src="/scripts/standard-black-frame.js"></script>`;
+  const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261020-audit"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/standard-black-frame.js"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
-    .replace('  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261020-careers-nav" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts + '\n</body>');
@@ -517,12 +518,33 @@ function displayProductPage(product, lang, original) {
     ${footer}
   </main>`;
   const scripts = `<button class="back-to-top" id="backToTop" type="button" aria-label="${zh ? '返回顶部' : 'Back to top'}"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
-  <script src="/scripts/products.js?v=20261020-canopy-details"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-lightbox-backpack"></script><script src="/scripts/multilang.js?v=20261020-lightbox-backpack"></script><script src="/scripts/get-quote-footer.js?v=20261020-xhs-logo"></script><script src="/scripts/static-product-detail.js?v=20261014-layout"></script>`;
+  <script src="/scripts/products.js?v=20261020-audit"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/static-product-detail.js?v=20261014-layout"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>[data-static-photo]{background:none;border:0;padding:0;cursor:pointer} .related-products{margin-bottom:32px}</style>`)
-    .replace('  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261020-careers-nav" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts + '\n</body>');
+}
+
+// Every static SKU uses the same primary navigation, contact footer and social icons.
+function sharedStandardPage(original, lang) {
+  const zh = lang === 'zh';
+  const template = fs.readFileSync(path.join(ROOT, 'tent-type.html'), 'utf8');
+  const localize = html => html.replace(/\b(href|src)="([^"]+)"/g, (all, attr, value) => {
+    if (/^(https?:|mailto:|tel:|data:|#|\/\/)/.test(value)) return all;
+    const clean = value.replace(/^\.?\//, '');
+    const asset = /^(images|scripts|styles)\//.test(clean) || /^(favicon|site\.webmanifest)/.test(clean);
+    const localized = !asset && zh && fs.existsSync(path.join(ROOT, 'zh', clean.split(/[?#]/)[0]));
+    return `${attr}="${localized ? '/zh/' : '/'}${clean}"`;
+  });
+  const header = localize(template.slice(template.indexOf('  <!-- Top bar -->'), template.indexOf('  <main>')));
+  const start = template.indexOf('<section class="contact-bottom">');
+  const footer = localize(template.slice(start, template.indexOf('    </main>', start)));
+  return original
+    .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
+    .replace('  <script src="/scripts/main.js?v=20261020-careers-nav" defer></script>', '<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script>')
+    .replace('</main>', '</main>' + footer)
+    .replace('</body>', '<script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script></body>');
 }
 
 function marketStallPage(product, lang, original) {
@@ -552,21 +574,49 @@ function marketStallPage(product, lang, original) {
     <div class="tab-panel" id="tab-apps" role="tabpanel" aria-labelledby="stall-tab-apps"><h2>${labels[2]}</h2><ul>${text.applications.map(v=>`<li>${esc(v)}</li>`).join('')}</ul></div>
     <div class="tab-panel" id="tab-download" role="tabpanel" aria-labelledby="stall-tab-download"><h2>${labels[3]}</h2><p>${zh ? '下载公司目录；本款专用画面模板及未列参数请联系确认。' : 'Download the company catalog; contact us for this model’s graphic template and unlisted specifications.'}</p><a class="btn btn-secondary" href="/${encodeURI('广西伟群帐篷制造有限公司2025改.pdf')}">${zh ? '下载公司目录 PDF（2025版）' : 'Download Company Catalog PDF (2025)'}</a></div></div></section>
     ${footer}</main>`;
-  const scripts = `<script src="/scripts/products.js?v=20261020-canopy-details"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-lightbox-backpack"></script><script src="/scripts/multilang.js?v=20261020-lightbox-backpack"></script><script src="/scripts/get-quote-footer.js?v=20261020-xhs-logo"></script><script src="/scripts/static-product-detail.js"></script>`;
+  const scripts = `<script src="/scripts/products.js?v=20261020-audit"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/static-product-detail.js"></script>`;
   return original.replace(/<style>[\s\S]*?<\/style>/, '<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>[data-static-photo]{background:none;border:0;padding:0;cursor:pointer;flex-shrink:0}</style>')
-    .replace('  <script src="/scripts/main.js?v=20261020-lightbox-backpack" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261014-static-stand" defer></script>')
+    .replace('  <script src="/scripts/main.js?v=20261020-careers-nav" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)
     .replace('</body>', scripts+'\n</body>');
 }
 
+// Use the same reviewed specification data and renderer as the runtime product pages.
+const verifiedData = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/product-specifications-2026.json'), 'utf8'));
+const verifiedContext = {window:{}};
+vm.createContext(verifiedContext);
+vm.runInContext(`const WK_VERIFIED_SPECIFICATIONS = ${JSON.stringify(verifiedData)};\n${fs.readFileSync(path.join(ROOT, 'scripts/verified-specifications-runtime.js'), 'utf8')}`, verifiedContext);
+function applyReviewedStaticFacts(product) {
+  const groups = verifiedData.products[String(product.sku)];
+  if (!groups?.length || product.internalCatalogKey) return;
+  const g = groups[0], row = g.rows[0];
+  product.facts = g.columns.filter(c => row[c.key]).map(c => [c.en, row[c.key]]);
+  product.factsZh = g.columns.filter(c => row[c.key]).map(c => [c.zh, row[c.key]]);
+  if (String(product.sku) === '9014') {
+    product.en = {...product.en, name:'Half-wall PC Connector AD-T08', title:'Half-wall PC Connector AD-T08 | 40# Hex Frame | WaiKwan', description:'AD-T08 half-wall PC connector for the 40# hexagonal frame configuration, listed weight 0.21 kg, two pieces per set.', intro:'AD-T08 is a PC half-wall connector. The supplied specification sheet lists the 40# hexagonal configuration and two pieces per set.', note:'Confirm the actual frame profile and dimensions before ordering. Compatibility with other tube profiles is not established by this sheet.'};
+    product.zh = {...product.zh, name:'半围 PC 连接件 AD-T08', title:'半围 PC 连接件 AD-T08｜40# 六角架｜伟群帐篷', description:'AD-T08 半围 PC 连接件，表列40#六角架配置、重量0.21 kg，一套2个。', intro:'AD-T08 为半围 PC 连接件；本次规格表列示40#六角架配置，一套2个。', note:'订购前确认实际型材及管径；本表不能证明其适配其他管型。'};
+    product.facts.push(['Compatibility','40# hexagonal frame'],['Set quantity','2 pieces']);
+    product.factsZh.push(['适配框架','40# 六角架'],['套装数量','2个']);
+  }
+  if (String(product.sku) === '9004') {
+    product.en.description='Round canopy water weight bucket WK-T02A, 24 × 25 cm, listed empty weight 1.1 kg and carton 52 × 24.5 × 48 cm.';
+    product.zh.description='圆型帐篷压重水桶 WK-T02A，尺寸24×25 cm，表列空桶重量1.1 kg，箱规52×24.5×48 cm。';
+  }
+}
+function appendReviewedStaticSpecs(html, product, lang) {
+  const specs = verifiedContext.window.WK_renderVerifiedSpecs(product.sku, lang);
+  return specs ? html.replace('</main>', `${specs}\n</main>`) : html;
+}
+
 const check = process.argv.includes('--check');
 let failed = false;
 for (const product of STATIC_PRODUCTS) {
+  applyReviewedStaticFacts(product);
   for (const lang of ['en', 'zh']) {
     const rel = `${lang === 'zh' ? 'zh/' : ''}products/${product.slug}.html`;
     const dest = path.join(ROOT, rel);
-    const output = page(product, lang).replace(/[ \t]+$/gm, '');
+    const output = appendReviewedStaticSpecs(page(product, lang), product, lang).replace(/[ \t]+$/gm, '');
     if (check) {
       // Windows checkouts may use CRLF; compare generated content independently of line endings.
       if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8').replace(/\r\n/g, '\n') !== output.replace(/\r\n/g, '\n')) {

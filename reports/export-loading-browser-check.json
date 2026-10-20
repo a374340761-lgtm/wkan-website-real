@@ -1,0 +1,182 @@
+[
+  {
+    "route": "export-loading.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "zh/export-loading.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "product-center.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": "flex",
+    "errors": []
+  },
+  {
+    "route": "zh/product-center.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "all-products.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "zh/all-products.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "manufacturing-capabilities.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "about-us.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "products/1x1m-40mm-aluminum-market-stall.html",
+    "width": 390,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "export-loading.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "zh/export-loading.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "product-center.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": "flex",
+    "errors": []
+  },
+  {
+    "route": "zh/product-center.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "all-products.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "zh/all-products.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "manufacturing-capabilities.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "about-us.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  },
+  {
+    "route": "products/1x1m-40mm-aluminum-market-stall.html",
+    "width": 1440,
+    "overflow": false,
+    "h1": 1,
+    "images": [],
+    "footer": true,
+    "cards": null,
+    "errors": []
+  }
+]

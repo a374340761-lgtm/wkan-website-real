@@ -1516,7 +1516,7 @@
             "size": "24*25CM",
             "material": "PE",
             "weight": "1.1KG",
-            "carton": "52*24.5*48CM毛重：4.5KG"
+            "carton": "52*24.5*48CM G.W.: 4.5KG"
           }
         ],
         "notesZh": [
@@ -1678,7 +1678,7 @@
         "rows": [
           {
             "model": "WK-T11",
-            "size": "地钉25*0.6CM  绳子300*0.5CM",
+            "size": "Stake 25*0.6CM  Rope 300*0.5CM",
             "material": "",
             "weight": "0.4KG",
             "carton": ""
@@ -1733,7 +1733,7 @@
         "rows": [
           {
             "model": "WK-T11-A",
-            "size": "地钉25*0.6CM  织带300*2.2CM",
+            "size": "Stake 25*0.6CM  Webbing 300*2.2CM",
             "material": "",
             "weight": "0.6KG",
             "carton": ""
@@ -2451,8 +2451,8 @@
           },
           {
             "key": "weight",
-            "zh": "表列重量 / 容量（按配置）",
-            "en": "Listed weight / capacity (by configuration)"
+            "zh": "成品重量 (kg)",
+            "en": "Finished-product weight (kg)"
           },
           {
             "key": "carton",
@@ -2464,21 +2464,21 @@
           {
             "model": "WK-PO-01",
             "size": "3*3",
-            "graphic": "2250*2250,包边加350*2",
+            "graphic": "2250*2250,side returns + 350*2",
             "weight": "7",
             "carton": "82*26*26cm"
           },
           {
             "model": "WK-PO-02",
             "size": "3*4",
-            "graphic": "2250*2980,包边加350*2",
+            "graphic": "2250*2980,side returns + 350*2",
             "weight": "8.5",
             "carton": "82*26*35cm"
           },
           {
             "model": "WK-PO-03",
             "size": "3*5",
-            "graphic": "2250*3730,包边加350*2",
+            "graphic": "2250*3730,side returns + 350*2",
             "weight": "12",
             "carton": "82*26*46cm"
           }
@@ -3510,8 +3510,8 @@
           },
           {
             "key": "size",
-            "zh": "尺寸",
-            "en": "Size"
+            "zh": "尺寸 / 配合 / 装箱说明",
+            "en": "Dimensions / fit / packing details"
           },
           {
             "key": "carton",
@@ -3617,12 +3617,12 @@
           },
           {
             "model": "WK-C20",
-            "size": "100个/箱 38*38*29.5cm\nG.W:18KG",
+            "size": "100 pcs/carton  38*38*29.5cm\nG.W:18KG",
             "carton": ""
           },
           {
             "model": "WK-C20B",
-            "size": "100个/箱38*38*29.5cm\nG.W:14KG",
+            "size": "100 pcs/carton 38*38*29.5cm\nG.W:14KG",
             "carton": ""
           },
           {
@@ -4229,6 +4229,185 @@
             13,
             14
           ]
+        }
+      }
+    ],
+    "tent:inflatable-arch": [
+      {
+        "titleZh": "400D 闭气圆形拱门配置",
+        "titleEn": "400D sealed round arch configurations",
+        "columns": [
+          {
+            "key": "size",
+            "zh": "尺寸",
+            "en": "Size"
+          },
+          {
+            "key": "carton",
+            "zh": "箱规 (cm)",
+            "en": "Carton (cm)"
+          },
+          {
+            "key": "gw",
+            "zh": "整箱毛重 (kg)",
+            "en": "Carton gross weight (kg)"
+          }
+        ],
+        "rows": [
+          {
+            "size": "3000*2500*450",
+            "carton": "81*81*23",
+            "gw": "22"
+          },
+          {
+            "size": "4000*2600*450",
+            "carton": "81*81*23",
+            "gw": "23"
+          },
+          {
+            "size": "5000*3200*600",
+            "carton": "81*81*23",
+            "gw": "26"
+          },
+          {
+            "size": "6000*3800*600",
+            "carton": "81*23*61",
+            "gw": "26"
+          },
+          {
+            "size": "6000*3800*800",
+            "carton": "83*83*23",
+            "gw": "28"
+          },
+          {
+            "size": "8000*4600*800",
+            "carton": "83*83*23",
+            "gw": "30"
+          },
+          {
+            "size": "12000*5800*900",
+            "carton": "81*81*28",
+            "gw": "36"
+          }
+        ],
+        "notesZh": [
+          "尺寸为宽×高×管径，单位mm；400D（220g）PU涂层涤纶、0.3 mm TPU内胆，热升华印刷。",
+          "10000×4800一行的尺寸和管径列相互矛盾，未采用。此配置不能与600D补充表混用。"
+        ],
+        "notesEn": [
+          "Sizes are width × height × tube diameter in mm. 400D (220g) PU-coated polyester, 0.3 mm TPU bladder and dye-sublimation printing.",
+          "The conflicting 10000 × 4800 source row is omitted. Do not mix this configuration with the 600D supplement."
+        ],
+        "source": {
+          "file": "广西伟群帐篷闭气拱门价格表241205.xlsx",
+          "sheet": "Sheet1",
+          "rows": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14
+          ]
+        }
+      },
+      {
+        "titleZh": "600D 闭气六角拱门配置",
+        "titleEn": "600D sealed hexagonal arch configurations",
+        "columns": [
+          {
+            "key": "size",
+            "zh": "尺寸",
+            "en": "Size"
+          },
+          {
+            "key": "carton",
+            "zh": "箱规 (cm)",
+            "en": "Carton (cm)"
+          },
+          {
+            "key": "gw",
+            "zh": "整箱毛重 (kg)",
+            "en": "Carton gross weight (kg)"
+          }
+        ],
+        "rows": [
+          {
+            "size": "5000 × 3200 × 600",
+            "carton": "81 × 81 × 23",
+            "gw": "26"
+          },
+          {
+            "size": "6000 × 3800 × 600",
+            "carton": "81 × 23 × 61",
+            "gw": "26"
+          },
+          {
+            "size": "6000 × 3800 × 800",
+            "carton": "83 × 83 × 23",
+            "gw": "28"
+          },
+          {
+            "size": "8000 × 4600 × 800",
+            "carton": "83 × 83 × 23",
+            "gw": "30"
+          }
+        ],
+        "notesZh": [
+          "尺寸为宽×高×管径，单位mm；补充截图列600D（240g）PU涂层涤纶、0.3 mm TPU内胆，热升华印刷。此为独立配置，不套用于400D款或玻纤竞速拱门。"
+        ],
+        "notesEn": [
+          "Sizes are width × height × tube diameter in mm. The supplement specifies 600D (240g) PU-coated polyester, a 0.3 mm TPU bladder and dye-sublimation printing. This is a separate configuration from 400D arches and fiberglass race gates."
+        ],
+        "source": {
+          "file": "补充价格表或者尺寸的截图.docx",
+          "image": "word/media/image2.jpeg",
+          "transcription": "Visually checked table: Hex Airtight Arch and Round Airtight Arch"
+        }
+      },
+      {
+        "titleZh": "600D 闭气圆形拱门配置",
+        "titleEn": "600D sealed round arch configurations",
+        "columns": [
+          {
+            "key": "size",
+            "zh": "尺寸",
+            "en": "Size"
+          },
+          {
+            "key": "carton",
+            "zh": "箱规 (cm)",
+            "en": "Carton (cm)"
+          },
+          {
+            "key": "gw",
+            "zh": "整箱毛重 (kg)",
+            "en": "Carton gross weight (kg)"
+          }
+        ],
+        "rows": [
+          {
+            "size": "5000 × 2750 × 500",
+            "carton": "81 × 81 × 23",
+            "gw": "23"
+          },
+          {
+            "size": "6000 × 3250 × 600",
+            "carton": "81 × 81 × 23",
+            "gw": "24"
+          }
+        ],
+        "notesZh": [
+          "尺寸为宽×高×管径，单位mm；补充截图列600D（240g）PU涂层涤纶、0.3 mm TPU内胆，热升华印刷。此为独立配置，不套用于400D款或玻纤竞速拱门。"
+        ],
+        "notesEn": [
+          "Sizes are width × height × tube diameter in mm. The supplement specifies 600D (240g) PU-coated polyester, a 0.3 mm TPU bladder and dye-sublimation printing. This is a separate configuration from 400D arches and fiberglass race gates."
+        ],
+        "source": {
+          "file": "补充价格表或者尺寸的截图.docx",
+          "image": "word/media/image2.jpeg",
+          "transcription": "Visually checked table: Hex Airtight Arch and Round Airtight Arch"
         }
       }
     ],

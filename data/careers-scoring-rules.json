@@ -1,0 +1,932 @@
+{
+  "version": "2026-10-20-v1",
+  "questions": [
+    {
+      "id": "q1",
+      "dimension": "interest",
+      "title": "你为什么想做外贸？目前了解了哪些工作，最想先学什么？",
+      "hint": "不要求已有经验；按你目前的真实了解填写。",
+      "fields": [
+        {
+          "key": "reason",
+          "label": "想做外贸的原因（简述一个与你有关的原因）",
+          "type": "textarea",
+          "maxLength": 220,
+          "hint": ""
+        },
+        {
+          "key": "explored",
+          "label": "目前了解过哪些环节（可多选）",
+          "type": "checkboxes",
+          "options": [
+            {
+              "value": "product",
+              "label": "产品学习"
+            },
+            {
+              "value": "research",
+              "label": "客户开发"
+            },
+            {
+              "value": "english",
+              "label": "英文沟通"
+            },
+            {
+              "value": "quote",
+              "label": "报价"
+            },
+            {
+              "value": "orders",
+              "label": "跟单与生产进度"
+            },
+            {
+              "value": "shipment",
+              "label": "出货和售后"
+            },
+            {
+              "value": "new",
+              "label": "刚开始了解"
+            }
+          ]
+        },
+        {
+          "key": "learn",
+          "label": "最希望先学习的环节",
+          "type": "select",
+          "options": [
+            {
+              "value": "product",
+              "label": "产品与使用场景"
+            },
+            {
+              "value": "research",
+              "label": "客户与市场开发"
+            },
+            {
+              "value": "english",
+              "label": "英文沟通"
+            },
+            {
+              "value": "quote",
+              "label": "报价与订单全流程"
+            },
+            {
+              "value": "unsure",
+              "label": "还不确定，想先了解"
+            }
+          ]
+        }
+      ],
+      "rubric": [
+        {
+          "field": "reason",
+          "label": "动机说明可供面试复核",
+          "max": 4,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "explored",
+          "label": "已了解环节的自述覆盖度（新手不作淘汰条件）",
+          "max": 3,
+          "kind": "multi",
+          "points": {
+            "product": 1,
+            "research": 1,
+            "english": 1,
+            "quote": 1,
+            "orders": 1,
+            "shipment": 1,
+            "new": 1
+          }
+        },
+        {
+          "field": "learn",
+          "label": "能指出当前学习方向",
+          "max": 3,
+          "kind": "choice",
+          "points": {
+            "product": 3,
+            "research": 3,
+            "english": 3,
+            "quote": 3,
+            "unsure": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "dimension": "long_term",
+      "title": "未来 3 年，你希望怎样发展？",
+      "hint": "本题是发展意向，不是服务年限承诺；可如实写不确定之处。",
+      "fields": [
+        {
+          "key": "horizon",
+          "label": "目前希望在这一方向发展的时间",
+          "type": "select",
+          "options": [
+            {
+              "value": "three_plus",
+              "label": "愿意稳定发展 3 年以上"
+            },
+            {
+              "value": "one_three",
+              "label": "先看 1–3 年的发展"
+            },
+            {
+              "value": "explore",
+              "label": "想先探索，再决定"
+            },
+            {
+              "value": "short",
+              "label": "目前只考虑短期过渡"
+            }
+          ]
+        },
+        {
+          "key": "goal",
+          "label": "对独立负责外贸全流程的目标",
+          "type": "select",
+          "options": [
+            {
+              "value": "full",
+              "label": "希望逐步成长为能独立负责全流程的业务骨干"
+            },
+            {
+              "value": "specialist",
+              "label": "更想先做好一个环节，再考虑全流程"
+            },
+            {
+              "value": "unsure",
+              "label": "暂时不确定"
+            }
+          ]
+        },
+        {
+          "key": "step",
+          "label": "第一阶段打算做的一件事",
+          "type": "textarea",
+          "maxLength": 160,
+          "hint": ""
+        },
+        {
+          "key": "milestone",
+          "label": "怎样判断自己有进步",
+          "type": "textarea",
+          "maxLength": 160,
+          "hint": ""
+        },
+        {
+          "key": "review",
+          "label": "遇到进展慢或预期变化时，准备怎样调整",
+          "type": "textarea",
+          "maxLength": 160,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "horizon",
+          "label": "发展时间意向",
+          "max": 8,
+          "kind": "choice",
+          "points": {
+            "three_plus": 8,
+            "one_three": 5,
+            "explore": 3,
+            "short": 1
+          }
+        },
+        {
+          "field": "goal",
+          "label": "全流程成长方向",
+          "max": 6,
+          "kind": "choice",
+          "points": {
+            "full": 6,
+            "specialist": 4,
+            "unsure": 2
+          }
+        },
+        {
+          "field": "step",
+          "label": "有起步行动说明",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "milestone",
+          "label": "有进步检验说明",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "review",
+          "label": "有调整或复盘说明",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "dimension": "expectations",
+      "title": "你如何理解前 3–6 个月可能起步较慢，以及底薪＋成交提成？",
+      "fields": [
+        {
+          "key": "position",
+          "label": "目前最接近你的想法",
+          "type": "select",
+          "options": [
+            {
+              "value": "accept",
+              "label": "理解需要积累，愿意结合具体底薪与提成规则评估"
+            },
+            {
+              "value": "clarify",
+              "label": "可以考虑，需要先面谈了解收入与考核细节"
+            },
+            {
+              "value": "steady",
+              "label": "目前更需要短期稳定、确定的收入"
+            },
+            {
+              "value": "not_fit",
+              "label": "这种方式目前不适合我"
+            }
+          ]
+        },
+        {
+          "key": "clarify",
+          "label": "你希望面谈确认哪些规则？起步阶段会怎样安排学习和业务跟进？",
+          "type": "textarea",
+          "maxLength": 260,
+          "hint": "无需提供个人收入、资产或家庭财务信息。"
+        }
+      ],
+      "rubric": [
+        {
+          "field": "position",
+          "label": "对积累期及薪酬结构的自述预期",
+          "max": 6,
+          "kind": "choice",
+          "points": {
+            "accept": 6,
+            "clarify": 5,
+            "steady": 2,
+            "not_fit": 0
+          }
+        },
+        {
+          "field": "clarify",
+          "label": "有待确认规则及起步安排的说明",
+          "max": 4,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "dimension": "expectations",
+      "title": "初期产品与工厂现场学习，你会怎样看待？",
+      "hint": "可能参与检查、备货、打包等基础工作；长期主业仍是外贸销售。",
+      "fields": [
+        {
+          "key": "position",
+          "label": "最接近你的选择",
+          "type": "select",
+          "options": [
+            {
+              "value": "learn_help",
+              "label": "愿意学产品并参与基础工作，理解它与报价、交期和售后的关系"
+            },
+            {
+              "value": "scope",
+              "label": "愿意参与，希望明确学习安排、分工与安全要求"
+            },
+            {
+              "value": "observe",
+              "label": "愿意参观学习，但希望只做办公室销售工作"
+            },
+            {
+              "value": "cannot",
+              "label": "目前无法参与这类现场工作"
+            }
+          ]
+        }
+      ],
+      "rubric": [
+        {
+          "field": "position",
+          "label": "对现场学习与基础工作的接受方式",
+          "max": 10,
+          "kind": "choice",
+          "points": {
+            "learn_help": 10,
+            "scope": 9,
+            "observe": 4,
+            "cannot": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "dimension": "learning",
+      "title": "讲一件你主动学会新技能的小事。",
+      "hint": "学习、生活、兼职或工作经历都可以；重点是你做了什么，不要求结果出色。",
+      "fields": [
+        {
+          "key": "task",
+          "label": "当时需要学什么、为什么",
+          "type": "textarea",
+          "maxLength": 160,
+          "hint": ""
+        },
+        {
+          "key": "action",
+          "label": "你实际采取了什么学习或练习方法",
+          "type": "textarea",
+          "maxLength": 220,
+          "hint": ""
+        },
+        {
+          "key": "check",
+          "label": "如何检验效果，或哪里没学好、后来怎么改",
+          "type": "textarea",
+          "maxLength": 220,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "task",
+          "label": "有真实经历背景供复核",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "action",
+          "label": "有本人学习行动说明",
+          "max": 3,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "check",
+          "label": "有效果检验或改进说明",
+          "max": 3,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "dimension": "learning",
+      "title": "你用过 AI 吗？准备怎样学习并用于外贸？",
+      "hint": "没有 AI 使用经验不扣分。可考虑市场客户研究、英文邮件、产品资料、内容制作、跟单整理和效率提升。不能盲目照搬 AI 给出的客户信息、产品参数或报价。",
+      "fields": [
+        {
+          "key": "experience",
+          "label": "AI 使用经历（本项不计分）",
+          "type": "select",
+          "options": [
+            {
+              "value": "used",
+              "label": "用过"
+            },
+            {
+              "value": "new",
+              "label": "还没用过"
+            }
+          ]
+        },
+        {
+          "key": "approach",
+          "label": "更接近你的使用或学习方式",
+          "type": "select",
+          "options": [
+            {
+              "value": "verify",
+              "label": "学会工具后做草稿，并通过官网、产品资料或负责人核实"
+            },
+            {
+              "value": "learn_verify",
+              "label": "没用过，愿意从一个小任务学习，并核实输出"
+            },
+            {
+              "value": "draft",
+              "label": "主要用来生成草稿，还需要学习核实方法"
+            },
+            {
+              "value": "copy",
+              "label": "倾向于直接使用 AI 输出"
+            }
+          ]
+        },
+        {
+          "key": "workflow",
+          "label": "举一个用过的场景，或准备先尝试的小任务",
+          "type": "textarea",
+          "maxLength": 180,
+          "hint": ""
+        },
+        {
+          "key": "verify",
+          "label": "这件事中哪些内容必须核实，你会找谁或用什么资料核实？",
+          "type": "textarea",
+          "maxLength": 220,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "approach",
+          "label": "学习与核实方式",
+          "max": 4,
+          "kind": "choice",
+          "points": {
+            "verify": 4,
+            "learn_verify": 4,
+            "draft": 2,
+            "copy": 0
+          }
+        },
+        {
+          "field": "workflow",
+          "label": "有具体应用或学习任务",
+          "max": 1,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "verify",
+          "label": "有独立核实说明",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "dimension": "execution",
+      "title": "客户看过报价，暂时没有下单，你会怎样跟进？",
+      "fields": [
+        {
+          "key": "action",
+          "label": "你会优先怎样做",
+          "type": "select",
+          "options": [
+            {
+              "value": "needs",
+              "label": "了解顾虑和采购时间，提供有用信息并约定下次联系"
+            },
+            {
+              "value": "push",
+              "label": "每天催促尽快决定"
+            },
+            {
+              "value": "discount",
+              "label": "先承诺降价争取下单"
+            },
+            {
+              "value": "wait",
+              "label": "等客户主动回复"
+            }
+          ]
+        },
+        {
+          "key": "message",
+          "label": "写一句你下一次会发给客户的跟进内容（中文即可）",
+          "type": "textarea",
+          "maxLength": 200,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "action",
+          "label": "客户跟进方式",
+          "max": 3,
+          "kind": "choice",
+          "points": {
+            "needs": 3,
+            "push": 1,
+            "discount": 0,
+            "wait": 0
+          }
+        },
+        {
+          "field": "message",
+          "label": "有可核实的实际跟进表达",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "dimension": "execution",
+      "title": "发现自己发出的报价或订单有错误，你会怎样处理？",
+      "fields": [
+        {
+          "key": "action",
+          "label": "你会优先怎样做",
+          "type": "select",
+          "options": [
+            {
+              "value": "own",
+              "label": "核对影响、及时汇报，协商纠正并确认对方收到正确版本"
+            },
+            {
+              "value": "later",
+              "label": "先自己改，等问题扩大再说"
+            },
+            {
+              "value": "hide",
+              "label": "不提错误，尽量让别人发现"
+            },
+            {
+              "value": "wait",
+              "label": "暂停不管，等上级问到"
+            }
+          ]
+        },
+        {
+          "key": "first",
+          "label": "如果错误可能影响价格或交期，你最先核实或说明什么？",
+          "type": "textarea",
+          "maxLength": 220,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "action",
+          "label": "错误处理与责任承担方式",
+          "max": 3,
+          "kind": "choice",
+          "points": {
+            "own": 3,
+            "later": 1,
+            "hide": 0,
+            "wait": 0
+          }
+        },
+        {
+          "field": "first",
+          "label": "有影响核实或沟通内容",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "dimension": "execution",
+      "title": "订单生产落后，可能赶不上交期，你会怎样推进？",
+      "hint": "这属于销售订单跟进的一部分，岗位主要工作仍是外贸销售。",
+      "fields": [
+        {
+          "key": "steps",
+          "label": "你会做哪些事（可多选）",
+          "type": "checkboxes",
+          "options": [
+            {
+              "value": "facts",
+              "label": "核实订单数量、已完成进度、卡点和实际交期"
+            },
+            {
+              "value": "owner",
+              "label": "及时联系生产、跟单等相关负责人"
+            },
+            {
+              "value": "coordinate",
+              "label": "协助沟通可行推进方案，确认责任人与下一节点"
+            },
+            {
+              "value": "report",
+              "label": "向销售负责人汇报风险、方案和需协助事项"
+            },
+            {
+              "value": "promise",
+              "label": "先向客户保证不会延期，再说其他事情"
+            },
+            {
+              "value": "wait",
+              "label": "等生产部门主动通知"
+            }
+          ]
+        },
+        {
+          "key": "update",
+          "label": "你下一次会在什么时候、用什么信息检查进展并汇报？",
+          "type": "textarea",
+          "maxLength": 220,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "steps",
+          "label": "核实、联系、协调与汇报的覆盖（错误承诺不加分）",
+          "max": 4,
+          "kind": "multi",
+          "points": {
+            "facts": 1,
+            "owner": 1,
+            "coordinate": 1,
+            "report": 1,
+            "promise": -2,
+            "wait": -1
+          }
+        },
+        {
+          "field": "update",
+          "label": "有后续检查与汇报说明",
+          "max": 1,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "dimension": "teamwork",
+      "title": "入职后直接向招聘负责人汇报；面对反馈、目标变化或意见不同，你怎样沟通？",
+      "fields": [
+        {
+          "key": "style",
+          "label": "更接近你的处理方式",
+          "type": "select",
+          "options": [
+            {
+              "value": "discuss",
+              "label": "先确认目标与事实，提出理由和方案，约定行动及反馈节点"
+            },
+            {
+              "value": "clarify",
+              "label": "先听清反馈并请对方说明期望，再执行和汇报"
+            },
+            {
+              "value": "silent",
+              "label": "表面接受，但按自己原来的方法做"
+            },
+            {
+              "value": "avoid",
+              "label": "尽量避免直接沟通"
+            }
+          ]
+        },
+        {
+          "key": "example",
+          "label": "简述一次处理反馈或分歧的经历，或你会怎样应对目标变化",
+          "type": "textarea",
+          "maxLength": 240,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "style",
+          "label": "直接汇报与协作方式",
+          "max": 3,
+          "kind": "choice",
+          "points": {
+            "discuss": 3,
+            "clarify": 3,
+            "silent": 0,
+            "avoid": 0
+          }
+        },
+        {
+          "field": "example",
+          "label": "有反馈、分歧或目标调整说明",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "dimension": "teamwork",
+      "title": "接到没有现成流程的任务，你会如何开始？",
+      "fields": [
+        {
+          "key": "start",
+          "label": "你会优先怎样做",
+          "type": "select",
+          "options": [
+            {
+              "value": "research",
+              "label": "先研究和拆分，做低风险尝试，遇到关键问题及时确认并汇报"
+            },
+            {
+              "value": "ask",
+              "label": "先请负责人把每一步都说明，再行动"
+            },
+            {
+              "value": "guess",
+              "label": "直接凭猜测推进，做完再说"
+            },
+            {
+              "value": "wait",
+              "label": "等有人建立流程"
+            }
+          ]
+        },
+        {
+          "key": "example",
+          "label": "用一个小任务说明：你先查什么、先做什么，何时需要沟通？",
+          "type": "textarea",
+          "maxLength": 240,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "start",
+          "label": "无现成流程时的推进方式",
+          "max": 3,
+          "kind": "choice",
+          "points": {
+            "research": 3,
+            "ask": 1,
+            "guess": 0,
+            "wait": 0
+          }
+        },
+        {
+          "field": "example",
+          "label": "有研究、行动或沟通节点说明",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "dimension": "product",
+      "title": "浏览网站，自选一个你感兴趣的产品。",
+      "hint": "不要求已有产品知识；看你是否愿意观察。可先打开产品目录，选完返回此页继续。",
+      "fields": [
+        {
+          "key": "name",
+          "label": "产品名称（附页面链接也可以）",
+          "type": "textarea",
+          "maxLength": 240,
+          "hint": ""
+        },
+        {
+          "key": "need",
+          "label": "它解决什么需求？",
+          "type": "textarea",
+          "maxLength": 180,
+          "hint": ""
+        },
+        {
+          "key": "customers",
+          "label": "适合哪些客户或使用场景？",
+          "type": "textarea",
+          "maxLength": 180,
+          "hint": ""
+        },
+        {
+          "key": "question",
+          "label": "你还想核实哪些产品信息？",
+          "type": "textarea",
+          "maxLength": 180,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "name",
+          "label": "指出一个产品对象",
+          "max": 1,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "need",
+          "label": "有需求观察说明（待核实理解）",
+          "max": 1,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "customers",
+          "label": "有客户或场景观察（待核实理解）",
+          "max": 1,
+          "kind": "evidence",
+          "points": {}
+        },
+        {
+          "field": "question",
+          "label": "提出待了解的产品信息",
+          "max": 2,
+          "kind": "evidence",
+          "points": {}
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "dimension": "english",
+      "title": "简短英文回复：客户询问 50 顶 3×3 m 帐篷的报价和下月交货。",
+      "hint": "用基础英文各写一句：回应询问；询问印刷需求或目的地；说明先核实配置和生产时间再确认。无需复杂词汇，请独立作答，不用 AI 代写。",
+      "fields": [
+        {
+          "key": "ack",
+          "label": "English — acknowledge the inquiry",
+          "type": "textarea",
+          "maxLength": 240,
+          "hint": ""
+        },
+        {
+          "key": "ask",
+          "label": "English — ask for missing information",
+          "type": "textarea",
+          "maxLength": 240,
+          "hint": ""
+        },
+        {
+          "key": "next",
+          "label": "English — explain the next step",
+          "type": "textarea",
+          "maxLength": 240,
+          "hint": ""
+        }
+      ],
+      "rubric": [
+        {
+          "field": "ack",
+          "label": "英文回应段可读性初检（语义待人工复核）",
+          "max": 2,
+          "kind": "english",
+          "points": {}
+        },
+        {
+          "field": "ask",
+          "label": "英文问题段可读性初检（相关性待人工复核）",
+          "max": 2,
+          "kind": "english",
+          "points": {}
+        },
+        {
+          "field": "next",
+          "label": "英文下一步段可读性初检（承诺风险待人工复核）",
+          "max": 1,
+          "kind": "english",
+          "points": {}
+        }
+      ]
+    }
+  ],
+  "dimensions": {
+    "long_term": [
+      "长期发展意愿",
+      20
+    ],
+    "expectations": [
+      "收入预期与一线基础工作",
+      20
+    ],
+    "learning": [
+      "主动学习、自驱与 AI 学习应用",
+      15
+    ],
+    "execution": [
+      "责任心与执行力",
+      15
+    ],
+    "teamwork": [
+      "业务板块适配、直接汇报与协作",
+      10
+    ],
+    "interest": [
+      "外贸兴趣",
+      10
+    ],
+    "product": [
+      "主动了解公司产品",
+      5
+    ],
+    "english": [
+      "基础英文与岗位适配",
+      5
+    ]
+  }
+}

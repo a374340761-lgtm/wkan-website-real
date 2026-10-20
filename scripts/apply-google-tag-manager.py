@@ -74,6 +74,9 @@ def main() -> int:
     checked = 0
     for path in sorted(ROOT.rglob("*.html")):
         rel_path = path.relative_to(ROOT)
+        # Private submission transport has no analytics and a restrictive CSP.
+        if rel_path.as_posix() == 'careers-submit-bridge.html':
+            continue
         if set(rel_path.parts) & SKIP_DIRS:
             continue
         source = path.read_text(encoding="utf-8", errors="replace")

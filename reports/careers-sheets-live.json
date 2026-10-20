@@ -1,0 +1,42 @@
+{
+  "pageSource": "Local website files routed under canonical origin; not proof of website publication",
+  "testCandidate": "集成测试候选人-请忽略",
+  "messages": [
+    {
+      "origin": "https://www.waikwantent.com",
+      "data": {
+        "type": "recruitment-bridge-ready"
+      },
+      "sameSource": true
+    },
+    {
+      "origin": "https://n-bslyv5j3ccdnurao3vasi2dap6qptai4vrb3jdi-0lu-script.googleusercontent.com",
+      "data": {
+        "type": "recruitment-submit-result",
+        "requestId": "4c2386a9-ebe2-4cfd-996b-3364451083a6",
+        "ok": true
+      },
+      "sameSource": false
+    },
+    {
+      "origin": "https://www.waikwantent.com",
+      "data": {
+        "type": "recruitment-submit-result",
+        "requestId": "4c2386a9-ebe2-4cfd-996b-3364451083a6",
+        "ok": true
+      },
+      "sameSource": true
+    }
+  ],
+  "frames": [
+    {
+      "url": "https://www.waikwantent.com/careers.html"
+    }
+  ],
+  "requests": [],
+  "submissionId": "4c2386a9-ebe2-4cfd-996b-3364451083a6",
+  "status": "提交成功",
+  "sheetReadbackVerified": false,
+  "state": "success",
+  "frameText": []
+}

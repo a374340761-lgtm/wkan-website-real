@@ -1,0 +1,610 @@
+[
+  {
+    "width": 390,
+    "path": "careers.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "56px 0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 390,
+    "path": "index.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "56px 0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 390,
+    "path": "zh/careers.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "56px 0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 390,
+    "path": "zh/index.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "56px 0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 390,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "346px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 346,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "path": "careers.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 1440,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "70px 0px 28px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 1180,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px 443.203px",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 443.203125,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "443.203px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "path": "index.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 1440,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "70px 0px 28px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 1180,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px 443.203px",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 443.203125,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "443.203px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "path": "zh/careers.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 1440,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "70px 0px 28px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 1180,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px 443.203px",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 443.203125,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "443.203px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  },
+  {
+    "width": 1440,
+    "path": "zh/index.html",
+    "info": {
+      ".contact-bottom": {
+        "width": 1440,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "block",
+        "columns": "none",
+        "padding": "70px 0px 28px",
+        "inMain": true
+      },
+      ".contact-bottom__inner": {
+        "width": 1180,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px 443.203px",
+        "padding": "0px 22px",
+        "inMain": true
+      },
+      ".contact-bottom__grid": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "664.797px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__socialLinks": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__brandTitle": {
+        "width": 664.796875,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "14px",
+        "line": "22.4px",
+        "display": "block",
+        "columns": "none",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__ask": {
+        "width": 443.203125,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "grid",
+        "columns": "443.203px",
+        "padding": "0px",
+        "inMain": true
+      },
+      ".contact-bottom__legal": {
+        "width": 1136,
+        "font": "\"Plus Jakarta Sans\", \"Noto Sans SC\", Inter, sans-serif",
+        "size": "16px",
+        "line": "25.6px",
+        "display": "flex",
+        "columns": "none",
+        "padding": "16px 0px 0px",
+        "inMain": true
+      }
+    }
+  }
+]

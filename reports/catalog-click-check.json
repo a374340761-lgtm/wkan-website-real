@@ -1,0 +1,498 @@
+[
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Open category overview (Product Center)",
+    "expected": "http://127.0.0.1:56298/product-center.html?cat=racegate",
+    "actual": "http://127.0.0.1:56298/product-center.html?cat=racegate",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Custom canopy tents",
+    "expected": "http://127.0.0.1:56298/custom-canopy-tent-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/custom-canopy-tent-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "pop up canopy tents",
+    "expected": "http://127.0.0.1:56298/pop-up-canopy-tent.html",
+    "actual": "http://127.0.0.1:56298/pop-up-canopy-tent.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "canopy tent hub",
+    "expected": "http://127.0.0.1:56298/product-center.html?cat=tents",
+    "actual": "http://127.0.0.1:56298/product-center.html?cat=tents",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "all tent products",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=tents#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=tents#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Beach flags & poles",
+    "expected": "http://127.0.0.1:56298/beach-flag-supplier.html",
+    "actual": "http://127.0.0.1:56298/beach-flag-supplier.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "flag hub",
+    "expected": "http://127.0.0.1:56298/product-center.html?cat=flags",
+    "actual": "http://127.0.0.1:56298/product-center.html?cat=flags",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "all flag products",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=flags#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=flags#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Portable display systems",
+    "expected": "http://127.0.0.1:56298/portable-display-systems.html",
+    "actual": "http://127.0.0.1:56298/portable-display-systems.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "SEG light boxes",
+    "expected": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "all display products",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=displays#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=displays#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Light boxes",
+    "expected": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "light box catalog",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=lightbox#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=lightbox#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Accessories and replacement parts",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=accessories#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=accessories#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Race gates and event arches",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=racegate#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=racegate#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": false,
+    "label": "Types of Canopy Tents & Specifications",
+    "expected": "http://127.0.0.1:56298/tent-type.html",
+    "actual": "http://127.0.0.1:56298/tent-type.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "打开该分类总览（产品中心）",
+    "expected": "http://127.0.0.1:56298/zh/product-center.html?cat=racegate",
+    "actual": "http://127.0.0.1:56298/zh/product-center.html?cat=racegate",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "定制广告帐篷",
+    "expected": "http://127.0.0.1:56298/zh/custom-canopy-tent-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/zh/custom-canopy-tent-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "快开帐篷",
+    "expected": "http://127.0.0.1:56298/zh/pop-up-canopy-tent.html",
+    "actual": "http://127.0.0.1:56298/zh/pop-up-canopy-tent.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "帐篷产品中心",
+    "expected": "http://127.0.0.1:56298/zh/product-center.html?cat=tents",
+    "actual": "http://127.0.0.1:56298/zh/product-center.html?cat=tents",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "全部帐篷产品",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=tents#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=tents#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "沙滩旗与旗杆",
+    "expected": "http://127.0.0.1:56298/zh/beach-flag-supplier.html",
+    "actual": "http://127.0.0.1:56298/zh/beach-flag-supplier.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "旗帜产品中心",
+    "expected": "http://127.0.0.1:56298/zh/product-center.html?cat=flags",
+    "actual": "http://127.0.0.1:56298/zh/product-center.html?cat=flags",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "全部旗帜产品",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=flags#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=flags#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "便携展示系统",
+    "expected": "http://127.0.0.1:56298/zh/portable-display-systems.html",
+    "actual": "http://127.0.0.1:56298/zh/portable-display-systems.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "SEG 灯箱",
+    "expected": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "全部展示产品",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=displays#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=displays#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "灯箱系列",
+    "expected": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "灯箱产品目录",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=lightbox#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=lightbox#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "配件与替换零件",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=accessories#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=accessories#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "label": "赛事拱门与活动门型",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=racegate#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=racegate#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Open category overview (Product Center)",
+    "expected": "http://127.0.0.1:56298/product-center.html?cat=racegate",
+    "actual": "http://127.0.0.1:56298/product-center.html?cat=racegate",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Custom canopy tents",
+    "expected": "http://127.0.0.1:56298/custom-canopy-tent-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/custom-canopy-tent-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "pop up canopy tents",
+    "expected": "http://127.0.0.1:56298/pop-up-canopy-tent.html",
+    "actual": "http://127.0.0.1:56298/pop-up-canopy-tent.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "canopy tent hub",
+    "expected": "http://127.0.0.1:56298/product-center.html?cat=tents",
+    "actual": "http://127.0.0.1:56298/product-center.html?cat=tents",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "all tent products",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=tents#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=tents#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Beach flags & poles",
+    "expected": "http://127.0.0.1:56298/beach-flag-supplier.html",
+    "actual": "http://127.0.0.1:56298/beach-flag-supplier.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "flag hub",
+    "expected": "http://127.0.0.1:56298/product-center.html?cat=flags",
+    "actual": "http://127.0.0.1:56298/product-center.html?cat=flags",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "all flag products",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=flags#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=flags#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Portable display systems",
+    "expected": "http://127.0.0.1:56298/portable-display-systems.html",
+    "actual": "http://127.0.0.1:56298/portable-display-systems.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "SEG light boxes",
+    "expected": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "all display products",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=displays#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=displays#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Light boxes",
+    "expected": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "light box catalog",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=lightbox#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=lightbox#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Accessories and replacement parts",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=accessories#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=accessories#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Race gates and event arches",
+    "expected": "http://127.0.0.1:56298/all-products.html?cat=racegate#productsGrid",
+    "actual": "http://127.0.0.1:56298/all-products.html?cat=racegate#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "label": "Types of Canopy Tents & Specifications",
+    "expected": "http://127.0.0.1:56298/tent-type.html",
+    "actual": "http://127.0.0.1:56298/tent-type.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "打开该分类总览（产品中心）",
+    "expected": "http://127.0.0.1:56298/zh/product-center.html?cat=racegate",
+    "actual": "http://127.0.0.1:56298/zh/product-center.html?cat=racegate",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "定制广告帐篷",
+    "expected": "http://127.0.0.1:56298/zh/custom-canopy-tent-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/zh/custom-canopy-tent-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "快开帐篷",
+    "expected": "http://127.0.0.1:56298/zh/pop-up-canopy-tent.html",
+    "actual": "http://127.0.0.1:56298/zh/pop-up-canopy-tent.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "帐篷产品中心",
+    "expected": "http://127.0.0.1:56298/zh/product-center.html?cat=tents",
+    "actual": "http://127.0.0.1:56298/zh/product-center.html?cat=tents",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "全部帐篷产品",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=tents#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=tents#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "沙滩旗与旗杆",
+    "expected": "http://127.0.0.1:56298/zh/beach-flag-supplier.html",
+    "actual": "http://127.0.0.1:56298/zh/beach-flag-supplier.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "旗帜产品中心",
+    "expected": "http://127.0.0.1:56298/zh/product-center.html?cat=flags",
+    "actual": "http://127.0.0.1:56298/zh/product-center.html?cat=flags",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "全部旗帜产品",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=flags#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=flags#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "便携展示系统",
+    "expected": "http://127.0.0.1:56298/zh/portable-display-systems.html",
+    "actual": "http://127.0.0.1:56298/zh/portable-display-systems.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "SEG 灯箱",
+    "expected": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "全部展示产品",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=displays#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=displays#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "灯箱系列",
+    "expected": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "actual": "http://127.0.0.1:56298/zh/seg-light-box-manufacturer.html",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "灯箱产品目录",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=lightbox#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=lightbox#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "配件与替换零件",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=accessories#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=accessories#productsGrid",
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "label": "赛事拱门与活动门型",
+    "expected": "http://127.0.0.1:56298/zh/all-products.html?cat=racegate#productsGrid",
+    "actual": "http://127.0.0.1:56298/zh/all-products.html?cat=racegate#productsGrid",
+    "pass": true
+  }
+]

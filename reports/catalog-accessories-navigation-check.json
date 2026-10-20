@@ -1,0 +1,42 @@
+[
+  {
+    "width": 390,
+    "zh": false,
+    "category": "accessories",
+    "selected": "accessories",
+    "shown": true,
+    "cards": 24,
+    "top": 150,
+    "pass": true
+  },
+  {
+    "width": 390,
+    "zh": true,
+    "category": "accessories",
+    "selected": "accessories",
+    "shown": true,
+    "cards": 24,
+    "top": 150,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": false,
+    "category": "accessories",
+    "selected": "accessories",
+    "shown": true,
+    "cards": 24,
+    "top": 150,
+    "pass": true
+  },
+  {
+    "width": 1440,
+    "zh": true,
+    "category": "accessories",
+    "selected": "accessories",
+    "shown": true,
+    "cards": 24,
+    "top": 150,
+    "pass": true
+  }
+]

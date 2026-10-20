@@ -1,9 +1,21 @@
 /* ===== Product Detail Page ===== */
 
 .product-detail {
+    width: 100%;
+    min-width: 0;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+}
+
+main.static-product {
+    width: 100%;
+    min-width: 0;
+}
+
+.wk-spec-scroll-hint { display: none; }
+@media (max-width: 768px) {
+    .wk-spec-scroll-hint { display: block; font-size: 13px; color: var(--text-muted, #64748b); }
 }
 
 .pdp-return {

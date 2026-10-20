@@ -1,0 +1,43 @@
+{
+  "testMode": "server-validation-rejection",
+  "pageSource": "Local website files routed under canonical origin; not proof of website publication",
+  "testCandidate": "集成测试候选人-请忽略",
+  "messages": [
+    {
+      "origin": "https://www.waikwantent.com",
+      "data": {
+        "type": "recruitment-bridge-ready"
+      },
+      "sameSource": true
+    },
+    {
+      "origin": "https://n-bslyv5j3ccdnurao3vasi2dap6qptai4vrb3jdi-0lu-script.googleusercontent.com",
+      "data": {
+        "type": "recruitment-submit-result",
+        "requestId": "ea4bfebd-778c-449f-9649-f0f39c830391",
+        "ok": false
+      },
+      "sameSource": false
+    },
+    {
+      "origin": "https://www.waikwantent.com",
+      "data": {
+        "type": "recruitment-submit-result",
+        "requestId": "ea4bfebd-778c-449f-9649-f0f39c830391",
+        "ok": false
+      },
+      "sameSource": true
+    }
+  ],
+  "frames": [
+    {
+      "url": "https://www.waikwantent.com/careers.html"
+    }
+  ],
+  "requests": [],
+  "submissionId": "ea4bfebd-778c-449f-9649-f0f39c830391",
+  "status": "写入未成功，填写内容已保留。请检查 VPN 和网络后重试，或联系招聘负责人核实。",
+  "sheetReadbackVerified": false,
+  "state": "error",
+  "frameText": []
+}

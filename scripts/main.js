@@ -1,6 +1,7 @@
 // 主要JavaScript功能
 document.addEventListener('DOMContentLoaded', function() {
     // 初始化所有功能
+    enhanceCareersNavigation();
     initNavigation();
     initScrollEffects();
     initBackToTop();
@@ -2888,4 +2889,24 @@ function initSearch() {
 
     // 点击 Search
     goBtn && goBtn.addEventListener('click', () => goToSearch(input.value));
+}
+
+// Shared service dropdown entry; add before the mobile tree is cloned.
+function enhanceCareersNavigation() {
+    const menu = document.querySelector('.nav-menu');
+    if (!menu) return;
+    const follow = menu.querySelector('[data-translate="nav_follow_us"]');
+    const anchor = follow && follow.closest('a');
+    const service = menu.querySelector('[data-translate="nav_section_customer_service"]');
+    const dropdown = anchor ? anchor.parentElement : service && service.closest('li').querySelector('.dropdown-menu');
+    if (!dropdown || dropdown.querySelector('[data-nav-careers]')) return;
+    const link = document.createElement('a');
+    link.dataset.navCareers = '1';
+    link.href = location.pathname.startsWith('/zh/') ? '/zh/careers.html' : '/careers.html';
+    const label = document.createElement('span');
+    label.dataset.translate = 'nav_careers';
+    label.textContent = location.pathname.startsWith('/zh/') ? '加入我们' : 'Careers';
+    link.appendChild(label);
+    if (anchor) anchor.insertAdjacentElement('afterend', link);
+    else dropdown.appendChild(link);
 }

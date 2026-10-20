@@ -25,6 +25,15 @@ jobs:
           node --check scripts/inquiry-hook.js
           node --check scripts/legacy-route.js
           node --check backend/server.js
+          node --check scripts/careers.js
+          node --check scripts/careers-assessment.js
+          node --check scripts/careers-submit-bridge.js
+      - name: Check recruitment scoring and generated pages
+        run: |
+          python scripts/build-careers-pages.py --check
+          python -m unittest careers_backend.test_app -v
+          node scripts/check-careers-sheets-scoring.cjs
+          node scripts/check-careers-apps-script.cjs
       - name: Validate architecture contracts
         run: node scripts/validate-architecture.mjs
       - name: Validate SEO and structured data

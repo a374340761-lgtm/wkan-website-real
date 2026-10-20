@@ -1,0 +1,162 @@
+{
+  "checks": [
+    {
+      "mode": "closed",
+      "width": 390,
+      "zh": false,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 390,
+      "zh": false,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 390,
+      "zh": false,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "bad_receipt",
+      "width": 390,
+      "zh": false,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "closed",
+      "width": 390,
+      "zh": true,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 390,
+      "zh": true,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 390,
+      "zh": true,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "bad_receipt",
+      "width": 390,
+      "zh": true,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "closed",
+      "width": 1440,
+      "zh": false,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 1440,
+      "zh": false,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 1440,
+      "zh": false,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "bad_receipt",
+      "width": 1440,
+      "zh": false,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "closed",
+      "width": 1440,
+      "zh": true,
+      "pass": true
+    },
+    {
+      "mode": "success",
+      "width": 1440,
+      "zh": true,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "failure",
+      "width": 1440,
+      "zh": true,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "bad_receipt",
+      "width": 1440,
+      "zh": true,
+      "validation": true,
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 390,
+      "route": "index.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 390,
+      "route": "zh/index.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 390,
+      "route": "manufacturing-capabilities.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 390,
+      "route": "products/folding-chair-31007.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 1440,
+      "route": "index.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 1440,
+      "route": "zh/index.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 1440,
+      "route": "manufacturing-capabilities.html",
+      "pass": true
+    },
+    {
+      "mode": "footer",
+      "width": 1440,
+      "route": "products/folding-chair-31007.html",
+      "pass": true
+    }
+  ],
+  "simulatedDeliveries": 4,
+  "realEmailsSent": 0
+}

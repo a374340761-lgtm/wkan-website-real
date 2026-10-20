@@ -127,6 +127,8 @@
     ['name', 'phone', 'email', 'location', 'availability', 'experience'].forEach(key => { contact[key] = form.elements[key].value.trim(); });
     const wechat = form.elements.wechat.value.trim();
     if (wechat) contact.wechat = wechat;
+    const age = form.elements.age.value.trim();
+    if (age) contact.age = age;
     const answers = {};
     schema.questions.forEach(q => {
       answers[q.id] = {};

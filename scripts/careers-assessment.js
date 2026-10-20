@@ -49,6 +49,7 @@
     // is also readable in its existing experience cell without a GAS update.
     const candidate = {...data.contact};
     if (candidate.wechat) candidate.experience += '\n\n微信号：' + candidate.wechat;
+    if (candidate.age) candidate.experience += '\n年龄：' + candidate.age + ' 岁（选填，不计分）';
     return {submissionId:data.submission_id,submittedAt:data.submittedAt||new Date().toISOString(),website:data.website,candidate,
       assessment:{totalScore,categoryScores:Object.fromEntries(Object.entries(totals).map(([k,v])=>[rules.dimensions[k][0],v])),summary,riskPoints:[...priority,...risks],recommendation:'供招聘负责人结合完整答案面试复核；自动评分不决定录用或拒绝。',needsManualReview:true},answers};
   }

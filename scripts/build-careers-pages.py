@@ -14,6 +14,7 @@ save('data/careers-questionnaire.json',json.dumps(public_schema(),ensure_ascii=F
 save('data/careers-scoring-rules.json',json.dumps({'version':VERSION,'questions':QUESTIONS,'dimensions':DIMENSIONS},ensure_ascii=False,indent=2))
 profile='''<section class="careers-box" aria-labelledby="contactHeading"><h2 id="contactHeading">基本申请信息</h2><p class="careers-hint">仅收集招聘所需资料；基本联系信息及工作年限不计分。无正式工作经历可如实填写学习、兼职或其他相关经历。</p><div class="careers-profile">
 <div><label for="applicantName">姓名</label><input id="applicantName" name="name" autocomplete="name" required maxlength="80"></div>
+<div><label for="applicantAge">年龄（选填）</label><input id="applicantAge" name="age" type="number" min="1" max="120" step="1" inputmode="numeric" aria-describedby="applicantAgeHint"><p id="applicantAgeHint" class="careers-hint">填写周岁即可，不计入问卷评分。</p></div>
 <div><label for="applicantPhone">电话</label><input id="applicantPhone" name="phone" type="tel" autocomplete="tel" required minlength="7" maxlength="30"></div>
 <div><label for="applicantEmail">邮箱</label><input id="applicantEmail" name="email" type="email" autocomplete="email" required maxlength="254"></div>
 <div><label for="applicantLocation">所在地（城市即可）</label><input id="applicantLocation" name="location" autocomplete="address-level2" required maxlength="120"></div>
@@ -40,7 +41,7 @@ body='''<main class="careers-layout"><article class="careers-page" lang="zh-CN">
 '''+profile+'''
 <div class="careers-honey" aria-hidden="true"><label for="careersWebsite">请留空</label><input id="careersWebsite" name="website" tabindex="-1" autocomplete="off"></div>
 <div id="careersQuestions"></div><noscript><p class="careers-notice">问卷需要启用 JavaScript。当前无法提交，请联系招聘负责人。</p></noscript>
-<section class="careers-box" id="recruitmentPrivacy"><h2>招聘隐私说明</h2><p>姓名、电话、邮箱、微信号（如填写）、所在地、到岗时间、经历与问卷答案仅用于本次招聘联系和岗位评估。未提交草稿仅临时保存在本机当前标签页的 sessionStorage 中，刷新可恢复；最长保留 24 小时，关闭标签页或提交成功后清除。提交后，资料及供人工复核的评估报告通过 Google Apps Script 写入招聘负责人管理的私人 Google 表格（候选人总览、逐题答案），候选人页面不展示评分。</p><p>不要求年龄、婚育、健康、宗教、身份证件等与岗位无关的敏感信息，请不要在答案中主动填写这些内容。不会将候选人信息发送给未经配置的第三方 AI。申请信息不用于营销。需要查询、更正或删除申请资料时，可联系 yishu@waikwantent.com；招聘负责人应限制资料访问并在招聘结束后及时清理不再需要的资料。</p><label class="careers-check"><input name="consent" type="checkbox" required><span>我已阅读并同意上述隐私说明，同意将我提供的资料仅用于招聘联系和评估。</span></label>
+<section class="careers-box" id="recruitmentPrivacy"><h2>招聘隐私说明</h2><p>姓名、年龄（如填写，不计分）、电话、邮箱、微信号（如填写）、所在地、到岗时间、经历与问卷答案仅用于本次招聘联系和岗位评估。未提交草稿仅临时保存在本机当前标签页的 sessionStorage 中，刷新可恢复；最长保留 24 小时，关闭标签页或提交成功后清除。提交后，资料及供人工复核的评估报告通过 Google Apps Script 写入招聘负责人管理的私人 Google 表格（候选人总览、逐题答案），候选人页面不展示评分。</p><p>年龄自愿填写，不参与自动评分或录用决定。不要求婚育、健康、宗教、身份证件等与岗位无关的敏感信息，请不要在答案中主动填写这些内容。不会将候选人信息发送给未经配置的第三方 AI。申请信息不用于营销。需要查询、更正或删除申请资料时，可联系 yishu@waikwantent.com；招聘负责人应限制资料访问并在招聘结束后及时清理不再需要的资料。</p><label class="careers-check"><input name="consent" type="checkbox" required><span>我已阅读并同意上述隐私说明，同意将我提供的资料仅用于招聘联系和评估。</span></label>
 <button id="careersSubmit" type="submit" class="btn btn-primary careers-submit" disabled>正在加载问卷…</button><p class="careers-hint">只有收到 Google 表格写入成功回执，页面才会显示“提交成功”。若显示失败或超时，请保留答案并联系负责人核实。</p></section></form></div></article>'''
 for zh in [False,True]:
  prefix='/zh/' if zh else '/';p=Path('zh/careers.html' if zh else 'careers.html');template=Path('zh/export-loading.html' if zh else 'export-loading.html').read_text(encoding='utf-8');head=template.split('<main>')[0]
@@ -54,7 +55,7 @@ for zh in [False,True]:
  head=head.replace('</head>','<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False)+'</script>\n</head>')
  footer_source=Path('zh/index.html' if zh else 'index.html').read_text(encoding='utf-8')
  footer=re.search(r'<section class="contact-bottom">.*?</section>',footer_source,re.S).group(0)
- scripts='''<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/careers-config.js?v=20261020-sheets-r2"></script><script src="/scripts/careers-assessment.js?v=20261020-wechat"></script><script src="/scripts/careers.js?v=20261020-wechat"></script>'''
+ scripts='''<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/careers-config.js?v=20261020-sheets-r2"></script><script src="/scripts/careers-assessment.js?v=20261020-age"></script><script src="/scripts/careers.js?v=20261020-age"></script>'''
  # The head already supplies routing; do not initialize it twice.
  scripts=scripts.replace('<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script>','')
  save(p,head+body.replace('{prefix}',prefix)+footer+'</main>'+scripts+'</body></html>\n')

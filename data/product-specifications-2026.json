@@ -8401,7 +8401,7 @@
             "material": "",
             "bore": "",
             "packing": "6",
-            "gw": "3.4",
+            "gw": "21.4",
             "en": {
               "model": "",
               "size": "100*200cm",
@@ -8411,7 +8411,7 @@
               "material": "",
               "bore": "",
               "packing": "6",
-              "gw": "3.4"
+              "gw": "21.4"
             }
           },
           {
@@ -9883,7 +9883,7 @@
             "material": "重量：6KG\n材质：铁\n表面处理：静\n\n\n35*35*0.6",
             "bore": "",
             "packing": "4",
-            "gw": "18.5",
+            "gw": "",
             "en": {
               "model": "",
               "size": "Standard sleeve 14.5MM-16.7MM.other diameters by confirmation",
@@ -9893,7 +9893,7 @@
               "material": "Weight : 6KG\nMaterial : Steel\nSurface finish: Coating \n\n\n35*35*0.6",
               "bore": "",
               "packing": "4",
-              "gw": "18.5"
+              "gw": ""
             }
           },
           {
@@ -9927,7 +9927,7 @@
             "material": "重量12KG\n材质：铁\n表面处理：静\n电喷涂\n48*48*0.7",
             "bore": "",
             "packing": "2",
-            "gw": "17",
+            "gw": "",
             "en": {
               "model": "",
               "size": "Standard sleeve 14.5-16.7MMother diameters by confirmation",
@@ -9937,7 +9937,7 @@
               "material": "Weight 12KG\nMaterial : Steel\nSurface finish: Coating \nPowder coating\n48*48*0.7",
               "bore": "",
               "packing": "2",
-              "gw": "17"
+              "gw": ""
             }
           },
           {
@@ -9971,7 +9971,7 @@
             "material": "重量：6KG\n材质：铁\n表面处理：静\n35*35*0.6",
             "bore": "",
             "packing": "4",
-            "gw": "18.5",
+            "gw": "",
             "en": {
               "model": "",
               "size": "Standard sleeve 14.5MM-16.7MM.other diameters by confirmation",
@@ -9981,7 +9981,7 @@
               "material": "Weight : 6KG\nMaterial : Steel\nSurface finish: Coating \n35*35*0.6",
               "bore": "",
               "packing": "4",
-              "gw": "18.5"
+              "gw": ""
             }
           },
           {
@@ -10162,10 +10162,16 @@
           }
         ],
         "notesZh": [
-          "按原表型号和行内配置分开确认；未标型号处保留空白，不借用其他型号。"
+          "按原表型号和行内配置分开确认；未标型号处保留空白，不借用其他型号。",
+          "第68行：原表单件重量6kg × 4件与毛重18.5kg存在矛盾，整箱毛重栏留空待确认；不以乘积代替实际毛重。",
+          "第70行：原表单件重量12kg × 2件与毛重17kg存在矛盾，整箱毛重栏留空待确认；不以乘积代替实际毛重。",
+          "第72行：原表单件重量6kg × 4件与毛重18.5kg存在矛盾，整箱毛重栏留空待确认；不以乘积代替实际毛重。"
         ],
         "notesEn": [
-          "Confirm the model and row-specific configuration. Missing model codes remain blank rather than borrowing another code."
+          "Confirm the model and row-specific configuration. Missing model codes remain blank rather than borrowing another code.",
+          "source row 68: source unit weight 6 kg × 4 items conflicts with carton gross weight 18.5 kg. Gross field left blank pending confirmation; no calculated replacement is assigned.",
+          "source row 70: source unit weight 12 kg × 2 items conflicts with carton gross weight 17 kg. Gross field left blank pending confirmation; no calculated replacement is assigned.",
+          "source row 72: source unit weight 6 kg × 4 items conflicts with carton gross weight 18.5 kg. Gross field left blank pending confirmation; no calculated replacement is assigned."
         ],
         "source": {
           "file": "2026奥动牌沙滩旗杆价格.xlsx",

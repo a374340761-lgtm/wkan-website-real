@@ -318,13 +318,41 @@ for key,groups in DATA.items():
    elif len(quantities)==1:
     # In a source column explicitly labelled 毛重, the first kg value is the
     # carton total; a following /set value remains only in the source detail.
-    kg=re.findall(r'([\d.]+)\s*KG',raw,re.I)
-    if len(kg)==1:r['gw']=kg[0]
-    elif len(kg)==2 and re.search(r'KG\s*/\s*(?:套|个|set)',raw,re.I):r['gw']=kg[0]
+    carton_weights=[]
+    for match in re.finditer(r'([\d.]+)\s*KG',raw,re.I):
+     suffix=raw[match.end():]
+     prefix=raw[max(0,match.start()-8):match.start()]
+     if re.match(r'\s*/\s*(?:套|个|sets?\b|pcs?\b)',suffix,re.I):continue
+     if re.search(r'(?:单重|unit weight)\s*[:：]?\s*$',prefix,re.I):continue
+     carton_weights.append(match[1])
+    if len(carton_weights)==1:r['gw']=carton_weights[0]
   # Mixed source packing strings must not be presented as precise carton cm.
   for c in g['columns']:
    if c['key']=='carton' and any(re.search(r'(?:pcs?|ctn|kg|毛重|包装)',r.get('carton',''),re.I) for r in g['rows']):
     c.update(zh='箱规 / 装箱说明（原表）',en='Carton / packing details (source)')
+
+# Flag numerical contradictions in the source instead of publishing a carton
+# gross weight that is materially below the stated contents' own weight.
+# This is a review flag only: never calculate a replacement gross weight.
+packing_conflicts=[]
+for key,groups in DATA.items():
+ for g in groups:
+  for index,r in enumerate(g['rows']):
+   if not re.fullmatch(r'\d+',r.get('packing','')) or not re.fullmatch(r'\d+(?:\.\d+)?',r.get('gw','')):continue
+   material=r.get('material','')
+   weight=re.search(r'(?:^|\n)\s*重量\s*[:：]?\s*(\d+(?:\.\d+)?)\s*KG',material,re.I)
+   if not weight:continue
+   net=float(weight[1]);qty=int(r['packing']);gross=float(r['gw'])
+   if net*qty <= gross*1.05+0.1:continue
+   row_numbers=g['source'].get('rows',[])
+   source_row=row_numbers[index] if len(row_numbers)==len(g['rows']) else None
+   packing_conflicts.append({'target':key,'model':r.get('model',''),'source':g['source'],'sourceRow':source_row,'unitWeightKg':net,'cartonQuantity':qty,'sourceGrossWeightKg':gross,'action':'Gross field left blank; original source detail retained; confirmation required.'})
+   ref=r.get('model') or ('第'+str(source_row)+'行')
+   g['notesZh'].append(f'{ref}：原表单件重量{net:g}kg × {qty}件与毛重{gross:g}kg存在矛盾，整箱毛重栏留空待确认；不以乘积代替实际毛重。')
+   ref_en=r.get('model') or ('source row '+str(source_row))
+   g['notesEn'].append(f'{ref_en}: source unit weight {net:g} kg × {qty} items conflicts with carton gross weight {gross:g} kg. Gross field left blank pending confirmation; no calculated replacement is assigned.')
+   r['gw']=''
+(ROOT/'reports/specifications-packing-conflicts.json').write_text(json.dumps(packing_conflicts,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 # Inventory proves every workbook was read and has technical fields accounted
 # for; empty tabs do not become phantom product rows.

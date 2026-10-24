@@ -9,7 +9,7 @@ ROOT=Path(__file__).resolve().parent.parent
 CHECK='--check' in sys.argv
 DATA=json.loads((ROOT/'data/product-specifications-2026.json').read_text(encoding='utf-8'))
 ORIGIN='https://www.waikwantent.com'
-esc=lambda s:html.escape(str(s),quote=True)
+esc=lambda s:html.escape('\n'.join(line.rstrip() for line in str(s).split('\n')),quote=True)
 
 def save(path,text):
  p=ROOT/path

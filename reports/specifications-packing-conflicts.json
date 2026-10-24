@@ -1,0 +1,119 @@
+[
+  {
+    "target": "95012",
+    "model": "",
+    "source": {
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        115,
+        116,
+        120,
+        127
+      ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "material": 8,
+        "bore": 11
+      },
+      "review": "2026-10-24 complete technical-column review"
+    },
+    "sourceRow": 68,
+    "unitWeightKg": 6.0,
+    "cartonQuantity": 4,
+    "sourceGrossWeightKg": 18.5,
+    "action": "Gross field left blank; original source detail retained; confirmation required."
+  },
+  {
+    "target": "95012",
+    "model": "",
+    "source": {
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        115,
+        116,
+        120,
+        127
+      ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "material": 8,
+        "bore": 11
+      },
+      "review": "2026-10-24 complete technical-column review"
+    },
+    "sourceRow": 70,
+    "unitWeightKg": 12.0,
+    "cartonQuantity": 2,
+    "sourceGrossWeightKg": 17.0,
+    "action": "Gross field left blank; original source detail retained; confirmation required."
+  },
+  {
+    "target": "95012",
+    "model": "",
+    "source": {
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        115,
+        116,
+        120,
+        127
+      ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "material": 8,
+        "bore": 11
+      },
+      "review": "2026-10-24 complete technical-column review"
+    },
+    "sourceRow": 72,
+    "unitWeightKg": 6.0,
+    "cartonQuantity": 4,
+    "sourceGrossWeightKg": 18.5,
+    "action": "Gross field left blank; original source detail retained; confirmation required."
+  }
+]

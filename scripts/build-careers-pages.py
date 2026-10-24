@@ -55,7 +55,7 @@ for zh in [False,True]:
  head=head.replace('</head>','<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False)+'</script>\n</head>')
  footer_source=Path('zh/index.html' if zh else 'index.html').read_text(encoding='utf-8')
  footer=re.search(r'<section class="contact-bottom">.*?</section>',footer_source,re.S).group(0)
- scripts='''<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/careers-config.js?v=20261020-sheets-r2"></script><script src="/scripts/careers-assessment.js?v=20261020-age"></script><script src="/scripts/careers.js?v=20261020-age"></script>'''
+ scripts='''<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261020-careers-nav"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/careers-config.js?v=20261020-sheets-r2"></script><script src="/scripts/careers-assessment.js?v=20261020-age"></script><script src="/scripts/careers.js?v=20261024-audit"></script>'''
  # The head already supplies routing; do not initialize it twice.
  scripts=scripts.replace('<script src="/scripts/bilingual-routing.js?v=20261020-careers" defer></script>','')
  save(p,head+body.replace('{prefix}',prefix)+footer+'</main>'+scripts+'</body></html>\n')

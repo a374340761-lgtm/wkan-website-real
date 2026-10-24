@@ -37,6 +37,13 @@
         22,
         27
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 4
     },
     {
@@ -46,6 +53,13 @@
       "rows": [
         52
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -55,6 +69,13 @@
       "rows": [
         11
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -64,6 +85,13 @@
       "rows": [
         4
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -73,6 +101,13 @@
       "rows": [
         10
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -82,6 +117,13 @@
       "rows": [
         32
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -93,6 +135,13 @@
         42,
         47
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 3
     },
     {
@@ -102,6 +151,13 @@
       "rows": [
         58
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -111,6 +167,13 @@
       "rows": [
         9
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -120,6 +183,13 @@
       "rows": [
         59
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -129,6 +199,13 @@
       "rows": [
         61
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -138,6 +215,13 @@
       "rows": [
         65
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -147,6 +231,13 @@
       "rows": [
         62
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -156,6 +247,13 @@
       "rows": [
         63
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -165,6 +263,13 @@
       "rows": [
         64
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21
+      },
       "configurations": 1
     },
     {
@@ -182,6 +287,12 @@
         12,
         13
       ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 17
+      },
       "configurations": 9
     },
     {
@@ -199,6 +310,12 @@
         11,
         12
       ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 17
+      },
       "configurations": 9
     },
     {
@@ -215,6 +332,12 @@
         30,
         31
       ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 17
+      },
       "configurations": 8
     },
     {
@@ -231,6 +354,12 @@
         9,
         10
       ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 15
+      },
       "configurations": 8
     },
     {
@@ -244,9 +373,17 @@
         29,
         30,
         31,
-        32
+        32,
+        33,
+        34
       ],
-      "configurations": 7
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 16
+      },
+      "configurations": 9
     },
     {
       "target": "9002",
@@ -255,6 +392,13 @@
       "rows": [
         6
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -264,6 +408,13 @@
       "rows": [
         3
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -273,6 +424,13 @@
       "rows": [
         7
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -282,6 +440,13 @@
       "rows": [
         16
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -291,6 +456,13 @@
       "rows": [
         19
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -300,6 +472,13 @@
       "rows": [
         23
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -309,6 +488,13 @@
       "rows": [
         24
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -318,6 +504,13 @@
       "rows": [
         26
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -327,6 +520,13 @@
       "rows": [
         27
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -336,6 +536,13 @@
       "rows": [
         28
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -345,6 +552,13 @@
       "rows": [
         29
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -354,6 +568,13 @@
       "rows": [
         14
       ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "weight": 7,
+        "carton": 12
+      },
       "configurations": 1
     },
     {
@@ -363,6 +584,12 @@
       "rows": [
         4
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -372,6 +599,12 @@
       "rows": [
         6
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -381,6 +614,12 @@
       "rows": [
         7
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -390,6 +629,12 @@
       "rows": [
         10
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -399,6 +644,12 @@
       "rows": [
         11
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -408,6 +659,12 @@
       "rows": [
         14
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -417,6 +674,12 @@
       "rows": [
         15
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -426,6 +689,12 @@
       "rows": [
         16
       ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "weight": 5,
+        "carton": 8
+      },
       "configurations": 1
     },
     {
@@ -437,6 +706,13 @@
         6,
         7
       ],
+      "columns": {
+        "model": 2,
+        "size": 3,
+        "graphic": 4,
+        "weight": 9,
+        "carton": 10
+      },
       "configurations": 3
     },
     {
@@ -452,6 +728,10 @@
         10,
         11
       ],
+      "columns": {
+        "model": 2,
+        "size": 3
+      },
       "configurations": 7
     },
     {
@@ -468,6 +748,10 @@
         19,
         20
       ],
+      "columns": {
+        "model": 2,
+        "size": 3
+      },
       "configurations": 8
     },
     {
@@ -481,6 +765,10 @@
         8,
         9
       ],
+      "columns": {
+        "model": 2,
+        "size": 3
+      },
       "configurations": 5
     },
     {
@@ -497,6 +785,14 @@
         10,
         11
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 8
     },
     {
@@ -516,6 +812,14 @@
         46,
         47
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 11
     },
     {
@@ -532,6 +836,14 @@
         41,
         43
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 8
     },
     {
@@ -544,6 +856,14 @@
         33,
         34
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 4
     },
     {
@@ -558,6 +878,14 @@
         129,
         130
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 6
     },
     {
@@ -569,6 +897,14 @@
         132,
         133
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 3
     },
     {
@@ -580,6 +916,14 @@
         135,
         136
       ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15
+      },
       "configurations": 3
     },
     {
@@ -589,6 +933,10 @@
       "rows": [
         79
       ],
+      "columns": {
+        "model": 9,
+        "size": 10
+      },
       "configurations": 1
     },
     {
@@ -627,6 +975,11 @@
         125,
         126
       ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "carton": 14
+      },
       "configurations": 30
     },
     {
@@ -641,6 +994,13 @@
         12,
         13
       ],
+      "columns": {
+        "size": 2,
+        "carton": 6,
+        "frameGW": 7,
+        "roofCarton": 8,
+        "roofGW": 9
+      },
       "configurations": 6
     },
     {
@@ -655,6 +1015,13 @@
         12,
         13
       ],
+      "columns": {
+        "size": 2,
+        "carton": 6,
+        "frameGW": 7,
+        "roofCarton": 8,
+        "roofGW": 9
+      },
       "configurations": 6
     },
     {
@@ -667,6 +1034,11 @@
         9,
         10
       ],
+      "columns": {
+        "size": 2,
+        "carton": 8,
+        "gw": 9
+      },
       "configurations": 4
     },
     {
@@ -679,6 +1051,12 @@
         9,
         10
       ],
+      "columns": {
+        "size": 2,
+        "height": 4,
+        "carton": 8,
+        "gw": 9
+      },
       "configurations": 4
     },
     {
@@ -688,6 +1066,12 @@
       "rows": [
         4
       ],
+      "columns": {
+        "size": 3,
+        "carton": 5,
+        "packing": 6,
+        "weight": 7
+      },
       "configurations": 1
     },
     {
@@ -697,6 +1081,12 @@
       "rows": [
         5
       ],
+      "columns": {
+        "size": 3,
+        "carton": 5,
+        "packing": 6,
+        "weight": 7
+      },
       "configurations": 1
     },
     {
@@ -713,6 +1103,12 @@
         13,
         14
       ],
+      "columns": {
+        "size": 3,
+        "carton": 5,
+        "packing": 6,
+        "weight": 7
+      },
       "configurations": 8
     },
     {
@@ -728,6 +1124,11 @@
         12,
         14
       ],
+      "columns": {
+        "size": 2,
+        "carton": 8,
+        "gw": 9
+      },
       "configurations": 7
     },
     {
@@ -754,6 +1155,11 @@
         7,
         8
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11
+      },
       "configurations": 4
     },
     {
@@ -766,6 +1172,11 @@
         12,
         13
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11
+      },
       "configurations": 4
     },
     {
@@ -778,6 +1189,11 @@
         17,
         18
       ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11
+      },
       "configurations": 4
     },
     {
@@ -792,17 +1208,1568 @@
         13,
         17
       ],
+      "columns": {
+        "size": 1
+      },
       "configurations": 6
+    },
+    {
+      "target": "series:square-aluminum-40",
+      "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+      "sheet": "豪华铁铝菱形架",
+      "rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 16,
+        "container": 14
+      },
+      "configurations": 9
+    },
+    {
+      "target": "series:square-aluminum-30",
+      "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+      "sheet": "豪华铁铝菱形架",
+      "rows": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 16,
+        "container": 14
+      },
+      "configurations": 9
+    },
+    {
+      "target": "series:square-steel-40",
+      "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+      "sheet": "豪华铁30.40方形架",
+      "rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 16,
+        "container": 14
+      },
+      "configurations": 9
+    },
+    {
+      "target": "series:hex-steel-40",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "40-50管豪华铁铝菱形架17KG款",
+      "rows": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ],
+      "columns": {
+        "model": 1,
+        "size": 3,
+        "weight": 6,
+        "carton": 17,
+        "container": 15
+      },
+      "configurations": 9
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "file": "伟群普通黑金刚价格表.xls",
+      "sheet": "普通架",
+      "rows": [
+        5,
+        7,
+        9,
+        11,
+        13,
+        17
+      ],
+      "columns": {
+        "size": 1,
+        "carton": 1
+      },
+      "configurations": 28
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "file": "伟群普通黑金刚价格表.xls",
+      "sheet": "普通架",
+      "rows": [
+        19
+      ],
+      "columns": {
+        "size": 1,
+        "carton": 1
+      },
+      "configurations": 5
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "file": "伟群普通黑金刚价格表.xls",
+      "sheet": "普通架",
+      "rows": [
+        23,
+        25
+      ],
+      "columns": {
+        "size": 1,
+        "carton": 1
+      },
+      "configurations": 6
+    },
+    {
+      "target": "series:automatic-steel-frame",
+      "file": "伟群自动架价格表2023.xls",
+      "sheet": "自动架",
+      "rows": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 16
+    },
+    {
+      "target": "series:king-sleeved",
+      "file": "伟群大金刚王价格表2023.xls",
+      "sheet": "小金刚方管",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 16
+    },
+    {
+      "target": "series:king-welded",
+      "file": "伟群大金刚王价格表2023.xls",
+      "sheet": "小金刚方管",
+      "rows": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 18
+    },
+    {
+      "target": "series:hercules-frame",
+      "file": "伟群大金刚王价格表2023.xls",
+      "sheet": "小金刚方管",
+      "rows": [
+        112,
+        113
+      ],
+      "columns": {
+        "size": 1,
+        "listedWeight": 3
+      },
+      "configurations": 2
+    },
+    {
+      "target": "series:king-additional",
+      "file": "伟群大金刚王价格表2023.xls",
+      "sheet": "小金刚方管",
+      "rows": [
+        42,
+        44,
+        45,
+        46,
+        47,
+        48,
+        55,
+        56,
+        75
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 9
+    },
+    {
+      "target": "series:king-heavy-frame",
+      "file": "伟群大金刚王价格表2023.xls",
+      "sheet": "⑥大金刚王",
+      "rows": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 21
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "600D帐篷.xls",
+      "sheet": "Sheet1",
+      "rows": [
+        5,
+        6,
+        7,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "folded": 3,
+        "roofArea": 6
+      },
+      "configurations": 9
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "600D帐篷.xls",
+      "sheet": "Sheet1",
+      "rows": [
+        33,
+        34,
+        35,
+        36,
+        39,
+        42,
+        45,
+        48
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "folded": 3,
+        "roofArea": 6
+      },
+      "configurations": 8
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "600D帐篷.xls",
+      "sheet": "Sheet1",
+      "rows": [
+        60,
+        61,
+        62,
+        63,
+        66,
+        69,
+        72,
+        75
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "folded": 3,
+        "roofArea": 6
+      },
+      "configurations": 8
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司300DPU防水布热转印.xls",
+      "sheet": "Sheet2",
+      "rows": [
+        5,
+        6,
+        7,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 7,
+        "folded": 5,
+        "roofArea": 8
+      },
+      "configurations": 9
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司300DPU防水布热转印.xls",
+      "sheet": "Sheet2",
+      "rows": [
+        33,
+        34,
+        35,
+        36,
+        39,
+        42,
+        45,
+        48
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 7,
+        "folded": 5,
+        "roofArea": 8
+      },
+      "configurations": 8
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司300DPU防水布热转印.xls",
+      "sheet": "Sheet2",
+      "rows": [
+        58,
+        59,
+        60,
+        61,
+        64,
+        67,
+        70,
+        73
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 7,
+        "folded": 5,
+        "roofArea": 8
+      },
+      "configurations": 8
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+      "sheet": "素色420D，600DPU顶布价格",
+      "rows": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "carton": 6,
+        "roofArea": 3,
+        "fullWall": 7,
+        "halfWall": 9
+      },
+      "configurations": 10
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+      "sheet": "素色420D，600DPU顶布价格",
+      "rows": [
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "carton": 6,
+        "roofArea": 3,
+        "fullWall": 7,
+        "halfWall": 9
+      },
+      "configurations": 10
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+      "sheet": "素色600D涂PVC橡胶布",
+      "rows": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "carton": 6,
+        "roofArea": 3,
+        "fullWall": 7,
+        "halfWall": 9
+      },
+      "configurations": 10
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+      "sheet": "普通420D。600D。800D涂PVC",
+      "rows": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "columns": {
+        "size": 2,
+        "weight": 5,
+        "carton": 6,
+        "roofArea": 3,
+        "fullWall": 7,
+        "halfWall": 9
+      },
+      "configurations": 10
+    },
+    {
+      "target": "series:star-tent-walls",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "Start tent wall",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "columns": {
+        "size": 1,
+        "material": 2
+      },
+      "configurations": 10
+    },
+    {
+      "target": "series:star-tent-stakes",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "single peak star tent",
+      "rows": [
+        14
+      ],
+      "columns": {
+        "note": 2
+      },
+      "configurations": 1
+    },
+    {
+      "target": "series:star-tent-stakes",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "double peak star tent",
+      "rows": [
+        14
+      ],
+      "columns": {
+        "note": 2
+      },
+      "configurations": 1
+    },
+    {
+      "target": "series:dome-ad-t80",
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "sheet": "dome tent",
+      "rows": [
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "tube": 5,
+        "material": 8,
+        "tableSize": 7,
+        "carton": 9,
+        "gw": 10
+      },
+      "configurations": 5
+    },
+    {
+      "target": "series:pagoda-steel",
+      "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 4
+    },
+    {
+      "target": "series:pagoda-aluminum",
+      "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "columns": {
+        "size": 1
+      },
+      "configurations": 4
+    },
+    {
+      "target": "series:event-marquee-materials",
+      "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        15,
+        16,
+        17
+      ],
+      "columns": {
+        "material": 1
+      },
+      "configurations": 3
+    },
+    {
+      "target": "series:wk-fs-curved",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "快幕秀",
+      "rows": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "cartonSource": 17,
+        "tubeUsage": 16
+      },
+      "configurations": 4
+    },
+    {
+      "target": "series:wk-fs-s",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "快幕秀",
+      "rows": [
+        11,
+        12
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "cartonSource": 17,
+        "tubeUsage": 16
+      },
+      "configurations": 2
+    },
+    {
+      "target": "series:wk-fs-straight",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "快幕秀",
+      "rows": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "cartonSource": 17,
+        "tubeUsage": 16
+      },
+      "configurations": 4
+    },
+    {
+      "target": "series:upright-fabric-stands",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "快幕秀",
+      "rows": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "cartonSource": 17,
+        "tubeUsage": 16
+      },
+      "configurations": 8
+    },
+    {
+      "target": "series:fabric-counters",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "快幕秀",
+      "rows": [
+        27,
+        28
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "cartonSource": 17,
+        "tubeUsage": 16
+      },
+      "configurations": 2
+    },
+    {
+      "target": "series:wk-ho-universal",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "万能架",
+      "rows": [
+        5,
+        6,
+        7
+      ],
+      "columns": {
+        "model": 2,
+        "size": 3,
+        "graphic": 4,
+        "weight": 9,
+        "carton": 10
+      },
+      "configurations": 3
+    },
+    {
+      "target": "series:banner-market-stall",
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "sheet": "摆摊横幅架子",
+      "rows": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "columns": {
+        "model": 2,
+        "size": 3,
+        "graphic": 4,
+        "weight": 9,
+        "carton": 10
+      },
+      "configurations": 4
+    },
+    {
+      "target": "43003",
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "sheet": "卡布拉网灯箱",
+      "rows": [
+        21
+      ],
+      "columns": {
+        "model": 1,
+        "size": 3
+      },
+      "configurations": 1
+    },
+    {
+      "target": "tent:tent_accessories",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29
+      ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "material": 5,
+        "listedWeight": 7,
+        "packingDetails": 12
+      },
+      "configurations": 27
+    },
+    {
+      "target": "tent:tent_accessories",
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "listedWeight": 5,
+        "packingDetails": 8,
+        "gw": 9
+      },
+      "configurations": 22
+    },
+    {
+      "target": "tent:tent_accessories",
+      "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "listedWeight": 5,
+        "packingDetails": 8,
+        "gw": 9
+      },
+      "configurations": 22
+    },
+    {
+      "target": "tent:tent_accessories",
+      "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "columns": {
+        "model": 2,
+        "size": 4,
+        "listedWeight": 5,
+        "packingDetails": 8,
+        "gw": 9
+      },
+      "configurations": 22
+    },
+    {
+      "target": "9007",
+      "file": "帐篷配件.xls",
+      "sheet": "帐篷配件",
+      "rows": [
+        8
+      ],
+      "columns": {
+        "model": 1,
+        "size": 4,
+        "listedWeight": 7,
+        "packingDetails": 12
+      },
+      "configurations": 1
+    },
+    {
+      "target": "95001",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        88,
+        91,
+        94,
+        101,
+        117,
+        118,
+        119,
+        121
+      ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "material": 8,
+        "bore": 11
+      },
+      "configurations": 13
+    },
+    {
+      "target": "95012",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        115,
+        116,
+        120,
+        127
+      ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "material": 8,
+        "bore": 11
+      },
+      "configurations": 14
+    },
+    {
+      "target": "tent:tent_accessories",
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        122,
+        123,
+        124
+      ],
+      "columns": {
+        "model": 9,
+        "size": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "material": 8,
+        "bore": 11
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95003",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 8
+    },
+    {
+      "target": "95002",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        11,
+        12,
+        13,
+        14
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 4
+    },
+    {
+      "target": "95005",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        19,
+        21,
+        23
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95004",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        20,
+        22,
+        24
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95007",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        26,
+        27,
+        28
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95001",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        65,
+        68,
+        71,
+        78,
+        97,
+        98,
+        100
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 14
+    },
+    {
+      "target": "95012",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        15,
+        16,
+        17,
+        18,
+        25,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        53,
+        54,
+        55,
+        77,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        101,
+        102,
+        103
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 45
+    },
+    {
+      "target": "95009",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        104,
+        105,
+        106
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95008",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        107,
+        108,
+        109
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95010",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        110,
+        111,
+        112
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95006",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        113,
+        114,
+        115
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 3
+    },
+    {
+      "target": "95012",
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "sheet": "1.0厚杆",
+      "rows": [
+        116
+      ],
+      "columns": {
+        "model": 9,
+        "height": 3,
+        "pole": 10,
+        "graphic": 13,
+        "carton": 14,
+        "packingDetails": 15,
+        "bore": 11,
+        "material": 8
+      },
+      "configurations": 1
+    },
+    {
+      "target": "series:furniture-additional",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌子",
+      "rows": [
+        57,
+        60,
+        66,
+        67
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "material": 7,
+        "weight": 11,
+        "carton": 21,
+        "container": 19
+      },
+      "configurations": 4
+    },
+    {
+      "target": "31101",
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "sheet": "桌布",
+      "rows": [
+        20
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 1
+    },
+    {
+      "target": "31101",
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "sheet": "桌布",
+      "rows": [
+        22,
+        23
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 2
+    },
+    {
+      "target": "31101",
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "sheet": "桌布",
+      "rows": [
+        25,
+        26,
+        27
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 3
+    },
+    {
+      "target": "31101",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌布",
+      "rows": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 4
+    },
+    {
+      "target": "31101",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌布",
+      "rows": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 4
+    },
+    {
+      "target": "31101",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌布",
+      "rows": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 4
+    },
+    {
+      "target": "31101",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌布",
+      "rows": [
+        20
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 1
+    },
+    {
+      "target": "31101",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌布",
+      "rows": [
+        22,
+        23
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 2
+    },
+    {
+      "target": "31101",
+      "file": "桌子+椅子价格表.xls",
+      "sheet": "桌布",
+      "rows": [
+        25,
+        26,
+        27
+      ],
+      "columns": {
+        "model": 1,
+        "size": 5,
+        "weight": 11,
+        "carton": 23,
+        "roofArea": 13
+      },
+      "configurations": 3
+    },
+    {
+      "target": "43003",
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "sheet": "卡布拉网灯箱",
+      "rows": [
+        6,
+        15
+      ],
+      "columns": {
+        "model": 2
+      },
+      "configurations": 2
+    },
+    {
+      "target": "43002",
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "sheet": "型材灯箱",
+      "rows": [
+        5
+      ],
+      "columns": {
+        "model": 2
+      },
+      "configurations": 1
+    },
+    {
+      "target": "tent:inflatable-arch",
+      "file": "广西伟群帐篷闭气拱门价格表241205.xlsx",
+      "sheet": "Sheet1",
+      "rows": [
+        13
+      ],
+      "columns": {
+        "width": 3,
+        "height": 4,
+        "carton": 8,
+        "gw": 9
+      },
+      "configurations": 1
+    },
+    {
+      "target": "series:canopy-fabric",
+      "file": "补充价格表或者尺寸的截图.docx",
+      "image": "word/media/image1.png",
+      "transcription": "Visually checked technical columns only; price columns excluded",
+      "configurations": 10
+    },
+    {
+      "target": "9403",
+      "file": "补充价格表或者尺寸的截图.docx",
+      "image": "word/media/image3.jpeg",
+      "transcription": "Visually checked technical columns only; price columns excluded",
+      "configurations": 2
+    },
+    {
+      "target": "9401",
+      "file": "补充价格表或者尺寸的截图.docx",
+      "image": "word/media/image3.jpeg",
+      "transcription": "Visually checked technical columns only; price columns excluded",
+      "configurations": 2
+    },
+    {
+      "target": "9402",
+      "file": "补充价格表或者尺寸的截图.docx",
+      "image": "word/media/image3.jpeg",
+      "transcription": "Visually checked technical columns only; price columns excluded",
+      "configurations": 1
     }
   ],
   "omitted": [
-    "No exact product match: 1x1m 40mm market stall. The banner-stall sheet describes different 1.2–2.4m products.",
-    "Light box row WK1 1x4 has 770x12970; WK2 2x2 repeats 1980x2950; profile 85x2H conflicts with 850x2200. These rows are excluded.",
-    "AD-H1 universal frame differs from WK-HO codes; WK-HZ differs from WK-FS waveline codes. No size or weight substitution between these codes.",
-    "9401/9402/9403 are fiberglass race gates; inflatable arch tables do not apply. The supplementary photo does not unambiguously map every frame shape to these SKUs.",
+    "1x1m 40mm market stall has no exact source match. The separate 1.2–2.4m banner stalls are included under their own models in the specification library.",
+    "Conflicting light-box dimensions are blank; their model rows remain published. Conflicting 10m inflatable-arch diameter is unassigned; width, height and packing are retained.",
+    "AD-H1 differs from WK-HO; WK-HZ differs from WK-FS. These separate models are published in the library, without substitution on an unrelated SKU.",
+    "Fiberglass race-gate configurations were visually transcribed from DOCX image3.jpeg and remain separate from inflatable arches.",
     "Fabric tables list different 300D/420D/600D options. No blanket waterproof, fire or UV performance claim is applied to all tent configurations.",
-    "AD-T80 dome tent differs from the existing dome-3-folders furniture grouping. No cross-assignment.",
-    "Packing weights and empty item weights with ambiguous labels remain unmerged."
+    "AD-T80 dome tent is included as its own library series, separate from dome-3-folders furniture.",
+    "Ambiguous packing-to-weight pairings are preserved as source details; independent quantitative fields stay blank rather than being inferred."
   ],
-  "policy": "Only verified product specifications are published. Prices and sales terms are excluded."
+  "policy": "All source workbooks reviewed; technical values retained by exact model/configuration. Blank means not stated or unresolved. Prices and sales terms are excluded."
 }

@@ -1,0 +1,47 @@
+{
+  "workbooks": 21,
+  "groups": 141,
+  "rows": 802,
+  "checks": [
+    {
+      "width": 390,
+      "zh": false,
+      "groups": 141,
+      "rows": 802,
+      "blankCells": true,
+      "search": true,
+      "productLink": true,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "zh": true,
+      "groups": 141,
+      "rows": 802,
+      "blankCells": true,
+      "search": true,
+      "productLink": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "zh": false,
+      "groups": 141,
+      "rows": 802,
+      "blankCells": true,
+      "search": true,
+      "productLink": true,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "zh": true,
+      "groups": 141,
+      "rows": 802,
+      "blankCells": true,
+      "search": true,
+      "productLink": true,
+      "pass": true
+    }
+  ]
+}

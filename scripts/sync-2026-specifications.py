@@ -56,7 +56,7 @@ def group(key, file, sheet, row_numbers, title_zh, title_en, cols, notes_zh=(), 
     g = {'titleZh': title_zh, 'titleEn': title_en,
          'columns': [{'key': k, 'zh': LABELS[k][0], 'en': LABELS[k][1]} for k in cols],
          'rows': rows, 'notesZh': list(notes_zh), 'notesEn': list(notes_en),
-         'source': {'file': file, 'sheet': sheet, 'rows': list(row_numbers)}}
+         'source': {'file': file, 'sheet': sheet, 'rows': list(row_numbers), 'columns': dict(cols)}}
     DATA.setdefault(str(key), []).append(g)
     AUDIT.append({'target': str(key), **g['source'], 'configurations': len(rows)})
     return g
@@ -86,8 +86,8 @@ for key, sheet, rows, zh, en, material_zh, material_en in [
         r['size'] = r['size'].replace('*',' × ')+' m'
 
 f='伟群帐篷有限公司（豪华铁质方管40管30管架).xls'
-g=group('2001',f,'豪华铁30.40方形架',range(26,33),'30 mm 方管铁架 · AD-T30 配置','30 mm square steel frame · AD-T30 configuration',{'model':1,'size':3,'weight':6,'carton':16},['上管30×30×0.8 mm；下管25×25×0.6 mm；交叉管13×25×0.6 mm；尼龙连接件、自动锁扣、尼龙脚板。','此表为AD-T30系列型号；重量为理论裸架净重，不含篷布。'],['Upper leg 30 × 30 × 0.8 mm; lower leg 25 × 25 × 0.6 mm; scissor tube 13 × 25 × 0.6 mm; nylon joints, automatic locks and nylon feet.','These are the AD-T30 model codes in the supplied sheet. Weights are theoretical frame net weights, excluding fabric.'])
-for r in g['rows']: r['size']=r['size'].replace('*',' × ')+' m'
+g=group('2001',f,'豪华铁30.40方形架',range(26,35),'30 mm 方管铁架 · AD-T30 配置','30 mm square steel frame · AD-T30 configuration',{'model':1,'size':3,'weight':6,'carton':16},['上管30×30×0.8 mm；下管25×25×0.6 mm；交叉管13×25×0.6 mm；尼龙连接件、自动锁扣、尼龙脚板。','此表为AD-T30系列型号；重量为理论裸架净重，不含篷布。'],['Upper leg 30 × 30 × 0.8 mm; lower leg 25 × 25 × 0.6 mm; scissor tube 13 × 25 × 0.6 mm; nylon joints, automatic locks and nylon feet.','These are the AD-T30 model codes in the supplied sheet. Weights are theoretical frame net weights, excluding fabric.'])
+for r in g['rows']: r['size']=r['size'].replace('*',' × ')+' m' if r['size'] else ''
 
 # Accessories: exact existing AD/WK codes, using the matching workbook rather than aliasing codes.
 f='帐篷配件.xls'
@@ -187,6 +187,11 @@ for rows,zh,en,material in [(range(5,9),'造型弹力桌布','Sculpted stretch t
 
 g=group('standard-black-flat-tube-3x3','伟群普通黑金刚价格表.xls','普通架',[5,7,9,11,13,17],'普通黑金刚扁管架 · 可选规格','Standard Black flat-tube frame · size configurations',{'size':1},['尺寸：3×3 / 2×2 / 2.5×2.5 / 4×4 / 3×4.5 / 2×3 m；另列3×6 m。','同尺寸有多档重量，原表部分档位标头为空；不将其中一个重量套用于全部架子。'],['Sizes: 3×3 / 2×2 / 2.5×2.5 / 4×4 / 3×4.5 / 2×3 m; 3×6 m is also listed.','Multiple weight grades exist per size and some grade headers are blank. No single weight is applied to all frames.'])
 
+# Complete the remaining technical columns and workbook families. Price columns
+# are explicitly excluded by this reviewed extension as well.
+import runpy
+completion = runpy.run_path(str(ROOT/'scripts/complete-2026-specifications.py'), init_globals=globals())
+
 # Correct terminology for columns whose source does not claim a net weight.
 for key,groups in DATA.items():
     for g in groups:
@@ -207,7 +212,8 @@ for key,groups in DATA.items():
             for col in g['columns']:
                 if col['key']=='size':col.update(zh='尺寸 / 配合 / 装箱说明',en='Dimensions / fit / packing details')
 
-payload={'version':'2026-10-20','products':DATA}
+completion['finalize_translations']()
+payload={'version':'2026-10-24','products':DATA}
 (ROOT/'data/product-specifications-2026.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 products_path=ROOT/'scripts/products.js'
 products_js=products_path.read_text(encoding='utf-8')
@@ -216,12 +222,12 @@ runtime=(ROOT/'scripts/verified-specifications-runtime.js').read_text(encoding='
 embedded='/* BEGIN VERIFIED 2026 SPECS */\nconst WK_VERIFIED_SPECIFICATIONS = '+json.dumps(payload,ensure_ascii=False,separators=(',',':'))+';\n'+runtime+'\n/* END VERIFIED 2026 SPECS */\n'
 products_path.write_text(embedded+products_js,encoding='utf-8')
 manifest={'sourceDirectory':str(SOURCE),'files':FILES,'documents':{doc:hashlib.sha256((SOURCE/doc).read_bytes()).hexdigest()},'matches':AUDIT,'omitted':[
-    'No exact product match: 1x1m 40mm market stall. The banner-stall sheet describes different 1.2–2.4m products.',
-    'Light box row WK1 1x4 has 770x12970; WK2 2x2 repeats 1980x2950; profile 85x2H conflicts with 850x2200. These rows are excluded.',
-    'AD-H1 universal frame differs from WK-HO codes; WK-HZ differs from WK-FS waveline codes. No size or weight substitution between these codes.',
-    '9401/9402/9403 are fiberglass race gates; inflatable arch tables do not apply. The supplementary photo does not unambiguously map every frame shape to these SKUs.',
+    '1x1m 40mm market stall has no exact source match. The separate 1.2–2.4m banner stalls are included under their own models in the specification library.',
+    'Conflicting light-box dimensions are blank; their model rows remain published. Conflicting 10m inflatable-arch diameter is unassigned; width, height and packing are retained.',
+    'AD-H1 differs from WK-HO; WK-HZ differs from WK-FS. These separate models are published in the library, without substitution on an unrelated SKU.',
+    'Fiberglass race-gate configurations were visually transcribed from DOCX image3.jpeg and remain separate from inflatable arches.',
     'Fabric tables list different 300D/420D/600D options. No blanket waterproof, fire or UV performance claim is applied to all tent configurations.',
-    'AD-T80 dome tent differs from the existing dome-3-folders furniture grouping. No cross-assignment.',
-    'Packing weights and empty item weights with ambiguous labels remain unmerged.'], 'policy':'Only verified product specifications are published. Prices and sales terms are excluded.'}
+    'AD-T80 dome tent is included as its own library series, separate from dome-3-folders furniture.',
+    'Ambiguous packing-to-weight pairings are preserved as source details; independent quantitative fields stay blank rather than being inferred.'], 'policy':'All source workbooks reviewed; technical values retained by exact model/configuration. Blank means not stated or unresolved. Prices and sales terms are excluded.'}
 (ROOT/'reports/specifications-2026-source-map.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'Reviewed {len(FILES)} workbooks; matched {len(DATA)} product/type entries, {sum(len(g["rows"]) for groups in DATA.values() for g in groups)} configuration rows.')

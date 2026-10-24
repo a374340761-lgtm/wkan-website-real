@@ -692,7 +692,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         const td = document.createElement('td');
                         td.style.padding = '8px';
                         td.style.borderBottom = '1px solid #f3f3f3';
-                        const val = r && (r[c.key] ?? r[String(c.key).toLowerCase()]);
+                        const localizedRow = lang !== 'zh' && r && r.en ? r.en : r;
+                        const val = localizedRow && (localizedRow[c.key] ?? localizedRow[String(c.key).toLowerCase()]);
                         td.textContent = val == null ? '' : String(val);
                         tr.appendChild(td);
                     });
@@ -980,6 +981,19 @@ document.addEventListener('DOMContentLoaded', () => {
                     li.appendChild(link);
                     specsEl.replaceChildren(li);
                 }
+            }
+        }
+
+        if (product.packagingReference) {
+            const technicalTab=document.getElementById('tab-specs');
+            if(technicalTab){
+                const zh=getCurrentLang()==='zh';
+                const notice=document.createElement('aside');notice.className='pdp-packing-notice';
+                const text=document.createElement('p');text.textContent=zh?product.packagingNoticeZh:product.packagingNoticeEn;
+                const link=document.createElement('a');link.className='wk-resource-link';
+                link.href=(zh?'/zh':'')+'/specifications-packing.html'+(product.packagingReference==='all'?'':'#spec-'+encodeURIComponent(product.packagingReference));
+                link.textContent=zh?'查看价格表中的独立型号资料 →':'View the separately listed workbook models →';
+                notice.append(text,link);technicalTab.append(notice);
             }
         }
 

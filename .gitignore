@@ -30,3 +30,6 @@ __pycache__/
 *.sqlite3-*
 
 careers_backend/.careers-test-*/
+
+# Local spreadsheet parsers and private extraction intermediates
+.tmp-spec-deps/

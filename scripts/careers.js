@@ -83,7 +83,9 @@
         } else {
           wrap.append(node('label', field.label, { for: id }));
           const input = node(field.type === 'select' ? 'select' : 'textarea', '', { id, name: id, required: '', 'aria-describedby': q.id + '-hint' });
-          if (!q.hint) input.removeAttribute('aria-describedby');
+          const descriptions = [q.hint ? q.id + '-hint' : '', field.hint ? id + '-hint' : ''].filter(Boolean);
+          if (descriptions.length) input.setAttribute('aria-describedby', descriptions.join(' '));
+          else input.removeAttribute('aria-describedby');
           if (field.type === 'select') {
             input.append(node('option', '请选择最接近真实情况的一项', { value: '' }));
             field.options.forEach(option => input.append(node('option', option.label, { value: option.value })));
@@ -93,7 +95,7 @@
           }
           wrap.append(input);
         }
-        if (field.hint) wrap.append(node('p', field.hint, { class: 'careers-hint' }));
+        if (field.hint) wrap.append(node('p', field.hint, { class: 'careers-hint', id: id + '-hint' }));
         group.append(wrap);
       });
       questions.append(group);
@@ -208,7 +210,7 @@
         else reject(new Error('写入未成功，填写内容已保留。请检查 VPN 和网络后重试，或联系招聘负责人核实。'));
       }
       window.addEventListener('message', receive);
-      timer = setTimeout(() => {cleanup();reject(new Error('提交超时，尚未收到写入确认。内容已保留，请检查 VPN 和网络；重试会沿用同一提交编号，请勿刷新页面。'));}, 60000);
+      timer = setTimeout(() => {cleanup();reject(new Error('提交超时，尚未收到写入确认。内容已保留，请检查 VPN 和网络后重试；内容不变时沿用同一提交编号。若刷新，请在当前标签页恢复后重新勾选隐私同意；草稿保存状态请查看表单提示。'));}, 60000);
       document.body.append(iframe);
     });
   }

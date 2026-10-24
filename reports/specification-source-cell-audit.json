@@ -1,0 +1,164 @@
+{
+  "workbooks": 21,
+  "checkedNonemptyCells": 2477,
+  "numericDifferences": [],
+  "separateChecks": [
+    {
+      "target": "95001",
+      "title": "街旗、A屏与便携展示旗",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "tent:inflatable-arch",
+      "title": "600D 闭气六角拱门配置",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "tent:inflatable-arch",
+      "title": "600D 闭气圆形拱门配置",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "title": "普通黑金刚 · 原表档位",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "title": "普通黑金刚 · 3×6 m",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "standard-black-flat-tube-3x3",
+      "title": "普通黑金刚 · 其他表列重量",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "series:automatic-steel-frame",
+      "title": "自动铁架 · 各尺寸重量档",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "series:king-sleeved",
+      "title": "大金刚套胶架",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "series:king-welded",
+      "title": "小金刚焊接架",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 42,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 44,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 45,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 46,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 47,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 48,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 55,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 56,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-additional",
+      "row": 75,
+      "column": 1,
+      "field": "size",
+      "reason": "Mixed technical/price cell: separate manual transcription; raw value excluded."
+    },
+    {
+      "target": "series:king-heavy-frame",
+      "title": "大金刚王 · 40方腿",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "series:canopy-fabric",
+      "title": "420D PVC 顶布 · 补充截图230g",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "9403",
+      "title": "玻纤半圆竞速门 · 补充截图",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "9401",
+      "title": "玻纤V型竞速门 · 补充截图",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    },
+    {
+      "target": "9402",
+      "title": "玻纤圆形竞速门 · 补充截图",
+      "reason": "Transcribed/composite or one-to-many rows; checked by dedicated assertions."
+    }
+  ],
+  "sourceHashes": {
+    "2026奥动牌沙滩旗杆价格.xlsx": "fffe9edb559bb7b12ca05496549742665b3be38a687d95ff01e284ad85a5790a",
+    "2026年星帐-充气账-圆顶帐报价表1.xls": "6fec22f8ab548f64e4cc52ee30679718ee2844b7d6963cbacd9e18809702e4ea",
+    "600D帐篷.xls": "b3a1fce9f3155bd2f33a6cb9c08a49c6c5194bbdf5b26b81fd7ac134325b8993",
+    "伟群大金刚王价格表2023.xls": "893e92400cd452921b4a503e03fcab176608de972c801cd32ac76d0066767eb4",
+    "伟群展示型材折叠背景灯箱批量价格.xls": "83b28ae61dc4c701b010df406363f1b4e46551e5909d6c1d6c792af885cf12f7",
+    "伟群帐篷有限公司（毫华铝合金方管40管30管.xls": "24822b411087cd667ca720a40219ba45369d56331bb96382e6ddfaa2c71b9dbb",
+    "伟群帐篷有限公司（豪华铁质方管40管30管架).xls": "702ab7b26fd0b848d025b0dcaa1e990788c6c455320a684895a39c4fe360c443",
+    "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls": "9d57a4066dc591e792ac77af77ecb3edfc15c8eaf52c35d4bb3f22fbae1dacdc",
+    "伟群普通黑金刚价格表.xls": "b46b951b4f33c2e09330fcbeb3ce8100839ae81266b642228051d2a117c7304a",
+    "伟群自动架价格表2023.xls": "15e5eb8883022e5b696f53e218fbb7210cd666e4e0980e05f5ef720c4819836a",
+    "帐篷配件.xls": "2fbbb81451ab93a40cec4f54f033dc38e8fc7f6c78bb38e2640473d554b4a00d",
+    "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx": "4fdc5a4a57ff36b752b79b1512e368dd84fbf0cf02aca7ea5fcd3a16976244a3",
+    "广州市伟群展示器材有限公司快幕秀。拉网.xls": "7cd032c2b290f66b2c47bfe59c325e0eb24328c6e0382df3978439842a39b165",
+    "广西伟群制造有限公司家具折叠桌布价格表.xlsx": "9410915b0f00b996ae39a22fe5ccbb743cf9176c1f58d9a7251530b4bfa9191c",
+    "广西伟群帐篷充气桌椅报价表.xlsx": "73053c17322138e75391f065a7edabac82c571a6682eed89d50b2ded30406381",
+    "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls": "5d9b28882acb7b3f43f2768ac1f0ad2ffee27de1b09cd07ee8103f47d923013f",
+    "广西伟群帐篷制造有限公司300DPU防水布热转印.xls": "cbad0859935761e7aa518ebfc3bcf74ae009995a7252ec281a0c2c12d0a71b66",
+    "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx": "13ff0eece0dff215e01dd59fb7852139e9aa3d3cddec6625c88d2f7805e2c80d",
+    "广西伟群帐篷闭气V型（三脚）价格表.xlsx": "1564b88a4c5e0d3f5bd874d876f5c5de25453650c365ad6b2cf135925ca09b5f",
+    "广西伟群帐篷闭气拱门价格表241205.xlsx": "808470b49d74810a0214a3bfedaa856169e9299e971c99e0c439bb2d7d18f461",
+    "桌子+椅子价格表.xls": "c2757d1ffa38ba873ab0a0ba17603936a51024c0d30b6310940aeb88e8ba61e8"
+  },
+  "note": "Checks numeric transcription for explicit mapped fields, not semantic correctness, units, completeness or price values."
+}

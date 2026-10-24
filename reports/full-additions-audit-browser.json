@@ -41,7 +41,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
     ],
     "errors": []
   },
@@ -65,7 +65,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
     ],
     "errors": []
   },
@@ -89,7 +89,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 16,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
     ],
     "errors": []
   },
@@ -204,35 +204,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=9011",
+    "route": "product-detail.html?sku=9007",
     "width": 390,
     "expected": {
-      "id": "9011",
+      "id": "9007",
       "groups": 1
     },
-    "title": "Blade flag connector (B) | Tent & Display Manufacturer | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "product-detail.html?sku=9010",
-    "width": 390,
-    "expected": {
-      "id": "9010",
-      "groups": 1
-    },
-    "title": "Wheeled carry bag | Tent & Display Manufacturer | WaiKwan",
+    "title": "Round press weight (iron) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -270,13 +248,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=9012",
+    "route": "product-detail.html?sku=9010",
     "width": 390,
     "expected": {
-      "id": "9012",
+      "id": "9010",
       "groups": 1
     },
-    "title": "Tent carry bag | Tent & Display Manufacturer | WaiKwan",
+    "title": "Wheeled carry bag | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -292,13 +270,35 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=9015",
+    "route": "product-detail.html?sku=9011",
     "width": 390,
     "expected": {
-      "id": "9015",
+      "id": "9011",
       "groups": 1
     },
-    "title": "Tent tie-down rope | Tent & Display Manufacturer | WaiKwan",
+    "title": "Blade flag connector (B) | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=9012",
+    "width": 390,
+    "expected": {
+      "id": "9012",
+      "groups": 1
+    },
+    "title": "Tent carry bag | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -358,35 +358,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=9016",
+    "route": "product-detail.html?sku=9015",
     "width": 390,
     "expected": {
-      "id": "9016",
+      "id": "9015",
       "groups": 1
     },
-    "title": "Tent tie-down rope (A) | Tent & Display Manufacturer | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "product-detail.html?sku=9021",
-    "width": 390,
-    "expected": {
-      "id": "9021",
-      "groups": 1
-    },
-    "title": "Tent clamp / grip | Tent & Display Manufacturer | WaiKwan",
+    "title": "Tent tie-down rope | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -424,6 +402,28 @@
     "errors": []
   },
   {
+    "route": "product-detail.html?sku=9016",
+    "width": 390,
+    "expected": {
+      "id": "9016",
+      "groups": 1
+    },
+    "title": "Tent tie-down rope (A) | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "product-detail.html?sku=9020",
     "width": 390,
     "expected": {
@@ -446,13 +446,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=9022",
+    "route": "product-detail.html?sku=9021",
     "width": 390,
     "expected": {
-      "id": "9022",
+      "id": "9021",
       "groups": 1
     },
-    "title": "Half wall pole connector 90° | Tent & Display Manufacturer | WaiKwan",
+    "title": "Tent clamp / grip | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -512,6 +512,50 @@
     "errors": []
   },
   {
+    "route": "product-detail.html?sku=9022",
+    "width": 390,
+    "expected": {
+      "id": "9022",
+      "groups": 1
+    },
+    "title": "Half wall pole connector 90° | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=9401",
+    "width": 390,
+    "expected": {
+      "id": "9401",
+      "groups": 1
+    },
+    "title": "V Race Gate | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "product-detail.html?sku=31001",
     "width": 390,
     "expected": {
@@ -534,13 +578,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=31005",
+    "route": "product-detail.html?sku=9403",
     "width": 390,
     "expected": {
-      "id": "31005",
+      "id": "9403",
       "groups": 1
     },
-    "title": "Square Table (WK-FZ88) | Tent & Display Manufacturer | WaiKwan",
+    "title": "Semi-circle Race Gate 9403 | Fiberglass Event Arch | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -556,13 +600,35 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=31007",
+    "route": "product-detail.html?sku=9402",
     "width": 390,
     "expected": {
-      "id": "31007",
+      "id": "9402",
       "groups": 1
     },
-    "title": "Folding Chair WK-Y45 | Portable Event Seating | WaiKwan",
+    "title": "O Race Gate | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=31005",
+    "width": 390,
+    "expected": {
+      "id": "31005",
+      "groups": 1
+    },
+    "title": "Square Table (WK-FZ88) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -622,6 +688,28 @@
     "errors": []
   },
   {
+    "route": "product-detail.html?sku=31007",
+    "width": 390,
+    "expected": {
+      "id": "31007",
+      "groups": 1
+    },
+    "title": "Folding Chair WK-Y45 | Portable Event Seating | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "product-detail.html?sku=31009",
     "width": 390,
     "expected": {
@@ -644,13 +732,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=31013",
+    "route": "product-detail.html?sku=31010",
     "width": 390,
     "expected": {
-      "id": "31013",
+      "id": "31010",
       "groups": 1
     },
-    "title": "Cocktail Table (WK-BZ80) | Tent & Display Manufacturer | WaiKwan",
+    "title": "Round Folding In Half Tables (Multiple Sizes) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -666,13 +754,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=31010",
+    "route": "product-detail.html?sku=31013",
     "width": 390,
     "expected": {
-      "id": "31010",
+      "id": "31013",
       "groups": 1
     },
-    "title": "Round Folding In Half Tables (Multiple Sizes) | Tent & Display Manufacturer | WaiKwan",
+    "title": "Cocktail Table (WK-BZ80) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -758,7 +846,7 @@
     "width": 390,
     "expected": {
       "id": "31101",
-      "groups": 3
+      "groups": 12
     },
     "title": "Bi-fold Table Tablecloths | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
@@ -766,7 +854,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 3,
+    "specGroups": 12,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -820,13 +908,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=31205",
+    "route": "product-detail.html?sku=31204",
     "width": 390,
     "expected": {
-      "id": "31205",
+      "id": "31204",
       "groups": 1
     },
-    "title": "Round Folding Clothes Basket (WK-C35) | Tent & Display Manufacturer | WaiKwan",
+    "title": "Round Folding Clothes Basket (WK-C59) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -842,13 +930,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=31204",
+    "route": "product-detail.html?sku=31205",
     "width": 390,
     "expected": {
-      "id": "31204",
+      "id": "31205",
       "groups": 1
     },
-    "title": "Round Folding Clothes Basket (WK-C59) | Tent & Display Manufacturer | WaiKwan",
+    "title": "Round Folding Clothes Basket (WK-C35) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -886,19 +974,19 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=43002",
+    "route": "product-detail.html?sku=43003",
     "width": 390,
     "expected": {
-      "id": "43002",
-      "groups": 1
+      "id": "43003",
+      "groups": 4
     },
-    "title": "Aluminum Profile SEG Light Box Series | Tent & Display Manufacturer | WaiKwan",
+    "title": "SEG Net Light Box Series | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 4,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -908,13 +996,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=95003",
+    "route": "product-detail.html?sku=95002",
     "width": 390,
     "expected": {
-      "id": "95003",
+      "id": "95002",
       "groups": 1
     },
-    "title": "Beach Flag Poles (Aluminium + Fiberglass) | Tent & Display Manufacturer | WaiKwan",
+    "title": "Beach Flag Poles (Fiberglass Pole) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -934,7 +1022,7 @@
     "width": 390,
     "expected": {
       "id": "95001",
-      "groups": 1
+      "groups": 3
     },
     "title": "Backpack & Street / Display Flags | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
@@ -942,7 +1030,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 3,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -952,13 +1040,13 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=43003",
+    "route": "product-detail.html?sku=43002",
     "width": 390,
     "expected": {
-      "id": "43003",
+      "id": "43002",
       "groups": 2
     },
-    "title": "SEG Net Light Box Series | Tent & Display Manufacturer | WaiKwan",
+    "title": "Aluminum Profile SEG Light Box Series | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -978,7 +1066,7 @@
     "width": 390,
     "expected": {
       "id": "95004",
-      "groups": 1
+      "groups": 2
     },
     "title": "Teardrop Beach Flag Poles (Fully Fiberglass) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
@@ -986,7 +1074,29 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=95003",
+    "width": 390,
+    "expected": {
+      "id": "95003",
+      "groups": 2
+    },
+    "title": "Beach Flag Poles (Aluminium + Fiberglass) | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -1000,9 +1110,31 @@
     "width": 390,
     "expected": {
       "id": "95005",
-      "groups": 1
+      "groups": 2
     },
     "title": "Feather Beach Flag Poles (Fully Fiberglass) | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=95006",
+    "width": 390,
+    "expected": {
+      "id": "95006",
+      "groups": 1
+    },
+    "title": "Outdoor Giant Flag (Water Base) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1018,19 +1150,19 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=95008",
+    "route": "product-detail.html?sku=95009",
     "width": 390,
     "expected": {
-      "id": "95008",
-      "groups": 1
+      "id": "95009",
+      "groups": 2
     },
-    "title": "Aluminium Beach Flag Pole — Semicircle | Tent & Display Manufacturer | WaiKwan",
+    "title": "Aluminium Beach Flag Pole — Square | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -1044,7 +1176,7 @@
     "width": 390,
     "expected": {
       "id": "95007",
-      "groups": 1
+      "groups": 2
     },
     "title": "Square Flag Pole (Fiberglass) | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
@@ -1052,53 +1184,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "tent-type.html?type=star_1",
-    "width": 390,
-    "expected": {
-      "id": "tent:star_1",
-      "groups": 1
-    },
-    "title": "Star Tent (Type 1) | Tent Types | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "product-detail.html?sku=95009",
-    "width": 390,
-    "expected": {
-      "id": "95009",
-      "groups": 1
-    },
-    "title": "Aluminium Beach Flag Pole — Square | Tent & Display Manufacturer | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -1112,7 +1198,7 @@
     "width": 390,
     "expected": {
       "id": "95010",
-      "groups": 1
+      "groups": 2
     },
     "title": "Aluminium Beach Flag Pole — New Feather | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
@@ -1120,7 +1206,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -1130,19 +1216,19 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=95012",
+    "route": "product-detail.html?sku=95008",
     "width": 390,
     "expected": {
-      "id": "95012",
-      "groups": 1
+      "id": "95008",
+      "groups": 2
     },
-    "title": "Beach Flag Bases & Accessories | Tent & Display Manufacturer | WaiKwan",
+    "title": "Aluminium Beach Flag Pole — Semicircle | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -1171,8 +1257,78 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
     ],
+    "errors": []
+  },
+  {
+    "route": "tent-type.html?type=star_1",
+    "width": 390,
+    "expected": {
+      "id": "tent:star_1",
+      "groups": 1
+    },
+    "title": "Star Tent (Type 1) | Tent Types | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "tent-type.html?type=inflatable",
+    "width": 390,
+    "expected": {
+      "id": "tent:inflatable",
+      "groups": 1
+    },
+    "title": "Inflatable Tent | Tent Types | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/08.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=95012",
+    "width": 390,
+    "expected": {
+      "id": "95012",
+      "groups": 4
+    },
+    "title": "Beach Flag Bases & Accessories | Tent & Display Manufacturer | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 4,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
     "errors": []
   },
   {
@@ -1198,37 +1354,13 @@
     "errors": []
   },
   {
-    "route": "tent-type.html?type=inflatable",
+    "route": "tent-type.html?type=inflatable-double-chair",
     "width": 390,
     "expected": {
-      "id": "tent:inflatable",
+      "id": "tent:inflatable-double-chair",
       "groups": 1
     },
-    "title": "Inflatable Tent | Tent Types | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/08.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "tent-type.html?type=inflatable-three-leg-tent",
-    "width": 390,
-    "expected": {
-      "id": "tent:inflatable-three-leg-tent",
-      "groups": 1
-    },
-    "title": "Three-Leg Inflatable Tent | Custom Inflatable Display | WaiKwan",
+    "title": "Two-Seat Inflatable Chair | Custom Inflatable Display | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1244,13 +1376,13 @@
     "errors": []
   },
   {
-    "route": "tent-type.html?type=inflatable-double-chair",
+    "route": "tent-type.html?type=inflatable-three-leg-tent",
     "width": 390,
     "expected": {
-      "id": "tent:inflatable-double-chair",
+      "id": "tent:inflatable-three-leg-tent",
       "groups": 1
     },
-    "title": "Two-Seat Inflatable Chair | Custom Inflatable Display | WaiKwan",
+    "title": "Three-Leg Inflatable Tent | Custom Inflatable Display | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1292,9 +1424,79 @@
     "width": 390,
     "expected": {
       "id": "tent:inflatable-arch",
-      "groups": 3
+      "groups": 4
     },
     "title": "Inflatable Arch | Custom Inflatable Display | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 4,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "flag-type.html?type=fiberglass_pole",
+    "width": 390,
+    "expected": {
+      "id": "95002",
+      "groups": 1
+    },
+    "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/10.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "tent-type.html?type=tent_accessories",
+    "width": 390,
+    "expected": {
+      "id": "tent:tent_accessories",
+      "groups": 5
+    },
+    "title": "Tent Accessories & Grips (Full Range) | Tent Types | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 5,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/04.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "product-detail.html?sku=standard-black-flat-tube-3x3",
+    "width": 390,
+    "expected": {
+      "id": "standard-black-flat-tube-3x3",
+      "groups": 3
+    },
+    "title": "Standard Black Flat-Tube Canopy Frame | Tent & Display Manufacturer | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1310,33 +1512,11 @@
     "errors": []
   },
   {
-    "route": "product-detail.html?sku=standard-black-flat-tube-3x3",
-    "width": 390,
-    "expected": {
-      "id": "standard-black-flat-tube-3x3",
-      "groups": 1
-    },
-    "title": "Standard Black Flat-Tube Canopy Frame | Tent & Display Manufacturer | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
     "route": "flag-type.html?type=alu_fiberglass_pole",
     "width": 390,
     "expected": {
       "id": "95003",
-      "groups": 1
+      "groups": 2
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1344,14 +1524,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/10.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/10.png"
     ],
     "errors": []
   },
@@ -1360,7 +1540,7 @@
     "width": 390,
     "expected": {
       "id": "95004",
-      "groups": 1
+      "groups": 2
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1368,14 +1548,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
     ],
     "errors": []
   },
@@ -1384,6 +1564,30 @@
     "width": 390,
     "expected": {
       "id": "95005",
+      "groups": 2
+    },
+    "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "flag-type.html?type=outdoor_giant_flag",
+    "width": 390,
+    "expected": {
+      "id": "95006",
       "groups": 1
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
@@ -1399,7 +1603,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/12.png"
     ],
     "errors": []
   },
@@ -1408,7 +1612,7 @@
     "width": 390,
     "expected": {
       "id": "95007",
-      "groups": 1
+      "groups": 2
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1416,14 +1620,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/12.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/12.png"
     ],
     "errors": []
   },
@@ -1432,7 +1636,7 @@
     "width": 390,
     "expected": {
       "id": "95008",
-      "groups": 1
+      "groups": 2
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1440,38 +1644,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "flag-type.html?type=alu_pole_square",
-    "width": 390,
-    "expected": {
-      "id": "95009",
-      "groups": 1
-    },
-    "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
     ],
     "errors": []
   },
@@ -1480,7 +1660,7 @@
     "width": 390,
     "expected": {
       "id": "95010",
-      "groups": 1
+      "groups": 2
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1488,14 +1668,38 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "flag-type.html?type=alu_pole_square",
+    "width": 390,
+    "expected": {
+      "id": "95009",
+      "groups": 2
+    },
+    "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
     ],
     "errors": []
   },
@@ -1504,7 +1708,7 @@
     "width": 390,
     "expected": {
       "id": "95001",
-      "groups": 1
+      "groups": 3
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1512,14 +1716,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 3,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 4,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/16.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/16.png"
     ],
     "errors": []
   },
@@ -1528,7 +1732,7 @@
     "width": 390,
     "expected": {
       "id": "95012",
-      "groups": 1
+      "groups": 4
     },
     "title": "Beach Flag Types & Hardware | OEM Poles & Bases | Wai Kwan Tent",
     "h1": 1,
@@ -1536,26 +1740,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "about-us.html",
-    "width": 390,
-    "expected": {},
-    "title": "About WaiKwan | Canopy Tents, Beach Flags & Display Systems Manufacturer",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
+    "specGroups": 4,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -1588,6 +1773,25 @@
     "width": 390,
     "expected": {},
     "title": "Custom Canopy Tent Manufacturer | OEM Flags & Displays | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "about-us.html",
+    "width": 390,
+    "expected": {},
+    "title": "About WaiKwan | Canopy Tents, Beach Flags & Display Systems Manufacturer",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1638,49 +1842,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 16,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "product-detail.html?sku=42002",
-    "width": 390,
-    "expected": {},
-    "title": "Backdrop System Manufacturer | Adjustable Promotional Background Stand | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "product-detail.html?sku=42001",
-    "width": 390,
-    "expected": {},
-    "title": "A-Frame Display System Manufacturer | Double-Sided Event Sign Stand | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
     ],
     "errors": []
   },
@@ -1701,15 +1863,15 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/20.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/20.png"
     ],
     "errors": []
   },
   {
-    "route": "products/1x1m-40mm-aluminum-market-stall.html",
+    "route": "product-detail.html?sku=42001",
     "width": 390,
     "expected": {},
-    "title": "1×1 m Market Stall | 40 mm Aluminum Folding Frame | WaiKwan",
+    "title": "A-Frame Display System Manufacturer | Double-Sided Event Sign Stand | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1721,14 +1883,37 @@
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
-    "catalogRefs": [],
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
+    ],
     "errors": []
   },
   {
-    "route": "products/3x3-standard-black-flat-tube-canopy-frame.html",
+    "route": "product-detail.html?sku=42002",
     "width": 390,
     "expected": {},
-    "title": "Standard Black Flat-Tube Canopy Frame | Sizes & Details | WaiKwan",
+    "title": "Backdrop System Manufacturer | Adjustable Promotional Background Stand | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "products/1x1m-40mm-aluminum-market-stall.html",
+    "width": 390,
+    "expected": {},
+    "title": "1×1 m Market Stall | 40 mm Aluminum Folding Frame | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1763,10 +1948,10 @@
     "errors": []
   },
   {
-    "route": "products/curved-fabric-banner-stand.html",
+    "route": "products/3x3-standard-black-flat-tube-canopy-frame.html",
     "width": 390,
     "expected": {},
-    "title": "Curved Fabric Banner Stand | Frame Photos & Dimensions | WaiKwan",
+    "title": "Standard Black Flat-Tube Canopy Frame | Sizes & Details | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1805,6 +1990,25 @@
     "width": 390,
     "expected": {},
     "title": "Folding Chair WK-Y45 | Portable Event Seating | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "products/curved-fabric-banner-stand.html",
+    "width": 390,
+    "expected": {},
+    "title": "Curved Fabric Banner Stand | Frame Photos & Dimensions | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -1896,55 +2100,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=2003",
-    "width": 390,
-    "expected": {
-      "id": "2003",
-      "groups": 2
-    },
-    "title": "50 mm 六角铝合金帐篷｜规格与实拍｜伟群帐篷",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 2,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=2002",
-    "width": 390,
-    "expected": {
-      "id": "2002",
-      "groups": 2
-    },
-    "title": "40 mm 六角铝合金帐篷｜规格与实拍｜伟群帐篷",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 2,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 16,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
     ],
     "errors": []
   },
@@ -1993,6 +2149,54 @@
     "errors": []
   },
   {
+    "route": "zh/product-detail.html?sku=2002",
+    "width": 390,
+    "expected": {
+      "id": "2002",
+      "groups": 2
+    },
+    "title": "40 mm 六角铝合金帐篷｜规格与实拍｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 16,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=2003",
+    "width": 390,
+    "expected": {
+      "id": "2003",
+      "groups": 2
+    },
+    "title": "50 mm 六角铝合金帐篷｜规格与实拍｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+    ],
+    "errors": []
+  },
+  {
     "route": "zh/product-detail.html?sku=9003",
     "width": 390,
     "expected": {
@@ -2000,28 +2204,6 @@
       "groups": 1
     },
     "title": "遮阳档杆 | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=9004",
-    "width": 390,
-    "expected": {
-      "id": "9004",
-      "groups": 1
-    },
-    "title": "圆型帐篷压重水桶 WK-T02A｜快开帐篷配件｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2081,6 +2263,50 @@
     "errors": []
   },
   {
+    "route": "zh/product-detail.html?sku=9004",
+    "width": 390,
+    "expected": {
+      "id": "9004",
+      "groups": 1
+    },
+    "title": "圆型帐篷压重水桶 WK-T02A｜快开帐篷配件｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=9007",
+    "width": 390,
+    "expected": {
+      "id": "9007",
+      "groups": 1
+    },
+    "title": "压重铁圆款 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "zh/product-detail.html?sku=9010",
     "width": 390,
     "expected": {
@@ -2103,13 +2329,13 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=9009",
+    "route": "zh/product-detail.html?sku=9011",
     "width": 390,
     "expected": {
-      "id": "9009",
+      "id": "9011",
       "groups": 1
     },
-    "title": "帐篷刀旗连接件 | 广西伟群帐篷制造有限公司",
+    "title": "刀旗连接件B | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2125,13 +2351,13 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=9011",
+    "route": "zh/product-detail.html?sku=9009",
     "width": 390,
     "expected": {
-      "id": "9011",
+      "id": "9009",
       "groups": 1
     },
-    "title": "刀旗连接件B | 广西伟群帐篷制造有限公司",
+    "title": "帐篷刀旗连接件 | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2191,28 +2417,6 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=9014",
-    "width": 390,
-    "expected": {
-      "id": "9014",
-      "groups": 1
-    },
-    "title": "半围 PC 连接件 AD-T08｜40# 六角架｜伟群帐篷",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
     "route": "zh/product-detail.html?sku=9015",
     "width": 390,
     "expected": {
@@ -2235,6 +2439,28 @@
     "errors": []
   },
   {
+    "route": "zh/product-detail.html?sku=9014",
+    "width": 390,
+    "expected": {
+      "id": "9014",
+      "groups": 1
+    },
+    "title": "半围 PC 连接件 AD-T08｜40# 六角架｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "zh/product-detail.html?sku=9016",
     "width": 390,
     "expected": {
@@ -2242,6 +2468,28 @@
       "groups": 1
     },
     "title": "帐篷固定绳子A | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=9017",
+    "width": 390,
+    "expected": {
+      "id": "9017",
+      "groups": 1
+    },
+    "title": "半围刀旗连接件9 | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2301,50 +2549,6 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=9017",
-    "width": 390,
-    "expected": {
-      "id": "9017",
-      "groups": 1
-    },
-    "title": "半围刀旗连接件9 | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=9024",
-    "width": 390,
-    "expected": {
-      "id": "9024",
-      "groups": 1
-    },
-    "title": "40/50菱形帐篷架连接件 | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
     "route": "zh/product-detail.html?sku=9022",
     "width": 390,
     "expected": {
@@ -2389,6 +2593,72 @@
     "errors": []
   },
   {
+    "route": "zh/product-detail.html?sku=9024",
+    "width": 390,
+    "expected": {
+      "id": "9024",
+      "groups": 1
+    },
+    "title": "40/50菱形帐篷架连接件 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=9401",
+    "width": 390,
+    "expected": {
+      "id": "9401",
+      "groups": 1
+    },
+    "title": "V型拱门 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=9402",
+    "width": 390,
+    "expected": {
+      "id": "9402",
+      "groups": 1
+    },
+    "title": "O型拱门 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "zh/product-detail.html?sku=31001",
     "width": 390,
     "expected": {
@@ -2396,72 +2666,6 @@
       "groups": 1
     },
     "title": "对折桌（多尺寸） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=31007",
-    "width": 390,
-    "expected": {
-      "id": "31007",
-      "groups": 1
-    },
-    "title": "折叠椅 WK-Y45｜便携活动座椅｜伟群帐篷",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=31008",
-    "width": 390,
-    "expected": {
-      "id": "31008",
-      "groups": 1
-    },
-    "title": "折叠凳（WK-Y30A） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=31006",
-    "width": 390,
-    "expected": {
-      "id": "31006",
-      "groups": 1
-    },
-    "title": "对折长凳（WK-Y183） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2499,13 +2703,57 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=31010",
+    "route": "zh/product-detail.html?sku=9403",
     "width": 390,
     "expected": {
-      "id": "31010",
+      "id": "9403",
       "groups": 1
     },
-    "title": "圆形对折桌（多尺寸） | 广西伟群帐篷制造有限公司",
+    "title": "半圆型竞速拱门 9403｜玻璃钢赛事活动拱门｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=31006",
+    "width": 390,
+    "expected": {
+      "id": "31006",
+      "groups": 1
+    },
+    "title": "对折长凳（WK-Y183） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=31007",
+    "width": 390,
+    "expected": {
+      "id": "31007",
+      "groups": 1
+    },
+    "title": "折叠椅 WK-Y45｜便携活动座椅｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2543,13 +2791,35 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=31013",
+    "route": "zh/product-detail.html?sku=31008",
     "width": 390,
     "expected": {
-      "id": "31013",
+      "id": "31008",
       "groups": 1
     },
-    "title": "鸡尾酒桌（WK-BZ80） | 广西伟群帐篷制造有限公司",
+    "title": "折叠凳（WK-Y30A） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=31010",
+    "width": 390,
+    "expected": {
+      "id": "31010",
+      "groups": 1
+    },
+    "title": "圆形对折桌（多尺寸） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2609,6 +2879,28 @@
     "errors": []
   },
   {
+    "route": "zh/product-detail.html?sku=31013",
+    "width": 390,
+    "expected": {
+      "id": "31013",
+      "groups": 1
+    },
+    "title": "鸡尾酒桌（WK-BZ80） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "zh/product-detail.html?sku=31016",
     "width": 390,
     "expected": {
@@ -2616,72 +2908,6 @@
       "groups": 1
     },
     "title": "便携厕所（WK-PT20） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=31101",
-    "width": 390,
-    "expected": {
-      "id": "31101",
-      "groups": 3
-    },
-    "title": "对折桌配套桌布 | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 3,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=31202",
-    "width": 390,
-    "expected": {
-      "id": "31202",
-      "groups": 1
-    },
-    "title": "户外更衣室（WK-TENT190） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=31205",
-    "width": 390,
-    "expected": {
-      "id": "31205",
-      "groups": 1
-    },
-    "title": "圆形折叠收纳篮（WK-C35） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2719,6 +2945,50 @@
     "errors": []
   },
   {
+    "route": "zh/product-detail.html?sku=31101",
+    "width": 390,
+    "expected": {
+      "id": "31101",
+      "groups": 12
+    },
+    "title": "对折桌配套桌布 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 12,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=31202",
+    "width": 390,
+    "expected": {
+      "id": "31202",
+      "groups": 1
+    },
+    "title": "户外更衣室（WK-TENT190） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
     "route": "zh/product-detail.html?sku=31204",
     "width": 390,
     "expected": {
@@ -2726,6 +2996,28 @@
       "groups": 1
     },
     "title": "圆形折叠收纳篮（WK-C59） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=31205",
+    "width": 390,
+    "expected": {
+      "id": "31205",
+      "groups": 1
+    },
+    "title": "圆形折叠收纳篮（WK-C35） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2763,55 +3055,11 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=95003",
-    "width": 390,
-    "expected": {
-      "id": "95003",
-      "groups": 1
-    },
-    "title": "沙滩旗杆（铝管 + 玻纤） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=95001",
-    "width": 390,
-    "expected": {
-      "id": "95001",
-      "groups": 1
-    },
-    "title": "背包旗与街旗/展示旗 | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
     "route": "zh/product-detail.html?sku=43002",
     "width": 390,
     "expected": {
       "id": "43002",
-      "groups": 1
+      "groups": 2
     },
     "title": "铝型材卡布灯箱系列 | 广西伟群帐篷制造有限公司",
     "h1": 1,
@@ -2819,7 +3067,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -2833,9 +3081,75 @@
     "width": 390,
     "expected": {
       "id": "43003",
-      "groups": 2
+      "groups": 4
     },
     "title": "卡布拉网灯箱系列 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 4,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95001",
+    "width": 390,
+    "expected": {
+      "id": "95001",
+      "groups": 3
+    },
+    "title": "背包旗与街旗/展示旗 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 3,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95002",
+    "width": 390,
+    "expected": {
+      "id": "95002",
+      "groups": 1
+    },
+    "title": "沙滩旗杆（玻纤杆） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 1,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95003",
+    "width": 390,
+    "expected": {
+      "id": "95003",
+      "groups": 2
+    },
+    "title": "沙滩旗杆（铝管 + 玻纤） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2855,7 +3169,7 @@
     "width": 390,
     "expected": {
       "id": "95004",
-      "groups": 1
+      "groups": 2
     },
     "title": "水滴型沙滩旗杆（全玻纤） | 广西伟群帐篷制造有限公司",
     "h1": 1,
@@ -2863,7 +3177,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -2873,13 +3187,13 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=95008",
+    "route": "zh/product-detail.html?sku=95006",
     "width": 390,
     "expected": {
-      "id": "95008",
+      "id": "95006",
       "groups": 1
     },
-    "title": "铝合金沙滩旗杆（半圆） | 广西伟群帐篷制造有限公司",
+    "title": "户外注水旗杆（Giant Flag） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -2899,7 +3213,7 @@
     "width": 390,
     "expected": {
       "id": "95007",
-      "groups": 1
+      "groups": 2
     },
     "title": "方型沙滩旗杆（玻纤） | 广西伟群帐篷制造有限公司",
     "h1": 1,
@@ -2907,7 +3221,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -2921,7 +3235,7 @@
     "width": 390,
     "expected": {
       "id": "95005",
-      "groups": 1
+      "groups": 2
     },
     "title": "刀型沙滩旗杆（全玻纤） | 广西伟群帐篷制造有限公司",
     "h1": 1,
@@ -2929,7 +3243,95 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95008",
+    "width": 390,
+    "expected": {
+      "id": "95008",
+      "groups": 2
+    },
+    "title": "铝合金沙滩旗杆（半圆） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95010",
+    "width": 390,
+    "expected": {
+      "id": "95010",
+      "groups": 2
+    },
+    "title": "铝合金沙滩旗杆（新型刀旗） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95009",
+    "width": 390,
+    "expected": {
+      "id": "95009",
+      "groups": 2
+    },
+    "title": "铝合金沙滩旗杆（方型） | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=95012",
+    "width": 390,
+    "expected": {
+      "id": "95012",
+      "groups": 4
+    },
+    "title": "沙滩旗底座与配件 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 4,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -2958,74 +3360,8 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
     ],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=95012",
-    "width": 390,
-    "expected": {
-      "id": "95012",
-      "groups": 1
-    },
-    "title": "沙滩旗底座与配件 | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=95010",
-    "width": 390,
-    "expected": {
-      "id": "95010",
-      "groups": 1
-    },
-    "title": "铝合金沙滩旗杆（新型刀旗） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/product-detail.html?sku=95009",
-    "width": 390,
-    "expected": {
-      "id": "95009",
-      "groups": 1
-    },
-    "title": "铝合金沙滩旗杆（方型） | 广西伟群帐篷制造有限公司",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
     "errors": []
   },
   {
@@ -3048,18 +3384,18 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/06.png"
     ],
     "errors": []
   },
   {
-    "route": "zh/tent-type.html?type=inflatable-single-chair",
+    "route": "zh/tent-type.html?type=inflatable",
     "width": 390,
     "expected": {
-      "id": "tent:inflatable-single-chair",
+      "id": "tent:inflatable",
       "groups": 1
     },
-    "title": "单人充气椅｜定制充气展示产品｜伟群帐篷",
+    "title": "充气帐篷 | Tent Types | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3071,7 +3407,9 @@
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
-    "catalogRefs": [],
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/08.png"
+    ],
     "errors": []
   },
   {
@@ -3097,13 +3435,13 @@
     "errors": []
   },
   {
-    "route": "zh/tent-type.html?type=inflatable",
+    "route": "zh/tent-type.html?type=inflatable-single-chair",
     "width": 390,
     "expected": {
-      "id": "tent:inflatable",
+      "id": "tent:inflatable-single-chair",
       "groups": 1
     },
-    "title": "充气帐篷 | Tent Types | WaiKwan",
+    "title": "单人充气椅｜定制充气展示产品｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3115,9 +3453,7 @@
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/08.png"
-    ],
+    "catalogRefs": [],
     "errors": []
   },
   {
@@ -3169,9 +3505,31 @@
     "width": 390,
     "expected": {
       "id": "tent:inflatable-arch",
-      "groups": 3
+      "groups": 4
     },
     "title": "充气拱门｜定制充气展示产品｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 4,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=standard-black-flat-tube-3x3",
+    "width": 390,
+    "expected": {
+      "id": "standard-black-flat-tube-3x3",
+      "groups": 3
+    },
+    "title": "普通黑金刚扁管帐篷架 | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3187,13 +3545,37 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=standard-black-flat-tube-3x3",
+    "route": "zh/tent-type.html?type=tent_accessories",
     "width": 390,
     "expected": {
-      "id": "standard-black-flat-tube-3x3",
+      "id": "tent:tent_accessories",
+      "groups": 5
+    },
+    "title": "帐篷配件（全系列） | Tent Types | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 5,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/04.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "zh/flag-type.html?type=fiberglass_pole",
+    "width": 390,
+    "expected": {
+      "id": "95002",
       "groups": 1
     },
-    "title": "普通黑金刚扁管帐篷架 | 广西伟群帐篷制造有限公司",
+    "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3205,7 +3587,9 @@
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
-    "catalogRefs": [],
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/10.png"
+    ],
     "errors": []
   },
   {
@@ -3213,7 +3597,7 @@
     "width": 390,
     "expected": {
       "id": "95003",
-      "groups": 1
+      "groups": 2
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3221,38 +3605,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/10.png"
-    ],
-    "errors": []
-  },
-  {
-    "route": "zh/flag-type.html?type=fully_fiberglass_feather",
-    "width": 390,
-    "expected": {
-      "id": "95005",
-      "groups": 1
-    },
-    "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/10.png"
     ],
     "errors": []
   },
@@ -3261,6 +3621,54 @@
     "width": 390,
     "expected": {
       "id": "95004",
+      "groups": 2
+    },
+    "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "zh/flag-type.html?type=fully_fiberglass_feather",
+    "width": 390,
+    "expected": {
+      "id": "95005",
+      "groups": 2
+    },
+    "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 2,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "zh/flag-type.html?type=outdoor_giant_flag",
+    "width": 390,
+    "expected": {
+      "id": "95006",
       "groups": 1
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
@@ -3276,7 +3684,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/11.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/12.png"
     ],
     "errors": []
   },
@@ -3285,7 +3693,7 @@
     "width": 390,
     "expected": {
       "id": "95007",
-      "groups": 1
+      "groups": 2
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3293,14 +3701,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/12.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/12.png"
     ],
     "errors": []
   },
@@ -3309,7 +3717,7 @@
     "width": 390,
     "expected": {
       "id": "95008",
-      "groups": 1
+      "groups": 2
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3317,14 +3725,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
     ],
     "errors": []
   },
@@ -3333,7 +3741,7 @@
     "width": 390,
     "expected": {
       "id": "95009",
-      "groups": 1
+      "groups": 2
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3341,14 +3749,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
     ],
     "errors": []
   },
@@ -3357,7 +3765,7 @@
     "width": 390,
     "expected": {
       "id": "95010",
-      "groups": 1
+      "groups": 2
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3365,14 +3773,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 2,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/13.png"
     ],
     "errors": []
   },
@@ -3381,7 +3789,7 @@
     "width": 390,
     "expected": {
       "id": "95001",
-      "groups": 1
+      "groups": 3
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3389,14 +3797,14 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
+    "specGroups": 3,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
     "backpackPhotos": 4,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/16.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/16.png"
     ],
     "errors": []
   },
@@ -3405,7 +3813,7 @@
     "width": 390,
     "expected": {
       "id": "95012",
-      "groups": 1
+      "groups": 4
     },
     "title": "旗帜类型｜刀旗刀旗矩形旗｜伟群帐篷",
     "h1": 1,
@@ -3413,45 +3821,7 @@
     "brokenImages": [],
     "footer": true,
     "xhs": true,
-    "specGroups": 1,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/index.html",
-    "width": 390,
-    "expected": {},
-    "title": "定制广告帐篷与展示系统制造商｜广西伟群帐篷（WaiKwan）",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "zh/about-us.html",
-    "width": 390,
-    "expected": {},
-    "title": "关于伟群帐篷｜定制帐篷、沙滩旗与展示系统制造商",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
+    "specGroups": 4,
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 0,
@@ -3499,10 +3869,10 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=42001",
+    "route": "zh/about-us.html",
     "width": 390,
     "expected": {},
-    "title": "A字架展示架 | 双面活动广告屏 | 广西伟群帐篷制造有限公司",
+    "title": "关于伟群帐篷｜定制帐篷、沙滩旗与展示系统制造商",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3514,9 +3884,26 @@
     "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
-    "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
-    ],
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "zh/index.html",
+    "width": 390,
+    "expected": {},
+    "title": "定制广告帐篷与展示系统制造商｜广西伟群帐篷（WaiKwan）",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
     "errors": []
   },
   {
@@ -3536,7 +3923,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
     ],
     "errors": []
   },
@@ -3557,7 +3944,28 @@
     "backpackPhotos": 0,
     "canopyPhotos": 16,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+    ],
+    "errors": []
+  },
+  {
+    "route": "zh/product-detail.html?sku=42001",
+    "width": 390,
+    "expected": {},
+    "title": "A字架展示架 | 双面活动广告屏 | 广西伟群帐篷制造有限公司",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
     ],
     "errors": []
   },
@@ -3578,7 +3986,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/20.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/20.png"
     ],
     "errors": []
   },
@@ -3621,10 +4029,10 @@
     "errors": []
   },
   {
-    "route": "zh/product-detail.html?sku=42013",
+    "route": "zh/products/curved-fabric-banner-stand.html",
     "width": 390,
     "expected": {},
-    "title": "弧型张拉布展示（弧型系列） | 广西伟群帐篷制造有限公司",
+    "title": "立牌弧形｜结构实拍与参考尺寸｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3640,10 +4048,10 @@
     "errors": []
   },
   {
-    "route": "zh/products/curved-fabric-banner-stand.html",
+    "route": "zh/product-detail.html?sku=42013",
     "width": 390,
     "expected": {},
-    "title": "立牌弧形｜结构实拍与参考尺寸｜伟群帐篷",
+    "title": "弧型张拉布展示（弧型系列） | 广西伟群帐篷制造有限公司",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3697,10 +4105,10 @@
     "errors": []
   },
   {
-    "route": "zh/products/half-wall-blade-flag-connector-9014.html",
+    "route": "zh/products/round-water-weight-bucket-9004.html",
     "width": 390,
     "expected": {},
-    "title": "半围 PC 连接件 AD-T08｜40# 六角架｜伟群帐篷",
+    "title": "圆型帐篷压重水桶 WK-T02A｜快开帐篷配件｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3716,10 +4124,10 @@
     "errors": []
   },
   {
-    "route": "zh/products/round-water-weight-bucket-9004.html",
+    "route": "zh/products/half-wall-blade-flag-connector-9014.html",
     "width": 390,
     "expected": {},
-    "title": "圆型帐篷压重水桶 WK-T02A｜快开帐篷配件｜伟群帐篷",
+    "title": "半围 PC 连接件 AD-T08｜40# 六角架｜伟群帐篷",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3754,25 +4162,6 @@
     "errors": []
   },
   {
-    "route": "product-center.html",
-    "width": 1440,
-    "expected": {},
-    "title": "Products | Custom Canopy Tents, Beach Flags & Display Hardware | Wai Kwan Tent",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
     "route": "export-loading.html",
     "width": 1440,
     "expected": {},
@@ -3786,6 +4175,25 @@
     "legacyFeather": false,
     "lightboxTypes": 5,
     "exportPhotos": 12,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
+    "errors": []
+  },
+  {
+    "route": "product-center.html",
+    "width": 1440,
+    "expected": {},
+    "title": "Products | Custom Canopy Tents, Beach Flags & Display Hardware | Wai Kwan Tent",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [],
@@ -3808,7 +4216,7 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/20.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/20.png"
     ],
     "errors": []
   },
@@ -3829,7 +4237,7 @@
     "backpackPhotos": 4,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/16.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/16.png"
     ],
     "errors": []
   },
@@ -3850,8 +4258,27 @@
     "backpackPhotos": 0,
     "canopyPhotos": 0,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/18.png"
     ],
+    "errors": []
+  },
+  {
+    "route": "products/1x1m-40mm-aluminum-market-stall.html",
+    "width": 1440,
+    "expected": {},
+    "title": "1×1 m Market Stall | 40 mm Aluminum Folding Frame | WaiKwan",
+    "h1": 1,
+    "overflow": false,
+    "brokenImages": [],
+    "footer": true,
+    "xhs": true,
+    "specGroups": 0,
+    "legacyFeather": false,
+    "lightboxTypes": 5,
+    "exportPhotos": 0,
+    "backpackPhotos": 0,
+    "canopyPhotos": 0,
+    "catalogRefs": [],
     "errors": []
   },
   {
@@ -3871,15 +4298,15 @@
     "backpackPhotos": 0,
     "canopyPhotos": 16,
     "catalogRefs": [
-      "http://127.0.0.1:58851/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
+      "http://127.0.0.1:53734/images/广西伟群帐篷制造有限公司2025allpagepng/05.png"
     ],
     "errors": []
   },
   {
-    "route": "products/1x1m-40mm-aluminum-market-stall.html",
+    "route": "company-profile.html",
     "width": 1440,
     "expected": {},
-    "title": "1×1 m Market Stall | 40 mm Aluminum Folding Frame | WaiKwan",
+    "title": "Company Profile | Guangxi WaiKwan Tent Manufacturing Co., Ltd.",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3914,10 +4341,10 @@
     "errors": []
   },
   {
-    "route": "company-profile.html",
+    "route": "beach-flag-buying-guide.html",
     "width": 1440,
     "expected": {},
-    "title": "Company Profile | Guangxi WaiKwan Tent Manufacturing Co., Ltd.",
+    "title": "Beach Flag Buying Guide | Feather Flags, Teardrop Flags, Poles & Bases | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],
@@ -3937,25 +4364,6 @@
     "width": 1440,
     "expected": {},
     "title": "Canopy Tent Buying Guide | Frames, Sizes, Printing & Export Packing | WaiKwan",
-    "h1": 1,
-    "overflow": false,
-    "brokenImages": [],
-    "footer": true,
-    "xhs": true,
-    "specGroups": 0,
-    "legacyFeather": false,
-    "lightboxTypes": 5,
-    "exportPhotos": 0,
-    "backpackPhotos": 0,
-    "canopyPhotos": 0,
-    "catalogRefs": [],
-    "errors": []
-  },
-  {
-    "route": "beach-flag-buying-guide.html",
-    "width": 1440,
-    "expected": {},
-    "title": "Beach Flag Buying Guide | Feather Flags, Teardrop Flags, Poles & Bases | WaiKwan",
     "h1": 1,
     "overflow": false,
     "brokenImages": [],

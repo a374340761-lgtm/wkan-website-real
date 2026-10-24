@@ -1,0 +1,2077 @@
+[
+  {
+    "file": "2026奥动牌沙滩旗杆价格.xlsx",
+    "sheet": "Sheet1",
+    "nonemptyRows": 208,
+    "groups": [
+      {
+        "target": "95003",
+        "title": "WK 铝管+玻纤 · 1.0 mm 管壁配置",
+        "rows": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "95005",
+        "title": "全玻纤刀旗 · 标准、加强与短节配置",
+        "rows": [
+          23,
+          25,
+          27,
+          29,
+          36,
+          38,
+          40,
+          42,
+          45,
+          46,
+          47
+        ],
+        "configurations": 11
+      },
+      {
+        "target": "95004",
+        "title": "全玻纤水滴旗配置",
+        "rows": [
+          24,
+          26,
+          28,
+          30,
+          37,
+          39,
+          41,
+          43
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "95007",
+        "title": "AD-D 全玻纤方旗配置",
+        "rows": [
+          31,
+          32,
+          33,
+          34
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "95009",
+        "title": "全铝方旗 · WK-C10 / WK-H3 配置",
+        "rows": [
+          18,
+          19,
+          20,
+          128,
+          129,
+          130
+        ],
+        "configurations": 6
+      },
+      {
+        "target": "95008",
+        "title": "WK-S3 半圆全铝旗杆",
+        "rows": [
+          131,
+          132,
+          133
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95010",
+        "title": "WK-S4 刀型全铝旗杆",
+        "rows": [
+          134,
+          135,
+          136
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95001",
+        "title": "WK-C16 背包旗",
+        "rows": [
+          79
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "95001",
+        "title": "街旗、A屏与便携展示旗",
+        "rows": [
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          88,
+          91,
+          94,
+          101,
+          117,
+          118,
+          119,
+          121
+        ],
+        "configurations": 13
+      },
+      {
+        "target": "95012",
+        "title": "旗杆底座与收纳配件",
+        "rows": [
+          3,
+          13,
+          14,
+          15,
+          16,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          100,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          125,
+          126
+        ],
+        "configurations": 30
+      },
+      {
+        "target": "95012",
+        "title": "其他底座、旗头和布料配件",
+        "rows": [
+          66,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          76,
+          77,
+          115,
+          116,
+          120,
+          127
+        ],
+        "configurations": 14
+      },
+      {
+        "target": "tent:tent_accessories",
+        "title": "WK-E2/E3/E4 拖轮包",
+        "rows": [
+          122,
+          123,
+          124
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "2026奥动牌沙滩旗杆价格.xlsx",
+    "sheet": "Sheet2",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "2026奥动牌沙滩旗杆价格.xlsx",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+    "sheet": "double peak star tent",
+    "nonemptyRows": 14,
+    "groups": [
+      {
+        "target": "tent:star_2",
+        "title": "星形帐篷尺寸与分件包装",
+        "rows": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 6
+      },
+      {
+        "target": "series:star-tent-stakes",
+        "title": "星形帐篷大地钉包装",
+        "rows": [
+          14
+        ],
+        "configurations": 1
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+    "sheet": "single peak star tent",
+    "nonemptyRows": 14,
+    "groups": [
+      {
+        "target": "tent:star_1",
+        "title": "星形帐篷尺寸与分件包装",
+        "rows": [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 6
+      },
+      {
+        "target": "series:star-tent-stakes",
+        "title": "星形帐篷大地钉包装",
+        "rows": [
+          14
+        ],
+        "configurations": 1
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+    "sheet": "Start tent wall",
+    "nonemptyRows": 12,
+    "groups": [
+      {
+        "target": "series:star-tent-walls",
+        "title": "星形帐篷围布",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "configurations": 10
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+    "sheet": "inflatable",
+    "nonemptyRows": 10,
+    "groups": [
+      {
+        "target": "tent:inflatable",
+        "title": "闭气充气帐篷",
+        "rows": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "configurations": 4
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+    "sheet": "dome tent",
+    "nonemptyRows": 15,
+    "groups": [
+      {
+        "target": "series:dome-ad-t80",
+        "title": "AD-T80 圆顶帐篷",
+        "rows": [
+          7,
+          9,
+          11,
+          13,
+          15
+        ],
+        "configurations": 5
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "600D帐篷.xls",
+    "sheet": "Sheet1",
+    "nonemptyRows": 86,
+    "groups": [
+      {
+        "target": "series:canopy-fabric",
+        "title": "600D 热转印顶布",
+        "rows": [
+          5,
+          6,
+          7,
+          8,
+          11,
+          14,
+          17,
+          20,
+          23
+        ],
+        "configurations": 9
+      },
+      {
+        "target": "series:canopy-fabric",
+        "title": "600D 全围布",
+        "rows": [
+          33,
+          34,
+          35,
+          36,
+          39,
+          42,
+          45,
+          48
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "series:canopy-fabric",
+        "title": "600D 半围布",
+        "rows": [
+          60,
+          61,
+          62,
+          63,
+          66,
+          69,
+          72,
+          75
+        ],
+        "configurations": 8
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群大金刚王价格表2023.xls",
+    "sheet": "小金刚方管",
+    "nonemptyRows": 118,
+    "groups": [
+      {
+        "target": "series:king-sleeved",
+        "title": "大金刚套胶架",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "configurations": 16
+      },
+      {
+        "target": "series:king-welded",
+        "title": "小金刚焊接架",
+        "rows": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "configurations": 18
+      },
+      {
+        "target": "series:hercules-frame",
+        "title": "大力神架",
+        "rows": [
+          112,
+          113
+        ],
+        "configurations": 2
+      },
+      {
+        "target": "series:king-additional",
+        "title": "金刚架及展台 · 其他表列规格",
+        "rows": [
+          42,
+          44,
+          45,
+          46,
+          47,
+          48,
+          55,
+          56,
+          75
+        ],
+        "configurations": 9
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群大金刚王价格表2023.xls",
+    "sheet": "⑥大金刚王",
+    "nonemptyRows": 19,
+    "groups": [
+      {
+        "target": "series:king-heavy-frame",
+        "title": "大金刚王 · 40方腿",
+        "rows": [
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16
+        ],
+        "configurations": 21
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+    "sheet": "卡布拉网灯箱",
+    "nonemptyRows": 23,
+    "groups": [
+      {
+        "target": "43003",
+        "title": "WK1 · 75 cm 单元卡布拉网灯箱",
+        "rows": [
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "configurations": 7
+      },
+      {
+        "target": "43003",
+        "title": "WK2 · 1 m 单元卡布拉网灯箱",
+        "rows": [
+          12,
+          13,
+          14,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "43003",
+        "title": "WKP 灯箱前台",
+        "rows": [
+          21
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "43003",
+        "title": "灯箱尺寸待确认配置",
+        "rows": [
+          6,
+          15
+        ],
+        "configurations": 2
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+    "sheet": "型材灯箱",
+    "nonemptyRows": 11,
+    "groups": [
+      {
+        "target": "43002",
+        "title": "WK-W 型材灯箱配置",
+        "rows": [
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        "configurations": 5
+      },
+      {
+        "target": "43002",
+        "title": "型材灯箱尺寸待确认配置",
+        "rows": [
+          5
+        ],
+        "configurations": 1
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+    "sheet": "豪华铁铝菱形架",
+    "nonemptyRows": 41,
+    "groups": [
+      {
+        "target": "series:square-aluminum-40",
+        "title": "40 mm 方管铝架",
+        "rows": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 9
+      },
+      {
+        "target": "series:square-aluminum-30",
+        "title": "30 mm 方管铝架",
+        "rows": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "configurations": 9
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+    "sheet": "Sheet1",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+    "sheet": "Sheet2",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+    "sheet": "帐篷配件",
+    "nonemptyRows": 25,
+    "groups": [
+      {
+        "target": "tent:tent_accessories",
+        "title": "AD 配套件 · 方管铝架表",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "configurations": 22
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+    "sheet": "豪华铁30.40方形架",
+    "nonemptyRows": 41,
+    "groups": [
+      {
+        "target": "2001",
+        "title": "30 mm 方管铁架 · AD-T30 配置",
+        "rows": [
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "configurations": 9
+      },
+      {
+        "target": "series:square-steel-40",
+        "title": "40 mm 方管铁架",
+        "rows": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 9
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+    "sheet": "Sheet1",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+    "sheet": "Sheet2",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+    "sheet": "帐篷配件",
+    "nonemptyRows": 25,
+    "groups": [
+      {
+        "target": "tent:tent_accessories",
+        "title": "AD 配套件 · 方管铁架表",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "configurations": 22
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+    "sheet": "40-50管豪华铁铝菱形架17KG款",
+    "nonemptyRows": 57,
+    "groups": [
+      {
+        "target": "2002",
+        "title": "40 mm 六角铝架 · 常规配置",
+        "rows": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 9
+      },
+      {
+        "target": "2003",
+        "title": "50 mm 六角铝架 · 1.5 mm 立柱配置",
+        "rows": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "series:hex-steel-40",
+        "title": "40 mm 六角铁架",
+        "rows": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50
+        ],
+        "configurations": 9
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+    "sheet": "铝合金40管经济款15.5KG款",
+    "nonemptyRows": 17,
+    "groups": [
+      {
+        "target": "2002",
+        "title": "40 mm 六角铝架 · 经济配置",
+        "rows": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "configurations": 9
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+    "sheet": "50管1.7厚",
+    "nonemptyRows": 15,
+    "groups": [
+      {
+        "target": "2003",
+        "title": "50 mm 六角铝架 · 1.7 mm 配置",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "configurations": 8
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+    "sheet": "帐篷配件",
+    "nonemptyRows": 25,
+    "groups": [
+      {
+        "target": "9001",
+        "title": "AD 系列配套规格",
+        "rows": [
+          4
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9005",
+        "title": "AD 系列配套规格",
+        "rows": [
+          6
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9006",
+        "title": "AD 系列配套规格",
+        "rows": [
+          7
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9009",
+        "title": "AD 系列配套规格",
+        "rows": [
+          10
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9010",
+        "title": "AD 系列配套规格",
+        "rows": [
+          11
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9013",
+        "title": "AD 系列配套规格",
+        "rows": [
+          14
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9014",
+        "title": "AD 系列配套规格",
+        "rows": [
+          15
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9017",
+        "title": "AD 系列配套规格",
+        "rows": [
+          16
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "tent:tent_accessories",
+        "title": "AD 配套件 · 六角架表",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "configurations": 22
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群普通黑金刚价格表.xls",
+    "sheet": "普通架",
+    "nonemptyRows": 26,
+    "groups": [
+      {
+        "target": "standard-black-flat-tube-3x3",
+        "title": "普通黑金刚 · 原表档位",
+        "rows": [
+          5,
+          7,
+          9,
+          11,
+          13,
+          17
+        ],
+        "configurations": 28
+      },
+      {
+        "target": "standard-black-flat-tube-3x3",
+        "title": "普通黑金刚 · 3×6 m",
+        "rows": [
+          19
+        ],
+        "configurations": 5
+      },
+      {
+        "target": "standard-black-flat-tube-3x3",
+        "title": "普通黑金刚 · 其他表列重量",
+        "rows": [
+          23,
+          25
+        ],
+        "configurations": 6
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "伟群自动架价格表2023.xls",
+    "sheet": "自动架",
+    "nonemptyRows": 20,
+    "groups": [
+      {
+        "target": "series:automatic-steel-frame",
+        "title": "自动铁架 · 各尺寸重量档",
+        "rows": [
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18
+        ],
+        "configurations": 16
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "帐篷配件.xls",
+    "sheet": "帐篷配件",
+    "nonemptyRows": 31,
+    "groups": [
+      {
+        "target": "9002",
+        "title": "配套规格",
+        "rows": [
+          6
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9003",
+        "title": "配套规格",
+        "rows": [
+          3
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9004",
+        "title": "配套规格",
+        "rows": [
+          7
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9011",
+        "title": "配套规格",
+        "rows": [
+          16
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9012",
+        "title": "配套规格",
+        "rows": [
+          19
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9015",
+        "title": "配套规格",
+        "rows": [
+          23
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9016",
+        "title": "配套规格",
+        "rows": [
+          24
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9020",
+        "title": "配套规格",
+        "rows": [
+          26
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9021",
+        "title": "配套规格",
+        "rows": [
+          27
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9022",
+        "title": "配套规格",
+        "rows": [
+          28
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9023",
+        "title": "配套规格",
+        "rows": [
+          29
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "9024",
+        "title": "配套规格",
+        "rows": [
+          14
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "tent:tent_accessories",
+        "title": "WK 帐篷配件 · 全部表列配置",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29
+        ],
+        "configurations": 27
+      },
+      {
+        "target": "9007",
+        "title": "WK-T03A/B/C 配重选项",
+        "rows": [
+          8
+        ],
+        "configurations": 1
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+    "sheet": "1.0厚杆",
+    "nonemptyRows": 120,
+    "groups": [
+      {
+        "target": "95003",
+        "title": "补充表 · 铝管玻纤杆",
+        "rows": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "95005",
+        "title": "WK-A 旧款刀旗",
+        "rows": [
+          19,
+          21,
+          23
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95004",
+        "title": "WK-D 旧款水滴旗",
+        "rows": [
+          20,
+          22,
+          24
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95007",
+        "title": "WK-F 全玻纤方旗",
+        "rows": [
+          26,
+          27,
+          28
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95009",
+        "title": "WK-33 全铝方旗",
+        "rows": [
+          104,
+          105,
+          106
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95008",
+        "title": "WK-36 全铝半圆旗",
+        "rows": [
+          107,
+          108,
+          109
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95010",
+        "title": "WK-39 全铝刀旗",
+        "rows": [
+          110,
+          111,
+          112
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "95001",
+        "title": "补充表 · 背包与展示旗",
+        "rows": [
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          65,
+          68,
+          71,
+          78,
+          97,
+          98,
+          100
+        ],
+        "configurations": 14
+      },
+      {
+        "target": "95012",
+        "title": "补充表 · 底座与配件",
+        "rows": [
+          15,
+          16,
+          17,
+          18,
+          25,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          53,
+          54,
+          55,
+          77,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          101,
+          102,
+          103
+        ],
+        "configurations": 45
+      },
+      {
+        "target": "95012",
+        "title": "WK-40 伸缩落地旗杆",
+        "rows": [
+          116
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "95002",
+        "title": "补充表 · 二用玻纤杆",
+        "rows": [
+          11,
+          12,
+          13,
+          14
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "95006",
+        "title": "注水旗杆 · 杆与水座分装",
+        "rows": [
+          113,
+          114,
+          115
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+    "sheet": "1.5厚旗杆",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+    "sheet": "快幕秀",
+    "nonemptyRows": 40,
+    "groups": [
+      {
+        "target": "series:wk-fs-curved",
+        "title": "WK-FS 弧形快幕秀",
+        "rows": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "series:wk-fs-s",
+        "title": "WK-FS1 S形快幕秀",
+        "rows": [
+          11,
+          12
+        ],
+        "configurations": 2
+      },
+      {
+        "target": "series:wk-fs-straight",
+        "title": "WK-FS2 直形快幕秀",
+        "rows": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "series:upright-fabric-stands",
+        "title": "立牌 · 铝板/铁板底座",
+        "rows": [
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "series:fabric-counters",
+        "title": "WK-FS5 前台",
+        "rows": [
+          27,
+          28
+        ],
+        "configurations": 2
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+    "sheet": "拉网",
+    "nonemptyRows": 9,
+    "groups": [
+      {
+        "target": "42003",
+        "title": "WK-PO 拉网展架",
+        "rows": [
+          5,
+          6,
+          7
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+    "sheet": "万能架",
+    "nonemptyRows": 9,
+    "groups": [
+      {
+        "target": "series:wk-ho-universal",
+        "title": "WK-HO 万能架",
+        "rows": [
+          5,
+          6,
+          7
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+    "sheet": "摆摊横幅架子",
+    "nonemptyRows": 10,
+    "groups": [
+      {
+        "target": "series:banner-market-stall",
+        "title": "横幅摆摊架",
+        "rows": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "configurations": 4
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+    "sheet": "桌布",
+    "nonemptyRows": 28,
+    "groups": [
+      {
+        "target": "31101",
+        "title": "造型弹力桌布",
+        "rows": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31101",
+        "title": "罩型弹力桌布",
+        "rows": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31101",
+        "title": "方型桌布",
+        "rows": [
+          15,
+          16,
+          17,
+          18
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31101",
+        "title": "椅子布 · 桌布表",
+        "rows": [
+          20
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31101",
+        "title": "吧桌布 · 桌布表",
+        "rows": [
+          22,
+          23
+        ],
+        "configurations": 2
+      },
+      {
+        "target": "31101",
+        "title": "圆桌布 · 桌布表",
+        "rows": [
+          25,
+          26,
+          27
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "广西伟群帐篷充气桌椅报价表.xlsx",
+    "sheet": "Sheet1",
+    "nonemptyRows": 21,
+    "groups": [
+      {
+        "target": "tent:inflatable-single-chair",
+        "title": "充气产品尺寸与装箱",
+        "rows": [
+          4
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "tent:inflatable-double-chair",
+        "title": "充气产品尺寸与装箱",
+        "rows": [
+          5
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "tent:inflatable-column",
+        "title": "充气产品尺寸与装箱",
+        "rows": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "configurations": 8
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+    "sheet": "素色420D，600DPU顶布价格",
+    "nonemptyRows": 33,
+    "groups": [
+      {
+        "target": "series:canopy-fabric",
+        "title": "素色 PU 顶布 · 原表400D / 190g",
+        "rows": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ],
+        "configurations": 10
+      },
+      {
+        "target": "series:canopy-fabric",
+        "title": "素色 PU 顶布 · 600D",
+        "rows": [
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "configurations": 10
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+    "sheet": "素色600D涂PVC橡胶布",
+    "nonemptyRows": 20,
+    "groups": [
+      {
+        "target": "series:canopy-fabric",
+        "title": "素色 PVC 顶布 · 600D / 300g",
+        "rows": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 10
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司 素色 TEL 1892278758.xls",
+    "sheet": "普通420D。600D。800D涂PVC",
+    "nonemptyRows": 20,
+    "groups": [
+      {
+        "target": "series:canopy-fabric",
+        "title": "素色 PVC 顶布 · 420/600/800D选项 / 240g",
+        "rows": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 10
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司300DPU防水布热转印.xls",
+    "sheet": "Sheet2",
+    "nonemptyRows": 83,
+    "groups": [
+      {
+        "target": "series:canopy-fabric",
+        "title": "300D 热转印顶布",
+        "rows": [
+          5,
+          6,
+          7,
+          8,
+          11,
+          14,
+          17,
+          20,
+          23
+        ],
+        "configurations": 9
+      },
+      {
+        "target": "series:canopy-fabric",
+        "title": "300D 全围布",
+        "rows": [
+          33,
+          34,
+          35,
+          36,
+          39,
+          42,
+          45,
+          48
+        ],
+        "configurations": 8
+      },
+      {
+        "target": "series:canopy-fabric",
+        "title": "300D 半围布",
+        "rows": [
+          58,
+          59,
+          60,
+          61,
+          64,
+          67,
+          70,
+          73
+        ],
+        "configurations": 8
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司300DPU防水布热转印.xls",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+    "sheet": "Sheet1",
+    "nonemptyRows": 17,
+    "groups": [
+      {
+        "target": "series:pagoda-steel",
+        "title": "铁锥顶篷",
+        "rows": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "series:pagoda-aluminum",
+        "title": "铝合金锥顶篷",
+        "rows": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "series:event-marquee-materials",
+        "title": "篷房材质选项",
+        "rows": [
+          15,
+          16,
+          17
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+    "sheet": "Sheet2",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  },
+  {
+    "file": "广西伟群帐篷闭气V型（三脚）价格表.xlsx",
+    "sheet": "Sheet1",
+    "nonemptyRows": 10,
+    "groups": [
+      {
+        "target": "tent:inflatable-three-leg-tent",
+        "title": "三脚闭气帐篷",
+        "rows": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "configurations": 4
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "广西伟群帐篷闭气拱门价格表241205.xlsx",
+    "sheet": "Sheet1",
+    "nonemptyRows": 14,
+    "groups": [
+      {
+        "target": "tent:inflatable-arch",
+        "title": "400D 闭气圆形拱门配置",
+        "rows": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          14
+        ],
+        "configurations": 7
+      },
+      {
+        "target": "tent:inflatable-arch",
+        "title": "400D 拱门 · 10 m 待确认管径",
+        "rows": [
+          13
+        ],
+        "configurations": 1
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "桌子+椅子价格表.xls",
+    "sheet": "桌子",
+    "nonemptyRows": 68,
+    "groups": [
+      {
+        "target": "31001",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          12,
+          17,
+          22,
+          27
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31005",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          52
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31006",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          11
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31007",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          4
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31008",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          10
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31009",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          32
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31010",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          37,
+          42,
+          47
+        ],
+        "configurations": 3
+      },
+      {
+        "target": "31013",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          58
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31014",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          9
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31015",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          59
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31016",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          61
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31202",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          65
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31203",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          62
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31204",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          63
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31205",
+        "title": "尺寸、材质与装箱",
+        "rows": [
+          64
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "series:furniture-additional",
+        "title": "其他家具与收纳配置",
+        "rows": [
+          57,
+          60,
+          66,
+          67
+        ],
+        "configurations": 4
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "桌子+椅子价格表.xls",
+    "sheet": "桌布",
+    "nonemptyRows": 28,
+    "groups": [
+      {
+        "target": "31101",
+        "title": "造型弹力桌布 · 家具表",
+        "rows": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31101",
+        "title": "罩型弹力桌布 · 家具表",
+        "rows": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31101",
+        "title": "方型桌布 · 家具表",
+        "rows": [
+          15,
+          16,
+          17,
+          18
+        ],
+        "configurations": 4
+      },
+      {
+        "target": "31101",
+        "title": "椅子布 · 家具表",
+        "rows": [
+          20
+        ],
+        "configurations": 1
+      },
+      {
+        "target": "31101",
+        "title": "吧桌布 · 家具表",
+        "rows": [
+          22,
+          23
+        ],
+        "configurations": 2
+      },
+      {
+        "target": "31101",
+        "title": "圆桌布 · 家具表",
+        "rows": [
+          25,
+          26,
+          27
+        ],
+        "configurations": 3
+      }
+    ],
+    "status": "technical data published"
+  },
+  {
+    "file": "桌子+椅子价格表.xls",
+    "sheet": "Sheet3",
+    "nonemptyRows": 0,
+    "groups": [],
+    "status": "empty sheet"
+  }
+]

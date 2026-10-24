@@ -1,0 +1,24 @@
+.specifications-library{padding-top:180px;line-height:1.7;}
+.specifications-library .container{max-width:1180px;}
+.specifications-library header{max-width:900px;margin-bottom:28px;}
+.specifications-library h1{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.3;margin:20px 0;}
+.specifications-library .breadcrumb{display:flex;flex-wrap:wrap;gap:10px;}
+.spec-library-controls{padding:24px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;margin:24px 0;}
+.spec-library-controls label{display:block;font-weight:700;margin-bottom:10px;}
+.spec-library-controls input{width:100%;padding:12px 14px;border:1px solid #cbd2dc;border-radius:8px;font:inherit;}
+.spec-library-note{color:#596879;font-size:.93rem;}
+.spec-library-family{scroll-margin-top:180px;min-width:0;}
+.spec-library-group{background:#fff;border:1px solid #e1e5eb;border-radius:12px;margin:12px 0;scroll-margin-top:180px;}
+.spec-library-group summary{display:flex;justify-content:space-between;gap:16px;padding:18px 22px;cursor:pointer;font-weight:700;}
+.spec-library-group summary::before{content:'＋';color:#a4161a;}
+.spec-library-group[open] summary::before{content:'−';}
+.spec-library-group summary span{flex:1;}
+.spec-library-group summary small{font-weight:400;color:#596879;}
+.spec-library-content{padding:0 22px 22px;min-width:0;}
+.spec-library-table{max-width:100%;overflow-x:auto;border:1px solid #e5e7eb;border-radius:8px;}
+.spec-library-table table{border-collapse:collapse;width:100%;min-width:780px;}
+.spec-library-table th,.spec-library-table td{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid #e5e7eb;min-width:100px;white-space:pre-line;overflow-wrap:anywhere;}
+.spec-library-table th{background:#f6f7f9;font-size:.9rem;}
+.spec-library-help{padding:28px;background:#fff;border-radius:14px;margin:32px 0;}
+.spec-library-group[hidden],.spec-library-family[hidden]{display:none;}
+@media(max-width:767px){.specifications-library{padding-top:110px;}.spec-library-group summary{padding:16px;flex-wrap:wrap;}.spec-library-group summary small{width:100%;padding-left:32px;}.spec-library-content{padding:0 14px 18px;}.spec-library-controls{padding:18px;}}

@@ -35,7 +35,7 @@ export const STATIC_PRODUCTS = [
   {
     sku: 'FABRIC-BANNER-STAND-CURVED', catalogIdentifier: true, imageWidth: 4032, imageHeight: 3024,
     slug: 'curved-fabric-banner-stand', model: 'Curved Banner Stand',
-    image: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg',
+    image: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.webp',
     imageNoteEn: 'Workshop photograph of the bare frame; printed fabric is not shown.',
     imageNoteZh: '车间裸架实拍，未展示印刷布画。',
     en: {
@@ -57,12 +57,12 @@ export const STATIC_PRODUCTS = [
     facts: [['Frame form', 'Curved tube frame with support feet'], ['Reference display size', '80 × 200 cm (straight stand reference)'], ['Reference graphic size', '83 × 205 cm (straight stand reference)'], ['Photographs', 'Bare frame; printed graphic not shown']],
     factsZh: [['架体形式', '弧形管架及支撑脚'], ['参考展示尺寸', '80 × 200 厘米（参考直形立牌）'], ['参考画面尺寸', '83 × 205 厘米（参考直形立牌）'], ['实拍内容', '裸架，未展示印刷画面']],
     gallery: [
-      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg', en: 'Bare frame overview', zh: '裸架整体' },
-      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.jpg', en: 'Support feet and lower frame', zh: '支撑脚及下部框架' },
-      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.jpg', en: 'Rounded top profile', zh: '顶部弧度' },
-      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.jpg', en: 'Curved side connection', zh: '弧形侧面连接' },
-      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.jpg', en: 'Upright tube connection', zh: '立管连接细节' },
-      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.jpg', en: 'Base detail', zh: '底座细节' }
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.webp', en: 'Bare frame overview', zh: '裸架整体' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.webp', en: 'Support feet and lower frame', zh: '支撑脚及下部框架' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.webp', en: 'Rounded top profile', zh: '顶部弧度' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.webp', en: 'Curved side connection', zh: '弧形侧面连接' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.webp', en: 'Upright tube connection', zh: '立管连接细节' },
+      { src: '/images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.webp', en: 'Base detail', zh: '底座细节' }
     ]
   },
   {
@@ -70,40 +70,40 @@ export const STATIC_PRODUCTS = [
   "internalCatalogKey": true,
   "slug": "3x3-standard-black-flat-tube-canopy-frame",
   "model": "Standard Black / 普通黑金刚",
-  "image": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+  "image": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.webp",
   "imageWidth": 810,
   "imageHeight": 1440,
   "gallery": [
     {
-      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.webp",
       "en": "Folded frame in the workshop (3×3 m sample)",
       "zh": "车间内的折叠架整体（3×3米示例）",
       "width": 810,
       "height": 1440
     },
     {
-      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.webp",
       "en": "Top corner joint and bolts (3×3 m sample)",
       "zh": "顶部角连接与螺栓（3×3米示例）",
       "width": 1080,
       "height": 1920
     },
     {
-      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.webp",
       "en": "Center post and cross-brace connections (3×3 m sample)",
       "zh": "中心立柱与交叉撑杆连接（3×3米示例）",
       "width": 1080,
       "height": 1920
     },
     {
-      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.webp",
       "en": "Leg slider and locking detail (3×3 m sample)",
       "zh": "立柱滑动连接与锁扣细节（3×3米示例）",
       "width": 810,
       "height": 1440
     },
     {
-      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg",
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.webp",
       "en": "Flat-tube cross braces and folding joint (3×3 m sample)",
       "zh": "扁管交叉撑杆与折叠连接（3×3米示例）",
       "width": 1080,

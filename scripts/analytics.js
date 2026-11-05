@@ -5,7 +5,8 @@
   const consentCookieName = 'wk_cookie_consent';
   const methods = {
     begin_lead: ['quote_page', 'product'],
-    generate_lead: ['whatsapp', 'email', 'phone', 'quote_form'],
+    contact_click: ['whatsapp', 'email', 'phone'],
+    generate_lead: ['quote_form'],
     file_download: ['catalog'],
   };
 
@@ -60,9 +61,9 @@
     let url;
     try { url = new URL(link.getAttribute('href'), window.location.href); } catch { return; }
     if (url.hostname === 'wa.me' || url.hostname === 'api.whatsapp.com') {
-      window.wkTrackEvent('generate_lead', { contact_method: 'whatsapp' });
+      window.wkTrackEvent('contact_click', { contact_method: 'whatsapp' });
     } else if (url.protocol === 'mailto:' || url.protocol === 'tel:') {
-      window.wkTrackEvent('generate_lead', { contact_method: url.protocol === 'mailto:' ? 'email' : 'phone' });
+      window.wkTrackEvent('contact_click', { contact_method: url.protocol === 'mailto:' ? 'email' : 'phone' });
     } else if (link.hasAttribute('download') || /\.pdf$/i.test(url.pathname)) {
       window.wkTrackEvent('file_download', { contact_method: 'catalog' });
     } else if (url.origin === window.location.origin && /\/(?:zh\/)?contact-us\.html$/.test(url.pathname)) {

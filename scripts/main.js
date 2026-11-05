@@ -401,8 +401,8 @@ function getHomeHeroSlides() {
                 ? 'images/hero/canton-fair-140-phase-3-2026-waikwan-768.webp'
                 : 'images/hero/canton-fair-140-phase-3-2026-waikwan-1536.webp',
             keyPrefix: 'home_hero_0',
-            imageAlt: 'WaiKwan invitation to the 140th Canton Fair Phase 3, booth 12.1F29-30, October 31 to November 4, 2026',
-            variant: 'invite',
+            imageAlt: 'WaiKwan at the 140th Canton Fair Phase 3, booth 12.1F29-30',
+            variant: 'event-poster',
             clickHref: '/news/the-140th-canton-fair-phase-3.html',
             clickHrefLocalized: false,
             tertiaryHref: '/news/the-140th-canton-fair-phase-3.html',
@@ -1253,7 +1253,19 @@ function WK_bindMobileNavSystem(hamburger) {
 }
 
 // 导航功能
+function normalizePrimaryMenu() {
+ const nav = document.querySelector('.navbar .nav-menu');
+ if (!nav) return;
+ nav.innerHTML = "\n        <li class=\"nav-item-dropdown\">\n          <a href=\"product-center.html\" class=\"nav-link\">\n            <span class=\"zh\" data-translate=\"nav_section_products\">Products</span><span class=\"en\" data-translate=\"nav_section_products\">Products</span>\n            <i class=\"fas fa-chevron-down\" aria-hidden=\"true\"></i>\n          </a>\n          <div class=\"dropdown-menu\">\n            <a href=\"product-center.html\" data-nav=\"product-center\"><span class=\"zh\" data-translate=\"nav_product_center\">Products</span><span class=\"en\" data-translate=\"nav_product_center\">Products</span></a>\n            <a href=\"./all-products.html\" data-nav=\"all-products\"><span class=\"zh\" data-translate=\"nav_all_products\">Browse Products</span><span class=\"en\" data-translate=\"nav_all_products\">Browse Products</span></a>\n            <a href=\"product-center.html?cat=tents\"><span class=\"zh\" data-translate=\"nav_cat_tents\">Canopy Tents</span><span class=\"en\" data-translate=\"nav_cat_tents\">Canopy Tents</span></a>\n            <a href=\"product-center.html?cat=flags\"><span class=\"zh\" data-translate=\"nav_cat_flags_poles\">Flags &amp; Poles</span><span class=\"en\" data-translate=\"nav_cat_flags_poles\">Flags &amp; Poles</span></a>\n            <a href=\"product-center.html?cat=displays\"><span class=\"zh\" data-translate=\"nav_cat_displays\">Display Systems</span><span class=\"en\" data-translate=\"nav_cat_displays\">Display Systems</span></a>\n            <a href=\"product-center.html?cat=lightbox\"><span class=\"zh\" data-translate=\"nav_light_boxes_nav\">Light Boxes</span><span class=\"en\" data-translate=\"nav_light_boxes_nav\">Light Boxes</span></a>\n          </div>\n        </li>\n        <li class=\"nav-item-dropdown\">\n          <a href=\"index.html#factory-strength\" class=\"nav-link\">\n            <span class=\"zh\" data-translate=\"nav_section_solutions\">Solutions</span><span class=\"en\" data-translate=\"nav_section_solutions\">Solutions</span>\n            <i class=\"fas fa-chevron-down\" aria-hidden=\"true\"></i>\n          </a>\n          <div class=\"dropdown-menu\">\n            <a href=\"index.html#factory-strength\"><span class=\"zh\" data-translate=\"nav_oem_odm\">OEM / ODM</span><span class=\"en\" data-translate=\"nav_oem_odm\">OEM / ODM</span></a>\n            <a href=\"custom-canopy-tent-manufacturer.html\"><span class=\"zh\" data-translate=\"nav_sol_canopy\">Custom Canopy Tents</span><span class=\"en\" data-translate=\"nav_sol_canopy\">Custom Canopy Tents</span></a>\n            <a href=\"beach-flag-supplier.html\"><span class=\"zh\" data-translate=\"nav_sol_beach_flags\">Beach Flag Supplier</span><span class=\"en\" data-translate=\"nav_sol_beach_flags\">Beach Flag Supplier</span></a>\n            <a href=\"portable-display-systems.html\"><span class=\"zh\" data-translate=\"nav_sol_portable_display\">Portable Display Systems</span><span class=\"en\" data-translate=\"nav_sol_portable_display\">Portable Display Systems</span></a>\n          </div>\n        </li>\n        <li class=\"nav-item-dropdown\">\n          <a href=\"faq.html\" class=\"nav-link\">\n            <span class=\"zh\" data-translate=\"nav_section_customer_service\">Customer Service</span><span class=\"en\" data-translate=\"nav_section_customer_service\">Customer Service</span>\n            <i class=\"fas fa-chevron-down\" aria-hidden=\"true\"></i>\n          </a>\n          <div class=\"dropdown-menu\">\n            <a href=\"faq.html\"><span class=\"zh\" data-translate=\"nav_faq\">FAQ</span><span class=\"en\" data-translate=\"nav_faq\">FAQ</span></a>\n                        <a href=\"about-us.html\"><span class=\"zh\" data-translate=\"nav_about_us\">About Us</span><span class=\"en\" data-translate=\"nav_about_us\">About Us</span></a>\n            <a href=\"contact-us.html\"><span class=\"zh\" data-translate=\"nav_contact\">Contact</span><span class=\"en\" data-translate=\"nav_contact\">Contact</span></a>\n            <a href=\"news/index.html\"><span class=\"zh\" data-translate=\"nav_news_resources\">News &amp; Resources</span><span class=\"en\" data-translate=\"nav_news_resources\">News &amp; Resources</span></a>\n            <a href=\"index.html#footer-social\"><span class=\"zh\" data-translate=\"nav_follow_us\">Follow Us</span><span class=\"en\" data-translate=\"nav_follow_us\">Follow Us</span></a>\n                        <a href=\"/careers.html\" data-nav-careers=\"1\"><span data-translate=\"nav_careers\">Careers</span></a>\n          </div>\n        </li>\n      ";
+ nav.querySelectorAll('a[href]').forEach(a => {
+  const href = a.getAttribute('href');
+  if (!/^(https?:|#|mailto:|tel:)/.test(href)) a.href = wkLocalizedInternalLinkSafe('/' + href.replace(/^\.?\//, ''));
+ });
+}
+
 function initNavigation() {
+    normalizePrimaryMenu();
+    enhanceCareersNavigation();
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-menu a');
     const hamburger = document.querySelector('.hamburger');
@@ -1522,22 +1534,7 @@ function enhanceTentsDropdown() {
         { type: 'inflatable', nameEn: 'Inflatable Tent', nameZh: '充气帐篷' }
     ];
 
-    const getTypes = () => {
-        const data = window.TENT_TYPES;
-        const folding = data && Array.isArray(data.folding) ? data.folding : [];
-        const event = data && Array.isArray(data.event) ? data.event : [];
-        const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
-        // Omit TENT_TYPES.accessories here: tent_accessories is appended once below (tents_hub_accessories_title).
-        const list = folding.concat(event, inflatable);
-        if (!list.length) return fallback;
-        return list
-            .filter((x) => x && x.type)
-            .map((x) => ({
-                type: x.type,
-                nameEn: x.nameEn || x.type,
-                nameZh: x.nameZh || x.nameEn || x.type
-            }));
-    };
+    const getTypes = () => [{"type":"folding30","nameEn":"30 Square Tube Iron Frame","nameZh":"30 方管铁架"},{"type":"folding40","nameEn":"40 Hexagon Aluminum Frame","nameZh":"40 六角铝合金架"},{"type":"folding50","nameEn":"50 Hexagon Aluminum Frame","nameZh":"50 六角铝合金架"},{"type":"star_1","nameEn":"Star Tent (Type 1)","nameZh":"星星帐篷（款式1）"},{"type":"star_2","nameEn":"Star Tent (Type 2)","nameZh":"星星帐篷（款式2）"},{"type":"awning","nameEn":"Awning Tent","nameZh":"天幕帐篷"},{"type":"six_sided","nameEn":"Six-sided Tent","nameZh":"六边帐篷"},{"type":"inflatable","nameEn":"Inflatable Tent","nameZh":"充气帐篷"},{"type":"inflatable-three-leg-tent","nameEn":"Three-Leg Inflatable Tent","nameZh":"三脚充气帐篷"},{"type":"inflatable-single-chair","nameEn":"Single-Seat Inflatable Chair","nameZh":"单人充气椅"},{"type":"inflatable-double-chair","nameEn":"Two-Seat Inflatable Chair","nameZh":"双人充气椅"},{"type":"inflatable-arch","nameEn":"Inflatable Arch","nameZh":"充气拱门"},{"type":"inflatable-column","nameEn":"Inflatable Display Column","nameZh":"充气圆柱"}];
 
     // Tent series: all go to tent-type.html?type=… (procurement hub), not product-detail PDP.
     const getTentTypeHref = (type) => {

@@ -383,20 +383,20 @@ class ProductManager {
                 "shortEn": "Standard Black flat-tube folding frame in seven sizes; photographs show a 3×3 m sample.",
                 "descriptionZh": "普通黑金刚扁管帐篷架提供下表所列的七种尺寸。本页五张车间实拍仅以3×3米架子为示例，展示折叠状态、连接件与锁扣；照片展示裸架，不含顶布。",
                 "descriptionEn": "The Standard Black flat-tube folding canopy frame is available in seven sizes listed below. The five workshop photographs show a 3×3 m sample frame and its connections, without a canopy cover.",
-                "image": "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
+                "image": "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.webp",
                 "images": [
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg"
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.webp"
                 ],
                 "gallery": [
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.jpg",
-                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.jpg"
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-folded-frame.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-top-corner-joint.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-center-joint.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-leg-lock.webp",
+                                "images/products/tents/standard-black-flat-tube-3x3/3x3-standard-black-flat-tube-canopy-frame-flat-tube-cross-braces.webp"
                 ],
                 "variants": [
                                 {
@@ -815,22 +815,22 @@ class ProductManager {
                 "shortEn": "Curved banner stand with six real frame detail photos. Dimensions follow the straight banner stand.",
                 "descriptionZh": "立牌弧形采用弧形管架轮廓与支撑脚。本页实拍展示裸架的整体、顶部弧度、管件连接及底座。尺寸参考同系列直形立牌。",
                 "descriptionEn": "Curved banner stand with support feet. Real workshop photographs show the bare frame, curved top, tube connections and bases. Dimensions follow the straight banner stand in this series.",
-                "image": "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg",
+                "image": "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.webp",
                 "images": [
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.jpg"
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.webp"
                 ],
                 "gallery": [
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.jpg",
-                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.jpg"
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-frame-overview.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-feet-and-lower-frame.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-rounded-top.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-curved-side-joint.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-upright-tube-connection.webp",
+                                "images/products/displays/tension-fabric-displays/curved-banner-stand/curved-fabric-banner-stand-base-detail.webp"
                 ],
                 "specsZh": {
                                 "Size": "80 × 200 CM",

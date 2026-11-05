@@ -316,3 +316,7 @@
         width: 100%;
     }
 }
+
+/* Search results stay compact and retain uncropped product photography. */
+.ap-card img { object-fit: contain; }
+@media (min-width:360px) and (max-width:600px) { .ap-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:10px; } .ap-card { min-width:0; } .ap-card h3 { font-size:1rem; } }

@@ -84,7 +84,9 @@ def main() -> int:
             source,
             r'<link\b(?=[^>]*rel=["\']canonical["\'])[^>]*href=["\']([^"\']+)["\']',
         )
-        if len(canonical) != 1:
+        if rel in PARAMETER_TEMPLATES and not canonical:
+            pass  # Dynamic SKU templates must not declare a conflicting bare canonical.
+        elif len(canonical) != 1:
             issues.append(f"[{rel}] expected one canonical, found {len(canonical)}")
         else:
             canonicals[rel] = canonical[0]

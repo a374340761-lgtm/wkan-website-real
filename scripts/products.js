@@ -1489,6 +1489,35 @@ class ProductManager {
                 price: '询价'
             },
             {
+  "id": 95013,
+  "category": "flags",
+  "subcategory": "flag-type-hub",
+  "type": "fully_fiberglass_heart",
+  "model": "FLAG-HUB-FG-HEART",
+  "sku": "FLG-HUB-FGH",
+  "name": "2.4米心形旗杆（全玻纤）",
+  "nameEn": "2.4m Heart Flag Pole (Fully Fiberglass)",
+  "nameZh": "2.4米心形旗杆（全玻纤）",
+  "shortEn": "Fully fiberglass pole; height 2.4 m; graphic 1.1 × 2 m.",
+  "shortZh": "全玻纤旗杆，高2.4米，画面1.1 × 2米。",
+  "descriptionEn": "Heart flag pole. Fully fiberglass; height 2.4 m; graphic 1.1 × 2 m.",
+  "descriptionZh": "心形全玻纤旗杆，高度2.4米，画面尺寸1.1 × 2米。",
+  "image": "images/products/flags/hero/heart-flag-pole-240cm.jpg",
+  "images": [
+    "images/products/flags/hero/heart-flag-pole-240cm.jpg"
+  ],
+  "gallery": [
+    "images/products/flags/hero/heart-flag-pole-240cm.jpg"
+  ],
+  "customRfqUrl": "flag-type.html?type=fully_fiberglass_heart",
+  "keywords": [
+    "heart flag",
+    "fiberglass"
+  ],
+  "tags": "Flags, Heart, Fiberglass",
+  "price": "询价"
+},
+            {
                 id: 95004,
                 category: 'flags',
                 subcategory: 'flag-type-hub',
@@ -5333,6 +5362,7 @@ window.WK_getProductTypePageUrl = function (product) {
     return '';
 };
 
+window.WKCreateProductManager = () => new ProductManager();
 // 初始化产品管理器
 document.addEventListener('DOMContentLoaded', () => {
     window.productManager = new ProductManager();

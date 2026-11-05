@@ -897,6 +897,7 @@
 
     // 判断一个产品是否命中（任意一个 term 出现在任意字段里）
     function productMatches(product, rawQuery) {
+      if (window.WKSearch) return window.WKSearch.score(product, rawQuery) >= 0;
       const terms = expandQueryTerms(rawQuery);
       if (terms.length === 0) return true;
 
@@ -1386,6 +1387,11 @@
             filteredWithType.filter((p) => !isSpriteTentAccessory(p))
         );
 
+        if(q && window.WKSearch){const exact=listForGrid.filter(p=>window.WKSearch.score(p,q)>1);if(exact.length)listForGrid.splice(0,listForGrid.length,...exact);}
+        if (q && window.WKSearch) listForGrid.sort((a,b) => window.WKSearch.score(b,q)-window.WKSearch.score(a,q));
+        let summary=document.getElementById('searchResultSummary');if(!summary){summary=document.createElement('p');summary.id='searchResultSummary';summary.setAttribute('role','status');grid.before(summary)}summary.textContent=q ? '“'+q+'” · '+listForGrid.length+' products' : listForGrid.length+' products';
+        if(q && listForGrid.length && window.WKSearch && listForGrid.every(p=>window.WKSearch.score(p,q)===1)) summary.textContent='Related products (approximate spelling matches) for '+q+' · '+listForGrid.length;
+        if(emptyState){emptyState.replaceChildren();const message=document.createElement('p');message.textContent='No matching products. Try fewer keywords, check the model or use another size spelling.';const contact=document.createElement('a');contact.href=apLocalizedPageHref('/contact-us.html#getQuoteForm');contact.textContent='Ask us to find your product';emptyState.append(message,contact);}
         render(listForGrid, {
             showAccessoriesEmbed: spriteAcc.length > 0,
             accessoryFilterQuery: q,
@@ -1505,7 +1511,10 @@
         }
         
         // 3) 监听搜索输入
-        searchInput.addEventListener('input', filterAndRender);
+        searchInput.addEventListener('input', e => { if (!e.isComposing) filterAndRender(); });
+        searchInput.addEventListener('compositionend', filterAndRender);
+        searchInput.addEventListener('keydown', e => { if(e.key==='Enter'&&!e.isComposing){e.preventDefault();const url=new URL(location.href);url.searchParams.set('q',searchInput.value.trim());history.pushState({},'',url);filterAndRender();} });
+        window.addEventListener('popstate', () => { searchInput.value=getQueryQ(); catSelect.value=getQueryCat(); filterAndRender(); });
 
         // 4) 监听分类选择
         catSelect.addEventListener('change', filterAndRender);

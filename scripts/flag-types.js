@@ -11,6 +11,43 @@
 
   window.FLAG_TYPES = {
     poles: [
+{
+  "type": "fully_fiberglass_heart",
+  "rfqProductId": 95013,
+  "nameEn": "2.4m Heart Flag Pole (Fully Fiberglass)",
+  "nameZh": "2.4米心形旗杆（全玻纤）",
+  "hubDescEn": "Fully fiberglass pole; height 2.4 m; graphic 1.1 × 2 m.",
+  "hubDescZh": "全玻纤旗杆，高2.4米，画面1.1 × 2米。",
+  "storyEn": "Heart flag pole. Fully fiberglass; height 2.4 m; graphic 1.1 × 2 m.",
+  "storyZh": "心形全玻纤旗杆，高度2.4米，画面尺寸1.1 × 2米。",
+  "heroImage": "images/products/flags/hero/heart-flag-pole-240cm.jpg",
+  "specTable": {
+    "columns": [
+      {
+        "key": "style",
+        "labelEn": "Height",
+        "labelZh": "高度"
+      },
+      {
+        "key": "material",
+        "labelEn": "Pole Material",
+        "labelZh": "旗杆材质"
+      },
+      {
+        "key": "flagSize",
+        "labelEn": "Graphic Size",
+        "labelZh": "画面尺寸"
+      }
+    ],
+    "rows": [
+      {
+        "style": "2.4 m",
+        "material": "Fully fiberglass / 全玻纤",
+        "flagSize": "1.1 × 2 m"
+      }
+    ]
+  }
+},
       {
         type: 'fiberglass_pole',
         rfqProductId: 95002,
@@ -479,8 +516,8 @@
           FLAG_ACCESSORIES_IMG('beach-flag-poles-ground-stakes-cross-bases-hardware-kit.jpg'),
           FLAG_ACCESSORIES_IMG('beach-flag-bases-metal-plates-water-bags-accessories-overview.jpg'),
           FLAG_ACCESSORIES_IMG('beach-flag-poles-feather-flag-poles-display.jpg'),
-          FLAG_HERO('feather-flag-hero.png'),
-          FLAG_HERO('teardrop-beach-flag-pole-outdoor-display-hero.jpg')
+          `${CATALOG_BROCHURE_BASE}/14.png`,
+          `${CATALOG_BROCHURE_BASE}/15.png`
         ],
         exampleImagesTitleZh: '实物图 / 画册页对照',
         exampleImagesTitleEn: 'Product photos & catalog pages',

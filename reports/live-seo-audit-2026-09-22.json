@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-09-22T05:31:18.012Z",
+  "checkedAt": "2026-11-05T06:31:35.354Z",
   "results": [
     {
       "url": "https://waikwantent.com/",
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/",
       "server": "cloudflare",
-      "bytes": 72787,
+      "bytes": 78425,
       "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
       "canonical": "https://www.waikwantent.com/",
       "emptyTranslationSlots": 0
@@ -16,7 +16,7 @@
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/",
       "server": "cloudflare",
-      "bytes": 72787,
+      "bytes": 78425,
       "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
       "canonical": "https://www.waikwantent.com/",
       "emptyTranslationSlots": 0
@@ -26,7 +26,7 @@
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/",
       "server": "cloudflare",
-      "bytes": 72787,
+      "bytes": 78425,
       "title": "Custom Canopy Tent Manufacturer | OEM Flags &amp; Displays | WaiKwan",
       "canonical": "https://www.waikwantent.com/",
       "emptyTranslationSlots": 0
@@ -36,16 +36,16 @@
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/robots.txt",
       "server": "cloudflare",
-      "bytes": 639,
+      "bytes": 3228,
       "emptyTranslationSlots": 0,
-      "text": "# Waikwan Tent - https://www.waikwantent.com/robots.txt\n# Canonical production host: https://www.waikwantent.com\n\nUser-agent: *\nAllow: /\n\n# Server / development-only paths\nDisallow: /backend/\n\n# Internal test or archived design files\nDisallow: /index.original.html\nDisallow: /index.wireframe.html\nDisallow: /test_logo.html\nDisallow: /test_stats.html\n\n# Low-value duplicate/legacy entry points; canonical pages remain allowed.\nDisallow: /product.html\nDisallow: /products.html\nDisallow: /tent-detail.html\nDisallow: /zh/product.html\nDisallow: /zh/products.html\nDisallow: /zh/tent-detail.html\n\nSitemap: https://www.waikwantent.com/sitemap.xml\n"
+      "text": "# As a condition of accessing this website, you agree to abide by the following\n# content signals:\n\n# (a)  If a Content-Signal = yes, you may collect content for the corresponding\n#      use.\n# (b)  If a Content-Signal = no, you may not collect content for the\n#      corresponding use.\n# (c)  If the website operator does not include a Content-Signal for a\n#      corresponding use, the website operator neither grants nor restricts\n#      permission via Content-Signal with respect to the corresponding use.\n\n# The content signals and their meanings are:\n\n# search:   building a search index and providing search results (e.g., returning\n#           hyperlinks and short excerpts from your website's contents). Search does not\n#           include providing AI-generated search summaries.\n# ai-input: inputting content into one or more AI models (e.g., retrieval\n#           augmented generation, grounding, or other real-time taking of content for\n#           generative AI search answers).\n# ai-train: training or fine-tuning AI models.\n# use:      how AI systems may consume the content (immediate, reference, or full).\n\n# ANY RESTRICTIONS EXPRESSED VIA CONTENT SIGNALS ARE EXPRESS RESERVATIONS OF\n# RIGHTS UNDER ARTICLE 4 OF THE EUROPEAN UNION DIRECTIVE 2019/790 ON COPYRIGHT\n# AND RELATED RIGHTS IN THE DIGITAL SINGLE MARKET.\n\n# BEGIN Cloudflare Managed content\n\n\nUser-agent: *\nContent-Signal: search=yes,ai-train=no,use=reference\nAllow: /\n\n# Training crawlers\nUser-agent: Amazonbot\nDisallow: /\n\nUser-agent: Applebot-Extended\nDisallow: /\n\nUser-agent: Bytespider\nDisallow: /\n\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: Diffbot\nDisallow: /\n\nUser-agent: Google-Extended\nDisallow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nUser-agent: omgili\nDisallow: /\n\nUser-agent: anthropic-ai\nDisallow: /\n\nUser-agent: Claude-Web\nDisallow: /\n\nUser-agent: cohere-ai\nDisallow: /\n\nUser-agent: MistralAI-Training\nDisallow: /\n\nUser-agent: meta-externalagent\nDisallow: /\n\nUser-agent: GoogleOther\nDisallow: /\n\nUser-agent: Baiduspider\nDisallow: /\n\nUser-agent: PetalBot\nDisallow: /\n\nUser-agent: AwarioSmartBot\nUser-agent: AwarioRssBot\nDisallow: /\n\nUser-agent: Google-CloudVertexBot\nDisallow: /\n\nUser-agent: QualifiedBot\nDisallow: /\n\nUser-agent: Cotoyogi\nDisallow: /\n\nUser-agent: ICC-Crawler\nDisallow: /\n\nUser-agent: atlassian-bot\nDisallow: /\n\nUser-agent: FishBot\nDisallow: /\n\nUser-agent: BorderxBot\nDisallow: /\n\nUser-agent: NavuBot\nDisallow: /\n\nUser-agent: SemrushBot-SWA\nDisallow: /\n\nUser-agent: WARDBot\nDisallow: /\n\nUser-agent: magpie-crawler\nDisallow: /\n\nUser-agent: KimiBot\nDisallow: /\n\nUser-agent: CitibotSiteCrawler\nDisallow: /\n\n# END Cloudflare Managed Content\n\n# Waikwan Tent - https://www.waikwantent.com/robots.txt\n# Canonical production host: https://www.waikwantent.com\n\nUser-agent: *\nAllow: /\n\n# Server / development-only paths\nDisallow: /backend/\n\n# Internal test or archived design files\nDisallow: /index.original.html\nDisallow: /index.wireframe.html\nDisallow: /test_logo.html\nDisallow: /test_stats.html\n\n# Legacy entry points must remain crawlable so crawlers can see their\n# redirects, canonical targets and noindex directives. They are not in sitemaps.\n\nSitemap: https://www.waikwantent.com/sitemap.xml\n"
     },
     {
       "url": "https://www.waikwantent.com/sitemap.xml",
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/sitemap.xml",
       "server": "cloudflare",
-      "bytes": 58352,
+      "bytes": 68742,
       "emptyTranslationSlots": 0
     },
     {
@@ -53,37 +53,37 @@
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
       "server": "cloudflare",
-      "bytes": 55923,
-      "title": "Custom Canopy Tent Manufacturer | OEM &amp; Wholesale | WaiKwan",
+      "bytes": 73369,
+      "title": "Custom Canopy Tent Manufacturer in China | OEM Factory",
       "canonical": "https://www.waikwantent.com/custom-canopy-tent-manufacturer.html",
-      "emptyTranslationSlots": 101
+      "emptyTranslationSlots": 0
     },
     {
       "url": "https://www.waikwantent.com/portable-display-systems.html",
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/portable-display-systems.html",
       "server": "cloudflare",
-      "bytes": 42804,
+      "bytes": 48433,
       "title": "Portable Display Systems Manufacturer | OEM Trade Show Kits | WaiKwan",
       "canonical": "https://www.waikwantent.com/portable-display-systems.html",
-      "emptyTranslationSlots": 40
+      "emptyTranslationSlots": 0
     },
     {
       "url": "https://www.waikwantent.com/product-detail.html?sku=2001",
       "status": 200,
       "finalUrl": "https://www.waikwantent.com/product-detail.html?sku=2001",
       "server": "cloudflare",
-      "bytes": 30021,
+      "bytes": 32486,
       "title": "Product | Wai Kwan Tent — OEM Tents, Beach Flags &amp; Display Hardware",
       "canonical": "https://www.waikwantent.com/product-detail.html",
-      "emptyTranslationSlots": 42
+      "emptyTranslationSlots": 0
     },
     {
       "url": "https://www.waikwantent.com/does-not-exist-seo-audit-20260922.html",
       "status": 404,
       "finalUrl": "https://www.waikwantent.com/does-not-exist-seo-audit-20260922.html",
       "server": "cloudflare",
-      "bytes": 5006,
+      "bytes": 6166,
       "title": "Page Not Found | WaiKwan Tent",
       "canonical": "https://www.waikwantent.com/404.html",
       "emptyTranslationSlots": 0

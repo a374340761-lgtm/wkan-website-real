@@ -403,9 +403,9 @@ function getHomeHeroSlides() {
             keyPrefix: 'home_hero_0',
             imageAlt: 'WaiKwan invitation to the 140th Canton Fair Phase 3, booth 12.1F29-30, October 31 to November 4, 2026',
             variant: 'invite',
-            clickHref: '/news/the-139th-canton-fair-phase-3.html',
+            clickHref: '/news/the-140th-canton-fair-phase-3.html',
             clickHrefLocalized: false,
-            tertiaryHref: '/news/the-139th-canton-fair-phase-3.html',
+            tertiaryHref: '/news/the-140th-canton-fair-phase-3.html',
             tertiaryHrefLocalized: false,
             tertiaryLabelKey: 'home_hero_canton_news_cta',
             secondaryHref: 'all-products.html'
@@ -1667,6 +1667,7 @@ function enhanceFlagsDropdown() {
     const fallback = [
         { type: 'fiberglass_pole', nameEn: 'Beach Flag Poles (Fiberglass Pole)', nameZh: '沙滩旗杆（玻纤杆）' },
         { type: 'alu_fiberglass_pole', nameEn: 'Beach Flag Poles (Aluminium + Fiberglass)', nameZh: '沙滩旗杆（铝管 + 玻纤）' },
+        {"type":"fully_fiberglass_heart","nameEn":"2.4m Heart Flag Pole (Fully Fiberglass)","nameZh":"2.4米心形旗杆（全玻纤）"},
         { type: 'fully_fiberglass_teardrop', nameEn: 'Teardrop Beach Flag Poles (Fully Fiberglass)', nameZh: '水滴型沙滩旗杆（全玻纤）' },
         { type: 'fully_fiberglass_feather', nameEn: 'Feather Beach Flag Poles (Fully Fiberglass)', nameZh: '刀型沙滩旗杆（全玻纤）' },
         { type: 'outdoor_giant_flag', nameEn: 'Outdoor Giant Flag (Water Base)', nameZh: '户外注水旗杆（Giant Flag）' },
@@ -2779,28 +2780,6 @@ function initSearch() {
 
     function goToSearch(q) {
         const keyword = (q || '').trim();
-        const tentType = matchTentType(keyword);
-        if (tentType) {
-            window.location.href = wkLocalizedInternalLinkSafe(
-                `/tent-type.html?type=${encodeURIComponent(tentType)}`
-            );
-            return;
-        }
-
-        const cat = matchCategory(keyword);
-        if (cat === 'racegate') {
-            window.location.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=racegate');
-            return;
-        }
-        if (cat) {
-            window.location.href = wkLocalizedInternalLinkSafe(
-                keyword
-                    ? `/all-products.html?cat=${encodeURIComponent(cat)}&q=${encodeURIComponent(keyword)}`
-                    : `/all-products.html?cat=${encodeURIComponent(cat)}`
-            );
-            return;
-        }
-
         const url = keyword
             ? `/all-products.html?q=${encodeURIComponent(keyword)}`
             : `/all-products.html`;
@@ -2859,6 +2838,7 @@ function initSearch() {
         overlay.classList.remove('open');
         document.body.classList.remove('no-scroll');
         if (input) input.value = '';
+        searchBtn.focus();
     }
 
     // 点击 🔍
@@ -2884,9 +2864,25 @@ function initSearch() {
     document.addEventListener('keydown', (e) => {
         if (!overlay.classList.contains('open')) return;
         if (e.key === 'Escape') close();
-        if (e.key === 'Enter') goToSearch(input.value);
+        if (e.key === 'Enter' && !e.isComposing) goToSearch(input.value);
     });
 
+
+    let selected = -1, suggestions = [], composing = false;
+    const list = document.createElement('div'); list.id='searchSuggestions'; list.setAttribute('role','listbox');
+    input.setAttribute('role','combobox'); input.setAttribute('aria-controls',list.id); input.setAttribute('aria-expanded','false'); input.setAttribute('aria-autocomplete','list');
+    input.closest('.search-row').after(list);
+    const clear=document.createElement('button'); clear.type='button'; clear.textContent='Clear'; clear.setAttribute('aria-label','Clear search'); input.after(clear);
+    clear.onclick=()=>{input.value='';list.replaceChildren();input.focus()};
+    let ready;
+    function loadSearch(){if(ready)return ready;const load=src=>new Promise((resolve,reject)=>{const script=document.createElement('script');script.src=src;script.onload=resolve;script.onerror=reject;document.head.appendChild(script)});ready=(async()=>{if(!window.WKSearch)await load('/scripts/product-search.js');if(!window.TENT_TYPES)await load('/scripts/tent-types.js');if(!window.productManager){await load('/scripts/products.js');window.productManager ||= window.WKCreateProductManager();}})();return ready}
+    input.addEventListener('compositionstart',()=>{composing=true});input.addEventListener('compositionend',()=>{composing=false;input.dispatchEvent(new Event('input'))});
+    input.addEventListener('input',async()=>{if(composing)return;const query=input.value;await loadSearch().catch(()=>{});if(query!==input.value||!overlay.classList.contains('open')||!window.WKSearch)return;selected=-1;list.replaceChildren();suggestions=[];if(!query.trim())return;
+      suggestions=window.WKSearch.search(window.productManager?.products||[],query).slice(0,6);
+      suggestions.forEach((product,i)=>{const a=document.createElement('a');a.id='search-option-'+i;a.setAttribute('role','option');a.href=wkLocalizedInternalLinkSafe((window.WK_getProductTypePageUrl && window.WK_getProductTypePageUrl(product)) || product.customRfqUrl||('/product-detail.html?sku='+encodeURIComponent(product.id)));a.style.cssText='display:flex;align-items:center;gap:12px;padding:8px';const img=document.createElement('img');img.src='/'+String(product.image||'').replace(/^\//,'');img.alt='';img.width=48;img.height=48;img.style.objectFit='contain';const label=document.createElement('span');label.textContent=(product.nameEn||product.name)+' · '+(product.model||'');a.append(img,label);list.append(a)});
+      input.setAttribute('aria-expanded',String(suggestions.length>0));if(!suggestions.length){const note=document.createElement('p');note.textContent='No matching products. Try a model, material or size, or contact us for help.';list.append(note)}
+    });
+    input.addEventListener('keydown',e=>{if(e.isComposing||composing)return;if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();selected=Math.max(0,Math.min(suggestions.length-1,selected+(e.key==='ArrowDown'?1:-1)));Array.from(list.children).forEach((a,i)=>a.setAttribute('aria-selected',String(i===selected)));if(list.children[selected])input.setAttribute('aria-activedescendant',list.children[selected].id)}if(e.key==='Enter'&&selected>=0&&list.children[selected]){e.preventDefault();e.stopPropagation();list.children[selected].click()}if(e.key==='Tab'){const buttons=Array.from(overlay.querySelectorAll('button,input,a')).filter(x=>x.offsetParent);if(e.shiftKey&&document.activeElement===buttons[0]){e.preventDefault();buttons.at(-1).focus()}else if(!e.shiftKey&&document.activeElement===buttons.at(-1)){e.preventDefault();buttons[0].focus()}}});
     // 点击 Search
     goBtn && goBtn.addEventListener('click', () => goToSearch(input.value));
 }

@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const ORIGIN = 'https://www.waikwantent.com';
-const LASTMOD = new Date().toISOString().slice(0, 10);
+// lastmod is optional; do not invent dates during metadata generation.
 
 const LEGACY_MERGED = {
   31002: '31001',

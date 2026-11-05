@@ -1,0 +1,434 @@
+[
+  {
+    "query": "3x3",
+    "count": 12,
+    "top": [
+      {
+        "id": "standard-black-flat-tube-3x3",
+        "name": "Standard Black Flat-Tube Canopy Frame",
+        "model": "普通黑金刚 / Standard Black"
+      },
+      {
+        "id": 2001,
+        "name": "30 Square Tube Iron Frame Tent",
+        "model": "WK-T30"
+      },
+      {
+        "id": 42003,
+        "name": "Fabric Pop Up Display",
+        "model": "WK-PO-01"
+      },
+      {
+        "id": 42005,
+        "name": "Fabric Banner Stand Series (WK-H-01 / WK-H-02)",
+        "model": "WK-H-01 / WK-H-02"
+      },
+      {
+        "id": 42013,
+        "name": "Curved Tension Fabric Display",
+        "model": "WK-HZ"
+      }
+    ]
+  },
+  {
+    "query": "3×3",
+    "count": 12,
+    "top": [
+      {
+        "id": "standard-black-flat-tube-3x3",
+        "name": "Standard Black Flat-Tube Canopy Frame",
+        "model": "普通黑金刚 / Standard Black"
+      },
+      {
+        "id": 2001,
+        "name": "30 Square Tube Iron Frame Tent",
+        "model": "WK-T30"
+      },
+      {
+        "id": 42003,
+        "name": "Fabric Pop Up Display",
+        "model": "WK-PO-01"
+      },
+      {
+        "id": 42005,
+        "name": "Fabric Banner Stand Series (WK-H-01 / WK-H-02)",
+        "model": "WK-H-01 / WK-H-02"
+      },
+      {
+        "id": 42013,
+        "name": "Curved Tension Fabric Display",
+        "model": "WK-HZ"
+      }
+    ]
+  },
+  {
+    "query": "3 x 3",
+    "count": 12,
+    "top": [
+      {
+        "id": "standard-black-flat-tube-3x3",
+        "name": "Standard Black Flat-Tube Canopy Frame",
+        "model": "普通黑金刚 / Standard Black"
+      },
+      {
+        "id": 2001,
+        "name": "30 Square Tube Iron Frame Tent",
+        "model": "WK-T30"
+      },
+      {
+        "id": 42003,
+        "name": "Fabric Pop Up Display",
+        "model": "WK-PO-01"
+      },
+      {
+        "id": 42005,
+        "name": "Fabric Banner Stand Series (WK-H-01 / WK-H-02)",
+        "model": "WK-H-01 / WK-H-02"
+      },
+      {
+        "id": 42013,
+        "name": "Curved Tension Fabric Display",
+        "model": "WK-HZ"
+      }
+    ]
+  },
+  {
+    "query": "3m x 3m",
+    "count": 12,
+    "top": [
+      {
+        "id": "standard-black-flat-tube-3x3",
+        "name": "Standard Black Flat-Tube Canopy Frame",
+        "model": "普通黑金刚 / Standard Black"
+      },
+      {
+        "id": 2001,
+        "name": "30 Square Tube Iron Frame Tent",
+        "model": "WK-T30"
+      },
+      {
+        "id": 42003,
+        "name": "Fabric Pop Up Display",
+        "model": "WK-PO-01"
+      },
+      {
+        "id": 42005,
+        "name": "Fabric Banner Stand Series (WK-H-01 / WK-H-02)",
+        "model": "WK-H-01 / WK-H-02"
+      },
+      {
+        "id": 42013,
+        "name": "Curved Tension Fabric Display",
+        "model": "WK-HZ"
+      }
+    ]
+  },
+  {
+    "query": "aluminum",
+    "count": 28,
+    "top": [
+      {
+        "id": "market-stall-1x1-40mm",
+        "name": "1×1 m Portable Aluminum Market Stall"
+      },
+      {
+        "id": 95003,
+        "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+        "model": "FLAG-HUB-ALU-FIBERGLASS"
+      },
+      {
+        "id": 95008,
+        "name": "Aluminium Beach Flag Pole — Semicircle",
+        "model": "FLAG-HUB-ALU-SEMICIRCLE"
+      },
+      {
+        "id": 95009,
+        "name": "Aluminium Beach Flag Pole — Square",
+        "model": "FLAG-HUB-ALU-SQUARE"
+      },
+      {
+        "id": 95010,
+        "name": "Aluminium Beach Flag Pole — New Feather",
+        "model": "FLAG-HUB-ALU-NEW-FEATHER"
+      }
+    ]
+  },
+  {
+    "query": "aluminium",
+    "count": 28,
+    "top": [
+      {
+        "id": "market-stall-1x1-40mm",
+        "name": "1×1 m Portable Aluminum Market Stall"
+      },
+      {
+        "id": 95003,
+        "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+        "model": "FLAG-HUB-ALU-FIBERGLASS"
+      },
+      {
+        "id": 95008,
+        "name": "Aluminium Beach Flag Pole — Semicircle",
+        "model": "FLAG-HUB-ALU-SEMICIRCLE"
+      },
+      {
+        "id": 95009,
+        "name": "Aluminium Beach Flag Pole — Square",
+        "model": "FLAG-HUB-ALU-SQUARE"
+      },
+      {
+        "id": 95010,
+        "name": "Aluminium Beach Flag Pole — New Feather",
+        "model": "FLAG-HUB-ALU-NEW-FEATHER"
+      }
+    ]
+  },
+  {
+    "query": "flagpole",
+    "count": 13,
+    "top": [
+      {
+        "id": 95002,
+        "name": "Beach Flag Poles (Fiberglass Pole)",
+        "model": "FLAG-HUB-FIBERGLASS-POLE"
+      },
+      {
+        "id": 95003,
+        "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+        "model": "FLAG-HUB-ALU-FIBERGLASS"
+      },
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      },
+      {
+        "id": 95004,
+        "name": "Teardrop Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-TEARDROP"
+      },
+      {
+        "id": 95005,
+        "name": "Feather Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-FEATHER"
+      }
+    ]
+  },
+  {
+    "query": "flag pole",
+    "count": 13,
+    "top": [
+      {
+        "id": 95002,
+        "name": "Beach Flag Poles (Fiberglass Pole)",
+        "model": "FLAG-HUB-FIBERGLASS-POLE"
+      },
+      {
+        "id": 95003,
+        "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+        "model": "FLAG-HUB-ALU-FIBERGLASS"
+      },
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      },
+      {
+        "id": 95004,
+        "name": "Teardrop Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-TEARDROP"
+      },
+      {
+        "id": 95005,
+        "name": "Feather Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-FEATHER"
+      }
+    ]
+  },
+  {
+    "query": "3x3 aluminum tent",
+    "count": 3,
+    "top": [
+      {
+        "id": 2002,
+        "name": "40 Hexagon Aluminum Frame Tent",
+        "model": "WK-T40"
+      },
+      {
+        "id": 2003,
+        "name": "50 Hexagon Aluminum Frame Tent",
+        "model": "WK-T50"
+      },
+      {
+        "id": 43003,
+        "name": "SEG Net Light Box Series",
+        "model": "WK-LB-NET"
+      }
+    ]
+  },
+  {
+    "query": "40mm frame",
+    "count": 2,
+    "top": [
+      {
+        "id": "market-stall-1x1-40mm",
+        "name": "1×1 m Portable Aluminum Market Stall"
+      },
+      {
+        "id": 2002,
+        "name": "40 Hexagon Aluminum Frame Tent",
+        "model": "WK-T40"
+      }
+    ]
+  },
+  {
+    "query": "40 mm frame",
+    "count": 2,
+    "top": [
+      {
+        "id": "market-stall-1x1-40mm",
+        "name": "1×1 m Portable Aluminum Market Stall"
+      },
+      {
+        "id": 2002,
+        "name": "40 Hexagon Aluminum Frame Tent",
+        "model": "WK-T40"
+      }
+    ]
+  },
+  {
+    "query": "fiberglass flag pole",
+    "count": 9,
+    "top": [
+      {
+        "id": 95002,
+        "name": "Beach Flag Poles (Fiberglass Pole)",
+        "model": "FLAG-HUB-FIBERGLASS-POLE"
+      },
+      {
+        "id": 95003,
+        "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+        "model": "FLAG-HUB-ALU-FIBERGLASS"
+      },
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      },
+      {
+        "id": 95004,
+        "name": "Teardrop Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-TEARDROP"
+      },
+      {
+        "id": 95005,
+        "name": "Feather Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-FEATHER"
+      }
+    ]
+  },
+  {
+    "query": "heart",
+    "count": 1,
+    "top": [
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      }
+    ]
+  },
+  {
+    "query": "95013",
+    "count": 1,
+    "top": [
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      }
+    ]
+  },
+  {
+    "query": "  HEART  ",
+    "count": 1,
+    "top": [
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      }
+    ]
+  },
+  {
+    "query": "fiberglas flag pole",
+    "count": 9,
+    "top": [
+      {
+        "id": 95002,
+        "name": "Beach Flag Poles (Fiberglass Pole)",
+        "model": "FLAG-HUB-FIBERGLASS-POLE"
+      },
+      {
+        "id": 95003,
+        "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+        "model": "FLAG-HUB-ALU-FIBERGLASS"
+      },
+      {
+        "id": 95013,
+        "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-HEART"
+      },
+      {
+        "id": 95004,
+        "name": "Teardrop Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-TEARDROP"
+      },
+      {
+        "id": 95005,
+        "name": "Feather Beach Flag Poles (Fully Fiberglass)",
+        "model": "FLAG-HUB-FG-FEATHER"
+      }
+    ]
+  },
+  {
+    "query": "",
+    "count": 86,
+    "top": [
+      {
+        "id": "market-stall-1x1-40mm",
+        "name": "1×1 m Portable Aluminum Market Stall"
+      },
+      {
+        "id": "standard-black-flat-tube-3x3",
+        "name": "Standard Black Flat-Tube Canopy Frame",
+        "model": "普通黑金刚 / Standard Black"
+      },
+      {
+        "id": 2001,
+        "name": "30 Square Tube Iron Frame Tent",
+        "model": "WK-T30"
+      },
+      {
+        "id": 42001,
+        "name": "A-Frame Display System",
+        "model": "AD-H18 Series"
+      },
+      {
+        "id": 42002,
+        "name": "Backdrop System",
+        "model": "AD-H1"
+      }
+    ]
+  },
+  {
+    "query": "zzzzunfindable",
+    "count": 0,
+    "top": []
+  },
+  {
+    "query": "<script>",
+    "count": 0,
+    "top": []
+  }
+]

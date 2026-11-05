@@ -1,0 +1,16 @@
+[
+  {
+    "width": 390,
+    "query": "heart",
+    "suggestion": true,
+    "grid": true,
+    "overflow": false
+  },
+  {
+    "width": 1440,
+    "query": "heart",
+    "suggestion": true,
+    "grid": true,
+    "overflow": false
+  }
+]

@@ -398,8 +398,8 @@ function getHomeHeroSlides() {
     return [
         {
             image: window.matchMedia('(max-width: 767px)').matches
-                ? 'images/hero/canton-fair-140-phase-3-2026-waikwan-768.webp'
-                : 'images/hero/canton-fair-140-phase-3-2026-waikwan-1536.webp',
+                ? 'images/hero/canton-fair-140-phase-3-2026-waikwan-768-hq.webp'
+                : 'images/hero/canton-fair-140-phase-3-2026-waikwan-1536-hq.webp',
             keyPrefix: 'home_hero_0',
             imageAlt: 'WaiKwan at the 140th Canton Fair Phase 3, booth 12.1F29-30',
             variant: 'event-poster',

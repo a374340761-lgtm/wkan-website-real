@@ -1805,7 +1805,7 @@ class MultiLanguageSystem {
                 home_hero_0_kicker: 'Source Manufacturing · B2B Export',
                 home_hero_0_title: 'Tents, Beach Flags & Portable Display Systems',
                 home_hero_0_subtitle: 'OEM/ODM for distributors, event teams and global brands—custom printing, engineered frames and export-ready packing from one factory team.',
-                home_hero_canton_news_cta: 'View Exhibition News',
+                home_hero_canton_news_cta: 'View Exhibition Highlights',
                 home_hero_shanghai_news_cta: 'View Shanghai Show',
                 home_hero_4_kicker: 'SIGN CHINA 2026 · Booth W3D08',
                 home_hero_4_title: 'SIGN CHINA 2026 Shanghai Highlights',

@@ -598,7 +598,7 @@ class ProductManager {
                     image: 'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
                     images: [
                         'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
-                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'),
+                        'files/42003/curved-fabric-pop-up/frame-overview.jpg',
                         'files/42003/fabric-pop-up-3x4m/frame-overview.jpg',
                         'files/42003/fabric-pop-up-3x4m/upper-frame.jpg',
                         'files/42003/fabric-pop-up-3x4m/frame-joint.jpg',
@@ -608,7 +608,7 @@ class ProductManager {
                     ],
                     gallery: [
                         'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
-                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'),
+                        'files/42003/curved-fabric-pop-up/frame-overview.jpg',
                         'files/42003/fabric-pop-up-3x4m/frame-overview.jpg',
                         'files/42003/fabric-pop-up-3x4m/upper-frame.jpg',
                         'files/42003/fabric-pop-up-3x4m/frame-joint.jpg',
@@ -628,6 +628,23 @@ class ProductManager {
                         {"src": "files/42003/fabric-pop-up-3x4m/upper-corner.jpg", "captionZh": "顶部转角与连接件细节", "captionEn": "Upper corner and connector detail", "width": 1368, "height": 1824},
                         {"src": "files/42003/fabric-pop-up-3x4m/scissor-braces.jpg", "captionZh": "剪刀式交叉撑杆细节", "captionEn": "Scissor brace detail", "width": 1824, "height": 1368},
                     ],
+                    additionalPhotoSections: [{
+                        headingZh: '弧形布拉网框架实拍',
+                        headingEn: 'Curved fabric pop-up display frame photos',
+                        noteZh: '照片展示未安装布画的弧形框架，包括整体弧度、连接座和锁扣细节。',
+                        noteEn: 'The curved frame is shown without its fabric graphic, with views of the overall curve, hubs and latches.',
+                        photos: [
+                            {"src": "files/42003/curved-fabric-pop-up/frame-overview.jpg", "captionZh": "弧形框架整体", "captionEn": "Full view of the curved frame", "width": 1824, "height": 1368},
+                            {"src": "files/42003/curved-fabric-pop-up/side-hubs.jpg", "captionZh": "侧边连接座与锁扣", "captionEn": "Side hubs and latches", "width": 1368, "height": 1824},
+                            {"src": "files/42003/curved-fabric-pop-up/base-profile.jpg", "captionZh": "底部弧度与支撑结构", "captionEn": "Curved base profile and supports", "width": 1824, "height": 1368},
+                            {"src": "files/42003/curved-fabric-pop-up/upper-corner.jpg", "captionZh": "顶部转角与锁扣", "captionEn": "Upper corner and latch", "width": 1368, "height": 1824},
+                            {"src": "files/42003/curved-fabric-pop-up/center-hub.jpg", "captionZh": "中部连接座与横杆", "captionEn": "Center hub and crossbar", "width": 1368, "height": 1824},
+                            {"src": "files/42003/curved-fabric-pop-up/upper-profile.jpg", "captionZh": "上沿弧度与斜撑", "captionEn": "Upper profile and diagonal braces", "width": 1368, "height": 1824},
+                            {"src": "files/42003/curved-fabric-pop-up/end-latch.jpg", "captionZh": "端部锁扣与撑杆", "captionEn": "End latch and brace", "width": 1368, "height": 1824},
+                            {"src": "files/42003/curved-fabric-pop-up/lower-side.jpg", "captionZh": "侧边下部支撑", "captionEn": "Lower side supports", "width": 1368, "height": 1824},
+                            {"src": "files/42003/curved-fabric-pop-up/scissor-braces.jpg", "captionZh": "交叉撑杆与连接座", "captionEn": "Scissor braces and hubs", "width": 1824, "height": 1368},
+                        ]
+                    }],
                     variantTables: [
                         {
                             titleZh: '产品特点',

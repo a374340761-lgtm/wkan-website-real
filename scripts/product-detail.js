@@ -465,7 +465,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (carouselEl) carouselEl.innerHTML = '';
         } else if (imageEl) {
             imageEl.style.display = '';
-            const photoDetails = Array.isArray(product.photoDetails) ? product.photoDetails : [];
+            const photoDetails = [
+                ...(product.photoDetails || []),
+                ...(product.additionalPhotoSections || []).flatMap(section => section.photos)
+            ];
             pdpImageWrap.classList.toggle('pdp-image--gallery', photoDetails.length > 0);
             const photoCaption = (src) => {
                 const photo = photoDetails.find(item => toSiteRootAssetUrl(item.src) === toSiteRootAssetUrl(src));
@@ -999,15 +1002,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Product-specific photographs retain their actual sample scope and captions.
         const photoTab = document.getElementById('tab-desc');
-        if (photoTab && Array.isArray(product.photoDetails) && product.photoDetails.length) {
+        const photoSections = [
+            { headingZh: product.photoHeadingZh, headingEn: product.photoHeadingEn,
+                noteZh: product.photoNoteZh, noteEn: product.photoNoteEn, photos: product.photoDetails },
+            ...(product.additionalPhotoSections || [])
+        ];
+        if (photoTab) for (const section of photoSections) {
+            if (!section.photos?.length) continue;
             const zh = getCurrentLang() === 'zh';
-            const heading = escapeHtml((zh ? product.photoHeadingZh : product.photoHeadingEn) || (zh ? '产品实拍与应用示例' : 'Product photographs and application examples'));
-            const note = escapeHtml((zh ? product.photoNoteZh : product.photoNoteEn) || (zh ? '点击照片可查看原图。' : 'Select a photograph to open the original.'));
-            photoTab.innerHTML += `<section class="pdp-photo-details"><h2>${heading}</h2><p>${note}</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;">${product.photoDetails.map(photo => {
+            const heading = escapeHtml((zh ? section.headingZh : section.headingEn) || (zh ? '产品实拍与应用示例' : 'Product photographs and application examples'));
+            const note = escapeHtml((zh ? section.noteZh : section.noteEn) || (zh ? '点击照片可查看原图。' : 'Select a photograph to open the original.'));
+            photoTab.insertAdjacentHTML('beforeend', `<section class="pdp-photo-details"><h2>${heading}</h2><p>${note}</p><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;">${section.photos.map(photo => {
                 const src = escapeHtml(toSiteRootAssetUrl(photo.src));
                 const caption = escapeHtml(zh ? photo.captionZh : photo.captionEn);
                 return `<figure style="margin:0"><a href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${caption}" width="${Number(photo.width)}" height="${Number(photo.height)}" loading="lazy" decoding="async" style="width:100%;height:220px;object-fit:contain;background:#f4f5f6"></a><figcaption>${caption}</figcaption></figure>`;
-            }).join('')}</div></section>`;
+            }).join('')}</div></section>`);
         }
 
         // Applications

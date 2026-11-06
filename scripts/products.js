@@ -598,11 +598,35 @@ class ProductManager {
                     image: 'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
                     images: [
                         'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
-                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png')
+                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'),
+                        'files/42003/fabric-pop-up-3x4m/frame-overview.jpg',
+                        'files/42003/fabric-pop-up-3x4m/upper-frame.jpg',
+                        'files/42003/fabric-pop-up-3x4m/frame-joint.jpg',
+                        'files/42003/fabric-pop-up-3x4m/lower-frame.jpg',
+                        'files/42003/fabric-pop-up-3x4m/upper-corner.jpg',
+                        'files/42003/fabric-pop-up-3x4m/scissor-braces.jpg'
                     ],
                     gallery: [
                         'images/products/displays/pop-up/fabric-pop-up-backdrop-display-stand-3x3-hero.png',
-                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png')
+                        encodeURI('images/products/displays/A Frame/a-frame-banner-display-trade-show-hero.png'),
+                        'files/42003/fabric-pop-up-3x4m/frame-overview.jpg',
+                        'files/42003/fabric-pop-up-3x4m/upper-frame.jpg',
+                        'files/42003/fabric-pop-up-3x4m/frame-joint.jpg',
+                        'files/42003/fabric-pop-up-3x4m/lower-frame.jpg',
+                        'files/42003/fabric-pop-up-3x4m/upper-corner.jpg',
+                        'files/42003/fabric-pop-up-3x4m/scissor-braces.jpg'
+                    ],
+                    photoHeadingZh: '3 × 4 米布拉网框架实拍',
+                    photoHeadingEn: '3 × 4 m fabric pop-up display frame photos',
+                    photoNoteZh: '实拍样品为 3 × 4 米布拉网框架，每格 75 × 75 厘米。照片展示无画面、无包边配置，可选包边。',
+                    photoNoteEn: 'The 3 × 4 m frame shown has 75 × 75 cm grid cells. The sample is shown without a printed graphic or side wraps. Side wraps are optional.',
+                    photoDetails: [
+                        {"src": "files/42003/fabric-pop-up-3x4m/frame-overview.jpg", "captionZh": "3 × 4 米布拉网框架整体实拍", "captionEn": "Full view of the 3 × 4 m fabric pop-up display frame", "width": 1824, "height": 1368},
+                        {"src": "files/42003/fabric-pop-up-3x4m/upper-frame.jpg", "captionZh": "上部横杆与锁扣细节", "captionEn": "Upper crossbar and latch detail", "width": 1368, "height": 1824},
+                        {"src": "files/42003/fabric-pop-up-3x4m/frame-joint.jpg", "captionZh": "框架连接座与横杆细节", "captionEn": "Frame hub and crossbar detail", "width": 1368, "height": 1824},
+                        {"src": "files/42003/fabric-pop-up-3x4m/lower-frame.jpg", "captionZh": "下部框架与斜撑细节", "captionEn": "Lower frame and diagonal brace detail", "width": 1368, "height": 1824},
+                        {"src": "files/42003/fabric-pop-up-3x4m/upper-corner.jpg", "captionZh": "顶部转角与连接件细节", "captionEn": "Upper corner and connector detail", "width": 1368, "height": 1824},
+                        {"src": "files/42003/fabric-pop-up-3x4m/scissor-braces.jpg", "captionZh": "剪刀式交叉撑杆细节", "captionEn": "Scissor brace detail", "width": 1824, "height": 1368},
                     ],
                     variantTables: [
                         {

@@ -213,6 +213,23 @@ for key,groups in DATA.items():
                 if col['key']=='size':col.update(zh='尺寸 / 配合 / 装箱说明',en='Dimensions / fit / packing details')
 
 completion['finalize_translations']()
+# WK-T12 tube fit and head styles were supplied with the product photo.
+DATA['9020'] = [{
+    'titleZh': 'WK-T12 刀旗连接件可选配置',
+    'titleEn': 'WK-T12 blade flag connector options',
+    'columns': [
+        {'key': 'size', 'zh': '适配六角管', 'en': 'Hex tube size'},
+        {'key': 'style', 'zh': '头型', 'en': 'Style'},
+    ],
+    'rows': [
+        {'size': size, 'style': zh, 'en': {'size': size, 'style': en}}
+        for size in ('40 mm', '50 mm')
+        for zh, en in (('尖头', 'Pointed head'), ('平头', 'Flat head'))
+    ],
+    'notesZh': ['询价时请注明六角管尺寸及所需头型。'],
+    'notesEn': ['Specify the hex tube size and head style when requesting a quote.'],
+    'source': {'file': 'WK-T12 product update', 'transcription': 'Tube sizes and head styles supplied with product photo'},
+}]
 payload={'version':'2026-10-24','products':DATA}
 (ROOT/'data/product-specifications-2026.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 products_path=ROOT/'scripts/products.js'

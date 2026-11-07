@@ -3430,85 +3430,63 @@
     ],
     "9020": [
       {
-        "titleZh": "配套规格",
-        "titleEn": "Accessory specifications",
+        "titleZh": "WK-T12 刀旗连接件可选配置",
+        "titleEn": "WK-T12 blade flag connector options",
         "columns": [
           {
-            "key": "model",
-            "zh": "型号 / 配置",
-            "en": "Model / configuration"
-          },
-          {
             "key": "size",
-            "zh": "尺寸",
-            "en": "Size"
+            "zh": "适配六角管",
+            "en": "Hex tube size"
           },
           {
-            "key": "material",
-            "zh": "材质 / 结构",
-            "en": "Material / construction"
-          },
-          {
-            "key": "weight",
-            "zh": "表列重量 / 容量（按配置）",
-            "en": "Listed weight / capacity (by configuration)"
-          },
-          {
-            "key": "carton",
-            "zh": "箱规 (cm)",
-            "en": "Carton (cm)"
-          },
-          {
-            "key": "packing",
-            "zh": "装箱数",
-            "en": "Packing quantity"
-          },
-          {
-            "key": "gw",
-            "zh": "整箱毛重 (kg)",
-            "en": "Carton gross weight (kg)"
+            "key": "style",
+            "zh": "头型",
+            "en": "Style"
           }
         ],
         "rows": [
           {
-            "model": "WK-T12",
-            "size": "",
-            "material": "",
-            "weight": "",
-            "carton": "",
-            "packing": "",
-            "gw": "",
+            "size": "40 mm",
+            "style": "尖头",
             "en": {
-              "model": "WK-T12",
-              "size": "",
-              "material": "",
-              "weight": "",
-              "carton": "",
-              "packing": "",
-              "gw": ""
+              "size": "40 mm",
+              "style": "Pointed head"
+            }
+          },
+          {
+            "size": "40 mm",
+            "style": "平头",
+            "en": {
+              "size": "40 mm",
+              "style": "Flat head"
+            }
+          },
+          {
+            "size": "50 mm",
+            "style": "尖头",
+            "en": {
+              "size": "50 mm",
+              "style": "Pointed head"
+            }
+          },
+          {
+            "size": "50 mm",
+            "style": "平头",
+            "en": {
+              "size": "50 mm",
+              "style": "Flat head"
             }
           }
         ],
         "notesZh": [
-          "未标注的参数请在询价时确认；型号相近的配件不可直接互换。"
+          "询价时请注明六角管尺寸及所需头型。"
         ],
         "notesEn": [
-          "Confirm unlisted parameters when requesting a quote; similarly named accessories are not necessarily interchangeable."
+          "Specify the hex tube size and head style when requesting a quote."
         ],
         "source": {
-          "file": "帐篷配件.xls",
-          "sheet": "帐篷配件",
-          "rows": [
-            26
-          ],
-          "columns": {
-            "model": 1,
-            "size": 4,
-            "material": 5,
-            "weight": 7,
-            "carton": 12
-          },
-          "review": "2026-10-24 complete technical-column review"
+          "file": "WK-T12 product update",
+          "transcription": "Tube sizes and head styles supplied with product photo"
         }
       }
     ],

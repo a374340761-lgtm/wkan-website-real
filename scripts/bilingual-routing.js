@@ -318,7 +318,12 @@
       if (!manifest.paths.includes(path)) return;
       const href = '/de' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
       const menu = document.getElementById('langMenu');
-      if (!menu || menu.querySelector('[hreflang="de"]')) return;
+      if (!menu) return;
+      const existing = menu.querySelector('a[hreflang="de"]');
+      if (existing) {
+        existing.href = href;
+        return;
+      }
       const link = document.createElement('a');
       link.className = 'lang-item';
       link.hreflang = 'de';

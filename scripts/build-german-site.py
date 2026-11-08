@@ -370,6 +370,8 @@ def prepare_document(source, file, paths, indexable=None):
             element["lang"] = "de"
     for tag in soup.select('link[rel="alternate"][hreflang]'):
         tag.decompose()
+    for link in soup.select('#langMenu a[hreflang="de"]'):
+        link.decompose()
     robots = soup.select_one('meta[name="robots"]')
     if robots is None:
         robots = soup.new_tag("meta", attrs={"name": "robots"})

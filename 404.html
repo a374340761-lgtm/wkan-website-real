@@ -40,7 +40,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- SEO note: 404 error page must not be indexed. -->
     <meta name="robots" content="noindex,follow">
     <link rel="canonical" href="https://www.waikwantent.com/404.html">
-    <link rel="stylesheet" href="styles/main.css?v=20261020-header-no-overlap">
+    <link rel="stylesheet" href="/styles/main.css?v=20261020-header-no-overlap">
     <script src="/scripts/analytics.js?v=20260930-ga4-consent" defer></script>
 </head>
 <body class="wk-error-page">
@@ -51,13 +51,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
     <header class="wk-simple-header">
-      <a class="wk-simple-logo" href="index.html"><img src="images/waikwancompanylogo.png" alt="WaiKwan Tent logo" width="132" height="44" loading="eager" decoding="async"></a>
+      <a class="wk-simple-logo" href="/"><img src="/images/waikwancompanylogo.png" alt="WaiKwan Tent logo" width="132" height="44" loading="eager" decoding="async"></a>
       <nav aria-label="Primary navigation">
-        <a href="product-center.html">Product Center</a>
-        <a href="all-products.html">All Products</a>
-        <a href="custom-canopy-tent-manufacturer.html">Canopy Tents</a>
-        <a href="beach-flag-supplier.html">Beach Flags</a>
-        <a href="contact-us.html">Get a Quote</a>
+        <a href="/product-center.html">Product Center</a>
+        <a href="/all-products.html">All Products</a>
+        <a href="/custom-canopy-tent-manufacturer.html">Canopy Tents</a>
+        <a href="/beach-flag-supplier.html">Beach Flags</a>
+        <a href="/contact-us.html">Get a Quote</a>
       </nav>
     </header>
 <main class="wk-404">
@@ -65,18 +65,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h1>We could not find that page.</h1>
   <p>The page may have moved, or the URL may include an old product/filter path. You can continue through the main product routes below or send a factory inquiry.</p>
   <div class="wk-related-links">
-    <a href="index.html">Home</a>
-    <a href="product-center.html">Product Center</a>
-    <a href="all-products.html">All Products</a>
-    <a href="custom-canopy-tent-manufacturer.html">Canopy Tents</a>
-    <a href="beach-flag-supplier.html">Beach Flags</a>
-    <a href="portable-display-systems.html">Portable Displays</a>
-    <a href="contact-us.html">Contact / Get a Quote</a>
+    <a href="/">Home</a>
+    <a href="/product-center.html">Product Center</a>
+    <a href="/all-products.html">All Products</a>
+    <a href="/custom-canopy-tent-manufacturer.html">Canopy Tents</a>
+    <a href="/beach-flag-supplier.html">Beach Flags</a>
+    <a href="/portable-display-systems.html">Portable Displays</a>
+    <a href="/contact-us.html">Contact / Get a Quote</a>
   </div>
   <section class="wk-landing-cta">
     <h2>Need help finding a product?</h2>
     <p>Send product type, size, quantity, printing request and destination country. WaiKwan can confirm the right canopy tent, flag, display system or light box route for your project.</p>
-    <a class="btn btn-primary" href="contact-us.html">Request Factory Support</a>
+    <a class="btn btn-primary" href="/contact-us.html">Request Factory Support</a>
   </section>
 </main>
 
@@ -89,21 +89,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="contact-bottom__cols">
             <div class="contact-bottom__col"><div class="contact-bottom__h">Products</div>
-              <a class="contact-bottom__link" href="custom-canopy-tent-manufacturer.html">Custom Canopy Tents</a>
-              <a class="contact-bottom__link" href="beach-flag-supplier.html">Beach Flags & Poles</a>
-              <a class="contact-bottom__link" href="portable-display-systems.html">Portable Display Systems</a>
-              <a class="contact-bottom__link" href="advertising-light-box-manufacturer.html">Advertising Light Boxes</a>
+              <a class="contact-bottom__link" href="/custom-canopy-tent-manufacturer.html">Custom Canopy Tents</a>
+              <a class="contact-bottom__link" href="/beach-flag-supplier.html">Beach Flags & Poles</a>
+              <a class="contact-bottom__link" href="/portable-display-systems.html">Portable Display Systems</a>
+              <a class="contact-bottom__link" href="/advertising-light-box-manufacturer.html">Advertising Light Boxes</a>
             </div>
             <div class="contact-bottom__col"><div class="contact-bottom__h">Buyer Resources</div>
-              <a class="contact-bottom__link" href="all-products.html">All Products</a>
-              <a class="contact-bottom__link" href="site-map.html">HTML Sitemap</a>
-              <a class="contact-bottom__link" href="faq.html">FAQ</a>
-              <a class="contact-bottom__link" href="contact-us.html">Request Quotation</a>
+              <a class="contact-bottom__link" href="/all-products.html">All Products</a>
+              <a class="contact-bottom__link" href="/site-map.html">HTML Sitemap</a>
+              <a class="contact-bottom__link" href="/faq.html">FAQ</a>
+              <a class="contact-bottom__link" href="/contact-us.html">Request Quotation</a>
             </div>
           </div>
         </div>
       </div>
     </footer>
 <script src="/scripts/get-quote-footer.js?v=20261020-careers"></script>
+<script>
+  const errorLocale = location.pathname.match(/^\/(zh|de)(?:\/|$)/)?.[1];
+  const errorPage = errorLocale && '/' + errorLocale + '/404.html';
+  if (errorPage && location.pathname !== errorPage) {
+    fetch(errorPage).then(response => response.ok ? response.text() : '').then(html => {
+      if (!html) return;
+      const localized = new DOMParser().parseFromString(html, 'text/html');
+      const language = errorLocale === 'zh' ? 'zh-CN' : 'de';
+      if (localized.documentElement.lang !== language) return;
+      document.documentElement.lang = language;
+      document.title = localized.title;
+      for (const selector of ['header.wk-simple-header', 'main.wk-404', 'footer.contact-bottom']) {
+        const source = localized.querySelector(selector);
+        if (source) document.querySelector(selector)?.replaceWith(source);
+      }
+    }).catch(() => {});
+  }
+</script>
 </body>
 </html>

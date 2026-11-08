@@ -81,6 +81,66 @@ function validateInquiryContract() {
   requireCondition(fs.existsSync(path.join(ROOT, 'docs', 'INQUIRY-OPERATIONS.md')), 'inquiry operations contract is missing');
 }
 
+function validateErrorPageLinks() {
+  for (const file of ['404.html', 'zh/404.html', 'de/404.html']) {
+    const html = read(file);
+    for (const [, value] of html.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
+      if (/^(?:https?:|mailto:|tel:|#)/i.test(value)) continue;
+      requireCondition(value.startsWith('/'), `${file}: ${value} must resolve from the site root on a nested 404 URL`);
+      if (!value.startsWith('/')) continue;
+      const target = decodeURIComponent(value.split(/[?#]/, 1)[0]);
+      const local = path.join(ROOT, target, target.endsWith('/') ? 'index.html' : '');
+      requireCondition(fs.existsSync(local), `${file}: missing recovery target ${target}`);
+    }
+  }
+}
+
+function validateGermanLocaleRouting() {
+  const alternates = new Map();
+  const context = {
+    URL,
+    window: {},
+    document: {
+      readyState: 'loading',
+      addEventListener() {},
+      querySelector(selector) {
+        const language = selector.match(/hreflang="([^"]+)"/)?.[1];
+        const href = alternates.get(language);
+        return href ? { href } : null;
+      },
+    },
+  };
+  const visit = path => { context.window.location = new URL(path, 'http://localhost:8000'); };
+  visit('/product-detail.html?sku=42001&tag=a&tag=b#specs');
+  vm.runInNewContext(read('scripts/bilingual-routing.js'), context);
+  const { getLocaleSwitchUrl } = context.window.wkBilingual;
+  requireCondition(getLocaleSwitchUrl('de') === null, 'German switching requires a declared counterpart');
+  alternates.set('de', 'https://www.waikwantent.com/de/product-detail.html');
+  requireCondition(
+    getLocaleSwitchUrl('de') === 'http://localhost:8000/de/product-detail.html?sku=42001&tag=a&tag=b#specs',
+    'German switch must keep the preview origin, SKU, repeated filters and anchor',
+  );
+  visit('/zh/product-detail.html?sku=42001#specs');
+  requireCondition(
+    getLocaleSwitchUrl('de') === 'http://localhost:8000/de/product-detail.html?sku=42001#specs',
+    'Chinese product deep links must switch to their German counterpart',
+  );
+  visit('/de/product-detail.html?sku=42001#specs');
+  requireCondition(context.window.wkResolvePageLanguage() === 'de', 'German URL must resolve to de');
+  alternates.set('zh-CN', 'https://www.waikwantent.com/zh/product-detail.html');
+  requireCondition(
+    getLocaleSwitchUrl('zh') === 'http://localhost:8000/zh/product-detail.html?sku=42001#specs',
+    'German product deep links must switch back to their Chinese counterpart',
+  );
+  alternates.set('en', 'https://www.waikwantent.com/product-detail.html');
+  requireCondition(
+    getLocaleSwitchUrl('en') === 'http://localhost:8000/product-detail.html?sku=42001#specs',
+    'German product deep links must switch back to their English counterpart',
+  );
+  alternates.set('en', 'https://example.com/product-detail.html');
+  requireCondition(getLocaleSwitchUrl('en') === null, 'Locale switching must reject external alternates');
+}
+
 function validateCategoryMigrations() {
   for (const prefix of ['', 'zh/']) {
     for (const category of ['tents', 'flags', 'displays', 'lightbox', 'inflatable', 'custom', 'furniture']) {
@@ -162,6 +222,8 @@ function validateProducts() {
 }
 
 validateRoutes();
+validateErrorPageLinks();
+validateGermanLocaleRouting();
 validateCategoryMigrations();
 validateStaticProductDiscovery();
 validateInquiryContract();

@@ -312,6 +312,9 @@ function wkLocalizedInternalLinkSafe(href) {
     const s = String(href).trim();
     if (/^(https?:|mailto:|tel:|#)/i.test(s)) return s;
     const normalized = s.startsWith('/') ? s : '/' + s.replace(/^\.\//, '');
+    if (typeof window.wkLocalizedPageHref === 'function') {
+        return window.wkLocalizedPageHref(normalized);
+    }
     if (typeof window.wkLocalizedInternalLink === 'function') {
         try {
             return window.wkLocalizedInternalLink(normalized);
@@ -1439,18 +1442,7 @@ function enhanceProductsDropdownExtras() {
 function ensureAboutAndResourcesNavigation() {
     const nav = document.querySelector('#wk-primary-nav') || document.querySelector('.nav-menu');
     if (!nav) return;
-    const isZh = (() => {
-        try {
-            const p = window.location.pathname.replace(/\\/g, '/');
-            if (p === '/zh' || p.startsWith('/zh/')) return true;
-        } catch (e) {}
-        const lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-        return lang === 'zh' || lang === 'zh-cn';
-    })();
-    const local = (href) => {
-        const clean = String(href || '').replace(/^\/+/, '');
-        return isZh ? `/zh/${clean}` : `/${clean}`;
-    };
+    const local = wkLocalizedInternalLinkSafe;
     const hasTopLink = (needle) => Array.from(nav.querySelectorAll(':scope > li > a[href]')).some((a) => {
         const href = (a.getAttribute('href') || '').toLowerCase();
         return href.includes(needle);
@@ -1539,7 +1531,7 @@ function enhanceTentsDropdown() {
     // Tent series: all go to tent-type.html?type=… (procurement hub), not product-detail PDP.
     const getTentTypeHref = (type) => {
         const key = String(type || '').trim();
-        return `tent-type.html?type=${encodeURIComponent(key)}`;
+        return wkLocalizedInternalLinkSafe(`/tent-type.html?type=${encodeURIComponent(key)}`);
     };
 
     const shouldTapToOpen = () => wkShouldToggleNestedSubmenuOnClick();
@@ -1582,9 +1574,7 @@ function enhanceTentsDropdown() {
 
         // Overview link
         const overview = document.createElement('a');
-        overview.href = typeof wkLocalizedInternalLinkSafe === 'function'
-            ? wkLocalizedInternalLinkSafe('/tent-type.html')
-            : 'tent-type.html';
+        overview.href = wkLocalizedInternalLinkSafe('/tent-type.html');
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);
@@ -1630,7 +1620,7 @@ function enhanceTentsDropdown() {
 
         // Accessories (配件) - tent accessories hub (same UX as flag bases & accessories)
         const accessoriesLink = document.createElement('a');
-        accessoriesLink.href = 'tent-type.html?type=tent_accessories';
+        accessoriesLink.href = wkLocalizedInternalLinkSafe('/tent-type.html?type=tent_accessories');
         accessoriesLink.setAttribute('data-translate', 'tents_hub_accessories_title');
         accessoriesLink.textContent = '';
         sub.appendChild(accessoriesLink);
@@ -1727,7 +1717,7 @@ function enhanceFlagsDropdown() {
 
         // Overview link
         const overview = document.createElement('a');
-        overview.href = 'product-center.html?cat=flags';
+        overview.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=flags');
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);
@@ -1740,7 +1730,7 @@ function enhanceFlagsDropdown() {
 
         types.forEach((t) => {
             const a = document.createElement('a');
-            a.href = `flag-type.html?type=${encodeURIComponent(t.type)}`;
+            a.href = wkLocalizedInternalLinkSafe(`/flag-type.html?type=${encodeURIComponent(t.type)}`);
 
             // Use bilingual spans so Chinese mode never shows English-only labels.
             const zh = document.createElement('span');
@@ -1856,7 +1846,7 @@ function enhanceDisplaysDropdown() {
 
         // Overview link (category overview)
         const overview = document.createElement('a');
-        overview.href = displaysLink.getAttribute('href') || 'product-center.html?cat=displays';
+        overview.href = displaysLink.getAttribute('href') || wkLocalizedInternalLinkSafe('/product-center.html?cat=displays');
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);
@@ -1937,7 +1927,7 @@ function enhanceRacegateDropdown() {
         wrapper.setAttribute('data-racegate-submenu', '1');
 
         const parentLink = document.createElement('a');
-        parentLink.href = 'product-center.html?cat=racegate';
+        parentLink.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=racegate');
         parentLink.setAttribute('aria-haspopup', 'true');
         parentLink.setAttribute('aria-expanded', 'false');
         parentLink.innerHTML = '<span class="zh" data-translate="home_cat_racegate_title"></span><span class="en" data-translate="home_cat_racegate_title"></span>';
@@ -1951,7 +1941,7 @@ function enhanceRacegateDropdown() {
         sub.className = 'dropdown-submenu';
 
         const overview = document.createElement('a');
-        overview.href = 'product-center.html?cat=racegate';
+        overview.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=racegate');
         overview.setAttribute('data-translate', 'ui_overview');
         overview.textContent = '';
         sub.appendChild(overview);
@@ -2067,7 +2057,7 @@ function enhanceFurnitureDropdown() {
             sub.className = 'dropdown-submenu';
 
             const overview = document.createElement('a');
-            overview.href = 'furniture-type.html?type=table-chair-stool-toilet';
+            overview.href = wkLocalizedInternalLinkSafe('/furniture-type.html?type=table-chair-stool-toilet');
             overview.setAttribute('data-translate', 'ui_overview');
             overview.textContent = '';
             sub.appendChild(overview);
@@ -2077,7 +2067,9 @@ function enhanceFurnitureDropdown() {
                 const preferredSku = (p.sku != null && String(p.sku).trim() !== '')
                     ? String(p.sku).trim()
                     : (p.id != null ? String(p.id).trim() : '');
-                a.href = preferredSku ? `product-detail.html?sku=${encodeURIComponent(preferredSku)}` : 'all-products.html?cat=furniture';
+                a.href = wkLocalizedInternalLinkSafe(preferredSku
+                    ? `/product-detail.html?sku=${encodeURIComponent(preferredSku)}`
+                    : '/all-products.html?cat=furniture');
 
                 const zh = document.createElement('span');
                 zh.className = 'zh';
@@ -2179,7 +2171,7 @@ function ensureProductCenterDropdownHasLightbox() {
 
     const makeLink = () => {
         const a = document.createElement('a');
-        a.href = 'product-center.html?cat=lightbox';
+        a.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=lightbox');
         a.innerHTML = `<span class="zh" data-translate="menu_light_box_series"></span><span class="en" data-translate="menu_light_box_series"></span>`;
         return a;
     };
@@ -2245,7 +2237,7 @@ function ensureProductCenterDropdownHasAccessories() {
         });
         if (hasAcc) return;
         const a = document.createElement('a');
-        a.href = 'product-center.html?cat=accessories';
+        a.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=accessories');
         a.innerHTML = '<span class="zh" data-translate="nav_cat_accessories"></span><span class="en" data-translate="nav_cat_accessories"></span>';
         menu.appendChild(a);
     });

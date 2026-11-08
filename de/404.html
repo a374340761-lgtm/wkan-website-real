@@ -47,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- SEO note: 404 error page must not be indexed. -->
 <meta content="noindex,follow" name="robots"/>
 <link href="https://www.waikwantent.com/de/404.html" rel="canonical"/>
-<link href="/styles/main.css?v=20261020-header-no-overlap" rel="stylesheet"/>
+<link href="/styles/main.css?v=20261108-mobile-routes" rel="stylesheet"/>
 <script defer="" src="/scripts/analytics.js?v=20260930-ga4-consent"></script>
 <link href="https://www.waikwantent.com/404.html" hreflang="en" rel="alternate"/><link href="https://www.waikwantent.com/zh/404.html" hreflang="zh-CN" rel="alternate"/></head>
 <body class="wk-error-page">
@@ -112,23 +112,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </footer>
 <script src="/scripts/get-quote-footer.js?v=20261020-careers"></script>
-<script>
-  const errorLocale = location.pathname.match(/^\/(zh|de)(?:\/|$)/)?.[1];
-  const errorPage = errorLocale && '/' + errorLocale + '/404.html';
-  if (errorPage && location.pathname !== errorPage) {
-    fetch(errorPage).then(response => response.ok ? response.text() : '').then(html => {
-      if (!html) return;
-      const localized = new DOMParser().parseFromString(html, 'text/html');
-      const language = errorLocale === 'zh' ? 'zh-CN' : 'de';
-      if (localized.documentElement.lang !== language) return;
-      document.documentElement.lang = language;
-      document.title = localized.title;
-      for (const selector of ['header.wk-simple-header', 'main.wk-404', 'footer.contact-bottom']) {
-        const source = localized.querySelector(selector);
-        if (source) document.querySelector(selector)?.replaceWith(source);
-      }
-    }).catch(() => {});
-  }
-</script>
+<script src="/scripts/error-page.js"></script>
 </body>
 </html>

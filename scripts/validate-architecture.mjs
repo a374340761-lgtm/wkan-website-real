@@ -93,6 +93,26 @@ function validateErrorPageLinks() {
       requireCondition(fs.existsSync(local), `${file}: missing recovery target ${target}`);
     }
   }
+
+  const recoveries = [
+    ['/news/tent-type.html?type=inflatable-three-leg-tent#specs', '/tent-type.html?type=inflatable-three-leg-tent#specs'],
+    ['/zh/products/flag-type.html?type=alu_fiberglass_pole', '/zh/flag-type.html?type=alu_fiberglass_pole'],
+    ['/de/seo/product-detail.html?sku=WK-IS004', '/de/product-detail.html?sku=WK-IS004'],
+    ['/zh/manufacturing-capabilities.html', '/manufacturing-capabilities.html'],
+    ['/news/unknown.html', null],
+  ];
+  const source = read('scripts/error-page.js');
+  for (const [requested, expected] of recoveries) {
+    const location = new URL(requested, 'https://www.waikwantent.com');
+    let destination = null;
+    location.replace = target => { destination = target; };
+    vm.runInNewContext(source, { window: { location } });
+    requireCondition(destination === expected, `Unexpected recovery for ${requested}: ${destination}`);
+    if (destination) {
+      const target = new URL(destination, location).pathname;
+      requireCondition(fs.existsSync(path.join(ROOT, target)), `Recovery target is missing: ${target}`);
+    }
+  }
 }
 
 function validateGermanLocaleRouting() {

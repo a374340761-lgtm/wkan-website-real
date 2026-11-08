@@ -59,6 +59,8 @@ def expected_url(rel: str) -> str:
         return ORIGIN + "/"
     if rel == "zh/index.html":
         return ORIGIN + "/zh/"
+    if rel == "de/index.html":
+        return ORIGIN + "/de/"
     return ORIGIN + "/" + rel
 
 

@@ -80,6 +80,12 @@ def main() -> int:
         if set(rel_path.parts) & SKIP_DIRS:
             continue
         source = path.read_text(encoding="utf-8", errors="replace")
+        if (
+            rel_path.parts[0] == "de"
+            and '<!-- German preview: no production tracking -->' in source
+            and '<meta name="robots" content="noindex,follow">' in source
+        ):
+            continue
         output = expected(source)
         if output is None:
             continue

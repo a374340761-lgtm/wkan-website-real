@@ -1,8 +1,8 @@
 /**
- * EN ↔ /zh/ locale routing (full-site mirrors)
+ * Locale routing for English, Simplified Chinese and German.
  *
  * Canonical: EN at root, ZH under /zh/ with same path suffix.
- * hreflang: en, zh-CN, x-default (English).
+ * German switching requires an explicit page alternate.
  */
 (function () {
   /** Always used for hreflang alternates (matches deployed SEO). */
@@ -145,6 +145,34 @@
     return path === '/zh' || path.indexOf('/zh/') === 0;
   }
 
+  function isDePath(path) {
+    path = normPath(path);
+    return path === '/de' || path.indexOf('/de/') === 0;
+  }
+
+  function declaredAlternate(targetLang, sourceUrl) {
+    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de' }[targetLang];
+    if (!hreflang) return null;
+    var link = document.querySelector('link[rel="alternate"][hreflang="' + hreflang + '"]:not([data-wk-hreflang])');
+    if (!link) return null;
+    try {
+      var target = new URL(link.href, sourceUrl);
+      var source = new URL(sourceUrl);
+      if (target.origin !== PRODUCTION_ORIGIN && target.origin !== source.origin) return null;
+      if (targetLang === 'de' && !isDePath(target.pathname)) return null;
+      if (targetLang === 'zh' && !isZhPath(target.pathname)) return null;
+      if (targetLang === 'en' && (isDePath(target.pathname) || isZhPath(target.pathname))) return null;
+      var targetKeys = new Set(target.searchParams.keys());
+      source.searchParams.forEach(function (value, key) {
+        if (!targetKeys.has(key)) target.searchParams.append(key, value);
+      });
+      target.hash = source.hash || target.hash;
+      return source.origin + target.pathname + target.search + target.hash;
+    } catch (error) {
+      return null;
+    }
+  }
+
   function stripZhPrefix(path) {
     path = normPath(path);
     if (path === '/zh' || path === '/zh/index.html') return '/index.html';
@@ -174,6 +202,11 @@
   function getLocaleSwitchUrl(targetLang) {
     var pathname = normPath(window.location.pathname);
     var search = window.location.search || '';
+
+    if (targetLang === 'de' || isDePath(pathname)) {
+      if (targetLang === 'de' && isDePath(pathname)) return null;
+      return declaredAlternate(targetLang, window.location.href);
+    }
 
     var nav = getNavOrigin();
     if (targetLang === 'zh') {
@@ -217,6 +250,9 @@
    */
   function localizedPageHref(href) {
     if (!href || typeof href !== 'string') return href;
+    if (isDePath(window.location.pathname) && typeof window.wkGermanLink === 'function') {
+      return window.wkGermanLink(href);
+    }
     var s = href.trim();
     if (/^(https?:|mailto:|tel:|javascript:)/i.test(s)) return s;
     try {
@@ -259,7 +295,7 @@
         e.preventDefault();
         e.stopImmediatePropagation();
         try {
-          if (targetLang === 'en' || targetLang === 'zh') {
+          if (targetLang === 'en' || targetLang === 'zh' || targetLang === 'de') {
             localStorage.setItem('site_language', targetLang);
             localStorage.setItem('siteLanguage', targetLang);
           }
@@ -270,6 +306,31 @@
     );
   }
 
+  async function attachGermanNavigation() {
+    if (isDePath(window.location.pathname)) return;
+    try {
+      const response = await fetch('/de/locale-map.json', { cache: 'no-cache' });
+      if (!response.ok) return;
+      const manifest = await response.json();
+      if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
+      const source = new URL(window.location.href);
+      const path = source.pathname.replace(/^\/zh(?=\/|$)/, '') || '/';
+      if (!manifest.paths.includes(path)) return;
+      const href = '/de' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
+      const menu = document.getElementById('langMenu');
+      if (!menu || menu.querySelector('[hreflang="de"]')) return;
+      const link = document.createElement('a');
+      link.className = 'lang-item';
+      link.hreflang = 'de';
+      link.lang = 'de';
+      link.href = href;
+      link.textContent = 'Deutsch';
+      menu.append(link);
+    } catch {
+      // An unavailable locale manifest must not interfere with existing navigation.
+    }
+  }
+
   function removeOldHreflang() {
     document.querySelectorAll('link[data-wk-hreflang]').forEach(function (l) {
       l.parentNode && l.parentNode.removeChild(l);
@@ -277,6 +338,7 @@
   }
 
   function injectHreflang() {
+    if (isDePath(window.location.pathname)) return;
     if (document.querySelector('link[rel="alternate"][hreflang="en"]:not([data-wk-hreflang])')) {
       removeOldHreflang();
       return;
@@ -366,20 +428,23 @@
   window.wkBilingualInjectHreflang = injectHreflang;
 
   /**
-   * URL is the source of truth for UI language: /zh/ => zh, everything else => en.
+   * URL is the source of truth for UI language.
    * Does not read localStorage (used by multilang.js and product scripts).
    */
   window.wkResolvePageLanguage = function () {
     try {
       var p = String(window.location.pathname || '').replace(/\\/g, '/');
       if (p === '/zh' || p.indexOf('/zh/') === 0) return 'zh';
+      if (isDePath(p)) return 'de';
     } catch (e) {}
     return 'en';
   };
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', attachLocaleNav);
+    document.addEventListener('DOMContentLoaded', attachGermanNavigation);
   } else {
     attachLocaleNav();
+    attachGermanNavigation();
   }
 })();

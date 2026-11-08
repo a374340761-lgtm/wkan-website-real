@@ -105,8 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const msgBox = document.getElementById("formMessage");
   const resetBtn = form.querySelector('button[type="reset"]');
   let submitting = false;
-  function message(en, zh) {
-    return /^\/zh(?:\/|$)/.test(window.location.pathname) ? zh : en;
+  function message(en, zh, de) {
+    const path = window.location.pathname;
+    if (/^\/zh(?:\/|$)/.test(path)) return zh;
+    if (/^\/de(?:\/|$)/.test(path)) return de;
+    return en;
   }
 
   function prefillProductFromUrl() {
@@ -154,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (resetBtn) resetBtn.disabled = true;
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.textContent = message('Sending…', '提交中…');
+        submitBtn.textContent = message('Sending…', '提交中…', 'Wird gesendet …');
       }
 
       const payload = buildInquiryPayload(form);
@@ -163,7 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (result && result.ok) {
         if (successBox) successBox.style.display = "block";
-        setMsg(message('Your inquiry has been received. Our team will review your requirements and contact you by email. No automatic confirmation email is sent.', '询价已收到。我们的团队会审核需求并通过邮件联系您；系统暂不发送自动确认邮件。'), true);
+        setMsg(message(
+          'Your inquiry has been received. Our team will review your requirements and contact you by email. No automatic confirmation email is sent.',
+          '询价已收到。我们的团队会审核需求并通过邮件联系您；系统暂不发送自动确认邮件。',
+          'Ihre Anfrage ist eingegangen. Wir prüfen Ihre Anforderungen und melden uns per E-Mail bei Ihnen. Eine automatische Bestätigung wird nicht versendet.',
+        ), true);
         document.dispatchEvent(new CustomEvent('wk:inquiry-success', {
           detail: { inquiry_id: result.inquiry_id || payload.inquiry_id }
         }));
@@ -172,17 +179,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       setMsg(result && result.reason === 'rejected'
-        ? message('Your inquiry was not accepted. Your details are still here. Please review them or contact us by email or WhatsApp.', '询价未被接受，已保留填写内容。请核对信息，或通过邮件、WhatsApp 联系我们。')
-        : message('We could not confirm receipt. Your inquiry may already have arrived. Your details are still here; please contact us by email or WhatsApp before submitting again.', '暂时无法确认收件，询价可能已经送达。已保留填写内容；再次提交前，请通过邮件或 WhatsApp 联系我们确认。'), false);
+        ? message(
+          'Your inquiry was not accepted. Your details are still here. Please review them or contact us by email or WhatsApp.',
+          '询价未被接受，已保留填写内容。请核对信息，或通过邮件、WhatsApp 联系我们。',
+          'Ihre Anfrage wurde nicht angenommen. Ihre Angaben bleiben im Formular erhalten. Bitte prüfen Sie sie oder kontaktieren Sie uns per E-Mail oder WhatsApp.',
+        )
+        : message(
+          'We could not confirm receipt. Your inquiry may already have arrived. Your details are still here; please contact us by email or WhatsApp before submitting again.',
+          '暂时无法确认收件，询价可能已经送达。已保留填写内容；再次提交前，请通过邮件或 WhatsApp 联系我们确认。',
+          'Wir konnten den Eingang nicht bestätigen. Ihre Anfrage ist möglicherweise bereits angekommen. Ihre Angaben bleiben im Formular erhalten. Bitte kontaktieren Sie uns vor einem erneuten Versand per E-Mail oder WhatsApp.',
+        ), false);
     } catch (err) {
-      setMsg(message('We could not confirm receipt. Your details are still here. Please contact us by email or WhatsApp before submitting again.', '暂时无法确认收件，已保留填写内容。再次提交前，请通过邮件或 WhatsApp 联系我们确认。'), false);
+      setMsg(message(
+        'We could not confirm receipt. Your details are still here. Please contact us by email or WhatsApp before submitting again.',
+        '暂时无法确认收件，已保留填写内容。再次提交前，请通过邮件或 WhatsApp 联系我们确认。',
+        'Wir konnten den Eingang nicht bestätigen. Ihre Angaben bleiben im Formular erhalten. Bitte kontaktieren Sie uns vor einem erneuten Versand per E-Mail oder WhatsApp.',
+      ), false);
     } finally {
       submitting = false;
       form.setAttribute('aria-busy', 'false');
       if (resetBtn) resetBtn.disabled = false;
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = message('Send Inquiry', '发送询价');
+        submitBtn.textContent = message('Send Inquiry', '发送询价', 'Anfrage senden');
       }
     }
   });

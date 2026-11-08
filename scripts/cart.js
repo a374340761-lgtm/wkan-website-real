@@ -359,7 +359,8 @@
         displayName(item) {
             const lang = this.getLang();
             if (lang === 'zh') return item.nameZh || item.nameEn || '';
-            return item.nameEn || item.nameZh || '';
+            const name = item.nameEn || item.nameZh || '';
+            return lang === 'de' && window.wkGermanText ? window.wkGermanText(name) : name;
         }
 
         addProduct(product, quantity) {
@@ -675,13 +676,17 @@
             if (lang === 'zh') {
                 lines.push('询价清单（RFQ）：');
                 lines.push('请针对以下型号报价（含印刷/交期/MOQ/贸易条款）：');
+            } else if (lang === 'de') {
+                lines.push('Anfrageliste');
+                lines.push('Bitte nennen Sie Mindestbestellmenge, Lieferzeit, Druckoptionen und Incoterms für die folgenden Artikel.');
             } else {
                 lines.push('RFQ / Request for quotation:');
                 lines.push('Please quote the following items (MOQ, lead time, printing options, Incoterms):');
             }
             lines.push('');
             this.items.forEach((item, idx) => {
-                const name = lang === 'zh' ? (item.nameZh || item.nameEn) : (item.nameEn || item.nameZh);
+                const name = lang === 'de' ? this.displayName(item)
+                    : lang === 'zh' ? (item.nameZh || item.nameEn) : (item.nameEn || item.nameZh);
                 const sku = item.sku || item.id;
                 const q = parseInt(item.quantity, 10) || 1;
                 const hasVariant = !!(item.variantKey && String(item.variantKey).trim());
@@ -696,7 +701,7 @@
                 } else if (item.model) {
                     parts.push(`${lbl('rfq_line_model', '型号', 'Model')}: ${item.model}`);
                 }
-                parts.push(`${lang === 'zh' ? '数量' : 'Qty'}: ${q}`);
+                parts.push(`${lang === 'zh' ? '数量' : lang === 'de' ? 'Stückzahl' : 'Qty'}: ${q}`);
                 lines.push(`${idx + 1}. ${name}`);
                 lines.push(`   ${parts.join(' · ')}`);
                 lines.push('');
@@ -747,6 +752,8 @@
                 const p = window.location.pathname || '/';
                 if (p === '/zh' || p === '/zh/' || p.indexOf('/zh/') === 0) {
                     contactQuoteHref = '/zh/contact-us.html#getQuoteForm';
+                } else if (p === '/de' || p.indexOf('/de/') === 0) {
+                    contactQuoteHref = '/de/contact-us.html#getQuoteForm';
                 }
             } catch { /* keep EN default */ }
             window.location.href = contactQuoteHref;

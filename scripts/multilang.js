@@ -4,8 +4,7 @@
 const LANG_KEY = 'site_language';
 const DEFAULT_LANG = 'en';
 
-// ✅ Site languages: English + Chinese only
-const ENABLED_LANGS = ['en', 'zh'];
+const ENABLED_LANGS = ['en', 'zh', 'de'];
 
 // ✅ 公司名（统一来源，避免在多个 HTML 写死）
 const COMPANY_NAME = {
@@ -23,6 +22,7 @@ function getLang() {
     try {
         const p = window.location.pathname.replace(/\\/g, '/');
         if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
+        if (p === '/de' || p.startsWith('/de/')) return 'de';
     } catch (e2) {}
     return DEFAULT_LANG;
 }
@@ -3367,6 +3367,10 @@ class MultiLanguageSystem {
     }
     
     init() {
+        if (getLang() === 'de' && typeof window.wkGermanMarkup === 'function') {
+            this.translations.de = Object.fromEntries(Object.entries(this.translations.en)
+                .map(([key, value]) => [key, window.wkGermanMarkup(value)]));
+        }
         this.setupLanguageSwitcher();
         this.loadSavedLanguage();
         this.translatePage();
@@ -3435,6 +3439,7 @@ class MultiLanguageSystem {
         const elements = document.querySelectorAll('[data-translate], [data-i18n]');
         
         elements.forEach(element => {
+            if (this.currentLanguage === 'de' && element.hasAttribute('data-de-static')) return;
             const key = element.dataset.translate || element.dataset.i18n;
             if (!key) return;
             
@@ -3557,9 +3562,10 @@ class MultiLanguageSystem {
     
     updateBodyLanguageClass(lang) {
         // 移除所有语言类
-        document.body.classList.remove('lang-zh', 'lang-en');
+        document.body.classList.remove('lang-zh', 'lang-en', 'lang-de');
         // 添加当前语言类
         document.body.classList.add(`lang-${lang}`);
+        if (lang === 'de') document.body.classList.add('lang-en');
     }
     
     animateLanguageChange() {

@@ -46,6 +46,8 @@ def expected_url(rel: str) -> str:
         return ORIGIN + "/"
     if rel == "zh/index.html":
         return ORIGIN + "/zh/"
+    if rel == "de/index.html":
+        return ORIGIN + "/de/"
     return ORIGIN + "/" + rel
 
 
@@ -56,6 +58,8 @@ def normalized_url(value: str) -> str:
         path = "/"
     elif path == "/zh/index.html":
         path = "/zh/"
+    elif path == "/de/index.html":
+        path = "/de/"
     return urlunsplit(("https", "www.waikwantent.com", path, parts.query, ""))
 
 
@@ -122,6 +126,11 @@ def collect_pages() -> list[dict]:
 def main() -> None:
     pages = collect_pages()
     canonical_urls = {page["url"] for page in pages}
+    german_pages = {
+        urlsplit(url).path.removeprefix("/de"): url
+        for url in canonical_urls
+        if urlsplit(url).path.startswith("/de/")
+    }
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"',
@@ -132,7 +141,15 @@ def main() -> None:
         lines.append(f"    <loc>{html_lib.escape(page['url'])}</loc>")
         if page["lastmod"]:
             lines.append(f"    <lastmod>{page['lastmod']}</lastmod>")
-        for language, href in page["alternates"].items():
+        alternates = dict(page["alternates"])
+        path = urlsplit(page["url"]).path
+        base = re.sub(r"^/(?:zh|de)(?=/)", "", path)
+        if base in german_pages:
+            group = {"en": ORIGIN + base, "zh-CN": ORIGIN + "/zh" + base, "de": german_pages[base]}
+            if group["en"] in canonical_urls:
+                group["x-default"] = group["en"]
+            alternates.update(group)
+        for language, href in alternates.items():
             if href not in canonical_urls:
                 continue
             lines.append(

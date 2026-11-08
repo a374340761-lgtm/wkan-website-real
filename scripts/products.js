@@ -3934,6 +3934,9 @@ getProductIcon(category) {
 
     
     getLocalizedName(product) {
+        if (this.currentLanguage === 'de' && window.wkGermanText) {
+            return window.wkGermanText(product?.nameEn || product?.name || 'Product');
+        }
         if (product && product._isPmGroupedHub) {
             const lang = this.currentLanguage || 'en';
             if (lang === 'zh') return product.nameZh || '';
@@ -4844,6 +4847,7 @@ getProductIcon(category) {
     }
 
     refreshRFQText() {
+        const label = (en, de) => document.documentElement.lang === 'de' ? de : en;
         const name = document.getElementById('rfqName')?.value?.trim() || '';
         const email = document.getElementById('rfqEmail')?.value?.trim() || '';
         const company = document.getElementById('rfqCompany')?.value?.trim() || '';
@@ -4857,16 +4861,16 @@ getProductIcon(category) {
         const q = params.get('q') ? decodeURIComponent(params.get('q')) : '';
 
         const lines = [];
-        lines.push('RFQ / Request for Quotation');
-        lines.push('Preferred contact: WhatsApp or WeChat for faster response.');
+        lines.push(label('RFQ / Request for Quotation', 'Angebotsanfrage'));
+        lines.push(label('Preferred contact: WhatsApp or WeChat for faster response.', 'Für eine schnelle Antwort erreichen Sie uns per WhatsApp oder WeChat.'));
         lines.push('------------------------');
         lines.push(`Name: ${name}`);
-        lines.push(`Email: ${email}`);
-        if (company) lines.push(`Company: ${company}`);
-        if (phone) lines.push(`Phone: ${phone}`);
-        if (country) lines.push(`Country: ${country}`);
+        lines.push(`${label('Email', 'E-Mail')}: ${email}`);
+        if (company) lines.push(`${label('Company', 'Unternehmen')}: ${company}`);
+        if (phone) lines.push(`${label('Phone', 'Telefon')}: ${phone}`);
+        if (country) lines.push(`${label('Country', 'Land')}: ${country}`);
         lines.push('');
-        lines.push('Selected items:');
+        lines.push(label('Selected items:', 'Ausgewählte Artikel'));
         (this.rfqItems || []).forEach(x => {
             const p = x.product;
             const productName = this.getLocalizedName(p);
@@ -4874,22 +4878,23 @@ getProductIcon(category) {
             const vExtra = (ln.variantModel || ln.variantSize || ln.variantWeight)
                 ? ` · ${[ln.variantModel, ln.variantSize, ln.variantWeight].filter(Boolean).join(' / ')}`
                 : '';
-            lines.push(`- ${productName}${vExtra} (ID: ${p.id}, Category: ${p.category})  Qty: ${x.qty || 1}`);
+            lines.push(`- ${productName}${vExtra} (ID: ${p.id}, ${label('Category', 'Kategorie')}: ${p.category})  ${label('Qty', 'Stückzahl')}: ${x.qty || 1}`);
         });
         lines.push('');
-        lines.push('Filter context (from products page):');
-        if (cat) lines.push(`- Categories: ${cat}`);
-        if (spec) lines.push(`- Specs/Tags: ${decodeURIComponent(spec)}`);
-        if (q) lines.push(`- Search: ${q}`);
-        if (!cat && !spec && !q) lines.push('- (none)');
+        lines.push(label('Filter context (from products page):', 'Filter auf der Produktseite'));
+        if (cat) lines.push(`- ${label('Categories', 'Kategorien')}: ${cat}`);
+        if (spec) lines.push(`- ${label('Specs/Tags', 'Merkmale')}: ${decodeURIComponent(spec)}`);
+        if (q) lines.push(`- ${label('Search', 'Suche')}: ${q}`);
+        if (!cat && !spec && !q) lines.push(label('- (none)', '- Keine Filter'));
         lines.push('');
         if (msg) {
-            lines.push('Requirements / Message:');
+            lines.push(label('Requirements / Message:', 'Anforderungen und Nachricht'));
             lines.push(msg);
             lines.push('');
         }
-        lines.push('Please quote with: unit price, printing options, MOQ, lead time, shipping terms (EXW/FOB/DDP), and sample policy.');
-        lines.push('Thanks.');
+        lines.push(label('Please quote with: unit price, printing options, MOQ, lead time, shipping terms (EXW/FOB/DDP), and sample policy.',
+            'Bitte nennen Sie Stückpreis, Druckoptionen, Mindestbestellmenge, Lieferzeit, Versandbedingungen (EXW/FOB/DDP) und Musterkonditionen.'));
+        lines.push(label('Thanks.', 'Vielen Dank.'));
 
         const text = lines.join('\n');
         const out = document.getElementById('rfqText');
@@ -4906,14 +4911,17 @@ getProductIcon(category) {
     buildMailtoLink() {
         // 你们接收询价的邮箱：网站上显示的企业邮箱
         const to = 'yishu@waikwantent.com';
-        const subject = encodeURIComponent('RFQ - Request a Quote');
+        const subject = encodeURIComponent(document.documentElement.lang === 'de' ? 'Angebotsanfrage' : 'RFQ - Request a Quote');
         const body = encodeURIComponent(document.getElementById('rfqText')?.value || '');
         return `mailto:${to}?subject=${subject}&body=${body}`;
     }
 
     downloadRFQCSV() {
         const rows = [];
-        rows.push(['Product Name', 'Product ID', 'Category', 'Variant', 'Quantity'].join(','));
+        const headers = document.documentElement.lang === 'de'
+            ? ['Produktname', 'Produkt-ID', 'Kategorie', 'Ausführung', 'Stückzahl']
+            : ['Product Name', 'Product ID', 'Category', 'Variant', 'Quantity'];
+        rows.push(headers.join(','));
 
         (this.rfqItems || []).forEach(x => {
             const p = x.product;

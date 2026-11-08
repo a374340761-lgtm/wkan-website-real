@@ -292,7 +292,7 @@
 
         e.preventDefault();
         e.stopPropagation();
-        window.location.assign(unified);
+        window.location.assign(window.wkGermanLink ? window.wkGermanLink(unified) : unified);
     }, true);
 
     function updateHeadingAndBreadcrumb(cat) {

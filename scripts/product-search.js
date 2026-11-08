@@ -13,7 +13,10 @@ function score(product, query) {
 
     const identifiers = [product.model, product.sku, product.id].map(norm);
     const model = identifiers.join(' ');
-    const name = norm([product.nameEn, product.nameZh, product.name].join(' '));
+    const localized = typeof window.wkGermanText === 'function'
+        ? [product.nameEn, product.descriptionEn, product.category].map(window.wkGermanText).join(' ')
+        : '';
+    const name = norm([product.nameEn, product.nameZh, product.name, localized].join(' '));
     const groups = (function walk(value) {
         if (!value || typeof value !== 'object') return [];
         return [value, ...Object.values(value).flatMap(walk)];
@@ -21,7 +24,7 @@ function score(product, query) {
     const specs = window.WK_getVerifiedSpecs ? window.WK_getVerifiedSpecs(product.id) : [];
     const fields = Object.entries(product).filter(([key]) =>
         !key.startsWith('_') && !['image', 'images', 'gallery'].includes(key));
-    const body = norm([Object.fromEntries(fields), specs, groups].map(value => JSON.stringify(value)).join(' '));
+    const body = norm([Object.fromEntries(fields), specs, groups].map(value => JSON.stringify(value)).join(' ') + ' ' + localized);
     const matches = terms => terms.length > 0 && terms.every(term => body.includes(term));
 
     let terms = query.split(' ');

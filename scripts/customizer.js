@@ -41,7 +41,11 @@
     return el ? el.value : '';
   }
 
-  function label(group, key) {
+  function label(group, key, root) {
+    if (document.documentElement.lang === 'de') {
+      var select = $('[name="customizer_' + group + '"]', root);
+      if (select && select.selectedOptions[0]) return select.selectedOptions[0].textContent.trim();
+    }
     return (OPTIONS[group] && OPTIONS[group][key]) || key || '';
   }
 
@@ -63,6 +67,16 @@
     cfg.sku = ['WK', 'TENT', skuPart(cfg.size), skuPart(cfg.frame), skuPart(cfg.color), skuPart(cfg.print)]
       .filter(Boolean)
       .join('-');
+    if (document.documentElement.lang === 'de') {
+      cfg.summary =
+        'Faltzelt-Konfiguration: ' + label('size', cfg.size, root) +
+        ', Gestell: ' + label('frame', cfg.frame, root) +
+        ', Dachfarbe: ' + label('color', cfg.color, root) +
+        ', Druck: ' + label('print', cfg.print, root) +
+        ', Zubehör: ' + label('accessory', cfg.accessory, root) +
+        '. Referenz-SKU: ' + cfg.sku + '.';
+      return cfg;
+    }
     cfg.summary =
       'Configured canopy tent: ' +
       label('size', cfg.size) +
@@ -97,7 +111,7 @@
     var product = form.elements && form.elements.product;
     var message = form.elements && form.elements.message;
     if (product && !product.value.trim()) {
-      product.value = 'Custom canopy tent - ' + cfg.sku;
+      product.value = (document.documentElement.lang === 'de' ? 'Individuelles Faltzelt - ' : 'Custom canopy tent - ') + cfg.sku;
     }
     if (message) {
       var current = String(message.value || '').trim();

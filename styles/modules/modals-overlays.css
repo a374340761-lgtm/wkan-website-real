@@ -824,6 +824,18 @@ footer {
     display: block;
 }
 
+@media (hover: hover) and (pointer: fine) {
+    .lang-dropdown:hover .lang-menu {
+        display: block;
+    }
+
+    .lang-menu::before {
+        content: "";
+        position: absolute;
+        inset: -12px 0 100%;
+    }
+}
+
 /* 选项变大，变成"整块可点"，不再难点 */
 .lang-item {
     width: 100%;
@@ -841,6 +853,11 @@ footer {
 
 .lang-item:hover {
     background: rgba(0, 0, 0, .06);
+}
+
+a.lang-item {
+    display: block;
+    text-decoration: none;
 }
 
 /* 当前语言高亮（像你截图那样） */

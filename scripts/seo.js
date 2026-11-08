@@ -246,7 +246,7 @@
         description: getDescription(),
         isPartOf: { '@id': BASE_URL + '/#website' },
         about: { '@id': BASE_URL + '/#organization' },
-        inLanguage: /^\/zh(\/|$)/i.test(path) ? 'zh-CN' : 'en'
+        inLanguage: /^\/zh(\/|$)/i.test(path) ? 'zh-CN' : /^\/de(\/|$)/i.test(path) ? 'de' : 'en'
       });
       document.head.appendChild(script);
     } catch (e) {}

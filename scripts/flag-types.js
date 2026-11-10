@@ -222,12 +222,14 @@
         storyEn: [
           'The giant flagpole is ideal for outdoor events, conferences and sports events.',
           'The telescopic aluminium flag pole fits into a plastic molded base that can be filled with water for stability.',
-          'The flag is held on using a top cap and rings and can rotate with the wind direction.'
+          'The flag is held on using a top cap and rings and can rotate with the wind direction.',
+          'The 7 m configuration shown below uses a top crossbar, flag attachment rings and support braces connected to the water-fillable base.'
         ].join('\n'),
         storyZh: [
           '户外注水旗杆适用于户外活动、会议、体育赛事等场景。',
           '伸缩铝旗杆插入可注水底座以增强稳定性。',
-          '旗面通过顶帽与环固定，可随风向自由旋转。'
+          '旗面通过顶帽与环固定，可随风向自由旋转。',
+          '下方实拍展示 7 米款。旗面上沿穿入横杆，侧边扣眼通过固定环连接旗杆，底部由斜撑连接注水底座。'
         ].join('\n'),
         heroImage: FLAG_HERO('outdoor-giant-flag-pole-display-hero.png'),
         guideImage: `${CATALOG_BROCHURE_BASE}/12.png`,
@@ -247,6 +249,33 @@
             { model: 'AD-11Z03', frameSize: '7', graphicSize: '1.2 × 5', nw: '23', gw: '25', pcs: '1 / 2', packing: '81×42×43 / 13×13×164' }
           ]
         },
+        exampleImagesTitleZh: '7 米注水旗实拍',
+        exampleImagesTitleEn: '7 m Water-Base Flag Photos',
+        exampleImagesSubtitleZh: '从整套安装效果查看底座、斜撑及旗面固定细节。点击图片可放大查看。',
+        exampleImagesSubtitleEn: 'See the assembled flag, base, support braces and flag attachment. Select a photo to view it at full size.',
+        exampleImages: [
+          {
+            src: 'files/95006/7m-water-base-flag/assembled-flag.webp',
+            captionZh: '7 米注水旗整套安装效果',
+            captionEn: 'Assembled 7 m water-base flag',
+            width: 1086,
+            height: 1448
+          },
+          {
+            src: 'files/95006/7m-water-base-flag/water-base-and-braces.webp',
+            captionZh: '注水底座与旗杆斜撑',
+            captionEn: 'Water-fillable base and pole support braces',
+            width: 1200,
+            height: 1600
+          },
+          {
+            src: 'files/95006/7m-water-base-flag/pole-and-flag-attachment.webp',
+            captionZh: '顶部横杆接头与旗面固定环',
+            captionEn: 'Top crossbar joint and flag attachment ring',
+            width: 1200,
+            height: 1600
+          }
+        ],
         infoBlocks: [
           {
             titleEn: 'Water Base',

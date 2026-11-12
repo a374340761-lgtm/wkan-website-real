@@ -1,5 +1,5 @@
 /**
- * Build scripts/product-seo-map.js from scripts/products.js (Node vm sandbox).
+ * Build scripts/product-seo-map.js from scripts/products.js?v=20261112-inflatable-r1 (Node vm sandbox).
  * Canonical HTML pages, including static product pages, are owned by build-page-sitemap.py.
  */
 import fs from 'node:fs';

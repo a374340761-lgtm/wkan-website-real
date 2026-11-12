@@ -469,7 +469,7 @@ const context = {
 };
 context.window = context;
 vm.createContext(context);
-vm.runInContext(fs.readFileSync('scripts/products.js', 'utf8'), context);
+vm.runInContext(fs.readFileSync('scripts/products.js?v=20261112-inflatable-r1', 'utf8'), context);
 console.log(JSON.stringify(vm.runInContext('new ProductManager().products', context).map(product =>
     [product.nameEn, product.descriptionEn].filter(Boolean))));
 """
@@ -658,7 +658,7 @@ def main():
         for tag in soup.select('[data-translate], [data-i18n]'):
             if tag.get_text(strip=True):
                 tag["data-de-static"] = ""
-        script = soup.new_tag("script", src="/scripts/german-dictionary.js")
+        script = soup.new_tag("script", src="/scripts/german-dictionary.js?v=20261112-inflatable-r1")
         script["defer"] = ""
         soup.head.insert(0, script)
         script = soup.new_tag("script", src="/scripts/german-localization.js")
@@ -680,7 +680,7 @@ def main():
                    | {"/news/"})
     dictionary = "window.WK_DE_PATHS = " + json.dumps(paths, ensure_ascii=False) + ";\n"
     dictionary += "window.WK_DE_TEXT = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n"
-    (ROOT / "scripts/german-dictionary.js").write_text(dictionary, encoding="utf-8")
+    (ROOT / "scripts/german-dictionary.js?v=20261112-inflatable-r1").write_text(dictionary, encoding="utf-8")
     (ROOT / "de/locale-map.json").write_text(json.dumps({
         "enabled": args.release,
         "paths": paths,

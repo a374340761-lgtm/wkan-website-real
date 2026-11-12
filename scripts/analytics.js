@@ -25,6 +25,29 @@
     }
   }
 
+  // Keep only a bounded source classification; never store referrer URLs or queries.
+  const sourceKey = 'wk_session_source_v1';
+  function sessionSource() {
+    if (!readAnalyticsConsent()) return 'unknown';
+    try {
+      const saved = sessionStorage.getItem(sourceKey);
+      const allowed = ['chatgpt', 'gemini', 'perplexity', 'copilot', 'other_referral', 'direct_or_unknown'];
+      if (allowed.includes(saved)) return saved;
+      let host = '';
+      try { host = new URL(document.referrer).hostname.toLowerCase(); } catch {}
+      const matches = (domain) => host === domain || host.endsWith('.' + domain);
+      let source = 'direct_or_unknown';
+      if (matches('chatgpt.com') || matches('chat.openai.com')) source = 'chatgpt';
+      else if (matches('gemini.google.com')) source = 'gemini';
+      else if (matches('perplexity.ai')) source = 'perplexity';
+      else if (matches('copilot.microsoft.com')) source = 'copilot';
+      else if (host && host !== window.location.hostname) source = 'other_referral';
+      sessionStorage.setItem(sourceKey, source);
+      return source;
+    } catch { return 'unknown'; }
+  }
+  window.wkInquiryAttribution = sessionSource;
+
   function gtagCommand() {
     window.dataLayer = window.dataLayer || [];
     window.dataLayer.push(arguments);
@@ -32,12 +55,14 @@
 
   function grantAnalyticsConsent() {
     if (!readAnalyticsConsent()) return;
+    sessionSource();
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || gtagCommand;
     window.gtag('consent', 'update', { analytics_storage: 'granted' });
   }
 
   function denyAnalyticsConsent() {
+    try { sessionStorage.removeItem(sourceKey); } catch {}
     if (typeof window.gtag === 'function') {
       window.gtag('consent', 'update', { analytics_storage: 'denied' });
     }
@@ -50,7 +75,7 @@
       const method = params && params.contact_method;
       if (!methods[name] || !methods[name].includes(method)) return;
       // Never forward labels, query strings, form values or arbitrary parameters.
-      const safe = { contact_method: method, page_path: window.location.pathname };
+      const safe = { contact_method: method, page_path: window.location.pathname, acquisition_source: sessionSource() };
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push(Object.assign({ event: name }, safe));
     } catch (error) { /* Analytics must never interrupt an inquiry. */ }

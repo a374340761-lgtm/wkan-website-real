@@ -42,6 +42,8 @@ function buildInquiryPayload(form) {
     landingPage = window.location.href;
   }
 
+  const acquisitionSource = typeof window.wkInquiryAttribution === 'function' ? window.wkInquiryAttribution() : 'unknown';
+
   const inquiryId = (() => {
     try {
       if (window.crypto && typeof window.crypto.randomUUID === 'function') {
@@ -65,7 +67,8 @@ function buildInquiryPayload(form) {
     target_market: get('target_market'),
     deadline: get('deadline'),
     // Preserve the source even with an Apps Script using only the existing columns.
-    message: [get('message'), inquirySourcePage() ? 'Product / source page: ' + inquirySourcePage() : ''].filter(Boolean).join('\n\n'),
+    message: [get('message'), 'Acquisition source (observed referral): ' + acquisitionSource, inquirySourcePage() ? 'Product / source page: ' + inquirySourcePage() : ''].filter(Boolean).join('\n\n'),
+    acquisition_source: acquisitionSource,
     source_page: inquirySourcePage(),
     page_url: window.location.href,
     landing_page: landingPage,

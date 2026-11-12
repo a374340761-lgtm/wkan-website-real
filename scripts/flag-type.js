@@ -519,7 +519,7 @@
     return `
       <div class="tent-type-detail">
         <div class="tent-type-detail__head">
-          <h2 class="tent-type-detail__title">${title}</h2>
+          <h1 class="tent-type-detail__title">${title}</h1>
         </div>
         ${renderHero(item)}
         ${renderPdfGuide(item)}
@@ -550,11 +550,21 @@
     const bc = document.getElementById('flagTypeBreadcrumb');
     if (bc) {
       const fallback = (window.multiLang && typeof window.multiLang.t === 'function') ? window.multiLang.t('view_type_button') : '';
+      bc.removeAttribute('data-translate');
       bc.textContent = (getCurrentLang() === 'zh' ? (item.nameZh || item.nameEn || fallback) : (item.nameEn || item.nameZh || fallback));
     }
 
     const renderWithVariant = (selectedKey) => {
+      const staticHeading = document.querySelector('main h1:not(.tent-type-detail__title)');
+      if (staticHeading) staticHeading.hidden = true;
       root.innerHTML = renderPage(item, selectedKey);
+      const zh = getCurrentLang() === 'zh';
+      const de = /^\/de\//.test(location.pathname);
+      const name = zh ? (item.nameZh || item.nameEn) : de ? ((window.WK_DE_TEXT || {})[item.nameEn] || item.nameEn) : item.nameEn;
+      document.title = `${name} | ${zh ? '旗帜与旗杆' : de ? 'Beachflags und Zubehör' : 'Flags & Poles'} | WaiKwan`;
+      ['meta[property="og:title"]', 'meta[name="twitter:title"]'].forEach(selector => {
+        const el = document.querySelector(selector); if (el) el.content = document.title;
+      });
 
       bindFlagTypeRfq(root);
 

@@ -299,6 +299,84 @@ class ProductManager {
     constructor() {
         this.products = [
 {
+  "id": 98001,
+  "sku": "inflatable",
+  "category": "inflatable",
+  "subcategory": "inflatable",
+  "nameZh": "充气帐篷",
+  "nameEn": "Inflatable Tent",
+  "image": "images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg",
+  "customRfqUrl": "/tent-type.html?type=inflatable",
+  "model": "inflatable",
+  "shortZh": "快速充气搭建，适合活动与品牌展示。",
+  "shortEn": "Fast inflatable setup for events and branding."
+},
+{
+  "id": 98002,
+  "sku": "inflatable-three-leg-tent",
+  "category": "inflatable",
+  "subcategory": "inflatable-three-leg-tent",
+  "nameZh": "三脚充气帐篷",
+  "nameEn": "Three-Leg Inflatable Tent",
+  "image": "news/images/Sign%20China%202026/sign-china-2026-shanghai-06.webp",
+  "customRfqUrl": "/tent-type.html?type=inflatable-three-leg-tent",
+  "model": "inflatable-three-leg-tent",
+  "shortZh": "闭气式三角 / V 型结构，适合展会、路演与品牌活动。",
+  "shortEn": "Sealed-air triangular / V-shaped shelter for exhibitions, roadshows and brand events."
+},
+{
+  "id": 98003,
+  "sku": "inflatable-single-chair",
+  "category": "inflatable",
+  "subcategory": "inflatable-single-chair",
+  "nameZh": "单人充气椅",
+  "nameEn": "Single-Seat Inflatable Chair",
+  "image": "news/images/Sign%20China%202026/sign-china-2026-shanghai-12.webp",
+  "customRfqUrl": "/tent-type.html?type=inflatable-single-chair",
+  "model": "inflatable-single-chair",
+  "shortZh": "适合展位接待与活动休息区的可定制单人充气座椅。",
+  "shortEn": "Custom-branded inflatable seating for exhibition reception and event lounge areas."
+},
+{
+  "id": 98004,
+  "sku": "inflatable-double-chair",
+  "category": "inflatable",
+  "subcategory": "inflatable-double-chair",
+  "nameZh": "双人充气椅",
+  "nameEn": "Two-Seat Inflatable Chair",
+  "image": "news/images/Sign%20China%202026/sign-china-2026-shanghai-13.webp",
+  "customRfqUrl": "/tent-type.html?type=inflatable-double-chair",
+  "model": "inflatable-double-chair",
+  "shortZh": "适合洽谈与休息空间的可定制双人充气座椅。",
+  "shortEn": "Custom-branded two-seat inflatable furniture for meeting and lounge spaces."
+},
+{
+  "id": 98005,
+  "sku": "inflatable-arch",
+  "category": "inflatable",
+  "subcategory": "inflatable-arch",
+  "nameZh": "充气拱门",
+  "nameEn": "Inflatable Arch",
+  "image": "news/images/Sign%20China%202026/sign-china-2026-shanghai-05.webp",
+  "customRfqUrl": "/tent-type.html?type=inflatable-arch",
+  "model": "inflatable-arch",
+  "shortZh": "用于入口、赛事与品牌活动的定制印刷充气门型。",
+  "shortEn": "Custom-printed inflatable entrance structure for races, events and brand activations."
+},
+{
+  "id": 98006,
+  "sku": "inflatable-column",
+  "category": "inflatable",
+  "subcategory": "inflatable-column",
+  "nameZh": "充气圆柱",
+  "nameEn": "Inflatable Display Column",
+  "image": "news/images/Sign%20China%202026/sign-china-2026-shanghai-09.webp",
+  "customRfqUrl": "/tent-type.html?type=inflatable-column",
+  "model": "inflatable-column",
+  "shortZh": "适合入口导视、展位陈列与品牌活动的定制展示柱。",
+  "shortEn": "Custom-branded display columns for entrances, exhibition stands and event wayfinding."
+},
+{
     "id": "market-stall-1x1-40mm",
     "sku": "MARKET-STALL-1X1-40MM",
     "category": "displays",
@@ -5401,6 +5479,7 @@ window.WK_getProductTypePageUrl = function (product) {
     if (idNum === 2001) return 'tent-type.html?type=folding30';
     if (idNum === 2002) return 'tent-type.html?type=folding40';
     if (idNum === 2003) return 'tent-type.html?type=folding50';
+    if (p.category === 'inflatable' && p.subcategory) return 'tent-type.html?type=' + encodeURIComponent(p.subcategory);
     const cat = String(p.category || '').toLowerCase();
     const sub = String(p.subcategory || '').trim();
     const type = String(p.type || '').trim();

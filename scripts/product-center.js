@@ -1141,7 +1141,7 @@
     const data = window.TENT_TYPES;
     const folding = data && Array.isArray(data.folding) ? data.folding : [];
     const event = data && Array.isArray(data.event) ? data.event : [];
-    const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable : [];
+    const inflatable = data && Array.isArray(data.inflatable) ? data.inflatable.filter(item => item.type === 'inflatable') : [];
 
     container.innerHTML = [
       `<div class="tents-hub__buyer-intro wk-card" style="max-width:980px;margin:0 auto 20px;padding:16px 18px;border-radius:14px;">
@@ -1239,6 +1239,7 @@
       } else {
         restoreDefaultProductCenterHead();
       }
+      if (c === 'inflatable') { renderInflatableHub(); }
       if (c === 'flags') {
         renderFlagsHub();
       }
@@ -1248,7 +1249,7 @@
       if (c === 'racegate') {
         renderRacegateHub();
       }
-      if (c && c !== 'tents' && c !== 'flags' && c !== 'accessories' && c !== 'racegate') {
+      if (c && c !== 'tents' && c !== 'flags' && c !== 'accessories' && c !== 'racegate' && c !== 'inflatable') {
         renderSubcategoryHub(c);
       }
     });

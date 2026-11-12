@@ -1334,6 +1334,7 @@ function initNavigation() {
     enhanceProductsDropdownExtras();
     enhanceFlagsDropdown();
     enhanceTentsDropdown();
+    enhanceInflatableDropdown();
     enhanceDisplaysDropdown();
     enhanceRacegateDropdown();
     enhanceFurnitureDropdown();
@@ -1508,6 +1509,51 @@ function ensureAboutAndResourcesNavigation() {
     }
 }
 
+
+function enhanceInflatableDropdown() {
+    const rows = [
+        ['inflatable-three-leg-tent', '三脚充气帐篷', 'Three-Leg Inflatable Tent', 'Dreibeiniges aufblasbares Zelt'],
+        ['inflatable-double-chair', '双人充气椅子', 'Two-Seat Inflatable Chair', 'Aufblasbarer Zweisitzer'],
+        ['inflatable-single-chair', '单人充气椅子', 'Single-Seat Inflatable Chair', 'Aufblasbarer Einzelsessel'],
+        ['inflatable-column', '充气柱', 'Inflatable Display Column', 'Aufblasbare Werbesäule'],
+        ['inflatable-arch', '充气拱门', 'Inflatable Arch', 'Aufblasbarer Torbogen'],
+        ['inflatable', '充气帐篷', 'Inflatable Tent', 'Aufblasbares Zelt']
+    ];
+    const lang = /^\/de\//.test(location.pathname) ? 'de' : getCurrentLangSafe();
+    const label = (zh, en, de) => lang === 'de' ? de : lang === 'zh' ? zh : en;
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        if (!menu.querySelector('[data-tents-submenu]') || menu.querySelector('[data-inflatable-submenu]')) return;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'dropdown-item-with-submenu';
+        wrapper.dataset.inflatableSubmenu = '1';
+        const link = document.createElement('a');
+        link.href = wkLocalizedInternalLinkSafe('/product-center.html?cat=inflatable');
+        link.textContent = label('充气系列', 'Inflatable Series', 'Aufblasbare Produkte');
+        link.setAttribute('aria-haspopup', 'true');
+        link.setAttribute('aria-expanded', 'false');
+        const caret = document.createElement('span');
+        caret.className = 'wk-submenu-caret'; caret.textContent = '›'; link.appendChild(caret);
+        const sub = document.createElement('div'); sub.className = 'dropdown-submenu';
+        const overview = document.createElement('a'); overview.href = link.href;
+        overview.textContent = label('查看全部充气产品', 'All Inflatable Products', 'Alle aufblasbaren Produkte'); sub.appendChild(overview);
+        rows.forEach(([type, zh, en, de]) => {
+            const a = document.createElement('a');
+            a.href = wkLocalizedInternalLinkSafe('/tent-type.html?type=' + type);
+            a.textContent = label(zh, en, de); sub.appendChild(a);
+        });
+        wrapper.append(link, sub);
+        menu.querySelector('[data-tents-submenu]').after(wrapper);
+        link.addEventListener('click', event => {
+            if (!wkShouldToggleNestedSubmenuOnClick()) return;
+            event.preventDefault();
+            const open = wrapper.classList.contains('is-open');
+            if (!open) wkCloseNestedSubmenuPeers(menu, wrapper);
+            wrapper.classList.toggle('is-open');
+            link.setAttribute('aria-expanded', String(!open));
+        });
+    });
+}
+
 function enhanceTentsDropdown() {
     // Find the Products dropdown menu on the current page.
     const menus = Array.from(document.querySelectorAll('.nav-item-dropdown .dropdown-menu'));
@@ -1526,7 +1572,7 @@ function enhanceTentsDropdown() {
         { type: 'inflatable', nameEn: 'Inflatable Tent', nameZh: '充气帐篷' }
     ];
 
-    const getTypes = () => [{"type":"folding30","nameEn":"30 Square Tube Iron Frame","nameZh":"30 方管铁架"},{"type":"folding40","nameEn":"40 Hexagon Aluminum Frame","nameZh":"40 六角铝合金架"},{"type":"folding50","nameEn":"50 Hexagon Aluminum Frame","nameZh":"50 六角铝合金架"},{"type":"star_1","nameEn":"Star Tent (Type 1)","nameZh":"星星帐篷（款式1）"},{"type":"star_2","nameEn":"Star Tent (Type 2)","nameZh":"星星帐篷（款式2）"},{"type":"awning","nameEn":"Awning Tent","nameZh":"天幕帐篷"},{"type":"six_sided","nameEn":"Six-sided Tent","nameZh":"六边帐篷"},{"type":"inflatable","nameEn":"Inflatable Tent","nameZh":"充气帐篷"},{"type":"inflatable-three-leg-tent","nameEn":"Three-Leg Inflatable Tent","nameZh":"三脚充气帐篷"},{"type":"inflatable-single-chair","nameEn":"Single-Seat Inflatable Chair","nameZh":"单人充气椅"},{"type":"inflatable-double-chair","nameEn":"Two-Seat Inflatable Chair","nameZh":"双人充气椅"},{"type":"inflatable-arch","nameEn":"Inflatable Arch","nameZh":"充气拱门"},{"type":"inflatable-column","nameEn":"Inflatable Display Column","nameZh":"充气圆柱"}];
+    const getTypes = () => [{"type":"folding30","nameEn":"30 Square Tube Iron Frame","nameZh":"30 方管铁架"},{"type":"folding40","nameEn":"40 Hexagon Aluminum Frame","nameZh":"40 六角铝合金架"},{"type":"folding50","nameEn":"50 Hexagon Aluminum Frame","nameZh":"50 六角铝合金架"},{"type":"star_1","nameEn":"Star Tent (Type 1)","nameZh":"星星帐篷（款式1）"},{"type":"star_2","nameEn":"Star Tent (Type 2)","nameZh":"星星帐篷（款式2）"},{"type":"awning","nameEn":"Awning Tent","nameZh":"天幕帐篷"},{"type":"six_sided","nameEn":"Six-sided Tent","nameZh":"六边帐篷"},{"type":"inflatable","nameEn":"Inflatable Tent","nameZh":"充气帐篷"},{"type":"inflatable-three-leg-tent","nameEn":"Three-Leg Inflatable Tent","nameZh":"三脚充气帐篷"},{"type":"inflatable-single-chair","nameEn":"Single-Seat Inflatable Chair","nameZh":"单人充气椅"},{"type":"inflatable-double-chair","nameEn":"Two-Seat Inflatable Chair","nameZh":"双人充气椅"},{"type":"inflatable-arch","nameEn":"Inflatable Arch","nameZh":"充气拱门"},{"type":"inflatable-column","nameEn":"Inflatable Display Column","nameZh":"充气圆柱"}].filter((item) => !item.type.startsWith("inflatable-"));
 
     // Tent series: all go to tent-type.html?type=… (procurement hub), not product-detail PDP.
     const getTentTypeHref = (type) => {

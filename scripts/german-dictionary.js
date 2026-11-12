@@ -6228,5 +6228,16 @@ window.WK_DE_TEXT = {
   "；本页聚焦": ";Seitenfokus",
   "；框架等级见": ";for Frameworks, siehe",
   "；生产前可协助安全区与拼缝位置说明。印前详见": "; Beschreibung des Standorts der Sicherheitszone und der Collage vor der Produktion.",
-  "｜规格与实拍｜伟群帐篷": "♪ Spekulationen und Realität ♪ ♪ Zelte"
+  "｜规格与实拍｜伟群帐篷": "♪ Spekulationen und Realität ♪ ♪ Zelte",
+"Inflatable product series": "Aufblasbare Produkte",
+"Explore sealed-air event tents, branded seating, arches and display columns. Open a series for exhibition photos, specifications and quotation requirements.": "Entdecken Sie aufblasbare Zelte, Sitzmöbel, Torbögen und Werbesäulen. Wählen Sie eine Serie für Messefotos, technische Daten und Angebotsanfragen.",
+"Inflatable manufacturing": "Fertigung aufblasbarer Produkte",
+"Shanghai exhibition photos": "Messefotos aus Shanghai",
+"Inflatable Tents & Displays": "Aufblasbare Zelte und Werbedisplays",
+"Three-Leg Inflatable Tent": "Dreibeiniges aufblasbares Zelt",
+"Single-Seat Inflatable Chair": "Aufblasbarer Einzelsessel",
+"Two-Seat Inflatable Chair": "Aufblasbarer Zweisitzer",
+"Inflatable Display Column": "Aufblasbare Werbesäule",
+"Inflatable Arch": "Aufblasbarer Torbogen",
+"Share this tent types guide": "Diesen Zeltserien-Ratgeber teilen"
 };

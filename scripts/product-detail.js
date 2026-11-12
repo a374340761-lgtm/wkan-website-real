@@ -226,7 +226,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const seoTitleFull = (lang === 'zh')
             ? String(product.seoTitleZh || '').trim()
             : String(product.seoTitleEn || '').trim();
-        document.title = seoTitleFull || `${name} | ${brandSuffix}`;
+        document.title = /^\/de\//.test(location.pathname)
+            ? `${(window.WK_DE_TEXT || {})[product.nameEn] || name} | Zelte und Displays | WaiKwan`
+            : seoTitleFull || `${name} | ${brandSuffix}`;
         const metaDesc = document.querySelector('meta[name="description"]');
         const seoDescCustom = (lang === 'zh')
             ? String(product.seoDescriptionZh || '').trim()

@@ -1,0 +1,26 @@
+[
+  {
+    "locale": "en",
+    "cards": 6,
+    "details": 6,
+    "desktop_menu": true,
+    "mobile_menu": true,
+    "photos": true
+  },
+  {
+    "locale": "zh/",
+    "cards": 6,
+    "details": 6,
+    "desktop_menu": true,
+    "mobile_menu": true,
+    "photos": true
+  },
+  {
+    "locale": "de/",
+    "cards": 6,
+    "details": 6,
+    "desktop_menu": true,
+    "mobile_menu": true,
+    "photos": true
+  }
+]

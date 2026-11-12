@@ -256,6 +256,8 @@
   }
 
   function setTentTypeHubVisibilityForDetail(detailOn) {
+    const framePromo = document.querySelector('[aria-labelledby="flat-tube-frame-heading"]');
+    if (framePromo) framePromo.hidden = !!detailOn;
     const lead = document.getElementById('tentTypeStaticLead');
     if (lead) {
       lead.hidden = !!detailOn;
@@ -425,7 +427,7 @@
       model,
       size,
       weight,
-      stockId: stockId || null,
+      stockId: stockId || ({"inflatable": 98001, "inflatable-three-leg-tent": 98002, "inflatable-single-chair": 98003, "inflatable-double-chair": 98004, "inflatable-arch": 98005, "inflatable-column": 98006})[item.type] || null,
       findModel: stockId ? null : (model || null)
     };
     const enc = encodeURIComponent(JSON.stringify(payload));
@@ -627,7 +629,7 @@
   function renderTableFromSpec(item, selectedVariantKey) {
     const lang = getCurrentLang();
     const verifiedKey = STOCK_TENT_ID_BY_TYPE[item.type] || `tent:${item.type}`;
-    const verified = typeof window.WK_renderVerifiedSpecs === 'function' ? window.WK_renderVerifiedSpecs(verifiedKey, lang, STOCK_TENT_ID_BY_TYPE[item.type] ? (r,g) => tentTypeRfqButtonHtml(item, {...r, model: `${r.model} · ${lang === 'zh' ? g.titleZh : g.titleEn}`, weight:r.weight ? `${r.weight} KG` : ''}, g.titleEn) : null) : '';
+    const verified = typeof window.WK_renderVerifiedSpecs === 'function' ? window.WK_renderVerifiedSpecs(verifiedKey, lang, (STOCK_TENT_ID_BY_TYPE[item.type] || item.type.startsWith('inflatable')) ? (r,g) => tentTypeRfqButtonHtml(item, {...r, model: `${r.model || (lang === 'zh' ? item.nameZh : item.nameEn)} · ${lang === 'zh' ? g.titleZh : g.titleEn}`, weight:r.weight ? `${r.weight} KG` : ''}, g.titleEn) : null) : '';
     if (verified) {
       // Keep the existing photographs, story and related links, replacing only the parameter table.
       return `<div class="tent-type-detail">${FOLDING_STOCK_TYPES.has(item.type) ? '' : `<h1>${safe(lang === 'zh' ? item.nameZh : item.nameEn)}</h1>`}${verified}${renderStory(item)}${renderExampleImages(item)}${renderInfoBlocks(item)}${renderPdfGuide(item)}${renderRelatedLinks(item)}</div>`;
@@ -1048,6 +1050,7 @@
         bc.textContent = ttT('tent_type_breadcrumb_not_found');
       } else {
         const lang = getCurrentLang();
+        bc.removeAttribute('data-translate');
         bc.textContent = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
       }
     }
@@ -1077,7 +1080,14 @@
       const lang = getCurrentLang();
       const name = lang === 'zh' ? safe(item.nameZh) : safe(item.nameEn);
       if (!setInflatableSeriesHeadMeta(item)) {
-        document.title = `${name} | Tent Types | WaiKwan`;
+        document.title = `${name} | ${item.type.startsWith('inflatable') ? (lang === 'zh' ? '充气系列' : 'Inflatable Series') : (lang === 'zh' ? '帐篷系列' : 'Tent Types')} | WaiKwan`;
+        ['meta[property="og:title"]', 'meta[name="twitter:title"]'].forEach(selector => {
+          const el = document.querySelector(selector); if (el) el.content = document.title;
+        });
+        const summary = (lang === 'zh' ? (item.hubDescZh || item.descriptionZh || item.storyZh) : (item.hubDescEn || item.descriptionEn || item.storyEn)) || name;
+        ['meta[name="description"]', 'meta[property="og:description"]', 'meta[name="twitter:description"]'].forEach(selector => {
+          const el = document.querySelector(selector); if (el) el.content = String(summary).replace(/\s+/g, ' ').slice(0, 240);
+        });
       }
     }
 
@@ -1096,6 +1106,16 @@
 
     if (item.type === 'tent_accessories' && typeof window.WK_mountAccessoriesGrid === 'function') {
       window.WK_mountAccessoriesGrid('tentTypeAccessoriesGrid', { search: false });
+    }
+
+    // Dynamic titles must use the active German locale as well as the visible heading.
+    if (/^\/de\//.test(location.pathname)) {
+      const dict = window.WK_DE_TEXT || {};
+      const germanName = ({folding30:'30er Faltzelt mit Stahlrahmen',folding40:'40er Faltzelt mit Aluminium-Sechskantrahmen',folding50:'50er Faltzelt mit Aluminium-Sechskantrahmen'})[item.type] || dict[item.nameEn] || item.nameEn;
+      document.title = `${germanName} | ${item.type.startsWith('inflatable') ? 'Aufblasbare Produkte' : 'Zeltserie'} | WaiKwan`;
+      ['meta[property="og:title"]', 'meta[name="twitter:title"]'].forEach(selector => {
+        const el = document.querySelector(selector); if (el) el.content = document.title;
+      });
     }
 
     // Bind variant buttons (inflatable tents)

@@ -1,0 +1,8 @@
+﻿优先级,对象,第三方页面/操作入口,目标页,当前状态,下一步（用户发送/账号操作）,验收证据
+P1,APPPEXPO,https://exhibitor.apppexpo.com/gyz/index.html,https://www.waikwantent.com/,待核：公开入口为动态查询模板，未取得公司独立页,请主办方检索中文全称、补充公开 Website 字段,无需登录公司页、实际 href、最终跳转、rel、日期
+P1,SIGN CHINA,https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html,https://www.waikwantent.com/,待核：本次首屏名单未找到公司独立条目,请主办方提供公开公司详情并补官网；可另附 /news/sign-china-2026-shanghai.html,无需登录详情页、公司名及实际官网链接
+P1,Mati Logistics,https://www.matilogistics.com/supplier/guangxi-waikwan-tent-manufacturing-co-ltd,https://www.waikwantent.com/,确认品牌提及；Website 被登录门槛遮挡；不是公开回链,请求认领/更正公司名和品类，将官网字段公开,未登录页面 Website 的真实 href、跳转与 rel
+P2,广交会140届,https://exhibitor.cantonfair.org.cn/#/publishSum,https://www.waikwantent.com/,公开档案待核；展位12.1F29–30由用户2026-11-12确认，非139届PDF证明,由企业易捷通核对本届条目并申请公开官网字段,140届独立档案/本届文件、公开公司URL及官网href
+P2,玉林新闻网,https://m.gxylnews.com.cn/xwk/xsq/197001/t19700122_971023.html,https://www.waikwantent.com/company-profile.html,附件确认提及；本次TLS证书过期，未重新确认正文,请编辑核对原文并询问能否补充公司官网作为资料来源,可访问报道及实际链接；不要求付费传递排名权重
+P2,Mysteel,https://news.mysteel.com/a/26092910/1EFA1AF7EBD08558.html,https://www.waikwantent.com/company-profile.html,确认工厂项目提及；未核到官网入站链接,通过网站公开联系入口请求增加企业资料链接,公开报道的实际href与rel
+P3,MaiMaiB2B,https://suzhou.maimaib2b.com/Shop/806419/,https://www.waikwantent.com/,附件线索，本次未复核；2021年产品声明不能直接复用,核对账号归属、旧阻燃声明及官网字段后申请更正,更正前后公开档案、真实官网href及日期

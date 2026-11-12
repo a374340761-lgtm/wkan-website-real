@@ -1,0 +1,152 @@
+[
+  {
+    "file": "about-us.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "company-profile.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "zh/about-us.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "news/the-139th-canton-fair-phase-3.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "news/apppexpo-2026-shanghai.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "zh/news/apppexpo-2026-shanghai.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "news/sign-china-2026-shanghai.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "zh/news/sign-china-2026-shanghai.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "manufacturing-capabilities.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "de/about-us.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "de/company-profile.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "de/manufacturing-capabilities.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "de/news/the-139th-canton-fair-phase-3.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "de/news/apppexpo-2026-shanghai.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "de/news/sign-china-2026-shanghai.html",
+    "width": 390,
+    "pass": true
+  },
+  {
+    "file": "about-us.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "company-profile.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "zh/about-us.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "news/the-139th-canton-fair-phase-3.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "news/apppexpo-2026-shanghai.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "zh/news/apppexpo-2026-shanghai.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "news/sign-china-2026-shanghai.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "zh/news/sign-china-2026-shanghai.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "manufacturing-capabilities.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "de/about-us.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "de/company-profile.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "de/manufacturing-capabilities.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "de/news/the-139th-canton-fair-phase-3.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "de/news/apppexpo-2026-shanghai.html",
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "file": "de/news/sign-china-2026-shanghai.html",
+    "width": 1440,
+    "pass": true
+  }
+]

@@ -307,12 +307,12 @@
         {
           '@type': 'Organization',
           '@id': BASE_URL + '/#organization',
-          name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd',
-          alternateName: 'WaiKwan',
+          name: 'Guangxi WaiKwan Tent Manufacturing Co., Ltd.',
+          legalName: '广西伟群帐篷制造有限公司',
+          alternateName: ['WaiKwan', 'WaiKwan Tent'],
           url: BASE_URL + '/',
-          logo: toAbsoluteUrl('images/google-search-logo.png'),
+          logo: BASE_URL + '/images/waikwancompanylogo.png',
           description: 'Factory-direct manufacturer of custom canopy tents, beach flags and portable display systems. OEM/ODM support, fast quotes, global export.',
-          foundingDate: '2010',
           contactPoint: {
             '@type': 'ContactPoint',
             telephone: '+86-138-2454-0280',

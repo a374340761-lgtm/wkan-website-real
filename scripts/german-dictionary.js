@@ -4929,7 +4929,7 @@ window.WK_DE_TEXT = {
   "广州市伟群展示器材有限公司快幕秀。拉网.xls": "Eine schnelle Show in Guangzhou City's Magnificent Show.",
   "广西伟群制造有限公司家具折叠桌布价格表.xlsx": "Tabellenpreis für Möbel Klapptischdecken für Guangxi Group Manufacturing Ltd. xlsx",
   "广西伟群帐篷充气桌椅报价表.xlsx": "Guangxi Zelt aufblasbare Tisch und Stuhl Zitate. xlsx",
-  "广西伟群帐篷制造有限公司": "Guangxi Tent Construction Co. Ltd.",
+  "广西伟群帐篷制造有限公司": "广西伟群帐篷制造有限公司",
   "广西伟群帐篷制造有限公司2025改.pdf": "Guangxi Tent Construction Co. Ltd. 2025 zu .pdf",
   "广西伟群帐篷制造有限公司300DPU防水布热转印.xls": "Guangxi Tents Manufacturing Co. Ltd. 300DPU Waterproof Bottage Reprint.xls",
   "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx": "Guangxi Group Tent Manufacturing Company Ltd., Top Tent Tent Room Zeitung.xlsx",

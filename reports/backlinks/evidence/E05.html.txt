@@ -1,0 +1,3040 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="generator" content="" />
+		<title>2026 Shanghai Fair Exhibitor List</title>
+				<link href="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20260429/1460_1777442711484669.jpg" rel="shortcut icon" type="image/x-icon" />
+				<link rel="stylesheet" href="https://public.trust-im.com/en/theme/default/css/countrycodeimg.css?v=01" />
+		<link href="https://public.trust-im.com/en/theme/default/css/swiper-bundle.min.css?v=042801" rel="stylesheet" type="text/css" />
+		<link href="https://public.trust-im.com/en/theme/default/exhibitor_list.css?v=072901" rel="stylesheet" type="text/css" />
+		<link href="https://public.trust-im.com/en/theme/default/css/newexhibitor.css?v=102202" rel="stylesheet" type="text/css" />
+		<link href="https://public.trust-im.com/en/theme/default/css/color.css?v=071201" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="https://public.trust-im.com/en/theme/default/js/swiper-bundle.min.js" ></script>
+		<script type="text/javascript" src="https://public.trust-im.com/en/theme/default/js/jquery.min.js"></script>
+		<script type="text/javascript" src="https://public.trust-im.com/en/theme/default/js/md5.js"></script>
+		<script type="text/javascript" src="https://public.trust-im.com/en/theme/default/js/Formencryption.js"></script>
+		<script type="text/javascript" src="https://public.trust-im.com/en/theme/default/js/led_newexhibitor.js?v=102201"></script>
+		<script type="text/javascript" src="https://public.trust-im.com/en/theme/default/js/laydate/laydate.js"></script>
+	</head>
+		<body class="SIGNSZColorBodyBox">
+	
+		<div class="OnlineExhibitionContent">
+			<!--Banner-->
+			<div class="ExhibitorDirectoryBanner">
+				<!--banner内容区域-->
+				<div>
+					<div style="text-align: center;">
+	<div style="position: relative;">
+		<a href="https://www.signchina-sz.com/en/about-the-fair-basic-info.html" target="_blank" style="display: block;">
+			<img src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20261023/1558_1792745595627359.jpg" style="width: 100%;display: block;">
+		</a>
+	</div>
+</div>	
+				</div>
+				<!--banner内容区域 end-->
+
+				<!--切换语言-->
+				<div class="AutoHan">
+					<a class="goExbannercn" href="https://public.trust-im.com/exhibitor_list/signsh2026/38.html" style="display: none;">中</a>
+					<!-- <a style="padding: 0 3px;" href='https://public.trust-im.com/html/exhibitoren/2025/led.html' target="_blank">Shenzhen Fair</a> -->
+				</div>
+				
+				
+				<!-- 倒计时和国家数 -->
+				<div style="text-align: center;position: absolute;right: 70px;top: 8px;display: inline-block;">
+					<style>
+						
+						.CountdownBox,
+						.NumberofcountriesBox {
+							text-align: center;
+						}
+						
+						.CountdownBox p,
+						.NumberofcountriesBox p {
+							margin: 0;
+							padding: 0;
+							display: inline-block;
+							color: #fff;
+							font-size: 16px;
+						}
+						
+						.CountdownTextBox {
+							display: inline-block;
+						}
+						
+						.countdowntext,
+						.countriesText {
+							font-size: 14px;
+							font-weight: bold;
+							display: inline-block;
+							background-image: url(https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20251117/467_1763375172685697.png);
+							line-height: 28px;
+							padding: 0px 8px 0px 8px;
+							text-align: center;
+							background-size: 100% 100%;
+							background-repeat: no-repeat;
+							background-position: left top;
+							color: #fff;
+							margin: 0px;
+						}
+						
+						.NumberofcountriesText {
+							display: inline-block;
+						}
+						
+						.countriesmore {
+							display: inline-block;
+							background-image: url(https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20251117/1548_1763371430824665.png);
+							background-size: 13px auto;
+							background-repeat: no-repeat;
+							background-position: right bottom 2px;
+							padding-right: 15px;
+							color: #0000ee;
+						}
+						
+						.NumberofcountriesBox {
+							margin-top: 7px;
+						}
+						
+					</style>
+					<div class="CountdownBox">
+						<p>Countdown</p>
+						<div class="CountdownTextBox"><span class="countdowntext" style="display: none;">*</span></div>
+						<p>Days</p>
+					</div>
+					<script>
+						
+						$(function() {
+							// 倒计时
+							updateCountdownDisplay()
+						})
+				
+						
+				
+						// 倒计时
+						function updateCountdownDisplay() {
+							var today = new Date();
+							var timeDiff = new Date('2026-09-15').getTime() - today.getTime();
+							var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+							// 更新消息
+							if (daysDiff > 0) {
+								daysDiff = String(daysDiff);
+								daysDiff = daysDiff.split('');
+								var dayshtml = "";
+								for (var i = 0; i < daysDiff.length; i++) {
+									dayshtml += '<span class="countdowntext">' + daysDiff[i] + '</span>'
+								}
+				
+								$('.CountdownTextBox').html(dayshtml);
+							} else {
+								$(".CountdownBox").hide();
+							}
+						}
+						
+					</script>
+				</div>
+				<!-- 倒计时和国家数 end-->
+				
+			</div>
+			
+			
+			
+			
+			<div class="ExhibitionHallContentBox">
+				<!-- 新搜索 -->
+				<div class="NewExhibitionHallSearchBox">
+					<form action="" method="post" id="actionhref">
+					<div class="NewExhibitionHallSearchContent">
+						<div class="NewSearchInputBox">
+							<input placeholder="Search By Keywords" name="keyword" type="text" class="keywordinput" value="" />
+						</div>
+						<div class="NewSearchSubmitBox">
+							<input name="sort" type="hidden" class="CidValue" value="sort" />
+							<input name="submit" class="submitbtn btnGray backSigncolor" type="submit" value="" />
+						</div>
+					</div>
+					</form>
+					<div class="NewExhibitionHallSearchBtn">
+						<a href="https://www.signchina-sz.com/en/about-the-fair-basic-info.html" target="_blank" rel="noopener">Visit Website</a>
+						<a href="https://register.trust-im.com/en/regform?id=96&source_id=2079&source_name=SIG2027SZ-showroom-en&is_vip=1" target="_blank" rel="noopener">VIP Registration</a>
+					</div>
+				</div>
+				
+				<!-- 分类 -->
+				<div class="NewCategoryList">
+					<div class="NewCategoryListDetails NewCategoryListDetailsAll" data=''>
+						<span>All</span>
+					</div>
+					<div class="NewCategoryListDetails" data='spray_sort'>
+						<span>Digital Printing</span>
+					</div>
+					<div class="NewCategoryListDetails" data="digital_sort">
+						<span>Textile Printing</span>
+					</div>
+					<div class="NewCategoryListDetails" data="outdoor_digital_sort">
+						<span>Materials</span>
+					</div>
+					<div class="NewCategoryListDetails" data="acrylic_sort">
+						<span>Panels</span>
+					</div>
+					<div class="NewCategoryListDetails" data="laser_sort">
+						<span>Laser Engraving</span>
+					</div>
+					<div class="NewCategoryListDetails" data="lightbox_sort">
+						<span>Signage</span>
+					</div>
+					<div class="NewCategoryListDetails" data="new_retail_sort">
+						<span>POP</span>
+					</div>
+					<div class="NewCategoryListDetails" data="led_display_sort">
+						<span>Lighting</span>
+					</div>
+					<div class="NewCategoryListDetails" data="smart_display">
+						<span>LED & Digital Signage</span>
+					</div>
+				</div>
+				
+				
+				<!--搜索-->
+				<!-- <div class="ExhibitionHallSearchBox">
+					<div class="ExhibitionHallSearchContent">
+						<form action="" method="post" id="actionhref">
+							<div class="SearchSelectBox">
+								<select class="FirstClassification" name="cid" valuedata="">
+									<option value="">Please select</option>
+									<option value="SIG05,SIG06,SIG11">Digital Printing</option>
+									<option value="TSP01,TSP02">Digital Textile Printing</option>
+									<option value="SIG04">Indoor & Outdoor Printing Materials</option>
+									<option value="SIG02">Acrylic and Other Sign Panels</option>
+									<option value="SIG07">Laser Engraving & Cutting</option>
+									<option value="SIG01,SIG08">Signage, Lightboxes & Channel Letters</option>
+									<option value="SIG03,RCE01,RCE02,RCE03,RCE,SIG09">New Retail & POP, POS Displays</option>
+									<option value="LED03,LED04,LED02,LED-Lighting">LED Lighting</option>
+									<option value="LED01,DS01,DS02,DS03,DS04,CIC01,CIC02,CIC03,CIC04,CIC05,CIC06,MES01,MES02,MES03,DS,LED07,MES04,LED05,LED06">LED Displays & Digital Signage</option>
+
+								</select>
+							</div>
+							<div class="SearchInputBox">
+								<input placeholder="Please enter exhibitor name or exhibit keywords" name="keyword" type="text" class="keywordinput" value="" />
+							</div>
+							<div class="SearchSubmitBox">
+								<input name="submit" class="submitbtn btnGray backSigncolor" type="submit" value="SEARCH" />
+							</div>
+						</form>
+					</div>
+				</div> -->
+		
+				
+				
+				<script>
+					
+					$(function(){
+						// 获取链接上的sortg参数，根据参数显示不同的排版模式
+						var sortval=getUrlParam('sort');
+						if(sortval){
+							$(".switchmenuhrefBox").each(function(){
+								var newsortval="";
+								var switchprevious=$(this).attr("href");
+								if(switchprevious.indexOf('?')!=-1){
+									newsortval=switchprevious+'&sort='+sortval;
+								}else{
+									newsortval=switchprevious+'?sort='+sortval;
+								}
+								$(this).attr("href",newsortval);
+							})
+							
+						}
+					})
+					
+				</script>
+				<div class="switchmenumaxbox">
+					<div class="switchmenulist">
+						<div class="switchmenulistContent">
+							<a href="https://public.trust-im.com/en/exhibitor_list/previous_online/36.html" class="switchmenuhrefBox switchtableft switchmenuhrefon">
+								<div class="switchtableftContent">
+									<p>2026 Year-Round Exhibitors</p>
+									
+								</div>
+							</a>
+							<a href="https://public.trust-im.com/en/exhibitor_list/signsh2027/42.html" class="switchmenuhrefBox switchprevious switchtabright">
+								<div class="switchtableftContent">
+									<p>2027 Exhibitors</p>
+									<p style="font-size: 12px;">(Coming Soon)</p>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div style="padding-top: 20px;position: relative;z-index: 10;padding-bottom: 10px;">
+				<!--提示-->
+				<!-- <div class="ExhibitionHallTisp">
+					<p>The exhibitor list is continuously being updated.</p>
+					<p>Click "Message" to leave a message to the exhibitors!</p>
+				</div> -->
+				
+				<!-- 切换显示排版按钮 -->
+				<div class="Switchdisplaylayout">
+					<div class="Switchdisplaybtn gridbtn" onclick="switchdisplaylayout('grid',$(this))">
+						<img src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20250513/990_1747128516397763.png">
+						<span>Product</span>
+					</div>
+					<div class="Switchdisplaybtn listbtn" onclick="switchdisplaylayout('list',$(this))">
+						<img src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20250513/990_1747128516343889.png">
+						<span> List </span>
+					</div>
+				</div>
+				<!--展商名录-->
+				<div class="ExhibitorBox animationbox">
+					<div class="ExhibitorListBox">
+						<!-- 列表排版方式头 -->
+						<div class="ExhibitorLisTitleStyle" style="display: none;">
+							<div class="ExhibitorLisTitleBox ExhibitorLisTitleBoxOne">
+								<p>LOGO</p>								
+							</div>
+							<div class="ExhibitorLisTitleBox ExhibitorLisTitleBoxTwo">								
+								<p>Exhibitor</p>
+							</div>
+							<div class="ExhibitorLisTitleBox ExhibitorLisTitleBoxThree">
+								<p>Company Profile</p>
+							</div>
+							<div class="ExhibitorLisTitleBox ExhibitorLisTitleBoxFour" style="opacity: 0;">
+								<p>Booth</p>
+							</div>
+							<div class="ExhibitorLisTitleBox ExhibitorLisTitleBoxFive">
+								<p>Operate</p>
+							</div>
+						</div>
+						<ul oncontextmenu=self.event.returnValue=false>
+														<li cid="TSP01,SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20261012/442313_logo_en_1791793317539454.jpg?v=1791793317 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>AUDLEY & MYCOLOR </p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Henan Yindu Digital Technology Co., Ltd. is a nationally recognized high-tech enterprise and a national-level SSDI "Little Giant" enterprise integrating the R&D, production and sales of digital printing equipment.
+Our company owns brands names including AUDLEY, MYCOLOR, ColorCube, WORLDCOLOR and YINSTAR.
+ 
+The company has established the Henan Research Center for Inkjet Printing Technology and Xinxiang Engineering Technology Research Center for Thermal Printers. It has been awarded the titles of Henan Green Factory and Henan Manufacturing Single Champion Enterprise. 
+Our product range covers DTF printers, DTG printers, UV flatbed printers, UV DTF printers, eco solvent printers, digital textile printers, flag printers and banner printers. With CCC,CE and ISO9001 quality management system certification and other authoritative qualifications. Our products are exported to Europe, America, Southeast Asia, the Middle East and dozens of other regions. We are committed to delivering higher-value solutions under the brand of "YINDU TECHNOLOGY" for global clients.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C21</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=816" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="AUDLEY & MYCOLOR " companyid="442313" companynamecn="奥德利 & 迈卡乐">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=816" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>AUDLEY & MYCOLOR </p>
+									</div>
+									
+																													<div class="swiper mySwiper1">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260718/442313_product_1_img_1784335901246762.jpg?v=1784335901" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>DTF printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230815/442313_anli_1_img_1692067538248976.jpeg?v=1692067538">
+														<div class="ExhibitorTextContent">
+															<p>DTF/DTG</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250711/442313_product_2_img_1752224546322625.jpg?v=1752224546" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>UV-DTF printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230815/442313_anli_2_img_1692067745788677.png?v=1692067746">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20261012/442871_logo_en_1791774755342692.jpg?v=1791774755 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>HENAN YINGKAI TECHNOLOGY DEVELOPMENT CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>     HENAN FAYON TECH. CO.,LTD.  is a professional manufacturer 
+of  CNC equipment and laminating equipment  for over 19 years, specialized in 
+researching,developing,producing and selling FAYON laminator and FAYON paper 
+trimmer.
+As 19 years development, FAYON series products have spread all over the 
+world.
+FAYON manufacture from start to finish at our own factory in Henan, China-from 
+the welding of the steel chassis to final assembly and testing. Keeping the whole pr-
+oduction process in-house gives us full control over quality and greater flexibility with 
+regard to design changes, customization and product improvement.
+Your satisfaction, our tireless pursuit!</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C22</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=396" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="HENAN YINGKAI TECHNOLOGY DEVELOPMENT CO., LTD." companyid="442871" companynamecn="河南英凯科技发展有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=396" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>HENAN YINGKAI TECHNOLOGY DEVELOPMENT CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/442871_product_1_img_1714475869684692.jpg?v=1714475869" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>FLATBED DIGITAL CUTTING SOLUTIONS  </p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230828/442871_anli_1_img_1693220826436595.png?v=1693220827">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/442871_product_2_img_1714475887269796.jpg?v=1714475888" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>AUTO HIGH SPEED LAMINATOR</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230828/442871_anli_2_img_1693218241337793.png?v=1693218241">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260325/446406_logo_en_1774418155384366.jpg?v=1774418155 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SHANGHAI MIMAKI TRADING CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p></p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C01</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=4573" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SHANGHAI MIMAKI TRADING CO., LTD." companyid="446406" companynamecn="上海御牧贸易有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=4573" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SHANGHAI MIMAKI TRADING CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper3">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260414/446406_product_1_img_1776156837377777.jpg?v=1776156837" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260811/446406_anli_1_img_1786436294887278.jpg?v=1786436295">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260811/446406_product_2_img_1786434798297556.jpg?v=1786434798" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260811/446406_anli_2_img_1786437004345934.jpg?v=1786437004">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG06,SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250724/447404_logo_en_1753323447646396.jpg?v=1753323447 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SINOCOLOR PRINTING EQUIPMENT (SHANGHAI) CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>SinoColor Co., Ltd. is a high-tech enterprise specialized in developing and manufacturing industrial printing equipment. The company&#039;s product including UV printer, Textile printer, Flatbed printer, Eco solvent printer, Solvent printer etc. We are offering OEM and ODM service. 
+Company is comprised by SinoColor Printing Equipment(Shanghai) Co., Ltd and SinoColor (HK) Co.,Ltd., headquartered in Shanghai, China. Top 20 exporter of China Sign Association (CSA).
+Through years of development and efforts, SinoColor has established a great brand image among customers and cooperated with a number of national and area agents around the world to guarantee equipment&#039;s after-sales service. The company&#039;s products have been exported to more than 160 countries including the United States, Britain, Portugal, Spain, Italy, Mexico, Sri Lanka，Poland, Russia, Jordan, UAE, Saudi Arabia, Brazil, Chile, India etc. We are dedicating to offer better product and better service for our customer, welcome you to contact and cooperate with us.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C02</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=441" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SINOCOLOR PRINTING EQUIPMENT (SHANGHAI) CO., LTD." companyid="447404" companynamecn="儒彩打印设备（上海）有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=441" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SINOCOLOR PRINTING EQUIPMENT (SHANGHAI) CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/447404_product_1_img_1714475946432376.jpg?v=1714475946" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>UV Hybrid Printer HUV-3200K</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20240428/447404_anli_1_img_1714272308975966.jpg?v=1714272308">
+														<div class="ExhibitorTextContent">
+															<p>UV Flatbed Printer FB-1612D Series</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/447404_product_2_img_1714475967684448.jpg?v=1714475967" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>UV Hybrid Printer HUV-2000 Series</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20240428/447404_anli_2_img_1714272459325795.jpg?v=1714272459">
+														<div class="ExhibitorTextContent">
+															<p>UV Flatbed Printer</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260123/442721_logo_en_1769162326736922.jpg?v=1769162326 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ZHENGZHOU YUCAI ELECTRONICS TECHNOLOGY CO., LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>The company is the first domestic manufacturer of 
+intelligent digital wide-format printers and related consumables 
+with independent design, research and development, 
+production, sales and independent core intellectual property 
+rights. The company&#039;s self-developed &quot;Locor&quot; brand series of 
+smart digital printers were founded in 2005. After 17 years of 
+hard work, the &quot;Locor&quot; brand series of smart digital printers have 
+become the industry&#039;s first-line brand. Machines, coil machines, 
+inkjet printers, mesh belt machines, printing machines and other 
+machines have been favored by many customers at home and 
+abroad for a long time.
+The company has always been practicing the product 
+concept of &quot;Ingenuity Cohesion·Locor Intelligent 
+Manufacturing&quot;. In addition to its headquarters in Zhengzhou, it 
+has established two R&amp;D and production bases in Wuzhi, 
+Jiaozuo and Dongguan, Guangdong. Its products and services 
+have covered all regions in China and more than 80 overseas. In 
+several countries and regions, the brand effect of &quot;use Locor and 
+enjoy color&quot; is leading the development of the industry.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C37</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=4662" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ZHENGZHOU YUCAI ELECTRONICS TECHNOLOGY CO., LTD" companyid="442721" companynamecn="郑州豫彩电子科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=4662" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ZHENGZHOU YUCAI ELECTRONICS TECHNOLOGY CO., LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper5">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240521/442721_product_1_img_1716276295769869.jpg?v=1716276295" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>EASYJET SERIES  Printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240521/442721_anli_1_img_1716277418827765.jpg?v=1716277419">
+														<div class="ExhibitorTextContent">
+															<p>LC-70 Series Two Heads DTF Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240521/442721_product_2_img_1716276981858243.jpg?v=1716276981" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Locor High Speed  1.8m Digital Dye Sublimation Textile Printer with 3/4/8 pcs i3200 printheads</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240521/442721_anli_2_img_1716277437722563.jpg?v=1716277437">
+														<div class="ExhibitorTextContent">
+															<p>A3 DTF T-SHIRT/CLOTH PRINTER</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250621/4437482_logo_en_1750488780882252.jpg?v=1750488780 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>NANJING AINKJET CO LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>AINKJET is a special brand series production factory that not only develops and produces cost-effective large-format printers for the SD Group, but also provides more personalized sales solutions for our dealers . AINKJET is not just the production of advanced inkjet printer, but also committed to selecting better quality and best-selling product lines for our customers and winning more market benefits for our agents.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C02</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=4870" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="NANJING AINKJET CO LTD" companyid="4437482" companynamecn="南京奥锐科数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=4870" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>NANJING AINKJET CO LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250715/4437482_product_1_img_1752563231946845.jpg?v=1752563231" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>AJ-1904UV 1.9m Multi-layer Printing UV roll to roll printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260519/4437482_anli_1_img_1779173958666828.jpg?v=1779173959">
+														<div class="ExhibitorTextContent">
+															<p>AJ-1904UV 1.9m Multi-layer Printing UV roll to roll printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250715/4437482_product_2_img_1752565139554389.jpg?v=1752565139" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>AJ-9060X4 AI Visual Positioning Digital Inkjet Uv flatbed Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250715/4437482_anli_2_img_1752563336666287.jpg?v=1752563336">
+														<div class="ExhibitorTextContent">
+															<p>AJ-9060X4 AI Visual Positioning Digital Inkjet Uv flatbed Printer</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250801/442619_logo_en_1754027687226262.jpg?v=1754027687 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ZHENGZHOU NEW CENTURY DIGITAL TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Zhengzhou New Century Digital Technology Co., Ltd. is a National lnnovative Enterprise, a National High-Tech Enterprise, a National-level lntellectual Property Advantage Enterprise, a Provincial Manufacturing Single Champion in Henan, a Provincial Innovation Leading Enterprise, a Provincial Technological Innovation Demonstration Enterprise, a Provincial Quality Benchmark Enterprise, a Provincial New-Generation Information Technology Integration Application Model Project Unit, and a Provincial Service-Oriented Manufacturing Demonstration Enterprise. The company was publicly listed on the National Equities Exchange and Quotations (NEEQ) on January 12, 2024 (Stock abbreviation: Century Digital; Stock code: 874360).
+
+Centered around digital inkjet printing technology, the company&#039;s core business focuses on the industrial application and adoption of textile digital printing, advertising signage, and corrugated packaging digital printing. We specialize in the R&amp;D, manufacturing, and sales of digital inkjet printers, digital textile printers, and digital corrugated packaging printers.
+
+Since our inception, we have placed great emphasis on independent R&amp;D, closely tracking industry and technological trends. We proactively develop new products and protect intellectual property to sustain and enhance our competitive edge. Our core technology portfolio covers printing precision, operational stability, and printing speed, encompassing key component design, module integration, precision motion control, and tension control systems. As of December 2025, the company holds 296 patents, including 47 invention patents. Our established &quot;Henan Provincial Intelligent Digital Printing Equipment Engineering Technology Research Center&quot; has been recognized as a provincial-level engineering technology research center.
+
+With years of deep involvement in the digital printing equipment manufacturing sector, we regard R&amp;D and innovation as the core driver of long-term growth. Through years of technical accumulation and product evolution, we have built a professional R&amp;D team with strong innovation capabilities, solid multidisciplinary expertise, extensive practical experience, and deep insights into industry technology and applications. The team covers mechatronics, mechanical design and automation, electronic engineering and information technology, computer control, and other fields, possessing independent capabilities in research, experimental optimization, and industrialization—continuously integrating innovative technologies into product development and upgrades.By enhancing value through quality, Zhengzhou New Century Digital Technology Co., Ltd. strives to become one of China&#039;s most trusted manufacturers of digital inkjet printing equipment!</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C01</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=999" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ZHENGZHOU NEW CENTURY DIGITAL TECHNOLOGY CO., LTD." companyid="442619" companynamecn="郑州新世纪数码科技股份有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=999" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ZHENGZHOU NEW CENTURY DIGITAL TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260711/442619_product_1_img_1783732218892292.jpg?v=1783732218" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>FD1808 DTF Printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260706/442619_anli_1_img_1783318519589434.jpg?v=1783318519">
+														<div class="ExhibitorTextContent">
+															<p>Application of FD1808 DTF Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260711/442619_product_2_img_1783732245634934.jpg?v=1783732245" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>AL3694 UV Flatbed Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250804/442619_anli_2_img_1754276727342387.jpg?v=1754276727">
+														<div class="ExhibitorTextContent">
+															<p>Application of AL3694 UV Flatbed Printer </p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG04">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250606/441913_logo_en_1749201989746652.jpg?v=1749201990 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ZHEJIANG GANGLONG NEW MATERIAL CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>GLP is mainly specialized in making high-quality grade of coated and laminated banner flex, including frontlit,backlit,blockout,PET,Self-adhesive vinyl,One way vision as well as mesh and tarpaulin material. Successful export experience to Europe, North South America, Middle East, Southeast Asia etc. Brings fantastic overseas market share.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 C02</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=381" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ZHEJIANG GANGLONG NEW MATERIAL CO., LTD." companyid="441913" companynamecn="浙江港龙新材料股份有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=381" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ZHEJIANG GANGLONG NEW MATERIAL CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/441913_product_1_img_1714475582923858.jpg?v=1714475582" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Banner</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230719/441913_1689734471453996.png?v=1689734474">
+														<div class="ExhibitorTextContent">
+															<p>Outdoor large-format advertising</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/441913_product_2_img_1714475592833762.jpg?v=1714475592" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Self adhesive vinyl</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230719/441913_1689734474294399.png?v=1689734477">
+														<div class="ExhibitorTextContent">
+															<p>Bus advertising and wrapping</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="LED03,LED02">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250828/441730_logo_en_1756348714894456.jpg?v=1756348715 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>BLUEVIEW ELEC-OPTIC TECH CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p></p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 G10</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1540" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="BLUEVIEW ELEC-OPTIC TECH CO., LTD." companyid="441730" companynamecn="四川蓝景光电技术有限责任公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1540" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>BLUEVIEW ELEC-OPTIC TECH CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																								<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250126/441730_fengmian_img_1737870820345264.jpg?v=1737870820">
+														<div class="ExhibitorTextContent">
+															<p>LED Side Lighting on the Red Walls of Tiananmen and the Forbidden City</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260327/441730_product_1_img_1774599406989495.jpg?v=1774599407" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230726/441730_1690337287973699.jpg?v=1690337287">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240506/441730_product_2_img_1714974474635338.jpg?v=1714974474" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250126/441730_anli_2_img_1737870792742789.jpg?v=1737870792">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05,TSP01">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260403/447314_logo_en_1775198749676563.jpg?v=1775198749 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SHANGHAI WIT-COLOR DIGITAL SCIENCE & TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Shanghai Wit-Color Digital Science &amp; Technology Co., Ltd. is professionally dedicated to the application and development of large-format digital printing technology, as well as the production, sales, and service of digital printing equipment. Wit-Color owns several well-known domestic and international brands, including &quot;WIT-COLOR&quot; and &quot;SMART&quot;, and has now become a world-renowned provider of digital printing solutions. It has also emerged as a pioneering brand in the transformation from &quot;Made in China&quot; to &quot;Created in China.&quot;
+Wit-Color’s product line comprehensively covers categories such as Eco-Solvent Printers, Solvent Printers, Industrial UV Printers, EPSON Printhead UV Printers, Powder-shaking DTF Printers, Rotary Printers, Transfer Paper Printers, and Sublimation Flag printers. Since its establishment in 2001, Wit-Color has consistently promoted the popularization and application of Chinese digital printing equipment in the global market. It remains committed to driving innovation, providing efficient, precise, and eco-friendly color digital printing equipment and end-to-end services for diverse fields worldwide, including advertising and signage, textile printing, packaging and printing, home decoration, and personalized customization.
+Looking ahead, Wit-Color will continue to invest in the research and development of next-generation printing technologies, such as green inks, AI-powered color calibration, and integrated AI production lines. Together with global partners and clients, Wit-Color aims to advance the green transformation and sustainable development of digital printing technology, allowing colorful creativity to bloom boundlessly!</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C12</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1296" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SHANGHAI WIT-COLOR DIGITAL SCIENCE & TECHNOLOGY CO., LTD." companyid="447314" companynamecn="上海博昊数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1296" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SHANGHAI WIT-COLOR DIGITAL SCIENCE & TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																								<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260403/447314_fengmian_img_1775199594294623.jpg?v=1775199594">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260403/447314_product_1_img_1775199605765639.jpg?v=1775199605" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Wit-Color Multicolor Digital Hybrid UV3300 Printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260811/447314_anli_1_img_1786441288484683.jpg?v=1786441288">
+														<div class="ExhibitorTextContent">
+															<p>Wit-Color 2026 Version AI Visual Positioning Linear Motor Flatbed UV Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260811/447314_product_2_img_1786438255637834.jpg?v=1786438255" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Wit-Color 2026 Version i3200 3308/1904/1704 Eco-solvent Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260811/447314_anli_2_img_1786441402879298.jpg?v=1786441402">
+														<div class="ExhibitorTextContent">
+															<p>Wit-Color 2026 Full-Gamut 1706 Color-White-Color UV Printer / Eco-Solvent Printer</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG06,SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250625/4434451101_logo_en_1750836624593596.jpg?v=1750836625 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>NANJING ORIC DIGITAL TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Nanjing ORIC Digital Technology Co., Ltd.&#039;s GT® brand is an innovative enterprise focused on digital inkjet printing equipment. The company adheres to the concept of green environmental protection, advanced technology, and people-oriented, and is committed to providing customers with high-quality and innovative products and services. The company is headquartered in the No. 116 Hegao Road, Hefeng Industrial Park, Lishui District, Nanjing City, Jiangsu Province, and has a high-quality and creative team, including professional research and development technicians, marketing personnel, and excellent management team. We focus on talent cultivation and team building, providing employees with broad development opportunities and a good working environment!</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C11</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1279" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="NANJING ORIC DIGITAL TECHNOLOGY CO., LTD." companyid="4434451101" companynamecn="南京欧瑞卡数码科技有限公司（GT）">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1279" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>NANJING ORIC DIGITAL TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250702/4434451101_product_1_img_1751417294577895.jpg?v=1751417294" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>GT-1808TX 1.8m Industrial High Speed Diqital Sublimation Printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250702/4434451101_anli_1_img_1751418284796963.jpg?v=1751418284">
+														<div class="ExhibitorTextContent">
+															<p>GT-1916 TX 1.9m Industrial High Speed Digital Sublimation Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250702/4434451101_product_2_img_1751418019592895.jpg?v=1751418019" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>GT-2513 UV( Ricon G5/G6 ) High speed multi-function maglev Flatbed UV printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250702/4434451101_anli_2_img_1751418475483278.jpg?v=1751418475">
+														<div class="ExhibitorTextContent">
+															<p>GT-6090UV UV Flatbed Printer(With 3 Epson13200-U1/G5i Heads)</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG07">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20241225/463104_logo_en_1735106736387399.jpg?v=1735106736 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>JINAN ANQIANG INTELLIGENT EQUIPMENT CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Jinan Anqiang Intelligent Equipment Co., Ltd. is a set of laser equipment research and development, production, sales, service in one of the high-tech enterprises. Products mainly cover CO2 laser engraving machine, laser cutting machine, laser welding machine, laser marking machine, laser machine accessories and so on. Widely used in advertising, flexible material cutting, electronic appliances, auto parts kitchen and bathroom hardware, laser machinery manufacturing, handicrafts processing and other industries.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C46</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1883" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="JINAN ANQIANG INTELLIGENT EQUIPMENT CO., LTD." companyid="463104" companynamecn="济南安强智能装备有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1883" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>JINAN ANQIANG INTELLIGENT EQUIPMENT CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20241225/463104_product_1_img_1735106809393752.jpg?v=1735106810" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>AQ-1325S-CCD 300W LASER CUTTING MACHINE</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250106/463104_anli_1_img_1736134411535242.jpg?v=1736134411">
+														<div class="ExhibitorTextContent">
+															<p>20-30mm acrylic</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20241225/463104_product_2_img_1735106997685963.jpg?v=1735106997" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>AQ-1325R-CCD 300W LASER CUTTING MACHINE</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250106/463104_anli_2_img_1736134418738342.jpg?v=1736134419">
+														<div class="ExhibitorTextContent">
+															<p>Wooden handicraft</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG04">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20230721/65_1689929939654422.jpg " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ZHEJIANG HAILIDE NEW COMPOSITE MATERIAL CO.,LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Zhejiang Hailide New Materials Co., Ltd. was established in 2001 and listed on the Shenzhen Stock Exchange in January 2008 with a stock code of 002206. Halead is the earliest enterprise in China to produce light box advertising materials. Its plastic products include digital printing materials, soft film decoration materials, truck tarpaulins, architectural membrane, projection screen materials and so on. The company&#039;s digital inkjet materials have high quality stability, full inkjet color, good ink rendering, and high color rendering accuracy. The variety is complete, with various types of inkjet printing materials such as external printing, internal printing, double spraying, mesh cloth, car stickers, single see-through, PVC free textiles, etc. Customers can make one-stop choices according to their needs. </p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 C09</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1360" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ZHEJIANG HAILIDE NEW COMPOSITE MATERIAL CO.,LTD." companyid="442250" companynamecn="浙江海利得复合新材料有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1360" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ZHEJIANG HAILIDE NEW COMPOSITE MATERIAL CO.,LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/442250_product_1_img_1714476340783384.jpg?v=1714476340" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Sign substrate backlit</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230727/442250_anli_1_img_1690432211627224.png?v=1690504438">
+														<div class="ExhibitorTextContent">
+															<p>1</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250715/442250_product_2_img_1752563599624648.jpg?v=1752563599" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>4011</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250715/442250_anli_2_img_1752563565649628.jpg?v=1752563566">
+														<div class="ExhibitorTextContent">
+															<p>1</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG07">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260824/4435622_logo_en_1787553955675395.jpg?v=1787553956 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>WEIFANG NEW HH ELECTRONIC TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Weifang NEW HH Electronic Technology Co., Ltd. was established on April 29, 2014. The company is mainly engaged in the manufacturing, sales and supporting after-sales services of CNC equipment, materials, hardware products and other related products.
+Since its establishment, the company has always kept in mind the corporate mission of &quot;innovation and change, small and beautiful harmony, large and specialized trade; high-quality business and high-quality products, harmonious cooperation, based in Shandong, serving the world&quot;, and follows the &quot;market-oriented, customer-oriented&quot; &quot;centered&quot; service concept, adhering to the business philosophy of &quot;integrity-based, truth-seeking and pragmatic, providing high-standard, high-quality products and services&quot;, and adhering to the governance of &quot;strengthening quality internally, building image externally, quality first, and standardized development&quot; The company&#039;s corporate policy is to carry forward the corporate style of &quot;proactivity, quick response, truth-seeking and pragmatism, and tenacious struggle&quot;. After years of ups and downs, it has developed into a modern enterprise with high-quality talents, strong strength and high reputation.
+The company will continue to adhere to the two-step business strategy of online and offline in the future. Continue to develop new products to meet more customer needs; rely online on e-commerce websites such as Alibaba International Station to find more sales channels and platforms and continue to make breakthroughs. We firmly believe that opportunities for our development exist in every customer-centered approach. Details, only if we are good at communicating and sharing our ideas with others in depth, and dare to practice and try, can we create miracles.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C52</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=5067" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="WEIFANG NEW HH ELECTRONIC TECHNOLOGY CO., LTD." companyid="4435622" companynamecn="潍坊新和合电子科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=5067" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>WEIFANG NEW HH ELECTRONIC TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260824/4435622_product_1_img_1787553989943498.jpg?v=1787553990" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Bending Machine</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260824/4435622_anli_1_img_1787554092374345.jpg?v=1787554092">
+														<div class="ExhibitorTextContent">
+															<p>Finished advertising letter</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260824/4435622_product_2_img_1787554032384887.jpg?v=1787554032" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>CO2 laser cutting and engraving machine</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240830/4435622_anli_2_img_1724996552386948.jpg?v=1724996553">
+														<div class="ExhibitorTextContent">
+															<p>CO2 laser cutting finished product</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260813/459775_logo_en_1786588025575869.jpg?v=1786588026 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>GUANGZHOU ZHOU SURNAME INTELLIGENT TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p></p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C54</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=5164" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="GUANGZHOU ZHOU SURNAME INTELLIGENT TECHNOLOGY CO., LTD." companyid="459775" companynamecn="广州市周氏智能科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=5164" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>GUANGZHOU ZHOU SURNAME INTELLIGENT TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260813/459775_product_1_img_1786587499823967.jpg?v=1786587499" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260813/459775_anli_1_img_1786587870664538.jpg?v=1786587870">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260813/459775_product_2_img_1786587775669249.jpg?v=1786587776" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260813/459775_anli_2_img_1786587910597648.jpg?v=1786587910">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG07">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250813/443092_logo_en_1755044727646337.jpg?v=1755044727 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SHANDONG RUIJIE MECHANICAL EQUIPMENT CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Shandong Ruijie CNC Technology Group Co., LTD., high-tech enterprises, &quot;Engraving machine general technical conditions&quot; Shandong provincial local standard drafting unit. Company R &amp; D, production, sales, maintenance services as one, specializing in manufacturing fiber laser cutting machine, CCD engraving cutting machine, laser welding machine, CO₂ laser engraving cutting machine, laser marking machine, laser cutting machine, CNC advertising engraving machine, marble engraving machine, intelligent cutting machine, UV flatbed printer and other products.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C16</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1295" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SHANDONG RUIJIE MECHANICAL EQUIPMENT CO., LTD." companyid="443092" companynamecn="山东锐捷数控科技集团有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1295" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SHANDONG RUIJIE MECHANICAL EQUIPMENT CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/443092_product_1_img_1714476662474527.jpg?v=1714476663" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Cutting machine</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230815/443092_anli_1_img_1692061627853648.png?v=1692061627">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/443092_product_2_img_1714476678653222.jpg?v=1714476679" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230815/443092_anli_2_img_1692061953567272.png?v=1692061953">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05,TSP01">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20230718/65_1689648740438942.jpg " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>KINGJET (GUANGZHOU) DIGITAL TECHNOLOGY CO., LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Kingjet(Guangzhou) Digital Technology Co.,Ltd, 16 years continuous advanced  digital printer manufacturer, owns an outstanding brand “KINGJET ”.  With a professional R&amp;D team, we are the first patch R&amp;D DTF printer  manufacturer. KingJet guides and walks with the development trend of the  industry, we develop and focus on our main production lines and sales of DTF  printer, UV printer, solvent printer, sublimation printer, eco solvent printer and  inks. By continuously providing stable high-end quality machines &amp; improving our  service capabilities.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C18</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=4852" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="KINGJET (GUANGZHOU) DIGITAL TECHNOLOGY CO., LTD" companyid="4434443" companynamecn="广州金捷数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=4852" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>KINGJET (GUANGZHOU) DIGITAL TECHNOLOGY CO., LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260825/4434443_product_1_img_1787647796838345.jpg?v=1787647796" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>KINGJET POWDER-FREE DTF PRINTER</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230718/4434443_1689666208466223.png?v=1689666208">
+														<div class="ExhibitorTextContent">
+															<p>textile printing</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260825/4434443_product_2_img_1787647963533972.jpg?v=1787647963" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>KINGJET CYLINDER UV PRINTER</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260825/4434443_anli_2_img_1787648459432838.jpg?v=1787648459">
+														<div class="ExhibitorTextContent">
+															<p>UV Multi-Application Printing</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250811/786313_logo_en_1754903083824697.jpg?v=1754903083 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ZHENGZHOU PRINTJET ELECTRONIC TECHNOLOGY CO.,LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>INCA,TOGA,brand from PrintJet Co,a leading manufacturer, provide finishing solution with it&#039;s innovation ,lead the field to effective and intelligent.Additionally, we have independently developed the nationally patented Kunxuan Save Power Largely Dryer, whose technology revolutionarily improves energy efficiency, saving users&#039; operating costs and enhancing environmental benefits.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C07</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=704" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ZHENGZHOU PRINTJET ELECTRONIC TECHNOLOGY CO.,LTD" companyid="786313" companynamecn="郑州普瑞捷电子科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=704" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ZHENGZHOU PRINTJET ELECTRONIC TECHNOLOGY CO.,LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260901/786313_product_1_img_1788220213263395.jpg?v=1788220213" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>INCA C1‑1700 High‑speed Industrial Cutting Machine</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250819/786313_anli_1_img_1755565759543275.jpg?v=1755565759">
+														<div class="ExhibitorTextContent">
+															<p>L1-1700</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260901/786313_product_2_img_1788220253644744.jpg?v=1788220253" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>INCA L1-1700</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260901/786313_anli_2_img_1788231432235834.jpg?v=1788231432">
+														<div class="ExhibitorTextContent">
+															<p>INCA C1‑1700 High‑speed Industrial Cutting Machine</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG04,SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250709/446263_logo_en_1752040962969236.jpg?v=1752040962 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>HAINING JINMAO WARP KNITTING CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Haining Jinmao Warp Knitting Co.,Ltd, founded in 2005, is specialized in producing various warp knitted fabrics. Our main products are flag fabric, banner fabric, display fabric, backlit fabric, used for sublimation direct printing, paper transfer printing, silk-screen printing UV printing, Latex printing and eco-solvent printing. </p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 C05</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=432" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="HAINING JINMAO WARP KNITTING CO., LTD." companyid="446263" companynamecn="海宁市金茂经编有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=432" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>HAINING JINMAO WARP KNITTING CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260702/446263_product_1_img_1782978757593625.jpg?v=1782978757" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>flag fabric</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230725/446263_1690252590266874.jpg?v=1690252591">
+														<div class="ExhibitorTextContent">
+															<p>flag</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260702/446263_product_2_img_1782978794299929.jpg?v=1782978794" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>display fabric</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230725/446263_1690252591863624.jpg?v=1690252592">
+														<div class="ExhibitorTextContent">
+															<p>lightbox</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG04">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20230721/65_1689929908779959.jpg " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SHANGHAI NAR INDUSTRIAL CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>As a leading supplier of precision coating materials in China, Shanghai NAR Industrial Co., Ltd. (stock code: 002825) was established at the end of 2002. With its scientific governance structure, efficient supply chain management and continuous pursuit of innovation, it provides customers in more than 90 countries and regions around the world with stable quality products and high-quality services. In recent years, NAR has continuously expanded its expansion in the fields of digital inkjet printing materials, automotive aftermarket, optical and electronic functional film, hydrogen energy fuel cell core components and other fields, realizing the development trend of industrial and capital dual-wheel drive. After 20 years, NAR has grown into a high-tech leading enterprise integrating research and development, production and sales.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 C01</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=380" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SHANGHAI NAR INDUSTRIAL CO., LTD." companyid="441901" companynamecn="上海纳尔实业股份有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=380" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SHANGHAI NAR INDUSTRIAL CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240506/441901_product_1_img_1714974661255773.jpg?v=1714974661" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Self Adhesive Vinyl</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230801/441901_anli_1_img_1690869450878534.jpg?v=1690869462">
+														<div class="ExhibitorTextContent">
+															<p>Self Adhesive Vinyl</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240506/441901_product_2_img_1714974676997434.jpg?v=1714974677" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>One Way Vision</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230801/441901_anli_2_img_1690869517738656.jpg?v=1690869517">
+														<div class="ExhibitorTextContent">
+															<p>One Way Vision</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG04">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250523/464652_logo_en_1747980845545437.jpg?v=1747980845 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ZHEJIANG FLY NEW MATERIAL CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Leading manufacturer of graphics materials, label face-stock materials, functional film and other new materials that applied in various fields.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 C26</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=5022" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ZHEJIANG FLY NEW MATERIAL CO., LTD." companyid="464652" companynamecn="浙江福莱新材料股份有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=5022" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ZHEJIANG FLY NEW MATERIAL CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																								<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250403/464652_fengmian_img_1743649736244496.jpg?v=1743649736">
+														<div class="ExhibitorTextContent">
+															<p>Adhesive PP Materials</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250801/464652_product_1_img_1754028947959638.jpg?v=1754028947" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Self Adhesive Vinyl.jpg</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250801/464652_anli_1_img_1754029491656827.jpg?v=1754029492">
+														<div class="ExhibitorTextContent">
+															<p>Indoor &amp; Outdoor Pp Sticker</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250801/464652_product_2_img_1754029089332244.jpg?v=1754029090" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Cold Lamination Film</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250801/464652_anli_2_img_1754029512732837.jpg?v=1754029512">
+														<div class="ExhibitorTextContent">
+															<p>Poster Pp Materials</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG07">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250609/452220_logo_en_1749439694658567.jpg?v=1749439694 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>HANGZHOU SAIDIKE AUTOMATION EQUIPMENT CO.,LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Saidike Automation Equipment Co., Ltd（SDKCNC） was established in 2013 and is located in Hangzhou, China. We are a &quot;Chinese National High tech Enterprise&quot; that integrates research and development, manufacturing, and sales. Dedicated to the research and development of various intelligent CNC equipment, including heavy-duty engraving and milling machines, intelligent cutting machines, fiber laser cutting machines, carbon dioxide laser machines, etc. Provide one-stop solutions for hard board carving and cutting, as well as intelligent cutting of flexible materials.  
+Experienced technicians and professional R&amp;D teams can meet customers&#039; customized needs for various sizes and functions. Our strict quality inspection and control system continuously improves the process quality of our products. With high-precision, high-efficiency, stable and reliable products, coupled with an ultra long and fault free operation guarantee system, we have received high praise and recognition from domestic and foreign customers in terms of technology, quality, and service.  
+We have numerous distributors who integrate sales, service, and display, covering all regions of China and some overseas areas. We provide one-on-one professional services and online and offline technical training, support OEM/ODM, and have served over 10000 CNC equipment worldwide to date.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 C29</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=4773" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="HANGZHOU SAIDIKE AUTOMATION EQUIPMENT CO.,LTD" companyid="452220" companynamecn="杭州赛迪克自动化设备有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=4773" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>HANGZHOU SAIDIKE AUTOMATION EQUIPMENT CO.,LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250811/452220_product_1_img_1754881890358297.jpg?v=1754881890" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Precision CNC engraving and milling machine</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20241227/452220_anli_1_img_1735279593672863.jpg?v=1735279593">
+														<div class="ExhibitorTextContent">
+															<p>SDKCNC K6 series, aluminum plate high-speed engraving and milling processing</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240430/452220_product_2_img_1714474981564626.jpg?v=1714474981" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Roller feeding type flexible material cutting machine with CCD</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20241227/452220_anli_2_img_1735279601288623.jpg?v=1735279601">
+														<div class="ExhibitorTextContent">
+															<p>SDKCNC D-160 series, self-adhesive sticker roll material edge cutting</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250714/462808_logo_en_1752480986523933.jpg?v=1752480986 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SHENZHEN DLICAN DIGITAL TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p></p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C17</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1318" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SHENZHEN DLICAN DIGITAL TECHNOLOGY CO., LTD." companyid="462808" companynamecn="深圳鼎力数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1318" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SHENZHEN DLICAN DIGITAL TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260428/462808_product_1_img_1777367325623898.jpg?v=1777367325" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>ULTRA-WIDE HYBRID UV PRINTER Dli 3300 hybrid S（Dli 3300 S）</p>
+														</div>
+													</div>
+													
+												</div>
+																																																												
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="TSP01">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260428/4438064_logo_en_1777368117754572.jpg?v=1777368117 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>NANJING GRANDO DIGITAL TECHNOLOGY CO., LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Gendao (Nanjing &amp; Shanghai) Digital Technology Co., Ltd. was founded in 2014. Its R&amp;D team has over 10 years of experience in printer manufacturing and technical services. Since 2015, it has established a global dealer network. Leveraging high-quality products, trendy designs, stable structures and professional services, Gendao has earned a strong worldwide reputation and will keep committing to technological innovation and R&amp;D in the printer industry.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 C08</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=5123" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="NANJING GRANDO DIGITAL TECHNOLOGY CO., LTD" companyid="4438064" companynamecn="南京根道数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=5123" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>NANJING GRANDO DIGITAL TECHNOLOGY CO., LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260724/4438064_product_1_img_1784875854792355.jpg?v=1784875854" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Grando 6090 flatbed printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260724/4438064_anli_1_img_1784878236292778.jpg?v=1784878236">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260724/4438064_product_2_img_1784876182862327.jpg?v=1784876182" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>GD-UVBox-A4 </p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260724/4438064_anli_2_img_1784878285324385.jpg?v=1784878285">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="LED01">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260810/441821_logo_en_1786331575638747.jpg?v=1786331575 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>SHANGHAI EDGELIGHT INDUSTRY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Shanghai Edgelight Industry Co., Ltd. (EDGELIGHT), founded in 2004, is one of the world&#039;s leading brand manufacturers of LED products and intelligent control products. Currently, it has five production bases around the world: Shanghai Headquarters (1# production base area About 33,000 m²), Tianjin (2# production base area is about 20,000m²), Germany Edgelight GmbH (3# production base area is about 1,500m² m²), American Edgelight LLC (4# production base area is about 1,679m²), Shanghai factory ( 5# production base with an area of about 10,000 m²) . Mainly engaged in the research and development and manufacture of LED displays, Internet of Things electronic equipment, intelligent controllers, LED drive power, light-emitting panels, and advertising lighting equipment.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 G01</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=379" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="SHANGHAI EDGELIGHT INDUSTRY CO., LTD." companyid="441821" companynamecn="上海边光实业有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=379" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>SHANGHAI EDGELIGHT INDUSTRY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																								<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20241217/441821_fengmian_img_1734426935296847.jpg?v=1734426935">
+														<div class="ExhibitorTextContent">
+															<p>LED Display Module </p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250106/441821_product_1_img_1736131850357999.jpg?v=1736131850" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>LED DISPLAY</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250108/441821_anli_1_img_1736325771843455.jpg?v=1736325772">
+														<div class="ExhibitorTextContent">
+															<p>LED DISPLAY</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250106/441821_product_2_img_1736131838564629.jpg?v=1736131838" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>LIGHT GUIDE PANEL</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250108/441821_anli_2_img_1736325689555356.jpg?v=1736325690">
+														<div class="ExhibitorTextContent">
+															<p>LIGHT GUIDE PANEL</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG06,SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250621/462357_logo_en_1750475578794699.jpg?v=1750475578 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>NANJING ORIC DIGITAL TECHNOLOGY CO., LTD.</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>ORIC brand was founded  in 2013.
+       Nanjing ORIC Digital Technology Co., Ltd. is located in No. 79 Xiushan Road, Gaochun Economic Development Zone, Nanjing City. Factory building area of 20000 square meters. It has accumulated rich experience in whole machine design and inkjet control in the field of industrial and civil inkjet printing, and is in the industry leader in green environmental protection, advanced technology, people-oriented and other aspects. In addition to the advanced functions of the industry&#039;s equipment, ORIC digital inkjet series printers have a more intelligent operation experience, which can help customers solve problems in production faster, and help customers create greater wealth value with excellent equipment, good reputation, perfect products and services.      
+       As always, our company has won the praise and support of new and old customers with the purpose of good quality, reasonable price and good reputation. With advanced technology, excellent quality, good reputation and high-quality service, we have established a stable supply relationship with many merchants, which is well received by the majority of customers. ORIC is committed to promoting the printing industry towards a greener, more energy efficient and more futuristic direction.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 G08</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1279" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="NANJING ORIC DIGITAL TECHNOLOGY CO., LTD." companyid="462357" companynamecn="南京欧瑞卡数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1279" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>NANJING ORIC DIGITAL TECHNOLOGY CO., LTD.</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250702/462357_product_1_img_1751422629365796.jpg?v=1751422629" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>OR-2513 UV( Ricoh G5/G6 ) High speed multi-function maglev Flatbed UV printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240530/462357_anli_1_img_1717040378566248.jpg?v=1717040379">
+														<div class="ExhibitorTextContent">
+															<p>3D texture relief painting hybrid </p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250702/462357_product_2_img_1751422796442643.jpg?v=1751422797" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>OR-3200HUV 3.2m High speed maglev hybrid UV printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240530/462357_anli_2_img_1717040719869793.jpg?v=1717040719">
+														<div class="ExhibitorTextContent">
+															<p>OR-5806EUV CW/CWC/CWC+Scrub Gild LED-UV Printer</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="TSP01">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260910/772609_logo_en_1789021743527865.jpg?v=1789021743 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>IVITTO</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p></p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 G08</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=5027" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="IVITTO" companyid="772609" companynamecn="印威图">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=5027" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>IVITTO</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260701/772609_product_1_img_1782899438242938.jpg?v=1782899438" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>A3 Desktop DTF Printer </p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260701/772609_anli_1_img_1782899479584245.jpg?v=1782899479">
+														<div class="ExhibitorTextContent">
+															<p>Industrial GradeColor UV Inkjet Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260701/772609_product_2_img_1782899460358963.jpg?v=1782899460" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>A4 UV Flatbed Printer </p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260821/772609_anli_2_img_1787295836362759.jpg?v=1787295836">
+														<div class="ExhibitorTextContent">
+															<p>UV Visual Positioning Ribbon Printer</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="TSP01">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260701/4434451323_logo_en_1782899099676789.jpg?v=1782899099 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>ROLAND </p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>Roland DG China is committed to providing customers with high-quality, personalized solutions through innovative digital manufacturing technologies. Our mission is to promote the digital transformation of various industries through advanced equipment and superior service. We inspire creativity with technology, earn trust with quality, and create sustainable value for our customers and society.
+We adhere to customer-centricity, innovation-driven development, and quality as the core as the guiding principles. Our core values include innovation, integrity, collaboration and win-win cooperation. We advocate a culture of teamwork and open sharing, encourage employees to pursue continuous learning and self-breakthrough, and work together to build a dynamic and creative enterprise, so as to promote Roland DG China to make continuous progress in the field of digital manufacturing.</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W4 G08</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=5027" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="ROLAND " companyid="4434451323" companynamecn="罗兰">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=5027" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>ROLAND </p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260820/4434451323_product_1_img_1787207511369383.jpg?v=1787207511" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260820/4434451323_anli_1_img_1787207926494597.jpg?v=1787207926">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260820/4434451323_product_2_img_1787207678986465.jpg?v=1787207678" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260820/4434451323_anli_2_img_1787208036543684.jpg?v=1787208037">
+														<div class="ExhibitorTextContent">
+															<p></p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG05">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250624/447299_logo_en_1750745030345773.jpg?v=1750745031 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>GUANGDONG JOINT ERA DIGITAL TECHNOLOGY CO., LTD</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>GUANGDONG JOINT ERA DIGITAL TECHNOLOGY CO., LTD</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W2 G01</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=1210" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="GUANGDONG JOINT ERA DIGITAL TECHNOLOGY CO., LTD" companyid="447299" companynamecn="广东省嘉亿联合数码科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=1210" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>GUANGDONG JOINT ERA DIGITAL TECHNOLOGY CO., LTD</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260829/447299_product_1_img_1787976063867698.jpg?v=1787976063" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>YF-1218UV Hybrid Printer</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20240715/447299_anli_1_img_1721024594786573.jpg?v=1721024594">
+														<div class="ExhibitorTextContent">
+															<p> OSN-2000ML  UV  hybrid Printer </p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20260829/447299_product_2_img_1787981625482843.jpg?v=1787981626" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>YF-2513 UV Flatbed Printer</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250712/447299_anli_2_img_1752308494838945.jpg?v=1752308494">
+														<div class="ExhibitorTextContent">
+															<p> YF- 3200  UV Hybrid  Printer  </p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														<li cid="SIG04">
+								<div class="ExhibitorDetailsBox">
+									<div class="ExhibitorHeaderDetails">
+										<!-- LOGO -->
+										<div class="ExhibitorLogo ExhibitorLisTitleBoxOne"><img draggable="false" src=" https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/oem/20250708/442730_logo_en_1751943085485459.jpg?v=1751943085 " onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20210305/65_1614923737967837.jpg';"></div>
+										
+										<!-- 公司名-只在列表排版方式中显示 -->
+										<div class="ExhibitorListCompanyName ExhibitorLisTitleBoxTwo">
+											<p>JUTU NEW MATERIALS TECHNOLOGY LIMITED</p>
+										</div>
+										
+										<!-- 公司介绍- 只在列表排版方式中显示-->
+										<div class="CompanyProfileContent ExhibitorLisTitleBoxThree">
+											<p>JUTU New Materials Technology Limited is a leading manufacturer of materials used for visual communication, graphics, sign making, decoration and construction.  The wide range of JUTU products include: - Flexible banner substrates and tarpaulins for outdoor advertising, industrial application ; - Self-adhesive Vinyls for digital printing, lamination, decoration, plottering ; - Canvas and Wallpapers for indoor advertising, decoration ; - PVC Foam Sheet and Acrylic Sheet for sign making, onstruction,  industrial usage. Up to now, we has sold materials to over 90 countries throught the world. JUTU group commit to develop and market consistent quality products at very competitive prices. We would like to be your long term reliable business partner!</p>
+										</div>
+										
+										<!-- 展位号 -->
+										<div class="ExhibitorBooth ExhibitorLisTitleBoxFour" style="display: none;"><span>Booth W1 C10</span></div>
+										
+										<!-- 按钮 -->
+										<div class="ExhibitorHallConsult ExhibitorLisTitleBoxFive">
+											<!-- 商城按钮 -->
+											<!-- <div class="ExhibitorShopbuttom">
+																								<a href="https://www.dypmall.com/home/Store/index.html?store_id=395" target="_blank">More</a>
+																							</div> -->
+											
+											<span title="JUTU NEW MATERIALS TECHNOLOGY LIMITED" companyid="442730" companynamecn="上海东闻新材料科技有限公司">Message</span>
+											
+										</div>
+										<!-- <div class="ExhibitorShop">
+																						<a href="https://www.dypmall.com/home/Store/index.html?store_id=395" target="_blank">More</a>
+																					</div> -->
+									</div>
+									<div class="ExhibitorCompanyName">
+										<p>JUTU NEW MATERIALS TECHNOLOGY LIMITED</p>
+									</div>
+									
+																													<div class="swiper mySwiper">
+																					<div class="swiper-wrapper">
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230712/442730_1689124210356859.jpg?v=1689124210" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>PVC Foam Board</p>
+														</div>
+													</div>
+													
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230712/442730_1689124211384792.jpg?v=1689124211">
+														<div class="ExhibitorTextContent">
+															<p>Polyester Canvas</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230712/442730_1689124210294426.jpg?v=1689124210" onerror="javascript:this.src='https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240429/990_1714377902525639.jpg';">
+														<div class="ExhibitorTextContent">
+															<p>Self Adhesive Vinyl</p>
+														</div>
+													</div>
+												</div>
+																																				<div class="swiper-slide">
+													<div class="ExhibitorImg"><img draggable="false" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/oem/images/exhibitor/20230712/442730_1689124211275527.jpg?v=1689124211">
+														<div class="ExhibitorTextContent">
+															<p>Flexible Banner</p>
+														</div>
+													</div>
+												</div>
+																								
+												
+												
+											</div>
+											<div class="ImgBannerLeftButtom"></div>
+											<div class="ImgBannerRightButtom"></div>
+										</div>
+										
+								</div>
+							</li>
+														
+						</ul>
+					</div>
+				</div>
+				<!--名单将持续更新-->
+				<div class="MoreExhibitorHall">
+					<p>*The exhibitor list will be kept updating till the show opens.</p>
+				</div>
+				<!--页码-->
+				<div class="ExhibitorHallPages">
+					<div class="pager">
+ <ul>
+ 	<li class="active"><a id="FirstPage" href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=1">First Page</a></li>
+  <li class="active"><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=1" class="pager_previous">Prev</a></li>
+    <li class="active activepage"><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=1">1</a></li>
+    <li><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=2">2</a></li>
+    <li><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=3">3</a></li>
+    <li><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=4">4</a></li>
+    <li><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=5">5</a></li>
+    <li><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=6">6</a></li>
+    <li><a href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=2" class="pager_next">Next</a></li>
+  <li><a id="LastPages" href="https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html?&sort=sort&page=2">Last Page</a></li>
+ </ul>
+</div>
+<script>
+	// 总数
+	var record_count="629";
+	
+	
+	
+	// 需要删除的URL数据
+	var UrlDelData=['sort','page','typesetting'];
+	// 删除url固定的值，并且返回删除后的所有参数
+	var NewDelUrl=funcUrlDel(UrlDelData)
+	var NewUrl = new URL(NewDelUrl);
+	var SearchDate=NewUrl.search;
+	SearchDate=SearchDate.substring(1);
+	
+	// 如果存在每页显示的值，计算并且赋值
+	var page_size=getUrlParam("page_size");
+	if(page_size && page_size!=""){
+		record_count=Math.ceil(record_count/page_size);
+	}else{
+		record_count=Math.ceil(record_count/30);
+	}	
+	var winhref=$(".activepage a").attr("href");
+	var dqpage=getUrlParam("page");
+	if(dqpage=="" || dqpage==undefined){dqpage=1;}
+	var pagruel="page="+dqpage;
+	var FirstPage= winhref.replace(eval("/"+pagruel+"/g"),"page=1");
+	var LastPages= winhref.replace(eval("/"+pagruel+"/g"),"page="+record_count);
+	document.getElementById("FirstPage").href=FirstPage+"&"+SearchDate;
+	document.getElementById("LastPages").href=LastPages+"&"+SearchDate;
+	
+	// 删除url固定的参数后剩余的参数赋值到页码中
+	$(".ExhibitorHallPages a").each(function(){
+		var _thishref=$(this).attr("href")
+		$(this).attr("href",_thishref+"&"+SearchDate)
+	})
+
+	
+	//获取链接参数
+	function getUrlParam(name){
+	    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+	    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+	    if (r != null) return unescape(r[2]); return null; //返回参数值
+	}
+		
+	// 删除url中某个参数
+	function funcUrlDel(names){
+	    if(typeof(names)=='string'){
+	        names = [names];
+	    }
+	    var loca = window.location;
+	    var obj = {}
+	    var arr = loca.search.substr(1).split("&");
+	    //获取参数转换为object
+	    for(var i = 0; i < arr.length; i++) {
+	        arr[i] = arr[i].split("=");
+	        obj[arr[i][0]] = arr[i][1];
+	    };
+	    //删除指定参数
+	    for(var i = 0; i < names.length; i++) {
+	         delete obj[names[i]];
+	    }
+	    //重新拼接url
+	    // var urlss = loca.origin + loca.pathname + "?" + JSON.stringify(obj).replace(/[\"\{\}]/g, "").replace(/\:/g, "=").replace(/\,/g, "&");
+		var NewDataCs='?';
+		for (var key in obj) {
+			if(key && key!=""){
+				NewDataCs+=key+"="+obj[key]+"&";
+			}
+		}
+		NewDataCs=loca.origin + loca.pathname+NewDataCs;
+	    return NewDataCs;
+	}
+	
+
+</script>				</div>
+				
+
+				<!-- 往届部分展商企业 -->
+					<!-- <div style="padding: 0 10px;">
+						<div class="PreviousExhibitors">
+							<div class="PreviousExhibitorsTitleBox">
+								<h5>Previous Major Exhibitors</h5>
+							</div>
+							<div class="MorePreviousExhibitors">
+								<p><a href="https://public.trust-im.com/en/exhibitor_list/sz2025/25.html" target="_blank">LED CHINA 2025</a></p>
+								<p><a href="https://public.trust-im.com/en/exhibitor_list/sz2024/20.html" target="_blank">LED CHINA 2024</a></p>
+								<p><a href="https://public.trust-im.com/en/exhibitor_list/sz2023/18.html" target="_blank">LED CHINA 2023</a></p>
+							</div>
+						</div>
+					</div> -->
+				<!-- 往届部分展商企业 end -->	
+</div>
+		</div>
+			</div>
+		</div>
+		
+		<!--底部-->
+		<div class="ExhibitorHallFooter">
+			<!--LED 底部-->
+			<div class="FootBottom LedFooterBox">
+				<div class="ContentBox">
+					<div class="FootBottomContentBox">
+						<div class="FootCodeImgBox">
+							<ul>
+								<li>
+									<a href="https://www.facebook.com/share/9j8cy2QFghiACnSP/?mibextid=ox5AEW" target="_blank">
+										<div class="CodeImgBox">
+											<img
+												src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240402/969_1712020715322623.png" />
+										</div>
+										<p>Facebook</p>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/channel/UCmj_UIToDVRZqc5mdkGojmg" target="_blank">
+										<div class="CodeImgBox">
+											<img
+												src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240402/969_1712025399285962.png" />
+										</div>
+										<p>YouTube</p>
+									</a>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<div class="FootContactBoxBottom">
+						<div class="FootContactBox">
+							<p style="text-align: center;display: inline-block;">Trust Exhibition</p>
+							<span>86 20 3810 6261</span><br />
+							<span
+								style="background-image: url(https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240327/969_1711531197242556.png);">
+																info@signchinashow.com · info@ledchina.com · info@digitalprintshow.com · info@dscexpo.com
+															</span>
+							<span
+								style="background-image: url(https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20240327/969_1711531209794784.png);">
+																www.SignChinaShow.com · www.LEDChina.com · www.DigitalPrintShow.com · www.DSCExpo.com
+															</span>
+						</div>
+					</div>
+					<div class="CopyrightTextBox">
+						<p>Copyright © Trust Exhibition All Rights Reserved.</p>
+					</div>
+				</div>
+			</div>
+			<!--LED 底部 end-->
+		</div>
+		
+		
+		<!----------------------表单弹窗---------------------->
+		<div class="FormContentBack" onclick="oncloses()"></div>
+		<div class="FormContentPopup">
+			<div class="FormContentPopupHeader">
+				<img class="headericon"
+					src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20231226/664_1703573111284268.png">
+				<span>The exhibitor will come back to you soon!</span>
+				<img class="closeimg" onclick="oncloses()"
+					src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20231226/664_1703573132773278.png"
+					alt="close" title="close">
+			</div>
+			<div class="FormContentDetails">
+				<ul>
+					<li>
+						<div class="FormDetailsTitle">
+							<p>Exhibitor Company Name</p><span class="required">*</span>
+						</div>
+						<div class="FormDetailsInput">
+							<input class="form-input requiredval" style="background-color: #f5f5f5;" readonly="readonly"
+								value="" name="consultformname" type="text" placeholder="Exhibitor Company Name" />
+							<input name="Companyid" type="hidden" />
+							<input name="companynamecn" class="companynamecn" type="hidden" />
+							<input class="ConsultFormId" type="hidden" value="143" />
+							<input class="zhanhui_id_val" type="hidden" value="32" />
+						</div>
+					</li>
+					<li>
+						<div class="FormDetailsTitle">
+							<p>Message</p><span class="required">*</span>
+						</div>
+						<div class="FormDetailsInput">
+							<input class="form-input requiredval" name="problem" type="text" placeholder="Message" />
+						</div>
+					</li>
+					<li>
+						<div class="FormDetailsTitle">
+							<p>Your Name</p><span class="required">*</span>
+						</div>
+						<div class="FormDetailsInput">
+							<input class="form-input requiredval" name="name" type="text" placeholder="Your Name" />
+						</div>
+					</li>
+					<li>
+						<div class="FormDetailsTitle">
+							<p>Your Email</p><span class="required">*</span>
+						</div>
+						<div class="FormDetailsInput">
+							<input class="form-input requiredval" name="email" type="text" placeholder="Your Email" />
+						</div>
+					</li>
+					<li>
+						<div class="FormDetailsTitle">
+							<p>Your Mobile</p><span class="required">*</span>
+						</div>
+						<div class="PhoneNumberbox">
+							<div class="PhoneNumberCode">
+								<div class="CountryBox">
+									<div class="CountryValBox">
+										<span class="selects">Country code</span>
+									</div>
+									<div class="CountryListSelect">
+										<div class="CountrySearch">
+											<input type="text" placeholder="search" />
+										</div>
+										<ul>
+										</ul>
+									</div>
+								</div>
+								<input name="mobilecode" type="hidden" value="" />
+								
+							</div>
+							<div class="PhoneNumberLink">
+								<p>-</p>
+							</div>
+							<div class="PhoneNumberMobile">
+								<div class="FormDetailsInput">
+									<input class="form-input requiredval" name="mobile" type="text" placeholder="Your Mobile" />
+								</div>
+							</div>
+						</div>
+		
+					</li>
+					<!-- <li>
+						<div class="FormDetailsTitle">
+							<p>Schedule a Meeting During the Exhibition</p>
+						</div>
+						<div class="FormDetailsInput">
+							<input class="form-input requiredval" readonly name="appointmenttime"
+								id="appointmenttime" type="text" placeholder="Select a Preferred Meeting Time" />
+						</div>
+					</li> -->
+				</ul>
+			</div>
+			<div class="ReadAndAgree">
+				<label>
+					<input type="checkbox" id="ReadAndAgreecheckbox">
+					<span class="checkmark"></span>
+					<span>I have read and agree to the "Personal Information Protection Policy", and separately agree that the Wenxin DYPMALL platform will provide the consultation content information I filled out to the exhibitor I consulted or made an appointment with.</span>
+				</label>
+			</div>
+			<div class="SubmitBox">
+				<div class="RequiredTextBox">
+					<p class="RequiredText"></p>
+				</div>
+				<button type="submit" class="SubmitBtn" onclick="SubmitBox()">Submit</button>
+			</div>
+		</div>
+		<!----------------------表单弹窗 end---------------------->
+	</body>
+	<script>
+		var cidval="";
+		
+			$(function(){
+				//默认展区选中
+				if(cidval!=""){
+					$(".FirstClassification").val(cidval);
+				}	
+				
+				var swiper = new Swiper(".mySwiper", {
+			      	loop: true,
+			        navigation: {
+			            nextEl: ".ImgBannerRightButtom",
+			            prevEl: ".ImgBannerLeftButtom",
+			        },
+			    });
+			    
+			    var swiper1 = new Swiper(".mySwiper1", {
+			      	loop: true,
+			      	autoplay: {
+						delay: 3000,
+					},
+			        navigation: {
+			            nextEl: ".ImgBannerRightButtom",
+			            prevEl: ".ImgBannerLeftButtom",
+			        },
+			    });
+			    var swiper3 = new Swiper(".mySwiper3", {
+			      	loop: true,
+			      	autoplay: {
+						delay: 4000,
+					},
+			        navigation: {
+			            nextEl: ".ImgBannerRightButtom",
+			            prevEl: ".ImgBannerLeftButtom",
+			        },
+			    });
+			    var swiper5 = new Swiper(".mySwiper5", {
+			      	loop: true,
+			      	autoplay: {
+						delay: 5000,
+					},
+			        navigation: {
+			            nextEl: ".ImgBannerRightButtom",
+			            prevEl: ".ImgBannerLeftButtom",
+			        },
+			    });
+			    
+			})
+		
+	</script>
+</html>

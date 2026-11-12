@@ -1,0 +1,2654 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=0.5">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<title>2026第26届上海国际LED展参展商名单</title>
+<style type="text/css">
+/* <!-- */
+body,td,th {
+	font-family: "Times New Roman", "Times", "serif", "宋体";
+	font-size:12px;
+	color: #666666;
+	line-height: 14pt;
+}
+body {
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+}
+a:link,a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+a:hover,a:active {
+	color: #FF6600;
+}
+a.a1:link,a.a1:visited {
+	font-family: "宋体";
+	font-size: 12px;
+}
+a.a2:link,a.a2:visited {
+	color: #666666;
+	text-decoration: none;
+	font-weight: bold;
+}
+a.a2:hover,a.a2:active {
+	color: #FF6600;
+	text-decoration: underline;
+}
+a.a3:link,a.a3:visited {
+	color: #FF6600;
+	text-decoration: none;
+}
+a.a3:hover,a.a3:active {
+	text-decoration: underline;
+}
+a.BigClass1:link,a.BigClass1:visited {
+	font-weight: bold;
+	color: #CC0000;
+	text-decoration: none;
+	line-height: 21px;
+}
+form {
+	margin: 0px;
+	padding: 0px;
+}
+a.title1:link,a.title1:visited,a.title1:active,a.title1:hover {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	font-family: "Times New Roman", "Times", "serif", "宋体";
+}
+a.title2:link,a.title2:visited,a.title2:active,a.title2:hover {
+	font-weight: bold;
+	color: #B00E00;
+	text-decoration: none;
+	font-size: 8.5pt;
+	font-family: "Times New Roman", "Times", "serif", "宋体";
+}
+a.Title3:link,a.Title3:visited {
+	color: #F2C76C;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+}
+a.Title3:hover,a.Title3:hover {
+	color: #FFFFFF;
+}
+a.Title4:link,a.Title4:visited {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+}
+a.Title4:hover,a.Title4:hover {
+	color: #F2C76C;
+}
+.NewsTitle {
+	font-size: 11pt;
+	color: #000000;
+	font-weight: bold;
+}
+.NewsTitle2 {
+	font-weight: bold;
+	color: #B00E00;
+	font-size: 8.5pt;
+}
+a.A4:link,a.a.A4:visited {
+	color: #0000FF;
+	text-decoration: underline;
+}
+/* --> */
+	.main-container {
+    width: 100%;
+    max-width: 760px; 
+    margin: auto; 
+    background-color: #FFFFFF; 
+    }
+    
+    @media screen and (max-width: 760px) {
+        .main-container {
+        max-width: none;
+        }   
+    }
+</style>
+<link rel="shortcut icon" href="https://www.emagecompany.com/favicon.ico">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6KB74XY79Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6KB74XY79Q');
+   gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: location.href,
+        page_path: location.pathname,
+        send_to: 'G-6KB74XY79Q'
+    });
+</script>
+
+</head>
+
+<body>
+ <div class="main-container">
+  <table width="760" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#DFDFDF">
+   <tr>
+    <td align="center" bgcolor="#FFFFFF"><table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+      <tr>
+        <td><a href="/"><img src="https://css.emagecompany.com/homebottom1.gif" width="240" height="60" border="0"></a></td>
+        <td align="right"><a href="#"><img src="https://www.emagecompany.com/css/hometop.gif" border="0" width="469" height="65"></a><br></td>
+      </tr>
+    </table>
+      <table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="130"><div align="center" style="font-family:Verdana, Arial, Helvetica, sans-serif">
+            <script language="JavaScript" type="text/javascript">tmpDate = new Date();date = tmpDate.getDate();month= tmpDate.getMonth() + 1 ;year= tmpDate.getFullYear();document.write("&nbsp;"+year+"年"+month+"月"+date+"日 ");</script>
+          </div></td>
+          <td width="463" align="right"><img src='https://css.emagecompany.com/chat.gif' width='66' height='14' style='border:0px; cursor:pointer;' onclick='openWindow()'></td>
+          <td width="147" style="padding-right:1px;"><div align="center">
+            <a href="https://exhibitors.emagecompany.com/big5/lamp/ledchina26.html" class="a2">繁体</a> | <a href="https://exhibitors.emagecompany.com/lamp/ledchina26.html" class="a2">简体</a> | <a href="https://www.emagecompany.com/en/" class="a2">ENGLISH</a></div></td>
+        </tr>
+      </table>
+      <table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="130" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><a href="https://www.emagecompany.com" class="BigClass1" title="返回首页" style="font-size:12px">HOME PAGE</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://industry.emagecompany.com/" class="BigClass1" title="中国48行业公司名录">行 业 名 录</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://local.emagecompany.com/" class="BigClass1" title="中国34省区企业名录">省 区 名 录</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://city.emagecompany.com/" class="BigClass1" title="中国城市企业数据">城 市 数 据</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://international.emagecompany.com/" class="BigClass1" title="全球出口商／供应商名录">国 际 名 录</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://foreign.emagecompany.com/" class="BigClass1" title="世界买家／海关数据">世 界 买 家</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://exhibitors.emagecompany.com/" class="BigClass1" title="伊梅展商名录资源">展 商 名 录</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://resource.emagecompany.com/" class="BigClass1" title="中国免费名录资源">免 费 资 源</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.emagecompany.com/aboutus.html" class="BigClass1" title="关于我们">关 于 我 们</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.emagecompany.com/pay.html" class="BigClass1" title="在线订购">在 线 订 购</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.emagecompany.com/navisample.php" class="BigClass1" title="数据样本">数 据 样 本</a></td>
+  </tr>
+
+  <tr>
+    <td align="center"><a href="https://www.emagecompany.com/sitemap.html" class="BigClass1" title="网站地图">网 站 地 图</a></td>
+  </tr>
+</table></td>
+              </tr>
+              <tr>
+                <td><form action="https://www.emagecompany.com/search.php" method="get" name="form1" target="_blank">
+                  <div align="center">
+                    <input name="key" type="text" id="key" style="font-size:9pt;font-family:arial,helvetica;color:#808080" onFocus="if (this.value=='请输入中文关键字') { this.value=''; }" onBlur="if (this.value=='') { this.value='请输入中文关键字';}" value="请输入中文关键字" size="16">
+                    <br>
+                    <input type="image" name="imageField" src="https://css.emagecompany.com/lists_search.jpg">
+</div>
+                </form>
+                </td>
+              </tr>
+              <tr>
+                <td align="center"><a href="https://local.emagecompany.com/china/chinaenterprises.html"><img src="https://www.emagecompany.com/css/homeleft.gif" border="0" width="119" height="359"></a><br></td>
+              </tr>
+            </table></td>
+          <td valign="top" style="padding-left:10px"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="25" bgcolor="#666666"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://exhibitors.emagecompany.com/lamp/" class="Title4">灯饰照明</a></td>
+                    <td><div align="right"><a href="https://exhibitors.emagecompany.com/" class="title3">&nbsp;·&nbsp;伊梅展商名录资源&nbsp;·&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td height="8"></td>
+            </tr>
+			
+			<tr><td>
+				<table cellpadding="0" cellspacing="0">
+				<tr>
+					<td width="398px;">
+						<table cellpadding="0" cellspacing="0">
+						<tr>
+						  <td class="NewsTitle">2026第26届上海国际LED展参展商名单</td>
+						</tr>			
+						<tr>
+						  <td height="25" class="NewsTitle2">—￥160&nbsp;&nbsp;&nbsp;展商名录 Directory.ZS</td>
+						</tr>
+						</table>
+					</td>
+					<td style="display:none;">
+					<div style="position:relative; color:#0000FF; font-weight:bolder; text-align:right; width:52px; height:40px; border-top:1px #0000FF solid; border-bottom:1px #0000FF solid;">
+						<a href="https://www.emagecompany.com/navisample.php" style="color:#0000FF;" target="_blank"><div style="position:absolute;left:0;top:2; z-index:1;">样本预览<br>满意付款</div></a>
+					</div>
+					</td>
+				</tr>
+				</table>
+			</td></tr>
+			
+			<tr><td><p align="right"><a href="https://industry.emagecompany.com/lamp/lampworks.html" ><span style="COLOR: #0000ff"><strong>2026中国灯饰照明行业企业名录</strong></span></p></td></tr><tr><td><p align="right"><span style="POSITION: relative; TOP: -0.5em; FONT-SIZE: 75%; LINE-HEIGHT: 0; VERTICAL-ALIGN: baseline; COLOR: #b00e00">hot</span> <a href="https://international.emagecompany.com/" ><span style="COLOR: #0000ff"><strong>2026全球任一行业供应商及制造业企业名录</strong></span><br><span style="COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: normal">(可选任一HS编码按金额排名)</span></a></p></td></tr><tr><td><p align="right"><a href="https://foreign.emagecompany.com/lamp/zhaomingsdengshi.html" ><span style="COLOR: #0000ff"><strong>2026世界照明设备及灯具灯饰进口商名录</strong></span></p></td></tr><tr><td><p align="right"><span style="POSITION: relative; TOP: -0.5em; FONT-SIZE: 75%; LINE-HEIGHT: 0; VERTICAL-ALIGN: baseline; COLOR: #b00e00">hot</span> <a href="https://foreign.emagecompany.com/" ><span style="COLOR: #0000ff"><strong>2026世界进口商名录</strong></span><br><span style="COLOR: #666666; FONT-SIZE: 10px; FONT-WEIGHT: normal">(可选任一HS编码按金额排名)</span></a></p></td></tr>
+            <tr>
+              <td height="20"></td>
+            </tr>
+            <tr>
+              <td><p>第26届上海国际LED展（LED CHINA 2026）<br />
+时间：2026年9月15日至17日<br />
+地点：上海新国际博览中心</p>
+
+<table>
+	<colgroup>
+	</colgroup>
+	<tbody>
+		<tr>
+			<td><strong>企业名称</strong></td>
+			<td><strong>展位号</strong></td>
+		</tr>
+		<tr>
+			<td>河南英凯科技发展有限公司</td>
+			<td>W2 C22</td>
+		</tr>
+		<tr>
+			<td>奥德利 &amp; 迈卡乐</td>
+			<td>W2 C21</td>
+		</tr>
+		<tr>
+			<td>上海御牧贸易有限公司</td>
+			<td>W2 C01</td>
+		</tr>
+		<tr>
+			<td>儒彩打印设备（上海）有限公司</td>
+			<td>W2 C02</td>
+		</tr>
+		<tr>
+			<td>郑州豫彩电子科技有限公司</td>
+			<td>W2 C37</td>
+		</tr>
+		<tr>
+			<td>南京奥锐科数码科技有限公司</td>
+			<td>W4 C02</td>
+		</tr>
+		<tr>
+			<td>郑州新世纪数码科技股份有限公司</td>
+			<td>W4 C01</td>
+		</tr>
+		<tr>
+			<td>浙江港龙新材料股份有限公司</td>
+			<td>W1 C02</td>
+		</tr>
+		<tr>
+			<td>四川蓝景光电技术有限责任公司</td>
+			<td>W1 G10</td>
+		</tr>
+		<tr>
+			<td>上海博昊数码科技有限公司</td>
+			<td>W4 C12</td>
+		</tr>
+		<tr>
+			<td>南京欧瑞卡数码科技有限公司（GT）</td>
+			<td>W4 C11</td>
+		</tr>
+		<tr>
+			<td>济南安强智能装备有限公司</td>
+			<td>W2 C46</td>
+		</tr>
+		<tr>
+			<td>浙江海利得复合新材料有限公司</td>
+			<td>W1 C09</td>
+		</tr>
+		<tr>
+			<td>潍坊新和合电子科技有限公司</td>
+			<td>W2 C52</td>
+		</tr>
+		<tr>
+			<td>广州市周氏智能科技有限公司</td>
+			<td>W4 C54</td>
+		</tr>
+		<tr>
+			<td>山东锐捷数控科技集团有限公司</td>
+			<td>W2 C16</td>
+		</tr>
+		<tr>
+			<td>广州金捷数码科技有限公司</td>
+			<td>W4 C18</td>
+		</tr>
+		<tr>
+			<td>郑州普瑞捷电子科技有限公司</td>
+			<td>W4 C07</td>
+		</tr>
+		<tr>
+			<td>海宁市金茂经编有限公司</td>
+			<td>W1 C05</td>
+		</tr>
+		<tr>
+			<td>上海纳尔实业股份有限公司</td>
+			<td>W1 C01</td>
+		</tr>
+		<tr>
+			<td>浙江福莱新材料股份有限公司</td>
+			<td>W1 C26</td>
+		</tr>
+		<tr>
+			<td>杭州赛迪克自动化设备有限公司</td>
+			<td>W2 C29</td>
+		</tr>
+		<tr>
+			<td>深圳鼎力数码科技有限公司</td>
+			<td>W4 C17</td>
+		</tr>
+		<tr>
+			<td>南京根道数码科技有限公司</td>
+			<td>W4 C08</td>
+		</tr>
+		<tr>
+			<td>上海边光实业有限公司</td>
+			<td>W1 G01</td>
+		</tr>
+		<tr>
+			<td>南京欧瑞卡数码科技有限公司</td>
+			<td>W2 G08</td>
+		</tr>
+		<tr>
+			<td>印威图</td>
+			<td>W4 G08</td>
+		</tr>
+		<tr>
+			<td>罗兰</td>
+			<td>W4 G08</td>
+		</tr>
+		<tr>
+			<td>广东省嘉亿联合数码科技有限公司</td>
+			<td>W2 G01</td>
+		</tr>
+		<tr>
+			<td>上海东闻新材料科技有限公司</td>
+			<td>W1 C10</td>
+		</tr>
+		<tr>
+			<td>河北帝鹏实业有限公司</td>
+			<td>W1 C06</td>
+		</tr>
+		<tr>
+			<td>Prime Sign</td>
+			<td>W1 C17</td>
+		</tr>
+		<tr>
+			<td>河北虹鼎塑料制品有限公司</td>
+			<td>W1 C33</td>
+		</tr>
+		<tr>
+			<td>宁波源源和山富进出口有限公司</td>
+			<td>W1 C29</td>
+		</tr>
+		<tr>
+			<td>浙江亦阳新材料有限公司</td>
+			<td>W1 C47</td>
+		</tr>
+		<tr>
+			<td>深圳市华丰源照明有限公司</td>
+			<td>W1 C34</td>
+		</tr>
+		<tr>
+			<td>海宁天福经编涂层有限公司</td>
+			<td>W1 C18</td>
+		</tr>
+		<tr>
+			<td>江门市天域展示器材有限公司</td>
+			<td>W3 C02</td>
+		</tr>
+		<tr>
+			<td>合肥卡星数控设备有限公司</td>
+			<td>W2 C17</td>
+		</tr>
+		<tr>
+			<td>山东奥灵智华新材料科技有限公司</td>
+			<td>W2 C30</td>
+		</tr>
+		<tr>
+			<td>济南巨佳数控机械有限公司</td>
+			<td>W2 C42</td>
+		</tr>
+		<tr>
+			<td>潍坊佳诚数码材料有限公司</td>
+			<td>W1 C30</td>
+		</tr>
+		<tr>
+			<td>苏州工业园区东华工贸有限公司</td>
+			<td>W3 C15</td>
+		</tr>
+		<tr>
+			<td>赤峰镭迈数控设备有限公司</td>
+			<td>W4 C33</td>
+		</tr>
+		<tr>
+			<td>上海杉星达国际贸易有限公司</td>
+			<td>W3 C05</td>
+		</tr>
+		<tr>
+			<td>常州邦驰广告展示器材有限公司</td>
+			<td>W3 C33</td>
+		</tr>
+		<tr>
+			<td>杭州慧造新材料科技有限公司</td>
+			<td>W2 C49</td>
+		</tr>
+		<tr>
+			<td>深圳市广天地数控设备有限公司</td>
+			<td>W2 C38</td>
+		</tr>
+		<tr>
+			<td>广州市四合达数控设备有限公司</td>
+			<td>W4 C22</td>
+		</tr>
+		<tr>
+			<td>杭州零派机电有限公司</td>
+			<td>W3 C06</td>
+		</tr>
+		<tr>
+			<td>上海炫蓝数码科技有限公司</td>
+			<td>W3 C01</td>
+		</tr>
+		<tr>
+			<td>杭州熙鸿数码科技有限公司</td>
+			<td>W4 C21</td>
+		</tr>
+		<tr>
+			<td>张家港市苏龙塑业有限公司</td>
+			<td>W2 C53</td>
+		</tr>
+		<tr>
+			<td>河南联合出彩智能装备有限公司</td>
+			<td>W4 D38</td>
+		</tr>
+		<tr>
+			<td>河南印能电子科技有限公司</td>
+			<td>W2 C34</td>
+		</tr>
+		<tr>
+			<td>山东哈伊泰克智能装备有限公司</td>
+			<td>W4 E51</td>
+		</tr>
+		<tr>
+			<td>河南嘉尔数码科技有限公司</td>
+			<td>W2 G05</td>
+		</tr>
+		<tr>
+			<td>上海熙颜数码科技有限公司</td>
+			<td>W4 G12</td>
+		</tr>
+		<tr>
+			<td>浙江潇丹新材料科技有限公司</td>
+			<td>W1 G09</td>
+		</tr>
+		<tr>
+			<td>佛山市顺德区迪迈斯机电设备有限公司</td>
+			<td>W3 G01</td>
+		</tr>
+		<tr>
+			<td>广州汉牛机械设备有限公司</td>
+			<td>W2 C09</td>
+		</tr>
+		<tr>
+			<td>成都微深科技有限公司</td>
+			<td>W2 C13</td>
+		</tr>
+		<tr>
+			<td>天津市亿彩津元数控科技有限公司</td>
+			<td>W2 C12</td>
+		</tr>
+		<tr>
+			<td>广州众志成装饰材料有限公司</td>
+			<td>W3 C10</td>
+		</tr>
+		<tr>
+			<td>安徽联合智能装备有限责任公司</td>
+			<td>W2 G10</td>
+		</tr>
+		<tr>
+			<td>霸州市宜展展示器材有限公司</td>
+			<td>W3 G18</td>
+		</tr>
+		<tr>
+			<td>郑州六渡机电设备有限公司</td>
+			<td>W2 C57</td>
+		</tr>
+		<tr>
+			<td>厦门海佳科技有限公司</td>
+			<td>W3 G07</td>
+		</tr>
+		<tr>
+			<td>宁波润金智能科技有限公司</td>
+			<td>W4 C41</td>
+		</tr>
+		<tr>
+			<td>江西聚美高分子材料制造有限公司</td>
+			<td>W1 B01</td>
+		</tr>
+		<tr>
+			<td>浙江成如旦涂层材料有限公司</td>
+			<td>W1 G12</td>
+		</tr>
+		<tr>
+			<td>广东雷翼光电科技有限公司</td>
+			<td>W4 G07</td>
+		</tr>
+		<tr>
+			<td>威海康博复合材料有限公司</td>
+			<td>W3 C17</td>
+		</tr>
+		<tr>
+			<td>南昌市派邦实业有限公司</td>
+			<td>W3 C18</td>
+		</tr>
+		<tr>
+			<td>上海优赛实业有限公司</td>
+			<td>W1 D32</td>
+		</tr>
+		<tr>
+			<td>东莞市赛德机电设备有限公司</td>
+			<td>W2 D16</td>
+		</tr>
+		<tr>
+			<td>浙江天畅塑胶有限公司</td>
+			<td>W1 D02</td>
+		</tr>
+		<tr>
+			<td>上海英威喷墨科技有限公司</td>
+			<td>W2 D02</td>
+		</tr>
+		<tr>
+			<td>山东博拓新材料科技股份有限公司</td>
+			<td>W1 C25</td>
+		</tr>
+		<tr>
+			<td>皇剑数码科技（上海）有限公司</td>
+			<td>W4 B01</td>
+		</tr>
+		<tr>
+			<td>广州鑫飞扬数码科技有限公司</td>
+			<td>W4 D02</td>
+		</tr>
+		<tr>
+			<td>福建华杰光电有限公司</td>
+			<td>W4 G03</td>
+		</tr>
+		<tr>
+			<td>深圳柯赛标识智能科技有限公司</td>
+			<td>W3 G08</td>
+		</tr>
+		<tr>
+			<td>江西盛富莱光学科技股份有限公司</td>
+			<td>W3 G02</td>
+		</tr>
+		<tr>
+			<td>惠科股份有限公司</td>
+			<td>W4 G01</td>
+		</tr>
+		<tr>
+			<td>上海欧德赛实业有限公司</td>
+			<td>W1 C22</td>
+		</tr>
+		<tr>
+			<td>江阴宇源国际贸易有限公司</td>
+			<td>W1 C62</td>
+		</tr>
+		<tr>
+			<td>常州阿牛展览展示服务有限公司</td>
+			<td>W3 C25</td>
+		</tr>
+		<tr>
+			<td>淄博顶天塑胶有限公司</td>
+			<td>W1 D38</td>
+		</tr>
+		<tr>
+			<td>浙江逸雅新材料有限公司</td>
+			<td>W1 C39</td>
+		</tr>
+		<tr>
+			<td>肇庆市希顺科技有限公司</td>
+			<td>W1 C16</td>
+		</tr>
+		<tr>
+			<td>山东卓维智能装备有限公司</td>
+			<td>W2 C45</td>
+		</tr>
+		<tr>
+			<td>深圳市零奔洋光电股份有限公司</td>
+			<td>W1 C21</td>
+		</tr>
+		<tr>
+			<td>上海鸿艺广告有限公司</td>
+			<td>W1 C46</td>
+		</tr>
+		<tr>
+			<td>济南金胜星机械设备有限公司</td>
+			<td>W2 D56</td>
+		</tr>
+		<tr>
+			<td>东莞市智联五金制品有限公司</td>
+			<td>W3 C37</td>
+		</tr>
+		<tr>
+			<td>广东图美科技发展有限公司</td>
+			<td>W1 C38</td>
+		</tr>
+		<tr>
+			<td>广州吉辉电子设备有限公司</td>
+			<td>W4 D16</td>
+		</tr>
+		<tr>
+			<td>灵通展览系统股份有限公司</td>
+			<td>W3 C16</td>
+		</tr>
+		<tr>
+			<td>威海旺展旅游用品有限公司</td>
+			<td>W3 C30</td>
+		</tr>
+		<tr>
+			<td>深圳市新涛亚克力有限公司</td>
+			<td>W1 D24</td>
+		</tr>
+		<tr>
+			<td>常州霍克展示系统股份有限公司</td>
+			<td>W3 C29</td>
+		</tr>
+		<tr>
+			<td>济南瓦特尚数控科技有限公司</td>
+			<td>W4 C34</td>
+		</tr>
+		<tr>
+			<td>北京埃佛尔激光科技有限公司</td>
+			<td>W2 B13</td>
+		</tr>
+		<tr>
+			<td>山东汇锋新材料有限公司</td>
+			<td>W1 C42</td>
+		</tr>
+		<tr>
+			<td>广州爱发电子产品有限公司</td>
+			<td>W4 B09</td>
+		</tr>
+		<tr>
+			<td>杭州超翰智能装备有限公司</td>
+			<td>W2 D08</td>
+		</tr>
+		<tr>
+			<td>江苏互生纺织科技有限公司</td>
+			<td>W2 C33</td>
+		</tr>
+		<tr>
+			<td>东莞市高尚机械有限公司</td>
+			<td>W2 C65</td>
+		</tr>
+		<tr>
+			<td>江西明亮亚克力有限公司</td>
+			<td>W2 C62</td>
+		</tr>
+		<tr>
+			<td>广东澳飞扬实业有限公司</td>
+			<td>W3 C26</td>
+		</tr>
+		<tr>
+			<td>东莞市顶峰智能装备有限公司</td>
+			<td>W4 B23</td>
+		</tr>
+		<tr>
+			<td>宁波牧伦达户外用品有限公司</td>
+			<td>W3 C34</td>
+		</tr>
+		<tr>
+			<td>深圳市美耐斯光电有限公司</td>
+			<td>W1 C43</td>
+		</tr>
+		<tr>
+			<td>深圳市信立科光电科技有限公司</td>
+			<td>W4 C51</td>
+		</tr>
+		<tr>
+			<td>深圳市永杰霖科技有限公司</td>
+			<td>W3 D38</td>
+		</tr>
+		<tr>
+			<td>广东顶新电子科技有限公司</td>
+			<td>W3 C21</td>
+		</tr>
+		<tr>
+			<td>青岛恒金鼎精密机械有限公司</td>
+			<td>W4 C37</td>
+		</tr>
+		<tr>
+			<td>宜兴市禾辉数码科技有限公司</td>
+			<td>W4 C38</td>
+		</tr>
+		<tr>
+			<td>深圳市恒锋数控设备有限公司</td>
+			<td>W4 C27</td>
+		</tr>
+		<tr>
+			<td>上海购得棒科技有限公司</td>
+			<td>W3 C22</td>
+		</tr>
+		<tr>
+			<td>VERSO CNC LTD</td>
+			<td>W2 B39</td>
+		</tr>
+		<tr>
+			<td>深圳市华弘优印科技有限公司</td>
+			<td>W4 C50</td>
+		</tr>
+		<tr>
+			<td>北京彩之韵数码科技有限公司</td>
+			<td>W4 D10</td>
+		</tr>
+		<tr>
+			<td>东莞市优墨数字喷墨技术有限公司</td>
+			<td>W2 A25</td>
+		</tr>
+		<tr>
+			<td>利能（佛山市）塑料制品有限公司</td>
+			<td>W3 A02</td>
+		</tr>
+		<tr>
+			<td>深圳市领灿科技有限公司</td>
+			<td>W3 D02</td>
+		</tr>
+		<tr>
+			<td>易晓国际有限公司</td>
+			<td>W2 B09</td>
+		</tr>
+		<tr>
+			<td>江苏海沃新材料科技有限公司</td>
+			<td>W3 D20</td>
+		</tr>
+		<tr>
+			<td>佛山市铭源激光科技有限公司</td>
+			<td>W4 B19</td>
+		</tr>
+		<tr>
+			<td>常州纳捷机电科技有限公司</td>
+			<td>W2 B27</td>
+		</tr>
+		<tr>
+			<td>苏州景辉展览展示器材有限公司</td>
+			<td>W3 B18</td>
+		</tr>
+		<tr>
+			<td>湖南华鑫电子科技有限公司</td>
+			<td>W3 D17</td>
+		</tr>
+		<tr>
+			<td>高健科技股份有限公司</td>
+			<td>W3 A20</td>
+		</tr>
+		<tr>
+			<td>惠州市鑫永锋数控设备有限公司</td>
+			<td>W4 D20</td>
+		</tr>
+		<tr>
+			<td>苏州市易德展览展示器材有限公司</td>
+			<td>W3 C09a</td>
+		</tr>
+		<tr>
+			<td>苏州兰亭新材料有限公司</td>
+			<td>W3 C09b</td>
+		</tr>
+		<tr>
+			<td>东莞市杰创实业有限公司</td>
+			<td>W2 D34</td>
+		</tr>
+		<tr>
+			<td>珠海金波科创电子有限公司</td>
+			<td>W1 B59</td>
+		</tr>
+		<tr>
+			<td>海宁泰威新材料有限公司</td>
+			<td>W1 C50</td>
+		</tr>
+		<tr>
+			<td>深圳市瀚诚照明有限公司</td>
+			<td>W1 D47</td>
+		</tr>
+		<tr>
+			<td>江苏浙创纺织科技有限公司</td>
+			<td>W1 D17</td>
+		</tr>
+		<tr>
+			<td>杭州卓有化纤有限公司</td>
+			<td>W1 D56</td>
+		</tr>
+		<tr>
+			<td>温州森威机械有限公司</td>
+			<td>W4 B29</td>
+		</tr>
+		<tr>
+			<td>常州迈凯思威精密机械有限公司</td>
+			<td>W3 B46</td>
+		</tr>
+		<tr>
+			<td>上海沃之韵实业有限公司</td>
+			<td>W1 B33</td>
+		</tr>
+		<tr>
+			<td>吴江苏画画数码纺织有限公司</td>
+			<td>W1 D23</td>
+		</tr>
+		<tr>
+			<td>吉祥铝业（长兴）有限公司</td>
+			<td>W1 B26</td>
+		</tr>
+		<tr>
+			<td>浙江大祥办公设备有限公司</td>
+			<td>W2 B53</td>
+		</tr>
+		<tr>
+			<td>广东正和广告材料制品有限公司</td>
+			<td>W1 B54</td>
+		</tr>
+		<tr>
+			<td>南通浦镭激光科技有限公司</td>
+			<td>W2 B35</td>
+		</tr>
+		<tr>
+			<td>上海亚彩新材料有限公司</td>
+			<td>W1 B13</td>
+		</tr>
+		<tr>
+			<td>济南阿波罗文化用品有限公司</td>
+			<td>W2 C66</td>
+		</tr>
+		<tr>
+			<td>江苏雅泰国际贸易有限公司</td>
+			<td>W1 D52</td>
+		</tr>
+		<tr>
+			<td>佛山市奥动帐篷有限公司</td>
+			<td>W3 D18</td>
+		</tr>
+		<tr>
+			<td>东莞市联沃数码科技有限公司</td>
+			<td>W2 B32</td>
+		</tr>
+		<tr>
+			<td>江苏奥力新材料股份有限公司</td>
+			<td>W1 B09</td>
+		</tr>
+		<tr>
+			<td>山东越华智能科技有限公司</td>
+			<td>W2 D52</td>
+		</tr>
+		<tr>
+			<td>上海永冠众诚新材料科技（集团）股份有限公司</td>
+			<td>W1 C54</td>
+		</tr>
+		<tr>
+			<td>广东派尔新材料科技有限公司</td>
+			<td>W4 D30</td>
+		</tr>
+		<tr>
+			<td>浙江康展新材料科技有限公司</td>
+			<td>W1 C55</td>
+		</tr>
+		<tr>
+			<td>中山仲冠纸塑制品股份有限公司</td>
+			<td>W1 D18</td>
+		</tr>
+		<tr>
+			<td>河北霸州市华鑫展览展示器材有限公司</td>
+			<td>W3 C38</td>
+		</tr>
+		<tr>
+			<td>佛山市大斯金属科技有限公司</td>
+			<td>W3 A08</td>
+		</tr>
+		<tr>
+			<td>常州灵特尔轻便展示系统有限公司</td>
+			<td>W3 D15</td>
+		</tr>
+		<tr>
+			<td>广东顺德赛兄纳弟展示用品有限公司</td>
+			<td>W3 B35</td>
+		</tr>
+		<tr>
+			<td>山东英创塑胶有限公司</td>
+			<td>W1 D20</td>
+		</tr>
+		<tr>
+			<td>上海广彩国际贸易有限公司</td>
+			<td>W1 B37</td>
+		</tr>
+		<tr>
+			<td>霸州市博尚展览展示器材有限公司</td>
+			<td>W3 B30</td>
+		</tr>
+		<tr>
+			<td>广东盛科装饰材料有限公司</td>
+			<td>W1 C58</td>
+		</tr>
+		<tr>
+			<td>苏州朗朗数码科技有限公司</td>
+			<td>W2 B46</td>
+		</tr>
+		<tr>
+			<td>广州艾诺利高新材料有限公司</td>
+			<td>W1 C59</td>
+		</tr>
+		<tr>
+			<td>佛山市优艺户外用品有限公司</td>
+			<td>W3 C45</td>
+		</tr>
+		<tr>
+			<td>山东京鹏文体用品有限公司</td>
+			<td>W1 B19</td>
+		</tr>
+		<tr>
+			<td>江门市萤火虫广告标识制品有限公司</td>
+			<td>W3 D29</td>
+		</tr>
+		<tr>
+			<td>安徽迈明亚克力科技有限公司</td>
+			<td>W1 E34</td>
+		</tr>
+		<tr>
+			<td>广西伟群帐篷制造有限公司</td>
+			<td>W3 D08</td>
+		</tr>
+		<tr>
+			<td>潍坊禾笙数控设备有限公司</td>
+			<td>W2 B49</td>
+		</tr>
+		<tr>
+			<td>浙江吉利装璜材料有限公司</td>
+			<td>W1 B62</td>
+		</tr>
+		<tr>
+			<td>上海美驰国际贸易有限公司</td>
+			<td>W3 D33</td>
+		</tr>
+		<tr>
+			<td>四川树虎标识标牌制作有限公司</td>
+			<td>W3 D10</td>
+		</tr>
+		<tr>
+			<td>霸州市国威塑料制品有限公司</td>
+			<td>W3 C50</td>
+		</tr>
+		<tr>
+			<td>上海哈肯广告材料有限公司</td>
+			<td>W1 B43</td>
+		</tr>
+		<tr>
+			<td>上海吉祥建材集团有限公司</td>
+			<td>W1 D55</td>
+		</tr>
+		<tr>
+			<td>上海阿路邦装饰材料有限公司</td>
+			<td>W3 C41</td>
+		</tr>
+		<tr>
+			<td>福建夜景辉光学科技有限公司</td>
+			<td>W1 B15</td>
+		</tr>
+		<tr>
+			<td>深圳优莱米科技有限公司</td>
+			<td>W1 D51</td>
+		</tr>
+		<tr>
+			<td>文安县天之翼展览展示器材厂</td>
+			<td>W3 C46</td>
+		</tr>
+		<tr>
+			<td>临沂美斯沃机械设备有限公司</td>
+			<td>W2 D38</td>
+		</tr>
+		<tr>
+			<td>广州盛灵广告有限公司</td>
+			<td>W3 B26</td>
+		</tr>
+		<tr>
+			<td>深圳市康耐思科技有限公司</td>
+			<td>W2 D30</td>
+		</tr>
+		<tr>
+			<td>江西金力永磁科技股份有限公司</td>
+			<td>W2 D48</td>
+		</tr>
+		<tr>
+			<td>潍坊奥凯数控设备有限公司</td>
+			<td>W2 B57</td>
+		</tr>
+		<tr>
+			<td>台州华铂复合材料有限公司</td>
+			<td>W1 C51</td>
+		</tr>
+		<tr>
+			<td>绘智云创（深圳）科技有限公司</td>
+			<td>W3 A24</td>
+		</tr>
+		<tr>
+			<td>上海新亮广告有限公司</td>
+			<td>W3 C51</td>
+		</tr>
+		<tr>
+			<td>珠海君奥新材料科技有限公司</td>
+			<td>W2 B31</td>
+		</tr>
+		<tr>
+			<td>深圳市亿图机电有限公司</td>
+			<td>W4 B33</td>
+		</tr>
+		<tr>
+			<td>中山市泰拓数码科技有限公司</td>
+			<td>W4 D33</td>
+		</tr>
+		<tr>
+			<td>山东康桥实业有限公司</td>
+			<td>W3 D45</td>
+		</tr>
+		<tr>
+			<td>天津市晟捷展览展示服务有限公司</td>
+			<td>W3 C54</td>
+		</tr>
+		<tr>
+			<td>南通中发展示器材有限公司</td>
+			<td>W3 D21</td>
+		</tr>
+		<tr>
+			<td>深圳市雅尚光电有限公司</td>
+			<td>W1 B29</td>
+		</tr>
+		<tr>
+			<td>深圳市迈阿斯光电有限公司</td>
+			<td>W3 B31</td>
+		</tr>
+		<tr>
+			<td>东莞市好光彩照明有限公司</td>
+			<td>W1 D43</td>
+		</tr>
+		<tr>
+			<td>东莞乳圆智能科技有限公司</td>
+			<td>W4 B15</td>
+		</tr>
+		<tr>
+			<td>夏古（深圳）光电科技有限公司</td>
+			<td>W3 C42</td>
+		</tr>
+		<tr>
+			<td>深圳市鑫盛源光电有限公司</td>
+			<td>W1 B47</td>
+		</tr>
+		<tr>
+			<td>深圳市齐普光电子股份有限公司</td>
+			<td>W1 D12</td>
+		</tr>
+		<tr>
+			<td>深圳市信上光电有限公司</td>
+			<td>W1 D48</td>
+		</tr>
+		<tr>
+			<td>江门市征程光电科技有限公司</td>
+			<td>W3 B22</td>
+		</tr>
+		<tr>
+			<td>台州景川电子科技有限公司</td>
+			<td>W1 D60</td>
+		</tr>
+		<tr>
+			<td>东莞市奥联纸业有限公司</td>
+			<td>W4 B32</td>
+		</tr>
+		<tr>
+			<td>湖北金龙新材料有限公司</td>
+			<td>W2 B45</td>
+		</tr>
+		<tr>
+			<td>湖北恒研新材料科技有限公司</td>
+			<td>W2 D51</td>
+		</tr>
+		<tr>
+			<td>福建杰格若科技有限公司</td>
+			<td>W4 C26</td>
+		</tr>
+		<tr>
+			<td>上海弥路进出口有限公司</td>
+			<td>W2 D47</td>
+		</tr>
+		<tr>
+			<td>深圳华航电源科技有限公司</td>
+			<td>W3 D34</td>
+		</tr>
+		<tr>
+			<td>聊城易捷自动化设备有限公司</td>
+			<td>W4 B37</td>
+		</tr>
+		<tr>
+			<td>安徽金百捷新材料科技有限公司</td>
+			<td>W2 B66</td>
+		</tr>
+		<tr>
+			<td>深圳市睿智霞光电有限公司</td>
+			<td>W4 C30</td>
+		</tr>
+		<tr>
+			<td>台州鑫宇海智能科技股份有限公司</td>
+			<td>W2 B65</td>
+		</tr>
+		<tr>
+			<td>安徽恒博新材料有限公司</td>
+			<td>W2 F07</td>
+		</tr>
+		<tr>
+			<td>济南益洲激光科技有限公司</td>
+			<td>W4 C46</td>
+		</tr>
+		<tr>
+			<td>南京尊凯数码科技有限公司</td>
+			<td>W4 C42</td>
+		</tr>
+		<tr>
+			<td>东莞市鸿泰烫画材料有限公司</td>
+			<td>W4 D34</td>
+		</tr>
+		<tr>
+			<td>上海阿鲁迈涛装饰材料有限公司</td>
+			<td>W2 D63</td>
+		</tr>
+		<tr>
+			<td>常州菲尔展示器材制造有限公司</td>
+			<td>W3 D25</td>
+		</tr>
+		<tr>
+			<td>合肥慧沃数控设备有限公司</td>
+			<td>W2 D62</td>
+		</tr>
+		<tr>
+			<td>上海杉星达国际贸易有限公司</td>
+			<td>W1 B11</td>
+		</tr>
+		<tr>
+			<td>常州智道展示器材有限公司</td>
+			<td>W3 C53</td>
+		</tr>
+		<tr>
+			<td>广州百印电子有限公司</td>
+			<td>W4 D37</td>
+		</tr>
+		<tr>
+			<td>浙江准典印务科技有限公司</td>
+			<td>W4 B52</td>
+		</tr>
+		<tr>
+			<td>深圳市国佳光电子股份有限公司</td>
+			<td>W4 B28</td>
+		</tr>
+		<tr>
+			<td>郑州高图数码科技有限公司</td>
+			<td>W3 A18</td>
+		</tr>
+		<tr>
+			<td>鑫辉数码科技（广州）有限公司</td>
+			<td>W4 D50</td>
+		</tr>
+		<tr>
+			<td>上海萨尔数码科技有限公司</td>
+			<td>W4 A58</td>
+		</tr>
+		<tr>
+			<td>深圳市维世科技有限公司</td>
+			<td>W3 D30</td>
+		</tr>
+		<tr>
+			<td>江西省欧诺亚克力科技有限公司</td>
+			<td>W1 B46</td>
+		</tr>
+		<tr>
+			<td>广东赛超智能装备有限公司</td>
+			<td>W4 B40</td>
+		</tr>
+		<tr>
+			<td>东莞市兆阳广告材料有限公司</td>
+			<td>W4 C53</td>
+		</tr>
+		<tr>
+			<td>深圳市锐进三维科技有限公司</td>
+			<td>W3 G13</td>
+		</tr>
+		<tr>
+			<td>芜湖戴杰精密工具技术有限公司</td>
+			<td>W2 A01</td>
+		</tr>
+		<tr>
+			<td>郑州汉伦科技有限公司</td>
+			<td>W2 E18</td>
+		</tr>
+		<tr>
+			<td>广州久晟新材料科技有限公司</td>
+			<td>W1 C63</td>
+		</tr>
+		<tr>
+			<td>济南三强数控设备有限公司</td>
+			<td>W2 D67</td>
+		</tr>
+		<tr>
+			<td>潍坊翰顿数控设备有限公司</td>
+			<td>W2 D69</td>
+		</tr>
+		<tr>
+			<td>广州市瀛和电子设备有限公司</td>
+			<td>W2 F10</td>
+		</tr>
+		<tr>
+			<td>上海澳迎新材料有限公司</td>
+			<td>W2 A55</td>
+		</tr>
+		<tr>
+			<td>霸州市红天五金塑料制品厂</td>
+			<td>W3 E08</td>
+		</tr>
+		<tr>
+			<td>保定融达电子设备有限公司</td>
+			<td>W4 D24</td>
+		</tr>
+		<tr>
+			<td>温州市吉祥板业有限公司</td>
+			<td>W1 D08</td>
+		</tr>
+		<tr>
+			<td>浙江展宇新材料有限公司</td>
+			<td>W1 E07</td>
+		</tr>
+		<tr>
+			<td>珠海君奥新材料科技有限公司</td>
+			<td>W3 A20b</td>
+		</tr>
+		<tr>
+			<td>闻信展览测试有限公司</td>
+			<td>E1 E101</td>
+		</tr>
+		<tr>
+			<td>佛山市高明爱博广告装饰材料有限公司</td>
+			<td>W1 A23</td>
+		</tr>
+		<tr>
+			<td>江苏民扬塑胶科技有限公司</td>
+			<td>W1 A05</td>
+		</tr>
+		<tr>
+			<td>上海高恺实业有限公司</td>
+			<td>W1 B55b</td>
+		</tr>
+		<tr>
+			<td>广州迈森思新材料有限公司</td>
+			<td>W1 A60</td>
+		</tr>
+		<tr>
+			<td>宁波永德利展示器材有限公司</td>
+			<td>W1 E02</td>
+		</tr>
+		<tr>
+			<td>苏州赛尼克斯展示器材有限公司</td>
+			<td>W1 D30</td>
+		</tr>
+		<tr>
+			<td>嘉兴广杰科技有限公司</td>
+			<td>W1 A17</td>
+		</tr>
+		<tr>
+			<td>深圳丰盈磁性材料有限公司</td>
+			<td>W1 A01</td>
+		</tr>
+		<tr>
+			<td>温州天瑞新材料科技有限公司</td>
+			<td>W1 E08</td>
+		</tr>
+		<tr>
+			<td>广州新莱福新材料股份有限公司</td>
+			<td>W1 F01</td>
+		</tr>
+		<tr>
+			<td>东莞市丰收实业有限公司</td>
+			<td>W2 D70</td>
+		</tr>
+		<tr>
+			<td>深圳市嘉豪弘业科技有限公司</td>
+			<td>W2 A07</td>
+		</tr>
+		<tr>
+			<td>TEXTILE-FLEX</td>
+			<td>W1 A27</td>
+		</tr>
+		<tr>
+			<td>广州市同庆胶粘制品有限公司</td>
+			<td>W1 A49</td>
+		</tr>
+		<tr>
+			<td>貴倫磁性製品有限公司</td>
+			<td>W1 E43</td>
+		</tr>
+		<tr>
+			<td>江阴南威塑业有限公司</td>
+			<td>W1 B25</td>
+		</tr>
+		<tr>
+			<td>东莞市蔡伦智能装备有限公司</td>
+			<td>W2 E06</td>
+		</tr>
+		<tr>
+			<td>广州市顺固美胶粘带有限公司</td>
+			<td>W1 F08</td>
+		</tr>
+		<tr>
+			<td>江苏高盛数码喷绘材料有限公司</td>
+			<td>W1 E22</td>
+		</tr>
+		<tr>
+			<td>宁波同生材塑胶科技有限公司</td>
+			<td>W1 A50</td>
+		</tr>
+		<tr>
+			<td>临沂耐易达铝塑制品有限公司</td>
+			<td>W1 D44</td>
+		</tr>
+		<tr>
+			<td>杭州仁迪家居有限公司</td>
+			<td>W1 B68</td>
+		</tr>
+		<tr>
+			<td>浙江亿方新材料股份有限公司</td>
+			<td>W3 E18</td>
+		</tr>
+		<tr>
+			<td>广州决策图书有限公司</td>
+			<td>W1 F09</td>
+		</tr>
+		<tr>
+			<td>台州海昌新材料有限公司</td>
+			<td>W1 A26</td>
+		</tr>
+		<tr>
+			<td>苏州市华运五金电器有限公司</td>
+			<td>W4 B48</td>
+		</tr>
+		<tr>
+			<td>温州市翔宇文化用品有限公司</td>
+			<td>W3 B49</td>
+		</tr>
+		<tr>
+			<td>广州迪迩智能科技有限公司</td>
+			<td>W1 D59</td>
+		</tr>
+		<tr>
+			<td>杭州凡高新材料有限公司</td>
+			<td>W1 D41</td>
+		</tr>
+		<tr>
+			<td>上海恺大新材料有限公司</td>
+			<td>W1 B55a</td>
+		</tr>
+		<tr>
+			<td>上海氢流三维科技有限公司</td>
+			<td>W1 F15</td>
+		</tr>
+		<tr>
+			<td>义乌尚美特数码影像有限公司</td>
+			<td>W2 A49</td>
+		</tr>
+		<tr>
+			<td>福建新力元国际贸易有限公司</td>
+			<td>W1 E18</td>
+		</tr>
+		<tr>
+			<td>福建汇众美尚国际贸易有限公司</td>
+			<td>W1 D39</td>
+		</tr>
+		<tr>
+			<td>清河县力森橡塑厂(河北巨森新材料)</td>
+			<td>W3 D65</td>
+		</tr>
+		<tr>
+			<td>广州市光巨灯饰有限公司</td>
+			<td>W1 A43</td>
+		</tr>
+		<tr>
+			<td>郑州智雅新材料有限公司</td>
+			<td>W1 E30</td>
+		</tr>
+		<tr>
+			<td>上海秀奇展示器材有限公司</td>
+			<td>W3 A28</td>
+		</tr>
+		<tr>
+			<td>国宏光电科技（深圳）有限公司</td>
+			<td>W3 D49</td>
+		</tr>
+		<tr>
+			<td>广州市吉鑫祥装饰建材有限公司</td>
+			<td>W1 E26</td>
+		</tr>
+		<tr>
+			<td>上海鸿源数码科技有限公司</td>
+			<td>W1 B67</td>
+		</tr>
+		<tr>
+			<td>聊城巨龙激光设备有限公司</td>
+			<td>W4 D49</td>
+		</tr>
+		<tr>
+			<td>宜兴市新天利科技有限公司</td>
+			<td>W2 E02</td>
+		</tr>
+		<tr>
+			<td>深圳市经纬线科技有限公司</td>
+			<td>W2 B61</td>
+		</tr>
+		<tr>
+			<td>江西雅展新材料有限公司</td>
+			<td>W1 D63</td>
+		</tr>
+		<tr>
+			<td>东莞市恒索机械设备有限公司</td>
+			<td>W4 C25</td>
+		</tr>
+		<tr>
+			<td>上海雅展广告设计有限公司</td>
+			<td>W1 A53</td>
+		</tr>
+		<tr>
+			<td>宜兴市佳普林新材料有限公司</td>
+			<td>W2 A37</td>
+		</tr>
+		<tr>
+			<td>浙江力行得科技有限公司</td>
+			<td>W1 E63</td>
+		</tr>
+		<tr>
+			<td>霸州市鹏博展具有限公司</td>
+			<td>W3 E51</td>
+		</tr>
+		<tr>
+			<td>河北万昌实业有限公司</td>
+			<td>W1 B42</td>
+		</tr>
+		<tr>
+			<td>浙江天星产业用布有限公司</td>
+			<td>W1 B07</td>
+		</tr>
+		<tr>
+			<td>合肥墨林进出口贸易有限公司</td>
+			<td>W1 E54</td>
+		</tr>
+		<tr>
+			<td>上海瑾泓新材料科技有限公司</td>
+			<td>W1 B58</td>
+		</tr>
+		<tr>
+			<td>鹤山市威诗柏胶粘制品有限公司</td>
+			<td>W1 D59a</td>
+		</tr>
+		<tr>
+			<td>四川省江油市豫蜀夜视利反光材料有限公司</td>
+			<td>W1 A08</td>
+		</tr>
+		<tr>
+			<td>御盈广告制品厂</td>
+			<td>W1 B58a</td>
+		</tr>
+		<tr>
+			<td>嘉兴钉铛科技有限公司</td>
+			<td>W3 B50b</td>
+		</tr>
+		<tr>
+			<td>嘉兴邦览展览展示有限公司</td>
+			<td>W3 B50a</td>
+		</tr>
+		<tr>
+			<td>广东向盟科技有限公司</td>
+			<td>W2 D57</td>
+		</tr>
+		<tr>
+			<td>常州市晶德锐反光材料有限公司</td>
+			<td>W2 D44</td>
+		</tr>
+		<tr>
+			<td>合肥易刻佳数控设备有限公司</td>
+			<td>W3 B64</td>
+		</tr>
+		<tr>
+			<td>江阴恒瑞利新材料科技有限公司</td>
+			<td>W1 E40</td>
+		</tr>
+		<tr>
+			<td>河北九鸿激光科技有限公司</td>
+			<td>W2 E28</td>
+		</tr>
+		<tr>
+			<td>山东吉祥歌建材科技有限公司</td>
+			<td>W1 B40</td>
+		</tr>
+		<tr>
+			<td>杭州唯迪尚创新科技有限公司</td>
+			<td>W2 A33</td>
+		</tr>
+		<tr>
+			<td>上海品诚塑胶有限公司</td>
+			<td>W3 D49a</td>
+		</tr>
+		<tr>
+			<td>深圳市洋明达科技有限公司</td>
+			<td>W4 B53</td>
+		</tr>
+		<tr>
+			<td>广州华宇数码科技有限公司</td>
+			<td>W2 E43</td>
+		</tr>
+		<tr>
+			<td>东莞真材智能科技有限公司</td>
+			<td>W2 E24</td>
+		</tr>
+		<tr>
+			<td>湖北盘石激光技术应用有限公司</td>
+			<td>W2 E40</td>
+		</tr>
+		<tr>
+			<td>广东朗龙环保新材料科技有限公司</td>
+			<td>W3 E16</td>
+		</tr>
+		<tr>
+			<td>惠州市广徽标识有限公司</td>
+			<td>W3 A29</td>
+		</tr>
+		<tr>
+			<td>福建为美广告材料有限公司</td>
+			<td>W1 C65</td>
+		</tr>
+		<tr>
+			<td>深圳鑫方略科技有限公司</td>
+			<td>W3 B53</td>
+		</tr>
+		<tr>
+			<td>广州杰熙电子科技有限公司</td>
+			<td>W4 E26</td>
+		</tr>
+		<tr>
+			<td>日志动力传送系统（上海）有限公司</td>
+			<td>W4 E02</td>
+		</tr>
+		<tr>
+			<td>煜阳建材科技(天津)有限公司</td>
+			<td>W3 C63</td>
+		</tr>
+		<tr>
+			<td>上海香宝机械设备有限公司</td>
+			<td>W4 B07</td>
+		</tr>
+		<tr>
+			<td>东莞市精鹰刀具有限公司</td>
+			<td>W2 E46</td>
+		</tr>
+		<tr>
+			<td>深圳贝斯特专显科技有限公司</td>
+			<td>W3 D37a</td>
+		</tr>
+		<tr>
+			<td>深圳市华创佳科技有限公司</td>
+			<td>W3 F13</td>
+		</tr>
+		<tr>
+			<td>深圳市屏美科技有限公司</td>
+			<td>W3 A48</td>
+		</tr>
+		<tr>
+			<td>珠海铂能电子科技有限公司</td>
+			<td>W1 A39</td>
+		</tr>
+		<tr>
+			<td>贵州省铜仁市柏林科技有限公司</td>
+			<td>W1 F03</td>
+		</tr>
+		<tr>
+			<td>东莞市顺祥光电科技有限公司</td>
+			<td>W1 E44</td>
+		</tr>
+		<tr>
+			<td>江门市一品光电科技有限公司</td>
+			<td>W1 A57</td>
+		</tr>
+		<tr>
+			<td>深圳市好彩阳科技有限公司</td>
+			<td>W1 D64</td>
+		</tr>
+		<tr>
+			<td>苏州万敦新材料有限公司</td>
+			<td>W4 A50</td>
+		</tr>
+		<tr>
+			<td>广州市韵强电子有限公司</td>
+			<td>W3 C61</td>
+		</tr>
+		<tr>
+			<td>政和县正丰竹业有限公司</td>
+			<td>W3 E55</td>
+		</tr>
+		<tr>
+			<td>深圳市古德森实业科技有限公司</td>
+			<td>W3 C58a</td>
+		</tr>
+		<tr>
+			<td>广东图美科技发展有限公司</td>
+			<td>W1 B51</td>
+		</tr>
+		<tr>
+			<td>深圳市众创品科技有限公司</td>
+			<td>W4 A52</td>
+		</tr>
+		<tr>
+			<td>广东东华光电科技有限公司</td>
+			<td>W2 E34</td>
+		</tr>
+		<tr>
+			<td>湖南铝美涂科技有限公司</td>
+			<td>W3 D26</td>
+		</tr>
+		<tr>
+			<td>中山市铭纬显示技术有限公司</td>
+			<td>W4 A17</td>
+		</tr>
+		<tr>
+			<td>广东达林源智能科技有限公司</td>
+			<td>W3 D52</td>
+		</tr>
+		<tr>
+			<td>广东省普迪斯科技有限公司</td>
+			<td>W3 D70</td>
+		</tr>
+		<tr>
+			<td>海达展示</td>
+			<td>W3 A12</td>
+		</tr>
+		<tr>
+			<td>广州顺太光电科技有限公司</td>
+			<td>W3 B40</td>
+		</tr>
+		<tr>
+			<td>上海毓记实业有限公司</td>
+			<td>W3 B45</td>
+		</tr>
+		<tr>
+			<td>福建思嘉新材料科技有限公司</td>
+			<td>W3 A44</td>
+		</tr>
+		<tr>
+			<td>杭州佳涛实业有限公司</td>
+			<td>W2 B62a</td>
+		</tr>
+		<tr>
+			<td>浦江县国华商贸有限公司</td>
+			<td>W3 A35</td>
+		</tr>
+		<tr>
+			<td>广东赋康展览展示有限公司</td>
+			<td>W3 E34</td>
+		</tr>
+		<tr>
+			<td>青岛万德隆纺织品科技有限公司</td>
+			<td>W3 B38</td>
+		</tr>
+		<tr>
+			<td>广东东梓数码新材料有限公司</td>
+			<td>W4 D28</td>
+		</tr>
+		<tr>
+			<td>杭州意远商业展示系统有限公司</td>
+			<td>W3 C64</td>
+		</tr>
+		<tr>
+			<td>爱莫丽(上海)新材料科技有限公司</td>
+			<td>W2 B60</td>
+		</tr>
+		<tr>
+			<td>深圳市香橙高科实业有限公司</td>
+			<td>W4 B41</td>
+		</tr>
+		<tr>
+			<td>中山市腾远亚克力制品加工厂/中山市顺远塑料制品有限公司</td>
+			<td>W3 E43</td>
+		</tr>
+		<tr>
+			<td>旷维技术 &amp; 旷维智能</td>
+			<td>W4 A42</td>
+		</tr>
+		<tr>
+			<td>深圳市合利通科技有限公司</td>
+			<td>W3 A01</td>
+		</tr>
+		<tr>
+			<td>深圳市引路人光电科技有限公司</td>
+			<td>W4 A03</td>
+		</tr>
+		<tr>
+			<td>东莞市大纽自动化科技有限公司</td>
+			<td>W4 F09</td>
+		</tr>
+		<tr>
+			<td>湖州宇尚高分子材料科技有限公司</td>
+			<td>W2 D61</td>
+		</tr>
+		<tr>
+			<td>沧州福佑电子设备有限公司</td>
+			<td>W4 A09</td>
+		</tr>
+		<tr>
+			<td>深圳华堤科技有限公司</td>
+			<td>W4 A54</td>
+		</tr>
+		<tr>
+			<td>深圳市德威科技发展有限公司</td>
+			<td>W4 E61</td>
+		</tr>
+		<tr>
+			<td>邢台亚新橡塑制品有限公司</td>
+			<td>W3 A60</td>
+		</tr>
+		<tr>
+			<td>苏州雨沐新材料科技有限公司</td>
+			<td>W2 E56</td>
+		</tr>
+		<tr>
+			<td>广州一帆广告标识制作有限公司</td>
+			<td>W3 D44</td>
+		</tr>
+		<tr>
+			<td>临沂明彩电子科技有限公司</td>
+			<td>W4 D66</td>
+		</tr>
+		<tr>
+			<td>杭州西岩智显科技有限公司</td>
+			<td>W3 B42a</td>
+		</tr>
+		<tr>
+			<td>上海瑞旗国际贸易有限公司</td>
+			<td>W4 E55</td>
+		</tr>
+		<tr>
+			<td>武汉市蒙泰科技发展有限责任公司</td>
+			<td>W4 E18</td>
+		</tr>
+		<tr>
+			<td>杭州华大海天科技股份有限公司</td>
+			<td>W4 E10</td>
+		</tr>
+		<tr>
+			<td>杭州拜肯广告材料有限公司</td>
+			<td>W2 A61</td>
+		</tr>
+		<tr>
+			<td>安徽吉祥新材料科技有限公司</td>
+			<td>W3 B42</td>
+		</tr>
+		<tr>
+			<td>深圳市皓明佳科技有限公司</td>
+			<td>W3 B62</td>
+		</tr>
+		<tr>
+			<td>杭州福兰锝实业有限公司</td>
+			<td>W2 E62</td>
+		</tr>
+		<tr>
+			<td>杭州璟跃科技有限公司</td>
+			<td>W4 B48a</td>
+		</tr>
+		<tr>
+			<td>常州易赛展示器材有限公司</td>
+			<td>W3 E25</td>
+		</tr>
+		<tr>
+			<td>赛思广告标识(广州)有限公司</td>
+			<td>W3 B65</td>
+		</tr>
+		<tr>
+			<td>深圳市雅迅达液晶显示设备有限公司</td>
+			<td>W3 A40</td>
+		</tr>
+		<tr>
+			<td>中山市泰乐科技有限公司</td>
+			<td>W3 B11</td>
+		</tr>
+		<tr>
+			<td>上海视颐电子科技有限公司</td>
+			<td>W3 B41</td>
+		</tr>
+		<tr>
+			<td>中山卓越新材料有限公司</td>
+			<td>W4 D29</td>
+		</tr>
+		<tr>
+			<td>佛山松恒致程科技有限公司</td>
+			<td>W4 E22</td>
+		</tr>
+		<tr>
+			<td>滁州唯源德新材料有限公司</td>
+			<td>W4 E23</td>
+		</tr>
+		<tr>
+			<td>厦门奥艺科技有限公司</td>
+			<td>W3 D56</td>
+		</tr>
+		<tr>
+			<td>上海优幂亿新材料有限公司</td>
+			<td>W1 D66</td>
+		</tr>
+		<tr>
+			<td>临沂市航达数控设备有限公司</td>
+			<td>W4 D72</td>
+		</tr>
+		<tr>
+			<td>惠州市大荣新材料科技有限公司</td>
+			<td>W3 E42</td>
+		</tr>
+		<tr>
+			<td>博琳转印纸批发中心</td>
+			<td>W4 D47a</td>
+		</tr>
+		<tr>
+			<td>深圳市沣视科技有限公司</td>
+			<td>W3 D48</td>
+		</tr>
+		<tr>
+			<td>上海步镭沃激光设备有限公司</td>
+			<td>W4 B49</td>
+		</tr>
+		<tr>
+			<td>深圳市意达亨科技有限公司</td>
+			<td>W3 D57a</td>
+		</tr>
+		<tr>
+			<td>深圳市阿尔森电子有限公司</td>
+			<td>W3 C62</td>
+		</tr>
+		<tr>
+			<td>深圳市明源显示科技有限公司</td>
+			<td>W3 C58b</td>
+		</tr>
+		<tr>
+			<td>东莞市鸿德新机械设备有限公司</td>
+			<td>W4 D65</td>
+		</tr>
+		<tr>
+			<td>浙江赛宁新材料科技有限公司</td>
+			<td>W1 E12</td>
+		</tr>
+		<tr>
+			<td>宁波跨顿五金科技有限公司</td>
+			<td>W1 A15</td>
+		</tr>
+		<tr>
+			<td>山西鑫宇恒有限公司</td>
+			<td>W2 A19</td>
+		</tr>
+		<tr>
+			<td>赛特莱特（佛山）塑胶制品有限公司</td>
+			<td>W1 A37</td>
+		</tr>
+		<tr>
+			<td>湖南省岩田新材料科技有限公司</td>
+			<td>W1 F11</td>
+		</tr>
+		<tr>
+			<td>深圳奥菲诺科技有限公司</td>
+			<td>W4 A01</td>
+		</tr>
+		<tr>
+			<td>苏州赫姆伯格纸业有限公司</td>
+			<td>W2 E16</td>
+		</tr>
+		<tr>
+			<td>河南沃达丰数码科技有限公司</td>
+			<td>W1 D70</td>
+		</tr>
+		<tr>
+			<td>上海赛顶新材料有限公司</td>
+			<td>W1 E50</td>
+		</tr>
+		<tr>
+			<td>聊城经济开发区杰刻激光设备有限公司</td>
+			<td>W2 A11</td>
+		</tr>
+		<tr>
+			<td>许昌大腾机械设备有限公司</td>
+			<td>W2 A23</td>
+		</tr>
+		<tr>
+			<td>佛山市高明区轩润镜业有限公司</td>
+			<td>W3 A41</td>
+		</tr>
+		<tr>
+			<td>上海誉彩广告材料科技有限公司</td>
+			<td>W1 A13</td>
+		</tr>
+		<tr>
+			<td>宁波众鼎塑料有限公司</td>
+			<td>W1 A09</td>
+		</tr>
+		<tr>
+			<td>苏州印美达纸业科技有限公司</td>
+			<td>W2 A21</td>
+		</tr>
+		<tr>
+			<td>东阳市恒蓝工贸有限公司</td>
+			<td>W2 A43</td>
+		</tr>
+		<tr>
+			<td>广州志亨广告设备有限公司</td>
+			<td>W1 A66</td>
+		</tr>
+		<tr>
+			<td>深圳市和锋广告有限公司</td>
+			<td>W3 A19</td>
+		</tr>
+		<tr>
+			<td>深圳市蓝科工具有限公司</td>
+			<td>W2 E22</td>
+		</tr>
+		<tr>
+			<td>广州市可丽德数码材料有限公司</td>
+			<td>W4 A23</td>
+		</tr>
+		<tr>
+			<td>苏州奥凯高分子材料股份有限公司</td>
+			<td>W1 D68</td>
+		</tr>
+		<tr>
+			<td>广州逸绘数码科技有限公司</td>
+			<td>W2 E10</td>
+		</tr>
+		<tr>
+			<td>青县奥强机械配件制造有限公司</td>
+			<td>W2 E14</td>
+		</tr>
+		<tr>
+			<td>上海皎阳工具有限公司</td>
+			<td>W2 A17</td>
+		</tr>
+		<tr>
+			<td>嘉兴市集美新材料科技有限公司</td>
+			<td>W1 F12</td>
+		</tr>
+		<tr>
+			<td>江西赛宇精密机械有限公司</td>
+			<td>W2 E38</td>
+		</tr>
+		<tr>
+			<td>霸州思飞凡展示器材有限公司</td>
+			<td>W3 F01</td>
+		</tr>
+		<tr>
+			<td>常州荣玖机械股份有限公司</td>
+			<td>W2 D42</td>
+		</tr>
+		<tr>
+			<td>临沂市兰山区烨堃铝业经营部</td>
+			<td>W4 A68</td>
+		</tr>
+		<tr>
+			<td>泰安运达环保科技有限公司</td>
+			<td>W2 E65</td>
+		</tr>
+		<tr>
+			<td>江苏坤林新材料科技有限公司</td>
+			<td>W1 A24</td>
+		</tr>
+		<tr>
+			<td>广州棱道科技有限公司</td>
+			<td>W3 D39</td>
+		</tr>
+		<tr>
+			<td>广东九瓦灯饰有限公司</td>
+			<td>W1 E60</td>
+		</tr>
+		<tr>
+			<td>广州若美广告有限公司</td>
+			<td>W3 D37</td>
+		</tr>
+		<tr>
+			<td>江苏得道电子科技有限公司</td>
+			<td>W2 E50</td>
+		</tr>
+		<tr>
+			<td>上海瑞斯盛实业有限公司</td>
+			<td>W1 E48</td>
+		</tr>
+		<tr>
+			<td>广州市蓝旗广告器材有限公司</td>
+			<td>W1 A61</td>
+		</tr>
+		<tr>
+			<td>江苏三鼎亚克力制造有限公司</td>
+			<td>W1 E52</td>
+		</tr>
+		<tr>
+			<td>杭州诺联涂层织物有限公司</td>
+			<td>W1 A35</td>
+		</tr>
+		<tr>
+			<td>昆山市赛诚精密工具有限公司</td>
+			<td>W2 A13</td>
+		</tr>
+		<tr>
+			<td>连云港公泰亚克力设备有限公司</td>
+			<td>W2 D68</td>
+		</tr>
+		<tr>
+			<td>常州市创联电源科技股份有限公司</td>
+			<td>W3 A09</td>
+		</tr>
+		<tr>
+			<td>南通美坤新材料科技有限公司</td>
+			<td>W1 A33</td>
+		</tr>
+		<tr>
+			<td>深圳市科博鸿业科技有限公司</td>
+			<td>W3 E02</td>
+		</tr>
+		<tr>
+			<td>无锡艾尔法科技有限公司</td>
+			<td>W1 E16</td>
+		</tr>
+		<tr>
+			<td>山东金色阳光建材有限公司</td>
+			<td>W1 B65</td>
+		</tr>
+		<tr>
+			<td>广东省启先科技有限公司</td>
+			<td>W3 F08</td>
+		</tr>
+		<tr>
+			<td>常州市合佳装饰材料有限公司</td>
+			<td>W1 A40</td>
+		</tr>
+		<tr>
+			<td>临沂明旭灯箱厂</td>
+			<td>W4 F08</td>
+		</tr>
+		<tr>
+			<td>浙江诚连电气科技有限公司</td>
+			<td>W3 A07</td>
+		</tr>
+		<tr>
+			<td>山东诚歌建材有限公司</td>
+			<td>W1 E58</td>
+		</tr>
+		<tr>
+			<td>深圳市丽图广告器材有限公司</td>
+			<td>W2 F08</td>
+		</tr>
+		<tr>
+			<td>中山市美维精工智能科技有限公司/中山美维环保智能科技有限公司</td>
+			<td>W2 F09</td>
+		</tr>
+		<tr>
+			<td>深圳市像素之光科技有限公司</td>
+			<td>W3 E26</td>
+		</tr>
+		<tr>
+			<td>上海纵港新材料科技股份有限公司</td>
+			<td>W3 A15</td>
+		</tr>
+		<tr>
+			<td>深圳市特耐斯照明有限公司</td>
+			<td>W1 E64</td>
+		</tr>
+		<tr>
+			<td>山东恒阳正泰 PVC发泡板 雪弗板</td>
+			<td>W2 A41</td>
+		</tr>
+		<tr>
+			<td>温州优邦广告材料有限公司</td>
+			<td>W3 A13</td>
+		</tr>
+		<tr>
+			<td>杭州金晓亚克力板业有限公司</td>
+			<td>W1 B66</td>
+		</tr>
+		<tr>
+			<td>深圳市嘉源星照明科技有限公司</td>
+			<td>W1 B63</td>
+		</tr>
+		<tr>
+			<td>91图库网</td>
+			<td>W3 F09</td>
+		</tr>
+		<tr>
+			<td>江门市万飞光电科技有限公司</td>
+			<td>W3 D41</td>
+		</tr>
+		<tr>
+			<td>上海锦聪汇电子科技有限公司</td>
+			<td>W3 A17</td>
+		</tr>
+		<tr>
+			<td>江门市旗航灯饰有限公司</td>
+			<td>W1 A21</td>
+		</tr>
+		<tr>
+			<td>苏州迪玛展览器材厂</td>
+			<td>W1 E14</td>
+		</tr>
+		<tr>
+			<td>佛山市燊纬塑胶板材有限公司</td>
+			<td>W2 B60a</td>
+		</tr>
+		<tr>
+			<td>上海旭立峰新材料科技有限公司</td>
+			<td>W2 A15</td>
+		</tr>
+		<tr>
+			<td>上海丹容工贸有限公司</td>
+			<td>W2 E44</td>
+		</tr>
+		<tr>
+			<td>常州长颈鹿展示器材有限公司</td>
+			<td>W3 E28</td>
+		</tr>
+		<tr>
+			<td>福建晋江市联昇磁材有限公司</td>
+			<td>W1 B66a</td>
+		</tr>
+		<tr>
+			<td>四川斯利达刀具有限公司</td>
+			<td>W2 E12</td>
+		</tr>
+		<tr>
+			<td>嘉兴亦赛新材料有限公司</td>
+			<td>W2 E41</td>
+		</tr>
+		<tr>
+			<td>穗通五金工具厂</td>
+			<td>W1 F16</td>
+		</tr>
+		<tr>
+			<td>广州市姜来胶粘制品有限公司</td>
+			<td>W1 A11</td>
+		</tr>
+		<tr>
+			<td>湖南瑞彩智能科技有限公司</td>
+			<td>W1 E69</td>
+		</tr>
+		<tr>
+			<td>上海欧切斯实业有限公司</td>
+			<td>W1 A47</td>
+		</tr>
+		<tr>
+			<td>深圳市泰合光电科技有限公司</td>
+			<td>W3 E48</td>
+		</tr>
+		<tr>
+			<td>佛山市古莱照明有限公司</td>
+			<td>W3 A11</td>
+		</tr>
+		<tr>
+			<td>中山市波普赛视觉科技有限公司</td>
+			<td>W3 A27</td>
+		</tr>
+		<tr>
+			<td>科凡达科技（深圳）有限公司</td>
+			<td>W1 B41</td>
+		</tr>
+		<tr>
+			<td>商丘市星光电子科技有限公司</td>
+			<td>W3 E30</td>
+		</tr>
+		<tr>
+			<td>深圳市善佳科技有限公司</td>
+			<td>W1 E67</td>
+		</tr>
+		<tr>
+			<td>深圳市魔虹光电有限公司</td>
+			<td>W1 E62</td>
+		</tr>
+		<tr>
+			<td>江门市灿达光电有限公司</td>
+			<td>W1 F13</td>
+		</tr>
+		<tr>
+			<td>广东省华普智能技术有限公司</td>
+			<td>W2 A47</td>
+		</tr>
+		<tr>
+			<td>INTERONE CO., LTD.</td>
+			<td>W3 B27b</td>
+		</tr>
+		<tr>
+			<td>UNION ELECOM CO., LTD.</td>
+			<td>W3 B27a</td>
+		</tr>
+		<tr>
+			<td>宜春耀洲电子科技有限公司</td>
+			<td>W4 A15</td>
+		</tr>
+		<tr>
+			<td>江门市宇晨光电科技有限公司</td>
+			<td>W1 A64</td>
+		</tr>
+		<tr>
+			<td>深圳市特斯拉光电科技有限公司</td>
+			<td>W3 F16</td>
+		</tr>
+		<tr>
+			<td>海宁市骄阳旗材有限公司</td>
+			<td>W1 A31</td>
+		</tr>
+		<tr>
+			<td>河北天迈高温呢毯有限公司</td>
+			<td>W2 A45</td>
+		</tr>
+		<tr>
+			<td>广州纳米数码科技有限公司</td>
+			<td>W2 B58a</td>
+		</tr>
+		<tr>
+			<td>宿迁利泰纺织有限公司</td>
+			<td>W1 B23</td>
+		</tr>
+		<tr>
+			<td>佛山市华色塑料有机板材实业有限公司</td>
+			<td>W2 B58</td>
+		</tr>
+		<tr>
+			<td>深圳市美佳爱科技有限公司</td>
+			<td>W3 D41a</td>
+		</tr>
+		<tr>
+			<td>深圳市速克优实业有限公司</td>
+			<td>W2 F01</td>
+		</tr>
+		<tr>
+			<td>中山科迪利照明有限公司</td>
+			<td>W3 A25</td>
+		</tr>
+		<tr>
+			<td>浙江东阳市高科电磁器材有限公司</td>
+			<td>W1 C67</td>
+		</tr>
+		<tr>
+			<td>永嘉县孙城机械科技厂</td>
+			<td>W4 A07</td>
+		</tr>
+		<tr>
+			<td>山西稷阳科技有限公司</td>
+			<td>W2 E54</td>
+		</tr>
+		<tr>
+			<td>佛山汉光数码印刷设备有限公司</td>
+			<td>W4 A41</td>
+		</tr>
+		<tr>
+			<td>常州仟那伦光电科技有限公司</td>
+			<td>W3 E06</td>
+		</tr>
+		<tr>
+			<td>上海伯利恒环保塑料型材有限公司</td>
+			<td>W3 D63a</td>
+		</tr>
+		<tr>
+			<td>浙江鲨威数码科技有限公司</td>
+			<td>W1 A63</td>
+		</tr>
+		<tr>
+			<td>钦州两山创新材料科技发展有限公司</td>
+			<td>W2 B64</td>
+		</tr>
+		<tr>
+			<td>深圳市易视达电源技术有限公司</td>
+			<td>W4 A31</td>
+		</tr>
+		<tr>
+			<td>台州聚派新材料科技有限公司</td>
+			<td>W2 F02</td>
+		</tr>
+		<tr>
+			<td>SMART LED CORP.</td>
+			<td>W3 D24</td>
+		</tr>
+		<tr>
+			<td>南京西边亮商业标识有限公司</td>
+			<td>W3 B54</td>
+		</tr>
+		<tr>
+			<td>广东旭龙物联科技股份有限公司</td>
+			<td>W3 A33</td>
+		</tr>
+		<tr>
+			<td>天宏铝业边框铝塑制品厂</td>
+			<td>W3 A47</td>
+		</tr>
+		<tr>
+			<td>中山硬核塑钢型材厂、深圳统发电线厂</td>
+			<td>W3 E38</td>
+		</tr>
+		<tr>
+			<td>广州嘉文电子条码科技有限公司</td>
+			<td>W3 D53a</td>
+		</tr>
+		<tr>
+			<td>湖南七福三维科技有限公司</td>
+			<td>W4 E08</td>
+		</tr>
+		<tr>
+			<td>广州全华虎国际贸易有限公司</td>
+			<td>W2 A53</td>
+		</tr>
+		<tr>
+			<td>深圳市鑫视博光电有限公司</td>
+			<td>W4 A29</td>
+		</tr>
+		<tr>
+			<td>上海广测检测科技有限公司</td>
+			<td>W3 A23</td>
+		</tr>
+		<tr>
+			<td>江门市立晟泰照明有限公司</td>
+			<td>W3 A21</td>
+		</tr>
+		<tr>
+			<td>东莞铭池新材料科技有限公司</td>
+			<td>W4 A25</td>
+		</tr>
+		<tr>
+			<td>台州美阳科技有限公司</td>
+			<td>W3 A64</td>
+		</tr>
+		<tr>
+			<td>杭州鑫永铭科技有限公司</td>
+			<td>W3 E23</td>
+		</tr>
+		<tr>
+			<td>义乌市东成数码科技有限公司</td>
+			<td>W3 B54a</td>
+		</tr>
+		<tr>
+			<td>广东永成机电科技有限公司</td>
+			<td>W2 F15</td>
+		</tr>
+		<tr>
+			<td>3 T</td>
+			<td>W4 B44a</td>
+		</tr>
+		<tr>
+			<td>广州哈泰塑料制品有限公司</td>
+			<td>W4 F16</td>
+		</tr>
+		<tr>
+			<td>衢州涂王新材料有限公司</td>
+			<td>W2 F13</td>
+		</tr>
+		<tr>
+			<td>广州市万尊塑料制品有限公司</td>
+			<td>W2 E60</td>
+		</tr>
+		<tr>
+			<td>南阳德士威数码科技有限公司</td>
+			<td>W2 B63</td>
+		</tr>
+		<tr>
+			<td>陕西非凡亚克力标牌卡槽</td>
+			<td>W3 D53</td>
+		</tr>
+		<tr>
+			<td>上海挚超电子科技有限公司</td>
+			<td>W4 E52</td>
+		</tr>
+		<tr>
+			<td>晶鼎创新（深圳）科技有限公司</td>
+			<td>W4 F01</td>
+		</tr>
+		<tr>
+			<td>浙江常山志昊纺织有限公司</td>
+			<td>W2 F14</td>
+		</tr>
+		<tr>
+			<td>中印科技有限公司</td>
+			<td>W2 E52</td>
+		</tr>
+		<tr>
+			<td>珠海墨霆科技有限公司</td>
+			<td>W4 E14</td>
+		</tr>
+		<tr>
+			<td>江阴市全佳数码科技有限公司</td>
+			<td>W4 E16</td>
+		</tr>
+		<tr>
+			<td>常州极谷数码有限公司</td>
+			<td>W4 A13</td>
+		</tr>
+		<tr>
+			<td>重庆中南巨隆实业集团股份有限公司</td>
+			<td>W3 E04</td>
+		</tr>
+		<tr>
+			<td>广州市连拓新材料有限公司</td>
+			<td>W4 B44</td>
+		</tr>
+		<tr>
+			<td>常州奇亚德织带材料有限公司</td>
+			<td>W4 B45</td>
+		</tr>
+		<tr>
+			<td>圆阶贸易(上海)有限公司</td>
+			<td>W2 A62</td>
+		</tr>
+		<tr>
+			<td>深圳市鑫鑫久伟科技有限公司</td>
+			<td>W4 E65</td>
+		</tr>
+		<tr>
+			<td>卡卡亚克力卡槽</td>
+			<td>W2 F16</td>
+		</tr>
+		<tr>
+			<td>佛山兆宇广告有限公司</td>
+			<td>W3 E32</td>
+		</tr>
+		<tr>
+			<td>深圳市恒通光电科技有限公司</td>
+			<td>W4 A33</td>
+		</tr>
+		<tr>
+			<td>东莞市长河金属标识有限公司</td>
+			<td>W3 A66</td>
+		</tr>
+		<tr>
+			<td>广州金丽达新材料科技有限公司</td>
+			<td>W2 D68a</td>
+		</tr>
+		<tr>
+			<td>温州祺继电气有限公司</td>
+			<td>W3 D48A</td>
+		</tr>
+		<tr>
+			<td>上海卡乐印新材料有限公司</td>
+			<td>W2 E67</td>
+		</tr>
+		<tr>
+			<td>上海绚丽优品环保科技有限公司</td>
+			<td>W2 F03</td>
+		</tr>
+		<tr>
+			<td>东旺智能科技(上海)有限公司</td>
+			<td>W4 E48</td>
+		</tr>
+		<tr>
+			<td>江门市创轩五金电子有限公司</td>
+			<td>W3 A05</td>
+		</tr>
+		<tr>
+			<td>安徽格莱美标牌制作有限公司</td>
+			<td>W3 E24</td>
+		</tr>
+		<tr>
+			<td>常州印象展览器材有限公司</td>
+			<td>W3 E22</td>
+		</tr>
+		<tr>
+			<td>福州茜素数码科技有限公司</td>
+			<td>W4 E06</td>
+		</tr>
+		<tr>
+			<td>东莞市精微智能科技有限公司</td>
+			<td>W4 D45a</td>
+		</tr>
+		<tr>
+			<td>临沂国泰水晶膜肤感膜</td>
+			<td>W4 E59</td>
+		</tr>
+		<tr>
+			<td>苏州协尔数码技术有限公司</td>
+			<td>W4 A21</td>
+		</tr>
+		<tr>
+			<td>河南瑞盛包装袋有限公司</td>
+			<td>W3 A43</td>
+		</tr>
+		<tr>
+			<td>宁波市鄞州亿炫光电科技有限公司</td>
+			<td>W3 A39</td>
+		</tr>
+		<tr>
+			<td>深圳市领翔智能科技有限公司</td>
+			<td>W3 B57</td>
+		</tr>
+		<tr>
+			<td>深圳市永慧光电有限公司</td>
+			<td>W4 D70</td>
+		</tr>
+		<tr>
+			<td>深圳市通铭光电科技有限公司</td>
+			<td>W3 B39</td>
+		</tr>
+		<tr>
+			<td>广州奥格新材料科技有限公司</td>
+			<td>W4 E32</td>
+		</tr>
+		<tr>
+			<td>河南久印数码科技有限公司</td>
+			<td>W4 E42</td>
+		</tr>
+		<tr>
+			<td>江西蓝云朵科技管理有限公司</td>
+			<td>W4 D69</td>
+		</tr>
+		<tr>
+			<td>上海深湖科技有限公司</td>
+			<td>W4 A35</td>
+		</tr>
+		<tr>
+			<td>广东省蓝洋光电科技有限公司</td>
+			<td>W1 F05</td>
+		</tr>
+		<tr>
+			<td>Korea Conformity Laboratories</td>
+			<td>W3 A45</td>
+		</tr>
+		<tr>
+			<td>深圳市三石光电有限公司</td>
+			<td>W3 E52</td>
+		</tr>
+		<tr>
+			<td>山东临沂鑫瑞铝材厂</td>
+			<td>W3 F10</td>
+		</tr>
+		<tr>
+			<td>温州瑞垠进出口有限公司</td>
+			<td>W1 F06</td>
+		</tr>
+		<tr>
+			<td>浙江亿方新材料股份有限公司</td>
+			<td>W1 E06</td>
+		</tr>
+	</tbody>
+</table>
+<p>​</p><p><strong><font color="#000000">订购说明（How to Order）：</font></strong></p><p>1、展商名录提供的是本页面「参展商名单」的详细资料。</p><p>2、资料内容包括：企业名称、地址、法人、电话、邮箱、网站、经营范围、所属行业、注册资本、成立日期、参保人数、企业类型、企业规模、统一社会信用代码等。内容格式参考带「中国」字样的<a href="https://www.emagecompany.com/navisample.php" target="_blank" rel="noopener noreferrer"><font color="#0000FF"> 数据样本</font></a>。</p><p>3、名录以Excel格式交付，订单确认后一个工作日内发送至指定邮箱。<a href="https://www.emagecompany.com/pay.html" target="_blank"><font color="#0000FF">现在订购</font></a>。</p></td>
+            </tr>
+            <tr>
+              <td height="50"></td>
+            </tr>
+            <tr>
+              <td><b><font color="#000000">&nbsp;&nbsp;本类目相关名录产品推荐</font></b></td>
+            </tr>
+            <tr>
+              <td><div style="list-style-type: none;width: 100%;margin: 5px;"><ul style="margin: 0px;padding: 0px;"><a href="https://foreign.emagecompany.com/lamp/"><font color="#0000FF"><div style="clear:both;"></div><b>世界买家</b></font></a><br><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/zhaomingsdengshi.html" title="2026世界照明设备及灯具灯饰进口商名录" class="a1">2026世界照明设备及灯具灯饰进...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/zhaomingshebei.html" title="2026世界照明设备进口商名录" class="a1">2026世界照明设备进口商名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/jienengdeng.html" title="2026世界节能灯进口商名录" class="a1">2026世界节能灯进口商名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/shineideng.html" title="2026世界室内照明灯具进口商名录" class="a1">2026世界室内照明灯具进口商名...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/wutaidengju.html" title="2026世界舞台灯具进口商名录" class="a1">2026世界舞台灯具进口商名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/shiweidengju.html" title="2026世界室外照明灯具进口商名录" class="a1">2026世界室外照明灯具进口商名...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/zhuanyongdeng.html" title="2026世界专门用途灯具进口商名录" class="a1">2026世界专门用途灯具进口商名...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/yiliaodengju.html" title="2026世界医疗灯具进口商名录" class="a1">2026世界医疗灯具进口商名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/qihuiqi.html" title="2026世界启辉器进口商名录" class="a1">2026世界启辉器进口商名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://foreign.emagecompany.com/lamp/zhenliuqi.html" title="2026世界镇流器进口商名录" class="a1">2026世界镇流器进口商名录</a></li></ul></div><div style="list-style-type: none;width: 100%;margin: 5px;"><ul style="margin: 0px;padding: 0px;"><a href="https://industry.emagecompany.com/lamp/"><font color="#0000FF"><div style="clear:both;"></div><b>行业名录</b></font></a><br><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/lampworks.html" title="2026中国灯饰照明行业企业名录" class="a1">2026中国灯饰照明行业企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/incandescent-lamp.html" title="2026中国白炽灯企业名录" class="a1">2026中国白炽灯企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/led-lights.html" title="2026中国LED灯具企业名录" class="a1">2026中国LED灯具企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/solar-light.html" title="2026中国太阳能灯企业名录" class="a1">2026中国太阳能灯企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/jienengdeng.html" title="2026中国节能灯企业名录" class="a1">2026中国节能灯企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/desk-lamp.html" title="2026中国台灯企业名录" class="a1">2026中国台灯企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/car-lights.html" title="2026中国车灯企业名录" class="a1">2026中国车灯企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/flashlight.html" title="2026中国手电筒企业名录" class="a1">2026中国手电筒企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/lighting-accessories.html" title="2026中国灯具附件企业名录" class="a1">2026中国灯具附件企业名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://industry.emagecompany.com/lamp/lighting-engineering.html" title="2026中国照明工程企业名录" class="a1">2026中国照明工程企业名录</a></li></ul></div><div style="list-style-type: none;width: 100%;margin: 5px;"><ul style="margin: 0px;padding: 0px;"><a href="https://exhibitors.emagecompany.com/lamp/"><font color="#0000FF"><div style="clear:both;"></div><b>展商名录</b></font></a><br><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/yinxiangdingguang.html" title="2006广州国际专业灯光、音响展览会参展商名单" class="a1">2006广州国际专业灯光、音响展览...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/2007guangzhouguojiledzhanglanhuidi3jie.html" title="2007广州国际LED展参展商名单" class="a1">2007广州国际LED展参展商名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/palm2009.html" title="2009中国国际专业音响·灯光·乐器及技术展览会参展商名单" class="a1">2009中国国际专业音响·灯光·乐器...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/ledguangzhou2009.html" title="2009广州国际LED展参展商名单" class="a1">2009广州国际LED展参展商名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/guzhenguojidengshi2008.html" title="2008中国古镇国际灯饰博览会参展商名单" class="a1">2008中国古镇国际灯饰博览会参展...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/ledguangzhou2008.html" title="2008广州国际LED展参展商名单" class="a1">2008广州国际LED展参展商名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/bandaotizhaoming2008.html" title="2008中国国际半导体照明展览会参展商名单" class="a1">2008中国国际半导体照明展览会参...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/shanghaidengguang.html" title="2007上海国际专业灯光音响展览会参展商名单" class="a1">2007上海国际专业灯光音响展览会...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/guangzhouguojizhaomingzhan.html" title="2007广州国际照明展览会参展商名单" class="a1">2007广州国际照明展览会参展商名...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://exhibitors.emagecompany.com/lamp/zhaomingjianzhudianqi.html" title="2006广州国际照明展览会参展商名单" class="a1">2006广州国际照明展览会参展商名...</a></li></ul></div><div style="list-style-type: none;width: 100%;margin: 5px;"><ul style="margin: 0px;padding: 0px;"><a href="https://resource.emagecompany.com/lamp/"><font color="#0000FF"><div style="clear:both;"></div><b>免费资源</b></font></a><br><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/taibyangnen.html" title="2004太阳能照明明星企业名单" class="a1">2004太阳能照明明星企业名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/shidadengshipinpai.html" title="2011中国十大灯饰品牌" class="a1">2011中国十大灯饰品牌</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/2023zhzm.html" title="2023智慧交通户外照明服务提供商Top30" class="a1">2023智慧交通户外照明服务提供商To...</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/zhaomingxhhymd.html" title="2024中国照明学会会员单位名录" class="a1">2024中国照明学会会员单位名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/zhaomingxuehuiml.html" title="2024全国各地照明学会名录" class="a1">2024全国各地照明学会名录</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/ledbqmd2018.html" title="2018中国LED照明灯饰行业100强名单" class="a1">2018中国LED照明灯饰行业100强名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/ledbqmd2019.html" title="2019中国LED照明灯饰行业100强名单" class="a1">2019中国LED照明灯饰行业100强名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/ledbqmd2020.html" title="2020中国LED照明灯饰行业100强名单" class="a1">2020中国LED照明灯饰行业100强名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/ledbqmd2021.html" title="2021中国LED照明灯饰行业100强名单" class="a1">2021中国LED照明灯饰行业100强名单</a></li><li style="list-style-type: none;width: 50%;float: left;"><a href="https://resource.emagecompany.com/lamp/ledbqmd2022.html" title="2022中国LED照明灯饰行业100强名单" class="a1">2022中国LED照明灯饰行业100强名单</a></li></ul></div></td>
+            </tr>
+            
+          </table></td>
+          <td width="150" align="center" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><div align="center"><a href="https://international.emagecompany.com/"><img src="https://www.emagecompany.com/css/homeright.gif" border="0" width="121" height="240"></a><br><br><a href="#"><img src="https://www.emagecompany.com/css/homeright2.gif" border="0" width="119" height="514"></a><br></div></td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="70" align="center">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="center"><a href="#"><img src="https://www.emagecompany.com/css/homebottom.gif" border="0" width="236" height="61"></a>&nbsp;<a href="#"><img src="https://www.emagecompany.com/css/homebottom1.gif" border="0" width="240" height="60"></a>&nbsp;<a href="#"><img src="https://www.emagecompany.com/css/homebottom2.gif" border="0" width="236" height="61"></a></td>
+        </tr>
+      </table>
+      <table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="30"><div style="font-family:Verdana, Arial, Helvetica, sans-serif" align="center">&copy;2000-2026 Emage. <a href="https://www.emagecompany.com/copyright.html" target="_blank"><font color="#CC0000">隐私及版权</font></a>通告. <a href="https://beian.miit.gov.cn/" target="_blank" style="color:#666666">粤ICP备13067922号</a> <img src="https://css.emagecompany.com/beian.png" width="20" height="20" align="absmiddle">粤公网安备 44030402002873号 <img src="https://css.emagecompany.com/tel.gif" width="18" height="18" align="absmiddle" style="padding:0 0 0 3px;">4006601868</div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<script>
+  function openWindow() {
+    if (window.tidioChatApi && typeof window.tidioChatApi.open === 'function') {
+      window.tidioChatApi.display(true);
+      window.tidioChatApi.open();
+    } else if (window.LiveChatWidget) {
+      window.LiveChatWidget.call("maximize");
+    }
+  
+    return false;
+  }
+</script>
+
+<script>
+	function loadLiveChat() {
+    console.debug("Tidio fail, loading Livechat...");
+
+    window.__lc = window.__lc || {};
+    window.__lc.license = 13249845;
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice));
+
+    document.body.insertAdjacentHTML("beforeend", `
+      <noscript><a href="https://www.livechatinc.com/chat-with/13249845/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>`);
+  }
+</script>
+<script onerror="loadLiveChat()" src="//code.tidio.co/sang5jkqntsku07x0kjyndmbwg9vu7fr.js" async=""></script>
+</body>
+</html><!--本页面更新时间：04:26 07-11-2026-->

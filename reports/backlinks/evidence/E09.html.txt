@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="code-QNevqLesAJ" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="2023上海展部分参展商名单" />
+<meta name="description" content="2023上海展部分参展商名单" />
+<meta name="generator" content="" />
+<meta name="Robots" contect= "all">
+<title>2023上海展部分参展商名单 | LED CHINA 2027上海秋交会 | 全球LED显示屏、广告及数字标牌行业盛会 | 9月22-24日</title>
+<!--SNS网站如Fackbook、renren采用-->
+<meta property="og:title" content="2023上海展部分参展商名单 | LED CHINA 2027上海秋交会 | 全球LED显示屏、广告及数字标牌行业盛会 | 9月22-24日">
+<meta property="og:type" content="article">
+<meta property="og:description" content="2023上海展部分参展商名单">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="LED CHINA 2027上海秋交会 | 全球LED显示屏、广告及数字标牌行业盛会 | 9月22-24日">
+<!--推特-->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="">
+<meta name="twitter:title" content="2023上海展部分参展商名单 | LED CHINA 2027上海秋交会 | 全球LED显示屏、广告及数字标牌行业盛会 | 9月22-24日">
+<meta name="twitter:description" content="2023上海展部分参展商名单">
+
+<link href="https://www.ledchina-sh.com/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="https://www.ledchina-sh.com/theme/default/css/style.css?v=060101" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://www.ledchina-sh.com/theme/default/js/jquery.min.js"></script>
+</head>
+<body>
+<link href="https://www.ledchina-sh.com/theme/default/css/header.css?v=042802" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://www.ledchina-sh.com/theme/default/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.ledchina-sh.com/theme/default/js/NewHeader.js?v=033001" ></script>
+<header id="header">
+<!--顶部固定page-->
+		<div class="TopFixed">				
+			<!--导航栏-->
+			<div class="NavigationBarBox">
+				<div class="ContentBox">
+					<div class="NavLogoBox">
+						<div class="HeaderExhibitionInformation">
+							<div class="HeaderExhibitionInformationLogo">
+								<a btn_name="顶部导航栏：LOGO" href="/about-the-fair-basic-info.html">
+									<img src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20260325/1341_1774419093995995.png">
+								</a>
+							</div>
+							<div class="HeaderExhibitionInformationName">
+								<h2>第28届上海国际LED展</h2>
+								<p>上海新国际博览中心（浦东）</p>
+								<p>2027.9.22-24</p>
+							</div>
+						</div>
+						
+						<div class="NavbarBox" style="position: relative;">
+							<nav>
+							<ul>
+								<li>
+									<a href="/">首页</a>
+								</li>
+								
+														      <li class="Navwidth menuicons"> 
+							      <a href="https://www.ledchina-sh.com/about-the-fair-basic-info.html" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  target="_blank"><span>展会概况</span></a>
+								  							      							      <div class="SubmenuBox">
+								      <ol aria-labelledby="dropdown">
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/about-the-fair-basic-info.html"  target="_blank">基本信息</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/previous-exhibition-highlights.html"  target="_blank">精彩回顾</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/exhibition-history.html"  target="_blank">历届展会回顾</a></li>
+									       
+								       									       									       <li> <a class="" href="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20261111/1809_1794391108434976.pdf"  target="_blank">2026 展后报告</a></li>
+									       
+								       								      </ol>
+							      </div>
+							      							    </li>
+						    						      <li class="Navwidth menuicons"> 
+							      <a href="https://www.ledchina-sh.com/visiting-why-visit.html" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  target="_blank"><span>我要参观</span></a>
+								  							      							      <div class="SubmenuBox">
+								      <ol aria-labelledby="dropdown">
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/visiting-pre-registration.html"  target="_blank">参观登记</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/visiting-why-visit.html"  target="_blank">为何参观</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/travel-services.html"  target="_blank">大会服务</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.dypmall.com/index/home.html"  target="_blank">2026年度展商推荐</a></li>
+									       
+								       								      </ol>
+							      </div>
+							      							    </li>
+						    						      <li class="Navwidth menuicons"> 
+							      <a href="https://www.ledchina-sh.com/exhibiting-why-exhibit.html" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  target="_blank"><span>我要参展</span></a>
+								  							      							      <div class="SubmenuBox">
+								      <ol aria-labelledby="dropdown">
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/exhibiting-why-exhibit.html"  target="_blank">为何参展</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/exhibiting-stand-package.html"  target="_blank">展台预订</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/exhibits-profile.html"  target="_blank">展品范围</a></li>
+									       
+								       									       									       <li> <a class="" href="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20261027/1815_1793070799729698.pdf"  target="_blank">招展书下载</a></li>
+									       
+								       									       									       <li> <a class="" href="https://public.trust-im.com/gallery/fair_directory/109.html"  target="_blank">广告机会</a></li>
+									       
+								       									       									       <li> <a class="active" href="https://www.ledchina-sh.com/"  target="_blank">参展商手册</a></li>
+									       
+								       								      </ol>
+							      </div>
+							      							    </li>
+						    						      <li class="Navwidth menuicons"> 
+							      <a href="https://www.ledchina-sh.com/contact-us-organiser.html" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  target="_blank"><span>关于我们</span></a>
+								  							      							      <div class="SubmenuBox">
+								      <ol aria-labelledby="dropdown">
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/contact-us-organiser.html"  target="_blank">关于闻信</a></li>
+									       
+								       									       									       <li> <a class="active" href="https://www.ledchina-sh.com/"  target="_blank">联系我们</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina-sh.com/press-room-media-partner.html"  target="_blank">合作媒体</a></li>
+									       
+								       								      </ol>
+							      </div>
+							      							    </li>
+						    						      <li class="Navwidth menuicons"> 
+							      <a href="https://www.ledchina.com/about-the-fair-basic-info.html" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  target="_blank"><span>深圳春交会</span></a>
+								  								  <p style="position: absolute;left: 0px;top: 22px;font-size: 12px;color: #009145;width: 100%;box-sizing: border-box;padding-right: 20px;text-align: center;">2027.2.21-23</p>
+								  							      							      <div class="SubmenuBox">
+								      <ol aria-labelledby="dropdown">
+								       									       									       <li> <a class="" href="https://www.ledchina.com/about-the-fair-basic-info.html"  target="_blank">基本信息</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina.com/visiting-why-visit.html"  target="_blank">为何参观</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina.com/visiting-pre-registration.html"  target="_blank">参观登记</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina.com/exhibiting-why-exhibit.html"  target="_blank">为何参展</a></li>
+									       
+								       									       									       <li> <a class="" href="https://www.ledchina.com/exhibiting-stand-package.html"  target="_blank">展台预订</a></li>
+									       
+								       								      </ol>
+							      </div>
+							      							    </li>
+						    							</ul>
+							</nav>
+						
+						</div>
+						
+						<!--语言-->
+						<div class="TopTranslationBox">
+							<!-- <a href='javascript:AutoHan_StranBody()' id='StranLink' class="on" title="点击切换繁/简体">繁</a>
+							<a class="languageen" href="https://www.ledchina-sh.com/en/visiting-exhibitor-list-2023.html">EN</a> -->
+							<div class="OtherLanguagesTextBox">
+								<img class="LanguagesTextIcon" src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20221226/497_1672047665628785.jpg"/>
+								<a btn_name="切换语言_英文English" href="https://www.ledchina-sh.com/en/visiting-exhibitor-list-2023.html" class="LanguagesENText Englishlanguage">English</a>
+								<span id="StranLink" style="display: none;"></span>
+								<div class="OtherLanguagesBox">
+									<ul>
+										<li> <a href="https://www.ledchina-sh.com/en/visiting-exhibitor-list-2023.html" class="Englishlanguage" target="_blank">Global - English</a></li>
+										<li> <a class="SimplifiedChinese" href="?tw=2" target="_blank">China - 简体中文</a></li>
+										<li> <a class="Traditionallanguage" href="?tw=1" target="_blank">China - 繁体中文</a></li>									
+										<li> <a href="/ja" target="_blank">日本語</a></li>
+										<li> <a href="/ko" target="_blank">한국어</a></li>
+										<li> <a href="/es" target="_blank">Español</a></li>
+										<li> <a href="/pt" target="_blank">Português</a></li>
+										<li> <a href="/ru" target="_blank">Русский язык</a></li>
+										<li> <a btn_name="切换语言_Français" href="/fr" target="_blank">Français</a></li>
+										<li> <a btn_name="切换语言_Italiano" href="/it">Italiano</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--语言 end-->				
+					</div>
+				</div>	
+			</div>
+			<!--导航栏 end-->
+		</div>
+		<!--顶部固定 end-->
+</header><div class="TextContent">
+	<!--面包屑导航-->
+	<div class="BreadcrumbBox" style="display: none;">
+		<div class="ContentBox">
+			<div class="BreadcrumbBoxNav">
+				<div class="ur-here">
+ 当前位置：<a href="https://www.ledchina-sh.com/">首页</a><b>></b>2023上海展部分参展商名单</div>			</div>
+		</div>
+	</div>
+	
+	<!--正文内容-->
+	<div class="pageContentBox">
+		<div class="ContentBox">
+			<div class="pageContent" style="padding-top: 30px;">
+				<style>
+	.insideContent a,
+	.insideContent a:hover,
+	.insideContent a:active,
+	.insideContent a:visited,
+	.insideContent a:focus {
+		text-decoration: none;
+		color: #333;
+	}
+	
+	.hover:hover,
+	.hover:hover span {
+		color: #FF0000;
+	}
+	
+	.insideContent .color {
+		color: #FF0000 !important;
+	}
+	
+	.insideContent a.color:hover {
+		opacity: 0.7;
+	}
+	
+	.insideContent a.colors:hover {
+		color: #FF0000;
+	}
+	
+	.insideContent a.backcolor:hover {
+		background: #FF0000;
+		color: #fff !important;
+	}
+	
+	.insideContent {
+		margin: 0 auto;
+		padding: 0;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		width: 100%;
+		max-width: 1200px;
+		font-family: "微软雅黑";
+		line-height: 27px;
+		color: #000;
+	}
+	
+	.insideContent img {
+		max-width: 100%;
+	}
+	
+	.insideContent p {
+		margin: 0;
+		margin-top: 10px;
+		font-size: 14px;
+		line-height: 25px;
+	}
+	
+	.insideContent p a {
+		color: #000;
+	}
+	
+	.insideContent p a:hover {
+		color: #FF0000;
+	}
+	
+	.Subtitle {
+		display: block;
+		border-bottom: 1px solid #C0C0C0;
+		border-top: 1px solid #C0C0C0;
+		padding: 10px 0;
+		padding-left: 5px;
+		line-height: 25px;
+		margin-top: 30px;
+		margin-bottom: 20px;
+		font-size: 17px;
+	}
+	
+	.bigTitle {
+		font-size: 24px;
+		line-height: 40px;
+		margin: 10px 0px;
+		display: block;
+		font-weight: bold;
+		letter-spacing: 1px;
+	}
+	
+	.exhibitor_list {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	
+	.exhibitor_list table {
+		border-collapse: collapse;
+		width: 100%;
+	}
+	
+	.exhibitor_list table td {
+		border: 1px solid #ccc;
+		padding: 3px 8px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	
+	.exhibitor_list table td p {
+		margin: 0px;
+	}
+</style>
+<div class="insideContent">
+<div class="exhibitor_list">
+<table><colgroup width="50%"></colgroup> <colgroup width="50%"></colgroup>
+<tbody>
+<tr>
+<td colspan="2">
+<p style="text-align: center; font-size: 18px; font-weight: bold; line-height: 33px;">2023部分参展商名单（截至到5月1日）</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" colspan="2">名单将持续更新，敬请期待！</td>
+</tr>
+<tr>
+<td style="font-size: 15px; font-weight: bold;">企业中文名</td>
+<td style="font-size: 15px; font-weight: bold;">企业英文名</td>
+</tr>
+<tr>
+<td>深圳丰盈磁性材料有限公司</td>
+<td>KINGFINE MAGNETICS CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市卷对卷光电科技有限公司</td>
+<td>RTR LED LIMITED</td>
+</tr>
+<tr>
+<td>江苏民扬塑胶科技有限公司</td>
+<td>JIANGSU MINYANG SYNTHETIC RESIN TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>宁波众鼎塑料有限公司</td>
+<td>NINGBO ZHONGDING PLASTIC CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市顺德区勒流镇骏胜塑料板材厂</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>佛山市高明区精鑫光电有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>江苏三鼎亚克力制造有限公司</td>
+<td>JIANGSU SANDING ACRYLIC MANUFACTURING CO., LTD.</td>
+</tr>
+<tr>
+<td>江苏恒彩纺织科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>遨蓝实业（深圳）有限公司</td>
+<td>AULEN PLASTICS CO., LTD.</td>
+</tr>
+<tr>
+<td>福建夜景辉光学科技有限公司</td>
+<td>FUJIAN YEJINGHUI OPTICAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>青岛鑫百文工贸有限公司</td>
+<td>QINGDAO BE-WIN INDUSTRIAL &amp; TRADE CO., LTD.</td>
+</tr>
+<tr>
+<td>广宁县广顺塑料有限责任公司</td>
+<td>GUANGSHUN PLASTIC CO., LTD.</td>
+</tr>
+<tr>
+<td>山东康桥实业有限公司</td>
+<td>SHANDONG GOLDENREALM INDUSTRY CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州杰派展示用品有限公司</td>
+<td>HANGZHOU JIEPAI DISPLAY PRODUCTS CO., LTD.</td>
+</tr>
+<tr>
+<td>海宁博众贸易有限公司</td>
+<td>TEXTILE-FLEX CO., LTD.</td>
+</tr>
+<tr>
+<td>南京金稳进有机玻璃有限公司</td>
+<td>NANJING JINWENJIN ACRYLIC MANUFACTURE CO., LTD.</td>
+</tr>
+<tr>
+<td>苏州工业园区东华工贸有限公司</td>
+<td>SUZHOU DONGHUA ADVERTISING MATERIAL EQUIPMENT FACTORY</td>
+</tr>
+<tr>
+<td>上海卓高展览展示有限公司</td>
+<td>ADMAX EXHIBIT &amp; DISPLAY CO., LTD.</td>
+</tr>
+<tr>
+<td>广州格塑新材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>常州大通电源科技有限公司</td>
+<td>CHANGZHOU DATONG POWER TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>赛特莱特（佛山）塑胶制品有限公司</td>
+<td>SATE-LITE (FOSHAN) PLASTICS CO., LTD.</td>
+</tr>
+<tr>
+<td>常州邦驰广告展示器材有限公司</td>
+<td>EXPOMAX ADVERTISING DISPLAY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海瑞旗国际贸易有限公司</td>
+<td>SHANGHAI RICH INTERNATIONAL TRADING CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市南海晋兴有机玻璃板材镜片厂（普通合伙）</td>
+<td>FOSHAN NANHAI JINXING PLASTIC MIRROR CO., LTD.</td>
+</tr>
+<tr>
+<td>西安宇迪光电有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>史蒂维广告</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州沃蓓邦新材料科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>文安县星道展具制造有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>深圳市光科照明有限公司</td>
+<td>SHENZHEN GK LIGHTING CO., LTD.</td>
+</tr>
+<tr>
+<td>广州市同庆胶粘制品有限公司</td>
+<td>GUANGZHOU TONGQING GUMMY PRODUCT LTD. COMPANY</td>
+</tr>
+<tr>
+<td>杭州瑞卡广告材料有限公司</td>
+<td>HANGZHOU REAL COLOUR SIGN MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>上海广彩国际贸易有限公司</td>
+<td>ALLSIGN INTERNATIONAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>四川省江油市豫蜀夜视利反光材料有限公司</td>
+<td>SICHUAN JIANGYOU YUSHU YESHILI REFLECTIVE MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>广州市姜来胶粘制品有限公司</td>
+<td>GUANGZHOU JIANGLAI GUMMY PRODUCT CO., LTD.</td>
+</tr>
+<tr>
+<td>INTERONE CO., LTD.</td>
+<td>INTERONE CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市禧高科技有限公司</td>
+<td>SHENZHEN XIGAO TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山高达尚展示用品有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>常州艾迪尔展示器材有限公司</td>
+<td>RECYCLE DISPLAY</td>
+</tr>
+<tr>
+<td>杭州扬涛科技有限公司</td>
+<td>HANGZHOU YANG TAO TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>郑州特来广告设备有限公司</td>
+<td>ZHENG ZHOU CHUN LEI</td>
+</tr>
+<tr>
+<td>江西聚美高分子材料制造有限公司</td>
+<td>JUMEI ACRYLIC MANUFACTURING CO., LTD.</td>
+</tr>
+<tr>
+<td>台州海昌新材料有限公司</td>
+<td>TAIZHOU HAICHANG NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江展宇新材料有限公司</td>
+<td>ZHEJIANG ZHANYU NEW MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市奥动帐篷有限公司</td>
+<td>GUANGZHOU WAIKWAN TENT MANUFACTURING CO. LTD</td>
+</tr>
+<tr>
+<td>深圳绮涵工业材料有限公司</td>
+<td>SHENZHEN QIHAN INDUSTRIAL MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>齐河华建数码科技有限公司</td>
+<td>QIHE HUAJIAN DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>山东博拓新材料科技股份有限公司</td>
+<td>BODO INDUSTRIAL INC.</td>
+</tr>
+<tr>
+<td>广州市顺固美胶粘带有限公司</td>
+<td>GUANGZHOU SOMITAPE CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市雅尚光电有限公司</td>
+<td>SHENZHEN YESUN LED LTD.</td>
+</tr>
+<tr>
+<td>深圳市华丰源科技有限公司</td>
+<td>SHENZHEN HFY TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>安徽汇吉科技有限公司</td>
+<td>ANHUI HJ TECH CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市捷炜亿达电子科技有限公司</td>
+<td>SHENZHEN JIEWEI YIDA ELECTRONIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>江门市艾伯特照明科技有限公司</td>
+<td>ALBERT LIGHTING CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市瀚诚照明有限公司</td>
+<td>HANSONLED CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市众兴邦电子技术有限公司</td>
+<td>SHENZHEN WIIKK TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>广州市锐帆广告器材有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>科凡达科技（深圳）有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>宁波同生材塑胶科技有限公司</td>
+<td>NINGBO TONGSHENGCAI PLASTIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>高要区金利镇御盈酒店用品制品厂</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>山东盛世俊邦广告有限公司</td>
+<td>SHANDONG SHENGSHI JUNBANG ADVERTISING CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州仁迪家居有限公司</td>
+<td>HANGZHOU RENDI HOME CO., LTD.</td>
+</tr>
+<tr>
+<td>上海纳尔实业股份有限公司</td>
+<td>SHANGHAI NAR INDUSTRIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江港龙新材料股份有限公司</td>
+<td>ZHEJIANG GANGLONG NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>三菱化学化工原料（上海）有限公司</td>
+<td>MITSUBISHI CHEMICAL METHACRYLATES(SHANGHAI) CO., LTD.</td>
+</tr>
+<tr>
+<td>鹤山市威诗柏胶粘制品有限公司</td>
+<td>RESPECT GELATINOUS PRODUCTS CO., LTD.OF HESHAN CITY</td>
+</tr>
+<tr>
+<td>贝斯特塑料贸易有限公司</td>
+<td>BESTA PLASTICS TRADING CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江华帅特新材料科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>深圳市新涛亚克力有限公司</td>
+<td>SHENZHEN XINTAO ACRYLIC CO., LTD.</td>
+</tr>
+<tr>
+<td>汤臣(江苏)材料科技股份有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>河北润林国际贸易有限公司</td>
+<td>PRIME SIGN INDUSTRY CO., LTD.</td>
+</tr>
+<tr>
+<td>海宁天福经编涂层有限公司</td>
+<td>HAINING TIANFU WARP KNITTING CO., LTD.</td>
+</tr>
+<tr>
+<td>上海东闻新材料科技有限公司</td>
+<td>SHANGHAI JUTU NEW MATERIALS TECHNOLOGY LIMITED</td>
+</tr>
+<tr>
+<td>合肥赛锐数控设备有限公司</td>
+<td>HEHEI SIGNRIGHT NUMERICAL CONTROL EQLIZPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>上海欧德赛实业有限公司</td>
+<td>GOLDENSIGN INTERNATIONAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>海宁富兴复合新材料有限公司</td>
+<td>HAINING FUXING COMPOUND NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>安徽迈明亚克力科技有限公司</td>
+<td>ANHUI MAIMING ACRYLIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>宁波源源和山富进出口有限公司</td>
+<td>NINGBO YUANYUAN CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市零奔洋光电股份有限公司</td>
+<td>SHENZHEN LINGBENYANG OPTOELECTRONICS CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市美耐斯光电有限公司</td>
+<td>MYNICE OPTOELECTRONICS CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳日上光电有限公司</td>
+<td>RISHANG OPTOELECTRONICS CO., LTD.</td>
+</tr>
+<tr>
+<td>江苏与润光电科技有限公司</td>
+<td>YUREIN ELEC-OPTIC TECH CO., LTD.</td>
+</tr>
+<tr>
+<td>威海康博复合材料有限公司</td>
+<td>WEIHAI KAWA COMPOSITE PRODUCTS CO., LTD.</td>
+</tr>
+<tr>
+<td>四川蓝景光电技术有限责任公司</td>
+<td>BLUEVIEW ELEC-OPTIC TECH CO., LTD.</td>
+</tr>
+<tr>
+<td>广东图美科技发展有限公司</td>
+<td>GUANGDONG TOME AD MEDIA LTD</td>
+</tr>
+<tr>
+<td>上海互霖智能科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>杭州申联宝塑实业有限公司</td>
+<td>HANGZHOU SHENLIAN BAOSU INDUSTRIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>上海鸿艺广告有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>武汉精创数码广告有限公司</td>
+<td>WUHAN JINGCHUANG ADVERTISING CO., LTD.</td>
+</tr>
+<tr>
+<td>上海视摩信息技术有限公司</td>
+<td>SMART MORE</td>
+</tr>
+<tr>
+<td>深圳市晶泓达光电工程技术有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>霸州市鹏博展具有限公司</td>
+<td>BAZHOU PENGBO EXHIBITION CO., LTD.</td>
+</tr>
+<tr>
+<td>上海哈肯广告材料有限公司</td>
+<td>SHANGHAI HANKER INDUSTIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>江苏迪迈新材料有限公司</td>
+<td>JIANGSU DEMINE NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳幻视鑫科技有限公司</td>
+<td>FANTASY VIEW TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海亚彩新材料有限公司</td>
+<td>SHANGHAI DER NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>福来格广告（北京）有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>吴江苏画画数码纺织有限公司</td>
+<td>WUJIANG SU HUA HUA DIGITAL TEXTILE CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江康展新材料股份有限公司</td>
+<td>ZHEJIANG KANGZHAN NEW MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>上海瑞昌亚克力工业有限公司</td>
+<td>RAY CHUNG ACRYLIC ENTERPRISE CO., LTD.</td>
+</tr>
+<tr>
+<td>晋江市途亮反光材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>力美有机玻璃（东莞）有限公司</td>
+<td>LEI MEI ACRYLIC (DONGGUAN) CO., LTD.</td>
+</tr>
+<tr>
+<td>江苏浙创纺织科技有限公司</td>
+<td>JIANGSU ZHECHUANG TEXTILE TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市顺德区伦教希顺塑料厂</td>
+<td>XISHUN PLASTXISHUN PLASTIC INTERGRATED CENTERIC INTERGRATED CENTER</td>
+</tr>
+<tr>
+<td>山东英创塑胶有限公司</td>
+<td>SHANDONG YINGCHUANG PLASTIC CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州卓有化纤有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>中山市柏思顿展示制品有限公司</td>
+<td>BESTON DISPLAY SYSTEM INC.</td>
+</tr>
+<tr>
+<td>广西伟群帐篷制造有限公司</td>
+<td>GUANGXI WAIKWAN TENT MANUFACTURING CO. LTD</td>
+</tr>
+<tr>
+<td>江门市普迪斯科技有限公司</td>
+<td>POOSLED CO., LTD.</td>
+</tr>
+<tr>
+<td>威海旺展旅游用品有限公司</td>
+<td>WEIHAI WISEZONE OUTDOOR EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>上海雅威电子有限公司</td>
+<td>SHANGHAI YAWEI OPTOELECTRONIC CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市维世科技有限公司</td>
+<td>ONUMEN TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>淄博顶天塑胶有限公司</td>
+<td>ZIBO DINGTIAN PLASTICS CO., LTD.</td>
+</tr>
+<tr>
+<td>临沂市兴达铝塑装饰材料有限公司</td>
+<td>LINYI XINGDA ALUMINUM &amp; PLASTI DECORATION MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市信上光电有限公司</td>
+<td>SINGSUNLED CO., LTD.</td>
+</tr>
+<tr>
+<td>霸州市东杨庄红天五金塑料制品厂</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>上海华源复合新材料有限公司</td>
+<td>SHANGHAI HUAYUAN NEW COMPOSITE MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>海宁泰威新材料有限公司</td>
+<td>HAINING BLOOM ADVANCE TARPAULIN CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市大斯五金配件有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>珠海恩企电子有限公司</td>
+<td>ZHUHAI ENGY ELECTRONICS CO., LTD.</td>
+</tr>
+<tr>
+<td>江苏雅泰国际贸易有限公司</td>
+<td>JIANGSU YARET INTERNATION TRADE CO.,LTD</td>
+</tr>
+<tr>
+<td>深圳市泰合光电科技有限公司</td>
+<td>SHENZHEN TEKHOL OPTOELECTRONIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市龙升智能科技有限公司</td>
+<td>SHENZHEN LUCENT TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>宁波陆辰包装科技有限公司</td>
+<td>NINGBO LUCHEN PACKAGE MATERIAL FACTORY</td>
+</tr>
+<tr>
+<td>上海恺大新材料有限公司</td>
+<td>SOUNDA NEW MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>上海智彩电子科技有限公司</td>
+<td>SHANGHAI ZHICAI ELECTRONIC TECHNOLOGY CO. LTD</td>
+</tr>
+<tr>
+<td>缙云县金鸿灯箱器材加工厂</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>慈溪市超越（正凌）电子有限公司</td>
+<td>NINGBO CIXI CHAOYUE(ZHENGLING) ELECTRONICS CO., LTD.</td>
+</tr>
+<tr>
+<td>台州纳泽新材料有限公司</td>
+<td>TAIZHOU VBANG COMPOSITE PANEL CO., LTD.</td>
+</tr>
+<tr>
+<td>福建三昊科技有限公司</td>
+<td>FUJIAN SANHAO TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江明辉发光科技有限公司</td>
+<td>ZHEJIANG MINHUI LUMINOUS TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>苏州迪玛展览器材厂</td>
+<td>SUZHOU DISPLAY MASTER EXHIBITION EQUIPMENT FACTORY</td>
+</tr>
+<tr>
+<td>温州市吉祥板业有限公司</td>
+<td>WENZHOU JIXIANG COMPOSITE PANEL CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州赛宁板材有限公司</td>
+<td>HANGZHOU SAINING POLYCARBONATE CO., LTD.</td>
+</tr>
+<tr>
+<td>温州天瑞新材料科技有限公司</td>
+<td>WENZHOU TIANRUI NEW MATERIAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>湖南省岩田新材料科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>福建省安元光学科技有限公司</td>
+<td>AN OPTICS TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>江门市旗航灯饰有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广东省启先科技有限公司</td>
+<td>JIEYANG QIXIAN ADVERTISING DECORATION CO., LTD.</td>
+</tr>
+<tr>
+<td>中山市西区骏龙展示制品厂</td>
+<td>JUNLONG DISPLAY PRODUCTS FACTORY</td>
+</tr>
+<tr>
+<td>浙江德赛尔染整 &amp; 和平新材料</td>
+<td>ORIENTFLEX NEW MATERIAL CO LTD</td>
+</tr>
+<tr>
+<td>青岛澳地数显有限责任公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>盐城道通新材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>苏州沃卡斯展览器材制造有限公司</td>
+<td>SUZHOU WORLDCLASS DISPLAY MANUFACTURING CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州诺联涂层织物有限公司</td>
+<td>HANGZHOU NUCLEAR COATING FABRIC CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市三石光电有限公司</td>
+<td>SHENZHEN 3 STONE ELETRONIC CO., LTD.</td>
+</tr>
+<tr>
+<td>长沙指路人广告器材有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>山东诚歌建材有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>深圳市新起点光电有限公司</td>
+<td>XINQIDIAN OPTOELECTRONICS CO.,LTD</td>
+</tr>
+<tr>
+<td>郑州梁氏兄弟胶业有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>东莞正型照明科技有限公司</td>
+<td>DONGGUAN ZHENG XING LIGHTING TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>淄博弘泰数码科技有限责任公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>江阴稷鼎铝塑复合材料有限公司</td>
+<td>JIANGYIN JIDING ALUMINUM PLASTIC COMPOSITES CO., LTD.</td>
+</tr>
+<tr>
+<td>平湖济展塑胶科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>ANYLUX CO., LTD.</td>
+<td>ANYLUX CO., LTD.</td>
+</tr>
+<tr>
+<td>广东佳光电子有限公司</td>
+<td>LUCKYLIGHT ELECTRONICS CO., LTD</td>
+</tr>
+<tr>
+<td>深圳市特斯拉光电科技有限公司</td>
+<td>LED TESLA GROUP CO., LTD.</td>
+</tr>
+<tr>
+<td>湖南瑞彩智能科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>吴江市斌缘纺织喷绘材料有限公司</td>
+<td>WUJIANG BINYUAN TEXTILE INKJETTING MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市华全电气照明有限公司</td>
+<td>FOSHAN HUAQUAN ELECTRICAL LIGHTING CO., LTD.</td>
+</tr>
+<tr>
+<td>广州决策图书有限公司</td>
+<td>GUANGZHOU DECISION BOOK CO., LTD.</td>
+</tr>
+<tr>
+<td>亿豪发光字边条大全</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>穗通五金工具厂</td>
+<td>SUI TONG HARDWARE TOOLS FACTORY</td>
+</tr>
+<tr>
+<td>上海边光实业有限公司</td>
+<td>SHANGHAI EDGELIGHT INDUSTRY CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江潇丹新材料科技有限公司</td>
+<td>ZHEJIANG XIAODAN NEW MATERIAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>海宁市金茂经编有限公司</td>
+<td>HAINING JINMAO WARP KNITTING CO., LTD.</td>
+</tr>
+<tr>
+<td>江苏耐斯数码科技股份有限公司</td>
+<td>NAISI DIGITAL INKJET PRINTING MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>义乌尚美特数码影像有限公司</td>
+<td>SUNMETA DIGITAL GRAPHIC CO., LTD.</td>
+</tr>
+<tr>
+<td>惠州市大荣新材料科技有限公司</td>
+<td>HUIZHOU FABULOUS MATERIALS TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市嘉豪伟业科技有限公司</td>
+<td>SHENZHEN JOHOPE TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>临沂市景城商贸有限公司</td>
+<td>山东临沂南天标识标牌</td>
+</tr>
+<tr>
+<td>上海双凤企业形象策划有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>上海安平静电科技有限公司</td>
+<td>SHANGHAI ANPING STATIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>嘉兴广杰科技有限公司</td>
+<td>JIAXING&nbsp;GUANGJIE TECHNOLOGY&nbsp;CO., &nbsp;CO., LTD.&nbsp;</td>
+</tr>
+<tr>
+<td>深圳丽印喷印设备有限公司</td>
+<td>SHENZHEN BOJIE TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>烟台天久印刷设备有限公司</td>
+<td>YANTAI TIANJIU PRINTING EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江广印通新材料科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>常州统和纺织有限公司</td>
+<td>CHANGZHOU TONGHE TEXTILE CO., LTD.</td>
+</tr>
+<tr>
+<td>义乌市麦客数码影像有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>上海优赛实业有限公司</td>
+<td>SHANGHAI UNISIGN INDUSTRIAL MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>太和县亿鑫广告传媒有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>清远市宗悦新材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>郑州鸿盛数码科技股份有限公司</td>
+<td>HONGSAM DIGITAL SCIENCE &amp; TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市合利通科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州德聚数码科技有限公司</td>
+<td>DEJU DIGITAL TECHNOLOGY (GUANGZHOU) CO., LTD.</td>
+</tr>
+<tr>
+<td>秋善电子科技（上海）有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>江苏丹阳欧迈数码彩印设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>武汉市蒙泰科技发展有限责任公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>苏州印美达纸业科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>东莞市伟航数码印花科技有限公司</td>
+<td>DONGGUAN WEIHANG DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>山东万德顺光电广告材料设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>91图库网</td>
+<td>WWW.91TUKU.COM</td>
+</tr>
+<tr>
+<td>浙江成如旦新能源科技股份有限公司</td>
+<td>ZHEJIANG CHENGRUDAN NEW ENERGY TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>南京润拓数码科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>珠海君奥新材料科技有限公司</td>
+<td>ZHUHAI CHUNGKAO NEW-MATERIAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>环盛智能（深圳）有限公司</td>
+<td>SHENZHEN HUANSHENG MACHINERY CO., LTD.</td>
+</tr>
+<tr>
+<td>睿裁（上海）数控技术有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>河北帝鹏实业有限公司</td>
+<td>HEBEI YUXIN INDUSTRY &amp; TRADE CO., LTD.</td>
+</tr>
+<tr>
+<td>东莞市宏诚印花机械设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>深圳市库铂科技有限公司</td>
+<td>COBO CO., LTD.</td>
+</tr>
+<tr>
+<td>苏州碲普展示器材有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州市心励方电子产品有限公司</td>
+<td>XIN KODAK</td>
+</tr>
+<tr>
+<td>儒彩打印设备（上海）有限公司</td>
+<td>SINOCOLOR PRINTING EQUIPMENT (SHANGHAI) CO., LTD.</td>
+</tr>
+<tr>
+<td>上海傲杰实业有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>东莞市亿方数码科技有限公司</td>
+<td>DONGGUAN YIFANG DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>河南英凯科技发展有限公司</td>
+<td>HENAN YINGKAI TECHNOLOGY DEVELOPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>广州泰美斯智能科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>郑州智赋数控设备有限公司（美孚）</td>
+<td>ZHENGZHOU MEFU CNC EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市顺德区迪迈斯机电设备有限公司</td>
+<td>DMAIS ELECTRICAL AND MECHANICAL EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>变革智能装备（中山）有限公司</td>
+<td>REVOTECH TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江申豪新材料有限公司</td>
+<td>ZHEJIANG SHENHAO NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>临沂市航达数控设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>合肥卡星数控设备有限公司</td>
+<td>HEFEI KAXING DIGITAL CONTROL EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>济南奥镭数控设备有限公司</td>
+<td>JINAN AOL CNC EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>安徽力宇电脑设备制造有限责任公司</td>
+<td>ANHUI LIYU COMPUTER EQUIPMENT MANU CO., LTD.</td>
+</tr>
+<tr>
+<td>上海勋朗机电科技有限公司</td>
+<td>XUNLONG ELECTROMECHANICAL CO., LTD.</td>
+</tr>
+<tr>
+<td>广州吉辉电子设备有限公司</td>
+<td>GUANGZHOU JIHUI ELECTRONIC EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>宁波润金机电科技有限公司</td>
+<td>NINGBO RUKING ELECTRICAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海炫蓝数码科技有限公司</td>
+<td>SHANGHAI BLUESHINE DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>郑州奥诚电子科技有限公司</td>
+<td>ZHENGZHOU AOCHENG ELECTRONIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>郑州乐彩科技股份有限公司</td>
+<td>ZHENGZHOU LECAI SCIENCE &amp; TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州爱科科技股份有限公司</td>
+<td>IECHO SCIENCE TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>山东力美喷墨科技有限公司</td>
+<td>SHANDONG LIMEI JETINK TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>易晓国际有限公司</td>
+<td>EASTSIGN INTERNATIONAL LTD</td>
+</tr>
+<tr>
+<td>上海伯利恒环保塑料型材有限公司</td>
+<td>SHANGHAI CANAAN PLASTIC CO., LTD.</td>
+</tr>
+<tr>
+<td>广州皓叶数码科技有限公司</td>
+<td>GUANGZHOU HAO DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>珠海天威新材料股份有限公司</td>
+<td>ZHUHAI PRINT-RITE NEW MATERIALS CORPORATION LTD.</td>
+</tr>
+<tr>
+<td>广州市艾杰丽数码科技有限公司</td>
+<td>EGERI DIGITAL TECHNOLOGY CO.,LTD.</td>
+</tr>
+<tr>
+<td>上海神画机械科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>青岛皇冠电子有限公司</td>
+<td>ROYAL SOVEREIGN CO., LTD.</td>
+</tr>
+<tr>
+<td>东莞市联沃数码科技有限公司</td>
+<td>DONGGUAN INKWORLD DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海晟威数码科技有限公司</td>
+<td>SHANGHAI SUNWIN DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海吾特数码设备有限公司</td>
+<td>SHANGHAI SPECIAL DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>临沂益彩数码产品有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>苏州奥凯高分子材料股份有限公司</td>
+<td>SUZHOU OCAN POLYMER MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市蔡伦科技有限公司</td>
+<td>SHENZHEN CAILUN TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>广州逸绘数码科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>北京意高科技有限公司</td>
+<td>BEIJING ICO SCIENCE AND TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海高恺实业有限公司</td>
+<td>SHANGHAI GOKAI INDUSTRY CO., LTD.</td>
+</tr>
+<tr>
+<td>无锡市鑫鹏达数码科技有限公司</td>
+<td>WUXI PENGDA SCIENCE &amp; TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州正硕科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>苏州赫姆伯格纸业有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>郑州汉伦科技有限公司</td>
+<td>ZHENGZHOU HAMLOON TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>江西杉木能源科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>宁波永德利展示器材有限公司</td>
+<td>NINGBO YONGDELI DISPLAY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海彩丞印刷有限公司</td>
+<td>CATCHING</td>
+</tr>
+<tr>
+<td>淄博立鹏陶瓷厂</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州精绘电子科技有限公司</td>
+<td>GUANGZHOU JINGHUI ELECTRONIC TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市鑫新智源科技有限公司</td>
+<td>SHENZHEN XINXINZHIYUAN TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>常州荣玖机械有限公司</td>
+<td>CHANGZHOU RONGJIU MECHANIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>青县兴河机械加工有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州市顶旗广告灯箱配件厂</td>
+<td>GUANGZHOU, DINGQI ADVERTISING LAMP BOX FITTINGS FACTORY</td>
+</tr>
+<tr>
+<td>上海英威喷墨科技有限公司</td>
+<td>SHANGHAI INKWIN INKJET TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>浙江海利得新材料股份有限公司</td>
+<td>ZHEJIANG HAILIDE NEW MATERIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>蚌埠万丽达数码彩印设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>南京富美丽印数码科技有限公司</td>
+<td>NANJING FORNI DIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>芜湖戴杰精密工具技术有限公司</td>
+<td>WUHU DAIJIE PRECISION TOOLS TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>河南东嘉广告有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>瑞安市华研激光科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>台灣上崗實業有限公司</td>
+<td>SUN KANG INDUSTRIAL CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市蓝科工具有限公司</td>
+<td>SHENZHAN LANKE TOOLS CO., LTD.</td>
+</tr>
+<tr>
+<td>聊城经济开发区杰刻激光设备有限公司</td>
+<td>LIAOCHENG JIEKE LASER MACHINE CO., LTD.</td>
+</tr>
+<tr>
+<td>精鹰刀具有限公司</td>
+<td>JINGYING CNC TOOLS CO., LTD.</td>
+</tr>
+<tr>
+<td>上海氢流三维科技有限公司</td>
+<td>SOLIFUSE CHANNEL LETTER 3D PRINTING SOLUTION</td>
+</tr>
+<tr>
+<td>佛山兆宇广告有限公司</td>
+<td>FOSHAN ZHAOYU ADVERTISING CO., LTD.</td>
+</tr>
+<tr>
+<td>广东省亿豪铝业科技有限公司</td>
+<td>FOSHAN RONGCHUANG YIHAO ALUMINUM TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>上海威雕数控机械有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>苍南县龙港缪帆制卡厂</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>利能（佛山市）塑料制品有限公司</td>
+<td>SHOWTECH DISPLAY &amp; ORNAMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市经纬线科技有限公司</td>
+<td>SHENZHEN JINGWEIXIAN TECHNOLOGY CO.,LTD</td>
+</tr>
+<tr>
+<td>聊城巨龙激光设备有限公司</td>
+<td>LIAOCHENG JULONG LASER EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>北京埃佛尔激光科技有限公司</td>
+<td>BEIJING EFR LASER S&amp;T CO., LTD.</td>
+</tr>
+<tr>
+<td>广州桦锐刀具有限公司</td>
+<td>GUANGZHOU HUARUI CUTTING TOOL CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山渝冠机械科技有限公司</td>
+<td>FOSHAN YUGUAN ENGINEERING TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>郑州鑫增机械设备有限公司</td>
+<td>ZHENGZHOU XINSHENG MACHINERY EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>合肥慧沃数控设备有限公司</td>
+<td>HEFEI HUIWO DIGITAL CONTROL EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>潍坊翰顿数控设备有限公司</td>
+<td>WEIFANG HANDUN CNC EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市佳丰华标识有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>河南新邦联合（信息科技）展示器材有限公司</td>
+<td>NEW STATE UNITED</td>
+</tr>
+<tr>
+<td>芜湖途胜标识标牌有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>上海镭全激光科技有限公司</td>
+<td>SHANGHAI LEIQUAN LASER TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州刻度标识设计制作有限公司</td>
+<td>HANGZHOU SCALESIGN DESIGN CO., LTD.</td>
+</tr>
+<tr>
+<td>北京龙雕伟业数控设备有限公司</td>
+<td>BEIJING LONGDIAO NC EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州邦美展览器材有限公司</td>
+<td>HANGZHOU BANNERMATE EXHITION SYSTEM CO., LTD.</td>
+</tr>
+<tr>
+<td>天津市亿彩津元数控科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州易字机电设备有限公司</td>
+<td>GUANGZHOU EZLETTER CO., LTD.</td>
+</tr>
+<tr>
+<td>江门市天域展示器材有限公司</td>
+<td>TIANYU EXHIBITION EQUIPMENT &amp; MATERIALS CO., LTD.</td>
+</tr>
+<tr>
+<td>广州汉牛机械设备有限公司</td>
+<td>GUANGZHOU HANNIU LASER MACHINERY CO., LTD.</td>
+</tr>
+<tr>
+<td>广东省鑫全利激光智能装备有限公司</td>
+<td>GUANGDONG XINQUANLI LASER INTELLIGENT EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>上海越华激光科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>东莞市斯派特激光科技有限公司</td>
+<td>SPT LASER TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>杭州赛迪克自动化设备有限公司</td>
+<td>HANGZHOU SAIDIKE AUTOMATION EQUIPMENT CO.,LTD</td>
+</tr>
+<tr>
+<td>山东大航激光智能装备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>成都微深科技有限公司</td>
+<td>CHENGDU WEESON TECH CO., LTD.</td>
+</tr>
+<tr>
+<td>济南安强智能装备有限公司</td>
+<td>JINAN ANQIANG INTELLIGENT EQUIPMENT CO.,LTD</td>
+</tr>
+<tr>
+<td>安徽南图标识有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>杭州矽能新材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>苏州曼宇智能科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州悠广光电科技有限公司</td>
+<td>GUANGZHOU YOUGUANG OPTOELECTRONICS CO., LTD.</td>
+</tr>
+<tr>
+<td>河南商顺实业有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>深圳市三南科技有限公司</td>
+<td>SHENZHEN SANNAN TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>广东萤火虫广告标识制品有限公司</td>
+<td>JIANGMEN FIREFLIES ADVERTISING LOGO PRODUCTS CO., LTD.</td>
+</tr>
+<tr>
+<td>聊城市开发区精科激光设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>四川甲骨文标识制作有限责任公司</td>
+<td>SICHUAN JAGUAR SIGN EXPRESS CO., LTD.</td>
+</tr>
+<tr>
+<td>东莞市鑫科激光科技有限公司</td>
+<td>DONGGUAN XINKE LASER TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>济南龙奥数控机械有限公司</td>
+<td>JINAN DRAGONTECH CO., LTD.</td>
+</tr>
+<tr>
+<td>苏州雷凌广告设计制作有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>六安鼎磊标识科技有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>安徽巨子金属材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>非凡设计制作有限公司</td>
+<td>UNCOMMON DESIGN &amp; PRODUCTION CO., LTD.</td>
+</tr>
+<tr>
+<td>郑州小爱标牌</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>宁波市鄞州亿炫光电科技有限公司</td>
+<td>IXUN LIGHTING CO., LTD.</td>
+</tr>
+<tr>
+<td>佛山市粤鸿新材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广东搏浪光电有限公司</td>
+<td>SHENZHEN REBOW TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>东莞耐利智机械设备有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>邢台亚新橡塑制品有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>常州仟那伦光电科技有限公司</td>
+<td>CHANGZHOU NEWAY OPTO-ELECTRICAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>深圳市和锋广告有限公司</td>
+<td>SHENZHEN HEFENG ADVERTISING CO., LTD.</td>
+</tr>
+<tr>
+<td>山西认真雕刻刀具有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>昆山维思机器有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>浦江县太鼎商贸有限公司</td>
+<td>TAI DING TRADE CO., LTD.</td>
+</tr>
+<tr>
+<td>聊城市龙马易刻机械设备有限公司</td>
+<td>LIAOCHENG LONGMA YIKE MACHINERY EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>济宁正杰广告有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>广州派特灯箱器材有限公司</td>
+<td>GUANGZHOU SIGNHORN ELECTRONIC CO., LTD.</td>
+</tr>
+<tr>
+<td>山东金信泰广告装饰材料有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>北京四诶艺术图书有限责任公司</td>
+<td>BEIJING SIEI ART BOOK CO., LTD.</td>
+</tr>
+<tr>
+<td>苏州金戈铁马标识有限公司</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>河南艾美多智能科技有限公司</td>
+<td>HENAN VODAFONEDIGITAL TECHNOLOGY CO., LTD.</td>
+</tr>
+<tr>
+<td>济南宏牛机械设备有限公司</td>
+<td>JINAN HONGNIU MACHINERY EQUIPMENT CO., LTD.</td>
+</tr>
+<tr>
+<td>山东领品机械科技有限公司</td>
+<td>SHANDONG LEAPION MACHINERY CO., LTD.</td>
+</tr>
+<tr>
+<td>联兴发实业有限公司</td>
+<td>INK TOTAL SOLUTION CO., LTD.</td>
+</tr>
+<tr>
+<td>许昌森祺电气有限公司</td>
+<td>XUCHANG SENQI ELECTRICAL CO., LTD.</td>
+</tr>
+<tr>
+<td style="text-align: center;" colspan="2">以上参展企业名录，仅供参考，具体以现场为准</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>	
+	<!--底部-->
+ 	
+<!--右边固定-->
+<div class="FlexRightBox">
+	<a href="/visiting-pre-registration.html" target="_blank">
+		<span class="icone">&gt;</span>
+		<span>展讯订阅</span>
+	</a>
+</div>
+<!--右边固定-->
+
+<!------------------------底部------------------------>
+
+<div class="PC_FooterContentBox">
+	<div class="PC_FootBottomBox">
+		<div class="PC_ContentBox">
+			<div class="PC_FootBottomContentBox">
+				<!-- 底部logo -->
+				<div class="PC_FootLogoBox">
+										<img class="FootLogoImgBox noTraditionalChinese" src="https://www.ledchina-sh.com/images/fragment/20241210/logo_cn.png" />
+					<img class="FootLogoImgBox TraditionalChinese" style="display: none;"
+						src="https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20241210/1211_1733810066635642.png" />
+									</div>
+				<!-- 底部联系方式 -->
+				<div class="PC_Contactinformation">
+					<h6>闻信展览</h6>
+					<div class="PC_ContactinformationText">
+						<span>86 20 3810 6261</span>												<span
+							style="background-image: url(https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20221017/467_1665973061858889.png);">info@ledchina.com</span>						<span
+							style="background-image: url(https://trust-data.oss-cn-shenzhen.aliyuncs.com/file/upload/20221017/467_1665973057265458.png);">www.LEDChina.com</span>
+					</div>
+				</div>
+				<!-- 右边二维码 -->
+				<div class="PC_FootCodetBox">
+					<ul>
+												<li>
+															<img src="https://www.ledchina-sh.com/images/fragment/20260529/code01.jpg">
+								<p>小程序</p>
+														</li>
+																		<li>
+															<img src="https://www.ledchina-sh.com/images/fragment/20260529/code02.jpg">
+								<p>企微号</p>
+														</li>
+																		<li>
+															<img src="https://www.ledchina-sh.com/images/fragment/20260529/code03.jpg">
+								<p>视频号</p>
+														</li>
+																		<li>
+															<img src="https://www.ledchina-sh.com/images/fragment/20260529/code04.jpg">
+								<p>抖音号</p>
+														</li>
+											</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="PC_FootCopyrightBox">
+
+		<p>Copyright <span id="yeartext" class="Footyeartext"></span>
+			<script>
+				
+				document.getElementById("yeartext").textContent = new Date().getFullYear(); 
+			</script> by Trust Exhibition Co.,Ltd (All Rights Reserved)
+						<a href="https://beian.miit.gov.cn" target="_blank">粤ICP备16120933号</a>
+									<a class="beianhao"
+				href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010602002113"
+				target="_blank">粤公网安备 44010602002113号</a>
+					</p>
+	</div>
+</div>
+
+<!------------------------底部 end------------------------>
+
+
+
+<script src="https://www.ledchina-sh.com/theme/default/js/Fti.js?v=01" integrity="" crossorigin="anonymous"></script>
+<script>
+	
+	$(function() {
+		//设置图片不可以拉动
+		$("img").attr("draggable", "false");
+		//设置所有的a标签在新标签页打开
+
+		$("a").each(function() {
+			var hrefval = $(this).attr("href");
+			if (hrefval && hrefval != "") {
+				if (hrefval.indexOf("javascript") != -1 || hrefval == "" || hrefval == "###") {
+
+				} else {
+					$(this).attr("target", "_blank");
+				}
+			}
+
+		})
+
+		VerticallyCentered();
+
+		//切换简/繁体时显示不同的图片
+		getlanguage();
+
+	})
+
+
+	//处理上下垂直居中问题
+	function VerticallyCentered() {
+		$(".VerticallyCentered").each(function() {
+			var vertically = $(this).outerHeight();
+			var verticallyBox = $(this).parent(".VerticallyCenteredBox").height();
+			verticallyBox = (verticallyBox - vertically) / 2;
+			$(this).css({
+				"padding-top": verticallyBox + "px"
+			})
+		})
+	}
+
+	//如果浏览器显示宽度小于750时，自动跳转到手机
+	var windowshow = $(window).width();
+	if (windowshow <= 750) {
+		var onurl = window.location.pathname;
+		if (onurl.indexOf("/m/") != -1) {
+
+		} else {
+			window.location.href = "/m" + onurl
+		}
+	}
+	//如果浏览器显示宽度小于750时，自动跳转到手机  end
+
+	//点击简/繁体事件
+	$(document).on("click", "a#StranLink", function() {
+		getlanguage();
+	})
+
+	//获取语言
+	function getlanguage() {
+		setTimeout(function() {
+			var JF_cn = "AutoHan+" + self.location.hostname.toString().replace(/\./g, "");
+			var JF_cnval = getCookie(JF_cn);
+			if (JF_cnval && JF_cnval == "1") {
+				$(".TraditionalChinese").show();
+				$(".noTraditionalChinese").hide();
+			} else {
+				$(".noTraditionalChinese").show();
+				$(".TraditionalChinese").hide();
+			}
+		}, 110);
+	}
+
+
+	//获取Cookie
+	function getCookie(t) {
+		var n = t + "=";
+		if (0 < document.cookie.length) {
+			return offset = document.cookie.indexOf(n), -1 != offset ? (offset += n.length, end = document.cookie.indexOf(
+				";", offset), -1 == end && (end = document.cookie.length), unescape(document.cookie.substring(offset,
+				end))) : ""
+		}
+	}
+
+	//切换简/繁体时显示不同的图片 end
+
+	//SEO URL
+	$("meta[property='og:url'],meta[name='twitter:url']").attr('content', window.location.href); 	
+</script> 	
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "C03",
+    "checked_at": "2026-11-12",
+    "brand_mention": true,
+    "public_website_anchors": []
+  },
+  {
+    "id": "E01",
+    "checked_at": "2026-11-12",
+    "brand_mention": true,
+    "public_website_anchors": []
+  },
+  {
+    "id": "E03",
+    "checked_at": "2026-11-12",
+    "brand_mention": true,
+    "public_website_anchors": []
+  },
+  {
+    "id": "E04",
+    "checked_at": "2026-11-12",
+    "brand_mention": true,
+    "public_website_anchors": []
+  },
+  {
+    "id": "E05",
+    "checked_at": "2026-11-12",
+    "brand_mention": false,
+    "public_website_anchors": []
+  },
+  {
+    "id": "E09",
+    "checked_at": "2026-11-12",
+    "brand_mention": true,
+    "public_website_anchors": []
+  }
+]

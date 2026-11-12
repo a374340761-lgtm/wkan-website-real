@@ -1,0 +1,68 @@
+{
+  "pages": {
+    "about-us.html": [
+      "E12",
+      "E09",
+      "C03"
+    ],
+    "company-profile.html": [
+      "E12",
+      "E09",
+      "C03"
+    ],
+    "zh/about-us.html": [
+      "E12",
+      "E09",
+      "C03"
+    ],
+    "news/the-139th-canton-fair-phase-3.html": [
+      "E12",
+      "E13"
+    ],
+    "news/apppexpo-2026-shanghai.html": [
+      "E01"
+    ],
+    "zh/news/apppexpo-2026-shanghai.html": [
+      "E01"
+    ],
+    "news/sign-china-2026-shanghai.html": [
+      "E03",
+      "E04"
+    ],
+    "zh/news/sign-china-2026-shanghai.html": [
+      "E03",
+      "E04"
+    ],
+    "manufacturing-capabilities.html": [
+      "C03",
+      "C01"
+    ],
+    "de/about-us.html": [
+      "E12",
+      "E09",
+      "C03"
+    ],
+    "de/company-profile.html": [
+      "E12",
+      "E09",
+      "C03"
+    ],
+    "de/manufacturing-capabilities.html": [
+      "C03",
+      "C01"
+    ],
+    "de/news/the-139th-canton-fair-phase-3.html": [
+      "E12",
+      "E13"
+    ],
+    "de/news/apppexpo-2026-shanghai.html": [
+      "E01"
+    ],
+    "de/news/sign-china-2026-shanghai.html": [
+      "E03",
+      "E04"
+    ]
+  },
+  "outbound_citation_instances": 32,
+  "distinct_outbound_sources": 8
+}

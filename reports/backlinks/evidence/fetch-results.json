@@ -1,0 +1,46 @@
+[
+  {
+    "id": "E01",
+    "url": "https://exhibitors.emagecompany.com/printing/apppexpo2026.html",
+    "status": 200,
+    "matches": [
+      "\t\t\t<td>广西伟群帐篷制造有限公司</td>\r"
+    ]
+  },
+  {
+    "id": "E04",
+    "url": "https://exhibitors.emagecompany.com/lamp/ledchina26.html",
+    "status": 200,
+    "matches": [
+      "\t\t\t<td>广西伟群帐篷制造有限公司</td>\r"
+    ]
+  },
+  {
+    "id": "E09",
+    "url": "https://www.ledchina-sh.com/visiting-exhibitor-list-2023.html",
+    "status": 200,
+    "matches": [
+      "<td>GUANGZHOU WAIKWAN TENT MANUFACTURING CO. LTD</td>\r",
+      "<td>广西伟群帐篷制造有限公司</td>\r",
+      "<td>GUANGXI WAIKWAN TENT MANUFACTURING CO. LTD</td>\r"
+    ]
+  },
+  {
+    "id": "E05",
+    "url": "https://public.trust-im.com/en/exhibitor_list/signsh2026/38.html",
+    "status": 200,
+    "matches": []
+  },
+  {
+    "id": "C01",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1032)>"
+  },
+  {
+    "id": "C03",
+    "url": "https://news.mysteel.com/a/26092910/1EFA1AF7EBD08558.html",
+    "status": 200,
+    "matches": [
+      "<p>3个项目竣工，广西伟群帐篷制造有限公司高端帐篷制造项目古城镇（一期），总投资8000万元，占地3000余平方米；北部工业集中区川美印刷包装生产线建设项目一期，占地面积约38亩，计划总投资1.38亿元，总建筑面积4万余平方米"
+    ]
+  }
+]

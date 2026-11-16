@@ -4,7 +4,7 @@
 const LANG_KEY = 'site_language';
 const DEFAULT_LANG = 'en';
 
-const ENABLED_LANGS = ['en', 'zh', 'de'];
+const ENABLED_LANGS = ['en', 'zh', 'de', 'es'];
 
 // ✅ 公司名（统一来源，避免在多个 HTML 写死）
 const COMPANY_NAME = {
@@ -23,6 +23,7 @@ function getLang() {
         const p = window.location.pathname.replace(/\\/g, '/');
         if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
         if (p === '/de' || p.startsWith('/de/')) return 'de';
+        if (p === '/es' || p.startsWith('/es/')) return 'es';
     } catch (e2) {}
     return DEFAULT_LANG;
 }
@@ -3367,6 +3368,10 @@ class MultiLanguageSystem {
     }
     
     init() {
+        if (getLang() === 'es' && typeof window.wkSpanishMarkup === 'function') {
+            this.translations.es = Object.fromEntries(Object.entries(this.translations.en)
+                .map(([key, value]) => [key, window.wkSpanishMarkup(value)]));
+        }
         if (getLang() === 'de' && typeof window.wkGermanMarkup === 'function') {
             this.translations.de = Object.fromEntries(Object.entries(this.translations.en)
                 .map(([key, value]) => [key, window.wkGermanMarkup(value)]));
@@ -3440,6 +3445,7 @@ class MultiLanguageSystem {
         
         elements.forEach(element => {
             if (this.currentLanguage === 'de' && element.hasAttribute('data-de-static')) return;
+            if (this.currentLanguage === 'es' && element.hasAttribute('data-es-static')) return;
             const key = element.dataset.translate || element.dataset.i18n;
             if (!key) return;
             
@@ -3562,10 +3568,10 @@ class MultiLanguageSystem {
     
     updateBodyLanguageClass(lang) {
         // 移除所有语言类
-        document.body.classList.remove('lang-zh', 'lang-en', 'lang-de');
+        document.body.classList.remove('lang-zh', 'lang-en', 'lang-de', 'lang-es');
         // 添加当前语言类
         document.body.classList.add(`lang-${lang}`);
-        if (lang === 'de') document.body.classList.add('lang-en');
+        if (lang === 'de' || lang === 'es') document.body.classList.add('lang-en');
     }
     
     animateLanguageChange() {

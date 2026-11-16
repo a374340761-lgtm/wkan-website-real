@@ -150,8 +150,12 @@
     return path === '/de' || path.indexOf('/de/') === 0;
   }
 
+  function isEsPath(path) {
+    return /^\/es(?:\/|$)/.test(normPath(path));
+  }
+
   function declaredAlternate(targetLang, sourceUrl) {
-    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de' }[targetLang];
+    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de', es: 'es' }[targetLang];
     if (!hreflang) return null;
     var link = document.querySelector('link[rel="alternate"][hreflang="' + hreflang + '"]:not([data-wk-hreflang])');
     if (!link) return null;
@@ -160,8 +164,9 @@
       var source = new URL(sourceUrl);
       if (target.origin !== PRODUCTION_ORIGIN && target.origin !== source.origin) return null;
       if (targetLang === 'de' && !isDePath(target.pathname)) return null;
+      if (targetLang === 'es' && !isEsPath(target.pathname)) return null;
       if (targetLang === 'zh' && !isZhPath(target.pathname)) return null;
-      if (targetLang === 'en' && (isDePath(target.pathname) || isZhPath(target.pathname))) return null;
+      if (targetLang === 'en' && (isDePath(target.pathname) || isZhPath(target.pathname) || isEsPath(target.pathname))) return null;
       var targetKeys = new Set(target.searchParams.keys());
       source.searchParams.forEach(function (value, key) {
         if (!targetKeys.has(key)) target.searchParams.append(key, value);
@@ -203,8 +208,8 @@
     var pathname = normPath(window.location.pathname);
     var search = window.location.search || '';
 
-    if (targetLang === 'de' || isDePath(pathname)) {
-      if (targetLang === 'de' && isDePath(pathname)) return null;
+    if (targetLang === 'de' || targetLang === 'es' || isDePath(pathname) || isEsPath(pathname)) {
+      if ((targetLang === 'de' && isDePath(pathname)) || (targetLang === 'es' && isEsPath(pathname))) return null;
       return declaredAlternate(targetLang, window.location.href);
     }
 
@@ -253,6 +258,7 @@
     if (isDePath(window.location.pathname) && typeof window.wkGermanLink === 'function') {
       return window.wkGermanLink(href);
     }
+    if (isEsPath(window.location.pathname) && typeof window.wkSpanishLink === 'function') return window.wkSpanishLink(href);
     var s = href.trim();
     if (/^(https?:|mailto:|tel:|javascript:)/i.test(s)) return s;
     try {
@@ -295,7 +301,7 @@
         e.preventDefault();
         e.stopImmediatePropagation();
         try {
-          if (targetLang === 'en' || targetLang === 'zh' || targetLang === 'de') {
+          if (targetLang === 'en' || targetLang === 'zh' || targetLang === 'de' || targetLang === 'es') {
             localStorage.setItem('site_language', targetLang);
             localStorage.setItem('siteLanguage', targetLang);
           }
@@ -314,7 +320,7 @@
       const manifest = await response.json();
       if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
       const source = new URL(window.location.href);
-      const path = source.pathname.replace(/^\/zh(?=\/|$)/, '') || '/';
+      const path = source.pathname.replace(/^\/(?:zh|de|es)(?=\/|$)/, '') || '/';
       if (!manifest.paths.includes(path)) return;
       const href = '/de' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
       const menu = document.getElementById('langMenu');
@@ -336,6 +342,36 @@
     }
   }
 
+  async function attachSpanishNavigation() {
+    if (isEsPath(window.location.pathname)) return;
+    try {
+      const response = await fetch('/es/locale-map.json', { cache: 'no-cache' });
+      if (!response.ok) return;
+      const manifest = await response.json();
+      if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
+      const source = new URL(window.location.href);
+      const path = source.pathname.replace(/^\/(?:zh|de|es)(?=\/|$)/, '') || '/';
+      if (!manifest.paths.includes(path)) return;
+      const href = '/es' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
+      const menu = document.getElementById('langMenu');
+      if (!menu) return;
+      const existing = menu.querySelector('a[hreflang="es"]');
+      if (existing) {
+        existing.href = href;
+        return;
+      }
+      const link = document.createElement('a');
+      link.className = 'lang-item';
+      link.hreflang = 'es';
+      link.lang = 'es';
+      link.href = href;
+      link.textContent = 'Español';
+      menu.append(link);
+    } catch {
+      // An unavailable locale manifest must not interfere with existing navigation.
+    }
+  }
+
   function removeOldHreflang() {
     document.querySelectorAll('link[data-wk-hreflang]').forEach(function (l) {
       l.parentNode && l.parentNode.removeChild(l);
@@ -343,7 +379,7 @@
   }
 
   function injectHreflang() {
-    if (isDePath(window.location.pathname)) return;
+    if (isDePath(window.location.pathname) || isEsPath(window.location.pathname)) return;
     if (document.querySelector('link[rel="alternate"][hreflang="en"]:not([data-wk-hreflang])')) {
       removeOldHreflang();
       return;
@@ -441,6 +477,7 @@
       var p = String(window.location.pathname || '').replace(/\\/g, '/');
       if (p === '/zh' || p.indexOf('/zh/') === 0) return 'zh';
       if (isDePath(p)) return 'de';
+      if (isEsPath(p)) return 'es';
     } catch (e) {}
     return 'en';
   };
@@ -448,8 +485,10 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', attachLocaleNav);
     document.addEventListener('DOMContentLoaded', attachGermanNavigation);
+    document.addEventListener('DOMContentLoaded', attachSpanishNavigation);
   } else {
     attachLocaleNav();
     attachGermanNavigation();
+    attachSpanishNavigation();
   }
 })();

@@ -159,6 +159,24 @@ function validateGermanLocaleRouting() {
   );
   alternates.set('en', 'https://example.com/product-detail.html');
   requireCondition(getLocaleSwitchUrl('en') === null, 'Locale switching must reject external alternates');
+  visit('/product-detail.html?sku=42001&tag=a&tag=b#specs');
+  requireCondition(getLocaleSwitchUrl('es') === null, 'Spanish switching requires a declared counterpart');
+  alternates.set('es', 'https://www.waikwantent.com/es/product-detail.html');
+  requireCondition(getLocaleSwitchUrl('es') === 'http://localhost:8000/es/product-detail.html?sku=42001&tag=a&tag=b#specs',
+    'Spanish switch must preserve local origin, SKU, repeated parameters and anchor');
+  for (const prefix of ['zh', 'de']) {
+    visit(`/${prefix}/product-detail.html?sku=42001#specs`);
+    requireCondition(getLocaleSwitchUrl('es') === 'http://localhost:8000/es/product-detail.html?sku=42001#specs',
+      `${prefix} product deep link must switch to Spanish`);
+  }
+  visit('/es/product-detail.html?sku=42001#specs');
+  requireCondition(context.window.wkResolvePageLanguage() === 'es', 'Spanish URL must resolve to es');
+  requireCondition(getLocaleSwitchUrl('es') === null, 'Spanish current locale must not navigate');
+  alternates.set('en', 'https://www.waikwantent.com/product-detail.html');
+  for (const [language, prefix] of [['en', ''], ['zh', '/zh'], ['de', '/de']]) {
+    requireCondition(getLocaleSwitchUrl(language) === `http://localhost:8000${prefix}/product-detail.html?sku=42001#specs`,
+      `Spanish deep link must switch back to ${language}`);
+  }
 }
 
 function validateCategoryMigrations() {

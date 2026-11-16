@@ -14,6 +14,8 @@ window.WK_INQUIRY_SUBMIT = async function (payload) {
 
   // Required by the deployed compatibility contract.
   payload.pageUrl = window.location.href;
+  payload.language = typeof window.wkResolvePageLanguage === 'function'
+    ? window.wkResolvePageLanguage() : (document.documentElement.lang || 'en');
 
   // Back-compat for current payload shape from contact.js
   if (payload.target_market && !payload.market) payload.market = payload.target_market;

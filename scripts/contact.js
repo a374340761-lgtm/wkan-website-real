@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const path = window.location.pathname;
     if (/^\/zh(?:\/|$)/.test(path)) return zh;
     if (/^\/de(?:\/|$)/.test(path)) return de;
+    if (/^\/es(?:\/|$)/.test(path) && typeof window.wkSpanishText === 'function') return window.wkSpanishText(en);
     return en;
   }
 

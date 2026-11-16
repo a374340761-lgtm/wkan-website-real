@@ -55,7 +55,7 @@ def source_routes():
     tracked = subprocess.check_output(["git", "ls-files", "-z", "--", "*.html"], cwd=ROOT).decode("utf-8")
     return {
         file.removeprefix("zh/") for file in tracked.rstrip("\0").split("\0")
-        if file and not file.startswith("de/") and not INTERNAL.match(file.removeprefix("zh/"))
+        if file and not file.startswith(("de/", "es/")) and not INTERNAL.match(file.removeprefix("zh/"))
     }
 
 

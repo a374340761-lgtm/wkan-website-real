@@ -23,6 +23,8 @@ jobs:
         run: |
           node --check scripts/contact.js
           node --check scripts/inquiry-hook.js
+          node --check scripts/spanish-localization.js
+          node --check scripts/bilingual-routing.js
           node --check scripts/legacy-route.js
           node --check backend/server.js
           node --check scripts/careers.js
@@ -43,6 +45,7 @@ jobs:
           node scripts/build-static-translations.mjs --check
           node scripts/build-static-product-pages.mjs --check
           python scripts/validate-german-site.py
+          python scripts/validate-spanish-site.py
           python scripts/apply-google-tag-manager.py --check
           python scripts/validate-seo.py
           node scripts/validate-structured-data.mjs

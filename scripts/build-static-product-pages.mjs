@@ -616,7 +616,11 @@ for (const product of STATIC_PRODUCTS) {
   for (const lang of ['en', 'zh']) {
     const rel = `${lang === 'zh' ? 'zh/' : ''}products/${product.slug}.html`;
     const dest = path.join(ROOT, rel);
-    const output = appendReviewedStaticSpecs(page(product, lang), product, lang).replace(/[ \t]+$/gm, '');
+    let output = appendReviewedStaticSpecs(page(product, lang), product, lang).replace(/[ \t]+$/gm, '');
+    const spanishPath = `products/${product.slug}.html`;
+    if (fs.existsSync(path.join(ROOT, 'es', spanishPath))) {
+      output = output.replace('</head>', `<link rel="alternate" hreflang="es" href="${ORIGIN}/es/${spanishPath}"/>\n</head>`);
+    }
     if (check) {
       // Windows checkouts may use CRLF; compare generated content independently of line endings.
       if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8').replace(/\r\n/g, '\n') !== output.replace(/\r\n/g, '\n')) {

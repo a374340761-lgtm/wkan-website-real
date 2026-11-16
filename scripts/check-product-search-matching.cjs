@@ -8,3 +8,11 @@ for (const query of [
     assert.equal(S.search(ps, query)[0]?.id, 9020, query);
 }
 assert.equal(S.search(ps, '45mm hex tube blade flag connector').some(p => p.id === 9020), false);
+
+vm.runInContext(fs.readFileSync('scripts/spanish-dictionary.js', 'utf8'), c);
+c.window.wkSpanishText = value => c.window.WK_ES_TEXT[String(value || '').trim()] || value || '';
+for (const query of ['carpa', 'bandera', 'inflable']) {
+    assert(S.search(ps, query).length > 0, `Spanish product search must match ${query}`);
+}
+assert.equal(S.search(ps, '95013')[0].id, 95013, 'Spanish search must preserve SKU lookup');
+console.log('Spanish product names and SKU search verified.');

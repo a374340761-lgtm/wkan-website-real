@@ -48,6 +48,8 @@ def expected_url(rel: str) -> str:
         return ORIGIN + "/zh/"
     if rel == "de/index.html":
         return ORIGIN + "/de/"
+    if rel == "es/index.html":
+        return ORIGIN + "/es/"
     return ORIGIN + "/" + rel
 
 
@@ -60,6 +62,8 @@ def normalized_url(value: str) -> str:
         path = "/zh/"
     elif path == "/de/index.html":
         path = "/de/"
+    elif path == "/es/index.html":
+        path = "/es/"
     return urlunsplit(("https", "www.waikwantent.com", path, parts.query, ""))
 
 
@@ -143,12 +147,15 @@ def main() -> None:
             lines.append(f"    <lastmod>{page['lastmod']}</lastmod>")
         alternates = dict(page["alternates"])
         path = urlsplit(page["url"]).path
-        base = re.sub(r"^/(?:zh|de)(?=/)", "", path)
+        base = re.sub(r"^/(?:zh|de|es)(?=/)", "", path)
         if base in german_pages:
             group = {"en": ORIGIN + base, "zh-CN": ORIGIN + "/zh" + base, "de": german_pages[base]}
             if group["en"] in canonical_urls:
                 group["x-default"] = group["en"]
             alternates.update(group)
+        spanish_url = ORIGIN + '/es' + base
+        if spanish_url in canonical_urls:
+            alternates['es'] = spanish_url
         for language, href in alternates.items():
             if href not in canonical_urls:
                 continue

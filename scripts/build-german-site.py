@@ -469,7 +469,7 @@ const context = {
 };
 context.window = context;
 vm.createContext(context);
-vm.runInContext(fs.readFileSync('scripts/products.js?v=20261112-inflatable-r1', 'utf8'), context);
+vm.runInContext(fs.readFileSync('scripts/products.js', 'utf8'), context);
 console.log(JSON.stringify(vm.runInContext('new ProductManager().products', context).map(product =>
     [product.nameEn, product.descriptionEn].filter(Boolean))));
 """
@@ -598,7 +598,7 @@ def main():
     args = parser.parse_args()
     sources = {}
     for file in sorted(git_sources(), key=lambda value: value.startswith("zh/")):
-        if file.startswith("de/"):
+        if file.startswith(("de/", "es/")):
             continue
         key = file.removeprefix("zh/")
         if not TECHNICAL.match(key) and key not in {"careers.html", "careers-submit-bridge.html"}:
@@ -635,7 +635,7 @@ def main():
     if args.release:
         locs = ElementTree.parse(ROOT / "sitemap.xml").findall(".//{*}loc")
         indexable = {root_file(urlsplit(loc.text).path) for loc in locs
-                     if not urlsplit(loc.text).path.startswith(("/zh/", "/de/"))}
+                     if not urlsplit(loc.text).path.startswith(("/zh/", "/de/", "/es/"))}
         production_tracking = runpy.run_path(str(ROOT / "scripts/apply-google-tag-manager.py"))["expected"]
     for file, source in sources.items():
         soup = prepare_document(source, file, sources, indexable)
@@ -680,7 +680,7 @@ def main():
                    | {"/news/"})
     dictionary = "window.WK_DE_PATHS = " + json.dumps(paths, ensure_ascii=False) + ";\n"
     dictionary += "window.WK_DE_TEXT = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n"
-    (ROOT / "scripts/german-dictionary.js?v=20261112-inflatable-r1").write_text(dictionary, encoding="utf-8")
+    (ROOT / "scripts/german-dictionary.js").write_text(dictionary, encoding="utf-8")
     (ROOT / "de/locale-map.json").write_text(json.dumps({
         "enabled": args.release,
         "paths": paths,

@@ -360,6 +360,7 @@
             const lang = this.getLang();
             if (lang === 'zh') return item.nameZh || item.nameEn || '';
             const name = item.nameEn || item.nameZh || '';
+            if (lang === 'es' && window.wkSpanishText) return window.wkSpanishText(name);
             return lang === 'de' && window.wkGermanText ? window.wkGermanText(name) : name;
         }
 
@@ -676,6 +677,9 @@
             if (lang === 'zh') {
                 lines.push('询价清单（RFQ）：');
                 lines.push('请针对以下型号报价（含印刷/交期/MOQ/贸易条款）：');
+            } else if (lang === 'es') {
+                lines.push('Lista de solicitudes de presupuesto');
+                lines.push('Indique la cantidad mínima de pedido, el plazo de producción, las opciones de impresión y los Incoterms para los siguientes artículos.');
             } else if (lang === 'de') {
                 lines.push('Anfrageliste');
                 lines.push('Bitte nennen Sie Mindestbestellmenge, Lieferzeit, Druckoptionen und Incoterms für die folgenden Artikel.');
@@ -685,7 +689,7 @@
             }
             lines.push('');
             this.items.forEach((item, idx) => {
-                const name = lang === 'de' ? this.displayName(item)
+                const name = (lang === 'de' || lang === 'es') ? this.displayName(item)
                     : lang === 'zh' ? (item.nameZh || item.nameEn) : (item.nameEn || item.nameZh);
                 const sku = item.sku || item.id;
                 const q = parseInt(item.quantity, 10) || 1;
@@ -701,7 +705,7 @@
                 } else if (item.model) {
                     parts.push(`${lbl('rfq_line_model', '型号', 'Model')}: ${item.model}`);
                 }
-                parts.push(`${lang === 'zh' ? '数量' : lang === 'de' ? 'Stückzahl' : 'Qty'}: ${q}`);
+                parts.push(`${lang === 'zh' ? '数量' : lang === 'de' ? 'Stückzahl' : lang === 'es' ? 'Cantidad' : 'Qty'}: ${q}`);
                 lines.push(`${idx + 1}. ${name}`);
                 lines.push(`   ${parts.join(' · ')}`);
                 lines.push('');
@@ -752,6 +756,8 @@
                 const p = window.location.pathname || '/';
                 if (p === '/zh' || p === '/zh/' || p.indexOf('/zh/') === 0) {
                     contactQuoteHref = '/zh/contact-us.html#getQuoteForm';
+                } else if (p === '/es' || p.indexOf('/es/') === 0) {
+                    contactQuoteHref = '/es/contact-us.html#getQuoteForm';
                 } else if (p === '/de' || p.indexOf('/de/') === 0) {
                     contactQuoteHref = '/de/contact-us.html#getQuoteForm';
                 }

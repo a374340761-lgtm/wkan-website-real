@@ -42,6 +42,11 @@
   }
 
   function label(group, key, root) {
+    if (document.documentElement.lang === 'es') {
+      var spanishSelect = $('[name="customizer_' + group + '"]', root);
+      if (spanishSelect && spanishSelect.selectedOptions[0]) return spanishSelect.selectedOptions[0].textContent.trim();
+      return window.wkSpanishText ? window.wkSpanishText((OPTIONS[group] && OPTIONS[group][key]) || key || '') : key;
+    }
     if (document.documentElement.lang === 'de') {
       var select = $('[name="customizer_' + group + '"]', root);
       if (select && select.selectedOptions[0]) return select.selectedOptions[0].textContent.trim();
@@ -67,6 +72,15 @@
     cfg.sku = ['WK', 'TENT', skuPart(cfg.size), skuPart(cfg.frame), skuPart(cfg.color), skuPart(cfg.print)]
       .filter(Boolean)
       .join('-');
+    if (document.documentElement.lang === 'es') {
+      cfg.summary = 'Configuración de carpa plegable: ' + label('size', cfg.size, root) +
+        ', estructura: ' + label('frame', cfg.frame, root) +
+        ', color de la cubierta: ' + label('color', cfg.color, root) +
+        ', impresión: ' + label('print', cfg.print, root) +
+        ', accesorios: ' + label('accessory', cfg.accessory, root) +
+        '. SKU de referencia: ' + cfg.sku + '.';
+      return cfg;
+    }
     if (document.documentElement.lang === 'de') {
       cfg.summary =
         'Faltzelt-Konfiguration: ' + label('size', cfg.size, root) +
@@ -111,7 +125,7 @@
     var product = form.elements && form.elements.product;
     var message = form.elements && form.elements.message;
     if (product && !product.value.trim()) {
-      product.value = (document.documentElement.lang === 'de' ? 'Individuelles Faltzelt - ' : 'Custom canopy tent - ') + cfg.sku;
+      product.value = (document.documentElement.lang === 'de' ? 'Individuelles Faltzelt - ' : document.documentElement.lang === 'es' ? 'Carpa plegable personalizada - ' : 'Custom canopy tent - ') + cfg.sku;
     }
     if (message) {
       var current = String(message.value || '').trim();

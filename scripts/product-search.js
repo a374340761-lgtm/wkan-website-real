@@ -13,8 +13,9 @@ function score(product, query) {
 
     const identifiers = [product.model, product.sku, product.id].map(norm);
     const model = identifiers.join(' ');
-    const localized = typeof window.wkGermanText === 'function'
-        ? [product.nameEn, product.descriptionEn, product.category].map(window.wkGermanText).join(' ')
+    const localize = window.wkSpanishText || window.wkGermanText;
+    const localized = typeof localize === 'function'
+        ? [product.nameEn, product.descriptionEn, product.category].map(localize).join(' ')
         : '';
     const name = norm([product.nameEn, product.nameZh, product.name, localized].join(' '));
     const groups = (function walk(value) {

@@ -1,6 +1,6 @@
 (function () {
   const { pathname, search, hash } = window.location;
-  const legacy = pathname.match(/^\/(?:(zh|de)\/)?(?:news|seo|products)\/(tent-type|flag-type|furniture-type|product-center|product-detail)\.html$/);
+  const legacy = pathname.match(/^\/(?:(zh|de|es)\/)?(?:news|seo|products)\/(tent-type|flag-type|furniture-type|product-center|product-detail)\.html$/);
   if (legacy) {
     const [, language, page] = legacy;
     window.location.replace((language ? '/' + language : '') + '/' + page + '.html' + search + hash);
@@ -12,14 +12,14 @@
     return;
   }
 
-  const locale = pathname.match(/^\/(zh|de)(?:\/|$)/)?.[1];
+  const locale = pathname.match(/^\/(zh|de|es)(?:\/|$)/)?.[1];
   const errorPage = locale && '/' + locale + '/404.html';
   if (!errorPage || pathname === errorPage) return;
 
   fetch(errorPage).then(response => response.ok ? response.text() : '').then(html => {
     if (!html) return;
     const localized = new DOMParser().parseFromString(html, 'text/html');
-    const language = locale === 'zh' ? 'zh-CN' : 'de';
+    const language = locale === 'zh' ? 'zh-CN' : locale;
     if (localized.documentElement.lang !== language) return;
     document.documentElement.lang = language;
     document.title = localized.title;

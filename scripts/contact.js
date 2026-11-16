@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (/^\/zh(?:\/|$)/.test(path)) return zh;
     if (/^\/de(?:\/|$)/.test(path)) return de;
     if (/^\/es(?:\/|$)/.test(path) && typeof window.wkSpanishText === 'function') return window.wkSpanishText(en);
-    return en;
+    return window.wkLocaleText ? window.wkLocaleText(en) : en;
   }
 
   function prefillProductFromUrl() {

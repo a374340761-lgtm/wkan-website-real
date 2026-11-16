@@ -4,7 +4,7 @@
 const LANG_KEY = 'site_language';
 const DEFAULT_LANG = 'en';
 
-const ENABLED_LANGS = ['en', 'zh', 'de', 'es'];
+const ENABLED_LANGS = ['en', 'zh', 'de', 'es', 'fr', 'it', 'pt', 'nl', 'sv', 'da'];
 
 // ✅ 公司名（统一来源，避免在多个 HTML 写死）
 const COMPANY_NAME = {
@@ -24,6 +24,8 @@ function getLang() {
         if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
         if (p === '/de' || p.startsWith('/de/')) return 'de';
         if (p === '/es' || p.startsWith('/es/')) return 'es';
+        const extra = /^\/(fr|it|pt|nl|sv|da)(?:\/|$)/.exec(p);
+        if (extra) return extra[1];
     } catch (e2) {}
     return DEFAULT_LANG;
 }
@@ -3368,6 +3370,10 @@ class MultiLanguageSystem {
     }
     
     init() {
+        if (typeof window.wkLocaleMarkup === 'function') {
+            this.translations[getLang()] = Object.fromEntries(Object.entries(this.translations.en)
+                .map(([key, value]) => [key, window.wkLocaleMarkup(value)]));
+        }
         if (getLang() === 'es' && typeof window.wkSpanishMarkup === 'function') {
             this.translations.es = Object.fromEntries(Object.entries(this.translations.en)
                 .map(([key, value]) => [key, window.wkSpanishMarkup(value)]));
@@ -3444,6 +3450,7 @@ class MultiLanguageSystem {
         const elements = document.querySelectorAll('[data-translate], [data-i18n]');
         
         elements.forEach(element => {
+            if (element.hasAttribute('data-' + this.currentLanguage + '-static')) return;
             if (this.currentLanguage === 'de' && element.hasAttribute('data-de-static')) return;
             if (this.currentLanguage === 'es' && element.hasAttribute('data-es-static')) return;
             const key = element.dataset.translate || element.dataset.i18n;
@@ -3559,7 +3566,7 @@ class MultiLanguageSystem {
     }
     
     updateDocumentLanguage(lang) {
-        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang === 'pt' ? 'pt-BR' : lang;
 
         // 更新字体方向（如果需要）
         const rtlLanguages = ['ar', 'he', 'fa'];
@@ -3571,7 +3578,7 @@ class MultiLanguageSystem {
         document.body.classList.remove('lang-zh', 'lang-en', 'lang-de', 'lang-es');
         // 添加当前语言类
         document.body.classList.add(`lang-${lang}`);
-        if (lang === 'de' || lang === 'es') document.body.classList.add('lang-en');
+        if (lang !== 'zh' && lang !== 'en') document.body.classList.add('lang-en');
     }
     
     animateLanguageChange() {

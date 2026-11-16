@@ -617,10 +617,16 @@ for (const product of STATIC_PRODUCTS) {
     const rel = `${lang === 'zh' ? 'zh/' : ''}products/${product.slug}.html`;
     const dest = path.join(ROOT, rel);
     let output = appendReviewedStaticSpecs(page(product, lang), product, lang).replace(/[ \t]+$/gm, '');
-    const spanishPath = `products/${product.slug}.html`;
-    if (fs.existsSync(path.join(ROOT, 'es', spanishPath))) {
-      output = output.replace('</head>', `<link rel="alternate" hreflang="es" href="${ORIGIN}/es/${spanishPath}"/>\n</head>`);
-    }
+    const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/six-language-config.json'), 'utf8'));
+    const suffix = `products/${product.slug}.html`;
+    const locales = [['en', ''], ['zh-CN', 'zh'], ['de', 'de'], ['es', 'es'],
+      ...Object.entries(config.locales).map(([code, item]) => [item.hreflang, code])];
+    output = output.replace(/<link\b(?=[^>]*\brel=["']alternate["'])(?=[^>]*\bhreflang=)[^>]*>\s*/gi, '');
+    const tags = locales.filter(([, prefix]) => fs.existsSync(path.join(ROOT, prefix, suffix)))
+      .map(([language, prefix]) => `<link rel="alternate" hreflang="${language}" href="${ORIGIN}/${prefix ? prefix + '/' : ''}${suffix}"/>\n`).join('')
+      + `<link rel="alternate" hreflang="x-default" href="${ORIGIN}/${suffix}"/>\n`;
+    output = output.replace('</head>', tags + '</head>');
+    output = output.replace(/(scripts\/(?:bilingual-routing|multilang|products|all-products|cart|contact|customizer|product-search|seo)\.js)(?:\?v=[^"'\s<>]+)?/g, `$1?v=${config.version}`);
     if (check) {
       // Windows checkouts may use CRLF; compare generated content independently of line endings.
       if (!fs.existsSync(dest) || fs.readFileSync(dest, 'utf8').replace(/\r\n/g, '\n') !== output.replace(/\r\n/g, '\n')) {

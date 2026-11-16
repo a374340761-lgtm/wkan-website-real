@@ -598,7 +598,7 @@ def main():
     args = parser.parse_args()
     sources = {}
     for file in sorted(git_sources(), key=lambda value: value.startswith("zh/")):
-        if file.startswith(("de/", "es/")):
+        if file.startswith(("de/", "es/", "fr/", "it/", "pt/", "nl/", "sv/", "da/")):
             continue
         key = file.removeprefix("zh/")
         if not TECHNICAL.match(key) and key not in {"careers.html", "careers-submit-bridge.html"}:
@@ -635,7 +635,7 @@ def main():
     if args.release:
         locs = ElementTree.parse(ROOT / "sitemap.xml").findall(".//{*}loc")
         indexable = {root_file(urlsplit(loc.text).path) for loc in locs
-                     if not urlsplit(loc.text).path.startswith(("/zh/", "/de/", "/es/"))}
+                     if not urlsplit(loc.text).path.startswith(("/zh/", "/de/", "/es/", "/fr/", "/it/", "/pt/", "/nl/", "/sv/", "/da/"))}
         production_tracking = runpy.run_path(str(ROOT / "scripts/apply-google-tag-manager.py"))["expected"]
     for file, source in sources.items():
         soup = prepare_document(source, file, sources, indexable)

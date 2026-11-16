@@ -4012,6 +4012,7 @@ getProductIcon(category) {
 
     
     getLocalizedName(product) {
+        if (window.wkLocaleText) return window.wkLocaleText(product?.nameEn || product?.name || 'Product');
         if (this.currentLanguage === 'de' && window.wkGermanText) {
             return window.wkGermanText(product?.nameEn || product?.name || 'Product');
         }

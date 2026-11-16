@@ -360,6 +360,7 @@
             const lang = this.getLang();
             if (lang === 'zh') return item.nameZh || item.nameEn || '';
             const name = item.nameEn || item.nameZh || '';
+            if (window.wkLocaleText) return window.wkLocaleText(name);
             if (lang === 'es' && window.wkSpanishText) return window.wkSpanishText(name);
             return lang === 'de' && window.wkGermanText ? window.wkGermanText(name) : name;
         }

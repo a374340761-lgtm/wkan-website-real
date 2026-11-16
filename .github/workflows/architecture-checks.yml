@@ -38,6 +38,14 @@ jobs:
           node scripts/check-careers-apps-script.cjs
       - name: Validate architecture contracts
         run: node scripts/validate-architecture.mjs
+      - name: Validate six-language release artifacts
+        run: |
+          python -m pip install beautifulsoup4==4.15.0
+          python scripts/validate-six-language-sites.py
+          for locale in fr it pt nl sv da; do
+            node --check scripts/$locale-localization.js
+            node --check scripts/$locale-dictionary.js
+          done
       - name: Validate SEO and structured data
         run: |
           python scripts/build-specifications-library.py --check

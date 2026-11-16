@@ -7,6 +7,11 @@
 (function () {
   /** Always used for hreflang alternates (matches deployed SEO). */
   var PRODUCTION_ORIGIN = 'https://www.waikwantent.com';
+  var EXTRA_LOCALES = {fr: 'Français', it: 'Italiano', pt: 'Português', nl: 'Nederlands', sv: 'Svenska', da: 'Dansk'};
+  function extraLocale(path) {
+    var match = /^\/(fr|it|pt|nl|sv|da)(?:\/|$)/.exec(path);
+    return match ? match[1] : null;
+  }
 
   function isLocalDevHost() {
     var h = (window.location && window.location.hostname) || '';
@@ -155,7 +160,7 @@
   }
 
   function declaredAlternate(targetLang, sourceUrl) {
-    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de', es: 'es' }[targetLang];
+    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de', es: 'es', fr: 'fr', it: 'it', pt: 'pt-BR', nl: 'nl', sv: 'sv', da: 'da' }[targetLang];
     if (!hreflang) return null;
     var link = document.querySelector('link[rel="alternate"][hreflang="' + hreflang + '"]:not([data-wk-hreflang])');
     if (!link) return null;
@@ -166,7 +171,7 @@
       if (targetLang === 'de' && !isDePath(target.pathname)) return null;
       if (targetLang === 'es' && !isEsPath(target.pathname)) return null;
       if (targetLang === 'zh' && !isZhPath(target.pathname)) return null;
-      if (targetLang === 'en' && (isDePath(target.pathname) || isZhPath(target.pathname) || isEsPath(target.pathname))) return null;
+      if (targetLang === 'en' && (extraLocale(target.pathname) || isDePath(target.pathname) || isZhPath(target.pathname) || isEsPath(target.pathname))) return null;
       var targetKeys = new Set(target.searchParams.keys());
       source.searchParams.forEach(function (value, key) {
         if (!targetKeys.has(key)) target.searchParams.append(key, value);
@@ -207,6 +212,10 @@
   function getLocaleSwitchUrl(targetLang) {
     var pathname = normPath(window.location.pathname);
     var search = window.location.search || '';
+    if (EXTRA_LOCALES[targetLang] || extraLocale(pathname)) {
+      if (targetLang === extraLocale(pathname)) return null;
+      return declaredAlternate(targetLang, window.location.href);
+    }
 
     if (targetLang === 'de' || targetLang === 'es' || isDePath(pathname) || isEsPath(pathname)) {
       if ((targetLang === 'de' && isDePath(pathname)) || (targetLang === 'es' && isEsPath(pathname))) return null;
@@ -255,6 +264,7 @@
    */
   function localizedPageHref(href) {
     if (!href || typeof href !== 'string') return href;
+    if (extraLocale(window.location.pathname) && typeof window.wkLocaleLink === 'function') return window.wkLocaleLink(href);
     if (isDePath(window.location.pathname) && typeof window.wkGermanLink === 'function') {
       return window.wkGermanLink(href);
     }
@@ -301,7 +311,7 @@
         e.preventDefault();
         e.stopImmediatePropagation();
         try {
-          if (targetLang === 'en' || targetLang === 'zh' || targetLang === 'de' || targetLang === 'es') {
+          if (EXTRA_LOCALES[targetLang] || targetLang === 'en' || targetLang === 'zh' || targetLang === 'de' || targetLang === 'es') {
             localStorage.setItem('site_language', targetLang);
             localStorage.setItem('siteLanguage', targetLang);
           }
@@ -320,7 +330,7 @@
       const manifest = await response.json();
       if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
       const source = new URL(window.location.href);
-      const path = source.pathname.replace(/^\/(?:zh|de|es)(?=\/|$)/, '') || '/';
+      const path = source.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
       if (!manifest.paths.includes(path)) return;
       const href = '/de' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
       const menu = document.getElementById('langMenu');
@@ -350,7 +360,7 @@
       const manifest = await response.json();
       if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
       const source = new URL(window.location.href);
-      const path = source.pathname.replace(/^\/(?:zh|de|es)(?=\/|$)/, '') || '/';
+      const path = source.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
       if (!manifest.paths.includes(path)) return;
       const href = '/es' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
       const menu = document.getElementById('langMenu');
@@ -379,6 +389,7 @@
   }
 
   function injectHreflang() {
+    if (extraLocale(window.location.pathname)) return;
     if (isDePath(window.location.pathname) || isEsPath(window.location.pathname)) return;
     if (document.querySelector('link[rel="alternate"][hreflang="en"]:not([data-wk-hreflang])')) {
       removeOldHreflang();
@@ -478,17 +489,47 @@
       if (p === '/zh' || p.indexOf('/zh/') === 0) return 'zh';
       if (isDePath(p)) return 'de';
       if (isEsPath(p)) return 'es';
+      if (extraLocale(p)) return extraLocale(p);
     } catch (e) {}
     return 'en';
   };
 
   if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', attachExtraNavigation);
     document.addEventListener('DOMContentLoaded', attachLocaleNav);
     document.addEventListener('DOMContentLoaded', attachGermanNavigation);
     document.addEventListener('DOMContentLoaded', attachSpanishNavigation);
   } else {
+    attachExtraNavigation();
     attachLocaleNav();
     attachGermanNavigation();
     attachSpanishNavigation();
+  }
+
+  async function attachExtraNavigation() {
+    var menu = document.querySelector('#langMenu');
+    if (!menu) return;
+    await Promise.all(Object.keys(EXTRA_LOCALES).map(async function (locale) {
+      try {
+        var response = await fetch('/' + locale + '/locale-map.json', {cache: 'no-cache'});
+        if (!response.ok) return;
+        var manifest = await response.json();
+        var path = location.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
+        if (!manifest.enabled || !Array.isArray(manifest.paths) || !manifest.paths.includes(path)) return;
+        if (menu.querySelector('[data-lang="' + locale + '"]')) return;
+        var link = document.createElement('a');
+        link.className = 'lang-item';
+        link.dataset.lang = locale;
+        link.hreflang = manifest.hreflang || locale;
+        link.lang = link.hreflang;
+        link.href = '/' + locale + (path === '/index.html' ? '/' : path) + location.search + location.hash;
+        link.textContent = EXTRA_LOCALES[locale];
+        if (extraLocale(location.pathname) === locale) {
+          link.classList.add('active', 'is-active');
+          link.setAttribute('aria-current', 'page');
+        }
+        menu.appendChild(link);
+      } catch (error) { /* An unreleased locale cannot break existing navigation. */ }
+    }));
   }
 })();

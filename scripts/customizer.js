@@ -42,6 +42,7 @@
   }
 
   function label(group, key, root) {
+    if (window.wkLocaleText) return window.wkLocaleText((OPTIONS[group] && OPTIONS[group][key]) || key || '');
     if (document.documentElement.lang === 'es') {
       var spanishSelect = $('[name="customizer_' + group + '"]', root);
       if (spanishSelect && spanishSelect.selectedOptions[0]) return spanishSelect.selectedOptions[0].textContent.trim();

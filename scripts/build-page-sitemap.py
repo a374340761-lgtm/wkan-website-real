@@ -42,6 +42,8 @@ ALTERNATE_RE = re.compile(
 
 
 def expected_url(rel: str) -> str:
+    if re.fullmatch(r'(?:zh|de|es|fr|it|pt|nl|sv|da)/index.html', rel):
+        return ORIGIN + '/' + rel[:-10]
     if rel == "index.html":
         return ORIGIN + "/"
     if rel == "zh/index.html":
@@ -56,6 +58,8 @@ def expected_url(rel: str) -> str:
 def normalized_url(value: str) -> str:
     parts = urlsplit(html_lib.unescape(value.strip()))
     path = re.sub(r"/{2,}", "/", parts.path or "/")
+    if re.fullmatch(r'/(?:zh|de|es|fr|it|pt|nl|sv|da)/index.html', path):
+        path = path[:-10]
     if path == "/index.html":
         path = "/"
     elif path == "/zh/index.html":
@@ -147,7 +151,7 @@ def main() -> None:
             lines.append(f"    <lastmod>{page['lastmod']}</lastmod>")
         alternates = dict(page["alternates"])
         path = urlsplit(page["url"]).path
-        base = re.sub(r"^/(?:zh|de|es)(?=/)", "", path)
+        base = re.sub(r"^/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=/)", "", path)
         if base in german_pages:
             group = {"en": ORIGIN + base, "zh-CN": ORIGIN + "/zh" + base, "de": german_pages[base]}
             if group["en"] in canonical_urls:

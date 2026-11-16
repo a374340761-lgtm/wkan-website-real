@@ -1,0 +1,15 @@
+{
+  "version": "20261117-six-languages-r1",
+  "date": "2026-11-17",
+  "encoding": "UTF-8",
+  "routesPerLocale": 114,
+  "indexedPerLocale": 99,
+  "sitemapUrls": 949,
+  "browserScenarios": 12,
+  "staticValidation": "passed",
+  "regressions": "passed",
+  "submissionTest": "mocked; no production submission",
+  "nativeLanguageReview": false,
+  "pushed": false,
+  "deployed": false
+}

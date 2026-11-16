@@ -1,0 +1,122 @@
+[
+  {
+    "locale": "fr",
+    "width": 390,
+    "language": "fr",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "fr",
+    "width": 1440,
+    "language": "fr",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "it",
+    "width": 390,
+    "language": "it",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "it",
+    "width": 1440,
+    "language": "it",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "pt",
+    "width": 390,
+    "language": "pt-BR",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "pt",
+    "width": 1440,
+    "language": "pt-BR",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "nl",
+    "width": 390,
+    "language": "nl",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "nl",
+    "width": 1440,
+    "language": "nl",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "sv",
+    "width": 390,
+    "language": "sv",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "sv",
+    "width": 1440,
+    "language": "sv",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "da",
+    "width": 390,
+    "language": "da",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  },
+  {
+    "locale": "da",
+    "width": 1440,
+    "language": "da",
+    "homepageOverflow": false,
+    "search": true,
+    "form": "mock success",
+    "errors": [],
+    "missing": []
+  }
+]

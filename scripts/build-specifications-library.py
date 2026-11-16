@@ -59,9 +59,12 @@ for zh in [False,True]:
  footer=re.search(r'<section class="contact-bottom">.*?</section>',home,re.S).group(0)
  tail=template.split('</main>',1)[1]
  tail=tail.replace('</body>','<script src="/scripts/specifications-library.js?v=20261024"></script></body>')
- head=re.sub(r'<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\bhreflang=["\']es["\'])[^>]*>\s*','',head,flags=re.I)
- if (ROOT/'es/specifications-packing.html').is_file():
-  head=head.replace('</head>','<link rel="alternate" hreflang="es" href="'+ORIGIN+'/es/specifications-packing.html"/>\n</head>')
+ head=re.sub(r'<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\bhreflang=)[^>]*>\s*','',head,flags=re.I)
+ config=json.loads((ROOT/'scripts/six-language-config.json').read_text(encoding='utf-8'))
+ languages=[('en',''),('zh-CN','zh'),('de','de'),('es','es')]+[(item['hreflang'],code) for code,item in config['locales'].items()]
+ tags=''.join('<link rel="alternate" hreflang="'+lang+'" href="'+ORIGIN+'/'+(code+'/' if code else '')+'specifications-packing.html"/>\n' for lang,code in languages if (ROOT/code/'specifications-packing.html').is_file())
+ tags+='<link rel="alternate" hreflang="x-default" href="'+ORIGIN+'/specifications-packing.html"/>\n'
+ head=head.replace('</head>',tags+'</head>')
  save(('zh/' if zh else '')+'specifications-packing.html',head+body+footer+'</main>'+tail)
 for language in ['', 'zh/']:
  for name in ['all-products.html','product-center.html']:

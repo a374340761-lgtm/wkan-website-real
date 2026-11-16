@@ -7,7 +7,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const origin = 'https://www.waikwantent.com';
 const read = file => fs.readFileSync(new URL(file, import.meta.url), 'utf8');
 const files = execFileSync('git', ['ls-files', '-z', '--', '*.html'], { cwd: root, encoding: 'utf8' })
-  .split('\0').filter(file => file && !file.startsWith('de/'));
+  .split('\0').filter(file => file && !/^(?:de|es|fr|it|pt|nl|sv|da)\//.test(file));
 
 function sitemapPaths(xml) {
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(([, loc]) => new URL(loc).pathname).sort();

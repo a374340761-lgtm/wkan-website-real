@@ -13,7 +13,7 @@ function score(product, query) {
 
     const identifiers = [product.model, product.sku, product.id].map(norm);
     const model = identifiers.join(' ');
-    const localize = window.wkSpanishText || window.wkGermanText;
+    const localize = window.wkLocaleText || window.wkSpanishText || window.wkGermanText;
     const localized = typeof localize === 'function'
         ? [product.nameEn, product.descriptionEn, product.category].map(localize).join(' ')
         : '';

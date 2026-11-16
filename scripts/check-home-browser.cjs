@@ -34,7 +34,7 @@ const server = http.createServer((req, res) => {
         const active = page.locator('#heroSlider .is-active');
         assert.equal(await active.locator('[data-translate="home_hero_0_title"]').count(), 1);
         assert.ok(await active.locator('.wk-hero-bg').evaluate(e => getComputedStyle(e).backgroundImage.includes('canton-fair-140-phase-3-2026-waikwan-')));
-        const expectedHero = `canton-fair-140-phase-3-2026-waikwan-${width < 768 ? 768 : 1536}.webp`;
+        const expectedHero = `canton-fair-140-phase-3-2026-waikwan-${width < 768 ? 768 : 1536}-hq.webp`;
         assert.ok(await active.locator('.wk-hero-bg').evaluate((e, file) => getComputedStyle(e).backgroundImage.includes(file), expectedHero));
         const heroResources = await page.evaluate(() => performance.getEntriesByType('resource').filter(r => r.name.includes('canton-fair-140-phase-3-2026-waikwan')).map(r => r.name));
         assert.equal(heroResources.length, 1, 'Only the matching hero variant loads');

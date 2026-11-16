@@ -13,7 +13,7 @@ for old, new in [('German', 'Spanish'), ('german', 'spanish'), ('/de', '/es'),
                  ('"de"', '"es"'), ('de/', 'es/'), ('data-de-static', 'data-es-static'),
                  ('WK_DE_', 'WK_ES_'), ('en_de', 'en_es')]:
     source = source.replace(old, new)
-source = source.replace('file.startswith(("es/", "es/"))', 'file.startswith(("de/", "es/"))')
+source = source.replace('file.startswith(("es/", "es/",', 'file.startswith(("de/", "es/",')
 source = source.replace('"/zh/", "/es/", "/es/"', '"/zh/", "/de/", "/es/"')
 source = source.replace('inter_threads=2, intra_threads=2', 'inter_threads=2, intra_threads=4')
 pipeline = {'__name__': 'spanish_pipeline', '__file__': __file__}

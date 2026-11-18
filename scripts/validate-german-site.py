@@ -10,6 +10,7 @@ from urllib.parse import unquote, urljoin, urlsplit
 from xml.etree import ElementTree
 
 ROOT = Path(__file__).resolve().parents[1]
+EXTRA_LOCALES = json.loads((ROOT / "scripts/six-language-config.json").read_text(encoding="utf-8"))["locales"]
 ORIGIN = "https://www.waikwantent.com"
 INTERNAL = re.compile(r"^(?:outputs/|google[a-f\d]+\.html$|index\.(?:original|wireframe)\.html$|test_|careers(?:-submit-bridge)?\.html$)")
 CJK = re.compile(r"[\u3400-\u9fff]")
@@ -55,7 +56,7 @@ def source_routes():
     tracked = subprocess.check_output(["git", "ls-files", "-z", "--", "*.html"], cwd=ROOT).decode("utf-8")
     return {
         file.removeprefix("zh/") for file in tracked.rstrip("\0").split("\0")
-        if file and not file.startswith(("de/", "es/", "fr/", "it/", "pt/", "nl/", "sv/", "da/")) and not INTERNAL.match(file.removeprefix("zh/"))
+        if file and file.split("/", 1)[0] not in {'de', 'es', *EXTRA_LOCALES} and not INTERNAL.match(file.removeprefix("zh/"))
     }
 
 

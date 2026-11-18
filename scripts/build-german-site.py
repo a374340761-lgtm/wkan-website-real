@@ -597,8 +597,9 @@ def main():
     parser.add_argument("--release", action="store_true", help="Enable the reviewed release and indexable routes.")
     args = parser.parse_args()
     sources = {}
+    extra_locales = json.loads((ROOT / "scripts/six-language-config.json").read_text(encoding="utf-8"))["locales"]
     for file in sorted(git_sources(), key=lambda value: value.startswith("zh/")):
-        if file.startswith(("de/", "es/", "fr/", "it/", "pt/", "nl/", "sv/", "da/")):
+        if file.split("/", 1)[0] in {'de', 'es', *extra_locales}:
             continue
         key = file.removeprefix("zh/")
         if not TECHNICAL.match(key) and key not in {"careers.html", "careers-submit-bridge.html"}:

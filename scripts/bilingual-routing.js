@@ -7,9 +7,9 @@
 (function () {
   /** Always used for hreflang alternates (matches deployed SEO). */
   var PRODUCTION_ORIGIN = 'https://www.waikwantent.com';
-  var EXTRA_LOCALES = {fr: 'Français', it: 'Italiano', pt: 'Português', nl: 'Nederlands', sv: 'Svenska', da: 'Dansk'};
+  var EXTRA_LOCALES = {fr: 'Français', it: 'Italiano', pt: 'Português', nl: 'Nederlands', sv: 'Svenska', da: 'Dansk', ru: 'Русский'};
   function extraLocale(path) {
-    var match = /^\/(fr|it|pt|nl|sv|da)(?:\/|$)/.exec(path);
+    var match = /^\/(fr|it|pt|nl|sv|da|ru)(?:\/|$)/.exec(path);
     return match ? match[1] : null;
   }
 
@@ -37,6 +37,7 @@
     '/careers.html': true,
     '/export-loading.html': true,
     '/products/curved-fabric-banner-stand.html': true,
+    '/manufacturing-capabilities.html': true,
     '/products/3x3-standard-black-flat-tube-canopy-frame.html': true,
     '/all-products.html': true,
     '/10x10-pop-up-canopy-tent.html': true,
@@ -160,7 +161,7 @@
   }
 
   function declaredAlternate(targetLang, sourceUrl) {
-    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de', es: 'es', fr: 'fr', it: 'it', pt: 'pt-BR', nl: 'nl', sv: 'sv', da: 'da' }[targetLang];
+    var hreflang = { en: 'en', zh: 'zh-CN', de: 'de', es: 'es', fr: 'fr', it: 'it', pt: 'pt-BR', nl: 'nl', sv: 'sv', da: 'da', ru: 'ru' }[targetLang];
     if (!hreflang) return null;
     var link = document.querySelector('link[rel="alternate"][hreflang="' + hreflang + '"]:not([data-wk-hreflang])');
     if (!link) return null;
@@ -330,7 +331,7 @@
       const manifest = await response.json();
       if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
       const source = new URL(window.location.href);
-      const path = source.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
+      const path = source.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da|ru)(?=\/|$)/, '') || '/';
       if (!manifest.paths.includes(path)) return;
       const href = '/de' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
       const menu = document.getElementById('langMenu');
@@ -360,7 +361,7 @@
       const manifest = await response.json();
       if (!manifest.enabled || !Array.isArray(manifest.paths)) return;
       const source = new URL(window.location.href);
-      const path = source.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
+      const path = source.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da|ru)(?=\/|$)/, '') || '/';
       if (!manifest.paths.includes(path)) return;
       const href = '/es' + (path === '/index.html' ? '/' : path) + source.search + source.hash;
       const menu = document.getElementById('langMenu');
@@ -514,7 +515,7 @@
         var response = await fetch('/' + locale + '/locale-map.json', {cache: 'no-cache'});
         if (!response.ok) return;
         var manifest = await response.json();
-        var path = location.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
+        var path = location.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da|ru)(?=\/|$)/, '') || '/';
         if (!manifest.enabled || !Array.isArray(manifest.paths) || !manifest.paths.includes(path)) return;
         if (menu.querySelector('[data-lang="' + locale + '"]')) return;
         var link = document.createElement('a');

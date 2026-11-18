@@ -46,7 +46,7 @@ def validate():
             if not soup.html or soup.html.get('lang') != config['hreflang']:
                 errors.append(f'{page.relative_to(ROOT)}: incorrect HTML language')
             path = '/' + page.relative_to(ROOT).as_posix()
-            url = ORIGIN + (path[:-10] if re.fullmatch(r'/(?:fr|it|pt|nl|sv|da)/index.html', path) else path)
+            url = ORIGIN + (path[:-10] if re.fullmatch(r'/(?:fr|it|pt|nl|sv|da|ru)/index.html', path) else path)
             robots = soup.select_one('meta[name="robots"]')
             if robots and 'noindex' not in robots.get('content', ''):
                 canonical = soup.select_one('link[rel="canonical"]')

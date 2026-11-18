@@ -4,7 +4,7 @@
 const LANG_KEY = 'site_language';
 const DEFAULT_LANG = 'en';
 
-const ENABLED_LANGS = ['en', 'zh', 'de', 'es', 'fr', 'it', 'pt', 'nl', 'sv', 'da'];
+const ENABLED_LANGS = ['en', 'zh', 'de', 'es', 'fr', 'it', 'pt', 'nl', 'sv', 'da', 'ru'];
 
 // ✅ 公司名（统一来源，避免在多个 HTML 写死）
 const COMPANY_NAME = {
@@ -24,7 +24,7 @@ function getLang() {
         if (p === '/zh' || p.startsWith('/zh/')) return 'zh';
         if (p === '/de' || p.startsWith('/de/')) return 'de';
         if (p === '/es' || p.startsWith('/es/')) return 'es';
-        const extra = /^\/(fr|it|pt|nl|sv|da)(?:\/|$)/.exec(p);
+        const extra = /^\/(fr|it|pt|nl|sv|da|ru)(?:\/|$)/.exec(p);
         if (extra) return extra[1];
     } catch (e2) {}
     return DEFAULT_LANG;

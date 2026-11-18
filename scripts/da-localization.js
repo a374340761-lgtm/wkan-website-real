@@ -37,7 +37,7 @@
       const url = new URL(value, location.href);
       if (url.origin !== location.origin && url.origin !== 'https://www.waikwantent.com') return value;
       if (/^\/da(?:\/|$)/.test(url.pathname)) return value;
-      const path = url.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da)(?=\/|$)/, '') || '/';
+      const path = url.pathname.replace(/^\/(?:zh|de|es|fr|it|pt|nl|sv|da|ru)(?=\/|$)/, '') || '/';
       if (path === '/careers.html') return '/zh/careers.html' + url.search + url.hash;
       return routes.has(path) ? '/da' + path + url.search + url.hash : value;
     } catch {

@@ -27,7 +27,7 @@ def write(page, text):
 
 def url(page):
     path = '/' + page.relative_to(ROOT).as_posix()
-    return ORIGIN + (path[:-10] if re.fullmatch(r'/(?:zh|de|es|fr|it|pt|nl|sv|da)/index.html', path) else '/' if path == '/index.html' else path)
+    return ORIGIN + (path[:-10] if re.fullmatch(r'/(?:zh|de|es|fr|it|pt|nl|sv|da|ru)/index.html', path) else '/' if path == '/index.html' else path)
 
 
 def sync():

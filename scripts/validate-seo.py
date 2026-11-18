@@ -55,7 +55,7 @@ def collect_types(node, output: list[str]) -> None:
 
 
 def expected_url(rel: str) -> str:
-    if re.fullmatch(r'(?:zh|de|es|fr|it|pt|nl|sv|da)/index.html', rel):
+    if re.fullmatch(r'(?:zh|de|es|fr|it|pt|nl|sv|da|ru)/index.html', rel):
         return ORIGIN + '/' + rel[:-10]
     if rel == "index.html":
         return ORIGIN + "/"

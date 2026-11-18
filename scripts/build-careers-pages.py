@@ -46,7 +46,12 @@ body='''<main class="careers-layout"><article class="careers-page" lang="zh-CN">
 for zh in [False,True]:
  prefix='/zh/' if zh else '/';p=Path('zh/careers.html' if zh else 'careers.html');template=Path('zh/export-loading.html' if zh else 'export-loading.html').read_text(encoding='utf-8');head=template.split('<main>')[0]
  head=re.sub(r'<script type="application/ld\+json"[^>]*>.*?</script>','',head,flags=re.S).replace('export-loading.html','careers.html').replace('/styles/export-loading.css?v=20261020','/styles/careers.css?v=20261020-footer')
- title='加入我们 Careers｜外贸销售招聘问卷｜伟群帐篷';desc='伟群海外销售业务团队招聘外贸销售，经验不限。了解岗位、汇报关系、薪酬预期与产品学习要求，填写中文招聘问卷。'
+ title='外贸销售招聘问卷｜伟群帐篷' if zh else 'International Sales Careers | WaiKwan Tent'
+ desc='伟群海外销售业务团队招聘外贸销售，经验不限。了解岗位、汇报关系、薪酬预期与产品学习要求，填写中文招聘问卷。'
+ head=re.sub(r'<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\bhreflang=)[^>]*>\s*', '', head, flags=re.I)
+ alternates={'en':'/careers.html','zh-CN':'/zh/careers.html','x-default':'/careers.html'}
+ tags=''.join(f'<link rel="alternate" hreflang="{lang}" href="https://www.waikwantent.com{route}"/>\n' for lang,route in alternates.items())
+ head=head.replace('</head>', tags+'</head>')
  head=re.sub(r'<title>.*?</title>','<title>'+title+'</title>',head,flags=re.S)
  for attr,key,value in [('name','description',desc),('property','og:title',title),('property','og:description',desc),('name','twitter:title',title),('name','twitter:description',desc)]:head=re.sub(r'(<meta '+attr+'="'+re.escape(key)+'" content=")[^"]*',lambda m:m[1]+html.escape(value,quote=True),head)
  head=re.sub(r'(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*',r'\1https://www.waikwantent.com/images/waikwancompanylogo.png',head)
@@ -58,5 +63,7 @@ for zh in [False,True]:
  scripts='''<script src="/scripts/bilingual-routing.js?v=20261108-german-menu" defer></script><script src="/scripts/cart.js"></script><script src="/scripts/tent-types.js"></script><script src="/scripts/main.js?v=20261112-inflatable-r1"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/careers-config.js?v=20261020-sheets-r2"></script><script src="/scripts/careers-assessment.js?v=20261020-age"></script><script src="/scripts/careers.js?v=20261024-audit"></script>'''
  # The head already supplies routing; do not initialize it twice.
  scripts=scripts.replace('<script src="/scripts/bilingual-routing.js?v=20261108-german-menu" defer></script>','')
+ release=json.loads(Path('scripts/six-language-config.json').read_text(encoding='utf-8'))['version']
+ scripts=re.sub(r'(/scripts/(?:cart|multilang)\.js)(?:\?v=[^"]+)?', lambda match:match[1]+'?v='+release, scripts)
  save(p,head+body.replace('{prefix}',prefix)+footer+'</main>'+scripts+'</body></html>\n')
 print('OK: careers pages and public question schema are current.' if CHECK else 'Generated Chinese-first EN/ZH careers pages and public question schema.')

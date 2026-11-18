@@ -71,6 +71,7 @@ def build(locale, models, cache, release):
         'pt': ['Início','Produtos','Todos os produtos','Sobre nós','Contato','Solicitar orçamento','Enviar consulta','Pesquisar','Filtrar','Redefinir','Especificações técnicas','Downloads','Política de privacidade','Termos de uso','Adicionar à lista de orçamento','Produto não encontrado','Tendas dobráveis','Bandeiras publicitárias','Sistemas de exposição','Acessórios'],
         'nl': ['Home','Producten','Alle producten','Over ons','Contact','Offerte aanvragen','Aanvraag verzenden','Zoeken','Filteren','Resetten','Technische specificaties','Downloads','Privacybeleid','Gebruiksvoorwaarden','Toevoegen aan offertelijst','Product niet gevonden','Vouwtenten','Beachflags','Presentatiesystemen','Accessoires'],
         'sv': ['Hem','Produkter','Alla produkter','Om oss','Kontakt','Begär offert','Skicka förfrågan','Sök','Filtrera','Återställ','Tekniska specifikationer','Nedladdningar','Integritetspolicy','Användarvillkor','Lägg till i offertlistan','Produkten hittades inte','Hopfällbara tält','Beachflaggor','Displaysystem','Tillbehör'],
+        'ru': ['Главная','Продукция','Все товары','О компании','Контакты','Запросить цену','Отправить запрос','Поиск','Фильтр','Сбросить','Характеристики','Загрузки','Политика конфиденциальности','Условия использования','Добавить в запрос','Товар не найден','Складные шатры','Рекламные флаги','Выставочные системы','Аксессуары'],
         'da': ['Forside','Produkter','Alle produkter','Om os','Kontakt','Anmod om tilbud','Send forespørgsel','Søg','Filtrer','Nulstil','Tekniske specifikationer','Downloads','Privatlivspolitik','Brugsvilkår','Tilføj til tilbudslisten','Produktet blev ikke fundet','Foldetelte','Beachflag','Displaysystemer','Tilbehør'],
     }
     pipeline['GLOSSARY'].update(zip(labels, authored[locale]))
@@ -81,13 +82,13 @@ def build(locale, models, cache, release):
     pipeline['GLOSSARY']['Frame / hardware material'] = {
         'fr': 'Matériau du cadre et des accessoires', 'it': 'Materiale del telaio e degli accessori',
         'pt': 'Material da estrutura e dos acessórios', 'nl': 'Materiaal van frame en onderdelen',
-        'sv': 'Material i ram och beslag', 'da': 'Materiale til stel og beslag'}[locale]
+        'sv': 'Material i ram och beslag', 'da': 'Materiale til stel og beslag', 'ru': 'Материал каркаса и комплектующих'}[locale]
     for label in ['English', 'Deutsch', 'Español', 'Français', 'Italiano', 'Português', 'Nederlands', 'Svenska', 'Dansk', '简体中文', '中文']:
         pipeline['GLOSSARY'][label] = label
     pipeline['GLOSSARY']['Guangxi WaiKwan Tent Manufacturing Co., Ltd.'] = 'Guangxi WaiKwan Tent Manufacturing Co., Ltd.'
     pipeline['GLOSSARY']['与'], pipeline['GLOSSARY']['或'] = {
         'fr': ('et', 'ou'), 'it': ('e', 'o'), 'pt': ('e', 'ou'),
-        'nl': ('en', 'of'), 'sv': ('och', 'eller'), 'da': ('og', 'eller')}[locale]
+        'nl': ('en', 'of'), 'sv': ('och', 'eller'), 'da': ('og', 'eller'), 'ru': ('и', 'или')}[locale]
     pipeline['HEADINGS'] = {}
     pipeline['SEO_HEADINGS'] = {}
     pipeline['TERMS'] = {}
@@ -177,7 +178,7 @@ def build(locale, models, cache, release):
     runtime = runtime.replace('Spanish', 'Locale').replace('spanish', 'locale')
     runtime = runtime.replace('/es', '/' + locale).replace(r'\/es', r'\/' + locale).replace('WK_ES_', 'WK_' + locale.upper() + '_')
     runtime = runtime.replace('data-es-static', 'data-' + locale + '-static')
-    runtime = runtime.replace('(?:zh|de)', '(?:zh|de|es|fr|it|pt|nl|sv|da)')
+    runtime = runtime.replace('(?:zh|de)', '(?:zh|de|es|fr|it|pt|nl|sv|da|ru)')
     (ROOT / 'scripts' / (locale + '-localization.js')).write_text(runtime, encoding='utf-8')
     sys.argv = [__file__, '--models', str(models), '--cache', str(cache)] + (['--release'] if release else [])
     pipeline['main']()

@@ -1,5 +1,5 @@
 {
-  "version": "20261117-six-languages-r1",
+  "version": "20261118-russian-r1",
   "encoding": "UTF-8",
   "locales": {
     "fr": {"label": "Français", "hreflang": "fr", "region": "fr-FR"},
@@ -7,6 +7,7 @@
     "pt": {"label": "Português", "hreflang": "pt-BR", "region": "pt-BR"},
     "nl": {"label": "Nederlands", "hreflang": "nl", "region": "nl-NL"},
     "sv": {"label": "Svenska", "hreflang": "sv", "region": "sv-SE"},
-    "da": {"label": "Dansk", "hreflang": "da", "region": "da-DK"}
+    "da": {"label": "Dansk", "hreflang": "da", "region": "da-DK"},
+    "ru": {"label": "Русский", "hreflang": "ru", "region": "ru-RU"}
   }
 }

@@ -157,6 +157,13 @@
                     CATALOG_PAGE(5)
                 ],
                 heroImage: 'images/products/tents/folding40/40mm-hexagon-aluminum-frame-3x6-pop-up-canopy-tent.png',
+                introductionPhoto: {
+                    src: 'images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-standard-canopy-workshop.webp',
+                    alt: 'Standard 40 mm hexagonal aluminum 3 × 6 m canopy in the workshop',
+                    altZh: '40 mm 六角铝合金常规款 3×6 m 帐篷车间实拍',
+                    subtitleEn: 'Standard 40 mm 3 × 6 m canopy — workshop photo',
+                    subtitleZh: '40 mm 常规款 3×6 m · 车间实拍'
+                },
                 detailPhotos: [
     {
         "src": "images/products/tents/folding40/3x6m-canopy-details/40mm-aluminum-3x6m-canopy-overview.jpg",
@@ -246,15 +253,31 @@
                 ],
                 heroImage: 'images/products/tents/folding50/50mm-hexagon-aluminum-frame-canopy-tent-2d-layout-hero.png',
                 introductionPhoto: {
-                    src: 'images/products/tents/folding50/wk-t50d-50mm-aluminum-3x6m-pop-up-canopy-tent-frame-workshop.jpg',
-                    alt: 'WK-T50D 50mm aluminum 3x6m pop up canopy tent frame assembled in WaiKwan factory workshop',
-                    subtitleEn: 'WK-T50D 3 × 6 m — factory workshop',
-                    subtitleZh: 'WK-T50D 3×6 m · 车间实拍',
-                    captionEn:
-                        'WK-T50D is the 3×6 m pop up canopy tent in our 50 mm aluminum hex series: a heavy duty aluminum tent frame assembled at WaiKwan’s workshop before canopy fitting and optional custom printed canopy graphics—part of our OEM canopy tent manufacturing program for branded outdoor displays.',
-                    captionZh:
-                        'WK-T50D 为 3×6 m 规格的 50 mm 六角铝合金重型折叠篷架，车间实拍展示组装状态；可配套定制印刷篷顶与全套 OEM 外贸出货方案。'
+                    src: 'images/products/tents/folding50/3x6m-heavy-duty/showroom.webp',
+                    alt: 'Assembled white 3 × 6 m canopy with a 50 mm hexagonal aluminum frame',
+                    altZh: '50 mm 六角铝合金架搭配白色顶篷的 3×6 m 帐篷全景',
+                    subtitleEn: '50 mm hexagonal aluminum canopy · 1.7 mm wall · 3 × 6 m',
+                    subtitleZh: '50 mm 六角铝合金帐篷 · 1.7 mm 重料 · 3×6 m'
                 },
+                detailVideo: 'videos/50mm-heavy-duty-3x6m-canopy.mp4',
+                detailPhotos: [
+                    ['front-corner', '正面斜角全景', 'Front corner view'],
+                    ['side-corner', '侧面斜角全景', 'Side corner view'],
+                    ['canopy-edge', '顶篷侧边', 'Canopy side edge'],
+                    ['roof-seam', '篷布角部缝线', 'Canopy corner seam'],
+                    ['interior', '篷下框架', 'Under-canopy frame'],
+                    ['roof-supports', '顶篷支撑杆', 'Roof support poles'],
+                    ['truss-layout', '内部交叉架布局', 'Interior scissor truss layout'],
+                    ['roof-ridge', '篷顶内侧与中撑', 'Roof underside and center supports'],
+                    ['leg-joint', '立柱与横杆连接件', 'Leg and truss brackets'],
+                    ['peak-cap', '顶杆与篷布接触点', 'Peak pole contact with the canopy'],
+                    ['spring', '中撑弹簧近照', 'Center support spring close-up'],
+                    ['scissor-joint', '交叉杆连接件', 'Scissor bar connector'],
+                    ['spring-truss', '弹簧与交叉架连接', 'Spring and scissor truss assembly']
+                ].map(([name, captionZh, captionEn]) => {
+                    const base = `images/products/tents/folding50/3x6m-heavy-duty/${name}`;
+                    return { src: `${base}.webp`, thumb: `${base}-thumb.webp`, captionZh, captionEn };
+                }),
                 pdfPage: 5
             }
         ],

@@ -819,7 +819,7 @@
     if (!p || !p.src) return '';
     const lang = getCurrentLang();
     const src = wkAssetUrl(p.src);
-    const alt = safe(p.alt || '');
+    const alt = safe((lang === 'zh' && p.altZh) || p.alt || '');
     const subtitle =
       lang === 'zh'
         ? safe(p.subtitleZh || p.subtitleEn || '')
@@ -857,11 +857,20 @@
   function renderDetailPhotos(item) {
     if (!Array.isArray(item.detailPhotos) || !item.detailPhotos.length) return '';
     const zh = getCurrentLang() === 'zh';
+    const heavy = item.type === 'folding50';
+    const heading = heavy
+      ? (zh ? '50 mm 六角铝帐篷 · 1.7 mm 重料 · 3×6 m 细节' : '50 mm hexagonal aluminum canopy · 1.7 mm wall · 3 × 6 m details')
+      : (zh ? '40 mm 铝帐篷 · 3×6 m 带顶篷实拍细节' : '40 mm aluminum tent · 3 × 6 m canopy details');
+    const videoLabel = zh ? '50 mm 重料帐篷实拍视频' : '50 mm heavy-duty canopy video';
+    const description = heavy
+      ? (zh ? '实拍展示整帐、篷布缝线、立柱连接件和内部交叉架。' : 'See the assembled canopy, roof seams, leg brackets and interior scissor trusses.')
+      : (zh ? '本组照片展示 3×6 m 带顶篷样品、立柱底脚、高度调节件、内部交叉支架与篷布固定方式。侧墙和配套件以询价确认配置为准。' : 'These photos show a 3 × 6 m canopy sample, upright feet, height adjustment, interior scissor frame and fabric attachments. Confirm sidewalls and included accessories in your quotation.');
     return `<section id="canopy-3x6-details" class="tent-type-detail__block" style="scroll-margin-top:130px">
-      <h2>${zh ? '40 mm 铝帐篷 · 3×6 m 带顶篷实拍细节' : '40 mm aluminum tent · 3 × 6 m canopy details'}</h2>
-      <p>${zh ? '本组照片展示 3×6 m 带顶篷样品、立柱底脚、高度调节件、内部交叉支架与篷布固定方式。侧墙和配套件以询价确认配置为准。' : 'These photos show a 3 × 6 m canopy sample, upright feet, height adjustment, interior scissor frame and fabric attachments. Confirm sidewalls and included accessories in your quotation.'}</p>
-      <div class="tent-type-detail__visuals">${item.detailPhotos.map(p => { const caption = safe(zh ? p.captionZh : p.captionEn); const src = wkAssetUrl(p.src); return `<figure style="margin:0;min-width:0"><a href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${caption}" loading="lazy" decoding="async" style="width:100%;height:320px;object-fit:contain" /></a><figcaption>${caption}</figcaption></figure>`; }).join('')}</div>
-      <p><a href="product-detail.html?id=2002">${zh ? '查看 40 mm 系列规格与询价' : 'View 40 mm series specifications and request a quote'}</a> · <a href="tent-type.html">${zh ? '比较折叠帐篷系列' : 'Compare folding canopy series'}</a></p>
+      <h2>${heading}</h2>
+      <p>${description}</p>
+      ${item.detailVideo ? `<video src="${wkAssetUrl(item.detailVideo)}" controls playsinline preload="none" aria-label="${videoLabel}" style="display:block;width:100%;max-width:720px;max-height:540px;background:#111;margin:0 auto 1rem"></video>` : ''}
+      <div class="tent-type-detail__visuals">${item.detailPhotos.map(p => { const caption = safe(zh ? p.captionZh : p.captionEn); const src = wkAssetUrl(p.src); return `<figure style="margin:0;min-width:0"><a href="${src}" target="_blank" rel="noopener"><img src="${wkAssetUrl(p.thumb || p.src)}" alt="${caption}" loading="lazy" decoding="async" style="width:100%;height:${heavy ? 'clamp(140px,44vw,230px)' : '320px'};object-fit:contain" /></a><figcaption>${caption}</figcaption></figure>`; }).join('')}</div>
+      <p><a href="/${zh ? 'zh/' : ''}product-detail.html?sku=${heavy ? '2003' : '2002'}">${zh ? '查看系列规格与询价' : 'View series specifications and request a quote'}</a> · <a href="tent-type.html">${zh ? '比较折叠帐篷系列' : 'Compare folding canopy series'}</a></p>
     </section>`;
   }
 
@@ -877,7 +886,7 @@
       <div class="tent-type-detail__block">
         <div class="tent-type-detail__blockTitle">${title}</div>
         ${introPhoto}
-        ${item.detailPhotos ? `<p><a href="#canopy-3x6-details">${lang === 'zh' ? '查看 3×6 m 带顶篷实拍细节（8 张）' : 'View 3 × 6 m canopy details (8 photos)'}</a></p>` : ''}
+        ${item.detailPhotos ? `<p><a href="#canopy-3x6-details">${lang === 'zh' ? '查看 3×6 m 帐篷实拍细节' : 'View 3 × 6 m canopy detail photos'}</a></p>` : ''}
         ${renderDetailPhotos(item)}
         ${lang === 'zh'
           ? `

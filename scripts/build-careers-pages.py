@@ -47,7 +47,7 @@ for zh in [False,True]:
  prefix='/zh/' if zh else '/';p=Path('zh/careers.html' if zh else 'careers.html');template=Path('zh/export-loading.html' if zh else 'export-loading.html').read_text(encoding='utf-8');head=template.split('<main>')[0]
  head=re.sub(r'<script type="application/ld\+json"[^>]*>.*?</script>','',head,flags=re.S).replace('export-loading.html','careers.html').replace('/styles/export-loading.css?v=20261020','/styles/careers.css?v=20261020-footer')
  title='外贸销售招聘问卷｜伟群帐篷' if zh else 'International Sales Careers | WaiKwan Tent'
- desc='伟群海外销售业务团队招聘外贸销售，经验不限。了解岗位、汇报关系、薪酬预期与产品学习要求，填写中文招聘问卷。'
+ desc='伟群海外销售业务团队招聘外贸销售，经验不限。了解岗位、汇报关系、薪酬预期与产品学习要求，填写中文招聘问卷。' if zh else 'Apply for an international sales role at WaiKwan. Review the reporting structure, product training expectations and application questionnaire.'
  head=re.sub(r'<link\b(?=[^>]*\brel=["\']alternate["\'])(?=[^>]*\bhreflang=)[^>]*>\s*', '', head, flags=re.I)
  alternates={'en':'/careers.html','zh-CN':'/zh/careers.html','x-default':'/careers.html'}
  tags=''.join(f'<link rel="alternate" hreflang="{lang}" href="https://www.waikwantent.com{route}"/>\n' for lang,route in alternates.items())

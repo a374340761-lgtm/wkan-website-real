@@ -42,7 +42,7 @@ function loadProductManager() {
   if (!pm || !Array.isArray(pm.products)) {
     throw new Error('productManager.products not available after loading products.js');
   }
-  return pm;
+  return { pm, staticSlugs: ctx.window.WK_STATIC_PRODUCT_SLUGS };
 }
 
 function rootAssetAbs(rel) {
@@ -216,7 +216,29 @@ function writeProductOutputs(pm) {
   console.log(`Wrote scripts/product-seo-map.js (${Object.keys(map).length} SKUs) — no product-sitemap.xml stub URL`);
 }
 
-maybeMigrateSitemapIndex();
-const pm = loadProductManager();
-writeProductOutputs(pm);
-console.log('Done.');
+const { pm, staticSlugs } = loadProductManager();
+const edgePath = path.join(ROOT, 'deploy/product-redirects/catalog.mjs');
+const routes = Object.fromEntries(Object.entries(staticSlugs).map(([sku, slug]) => {
+  for (const locale of ['', 'zh']) {
+    if (!fs.existsSync(path.join(ROOT, locale, 'products', slug + '.html'))) {
+      throw new Error(`Missing static destination for ${sku}: ${locale}/products/${slug}.html`);
+    }
+  }
+  return [sku.toLowerCase(), slug];
+}));
+const accepted = [...new Set(pm.products.flatMap(product => [
+  String(product.sku || '').trim(), String(product.id),
+]).concat(Object.keys(LEGACY_MERGED)))].filter(Boolean).sort();
+const manifest = `export const staticProducts = ${JSON.stringify(routes)};\nexport const acceptedSkus = ${JSON.stringify(accepted)};\n`;
+if (process.argv.includes('--check-edge')) {
+  if (fs.readFileSync(edgePath, 'utf8').replace(/\r\n/g, '\n') !== manifest) {
+    throw new Error('Stale edge catalog; run node scripts/build-product-sitemap.mjs --edge-only');
+  }
+  console.log(`Edge catalog current: ${accepted.length} accepted identifiers.`);
+} else {
+  fs.writeFileSync(edgePath, manifest, 'utf8');
+  if (!process.argv.includes('--edge-only')) {
+    maybeMigrateSitemapIndex();
+    writeProductOutputs(pm);
+  }
+}

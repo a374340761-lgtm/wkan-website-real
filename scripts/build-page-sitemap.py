@@ -99,7 +99,8 @@ def content_dates() -> dict[str, str]:
 
 def collect_pages() -> list[dict]:
     pages: list[dict] = []
-    dates = content_dates()
+    # Bulk template and localization commits are not reliable content revisions.
+    dates = {}
     for path in sorted(ROOT.rglob("*.html")):
         rel = path.relative_to(ROOT).as_posix()
         if rel in EXCLUDE or set(path.relative_to(ROOT).parts) & {

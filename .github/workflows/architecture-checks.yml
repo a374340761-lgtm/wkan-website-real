@@ -49,6 +49,9 @@ jobs:
       - name: Validate SEO and structured data
         run: |
           python scripts/build-specifications-library.py --check
+          python scripts/migrate-static-product-links.py --check
+          node scripts/build-product-sitemap.mjs --check-edge
+          node deploy/product-redirects/check.mjs
           node scripts/build-home-static-content.mjs --check
           node scripts/build-static-translations.mjs --check
           node scripts/build-static-product-pages.mjs --check

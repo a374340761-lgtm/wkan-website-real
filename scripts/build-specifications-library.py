@@ -4,10 +4,12 @@ import json
 import re
 import sys
 from pathlib import Path
+from importlib import import_module
 
 ROOT=Path(__file__).resolve().parent.parent
 CHECK='--check' in sys.argv
 DATA=json.loads((ROOT/'data/product-specifications-2026.json').read_text(encoding='utf-8'))
+STATIC_SLUGS=import_module('migrate-static-product-links').static_product_slugs()
 ORIGIN='https://www.waikwantent.com'
 esc=lambda s:html.escape('\n'.join(line.rstrip() for line in str(s).split('\n')),quote=True)
 
@@ -50,6 +52,7 @@ for zh in [False,True]:
    body+='</tbody></table></div>'+''.join('<p class="spec-library-note">'+esc(n)+'</p>' for n in g['notesZh' if zh else 'notesEn'])
    route=''
    if key.startswith('tent:'):route='tent-type.html?type='+key.split(':',1)[1]
+   elif key.lower() in STATIC_SLUGS:route='products/'+STATIC_SLUGS[key.lower()]+'.html'
    elif not key.startswith('series:'):route='product-detail.html?sku='+key
    if route:body+=f'<a class="wk-resource-link" href="{prefix}{route}">'+('查看对应产品 →' if zh else 'View corresponding product →')+'</a>'
    body+='</div></details>'

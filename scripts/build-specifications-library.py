@@ -15,8 +15,9 @@ esc=lambda s:html.escape('\n'.join(line.rstrip() for line in str(s).split('\n'))
 
 def save(path,text):
  p=ROOT/path
+ if p.exists() and p.read_text(encoding='utf-8')==text.replace('\r\n','\n'):return
  if CHECK:
-  if not p.exists() or p.read_text(encoding='utf-8').replace('\r\n','\n')!=text.replace('\r\n','\n'):raise SystemExit('Out of date: '+path)
+  raise SystemExit('Out of date: '+path)
  else:p.write_text(text,encoding='utf-8')
 
 for zh in [False,True]:

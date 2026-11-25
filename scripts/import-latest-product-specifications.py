@@ -1,6 +1,7 @@
 """Import reviewed, non-price specification rows from the latest source folder."""
 import json
 import re
+import subprocess
 import sys
 from html import escape
 from pathlib import Path
@@ -109,7 +110,9 @@ def main():
     products_path.write_text(products_js, encoding="utf-8")
 
     for language, locale in enumerate(LOCALES):
-        path = ROOT / ("" if locale == "en" else locale) / "specifications-packing.html"
+        if locale in ("en", "zh"):
+            continue
+        path = ROOT / locale / "specifications-packing.html"
         html = path.read_bytes().decode("utf-8")
         for key, index, group, titles in library_insertions:
             details = render_group(group, key, index, language, titles[language])
@@ -124,6 +127,7 @@ def main():
                 position = html.index('<section class="spec-library-help">')
                 html = html[:position] + f'<section class="spec-library-family" id="spec-{key}">{details}</section>' + html[position:]
         path.write_bytes(html.encode("utf-8"))
+    subprocess.run([sys.executable, str(ROOT / "scripts/build-specifications-library.py")], check=True)
     print(f"Imported {sum(len(group['rows']) for _, _, group, _ in library_insertions)} configurations into {len(LOCALES)} languages.")
 
 if __name__ == "__main__":

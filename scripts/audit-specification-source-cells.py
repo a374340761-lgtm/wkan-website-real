@@ -26,6 +26,8 @@ checked=0;changes=[];separate=[]
 for key,groups in data.items():
  for g in groups:
   s=g['source'];rs=s.get('rows',[]);cols=s.get('columns',{})
+  if s.get('review') == 'latest-price-list':
+   separate.append({'target':key,'title':g['titleZh'],'reason':'Verified by the latest product specification importer.'});continue
   if not cols or len(rs)!=len(g['rows']):
    separate.append({'target':key,'title':g['titleZh'],'reason':'Transcribed/composite or one-to-many rows; checked by dedicated assertions.'});continue
   for r,entry in zip(rs,g['rows']):

@@ -1,0 +1,5986 @@
+{
+  "baselineCommit": "862fba4fbc33919e6256bd100e300e1f38e79e99",
+  "verification": "All route targets exist locally. Static product quote links checked. Browser smoke test is a separate sampled check.",
+  "products": [
+    {
+      "sku": "inflatable",
+      "category": "inflatable",
+      "name": "Inflatable Tent",
+      "verifiedConfigurations": 4,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=inflatable",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "inflatable-three-leg-tent",
+      "category": "inflatable",
+      "name": "Three-Leg Inflatable Tent",
+      "verifiedConfigurations": 4,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=inflatable-three-leg-tent",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "inflatable-single-chair",
+      "category": "inflatable",
+      "name": "Single-Seat Inflatable Chair",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=inflatable-single-chair",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "inflatable-double-chair",
+      "category": "inflatable",
+      "name": "Two-Seat Inflatable Chair",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=inflatable-double-chair",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "inflatable-arch",
+      "category": "inflatable",
+      "name": "Inflatable Arch",
+      "verifiedConfigurations": 14,
+      "verifiedSourceCount": 4,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=inflatable-arch",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "inflatable-column",
+      "category": "inflatable",
+      "name": "Inflatable Display Column",
+      "verifiedConfigurations": 8,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=inflatable-column",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "MARKET-STALL-1X1-40MM",
+      "category": "displays",
+      "name": "1×1 m Portable Aluminum Market Stall",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/1x1m-40mm-aluminum-market-stall.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "standard-black-flat-tube-3x3",
+      "category": "tents",
+      "name": "Standard Black Flat-Tube Canopy Frame",
+      "verifiedConfigurations": 39,
+      "verifiedSourceCount": 3,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/3x3-standard-black-flat-tube-canopy-frame.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "2001",
+      "category": "tents",
+      "name": "30 Square Tube Iron Frame Tent",
+      "verifiedConfigurations": 9,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "de",
+          "route": "/de/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "es",
+          "route": "/es/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "it",
+          "route": "/it/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "da",
+          "route": "/da/tent-type.html?type=folding30",
+          "mode": "series"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/tent-type.html?type=folding30",
+          "mode": "series"
+        }
+      ]
+    },
+    {
+      "sku": "42001",
+      "category": "displays",
+      "name": "A-Frame Display System",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=42001",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "42002",
+      "category": "displays",
+      "name": "Backdrop System",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=42002",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "42003",
+      "category": "displays",
+      "name": "Fabric Pop Up Display",
+      "verifiedConfigurations": 4,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=42003",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "42004",
+      "category": "displays",
+      "name": "Tension Fabric Counter",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=42004",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "42005",
+      "category": "displays",
+      "name": "Fabric Banner Stand Series (WK-H-01 / WK-H-02)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=42005",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "fabric-banner-stand-curved",
+      "category": "displays",
+      "name": "Curved Fabric Banner Stand",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/curved-fabric-banner-stand.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "WK-HZ-STRAIGHT",
+      "category": "displays",
+      "name": "Straight Line Tension Fabric Backwall (WK-HZ)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-HZ-STRAIGHT",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-HS",
+      "category": "displays",
+      "name": "S-shaped Tension Fabric Display",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-HS",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-HB",
+      "category": "displays",
+      "name": "Tension Fabric Hanging Banner",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-HB",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-HZ",
+      "category": "displays",
+      "name": "Curved Tension Fabric Display",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-HZ",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-HC",
+      "category": "displays",
+      "name": "C-Shaped Tension Fabric Backwall (WK-HC)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-HC",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-TFD-LIGHT",
+      "category": "displays",
+      "name": "Lighting System (WK-TFD-LIGHT)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-TFD-LIGHT",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-TFD-CASE",
+      "category": "displays",
+      "name": "Transport & Storage System (WK-TFD-CASE)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-TFD-CASE",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9401",
+      "category": "racegate",
+      "name": "V Race Gate",
+      "verifiedConfigurations": 2,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9401",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9402",
+      "category": "racegate",
+      "name": "O Race Gate",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9402",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-BP-ST-HUB",
+      "category": "flags",
+      "name": "Backpack & Street / Display Flags",
+      "verifiedConfigurations": 28,
+      "verifiedSourceCount": 3,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-BP-ST-HUB",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-FGP",
+      "category": "flags",
+      "name": "Beach Flag Poles (Fiberglass Pole)",
+      "verifiedConfigurations": 4,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-FGP",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-AFG",
+      "category": "flags",
+      "name": "Beach Flag Poles (Aluminium + Fiberglass)",
+      "verifiedConfigurations": 16,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-AFG",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-FGH",
+      "category": "flags",
+      "name": "2.4m Heart Flag Pole (Fully Fiberglass)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-FGH",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-FGT",
+      "category": "flags",
+      "name": "Teardrop Beach Flag Poles (Fully Fiberglass)",
+      "verifiedConfigurations": 11,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-FGT",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-FGF",
+      "category": "flags",
+      "name": "Feather Beach Flag Poles (Fully Fiberglass)",
+      "verifiedConfigurations": 14,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-FGF",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-OGW",
+      "category": "flags",
+      "name": "Outdoor Giant Flag (Water Base)",
+      "verifiedConfigurations": 3,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-OGW",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-SQF",
+      "category": "flags",
+      "name": "Square Flag Pole (Fiberglass)",
+      "verifiedConfigurations": 7,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-SQF",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-ALU-SC",
+      "category": "flags",
+      "name": "Aluminium Beach Flag Pole — Semicircle",
+      "verifiedConfigurations": 6,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-ALU-SC",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-ALU-SQ",
+      "category": "flags",
+      "name": "Aluminium Beach Flag Pole — Square",
+      "verifiedConfigurations": 9,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-ALU-SQ",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-ALU-NF",
+      "category": "flags",
+      "name": "Aluminium Beach Flag Pole — New Feather",
+      "verifiedConfigurations": 6,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-ALU-NF",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-ALU-FT",
+      "category": "flags",
+      "name": "Aluminium Beach Flag Pole — Feather/Teardrop",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-ALU-FT",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "FLG-HUB-BASE-ACC",
+      "category": "flags",
+      "name": "Beach Flag Bases & Accessories",
+      "verifiedConfigurations": 90,
+      "verifiedSourceCount": 4,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=FLG-HUB-BASE-ACC",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-LB-RT",
+      "category": "lightbox",
+      "name": "Round Tube Light Box Series",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-LB-RT",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-LB-AP",
+      "category": "lightbox",
+      "name": "Aluminum Profile SEG Light Box Series",
+      "verifiedConfigurations": 6,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-LB-AP",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-LB-NET",
+      "category": "lightbox",
+      "name": "SEG Net Light Box Series",
+      "verifiedConfigurations": 18,
+      "verifiedSourceCount": 4,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-LB-NET",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-IS001",
+      "category": "lightbox",
+      "name": "Light Box Stand (Base Variant) - WK-IS001",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-IS001",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-IS002",
+      "category": "lightbox",
+      "name": "Light Box Stand (Base Variant) - WK-IS002",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-IS002",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-IS003",
+      "category": "lightbox",
+      "name": "Light Box Display Stand — Weighted Base · WK-IS003",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-IS003",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-IS004",
+      "category": "lightbox",
+      "name": "Light Box Display Stand — Floor-Standing · WK-IS004",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/floor-standing-seg-light-box-wk-is004.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "WK-AD",
+      "category": "advertising-arch",
+      "name": "Advertising Arch",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-AD",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-AP",
+      "category": "water-filled-a-poster-stand",
+      "name": "Water Filled A Poster Stand",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-AP",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-RUS",
+      "category": "displays",
+      "name": "Roll Up Stand",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-RUS",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "WK-CH",
+      "category": "displays",
+      "name": "Promotion Counter",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=WK-CH",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9403",
+      "category": "racegate",
+      "name": "Semi-circle Race Gate",
+      "verifiedConfigurations": 2,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/semi-circle-race-gate-9403.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "2002",
+      "category": "tents",
+      "name": "40 Hexagon Aluminum Frame Tent",
+      "verifiedConfigurations": 27,
+      "verifiedSourceCount": 3,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "de",
+          "route": "/de/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "es",
+          "route": "/es/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "it",
+          "route": "/it/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "da",
+          "route": "/da/tent-type.html?type=folding40",
+          "mode": "series"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/tent-type.html?type=folding40",
+          "mode": "series"
+        }
+      ]
+    },
+    {
+      "sku": "2003",
+      "category": "tents",
+      "name": "50 Hexagon Aluminum Frame Tent",
+      "verifiedConfigurations": 16,
+      "verifiedSourceCount": 2,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "de",
+          "route": "/de/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "es",
+          "route": "/es/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "it",
+          "route": "/it/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "da",
+          "route": "/da/tent-type.html?type=folding50",
+          "mode": "series"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/tent-type.html?type=folding50",
+          "mode": "series"
+        }
+      ]
+    },
+    {
+      "sku": "9001",
+      "category": "accessories",
+      "name": "Half wall cross bar",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9001",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9002",
+      "category": "accessories",
+      "name": "Square water weight bucket",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9002",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9003",
+      "category": "accessories",
+      "name": "Sun shade bar",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9003",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9004",
+      "category": "accessories",
+      "name": "Round water weight bucket",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/round-water-weight-bucket-9004.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "9005",
+      "category": "accessories",
+      "name": "Press weight (iron)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9005",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9006",
+      "category": "accessories",
+      "name": "Sand bag",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9006",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9007",
+      "category": "accessories",
+      "name": "Round press weight (iron)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9007",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9008",
+      "category": "accessories",
+      "name": "Press weight iron (D)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9008",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9009",
+      "category": "accessories",
+      "name": "Tent blade flag connector",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9009",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9010",
+      "category": "accessories",
+      "name": "Wheeled carry bag",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9010",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9011",
+      "category": "accessories",
+      "name": "Blade flag connector (B)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9011",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9012",
+      "category": "accessories",
+      "name": "Tent carry bag",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9012",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9013",
+      "category": "accessories",
+      "name": "Half wall connector",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9013",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9014",
+      "category": "accessories",
+      "name": "Half-wall PC Connector AD-T08",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/half-wall-blade-flag-connector-9014.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "9015",
+      "category": "accessories",
+      "name": "Tent tie-down rope",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9015",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9016",
+      "category": "accessories",
+      "name": "Tent tie-down rope (A)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9016",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9017",
+      "category": "accessories",
+      "name": "Half wall blade-flag connector (9)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9017",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9018",
+      "category": "accessories",
+      "name": "Tent blade flag kit",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9018",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9019",
+      "category": "accessories",
+      "name": "Tent rain gutter",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9019",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9020",
+      "category": "accessories",
+      "name": "40 mm / 50 mm Hex Tube Blade Flag Connector",
+      "verifiedConfigurations": 4,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9020",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9021",
+      "category": "accessories",
+      "name": "Tent clamp / grip",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9021",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9022",
+      "category": "accessories",
+      "name": "Half wall pole connector 90°",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9022",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9023",
+      "category": "accessories",
+      "name": "30/40 square frame connector",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9023",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "9024",
+      "category": "accessories",
+      "name": "40/50 diamond frame connector",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=9024",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31001",
+      "category": "furniture",
+      "name": "Folding In Half Tables (Multiple Sizes)",
+      "verifiedConfigurations": 4,
+      "verifiedSourceCount": 1,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31001",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31005",
+      "category": "furniture",
+      "name": "Square Table (WK-FZ88)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31005",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31006",
+      "category": "furniture",
+      "name": "Folding In Half Bench (WK-Y183)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31006",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31007",
+      "category": "furniture",
+      "name": "Folding Chair (WK-Y45)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "de",
+          "route": "/de/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "es",
+          "route": "/es/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "it",
+          "route": "/it/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "da",
+          "route": "/da/products/folding-chair-31007.html",
+          "mode": "static"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/products/folding-chair-31007.html",
+          "mode": "static"
+        }
+      ]
+    },
+    {
+      "sku": "31008",
+      "category": "furniture",
+      "name": "Folding Stool (WK-Y30A)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31008",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31009",
+      "category": "furniture",
+      "name": "Umbrella Round Table (WK-YZ80)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31009",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31010",
+      "category": "furniture",
+      "name": "Round Folding In Half Tables (Multiple Sizes)",
+      "verifiedConfigurations": 3,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31010",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31013",
+      "category": "furniture",
+      "name": "Cocktail Table (WK-BZ80)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31013",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31014",
+      "category": "furniture",
+      "name": "Bar Folding Chair (WK-Y45A)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31014",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31015",
+      "category": "furniture",
+      "name": "Folding Into Half Table (WK-F115)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31015",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31016",
+      "category": "furniture",
+      "name": "Portable Toilet (WK-PT20)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31016",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31101",
+      "category": "furniture",
+      "name": "Bi-fold Table Tablecloths",
+      "verifiedConfigurations": 36,
+      "verifiedSourceCount": 12,
+      "listedImage": true,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31101",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31201",
+      "category": "tents",
+      "name": "Car Tent (WK-TENT188)",
+      "verifiedConfigurations": 0,
+      "verifiedSourceCount": 0,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31201",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31202",
+      "category": "tents",
+      "name": "Outdoor Dressing Room (WK-TENT190)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31202",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31203",
+      "category": "furniture",
+      "name": "Square Folding Clothes Basket (WK-C56)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31203",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31204",
+      "category": "furniture",
+      "name": "Round Folding Clothes Basket (WK-C59)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31204",
+          "mode": "dynamic"
+        }
+      ]
+    },
+    {
+      "sku": "31205",
+      "category": "furniture",
+      "name": "Round Folding Clothes Basket (WK-C35)",
+      "verifiedConfigurations": 1,
+      "verifiedSourceCount": 1,
+      "listedImage": false,
+      "routes": [
+        {
+          "lang": "en",
+          "route": "/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "zh",
+          "route": "/zh/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "de",
+          "route": "/de/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "es",
+          "route": "/es/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "fr",
+          "route": "/fr/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "it",
+          "route": "/it/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "pt",
+          "route": "/pt/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "ru",
+          "route": "/ru/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "nl",
+          "route": "/nl/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "da",
+          "route": "/da/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        },
+        {
+          "lang": "sv",
+          "route": "/sv/product-detail.html?sku=31205",
+          "mode": "dynamic"
+        }
+      ]
+    }
+  ]
+}

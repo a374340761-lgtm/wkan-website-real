@@ -91,7 +91,7 @@
       window.wkTrackEvent('contact_click', { contact_method: url.protocol === 'mailto:' ? 'email' : 'phone' });
     } else if (link.hasAttribute('download') || /\.pdf$/i.test(url.pathname)) {
       window.wkTrackEvent('file_download', { contact_method: 'catalog' });
-    } else if (url.origin === window.location.origin && /\/(?:zh\/|de\/)?contact-us\.html$/.test(url.pathname)) {
+    } else if (url.origin === window.location.origin && /^\/(?:zh\/|de\/|es\/|fr\/|it\/|pt\/|ru\/|nl\/|da\/|sv\/)?contact-us\.html$/.test(url.pathname)) {
       window.wkTrackEvent('begin_lead', { contact_method: 'quote_page' });
     }
   });

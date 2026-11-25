@@ -2102,6 +2102,124 @@
           },
           "review": "2026-10-24 complete technical-column review"
         }
+      },
+      {
+        "titleZh": "40 mm",
+        "titleEn": "40 mm",
+        "columns": [
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "dimensions",
+            "en": "Upper / lower leg, cross tube, roof Ø25 / Ø22 (cm)",
+            "zh": "大脚管 / 小脚管、交叉管、25 / 22 顶杆（cm）"
+          }
+        ],
+        "rows": [
+          {
+            "size": "1.5*1.5M",
+            "dimensions": "153 / 105 / 70.7 / — / —",
+            "en": {
+              "size": "1.5 × 1.5M",
+              "dimensions": "153 / 105 / 70.7 / — / —"
+            }
+          },
+          {
+            "size": "2*2M",
+            "dimensions": "153 / 105 / 94.5 / — / —",
+            "en": {
+              "size": "2 × 2M",
+              "dimensions": "153 / 105 / 94.5 / — / —"
+            }
+          },
+          {
+            "size": "2.5*2.5M",
+            "dimensions": "153 / 105 / 119.4 / — / —",
+            "en": {
+              "size": "2.5 × 2.5M",
+              "dimensions": "153 / 105 / 119.4 / — / —"
+            }
+          },
+          {
+            "size": "3*3M",
+            "dimensions": "153 / 105 / 144 / 80 / 97",
+            "en": {
+              "size": "3 × 3M",
+              "dimensions": "153 / 105 / 144 / 80 / 97"
+            }
+          },
+          {
+            "size": "3*4.5M",
+            "dimensions": "153 / 105 / 144 / 80 / 97",
+            "en": {
+              "size": "3 × 4.5M",
+              "dimensions": "153 / 105 / 144 / 80 / 97"
+            }
+          },
+          {
+            "size": "3*6M",
+            "dimensions": "153 / 105 / 144 / 80 / 97",
+            "en": {
+              "size": "3 × 6M",
+              "dimensions": "153 / 105 / 144 / 80 / 97"
+            }
+          },
+          {
+            "size": "4*4M",
+            "dimensions": "213 / 106.8 / 191 / 140 / 140.6",
+            "en": {
+              "size": "4 × 4M",
+              "dimensions": "213 / 106.8 / 191 / 140 / 140.6"
+            }
+          },
+          {
+            "size": "4*6M",
+            "dimensions": "213 / 106.8 / 191 / 140 / 140.6",
+            "en": {
+              "size": "4 × 6M",
+              "dimensions": "213 / 106.8 / 191 / 140 / 140.6"
+            }
+          },
+          {
+            "size": "4*8M",
+            "dimensions": "213 / 106.8 / 191 / 140 / 140.6",
+            "en": {
+              "size": "4 × 8M",
+              "dimensions": "213 / 106.8 / 191 / 140 / 140.6"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "40管六边形帐篷各规格铝管尺寸.xlsx",
+          "sheet": "Sheet1",
+          "rows": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "columns": {
+            "size": 1,
+            "dimensions": [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "review": "latest-price-list"
+        }
       }
     ],
     "2003": [
@@ -25000,6 +25118,750 @@
           "image": "word/media/image3.jpeg",
           "transcription": "Visually checked technical columns only; price columns excluded",
           "review": "2026-10-24 complete technical-column review"
+        }
+      }
+    ],
+    "series:wk-t40-p": [
+      {
+        "titleZh": "WK-T40-P",
+        "titleEn": "WK-T40-P",
+        "columns": [
+          {
+            "key": "model",
+            "en": "Model",
+            "zh": "型号"
+          },
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "posts",
+            "en": "Uprights",
+            "zh": "立柱数量"
+          },
+          {
+            "key": "packed",
+            "en": "Packed weight (kg)",
+            "zh": "含包装重量（kg）"
+          },
+          {
+            "key": "carton",
+            "en": "Carton (cm)",
+            "zh": "箱规（cm）"
+          }
+        ],
+        "rows": [
+          {
+            "model": "WK-T40-P2*2",
+            "size": "2*2",
+            "posts": "4",
+            "packed": "25",
+            "carton": "195*17*17",
+            "en": {
+              "model": "WK-T40-P2 × 2",
+              "size": "2 × 2",
+              "posts": "4",
+              "packed": "25",
+              "carton": "195 × 17 × 17"
+            }
+          },
+          {
+            "model": "WK-T40-P2*3",
+            "size": "2*3",
+            "posts": "4",
+            "packed": "29",
+            "carton": "195*29*17",
+            "en": {
+              "model": "WK-T40-P2 × 3",
+              "size": "2 × 3",
+              "posts": "4",
+              "packed": "29",
+              "carton": "195 × 29 × 17"
+            }
+          },
+          {
+            "model": "WK-T40-P3*3",
+            "size": "3*3",
+            "posts": "4",
+            "packed": "32",
+            "carton": "195*29*17",
+            "en": {
+              "model": "WK-T40-P3 × 3",
+              "size": "3 × 3",
+              "posts": "4",
+              "packed": "32",
+              "carton": "195 × 29 × 17"
+            }
+          },
+          {
+            "model": "WK-T40-P3*5",
+            "size": "3*5",
+            "posts": "8",
+            "packed": "52",
+            "carton": "195*26*25",
+            "en": {
+              "model": "WK-T40-P3 × 5",
+              "size": "3 × 5",
+              "posts": "8",
+              "packed": "52",
+              "carton": "195 × 26 × 25"
+            }
+          },
+          {
+            "model": "WK-T40-P3*6",
+            "size": "3*6",
+            "posts": "8",
+            "packed": "60",
+            "carton": "195*26*25",
+            "en": {
+              "model": "WK-T40-P3 × 6",
+              "size": "3 × 6",
+              "posts": "8",
+              "packed": "60",
+              "carton": "195 × 26 × 25"
+            }
+          },
+          {
+            "model": "WK-T40-P4*6",
+            "size": "4*6",
+            "posts": "8",
+            "packed": "65",
+            "carton": "220*26*25",
+            "en": {
+              "model": "WK-T40-P4 × 6",
+              "size": "4 × 6",
+              "posts": "8",
+              "packed": "65",
+              "carton": "220 × 26 × 25"
+            }
+          },
+          {
+            "model": "WK-T40-P5*6",
+            "size": "5*6",
+            "posts": "8",
+            "packed": "70",
+            "carton": "275*26*25",
+            "en": {
+              "model": "WK-T40-P5 × 6",
+              "size": "5 × 6",
+              "posts": "8",
+              "packed": "70",
+              "carton": "275 × 26 × 25"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "广西伟群帐篷制造有限公司 网红帐篷.xlsx",
+          "sheet": "Sheet1",
+          "rows": [
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "columns": {
+            "model": 1,
+            "size": 2,
+            "posts": 3,
+            "packed": 4,
+            "carton": 5
+          },
+          "review": "latest-price-list"
+        }
+      }
+    ],
+    "series:wk-t40-pof": [
+      {
+        "titleZh": "WK-T40-POF",
+        "titleEn": "WK-T40-POF",
+        "columns": [
+          {
+            "key": "model",
+            "en": "Model",
+            "zh": "型号"
+          },
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "posts",
+            "en": "Uprights",
+            "zh": "立柱数量"
+          },
+          {
+            "key": "packed",
+            "en": "Packed weight (kg)",
+            "zh": "含包装重量（kg）"
+          },
+          {
+            "key": "carton",
+            "en": "Carton (cm)",
+            "zh": "箱规（cm）"
+          }
+        ],
+        "rows": [
+          {
+            "model": "WK-T40-POF2*2",
+            "size": "2*2",
+            "posts": "4",
+            "packed": "19",
+            "carton": "153*22*22",
+            "en": {
+              "model": "WK-T40-POF2 × 2",
+              "size": "2 × 2",
+              "posts": "4",
+              "packed": "19",
+              "carton": "153 × 22 × 22"
+            }
+          },
+          {
+            "model": "WK-T40-POF3*3",
+            "size": "3*3",
+            "posts": "4",
+            "packed": "23",
+            "carton": "153*22*22",
+            "en": {
+              "model": "WK-T40-POF3 × 3",
+              "size": "3 × 3",
+              "posts": "4",
+              "packed": "23",
+              "carton": "153 × 22 × 22"
+            }
+          },
+          {
+            "model": "WK-T40-POF3*4.5",
+            "size": "3*4.5",
+            "posts": "4",
+            "packed": "38",
+            "carton": "153*28*22",
+            "en": {
+              "model": "WK-T40-POF3 × 4.5",
+              "size": "3 × 4.5",
+              "posts": "4",
+              "packed": "38",
+              "carton": "153 × 28 × 22"
+            }
+          },
+          {
+            "model": "WK-T40-POF3*6",
+            "size": "3*6",
+            "posts": "6",
+            "packed": "45",
+            "carton": "153*38*22",
+            "en": {
+              "model": "WK-T40-POF3 × 6",
+              "size": "3 × 6",
+              "posts": "6",
+              "packed": "45",
+              "carton": "153 × 38 × 22"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "广西伟群帐篷制造有限公司 网红帐篷.xlsx",
+          "sheet": "Sheet1",
+          "rows": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "columns": {
+            "model": 1,
+            "size": 2,
+            "posts": 3,
+            "packed": 4,
+            "carton": 5
+          },
+          "review": "latest-price-list"
+        }
+      }
+    ],
+    "series:ad-t90": [
+      {
+        "titleZh": "AD-T90",
+        "titleEn": "AD-T90",
+        "columns": [
+          {
+            "key": "model",
+            "en": "Model",
+            "zh": "型号"
+          },
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "carton",
+            "en": "Carton (cm)",
+            "zh": "箱规（cm）"
+          },
+          {
+            "key": "weight",
+            "en": "Net weight (kg)",
+            "zh": "净重（kg）"
+          }
+        ],
+        "rows": [
+          {
+            "model": "AD-T90F",
+            "size": "半径3m，高4m",
+            "carton": "150*28*18",
+            "weight": "28",
+            "en": {
+              "model": "AD-T90F",
+              "size": "R 3m / H 4m",
+              "carton": "150 × 28 × 18",
+              "weight": "28"
+            }
+          },
+          {
+            "model": "AD-T90A",
+            "size": "半径4m，高4m",
+            "carton": "150*28*18",
+            "weight": "30",
+            "en": {
+              "model": "AD-T90A",
+              "size": "R 4m / H 4m",
+              "carton": "150 × 28 × 18",
+              "weight": "30"
+            }
+          },
+          {
+            "model": "AD-T90B",
+            "size": "半径5m，高5m",
+            "carton": "150*28*20",
+            "weight": "36",
+            "en": {
+              "model": "AD-T90B",
+              "size": "R 5m / H 5m",
+              "carton": "150 × 28 × 20",
+              "weight": "36"
+            }
+          },
+          {
+            "model": "AD-T90C",
+            "size": "半径6m，高5m",
+            "carton": "150*28*20",
+            "weight": "45",
+            "en": {
+              "model": "AD-T90C",
+              "size": "R 6m / H 5m",
+              "carton": "150 × 28 × 20",
+              "weight": "45"
+            }
+          },
+          {
+            "model": "AD-T90D",
+            "size": "半径7m，高6m",
+            "carton": "150*28*23",
+            "weight": "50",
+            "en": {
+              "model": "AD-T90D",
+              "size": "R 7m / H 6m",
+              "carton": "150 × 28 × 23",
+              "weight": "50"
+            }
+          },
+          {
+            "model": "AD-T90E",
+            "size": "半径8m，高6m",
+            "carton": "150*28*23",
+            "weight": "60",
+            "en": {
+              "model": "AD-T90E",
+              "size": "R 8m / H 6m",
+              "carton": "150 × 28 × 23",
+              "weight": "60"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "广西伟群帐篷制造有限公司（圆顶帐篷，星星.xlsx",
+          "sheet": "单顶星帐",
+          "rows": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "columns": {
+            "model": 1,
+            "size": 3,
+            "carton": 4,
+            "weight": 5
+          },
+          "review": "latest-price-list"
+        }
+      }
+    ],
+    "series:ad-t99": [
+      {
+        "titleZh": "AD-T99",
+        "titleEn": "AD-T99",
+        "columns": [
+          {
+            "key": "model",
+            "en": "Model",
+            "zh": "型号"
+          },
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "carton",
+            "en": "Carton (cm)",
+            "zh": "箱规（cm）"
+          },
+          {
+            "key": "weight",
+            "en": "Net weight (kg)",
+            "zh": "净重（kg）"
+          }
+        ],
+        "rows": [
+          {
+            "model": "AD-T99F",
+            "size": "6*9m，高 4m",
+            "carton": "155*45*20",
+            "weight": "38",
+            "en": {
+              "model": "AD-T99F",
+              "size": "6 × 9m / H  4m",
+              "carton": "155 × 45 × 20",
+              "weight": "38"
+            }
+          },
+          {
+            "model": "AD-T99A",
+            "size": "8*12m，高4m",
+            "carton": "155*45*22",
+            "weight": "42",
+            "en": {
+              "model": "AD-T99A",
+              "size": "8 × 12m / H 4m",
+              "carton": "155 × 45 × 22",
+              "weight": "42"
+            }
+          },
+          {
+            "model": "AD-T99B",
+            "size": "10*14m，高 5m",
+            "carton": "155*45*24",
+            "weight": "56",
+            "en": {
+              "model": "AD-T99B",
+              "size": "10 × 14m / H  5m",
+              "carton": "155 × 45 × 24",
+              "weight": "56"
+            }
+          },
+          {
+            "model": "AD-T99C",
+            "size": "12*17m，高 5m",
+            "carton": "155*25*26",
+            "weight": "61",
+            "en": {
+              "model": "AD-T99C",
+              "size": "12 × 17m / H  5m",
+              "carton": "155 × 25 × 26",
+              "weight": "61"
+            }
+          },
+          {
+            "model": "AD-T99D",
+            "size": "14*19m，高 6m",
+            "carton": "155*25*28",
+            "weight": "67",
+            "en": {
+              "model": "AD-T99D",
+              "size": "14 × 19m / H  6m",
+              "carton": "155 × 25 × 28",
+              "weight": "67"
+            }
+          },
+          {
+            "model": "AD-T99E",
+            "size": "16*21m，高 6m",
+            "carton": "155*25*30",
+            "weight": "79",
+            "en": {
+              "model": "AD-T99E",
+              "size": "16 × 21m / H  6m",
+              "carton": "155 × 25 × 30",
+              "weight": "79"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "广西伟群帐篷制造有限公司（圆顶帐篷，星星.xlsx",
+          "sheet": "双顶星帐",
+          "rows": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "columns": {
+            "model": 1,
+            "size": 2,
+            "carton": 3,
+            "weight": 4
+          },
+          "review": "latest-price-list"
+        }
+      }
+    ],
+    "series:ad-t12": [
+      {
+        "titleZh": "AD-T12",
+        "titleEn": "AD-T12",
+        "columns": [
+          {
+            "key": "model",
+            "en": "Model",
+            "zh": "型号"
+          },
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "carton",
+            "en": "Carton (cm)",
+            "zh": "箱规（cm）"
+          },
+          {
+            "key": "weight",
+            "en": "Net weight (kg)",
+            "zh": "净重（kg）"
+          }
+        ],
+        "rows": [
+          {
+            "model": "AD-T12A",
+            "size": "3*3M*3.5M",
+            "carton": "26.5*36.5*160CM",
+            "weight": "30",
+            "en": {
+              "model": "AD-T12A",
+              "size": "3 × 3M × 3.5M",
+              "carton": "26.5 × 36.5 × 160CM",
+              "weight": "30"
+            }
+          },
+          {
+            "model": "AD-T12B",
+            "size": "4.5*4.5M*5M",
+            "carton": "36*27*160CM",
+            "weight": "55",
+            "en": {
+              "model": "AD-T12B",
+              "size": "4.5 × 4.5M × 5M",
+              "carton": "36 × 27 × 160CM",
+              "weight": "55"
+            }
+          },
+          {
+            "model": "AD-T12C",
+            "size": "6*6M*6M",
+            "carton": "50*70*160CM",
+            "weight": "85",
+            "en": {
+              "model": "AD-T12C",
+              "size": "6 × 6M × 6M",
+              "carton": "50 × 70 × 160CM",
+              "weight": "85"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "广西伟群帐篷制造有限公司（圆顶帐篷，星星.xlsx",
+          "sheet": "天幕帐篷",
+          "rows": [
+            4,
+            5,
+            6
+          ],
+          "columns": {
+            "model": 1,
+            "size": 2,
+            "carton": 3,
+            "weight": 4
+          },
+          "review": "latest-price-list"
+        }
+      }
+    ],
+    "series:star-tent-wall-options": [
+      {
+        "titleZh": "星帐围布",
+        "titleEn": "Star tent walls",
+        "columns": [
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "span",
+            "en": "Width (m)",
+            "zh": "宽度（米）"
+          }
+        ],
+        "rows": [
+          {
+            "size": "6m星帐围布",
+            "span": "3m",
+            "en": {
+              "size": "6m tent wall",
+              "span": "3m"
+            }
+          },
+          {
+            "size": "8m星帐围布",
+            "span": "4m",
+            "en": {
+              "size": "8m tent wall",
+              "span": "4m"
+            }
+          },
+          {
+            "size": "10m星帐围布",
+            "span": "5m",
+            "en": {
+              "size": "10m tent wall",
+              "span": "5m"
+            }
+          },
+          {
+            "size": "12m星帐围布",
+            "span": "6m",
+            "en": {
+              "size": "12m tent wall",
+              "span": "6m"
+            }
+          },
+          {
+            "size": "14m星帐围布",
+            "span": "7m",
+            "en": {
+              "size": "14m tent wall",
+              "span": "7m"
+            }
+          },
+          {
+            "size": "16m星帐围布",
+            "span": "8m",
+            "en": {
+              "size": "16m tent wall",
+              "span": "8m"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "伟群帐篷星帐围布报价表2026.xlsx",
+          "sheet": "Sheet1",
+          "rows": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "columns": {
+            "size": 1,
+            "span": 2
+          },
+          "review": "latest-price-list"
+        }
+      }
+    ],
+    "series:thick-pole-arches": [
+      {
+        "titleZh": "Ø20 / Ø24",
+        "titleEn": "Ø20 / Ø24",
+        "columns": [
+          {
+            "key": "size",
+            "en": "Dimensions",
+            "zh": "尺寸"
+          },
+          {
+            "key": "pole",
+            "en": "Pole diameter (mm)",
+            "zh": "杆径（mm）"
+          }
+        ],
+        "rows": [
+          {
+            "size": "2.4*3.6米",
+            "pole": "20",
+            "en": {
+              "size": "2.4 × 3.6 m",
+              "pole": "20"
+            }
+          },
+          {
+            "size": "3*5.5米",
+            "pole": "",
+            "en": {
+              "size": "3 × 5.5 m",
+              "pole": ""
+            }
+          },
+          {
+            "size": "4*7米",
+            "pole": "24",
+            "en": {
+              "size": "4 × 7 m",
+              "pole": "24"
+            }
+          }
+        ],
+        "notesZh": [],
+        "notesEn": [],
+        "source": {
+          "file": "欢迎拱门价格.xlsx",
+          "sheet": "粗杆拱门",
+          "rows": [
+            2,
+            3,
+            4
+          ],
+          "columns": {
+            "size": 2,
+            "pole": 3
+          },
+          "review": "latest-price-list"
         }
       }
     ]

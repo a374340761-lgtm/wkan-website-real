@@ -1,0 +1,59 @@
+{
+  "note": "One local mobile Lighthouse run per route, external requests blocked. These values are not field metrics.",
+  "report": [
+    {
+      "route": "index.html",
+      "lcp": 14107.882847473802,
+      "cls": 0.001281790938756914,
+      "tbt": 56
+    },
+    {
+      "route": "custom-canopy-tent-manufacturer.html",
+      "lcp": 6201.0148,
+      "cls": 0,
+      "tbt": 24
+    },
+    {
+      "route": "10x10-pop-up-canopy-tent.html",
+      "lcp": 6050.298399999998,
+      "cls": 0,
+      "tbt": 17.5
+    },
+    {
+      "route": "seg-light-box-manufacturer.html",
+      "lcp": 5899.927400000001,
+      "cls": 0,
+      "tbt": 16
+    },
+    {
+      "route": "product-detail.html?sku=42003",
+      "lcp": 7134.5301,
+      "cls": 0.3565744288294339,
+      "tbt": 53
+    },
+    {
+      "route": "contact-us.html",
+      "lcp": 6351.752500000001,
+      "cls": 0.0001116034202133804,
+      "tbt": 20
+    }
+  ],
+  "productDetailFollowup": [
+    {
+      "lcp": 26056.879199999992,
+      "cls": 0.0001116034202133804,
+      "tbt": 49
+    },
+    {
+      "lcp": 26285.633700000006,
+      "cls": 0.0001116034202133804,
+      "tbt": 51.5
+    },
+    {
+      "lcp": 24137.726050000012,
+      "cls": 0.0001116034202133804,
+      "tbt": 51
+    }
+  ],
+  "followupDecision": "Trial reverted. Hiding the unpopulated detail reduced CLS in the lab, but both observed and modelled LCP worsened. Baseline measurements remain diagnostic only."
+}

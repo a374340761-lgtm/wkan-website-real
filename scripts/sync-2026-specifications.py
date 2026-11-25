@@ -256,8 +256,15 @@ DATA['9020'] = [{
     'notesEn': ['Specify the hex tube size and head style when requesting a quote.'],
     'source': {'file': 'WK-T12 product update', 'transcription': 'Tube sizes and head styles supplied with product photo'},
 }]
+specification_path = ROOT/'data/product-specifications-2026.json'
+if specification_path.is_file():
+    previous = json.loads(specification_path.read_text(encoding='utf-8'))
+    for key, groups in previous['products'].items():
+        for reviewed in groups:
+            if reviewed['source'].get('review') == 'latest-price-list':
+                DATA.setdefault(key, []).append(reviewed)
 payload={'version':'2026-10-24','products':DATA}
-(ROOT/'data/product-specifications-2026.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+specification_path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 products_path=ROOT/'scripts/products.js'
 products_js=products_path.read_text(encoding='utf-8')
 products_js=re.sub(r'/\* BEGIN VERIFIED 2026 SPECS \*/[\s\S]*?/\* END VERIFIED 2026 SPECS \*/\n*','',products_js)

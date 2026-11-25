@@ -68,7 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           return;
         }
         var origin = 'https://www.waikwantent.com';
-        var pathPrefix = /^\/zh\//.test(u.pathname) ? '/zh' : '';
+        var pathPrefix = (u.pathname.match(/^\/(zh|de|es|fr|it|pt|ru|nl|da|sv)(?=\/|$)/) || [''])[0];
         var canonical = origin + pathPrefix + '/product-detail.html?sku=' + encodeURIComponent(sku);
         var canonicalEn = origin + '/product-detail.html?sku=' + encodeURIComponent(sku);
         var canonicalZh = origin + '/zh/product-detail.html?sku=' + encodeURIComponent(sku);
@@ -455,7 +455,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="/scripts/get-quote-footer.js?v=20261020-careers"></script>
 <script src="/scripts/products.js?v=20261118-russian-r1"></script>
 <script src="/scripts/cart.js?v=20261118-russian-r1"></script>
-<script src="/scripts/product-detail.js?v=20261117-six-languages-r1"></script>
+<script src="/scripts/product-detail.js?v=20261125-localized-canonical"></script>
 <script src="/scripts/share-links.js"></script>
 </body>
 </html>

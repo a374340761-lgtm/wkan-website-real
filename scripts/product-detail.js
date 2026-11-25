@@ -251,13 +251,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Align canonical + og:url + JSON-LD + Twitter with final www URL (single preferred origin).
         const BASE_URL = WK_PREFERRED_ORIGIN;
-        const pathForCanon = String(window.location.pathname || '').replace(/\\/g, '/');
-        const pdpLocalePrefix = pathForCanon.indexOf('/zh/') >= 0 ? '/zh' : '';
-        const canonicalProductUrl = `${BASE_URL}${pdpLocalePrefix}/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
+        const locales = { en: '', 'zh-CN': '/zh', de: '/de', es: '/es', fr: '/fr', it: '/it', 'pt-BR': '/pt', ru: '/ru', nl: '/nl', da: '/da', sv: '/sv' };
+        const pdpLocalePrefix = location.pathname.match(/^\/(zh|de|es|fr|it|pt|ru|nl|da|sv)(?=\/|$)/)?.[0] || '';
+        const productPath = `/product-detail.html?sku=${encodeURIComponent(skuForCanonical)}`;
+        const canonicalProductUrl = `${BASE_URL}${pdpLocalePrefix}${productPath}`;
         const robotsMeta = document.querySelector('meta[name="robots"]');
         if (robotsMeta) robotsMeta.setAttribute('content', 'index,follow');
-        const linkCanonical = document.querySelector('link[rel="canonical"]');
-        if (linkCanonical) linkCanonical.setAttribute('href', canonicalProductUrl);
+        let linkCanonical = document.head.querySelector('link[rel="canonical"]');
+        if (!linkCanonical) {
+            linkCanonical = document.createElement('link');
+            linkCanonical.rel = 'canonical';
+            document.head.appendChild(linkCanonical);
+        }
+        linkCanonical.href = canonicalProductUrl;
+        document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(link => link.remove());
+        for (const [language, prefix] of Object.entries({ ...locales, 'x-default': '' })) {
+            const alternate = document.createElement('link');
+            alternate.rel = 'alternate';
+            alternate.hreflang = language;
+            alternate.href = `${BASE_URL}${prefix}${productPath}`;
+            document.head.appendChild(alternate);
+        }
         const ogUrlMeta = document.querySelector('meta[property="og:url"]');
         if (ogUrlMeta) ogUrlMeta.setAttribute('content', canonicalProductUrl);
         const ogTypeMeta = document.querySelector('meta[property="og:type"]');
@@ -996,7 +1010,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const notice=document.createElement('aside');notice.className='pdp-packing-notice';
                 const text=document.createElement('p');text.textContent=zh?product.packagingNoticeZh:product.packagingNoticeEn;
                 const link=document.createElement('a');link.className='wk-resource-link';
-                link.href=(zh?'/zh':'')+'/specifications-packing.html'+(product.packagingReference==='all'?'':'#spec-'+encodeURIComponent(product.packagingReference));
+                link.href=pdpLocalePrefix+'/specifications-packing.html'+(product.packagingReference==='all'?'':'#spec-'+encodeURIComponent(product.packagingReference));
                 link.textContent=zh?'查看价格表中的独立型号资料 →':'View the separately listed workbook models →';
                 notice.append(text,link);technicalTab.append(notice);
             }

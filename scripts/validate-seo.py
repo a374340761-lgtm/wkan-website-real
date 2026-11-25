@@ -73,6 +73,7 @@ def expected_url(rel: str) -> str:
 def main() -> int:
     issues: list[str] = []
     canonicals: dict[str, str] = {}
+    html_alternates: dict[str, dict[str, str]] = {}
 
     for path in sorted(ROOT.rglob("*.html")):
         rel = path.relative_to(ROOT).as_posix()
@@ -116,9 +117,11 @@ def main() -> int:
 
         hreflangs = tags(
             source,
-            r'<link\b(?=[^>]*rel=["\']alternate["\'])(?=[^>]*hreflang=["\']([^"\']+)["\'])'
-            r'[^>]*href=["\']([^"\']+)["\']',
+            r'<link\b(?=[^>]*\srel=["\']alternate["\'])(?=[^>]*\shreflang=["\']([^"\']+)["\'])'
+            r'(?=[^>]*\shref=["\']([^"\']+)["\'])[^>]*>',
         )
+        if rel in canonicals:
+            html_alternates[canonicals[rel]] = {language.lower(): html_unescape(href) for language, href in hreflangs}
         language_counts = Counter(language.lower() for language, _ in hreflangs)
         repeated = [language for language, count in language_counts.items() if count > 1]
         if repeated:
@@ -168,11 +171,25 @@ def main() -> int:
 
     sitemap = ElementTree.parse(ROOT / "sitemap.xml")
     namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-    sitemap_urls = {
-        item.text.strip()
-        for item in sitemap.findall(".//sm:loc", namespace)
-        if item.text
-    }
+    sitemap_alternates: dict[str, dict[str, str]] = {}
+    for item in sitemap.findall("sm:url", namespace):
+        url = item.findtext("sm:loc", default="", namespaces=namespace).strip()
+        if url in sitemap_alternates:
+            issues.append(f"[sitemap.xml] duplicate URL: {url}")
+        links = item.findall("{http://www.w3.org/1999/xhtml}link")
+        alternates = {link.get("hreflang", "").lower(): link.get("href", "") for link in links}
+        if len(alternates) != len(links):
+            issues.append(f"[sitemap.xml] duplicate hreflang values: {url}")
+        sitemap_alternates[url] = alternates
+        if html_alternates.get(url) != alternates:
+            issues.append(f"[sitemap.xml] hreflang differs from HTML: {url}")
+        if alternates and url not in {href for lang, href in alternates.items() if lang != "x-default"}:
+            issues.append(f"[sitemap.xml] missing hreflang self-reference: {url}")
+    for url, alternates in sitemap_alternates.items():
+        for target in set(alternates.values()):
+            if sitemap_alternates.get(target) != alternates:
+                issues.append(f"[sitemap.xml] inconsistent language cluster: {url} -> {target}")
+    sitemap_urls = set(sitemap_alternates)
     expected_urls = {url for rel, url in canonicals.items() if rel not in PARAMETER_TEMPLATES}
     for rel in PARAMETER_TEMPLATES:
         if expected_url(rel) in sitemap_urls:

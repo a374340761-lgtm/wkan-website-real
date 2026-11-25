@@ -10,7 +10,7 @@ function inquirySourcePage() {
     const source = new URL(page.searchParams.get('source') || document.referrer || page.href, page.origin);
     if (source.origin !== page.origin) return '';
     const clean = new URL(source.pathname, page.origin);
-    ['id', 'model', 'cat', 'open'].forEach((key) => {
+    ['sku', 'id', 'model', 'cat', 'open'].forEach((key) => {
       if (source.searchParams.has(key)) clean.searchParams.set(key, source.searchParams.get(key));
     });
     return clean.href;

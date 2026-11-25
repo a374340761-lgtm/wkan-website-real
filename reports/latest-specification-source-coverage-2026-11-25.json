@@ -1,0 +1,1059 @@
+{
+  "workbooks": 49,
+  "importedTechnicalRows": 44,
+  "inventory": [
+    {
+      "file": "2026奥动牌沙滩旗杆价格.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 208
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 12,
+      "importedRows": 0
+    },
+    {
+      "file": "2026年星帐-充气账-圆顶帐报价表.xls",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "double peak star tent",
+          "rows": 14
+        },
+        {
+          "name": "single peak star tent",
+          "rows": 14
+        },
+        {
+          "name": "Start tent wall",
+          "rows": 12
+        },
+        {
+          "name": "inflatable",
+          "rows": 10
+        },
+        {
+          "name": "dome tent",
+          "rows": 15
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "2026年星帐-充气账-圆顶帐报价表1.xls",
+      "workbookStatus": "changed",
+      "sheets": [
+        {
+          "name": "double peak star tent",
+          "rows": 14
+        },
+        {
+          "name": "single peak star tent",
+          "rows": 14
+        },
+        {
+          "name": "Start tent wall",
+          "rows": 12
+        },
+        {
+          "name": "inflatable",
+          "rows": 10
+        },
+        {
+          "name": "dome tent",
+          "rows": 15
+        }
+      ],
+      "publishedGroups": 7,
+      "importedRows": 0
+    },
+    {
+      "file": "40管 架子所需材料计算公式.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 36
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "40管六棱角铁架单价表经济款.xls",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "大金刚王",
+          "rows": 26
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "40管六边形帐篷各规格铝管尺寸.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 14
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 1,
+      "importedRows": 9
+    },
+    {
+      "file": "40管六边形帐篷零件详细表.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 30
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "40管压铸产品定购单.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "模具3X3M",
+          "rows": 34
+        },
+        {
+          "name": "3X4.5M",
+          "rows": 27
+        },
+        {
+          "name": "3X6M",
+          "rows": 27
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "40管帐篷塑料件数量核算.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 19
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "50管 架子所需材料计算公式.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 15
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "50管压铸产品定购单.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "模具3X3M",
+          "rows": 34
+        },
+        {
+          "name": "3X4.5M",
+          "rows": 28
+        },
+        {
+          "name": "3X6M",
+          "rows": 27
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "50管帐篷明细重量.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 34
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "600D帐篷.xls",
+      "workbookStatus": "changed",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 86
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "Tents images .xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet2",
+          "rows": 966
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群大金刚王价格表2023.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "小金刚方管",
+          "rows": 118
+        },
+        {
+          "name": "⑥大金刚王",
+          "rows": 19
+        }
+      ],
+      "publishedGroups": 5,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群展示型材折叠背景灯箱批量价格.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "卡布拉网灯箱",
+          "rows": 23
+        },
+        {
+          "name": "型材灯箱",
+          "rows": 11
+        },
+        {
+          "name": "Sheet3",
+          "rows": 0
+        }
+      ],
+      "publishedGroups": 6,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群帐篷家具折叠桌价格表 内部价.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "折叠桌椅，便携厕盘，更衣帐篷，置衣桶，防水袋",
+          "rows": 71
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群帐篷星帐围布报价表2026.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 8
+        }
+      ],
+      "publishedGroups": 1,
+      "importedRows": 6
+    },
+    {
+      "file": "伟群帐篷有限公司  帐篷配件.xls",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "帐篷配件",
+          "rows": 31
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群帐篷有限公司（毫华铝合金方管40管30管.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "豪华铁铝菱形架",
+          "rows": 41
+        },
+        {
+          "name": "Sheet1",
+          "rows": 0
+        },
+        {
+          "name": "Sheet2",
+          "rows": 0
+        },
+        {
+          "name": "Sheet3",
+          "rows": 0
+        },
+        {
+          "name": "帐篷配件",
+          "rows": 25
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群帐篷有限公司（豪华铁质方管40管30管架).xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "豪华铁30.40方形架",
+          "rows": 41
+        },
+        {
+          "name": "Sheet1",
+          "rows": 0
+        },
+        {
+          "name": "Sheet2",
+          "rows": 0
+        },
+        {
+          "name": "Sheet3",
+          "rows": 0
+        },
+        {
+          "name": "帐篷配件",
+          "rows": 25
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群帐篷有限公司（铁铝40管50管棱型架)不含.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "40-50管豪华铁铝菱形架17KG款",
+          "rows": 57
+        },
+        {
+          "name": "铝合金40管经济款15.5KG款",
+          "rows": 17
+        },
+        {
+          "name": "50管1.7厚",
+          "rows": 15
+        },
+        {
+          "name": "帐篷配件",
+          "rows": 25
+        }
+      ],
+      "publishedGroups": 14,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群普通黑金刚价格表.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "普通架",
+          "rows": 26
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "伟群自动架价格表2023.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "自动架",
+          "rows": 20
+        }
+      ],
+      "publishedGroups": 1,
+      "importedRows": 0
+    },
+    {
+      "file": "奥动帐篷3X3米组装单价表.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 37
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "帐篷常见问题汇总.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 26
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "广州市伟群展示器材有限公司 沙滩旗杆配件.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "1.0厚杆",
+          "rows": 120
+        },
+        {
+          "name": "1.5厚旗杆",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 12,
+      "importedRows": 0
+    },
+    {
+      "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "快幕秀",
+          "rows": 40
+        },
+        {
+          "name": "拉网",
+          "rows": 9
+        },
+        {
+          "name": "万能架",
+          "rows": 9
+        },
+        {
+          "name": "摆摊横幅架子",
+          "rows": 10
+        }
+      ],
+      "publishedGroups": 8,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群制造有限公司家具折叠桌布价格表.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "桌布",
+          "rows": 28
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 6,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷充气桌椅报价表.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 21
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷制造有限公司 1x2气模布热转印.xls",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet2",
+          "rows": 73
+        },
+        {
+          "name": "Sheet3",
+          "rows": 0
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷制造有限公司 素色 TEL 18922787581.xls",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "素色420D，600DPU顶布价格",
+          "rows": 33
+        },
+        {
+          "name": "素色600D涂PVC橡胶布",
+          "rows": 20
+        },
+        {
+          "name": "普通420D。600D。800D涂PVC",
+          "rows": 20
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷制造有限公司 网红帐篷.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 16
+        }
+      ],
+      "publishedGroups": 2,
+      "importedRows": 11
+    },
+    {
+      "file": "广西伟群帐篷制造有限公司300DPU防水布热转印.xls",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "Sheet2",
+          "rows": 83
+        },
+        {
+          "name": "Sheet3",
+          "rows": 0
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷制造有限公司（圆顶帐篷，星星.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "圆顶帐篷",
+          "rows": 15
+        },
+        {
+          "name": "单顶星帐",
+          "rows": 11
+        },
+        {
+          "name": "双顶星帐",
+          "rows": 11
+        },
+        {
+          "name": "天幕帐篷",
+          "rows": 11
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 15
+    },
+    {
+      "file": "广西伟群帐篷制造有限公司，尖顶帐篷篷房报.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 17
+        },
+        {
+          "name": "Sheet2",
+          "rows": 1
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 3,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷组装单价表.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 39
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷闭气V型（三脚）价格表.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 10
+        }
+      ],
+      "publishedGroups": 1,
+      "importedRows": 0
+    },
+    {
+      "file": "广西伟群帐篷闭气拱门价格表241205.xlsx",
+      "workbookStatus": "unchanged",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 14
+        }
+      ],
+      "publishedGroups": 2,
+      "importedRows": 0
+    },
+    {
+      "file": "欢迎拱门价格.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "细杆拱门",
+          "rows": 25
+        },
+        {
+          "name": "粗杆拱门",
+          "rows": 6
+        },
+        {
+          "name": "Sheet3",
+          "rows": 1
+        }
+      ],
+      "publishedGroups": 1,
+      "importedRows": 3
+    },
+    {
+      "file": "沙滩旗杆成本价0.9-0.95厚.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "2.8M刀P型",
+          "rows": 30
+        },
+        {
+          "name": "3.5M刀P型",
+          "rows": 30
+        },
+        {
+          "name": "4.5M刀P型",
+          "rows": 32
+        },
+        {
+          "name": "5.5M刀P型",
+          "rows": 38
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "沙滩旗杆成本价1.5厚.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "2.8M刀P型",
+          "rows": 30
+        },
+        {
+          "name": "3.5M刀P型",
+          "rows": 30
+        },
+        {
+          "name": "4.5M刀P型",
+          "rows": 35
+        },
+        {
+          "name": "5.5M刀P型",
+          "rows": 38
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "铝材重量核实表.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "Sheet1",
+          "rows": 37
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "（1.0mm）40管六边型帐篷成本.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "1.5米40管六边型",
+          "rows": 1
+        },
+        {
+          "name": "1.5米40管六边型 ",
+          "rows": 57
+        },
+        {
+          "name": "2米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "2.5米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "3米40管六边型",
+          "rows": 57
+        },
+        {
+          "name": "4米40管六边型 ",
+          "rows": 57
+        },
+        {
+          "name": "4.5米40管六边型 ",
+          "rows": 57
+        },
+        {
+          "name": "4X6米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "6米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "8米40管六边型   ",
+          "rows": 57
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "（1.2mm）40管六边型帐篷成本.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "1.5米40管六边型",
+          "rows": 1
+        },
+        {
+          "name": "1.5米40管六边型 ",
+          "rows": 56
+        },
+        {
+          "name": "2米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "2.5米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "3米40管六边型",
+          "rows": 57
+        },
+        {
+          "name": "4米40管六边型 ",
+          "rows": 57
+        },
+        {
+          "name": "4.5米40管六边型 ",
+          "rows": 57
+        },
+        {
+          "name": "4X6米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "6米40管六边型  ",
+          "rows": 57
+        },
+        {
+          "name": "8米40管六边型   ",
+          "rows": 57
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "（1.5mm轻料22KG）50管八边型帐篷成铝压本.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "2米40八边型  ",
+          "rows": 45
+        },
+        {
+          "name": "2.5米40八边型",
+          "rows": 18
+        },
+        {
+          "name": "3米40八边型",
+          "rows": 18
+        },
+        {
+          "name": "4.5米40管八边型",
+          "rows": 18
+        },
+        {
+          "name": "6米40管八边型",
+          "rows": 18
+        },
+        {
+          "name": "4X4米40管八边型",
+          "rows": 18
+        },
+        {
+          "name": "4X6米40管八边型4条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X6米40管八边型6条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X8米40管八边型6条脚",
+          "rows": 18
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "（1.5mm轻料26.5KG）50管六边型帐篷成本.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "2米50六边型  ",
+          "rows": 45
+        },
+        {
+          "name": "2.5米50六边型",
+          "rows": 18
+        },
+        {
+          "name": "3米50六边型",
+          "rows": 18
+        },
+        {
+          "name": "4.5米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "6米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "4X4米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "4X6米50管六边型4条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X6米50管六边型6条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X8米50管六边型6条脚",
+          "rows": 18
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "（1.7mm重料29.3KG）50管八边型帐篷铝压成本.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "2米50六边型  ",
+          "rows": 45
+        },
+        {
+          "name": "2.5米50六边型",
+          "rows": 18
+        },
+        {
+          "name": "3米50六边型",
+          "rows": 18
+        },
+        {
+          "name": "4.5米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "6米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "4X4米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "4X6米50管六边型4条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X6米50管六边型6条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X8米50管六边型6条脚",
+          "rows": 18
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    },
+    {
+      "file": "（1.7mm重料29.3KG）50管六边型帐篷成本.xlsx",
+      "workbookStatus": "new-to-inventory",
+      "sheets": [
+        {
+          "name": "2米50六边型  ",
+          "rows": 45
+        },
+        {
+          "name": "2.5米50六边型",
+          "rows": 18
+        },
+        {
+          "name": "3米50六边型",
+          "rows": 18
+        },
+        {
+          "name": "4.5米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "6米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "4X4米50管六边型",
+          "rows": 18
+        },
+        {
+          "name": "4X6米50管六边型4条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X6米50管六边型6条脚",
+          "rows": 18
+        },
+        {
+          "name": "4X8米50管六边型6条脚",
+          "rows": 18
+        }
+      ],
+      "publishedGroups": 0,
+      "importedRows": 0
+    }
+  ],
+  "scope": "Top-level price workbooks. Does not include customer quotations, internal production details or raw price values. Inventory does not imply every workbook has an exact public product match."
+}

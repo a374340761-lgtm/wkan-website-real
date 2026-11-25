@@ -213,6 +213,32 @@ for key,groups in DATA.items():
                 if col['key']=='size':col.update(zh='尺寸 / 配合 / 装箱说明',en='Dimensions / fit / packing details')
 
 completion['finalize_translations']()
+# The grid counts are configuration labels. Keep the workbook's graphic and
+# hardware dimensions distinct and add the separately confirmed 4 × 5 option.
+pop_up = DATA['42003'][0]
+pop_up['columns'] = [column for column in pop_up['columns'] if column['key'] not in ('packing', 'gw')]
+pop_up_labels = {
+    'size': ('框架格数', 'Frame grid'),
+    'graphic': ('画面尺寸 (mm)', 'Graphic dimensions (mm)'),
+    'note': ('原表硬件尺寸 (mm)', 'Hardware dimensions (mm)'),
+    'tube': ('管壁厚度', 'Tube wall thickness'),
+}
+for column in pop_up['columns']:
+    if column['key'] in pop_up_labels:
+        column['zh'], column['en'] = pop_up_labels[column['key']]
+for row in pop_up['rows']:
+    for values in (row, row['en']):
+        values['size'] = values['size'].replace('*', ' × ')
+        values['carton'] = values['carton'].removesuffix('cm').replace('*', ' × ')
+        for key in ('graphic', 'note'):
+            values[key] = values[key].split(',')[0].replace('*', ' × ')
+        values['tube'] = '1.0 mm' if values['tube'] else ''
+        values.pop('packing', None)
+        values.pop('gw', None)
+pop_up['rows'].append({column['key']: '4 × 5' if column['key'] == 'size' else '—' for column in pop_up['columns']})
+pop_up['notesZh'] = ['每格 75 × 75 cm。原表所列三款如加包边，每侧增加 350 mm。4 × 5 的画面尺寸、重量及包装请下单前确认。']
+pop_up['notesEn'] = ['Each grid cell is 75 × 75 cm. Side wraps add 350 mm per side for the three configurations listed in the workbook. Confirm the graphic dimensions, weight and packing for the 4 × 5 configuration when ordering.']
+
 # WK-T12 tube fit and head styles were supplied with the product photo.
 DATA['9020'] = [{
     'titleZh': 'WK-T12 刀旗连接件可选配置',

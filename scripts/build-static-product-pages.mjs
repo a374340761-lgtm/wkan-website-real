@@ -110,6 +110,29 @@ export const STATIC_PRODUCTS = [
       "height": 1920
     }
   ],
+  "shipmentPhotos": [
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/18kg-bulk-shipment-p1.webp",
+      "width": 1824,
+      "height": 1368,
+      "en": "18 kg frames stacked for bulk shipment",
+      "zh": "18 kg 帐篷架批量出货堆放全景"
+    },
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/18kg-bulk-shipment-p2.webp",
+      "width": 1824,
+      "height": 1368,
+      "en": "Footplates and joints of the 18 kg frames",
+      "zh": "18 kg 帐篷架脚板与连接件细节"
+    },
+    {
+      "src": "/images/products/tents/standard-black-flat-tube-3x3/18kg-bulk-shipment-p3.webp",
+      "width": 1824,
+      "height": 1368,
+      "en": "Folded 18 kg frames bundled for shipment",
+      "zh": "18 kg 折叠架捆扎待发"
+    }
+  ],
   "en": {
     "name": "Standard Black Flat-Tube Canopy Frame",
     "title": "Standard Black Flat-Tube Canopy Frame | Sizes & Details | WaiKwan",
@@ -466,17 +489,19 @@ function page(product, lang) {
   const quote = `${prefix}/contact-us.html?product=${encodeURIComponent(text.name)}#getQuoteForm`;
   const thumbs = product.gallery.map((photo, i) => `<button type="button" class="tent-type-folding-gallery__thumb${i === 0 ? ' is-active' : ''}" data-frame-photo="${i}" aria-pressed="${i === 0}" aria-label="${esc(photo[lang])}"><img src="${esc(photo.src)}" alt="${esc(photo[lang])}" width="${photo.width}" height="${photo.height}"></button>`).join('');
   const facts = (zh ? product.factsZh : product.facts).map(([k,v]) => `<tr><th scope="row">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('');
-  const sizeRows = product.sizes.map(size => `<tr><td>${esc(size)} ${zh ? '米' : 'm'}</td><td>${size === '3 × 3' ? (zh ? '本页实拍示例尺寸' : 'Photographed sample size') : (zh ? '可选规格' : 'Available size')}</td></tr>`).join('');
+  const shipment = `<section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '18 kg 帐篷架批量出货实拍' : '18 kg canopy frame bulk shipment'}</h2><p>${zh ? '这批出货为 3 × 3 米普通黑金刚扁管帐篷裸架，单架 18 kg。' : 'This shipment shows the 3 × 3 m Standard Black flat-tube frames, weighing 18 kg per bare frame.'}</p><div class="frame-shipment-photos">${product.shipmentPhotos.map(photo => `<figure><a href="${esc(photo.src)}"><img src="${esc(photo.src)}" alt="${esc(photo[lang])}" width="${photo.width}" height="${photo.height}" loading="lazy" decoding="async"></a><figcaption>${esc(photo[lang])}</figcaption></figure>`).join('')}</div></section>`;
+  const sizeRows = product.sizes.map(size => `<tr><td>${esc(size)} ${zh ? '米' : 'm'}</td><td>${size === '3 × 3' ? (zh ? '本页实拍示例尺寸 · 18 kg' : 'Photographed sample size · 18 kg') : (zh ? '可选规格' : 'Available size')}</td></tr>`).join('');
   const main = `<main><section class="products" style="padding-top:110px"><div class="container">
   <nav class="breadcrumb" aria-label="${zh ? '面包屑' : 'Breadcrumb'}"><a href="${prefix}/">${zh ? '首页' : 'Home'}</a> / <a href="${prefix}/tent-type.html">${zh ? '帐篷' : 'Canopy Tents'}</a> / <span>${esc(text.name)}</span></nav>
   <article class="tent-type-detail"><h1>${esc(text.name)}</h1><p class="frame-intro">${esc(text.intro)}</p>
   <div class="tent-type-folding-gallery"><div class="tent-type-card__imgWrap tent-type-folding-gallery__heroWrap"><img id="frameMainImage" class="tent-type-card__img tent-type-folding-gallery__main" src="${product.image}" alt="${esc(product.gallery[0][lang])}" width="810" height="1440" fetchpriority="high"></div><div class="tent-type-folding-gallery__thumbs">${thumbs}</div><p id="framePhotoCaption">${esc(product.gallery[0][lang])}</p></div>
+  ${shipment}
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '可选尺寸' : 'Available Sizes'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table"><thead><tr><th>${zh ? '尺寸' : 'Size'}</th><th>${zh ? '说明' : 'Notes'}</th></tr></thead><tbody>${sizeRows}</tbody></table></div></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '型号参数' : 'Models & Specifications'}</h2><div class="tent-type-detail__tableWrap"><table class="tent-type-detail__table">${facts}</table></div></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '选型说明' : 'Frame Selection'}</h2><p>${zh ? '普通黑金刚为独立的扁管架款式，不能套用 30 方管铁架或 40/50 六角铝架的重量、壁厚和性能参数。请结合撑杆、连接件及顶布适配要求选型。' : 'Standard Black is a separate flat-tube frame model. Do not apply the weight, wall thickness or performance specifications of the 30 square-tube or 40/50 hexagonal frames. Compare brace profile, joints and canopy compatibility.'}</p></section>
   <section class="tent-type-detail__block"><h2 class="tent-type-detail__blockTitle">${zh ? '询价前说明' : 'Before Requesting a Quote'}</h2><p>${esc(text.note)}</p><div class="wk-tent-cta"><a class="btn btn-primary" href="${quote}">${zh ? '获取报价' : 'Request a Quote'}</a><a class="btn btn-secondary" href="${prefix}/all-products.html">${zh ? '查看全部产品' : 'View All Products'}</a></div></section></article></div></section>${footer}</main>`;
   const scripts = `<script src="/scripts/tent-types.js"></script><script src="/scripts/products.js?v=20261112-inflatable-r1"></script><script src="/scripts/cart.js"></script><script src="/scripts/main.js?v=20261112-inflatable-r1"></script><script src="/scripts/multilang.js?v=20261020-careers-nav"></script><script src="/scripts/get-quote-footer.js?v=20261020-careers"></script><script src="/scripts/standard-black-frame.js"></script>`;
-  return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
+  return original.replace(/<style>[\s\S]*?<\/style>/, `<link rel="stylesheet" href="/styles/multilang.css"><link rel="stylesheet" href="/styles/cart.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><style>.frame-shipment-photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}.frame-shipment-photos figure{margin:0}.frame-shipment-photos img{display:block;width:100%;height:auto}.frame-intro{line-height:1.8;margin:20px 0}.tent-type-detail>h1{font-size:1.65rem;margin:28px 0 12px}.tent-type-folding-gallery__heroWrap{border:1px solid var(--wk-border-light);border-radius:var(--radius-lg);overflow:hidden}.tent-type-folding-gallery__heroWrap #frameMainImage{height:600px;object-fit:contain}.wk-tent-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}@media(max-width:780px){.tent-type-folding-gallery__heroWrap #frameMainImage{height:440px}.tent-type-detail>h1{font-size:1.4rem}}</style>`)
     .replace('  <script src="/scripts/main.js?v=20261112-inflatable-r1" defer></script>', '<script src="/scripts/bilingual-routing.js?v=20261108-german-menu" defer></script>')
     .replace(/  <header class="navbar">[\s\S]*?<\/header>/, header)
     .replace(/  <main class="static-product">[\s\S]*?<\/main>/, main)

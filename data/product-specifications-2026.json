@@ -4454,13 +4454,13 @@
           },
           {
             "key": "size",
-            "zh": "尺寸",
-            "en": "Size"
+            "zh": "框架格数",
+            "en": "Frame grid"
           },
           {
             "key": "graphic",
-            "zh": "旗面 / 画面尺寸",
-            "en": "Graphic size"
+            "zh": "画面尺寸 (mm)",
+            "en": "Graphic dimensions (mm)"
           },
           {
             "key": "weight",
@@ -4474,98 +4474,85 @@
           },
           {
             "key": "tube",
-            "zh": "管材尺寸",
-            "en": "Tube dimensions"
+            "zh": "管壁厚度",
+            "en": "Tube wall thickness"
           },
           {
             "key": "note",
-            "zh": "配置说明",
-            "en": "Configuration"
-          },
-          {
-            "key": "packing",
-            "zh": "装箱数",
-            "en": "Packing quantity"
-          },
-          {
-            "key": "gw",
-            "zh": "整箱毛重 (kg)",
-            "en": "Carton gross weight (kg)"
+            "zh": "原表硬件尺寸 (mm)",
+            "en": "Hardware dimensions (mm)"
           }
         ],
         "rows": [
           {
             "model": "WK-PO-01",
-            "size": "3*3",
-            "graphic": "2250*2250,side returns + 350*2",
+            "size": "3 × 3",
+            "graphic": "2250 × 2250",
             "weight": "7",
-            "carton": "82*26*26cm",
-            "tube": "1.0厚管",
-            "note": "2250*2250,side returns + 350*2",
-            "packing": "",
-            "gw": "",
+            "carton": "82 × 26 × 26",
+            "tube": "1.0 mm",
+            "note": "2250 × 2250",
             "en": {
               "model": "WK-PO-01",
-              "size": "3*3",
-              "graphic": "2250*2250,side returns + 350*2",
+              "size": "3 × 3",
+              "graphic": "2250 × 2250",
               "weight": "7",
-              "carton": "82*26*26cm",
-              "tube": "1.0 mm wall tube",
-              "note": "2250*2250,side returns + 350*2",
-              "packing": "",
-              "gw": ""
+              "carton": "82 × 26 × 26",
+              "tube": "1.0 mm",
+              "note": "2250 × 2250"
             }
           },
           {
             "model": "WK-PO-02",
-            "size": "3*4",
-            "graphic": "2250*2980,side returns + 350*2",
+            "size": "3 × 4",
+            "graphic": "2250 × 2980",
             "weight": "8.5",
-            "carton": "82*26*35cm",
+            "carton": "82 × 26 × 35",
             "tube": "",
-            "note": "2250*2980,side returns + 350*2",
-            "packing": "",
-            "gw": "",
+            "note": "2250 × 2980",
             "en": {
               "model": "WK-PO-02",
-              "size": "3*4",
-              "graphic": "2250*2980,side returns + 350*2",
+              "size": "3 × 4",
+              "graphic": "2250 × 2980",
               "weight": "8.5",
-              "carton": "82*26*35cm",
+              "carton": "82 × 26 × 35",
               "tube": "",
-              "note": "2250*2980,side returns + 350*2",
-              "packing": "",
-              "gw": ""
+              "note": "2250 × 2980"
             }
           },
           {
             "model": "WK-PO-03",
-            "size": "3*5",
-            "graphic": "2250*3730,side returns + 350*2",
+            "size": "3 × 5",
+            "graphic": "2250 × 3730",
             "weight": "12",
-            "carton": "82*26*46cm",
+            "carton": "82 × 26 × 46",
             "tube": "",
-            "note": "2250*3730,side returns + 350*2",
-            "packing": "",
-            "gw": "",
+            "note": "2250 × 3730",
             "en": {
               "model": "WK-PO-03",
-              "size": "3*5",
-              "graphic": "2250*3730,side returns + 350*2",
+              "size": "3 × 5",
+              "graphic": "2250 × 3730",
               "weight": "12",
-              "carton": "82*26*46cm",
+              "carton": "82 × 26 × 46",
               "tube": "",
-              "note": "2250*3730,side returns + 350*2",
-              "packing": "",
-              "gw": ""
+              "note": "2250 × 3730"
             }
+          },
+          {
+            "model": "—",
+            "size": "4 × 5",
+            "graphic": "—",
+            "weight": "—",
+            "carton": "—",
+            "tube": "—",
+            "note": "—"
           }
         ],
         "notesZh": [
-          "表内画面尺寸单位mm；两侧包边各350 mm。3×3行注明1.0 mm管壁，其他配置需确认。重量原表标为成品重量。"
+          "每格 75 × 75 cm。原表所列三款如加包边，每侧增加 350 mm。4 × 5 的画面尺寸、重量及包装请下单前确认。"
         ],
         "notesEn": [
-          "Graphic dimensions are in mm, with 350 mm side returns on each side. A 1.0 mm tube wall is stated for the 3×3 row; confirm other configurations. Weights are listed as finished-product weights in the source."
+          "Each grid cell is 75 × 75 cm. Side wraps add 350 mm per side for the three configurations listed in the workbook. Confirm the graphic dimensions, weight and packing for the 4 × 5 configuration when ordering."
         ],
         "source": {
           "file": "广州市伟群展示器材有限公司快幕秀。拉网.xls",

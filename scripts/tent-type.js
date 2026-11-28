@@ -350,7 +350,7 @@
       </div>`;
   }
 
-  function renderFoldingStockHeroHtml(item, paths) {
+  function renderHeroGalleryHtml(item, paths) {
     const imgs = (paths || []).filter(Boolean);
     if (!imgs.length) return '';
 
@@ -374,13 +374,15 @@
   }
 
   function renderTopHero(item) {
-    const paths = resolveFoldingStockGalleryPaths(item);
+    const paths = Array.isArray(item.gallery)
+      ? [item.heroImage, ...item.gallery]
+      : resolveFoldingStockGalleryPaths(item);
     if (paths === null) return renderDefaultHeroHtml(item);
-    const html = renderFoldingStockHeroHtml(item, paths);
+    const html = renderHeroGalleryHtml(item, paths);
     return html || renderDefaultHeroHtml(item);
   }
 
-  function bindFoldingStockGallery(root) {
+  function bindHeroGallery(root) {
     const wrap = root.querySelector('.tent-type-folding-gallery');
     if (!wrap) return;
     const main = wrap.querySelector('.tent-type-folding-gallery__main');
@@ -1107,7 +1109,7 @@
 
     root.innerHTML = bodyHtml;
 
-    bindFoldingStockGallery(root);
+    bindHeroGallery(root);
     if (window.location.hash === '#canopy-3x6-details') {
       requestAnimationFrame(() => root.querySelector('#canopy-3x6-details')?.scrollIntoView());
     }

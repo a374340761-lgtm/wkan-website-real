@@ -761,7 +761,11 @@
                         'The single-seat inflatable chair provides portable seating for exhibition reception, brand pop-ups and event lounge areas. It can be paired with an inflatable table and three-leg inflatable tent.',
                         'The product uses a 0.5mm PVC bladder and 220g digitally printed fabric. The exhibition sample shows a coordinated full-brand graphic treatment.'
                     ].join('\n'),
-                    heroImage: SIGN_CHINA_IMAGE(12),
+                    heroImage: 'images/products/furniture/inflatable-seating/single-seat-inflatable-chair.jpg',
+                    gallery: [
+                        'images/products/furniture/inflatable-seating/inflatable-seating-set.jpg',
+                        SIGN_CHINA_IMAGE(12)
+                    ],
                     specTable: {
                         columns: [
                             { key: 'model', labelZh: '款式', labelEn: 'Model' },
@@ -799,7 +803,11 @@
                         'The two-seat inflatable chair gives exhibition meeting areas, event lounges and branded reception spaces a portable two-person seat. Its wider format pairs with the matching inflatable table.',
                         'The product uses a 0.5mm PVC bladder and 220g digitally printed fabric. The outer graphic can be coordinated with the event identity.'
                     ].join('\n'),
-                    heroImage: SIGN_CHINA_IMAGE(13),
+                    heroImage: 'images/products/furniture/inflatable-seating/two-seat-inflatable-sofa.jpg',
+                    gallery: [
+                        'images/products/furniture/inflatable-seating/inflatable-seating-set.jpg',
+                        SIGN_CHINA_IMAGE(13)
+                    ],
                     specTable: {
                         columns: [
                             { key: 'model', labelZh: '款式', labelEn: 'Model' },

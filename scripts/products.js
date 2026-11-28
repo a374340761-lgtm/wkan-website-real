@@ -3160,6 +3160,37 @@ class ProductManager {
                 keywords: ['furniture', 'toilet', 'portable toilet', '便携厕所', 'WK-PT20']
             },
 
+            {
+                id: 31017,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                name: '单人充气椅',
+                nameEn: 'Single-Seat Inflatable Chair',
+                description: '蓝白条纹单人充气扶手椅，可与同系列双人款搭配摆放。',
+                descriptionEn: 'Blue-and-white striped inflatable armchair that pairs with the matching two-seat sofa.',
+                image: 'images/products/furniture/inflatable-seating/single-seat-inflatable-chair.jpg',
+                images: [
+                    'images/products/furniture/inflatable-seating/single-seat-inflatable-chair.jpg',
+                    'images/products/furniture/inflatable-seating/inflatable-seating-set.jpg'
+                ],
+                keywords: ['inflatable chair', 'inflatable armchair', '单人充气椅', '充气沙发']
+            },
+            {
+                id: 31018,
+                category: 'furniture',
+                subcategory: 'table-chair-stool-toilet',
+                name: '双人充气沙发',
+                nameEn: 'Two-Seat Inflatable Sofa',
+                description: '蓝白条纹双人充气沙发，可与同系列单人充气椅搭配摆放。',
+                descriptionEn: 'Blue-and-white striped two-seat inflatable sofa that pairs with the matching inflatable armchair.',
+                image: 'images/products/furniture/inflatable-seating/two-seat-inflatable-sofa.jpg',
+                images: [
+                    'images/products/furniture/inflatable-seating/two-seat-inflatable-sofa.jpg',
+                    'images/products/furniture/inflatable-seating/inflatable-seating-set.jpg'
+                ],
+                keywords: ['inflatable sofa', 'inflatable loveseat', '双人充气椅', '双人充气沙发']
+            },
+
             // ===== Bi-fold table tablecloths — under 桌/椅/凳/厕所; images: images/products/custom/table-covers/ =====
             {
                 id: 31101,

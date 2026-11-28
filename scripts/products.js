@@ -307,7 +307,7 @@ class ProductManager {
   "subcategory": "inflatable",
   "nameZh": "充气帐篷",
   "nameEn": "Inflatable Tent",
-  "image": "images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg",
+  "image": "images/products/tents/inflatable/inflatable-four-leg-6x6-front.webp",
   "customRfqUrl": "/tent-type.html?type=inflatable",
   "model": "inflatable",
   "shortZh": "快速充气搭建，适合活动与品牌展示。",
@@ -1668,6 +1668,22 @@ class ProductManager {
   "tags": "Flags, Heart, Fiberglass",
   "price": "询价"
 },
+            {
+                id: 95014,
+                category: 'flags',
+                subcategory: 'flag-type-hub',
+                type: 'lantern_flag',
+                sku: 'FLG-HUB-LANTERN',
+                name: '灯笼旗',
+                nameZh: '灯笼旗',
+                nameEn: 'Lantern Flag',
+                shortZh: '总高 2.4 米，画面 93 × 135 cm，可搭配多种底座。',
+                shortEn: '2.4 m overall height, 93 × 135 cm graphic, and multiple base options.',
+                image: 'images/products/flags/hero/lantern-flag-hero.webp',
+                customRfqUrl: 'flag-type.html?type=lantern_flag',
+                keywords: ['灯笼旗', 'lantern flag'],
+                price: '询价'
+            },
             {
                 id: 95004,
                 category: 'flags',

@@ -49,6 +49,38 @@
   }
 },
       {
+        type: 'lantern_flag',
+        rfqProductId: 95014,
+        nameZh: '灯笼旗',
+        nameEn: 'Lantern Flag',
+        hubDescZh: '总高 2.4 米，画面 93 × 135 cm，可搭配多种底座。',
+        hubDescEn: '2.4 m overall height, 93 × 135 cm graphic, and multiple base options.',
+        storyZh: '灯笼旗可按展示场地选配不同底座，实拍图展示十字底座的安装效果。',
+        storyEn: 'Choose a base to suit the display location. The photos show the flag assembled with a cross base.',
+        heroImage: FLAG_HERO('lantern-flag-hero.webp'),
+        specTable: {
+          columns: [
+            { key: 'style', labelZh: '总高', labelEn: 'Overall Height' },
+            { key: 'flagSize', labelZh: '画面尺寸', labelEn: 'Graphic Size' }
+          ],
+          rows: [{ style: '2.4 m', flagSize: '93 × 135 cm' }]
+        },
+        exampleImagesTitleZh: '灯笼旗实拍',
+        exampleImagesTitleEn: 'Lantern Flag Photos',
+        exampleImages: [
+          {
+            src: FLAG_HERO('lantern-flag-blue-print.webp'),
+            captionZh: '蓝色画面与十字底座',
+            captionEn: 'Blue print with cross base'
+          },
+          {
+            src: FLAG_HERO('lantern-flag-orange-print.webp'),
+            captionZh: '橙色画面与十字底座',
+            captionEn: 'Orange print with cross base'
+          }
+        ]
+      },
+      {
         type: 'fiberglass_pole',
         rfqProductId: 95002,
         nameEn: 'Beach Flag Poles (Fiberglass Pole)',

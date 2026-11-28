@@ -1701,6 +1701,7 @@ function enhanceFlagsDropdown() {
         { type: 'fiberglass_pole', nameEn: 'Beach Flag Poles (Fiberglass Pole)', nameZh: '沙滩旗杆（玻纤杆）' },
         { type: 'alu_fiberglass_pole', nameEn: 'Beach Flag Poles (Aluminium + Fiberglass)', nameZh: '沙滩旗杆（铝管 + 玻纤）' },
         {"type":"fully_fiberglass_heart","nameEn":"2.4m Heart Flag Pole (Fully Fiberglass)","nameZh":"2.4米心形旗杆（全玻纤）"},
+        { type: 'lantern_flag', nameEn: 'Lantern Flag', nameZh: '灯笼旗' },
         { type: 'fully_fiberglass_teardrop', nameEn: 'Teardrop Beach Flag Poles (Fully Fiberglass)', nameZh: '水滴型沙滩旗杆（全玻纤）' },
         { type: 'fully_fiberglass_feather', nameEn: 'Feather Beach Flag Poles (Fully Fiberglass)', nameZh: '刀型沙滩旗杆（全玻纤）' },
         { type: 'outdoor_giant_flag', nameEn: 'Outdoor Giant Flag (Water Base)', nameZh: '户外注水旗杆（Giant Flag）' },

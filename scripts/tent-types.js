@@ -605,7 +605,7 @@
                     'Inflatable tent series: portable and fast to set up for promotions, exhibitions and brand activations.',
                     'Supports walls, connectors, LED options and multi-unit combinations to build a complete branded space.'
                 ].join('\n'),
-                heroImage: 'images/products/tents/inflatable/inflatable-spider-tent-outdoor-event-hero.jpg',
+                heroImage: 'images/products/tents/inflatable/inflatable-four-leg-6x6-front.webp',
                 guideImages: [INFLATABLE_BROCHURE_GUIDE],
                 pdfPage: 8,
                 infoBlocks: [
@@ -685,6 +685,28 @@
                     type: 'inflatable',
                     nameZh: '充气帐篷',
                     nameEn: 'Inflatable Tent',
+                    photoSections: [
+                        {
+                            titleZh: '6 × 6 米四脚充气帐篷实拍',
+                            titleEn: '6 × 6 m Four-Leg Inflatable Tent Photos',
+                            photos: [
+                                { src: base.heroImage, captionZh: '开口正视图', captionEn: 'Front view with entrance open' },
+                                { src: 'images/products/tents/inflatable/inflatable-four-leg-6x6-side.webp', captionZh: '开放侧景', captionEn: 'Angled view with entrance open' },
+                                { src: 'images/products/tents/inflatable/inflatable-four-leg-6x6-wall.webp', captionZh: '纯白围布外观', captionEn: 'White sidewall exterior' }
+                            ]
+                        },
+                        {
+                            titleZh: '四脚充气帐篷配件',
+                            titleEn: 'Four-Leg Inflatable Tent Accessories',
+                            textZh: '帐篷标配固定绳，可搭配沙袋和地钉固定。',
+                            textEn: 'Guy ropes are included as standard. Sandbags and ground stakes can also be used to secure the tent.',
+                            photos: [
+                                { src: 'images/products/tents/inflatable/inflatable-four-leg-sandbag-open.webp', captionZh: '沙袋开口', captionEn: 'Open sandbag' },
+                                { src: 'images/products/tents/inflatable/inflatable-four-leg-sandbag-flat.webp', captionZh: '沙袋平铺', captionEn: 'Sandbag laid flat' },
+                                { src: 'images/products/tents/inflatable/inflatable-four-leg-ground-stakes.webp', captionZh: '地钉配件', captionEn: 'Ground stakes' }
+                            ]
+                        }
+                    ],
                     // Default selection on the View Type page when no variant is specified.
                     defaultVariant: 'airt_16',
                     variants,
